@@ -3,6 +3,7 @@ using Prism.Ioc;
 using Prism.Unity;
 using ExtLib;
 using Prism.Modularity;
+using PDFExtractor.Views;
 
 namespace PDFExtractor
 {
@@ -17,7 +18,7 @@ namespace PDFExtractor
         }
         protected override Window CreateShell()
         {
-            var w = Container.Resolve<MainWindow>();
+            var w = Container.Resolve<MainWindowView>();
             return w;
         }
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

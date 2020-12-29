@@ -2,120 +2,125 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Fragment>
         <DirectoryRef Id="INSTALLFOLDER">
-            <Component Id="cmpCF9B3A227754E55B2A4622BDADF51333" Guid="{1629536E-2824-49EF-9935-A652310E563E}">
+            <Component Id="cmpCF9B3A227754E55B2A4622BDADF51333" Guid="{59B24652-59C9-4071-A566-7EFAE09AC3E2}">
                 <File Id="fil244CDAED28510644E512EA1DBCB9390F" KeyPath="yes" Source="$(var.BasePath)\BouncyCastle.Crypto.dll" />
             </Component>
-            <Component Id="cmp7C9D7ECB8AA42F8F89FFDA128508D39E" Guid="{9778933E-28DC-4A55-B202-DFAF97746FA0}">
+            <Component Id="cmp7C9D7ECB8AA42F8F89FFDA128508D39E" Guid="{944A67C0-0D7B-4F0F-927D-C99C66F41EFA}">
                 <File Id="fil537261B9AB04F5C0A27396309F4EA107" KeyPath="yes" Source="$(var.BasePath)\Common.Logging.Core.dll" />
             </Component>
-            <Component Id="cmp059A81F557F2A7B3731E3EE81BE97CCD" Guid="{0FF2A639-EFEF-4909-8438-B582DC002711}">
+            <Component Id="cmp059A81F557F2A7B3731E3EE81BE97CCD" Guid="{0258CE68-D2EC-4BDD-B2C2-02132FC5CF96}">
                 <File Id="fil0D1D3D4225BB5A570B5EFFD192341BA3" KeyPath="yes" Source="$(var.BasePath)\Common.Logging.dll" />
             </Component>
-            <Component Id="cmp6EFB90BE81E8B69406C6AF6CD2B1D695" Guid="{CC40B0B8-757C-4D24-B586-455BF4FC75B3}">
+            <Component Id="cmp6EFB90BE81E8B69406C6AF6CD2B1D695" Guid="{F9C5CBCF-6EC8-4C7E-B8BB-CD5084D1ABAD}">
                 <File Id="fil6401AD0D448A12DDB572001C8F0A0FE7" KeyPath="yes" Source="$(var.BasePath)\ExtLib.dll" />
             </Component>
-            <Component Id="cmp2BFDA13B54EA910DBF909FB1F0AAC45B" Guid="{EC38129F-3443-4C63-AA5E-DC01AE416E74}">
+            <Component Id="cmp2BFDA13B54EA910DBF909FB1F0AAC45B" Guid="{22A72B6F-B878-4E3D-AC35-1A839527FC6B}">
                 <File Id="fil67DC02BBEDC265A01ECF7075AFE84C81" KeyPath="yes" Source="$(var.BasePath)\ExtLib.pdb" />
             </Component>
-            <Component Id="cmp353FCB63A792C43A60F7237E4C156972" Guid="{2A9E16A0-1CAC-42AB-915C-B724DE0DBFBA}">
+            <Component Id="cmp353FCB63A792C43A60F7237E4C156972" Guid="{88A441A3-6B2C-42F0-8E86-AFD6B53685D1}">
                 <File Id="filD27CA513C5594710A643EC5105EDED52" KeyPath="yes" Source="$(var.BasePath)\itext.barcodes.dll" />
             </Component>
-            <Component Id="cmpDAAD44A6F31E9384DC7498D6E5DA16BC" Guid="{1E173570-5CFC-485D-953C-49FEC7384C18}">
+            <Component Id="cmpDAAD44A6F31E9384DC7498D6E5DA16BC" Guid="{6C676C96-08CB-40F6-83CB-6C17A19D0638}">
                 <File Id="fil2D621EB63B5B0E28122D7ACDC983B0FE" KeyPath="yes" Source="$(var.BasePath)\itext.forms.dll" />
             </Component>
-            <Component Id="cmp2331F32DFD90A18159E2AF28D876FB6E" Guid="{1D45D4D5-0793-488D-A622-E674E7056444}">
+            <Component Id="cmp2331F32DFD90A18159E2AF28D876FB6E" Guid="{491EC8D1-896F-43AF-86CB-C51962E968FA}">
                 <File Id="fil10E06E2AD134760B9089317124219C52" KeyPath="yes" Source="$(var.BasePath)\itext.io.dll" />
             </Component>
-            <Component Id="cmpC898D880A2401AD1520397C34B1F1D1D" Guid="{CB5E8676-2424-45B9-A19D-9C3334459391}">
+            <Component Id="cmpC898D880A2401AD1520397C34B1F1D1D" Guid="{B6FE7B46-C07A-4179-A428-00999960BE17}">
                 <File Id="fil1A0623B9141FA5A582352CD8A91EDF67" KeyPath="yes" Source="$(var.BasePath)\itext.kernel.dll" />
             </Component>
-            <Component Id="cmp8D8B4EF96A670A683B8B382D6EFD0DF9" Guid="{FBC88AFC-5488-4905-B071-A08E52DEC094}">
+            <Component Id="cmp8D8B4EF96A670A683B8B382D6EFD0DF9" Guid="{CF536530-A09A-406C-98C1-8FC5E41102CE}">
                 <File Id="filA816A940F12D52C10FFBD61C58F1D3F8" KeyPath="yes" Source="$(var.BasePath)\itext.layout.dll" />
             </Component>
-            <Component Id="cmp5DE9BF4074F35105DD3D1F54AFF1E911" Guid="{865E42E2-0486-462D-9B14-18BC49C39A83}">
+            <Component Id="cmp5DE9BF4074F35105DD3D1F54AFF1E911" Guid="{3AEB36D6-5992-4262-9AD2-4D0606E60C02}">
                 <File Id="fil314A7D628AC9C1A32504188C00F571D1" KeyPath="yes" Source="$(var.BasePath)\itext.pdfa.dll" />
             </Component>
-            <Component Id="cmpBFB298C8A209B08DDEC573BA6A5D93AF" Guid="{B7FB8E02-07DD-4600-B143-68B575400777}">
+            <Component Id="cmpBFB298C8A209B08DDEC573BA6A5D93AF" Guid="{B852D3F6-911E-4269-BDB0-1D74F51ECF03}">
                 <File Id="fil95B14FCB331CA1A01779EFF6D9AE6FD8" KeyPath="yes" Source="$(var.BasePath)\itext.sign.dll" />
             </Component>
-            <Component Id="cmp347AD5D5E9BF1B68FC1208B7B8E1C244" Guid="{8E841D3A-F975-4946-96C2-282A82C8DB2A}">
+            <Component Id="cmp347AD5D5E9BF1B68FC1208B7B8E1C244" Guid="{731E6139-B4BC-4C8C-88A6-B68E3A1DF97B}">
                 <File Id="fil4B5FF2E29CD2C0256C86C0EF3F664619" KeyPath="yes" Source="$(var.BasePath)\itext.styledxmlparser.dll" />
             </Component>
-            <Component Id="cmp15897A97B602185F83041E3A44896EEA" Guid="{9FF4B4A3-F5CA-495C-9DDD-738CFAB04BE0}">
+            <Component Id="cmp15897A97B602185F83041E3A44896EEA" Guid="{130E3FD8-6C41-4D9D-8740-14ED3E54C90C}">
                 <File Id="filF68B8B346C503CC7A42B5DB01415A399" KeyPath="yes" Source="$(var.BasePath)\itext.svg.dll" />
             </Component>
-            <Component Id="cmpF79A41B26948F126556619AD15586E53" Guid="{B2BE4059-1B26-4E1A-B4FF-591DDF8564F8}">
+            <Component Id="cmpF79A41B26948F126556619AD15586E53" Guid="{9B324D48-A3B4-4AFC-A0B7-91751949F91A}">
                 <File Id="filD65CB2C411B671E247C0C842FF9ED3FA" KeyPath="yes" Source="$(var.BasePath)\MaterialDesignColors.dll" />
             </Component>
-            <Component Id="cmp6D59DB1C8695088F09FD7F0B07ECD487" Guid="{17E5A09B-2ACD-4E07-848D-CF49AC0F0126}">
+            <Component Id="cmp6D59DB1C8695088F09FD7F0B07ECD487" Guid="{2B2ACD8E-00D5-4F05-A97B-A3AFC66FC442}">
                 <File Id="fil13620EBEA6F6420A02C733F8682CD641" KeyPath="yes" Source="$(var.BasePath)\MaterialDesignThemes.Wpf.dll" />
             </Component>
-            <Component Id="cmp8829932782E2062A8292EB806216CC80" Guid="{AE1C157E-3141-4D8B-A218-DA03EBEB2E62}">
+            <Component Id="cmp8829932782E2062A8292EB806216CC80" Guid="{3D265E01-007C-4168-BE83-2B00619529B3}">
                 <File Id="fil7E65EF656EF556143E801F8F85E3AC17" KeyPath="yes" Source="$(var.BasePath)\Microsoft.DotNet.PlatformAbstractions.dll" />
             </Component>
-            <Component Id="cmp828BABCAA179DFEF8C123894E628FE4B" Guid="{7B252373-34A7-468F-9923-7B47372B645A}">
+            <Component Id="cmp828BABCAA179DFEF8C123894E628FE4B" Guid="{E3BC675E-873A-40E0-9276-1EC21BF2D3FA}">
                 <File Id="filF6E569B7A4467871DC459846AD8CAB0C" KeyPath="yes" Source="$(var.BasePath)\Microsoft.Extensions.DependencyModel.dll" />
             </Component>
-            <Component Id="cmp8AC833CFB7DC6722697152FE46DA157A" Guid="{0828F169-B19C-4713-A805-DD0F4722B8B7}">
+            <Component Id="cmp8AC833CFB7DC6722697152FE46DA157A" Guid="{B1307068-AA82-46B8-BCBF-4CDFC736F692}">
                 <File Id="filD3CAD095889A5DE7EAAE25C73BC9910A" KeyPath="yes" Source="$(var.BasePath)\Microsoft.Xaml.Behaviors.dll" />
             </Component>
-            <Component Id="cmpBC4FC00A26E7D32479D42D3411317FC5" Guid="{4F4D4D42-3697-4D1B-8A06-DE6E96B1DEB2}">
+            <Component Id="cmpBC4FC00A26E7D32479D42D3411317FC5" Guid="{6C660640-FE29-41DF-BF95-FB09073137B2}">
                 <File Id="fil90A8AAD9FC612906D405476D61CEA3F4" KeyPath="yes" Source="$(var.BasePath)\Newtonsoft.Json.dll" />
             </Component>
-            <Component Id="cmp9F1B37CE91CE7C354CBC89B867C7E70D" Guid="{4392738C-CD64-4039-A49F-3D93AC275643}">
+            <Component Id="cmp9F1B37CE91CE7C354CBC89B867C7E70D" Guid="{ED300127-DDD0-4151-8489-06968F4FED40}">
                 <File Id="fil01684CB12DBE9D8B0621CD34CDDE3DD6" KeyPath="yes" Source="$(var.BasePath)\PDFExtractor.Core.dll" />
             </Component>
-            <Component Id="cmp8E771639CDB3C9154FE85F8F40D41810" Guid="{7623D12F-7D5D-4368-AA6B-F5A868F8C1DB}">
+            <Component Id="cmp8E771639CDB3C9154FE85F8F40D41810" Guid="{F096DB69-BF11-4F23-B6A5-B3523F8D3FDE}">
                 <File Id="fil80B2C2ED4949D6932642E6FCBB80781C" KeyPath="yes" Source="$(var.BasePath)\PDFExtractor.Core.pdb" />
             </Component>
-            <Component Id="cmpE8E99B6BEE19099955B0E8BCC593A299" Guid="{FD2BA4DC-945B-4A7B-B334-E8BC26F4C895}">
+            <Component Id="cmpE8E99B6BEE19099955B0E8BCC593A299" Guid="{8A8A1CB8-3005-47AA-991B-88C689EFEAEF}">
                 <File Id="fil1F760C8DB2437E688B29CCFF3F600FF9" KeyPath="yes" Source="$(var.BasePath)\PDFExtractor.deps.json" />
             </Component>
-            <Component Id="cmpC24E29D2000DB0BFABFD24967DC83DB8" Guid="{91AD51CE-9E62-40BE-BF88-DE4BD195C0A3}">
+            <Component Id="cmpC24E29D2000DB0BFABFD24967DC83DB8" Guid="{14CBAA49-4DC0-4EB2-B9F3-F551019FE7D1}">
                 <File Id="fil32532A392A4039286E99408A006C016A" KeyPath="yes" Source="$(var.BasePath)\PDFExtractor.dll" />
             </Component>
-            <Component Id="cmpDB62531F24A97CC3065F86A6ADAEF995" Guid="{16398E6E-9EB4-4D86-89F6-EA3338EFADFC}">
+            <Component Id="cmpDB62531F24A97CC3065F86A6ADAEF995" Guid="{C7EB5EEC-3B7B-462F-A0F6-4FDF05C42CCA}">
                 <File Id="fil786459DC40F8A0DDE89031D390AF1032" KeyPath="yes" Source="$(var.BasePath)\PDFExtractor.exe" />
             </Component>
-            <Component Id="cmp5B88D5B19A3ED6662F3978728E63B59A" Guid="{FACB5E68-966C-405F-835F-F0AC8C3B3845}">
+            <Component Id="cmp5B88D5B19A3ED6662F3978728E63B59A" Guid="{E493D87F-C61F-4A90-9DEE-6B811D2C9970}">
                 <File Id="fil58D0CBC0F9CA57CAC979F1EE333F36A5" KeyPath="yes" Source="$(var.BasePath)\PDFExtractor.Modules.Bookmarks.dll" />
             </Component>
-            <Component Id="cmp321E5774D184B81B21A1946EBF56E571" Guid="{6093356A-D533-4176-8B36-11CE9182B35C}">
+            <Component Id="cmp321E5774D184B81B21A1946EBF56E571" Guid="{40132DD8-1E10-4305-8633-70ADF5567A74}">
                 <File Id="filD78746EAFDEBC29AE4269199CA8F1C57" KeyPath="yes" Source="$(var.BasePath)\PDFExtractor.Modules.Bookmarks.pdb" />
             </Component>
-            <Component Id="cmp51F87B93774B06726B42D7CDFB374655" Guid="{E5264C8B-7D03-4392-AC37-940D4901977F}">
+            <Component Id="cmp51F87B93774B06726B42D7CDFB374655" Guid="{2EE34638-E81C-4A8D-8974-FFA0DA5D2ECF}">
                 <File Id="fil696551160F7C95E3CA0254D881BA02E6" KeyPath="yes" Source="$(var.BasePath)\PDFExtractor.Modules.File.dll" />
             </Component>
-            <Component Id="cmpD4B0F1FBF3F32D2C3D015573554F927E" Guid="{066B5EA1-1D9B-4512-8547-999C46D2D0FA}">
+            <Component Id="cmpD4B0F1FBF3F32D2C3D015573554F927E" Guid="{9DD24906-D5A6-4426-A3F4-32CDE161119B}">
                 <File Id="fil6197BF47578660CCA6E996DC0367B8A5" KeyPath="yes" Source="$(var.BasePath)\PDFExtractor.Modules.File.pdb" />
             </Component>
-            <Component Id="cmp1D4CA5B78C8E5420FBA24D5958BEBEC5" Guid="{1A7035DA-A436-4834-96EA-549074E99BE6}">
+            <Component Id="cmp1D4CA5B78C8E5420FBA24D5958BEBEC5" Guid="{3688435D-0325-46FD-ABE1-130FED44B702}">
                 <File Id="fil509DCE4AA86CDD4D04B8915EF37541E1" KeyPath="yes" Source="$(var.BasePath)\PDFExtractor.Modules.NewBookmark.dll" />
             </Component>
-            <Component Id="cmp6BE964B54C052F7E22546B750A423252" Guid="{68C52459-C0E5-4055-84A5-F116089DBD48}">
+            <Component Id="cmp6BE964B54C052F7E22546B750A423252" Guid="{B549EFC1-67E1-45FF-929C-2CA5FD1E4293}">
                 <File Id="fil69DABA338F9D58616AA24E0F90975112" KeyPath="yes" Source="$(var.BasePath)\PDFExtractor.Modules.NewBookmark.pdb" />
             </Component>
-            <Component Id="cmp3B07DB6AAD4D19C20E4DBAB0F209D5E2" Guid="{6C4E698C-43B7-4C39-8E4F-D05D34E0DEE3}">
+            <Component Id="cmp3B07DB6AAD4D19C20E4DBAB0F209D5E2" Guid="{CCB21D54-CB79-426A-B683-97E649A4C396}">
                 <File Id="fil5C641C5B4F76733482F668F12D270D82" KeyPath="yes" Source="$(var.BasePath)\PDFExtractor.pdb" />
             </Component>
-            <Component Id="cmpAFFB4E22E99BEB45C1E5CD2810C69272" Guid="{2D9A5D28-8637-4113-8B29-934326B02DAB}">
+            <Component Id="cmpAFFB4E22E99BEB45C1E5CD2810C69272" Guid="{48EEB1E3-7E4C-41F4-979E-ECE4169561ED}">
                 <File Id="fil72540A27A8CDE0E006C4E6658938FEE3" KeyPath="yes" Source="$(var.BasePath)\PDFExtractor.runtimeconfig.json" />
             </Component>
-            <Component Id="cmp59564654D02343646998A8D6A6F0C25F" Guid="{75422955-F5B8-4500-BF57-5FC4ACE6B5FC}">
+            <Component Id="cmp59564654D02343646998A8D6A6F0C25F" Guid="{980347E5-4011-4F66-B64D-FDDD3C478C82}">
                 <File Id="fil86F2842A309A2CABD479166F2B4E0588" KeyPath="yes" Source="$(var.BasePath)\Prism.dll" />
             </Component>
-            <Component Id="cmpB14F439A672995E8C21CF183A6BFBAF7" Guid="{D26CAF97-00F7-4F46-9B4E-A6D404631FA5}">
+            <Component Id="cmpB14F439A672995E8C21CF183A6BFBAF7" Guid="{784E6E06-339E-481A-9AA3-02749914AA84}">
                 <File Id="fil24C14D8A6734AD7E4E788B8DC53D85CE" KeyPath="yes" Source="$(var.BasePath)\Prism.Unity.Wpf.dll" />
             </Component>
-            <Component Id="cmpA9A2AB3353E22A8DA16EAAEE63473B2F" Guid="{D227E07F-6656-46FE-9228-A5B795B44E35}">
+            <Component Id="cmpA9A2AB3353E22A8DA16EAAEE63473B2F" Guid="{4AC3DFA4-97D2-4B4D-B5EA-9C8B00AF017C}">
                 <File Id="fil88EDC55735A4B2968B2469EF3EB5D6E7" KeyPath="yes" Source="$(var.BasePath)\Prism.Wpf.dll" />
             </Component>
-            <Component Id="cmpBEC715782490BD2AC6E2C93F2525865F" Guid="{DF2D8F29-895D-4AC1-ACC2-97686089C48E}">
+            <Component Id="cmpBEC715782490BD2AC6E2C93F2525865F" Guid="{5D21FC79-5FE7-46C7-9452-4E2CDAD733BC}">
                 <File Id="filF7E6EF61D1437B4669D7DE7C4066BD7E" KeyPath="yes" Source="$(var.BasePath)\Unity.Abstractions.dll" />
             </Component>
-            <Component Id="cmp665B78AB4AC844F961BF5ECBB81E189B" Guid="{16EE9760-544C-47D6-A7D9-E78641B157EE}">
+            <Component Id="cmp665B78AB4AC844F961BF5ECBB81E189B" Guid="{36BFABE5-EBF4-404C-852F-C8BC3EAF76CE}">
                 <File Id="filA3C7419293ACF778143324C6DB73F920" KeyPath="yes" Source="$(var.BasePath)\Unity.Container.dll" />
             </Component>
+            <Directory Id="dirB8A2D26F44FB615BC63649C1887544AF" Name="Textfiles">
+                <Component Id="cmpAFBE6E606954A29E22140DD56F4FC1DA" Guid="{AD05809A-FC16-4468-A561-298F652D1474}">
+                    <File Id="fil2AA30FDA7497951BA896CFF1669654CB" KeyPath="yes" Source="$(var.BasePath)\Textfiles\Licenses.txt" />
+                </Component>
+            </Directory>
         </DirectoryRef>
     </Fragment>
     <Fragment>
@@ -158,6 +163,7 @@
             <ComponentRef Id="cmpA9A2AB3353E22A8DA16EAAEE63473B2F" />
             <ComponentRef Id="cmpBEC715782490BD2AC6E2C93F2525865F" />
             <ComponentRef Id="cmp665B78AB4AC844F961BF5ECBB81E189B" />
+            <ComponentRef Id="cmpAFBE6E606954A29E22140DD56F4FC1DA" />
         </ComponentGroup>
     </Fragment>
 </Wix>
