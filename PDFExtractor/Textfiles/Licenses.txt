@@ -6,7 +6,7 @@ lisenssin ehtojen mukaisesti.
 
 GNU Affero General Public License 3.0: https://www.gnu.org/licenses/agpl-3.0.html
 
-Ohjelman lähdekoodi on saatavissa osoitteesta: 
+Ohjelman lähdekoodi on saatavissa osoitteesta: https://github.com/CodeX-fi/ExtractPdf
 
 ****AVOIMEN LÄHDEKOODIN RIIPPUVUUDET****
 
