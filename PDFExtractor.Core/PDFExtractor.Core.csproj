@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="3.2.0" />
+    <PackageReference Include="Prism.Wpf" Version="8.0.0.1909" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExtLib\ExtLib.csproj" />
+  </ItemGroup>
+
+</Project>
