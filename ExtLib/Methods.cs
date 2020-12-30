@@ -193,6 +193,13 @@ namespace ExtLib
 
             return bookmarks;
         }
+
+        public static int GetLastPage(string sourceFile)
+        {
+            PdfDocument doc = new PdfDocument(new PdfReader(sourceFile));
+            return doc.GetNumberOfPages();
+            doc.Close();
+        }
     }
 
     public static class Extraction

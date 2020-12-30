@@ -21,6 +21,7 @@ namespace PDFExtractor.Modules.Bookmarks.ViewModels
 {
     public class BookmarksViewModel : BindableBase
     {
+        private int PageNumber;
         public ObservableCollection<IBookmark> FileBookmarks { get; set; }
 
         private IBookmark selectedBookmark;
@@ -86,6 +87,7 @@ namespace PDFExtractor.Modules.Bookmarks.ViewModels
             FileBookmarks.Clear();
             FilePath = filePath;
             ExtLib.Bookmarks.GetBookmarks(filePath).ForEach(x => FileBookmarks.Add(x));
+            PageNumber = ExtLib.Bookmarks.GetLastPage(filePath);
         }
 
         private DelegateCommand clearCommand;
@@ -144,7 +146,7 @@ namespace PDFExtractor.Modules.Bookmarks.ViewModels
             if (openFile.ShowDialog() != true)
                 return;
 
-            List<IBookmark> imported = ExtLib.Bookmarks.ImportBookmarks(openFile.FileName, FileBookmarks.Max(x => x.EndPage));
+            List<IBookmark> imported = ExtLib.Bookmarks.ImportBookmarks(openFile.FileName, PageNumber);
             FileBookmarks.Clear();
             foreach (IBookmark import in imported)
                 FileBookmarks.Add(import);
