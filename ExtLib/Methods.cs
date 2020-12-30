@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Navigation;
 using iText.Kernel.Utils;
@@ -24,7 +25,7 @@ namespace ExtLib
 
     public static class Bookmarks
     {
-        public class Bookmark : IBookmark
+        public class Bookmark : BaseClasses.ModelBase, IBookmark
         {
             public Guid Id { get; }
             public Guid ParentId { get; set; }
@@ -44,7 +45,14 @@ namespace ExtLib
                         return string.Format("{0}-{1}", StartPage.ToString(), EndPage.ToString());
                 }
             }
-            public bool IsSelected { get; set; }
+
+            private bool isSelected;
+            public bool IsSelected
+            {
+                get { return isSelected; }
+                set { SetProperty(ref isSelected, value); }
+            }
+
             public Bookmark(string title, int pageNum)
             {
                 Title = title;
@@ -102,12 +110,6 @@ namespace ExtLib
 
             return bookmarks;
         }
-        public static void AddBookmark(PdfDocument doc, int pageNum, string title)
-        {
-            PdfOutline root = doc.GetOutlines(false);
-            PdfOutline added = root.AddOutline(title);
-            added.AddDestination(PdfExplicitDestination.CreateFit(doc.GetPage(pageNum)));
-        }
 
         private static void ListBookmarks(PdfOutline outline, IDictionary<String, PdfObject> names, 
             PdfDocument document, List<Bookmark> bookmarks, int level, Guid parentId)
@@ -131,6 +133,65 @@ namespace ExtLib
             {
                 ListBookmarks(child, names, document, bookmarks, level, parentId);
             }
+        }
+
+        public static List<IBookmark> ImportBookmarks(string sourceFile, int documentEndPage)
+        {
+            Regex whitespace = new Regex(@"\s+");
+            List<IBookmark> bookmarks = new List<IBookmark>();
+
+            foreach (string line in File.ReadAllLines(sourceFile))
+            {
+                if (!line.Contains(";"))
+                    continue;
+
+                int levelValue = 1;
+                foreach (char c in line)
+                {
+                    if (Char.IsWhiteSpace(c))
+                        levelValue++;
+                    else
+                        break;
+                }
+
+                string titleValue = line.Substring(0, line.LastIndexOf(";")).Trim();
+                string bmstring = whitespace.Replace(line, "");
+
+                int separatorIndex = bmstring.LastIndexOf(";");
+                int pageValue;
+                if (!Int32.TryParse(bmstring.Substring(separatorIndex + 1), out pageValue))
+                    continue;
+                if (pageValue > documentEndPage)
+                    continue;
+
+                Bookmark bm = new Bookmark(titleValue, pageValue);
+                bm.Level = levelValue;
+
+                if (bookmarks.Count > 0)
+                {
+                    for (int i = bookmarks.Count - 1; i > -1; i--)
+                    {
+                        if (bookmarks[i].EndPage == 0 && bookmarks[i].Level >= bm.Level)
+                            bookmarks[i].EndPage = bm.StartPage - 1;
+
+                        if (bookmarks[i].Level < bm.Level)
+                        {
+                            bm.ParentId = bookmarks[i].Id;
+                            break;
+                        }
+                    }
+                }
+
+                bookmarks.Add(bm);
+            }
+
+            foreach (Bookmark mark in bookmarks)
+            {
+                if (mark.EndPage == 0)
+                    mark.EndPage = documentEndPage;
+            }
+
+            return bookmarks;
         }
     }
 

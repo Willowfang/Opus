@@ -7,6 +7,7 @@
              xmlns:conv="clr-namespace:PDFExtractor.Core.Converters;assembly=PDFExtractor.Core"
              xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
              xmlns:prism="http://prismlibrary.com/"
@@ -33,6 +34,11 @@
                   ItemContainerStyle="{StaticResource InheritedList}"
                   Grid.Row="0"
                   x:Name="BookmarksList">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <prism:InvokeCommandAction Command="{Binding SelectChildrenCommand}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -61,16 +67,30 @@
                     Command="{Binding SaveFileCommand}">
                 <materialDesign:PackIcon Kind="ContentSave"/>
             </Button>
+            <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{DynamicResource MaterialDesignIconButton}"
+                    Margin="16, 16, 16, 0"
+                    Command="{Binding SelectAllCommand}">
+                <materialDesign:PackIcon Kind="SelectAll"/>
+            </Button>
+            <Button Style="{DynamicResource MaterialDesignIconButton}"
+                    IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBoolConverter}}"
                     Margin="16, 16, 16, 0"
                     Command="{Binding ClearCommand}">
                 <materialDesign:PackIcon Kind="Close"/>
             </Button>
+            <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{DynamicResource MaterialDesignIconButton}"
                     IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBoolConverter}}"
                     Margin="16, 16, 16, 0"
                     Command="{Binding DeleteCommand}">
                 <materialDesign:PackIcon Kind="Delete"/>
+            </Button>
+            <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
+            <Button Style="{DynamicResource MaterialDesignIconButton}"
+                    Margin="16, 16, 16, 0"
+                    Command="{Binding ImportBookmarksCommand}">
+                <materialDesign:PackIcon Kind="Import"/>
             </Button>
         </StackPanel>
     </Grid>

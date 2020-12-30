@@ -15,6 +15,7 @@ using Microsoft.Win32;
 using System.IO;
 using System;
 using System.Diagnostics;
+using System.Windows.Controls;
 
 namespace PDFExtractor.Modules.Bookmarks.ViewModels
 {
@@ -127,6 +128,67 @@ namespace PDFExtractor.Modules.Bookmarks.ViewModels
                 UseShellExecute = true
             };
             p.Start();
+        }
+
+        private DelegateCommand importBookmarksCommand;
+        public DelegateCommand ImportBookmarksCommand =>
+            importBookmarksCommand ?? (importBookmarksCommand = new DelegateCommand(ExecuteImportBookmarksCommand));
+
+        void ExecuteImportBookmarksCommand()
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Title = "Valitse kirjanmerkkitiedosto";
+            openFile.Filter = "Tekstitiedosto |*.txt";
+            openFile.InitialDirectory = Path.GetDirectoryName(FilePath);
+
+            if (openFile.ShowDialog() != true)
+                return;
+
+            List<IBookmark> imported = ExtLib.Bookmarks.ImportBookmarks(openFile.FileName, FileBookmarks.Max(x => x.EndPage));
+            FileBookmarks.Clear();
+            foreach (IBookmark import in imported)
+                FileBookmarks.Add(import);
+        }
+
+        private DelegateCommand<SelectionChangedEventArgs> selectChildrenCommand;
+        public DelegateCommand<SelectionChangedEventArgs> SelectChildrenCommand =>
+            selectChildrenCommand ?? (selectChildrenCommand = new DelegateCommand<SelectionChangedEventArgs>(ExecuteSelectChildrenCommand));
+
+        void ExecuteSelectChildrenCommand(SelectionChangedEventArgs parameter)
+        {
+            if (parameter.AddedItems.Count > 0)
+                SelectChildrenRecursively(parameter.AddedItems[0] as IBookmark);
+            if (parameter.RemovedItems.Count > 0)
+                DeSelectChildrenRecursively(parameter.RemovedItems[0] as IBookmark);
+        }
+
+        private void SelectChildrenRecursively(IBookmark mark)
+        {
+            foreach (IBookmark child in FileBookmarks.Where(x => x.ParentId == mark.Id))
+            {
+                child.IsSelected = true;
+                SelectChildrenRecursively(child);
+            }
+        }
+        private void DeSelectChildrenRecursively(IBookmark mark)
+        {
+            foreach (IBookmark child in FileBookmarks.Where(x => x.ParentId == mark.Id))
+            {
+                child.IsSelected = false;
+                DeSelectChildrenRecursively(child);
+            }
+        }
+
+        private DelegateCommand selectAllCommand;
+        public DelegateCommand SelectAllCommand =>
+            selectAllCommand ?? (selectAllCommand = new DelegateCommand(ExecuteSelectAllCommand));
+
+        void ExecuteSelectAllCommand()
+        {
+            foreach (IBookmark mark in FileBookmarks)
+            {
+                mark.IsSelected = true;
+            }
         }
     }
 }

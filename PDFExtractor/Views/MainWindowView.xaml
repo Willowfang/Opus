@@ -7,7 +7,7 @@
         xmlns:const="clr-namespace:PDFExtractor.Core.Constants;assembly=PDFExtractor.Core"
         xmlns:local="clr-namespace:PDFExtractor"
         mc:Ignorable="d"
-        Title="" Height="800" Width="600"
+        Title="" MinHeight="600" Height="800" MinWidth="560" Width="560"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -36,8 +36,9 @@
                                Style="{DynamicResource MaterialDesignHeadline5TextBlock}">KIRJALLISET TODISTEET</TextBlock>
                     <materialDesign:PopupBox Grid.Column="2" HorizontalAlignment="Right" StaysOpen="True">
                         <StackPanel HorizontalAlignment="Center">
-                            <Button Content="Lisenssit" Command="{Binding OpenLicenses}"/>
                             <Button Content="Käyttöohje" Command="{Binding OpenManual}"/>
+                            <Button Content="Lisenssit" Command="{Binding OpenLicenses}"/>
+                            <Button Content="Lähdekoodi" Command="{Binding OpenSourceCode}"/>
                         </StackPanel>
                     </materialDesign:PopupBox>
                 </Grid>

@@ -38,5 +38,19 @@ namespace PDFExtractor.ViewModels
             };
             p.Start();
         }
+
+        private DelegateCommand openSourceCode;
+        public DelegateCommand OpenSourceCode =>
+            openSourceCode ?? (openSourceCode = new DelegateCommand(ExecuteOpenSourceCode));
+
+        void ExecuteOpenSourceCode()
+        {
+            var p = new Process();
+            p.StartInfo = new ProcessStartInfo(@"https://github.com/CodeX-fi/ExtractPdf")
+            {
+                UseShellExecute = true
+            };
+            p.Start();
+        }
     }
 }
