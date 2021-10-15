@@ -67,6 +67,12 @@
                     Command="{Binding SaveFileCommand}">
                 <materialDesign:PackIcon Kind="ContentSave"/>
             </Button>
+            <Button Style="{DynamicResource MaterialDesignIconButton}"
+                    Margin="16, 16, 16, 0"
+                    IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBoolConverter}}"
+                    Command="{Binding SaveSeparateCommand}">
+                <materialDesign:PackIcon Kind="ContentSaveAll"/>
+            </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{DynamicResource MaterialDesignIconButton}"
                     Margin="16, 16, 16, 0"

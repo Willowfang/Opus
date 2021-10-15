@@ -7,7 +7,7 @@
         xmlns:const="clr-namespace:PDFExtractor.Core.Constants;assembly=PDFExtractor.Core"
         xmlns:local="clr-namespace:PDFExtractor"
         mc:Ignorable="d"
-        Title="" MinHeight="600" Height="800" MinWidth="560" Width="560"
+        Title="" MinHeight="600" Height="800" MinWidth="600" Width="600"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -21,48 +21,60 @@
     <Window.Icon>
         <DrawingImage/>
     </Window.Icon>
-    <Grid>
-        <ContentControl Content="{StaticResource LogoVector}"/>
-        <DockPanel>
-            <materialDesign:Card Padding="32" Margin="16" DockPanel.Dock="Top" Opacity="0.8">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
-                               Grid.Column="1"
-                               Style="{DynamicResource MaterialDesignHeadline5TextBlock}">KIRJALLISET TODISTEET</TextBlock>
-                    <materialDesign:PopupBox Grid.Column="2" HorizontalAlignment="Right" StaysOpen="True">
-                        <StackPanel HorizontalAlignment="Center">
-                            <Button Content="Käyttöohje" Command="{Binding OpenManual}"/>
-                            <Button Content="Lisenssit" Command="{Binding OpenLicenses}"/>
-                            <Button Content="Lähdekoodi" Command="{Binding OpenSourceCode}"/>
-                        </StackPanel>
-                    </materialDesign:PopupBox>
-                </Grid>
-            </materialDesign:Card>
-            <materialDesign:Card Padding="20" Margin="16, 8, 16, 8" DockPanel.Dock="Top" Opacity="0.8"
-                                 prism:RegionManager.RegionName="{x:Static const:RegionNames.SHELL_FILE}">
-
-            </materialDesign:Card>
-            <DockPanel DockPanel.Dock="Top">
-                <materialDesign:Card Padding="32" Margin="16, 8, 8, 8" Opacity="0.8"
-                                     DockPanel.Dock="Left">
-                    <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
-                           VerticalAlignment="Center"
-                           Style="{DynamicResource MaterialDesignHeadline6TextBlock}">Uusi</TextBlock>
+    <materialDesign:DialogHost IsOpen="{Binding DialogIsShowing}">
+        <materialDesign:DialogHost.DialogContent>
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center" 
+                           Style="{DynamicResource MaterialDesignHeadline6TextBlock}"
+                           Margin="32, 32, 32, 10" Text="{Binding DialogMessage}"/>
+                <Button HorizontalAlignment="Center" Margin="16" 
+                        Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                        Style="{DynamicResource MaterialDesignRaisedDarkButton}">OK</Button>
+            </StackPanel>
+        </materialDesign:DialogHost.DialogContent>
+        <Grid>
+            <ContentControl Content="{StaticResource LogoVector}"/>
+            <DockPanel>
+                <materialDesign:Card Padding="32" Margin="16" DockPanel.Dock="Top" Opacity="0.8">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                                   Grid.Column="1"
+                                   Style="{DynamicResource MaterialDesignHeadline5TextBlock}">KIRJALLISET TODISTEET</TextBlock>
+                        <materialDesign:PopupBox Grid.Column="2" HorizontalAlignment="Right" StaysOpen="True">
+                            <StackPanel HorizontalAlignment="Center">
+                                <Button Content="Käyttöohje" Command="{Binding OpenManual}"/>
+                                <Button Content="Lisenssit" Command="{Binding OpenLicenses}"/>
+                                <Button Content="Lähdekoodi" Command="{Binding OpenSourceCode}"/>
+                            </StackPanel>
+                        </materialDesign:PopupBox>
+                    </Grid>
                 </materialDesign:Card>
-                <materialDesign:Card Padding="32" Margin="8, 8, 16, 8" Opacity="0.8"
-                                 prism:RegionManager.RegionName="{x:Static const:RegionNames.SHELL_NEW}">
+                <materialDesign:Card Padding="20" Margin="16, 8, 16, 8" DockPanel.Dock="Top" Opacity="0.8"
+                                     prism:RegionManager.RegionName="{x:Static const:RegionNames.SHELL_FILE}">
+
+                </materialDesign:Card>
+                <DockPanel DockPanel.Dock="Top">
+                    <materialDesign:Card Padding="32" Margin="16, 8, 8, 8" Opacity="0.8"
+                                         DockPanel.Dock="Left">
+                        <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                               VerticalAlignment="Center"
+                               Style="{DynamicResource MaterialDesignHeadline6TextBlock}">Uusi</TextBlock>
+                    </materialDesign:Card>
+                    <materialDesign:Card Padding="32" Margin="8, 8, 16, 8" Opacity="0.8"
+                                     prism:RegionManager.RegionName="{x:Static const:RegionNames.SHELL_NEW}">
+
+                    </materialDesign:Card>
+                </DockPanel>
+                <materialDesign:Card Padding="32" Margin="16, 8, 16, 8" Opacity="0.8" Grid.Column="0"
+                                         prism:RegionManager.RegionName="{x:Static const:RegionNames.SHELL_BOOKMARKS}">
 
                 </materialDesign:Card>
             </DockPanel>
-            <materialDesign:Card Padding="32" Margin="16, 8, 16, 8" Opacity="0.8" Grid.Column="0"
-                                     prism:RegionManager.RegionName="{x:Static const:RegionNames.SHELL_BOOKMARKS}">
-                    
-            </materialDesign:Card>
-        </DockPanel>
-    </Grid>
+        </Grid>
+    </materialDesign:DialogHost>
 </Window>

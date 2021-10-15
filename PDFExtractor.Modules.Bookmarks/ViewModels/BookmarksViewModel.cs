@@ -5,6 +5,7 @@ using Prism.Events;
 using PDFExtractor.Core.Events;
 using Prism.Commands;
 using System.Windows;
+using System.Windows.Forms;
 using PDFExtractor.Core.ExtensionMethods;
 using System.Windows.Data;
 using System.ComponentModel;
@@ -21,6 +22,7 @@ namespace PDFExtractor.Modules.Bookmarks.ViewModels
 {
     public class BookmarksViewModel : BindableBase
     {
+        private IEventAggregator aggregator;
         private int PageNumber;
         public ObservableCollection<IBookmark> FileBookmarks { get; set; }
 
@@ -37,6 +39,7 @@ namespace PDFExtractor.Modules.Bookmarks.ViewModels
         {
             eventAggregator.GetEvent<FileSelectedEvent>().Subscribe(FileSelected);
             eventAggregator.GetEvent<BookmarkAddedEvent>().Subscribe(BookmarkAdded);
+            aggregator = eventAggregator;
             FileBookmarks = new ObservableCollection<IBookmark>();
         }
 
@@ -108,13 +111,32 @@ namespace PDFExtractor.Modules.Bookmarks.ViewModels
             FileBookmarks.RemoveAll(x => x.IsSelected);
         }
 
+        private DelegateCommand saveSeparateCommand;
+        public DelegateCommand SaveSeparateCommand =>
+            saveSeparateCommand ?? (saveSeparateCommand = new DelegateCommand(ExecuteSaveSeparateCommand));
+
+        void ExecuteSaveSeparateCommand()
+        {
+            FolderBrowserDialog browseDialog = new FolderBrowserDialog();
+            browseDialog.Description = "Valitse kansio, johon tiedostot tallennetaan";
+            browseDialog.UseDescriptionForTitle = true;
+            browseDialog.ShowNewFolderButton = true;
+
+            if (browseDialog.ShowDialog() == DialogResult.Cancel)
+                return;
+
+            Extraction.ExtractSeparate(FilePath, browseDialog.SelectedPath, FileBookmarks);
+            SelectedBookmark = null;
+            aggregator.GetEvent<DialogEvent>().Publish("Tiedostot tallennettu!");
+        }
+
         private DelegateCommand saveFileCommand;
         public DelegateCommand SaveFileCommand =>
             saveFileCommand ?? (saveFileCommand = new DelegateCommand(ExecuteSaveFileCommand));
 
         void ExecuteSaveFileCommand()
         {
-            SaveFileDialog saveDialog = new SaveFileDialog();
+            Microsoft.Win32.SaveFileDialog saveDialog = new Microsoft.Win32.SaveFileDialog();
             saveDialog.Title = "Valitse tallennettavan tiedoston polku";
             saveDialog.Filter = "PDF (.pdf)|*.pdf";
             saveDialog.InitialDirectory = Path.GetDirectoryName(FilePath);
@@ -138,7 +160,7 @@ namespace PDFExtractor.Modules.Bookmarks.ViewModels
 
         void ExecuteImportBookmarksCommand()
         {
-            OpenFileDialog openFile = new OpenFileDialog();
+            Microsoft.Win32.OpenFileDialog openFile = new Microsoft.Win32.OpenFileDialog();
             openFile.Title = "Valitse kirjanmerkkitiedosto";
             openFile.Filter = "Tekstitiedosto |*.txt";
             openFile.InitialDirectory = Path.GetDirectoryName(FilePath);

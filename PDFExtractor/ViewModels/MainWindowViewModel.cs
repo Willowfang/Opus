@@ -4,13 +4,39 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Windows;
+using PDFExtractor.Core.Events;
 using Prism.Commands;
+using Prism.Events;
 using Prism.Mvvm;
 
 namespace PDFExtractor.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {
+        private bool dialogIsShowing;
+        public bool DialogIsShowing
+        {
+            get { return dialogIsShowing; }
+            set { SetProperty(ref dialogIsShowing, value); }
+        }
+        private string dialogMessage;
+        public string DialogMessage
+        {
+            get { return dialogMessage; }
+            set { SetProperty(ref dialogMessage, value); }
+        }
+
+        public MainWindowViewModel(IEventAggregator eventAggregator)
+        {
+            eventAggregator.GetEvent<DialogEvent>().Subscribe(ShowDialog);
+        }
+
+        private void ShowDialog(string message)
+        {
+            DialogMessage = message;
+            DialogIsShowing = true;
+        }
+
         private DelegateCommand openLicenses;
         public DelegateCommand OpenLicenses =>
             openLicenses ?? (openLicenses = new DelegateCommand(ExecuteOpenLicenses));
