@@ -3,6 +3,8 @@ using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
 using PDFExtractor.Core.Constants;
+using Prism.Events;
+using PDFExtractor.Core.Singletons;
 
 namespace PDFExtractor.Modules.File
 {
@@ -10,13 +12,15 @@ namespace PDFExtractor.Modules.File
     {
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            var regionManager = containerProvider.Resolve<IRegionManager>();
-            regionManager.RequestNavigate(RegionNames.SHELL_FILE, nameof(FileNavigationView));
+            var navigator = containerProvider.Resolve<INavigationAssist>();
+
+            navigator.Add<FileNavigationView>(RegionNames.SHELL_FILE, SchemeNames.SPLIT);
+            navigator.Add<FileMultipleView>(RegionNames.SHELL_FILE, SchemeNames.SIGNATURE);
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<FileNavigationView>();
+
         }
     }
 }

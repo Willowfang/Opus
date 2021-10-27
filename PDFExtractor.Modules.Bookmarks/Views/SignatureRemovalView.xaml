@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="PDFExtractor.Modules.Bookmarks.Views.SignatureRemovalView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:conv="clr-namespace:PDFExtractor.Core.Converters;assembly=PDFExtractor.Core"
+             xmlns:local="clr-namespace:PDFExtractor.Modules.Bookmarks.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <UserControl.Resources>
+        <conv:NullToBoolConverter x:Key="NullToBoolConverter"/>
+        <conv:EmptyToBoolConverter x:Key="EmptyToBoolConverter"/>
+        <Style TargetType="{x:Type ListViewItem}" x:Key="InheritedList" 
+               BasedOn="{StaticResource MaterialDesignToolToggleListBoxItem}">
+            <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        </Style>
+        <Style TargetType="{x:Type Button}" x:Key="ToolButton"
+               BasedOn="{StaticResource MaterialDesignIconButton}">
+            <Setter Property="Margin" Value="10, 16, 10, 0"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ListView ItemsSource="{Binding SignatureFiles}"
+                  Style="{StaticResource MaterialDesignListBox}"
+                  SelectedItem="{Binding SelectedFile}"
+                  SelectionMode="Multiple"
+                  ItemContainerStyle="{StaticResource InheritedList}"
+                  Grid.Row="0"
+                  x:Name="FilesList">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <TextBlock Grid.Column="0" Text="{Binding Title}"
+                                   TextTrimming="CharacterEllipsis"
+                                   Margin="0"/>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+            <Button Style="{StaticResource ToolButton}"
+                    IsEnabled="{Binding SignatureFiles.Count, Converter={StaticResource EmptyToBoolConverter}, Mode=OneWay}"
+                    Command="{Binding RemoveSignatureCommand}">
+                <materialDesign:PackIcon Kind="ContentSave"/>
+            </Button>
+            <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
+            <Button Style="{StaticResource ToolButton}"
+                    IsEnabled="{Binding SignatureFiles.Count, Converter={StaticResource EmptyToBoolConverter}, Mode=OneWay}"
+                    Command="{Binding ClearCommand}">
+                <materialDesign:PackIcon Kind="Close"/>
+            </Button>
+            <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
+            <Button Style="{StaticResource ToolButton}"
+                    IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBoolConverter}}"
+                    Command="{Binding DeleteCommand}">
+                <materialDesign:PackIcon Kind="Delete"/>
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

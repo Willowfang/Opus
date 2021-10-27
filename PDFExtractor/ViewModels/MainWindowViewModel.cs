@@ -1,39 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Text;
+using System.Threading;
 using System.Windows;
+using PDFExtractor.Core.Base;
+using PDFExtractor.Core.Constants;
 using PDFExtractor.Core.Events;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
+using Prism.Regions;
 
 namespace PDFExtractor.ViewModels
 {
-    public class MainWindowViewModel : BindableBase
+    public class MainWindowViewModel : ViewModelBase
     {
+        private string title;
+        public string Title
+        {
+            get => title;
+            set => SetProperty(ref title, value);
+        }
+
         private bool dialogIsShowing;
         public bool DialogIsShowing
         {
             get { return dialogIsShowing; }
             set { SetProperty(ref dialogIsShowing, value); }
         }
-        private string dialogMessage;
-        public string DialogMessage
+
+        public MainWindowViewModel(IRegionManager regionManager, IEventAggregator eventAggregator)
+            : base(regionManager, eventAggregator)
         {
-            get { return dialogMessage; }
-            set { SetProperty(ref dialogMessage, value); }
+            eventAggregator.GetEvent<DialogMessageEvent>().Subscribe(ShowDialogMessage);
         }
 
-        public MainWindowViewModel(IEventAggregator eventAggregator)
+        private void ShowDialogMessage(string message)
         {
-            eventAggregator.GetEvent<DialogEvent>().Subscribe(ShowDialog);
-        }
-
-        private void ShowDialog(string message)
-        {
-            DialogMessage = message;
             DialogIsShowing = true;
         }
 
@@ -44,7 +47,7 @@ namespace PDFExtractor.ViewModels
         void ExecuteOpenLicenses()
         {
             var p = new Process();
-            p.StartInfo = new ProcessStartInfo(Path.Combine(AppContext.BaseDirectory, "TextFiles", "Licenses.txt"))
+            p.StartInfo = new ProcessStartInfo(Path.Combine(AppContext.BaseDirectory, "TextFiles", Resources.Hyperlinks.Licenses))
             {
                 UseShellExecute = true
             };
@@ -58,7 +61,7 @@ namespace PDFExtractor.ViewModels
         void ExecuteOpenManual()
         {
             var p = new Process();
-            p.StartInfo = new ProcessStartInfo(@"https://github.com/CodeX-fi/ExtractPdf/wiki/K%C3%A4ytt%C3%B6ohjeet")
+            p.StartInfo = new ProcessStartInfo(@Resources.Hyperlinks.UserManual)
             {
                 UseShellExecute = true
             };
@@ -72,11 +75,24 @@ namespace PDFExtractor.ViewModels
         void ExecuteOpenSourceCode()
         {
             var p = new Process();
-            p.StartInfo = new ProcessStartInfo(@"https://github.com/CodeX-fi/ExtractPdf")
+            p.StartInfo = new ProcessStartInfo(@Resources.Hyperlinks.SourceCode)
             {
                 UseShellExecute = true
             };
             p.Start();
+        }
+
+        private DelegateCommand<string> _navigateCommand;
+        public DelegateCommand<string> NavigateCommand =>
+            _navigateCommand ?? (_navigateCommand = new DelegateCommand<string>(ExecuteNavigation));
+
+        void ExecuteNavigation(string name)
+        {
+            Aggregator.GetEvent<ViewChangeEvent>().Publish(name);
+            if (name == SchemeNames.SPLIT)
+                Title = Resources.Labels.Title_Split.ToUpper();
+            if (name == SchemeNames.SIGNATURE)
+                Title = Resources.Labels.Title_Signature.ToUpper();
         }
     }
 }

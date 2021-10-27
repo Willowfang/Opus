@@ -21,6 +21,10 @@
             <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}"/>
             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         </Style>
+        <Style TargetType="{x:Type Button}" x:Key="ToolButton"
+               BasedOn="{StaticResource MaterialDesignIconButton}">
+            <Setter Property="Margin" Value="5, 16, 5, 0"/>
+        </Style>
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -61,40 +65,34 @@
         </ListView>
 
         <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
-            <Button Style="{DynamicResource MaterialDesignIconButton}"
-                    Margin="16, 16, 16, 0"
+            <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBoolConverter}}"
                     Command="{Binding SaveFileCommand}">
                 <materialDesign:PackIcon Kind="ContentSave"/>
             </Button>
-            <Button Style="{DynamicResource MaterialDesignIconButton}"
-                    Margin="16, 16, 16, 0"
+            <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBoolConverter}}"
                     Command="{Binding SaveSeparateCommand}">
                 <materialDesign:PackIcon Kind="ContentSaveAll"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
-            <Button Style="{DynamicResource MaterialDesignIconButton}"
-                    Margin="16, 16, 16, 0"
+            <Button Style="{StaticResource ToolButton}"
                     Command="{Binding SelectAllCommand}">
                 <materialDesign:PackIcon Kind="SelectAll"/>
             </Button>
-            <Button Style="{DynamicResource MaterialDesignIconButton}"
+            <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBoolConverter}}"
-                    Margin="16, 16, 16, 0"
                     Command="{Binding ClearCommand}">
                 <materialDesign:PackIcon Kind="Close"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
-            <Button Style="{DynamicResource MaterialDesignIconButton}"
+            <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBoolConverter}}"
-                    Margin="16, 16, 16, 0"
                     Command="{Binding DeleteCommand}">
                 <materialDesign:PackIcon Kind="Delete"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
-            <Button Style="{DynamicResource MaterialDesignIconButton}"
-                    Margin="16, 16, 16, 0"
+            <Button Style="{StaticResource ToolButton}"
                     Command="{Binding ImportBookmarksCommand}">
                 <materialDesign:PackIcon Kind="Import"/>
             </Button>

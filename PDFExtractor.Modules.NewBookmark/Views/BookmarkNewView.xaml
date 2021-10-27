@@ -5,15 +5,21 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:res="clr-namespace:PDFExtractor.Modules.NewBookmark.Resources"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300"
+             d:DesignHeight="100" d:DesignWidth="600"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True" >
     <Grid>
         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+            <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                       VerticalAlignment="Center"
+                       Style="{DynamicResource MaterialDesignHeadline6TextBlock}"
+                       Text="{x:Static res:Labels.NewBookmark_Title}"/>
+            <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="16, 10, 16, 10" RadiusX="2" RadiusY="2"/>
                 <StackPanel HorizontalAlignment="Center">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Sivut" VerticalAlignment="Center" Margin="0, 0, 10, 0"
+                        <TextBlock Text="{x:Static res:Labels.NewBookmark_Pages}" VerticalAlignment="Center" Margin="0, 0, 10, 0"
                                FontSize="16"/>
                         <TextBox Text="{Binding StartPage}" 
                              Width="50" TextAlignment="Center"
@@ -29,7 +35,7 @@
                              FontSize="16"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Nimi" VerticalAlignment="Center" Margin="0, 0, 10, 0"
+                        <TextBlock Text="{x:Static res:Labels.NewBookmark_Name}" VerticalAlignment="Center" Margin="0, 0, 10, 0"
                                FontSize="16"/>
                         <TextBox Text="{Binding Title}" 
                              Width="200" TextAlignment="Left"

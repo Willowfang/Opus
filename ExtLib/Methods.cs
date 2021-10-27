@@ -4,11 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using iText.Forms;
 using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Canvas.Parser;
 using iText.Kernel.Pdf.Canvas.Parser.Listener;
 using iText.Kernel.Pdf.Navigation;
 using iText.Kernel.Utils;
+using ExtLib.ExtensionMethods;
 
 namespace ExtLib
 {
@@ -24,7 +26,6 @@ namespace ExtLib
         string Range { get; }
         bool IsSelected { get; set; }
     }
-
     public static class Bookmarks
     {
         public class Bookmark : BaseClasses.ModelBase, IBookmark
@@ -205,8 +206,37 @@ namespace ExtLib
         }
     }
 
+    public interface IFilePDF
+    {
+        string Title { get; }
+        string FilePath { get; }
+        bool IsSelected { get; set; }
+    }
+    public class FilePDF : BaseClasses.ModelBase, IFilePDF
+    {
+        public string Title
+        {
+            get => Path.GetFileNameWithoutExtension(FilePath);
+        }
+        public string FilePath { get; }
+
+        private bool isSelected;
+        public bool IsSelected
+        {
+            get => isSelected;
+            set => SetProperty(ref isSelected, value);
+        }
+
+        public FilePDF(string filePath)
+        {
+            FilePath = filePath;
+        }
+    }
+
     public static class Extraction
     {
+        #region IN_DEVELOPMENT
+
         private static Regex re_charges = new Regex(@"\d\.\s[A-Ö]{3,}");
         private static Regex re_invNumbers = new Regex(@"\(\d+\/[Rr]\/\d+\/\d{2,2}\)");
         private static Regex re_caseNumberOnly = new Regex(@"[1-9]\d+(?=[/]\d{2,})");
@@ -262,7 +292,6 @@ namespace ExtLib
             public List<ReportFile> AdditionalReports { get; set; }
         }
         
-
         private static string GetFullText(string sourceFile)
         {
             var pdfDocument = new PdfDocument(new PdfReader(sourceFile));
@@ -498,7 +527,9 @@ namespace ExtLib
             }
         }
 
+        #endregion
 
+        // Get iText7 extraction compatible string
         private static string GetRangeString(List<int> numbers)
         {
             var ranges = new List<string>();
@@ -512,6 +543,7 @@ namespace ExtLib
             int start = numbers[0];
             string range = start.ToString();
 
+            // Add all page ranges to string
             for (int i = 1; i <= numbers.Count; i++)
             {
                 if (i < numbers.Count && numbers[i] == numbers[i - 1] + 1)
@@ -529,9 +561,16 @@ namespace ExtLib
                 }
             }
 
+            // Return a joint string of all ranges
             return string.Join(", ", ranges);
         }
 
+        /// <summary>
+        /// Extract bookmark-ranges to separate files
+        /// </summary>
+        /// <param name="sourceFile">Path of the file to extract from</param>
+        /// <param name="destDirectory">Directory to extract the files to</param>
+        /// <param name="allBookMarks">All the bookmarks in the file. Contains bookmarks that have been selected.</param>
         public static void ExtractSeparate(string sourceFile, string destDirectory, IEnumerable<IBookmark> allBookMarks)
         {
             List<IBookmark> selectedBookmarks = allBookMarks.ToList().FindAll(x => x.IsSelected);
@@ -548,7 +587,7 @@ namespace ExtLib
 
                 string range = GetRangeString(pages.ToList());
 
-                string fileName = string.Join("_", mark.Title.Split(Path.GetInvalidFileNameChars())) + ".pdf";
+                string fileName = mark.Title.ReplaceIllegal() + ".pdf";
 
                 var split = new ExtSplitter(doc, pageRange => new PdfWriter(Path.Combine(destDirectory, fileName)));
                 var result = split.ExtractPageRange(new PageRange(range));
@@ -559,6 +598,12 @@ namespace ExtLib
             doc.Close();
         }
 
+        /// <summary>
+        /// Extract bookmark-ranges into a single file
+        /// </summary>
+        /// <param name="sourceFile">Path of the file to extract from</param>
+        /// <param name="destFile">File to extract to</param>
+        /// <param name="allBookMarks">All the bookmarks of the file. Contains selected bookmarks.</param>
         public static void Extract(string sourceFile, string destFile, IEnumerable<IBookmark> allBookMarks)
         {
             List<IBookmark> selectedBookmarks =  allBookMarks.ToList().FindAll(x => x.IsSelected);
@@ -649,6 +694,38 @@ namespace ExtLib
             protected override PdfWriter GetNextPdfWriter(PageRange documentPageRange)
             {
                 return nextWriter.Invoke(documentPageRange);
+            }
+        }
+    }
+
+    public static class Signature
+    {
+        /// <summary>
+        /// Create a copy of a document, where the digital signature has been removed
+        /// </summary>
+        /// <param name="file">File to process</param>
+        /// <param name="destDirectory">Directory to save the file to</param>
+        /// <param name="identifier">Additional identifier for the new file (e.g. "file.pdf" --> "file_nosignature.pdf")</param>
+        public static void Remove(IFilePDF file, string destDirectory, string identifier)
+        {
+            Remove(new IFilePDF[] { file }, destDirectory, identifier);
+        }
+        // <summary>
+        /// Create copies of documents, where the digital signature has been removed
+        /// </summary>
+        /// <param name="sourceFiles">Files to process</param>
+        /// <param name="destDirectory">Directory to save the file to</param>
+        /// <param name="identifier">Additional identifier for the new file (e.g. "file.pdf" --> "file_nosignature.pdf")</param>
+        public static void Remove(IFilePDF[] sourceFiles, string destDirectory, string identifier)
+        {
+            foreach (IFilePDF file in sourceFiles)
+            {
+                string fileName = file.Title + "_" + identifier + ".pdf";
+                string destFile = Path.Combine(destDirectory, fileName.ReplaceIllegal());
+                PdfDocument doc = new PdfDocument(new PdfReader(file.FilePath), new PdfWriter(destFile));
+                PdfAcroForm form = PdfAcroForm.GetAcroForm(doc, true);
+                form.FlattenFields();
+                doc.Close();
             }
         }
     }

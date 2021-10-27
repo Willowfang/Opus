@@ -6,8 +6,9 @@
         xmlns:prism="http://prismlibrary.com/"
         xmlns:const="clr-namespace:PDFExtractor.Core.Constants;assembly=PDFExtractor.Core"
         xmlns:local="clr-namespace:PDFExtractor"
+        xmlns:res="clr-namespace:PDFExtractor.Resources"
         mc:Ignorable="d"
-        Title="" MinHeight="600" Height="800" MinWidth="600" Width="600"
+        Title="" MinHeight="600" Height="800" MinWidth="640" Width="640"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -17,24 +18,63 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Initialized="Window_Initialized"
+        Loaded="Window_Loaded">
+    <Window.Resources>
+        <Style TargetType="{x:Type ListViewItem}" BasedOn="{StaticResource MaterialDesignListBoxItem}"
+               x:Key="CustomList">
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="8"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+        <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource MaterialDesignToolRadioButton}"
+               x:Key="MainMenuButton">
+            <Setter Property="Width" Value="60"/>
+            <Setter Property="GroupName" Value="MainMenuB"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0, 0, 0, 0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+    </Window.Resources>
     <Window.Icon>
         <DrawingImage/>
     </Window.Icon>
     <materialDesign:DialogHost IsOpen="{Binding DialogIsShowing}">
         <materialDesign:DialogHost.DialogContent>
-            <StackPanel>
-                <TextBlock HorizontalAlignment="Center" 
-                           Style="{DynamicResource MaterialDesignHeadline6TextBlock}"
-                           Margin="32, 32, 32, 10" Text="{Binding DialogMessage}"/>
-                <Button HorizontalAlignment="Center" Margin="16" 
-                        Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
-                        Style="{DynamicResource MaterialDesignRaisedDarkButton}">OK</Button>
-            </StackPanel>
+            <ContentControl prism:RegionManager.RegionName="{x:Static const:RegionNames.SHELL_DIALOG}">
+                
+            </ContentControl>
         </materialDesign:DialogHost.DialogContent>
         <Grid>
             <ContentControl Content="{StaticResource LogoVector}"/>
             <DockPanel>
+                <StackPanel HorizontalAlignment="Center" Margin="16, 25, 0, 0">
+                    <RadioButton Style="{DynamicResource MainMenuButton}"
+                                     Command="{Binding NavigateCommand}"
+                                     CommandParameter="{x:Static const:SchemeNames.SPLIT}"
+                                     x:Name="SplitButton">
+                        <materialDesign:PackIcon Width="30" Height="30" 
+                                                     Kind="FileDocumentMultiple" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
+                    </RadioButton>
+                    <RadioButton Style="{DynamicResource MainMenuButton}"
+                                     Command="{Binding NavigateCommand}"
+                                     CommandParameter="{x:Static const:SchemeNames.SIGNATURE}">
+                        <materialDesign:PackIcon Width="30" Height="30" 
+                                                     Kind="Draw" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
+                    </RadioButton>
+                </StackPanel>
                 <materialDesign:Card Padding="32" Margin="16" DockPanel.Dock="Top" Opacity="0.8">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -44,12 +84,13 @@
                         </Grid.ColumnDefinitions>
                         <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
                                    Grid.Column="1"
-                                   Style="{DynamicResource MaterialDesignHeadline5TextBlock}">KIRJALLISET TODISTEET</TextBlock>
+                                   Style="{DynamicResource MaterialDesignHeadline5TextBlock}"
+                                   Text="{Binding Title}"/>
                         <materialDesign:PopupBox Grid.Column="2" HorizontalAlignment="Right" StaysOpen="True">
                             <StackPanel HorizontalAlignment="Center">
-                                <Button Content="Käyttöohje" Command="{Binding OpenManual}"/>
-                                <Button Content="Lisenssit" Command="{Binding OpenLicenses}"/>
-                                <Button Content="Lähdekoodi" Command="{Binding OpenSourceCode}"/>
+                                <Button Content="{x:Static res:Labels.HelpMenu_UserManual}" Command="{Binding OpenManual}"/>
+                                <Button Content="{x:Static res:Labels.HelpMenu_Licenses}" Command="{Binding OpenLicenses}"/>
+                                <Button Content="{x:Static res:Labels.HelpMenu_SourceCode}" Command="{Binding OpenSourceCode}"/>
                             </StackPanel>
                         </materialDesign:PopupBox>
                     </Grid>
@@ -59,13 +100,7 @@
 
                 </materialDesign:Card>
                 <DockPanel DockPanel.Dock="Top">
-                    <materialDesign:Card Padding="32" Margin="16, 8, 8, 8" Opacity="0.8"
-                                         DockPanel.Dock="Left">
-                        <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
-                               VerticalAlignment="Center"
-                               Style="{DynamicResource MaterialDesignHeadline6TextBlock}">Uusi</TextBlock>
-                    </materialDesign:Card>
-                    <materialDesign:Card Padding="32" Margin="8, 8, 16, 8" Opacity="0.8"
+                    <materialDesign:Card Padding="32" Margin="16, 8, 16, 8" Opacity="0.8"
                                      prism:RegionManager.RegionName="{x:Static const:RegionNames.SHELL_NEW}">
 
                     </materialDesign:Card>

@@ -4,25 +4,21 @@ using ExtLib;
 using Prism.Events;
 using PDFExtractor.Core.Events;
 using Prism.Commands;
-using System.Windows;
 using System.Windows.Forms;
 using PDFExtractor.Core.ExtensionMethods;
-using System.Windows.Data;
-using System.ComponentModel;
 using System.Linq;
-using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Win32;
 using System.IO;
 using System;
 using System.Diagnostics;
 using System.Windows.Controls;
+using PDFExtractor.Core.Base;
+using Prism.Regions;
 
 namespace PDFExtractor.Modules.Bookmarks.ViewModels
 {
-    public class BookmarksViewModel : BindableBase
+    public class BookmarksViewModel : ViewModelBase
     {
-        private IEventAggregator aggregator;
         private int PageNumber;
         public ObservableCollection<IBookmark> FileBookmarks { get; set; }
 
@@ -35,11 +31,11 @@ namespace PDFExtractor.Modules.Bookmarks.ViewModels
 
         private string FilePath;
 
-        public BookmarksViewModel(IEventAggregator eventAggregator)
+        public BookmarksViewModel(IRegionManager regionManager, IEventAggregator eventAggregator)
+            : base(regionManager, eventAggregator)
         {
             eventAggregator.GetEvent<FileSelectedEvent>().Subscribe(FileSelected);
             eventAggregator.GetEvent<BookmarkAddedEvent>().Subscribe(BookmarkAdded);
-            aggregator = eventAggregator;
             FileBookmarks = new ObservableCollection<IBookmark>();
         }
 
@@ -118,7 +114,7 @@ namespace PDFExtractor.Modules.Bookmarks.ViewModels
         void ExecuteSaveSeparateCommand()
         {
             FolderBrowserDialog browseDialog = new FolderBrowserDialog();
-            browseDialog.Description = "Valitse kansio, johon tiedostot tallennetaan";
+            browseDialog.Description = Resources.Labels.Bookmarks_SelectFolder;
             browseDialog.UseDescriptionForTitle = true;
             browseDialog.ShowNewFolderButton = true;
 
@@ -127,7 +123,7 @@ namespace PDFExtractor.Modules.Bookmarks.ViewModels
 
             Extraction.ExtractSeparate(FilePath, browseDialog.SelectedPath, FileBookmarks);
             SelectedBookmark = null;
-            aggregator.GetEvent<DialogEvent>().Publish("Tiedostot tallennettu!");
+            Aggregator.GetEvent<DialogMessageEvent>().Publish(Resources.DialogMessages.Bookmarks_MultipleSaved);
         }
 
         private DelegateCommand saveFileCommand;
@@ -137,7 +133,7 @@ namespace PDFExtractor.Modules.Bookmarks.ViewModels
         void ExecuteSaveFileCommand()
         {
             Microsoft.Win32.SaveFileDialog saveDialog = new Microsoft.Win32.SaveFileDialog();
-            saveDialog.Title = "Valitse tallennettavan tiedoston polku";
+            saveDialog.Title = Resources.Labels.Bookmarks_SelectPath;
             saveDialog.Filter = "PDF (.pdf)|*.pdf";
             saveDialog.InitialDirectory = Path.GetDirectoryName(FilePath);
 
@@ -146,12 +142,7 @@ namespace PDFExtractor.Modules.Bookmarks.ViewModels
 
             Extraction.Extract(FilePath, saveDialog.FileName, FileBookmarks);
             SelectedBookmark = null;
-            var p = new Process();
-            p.StartInfo = new ProcessStartInfo(@saveDialog.FileName)
-            {
-                UseShellExecute = true
-            };
-            p.Start();
+            Aggregator.GetEvent<DialogMessageEvent>().Publish(Resources.DialogMessages.Bookmarks_SingleSaved);
         }
 
         private DelegateCommand importBookmarksCommand;
@@ -161,8 +152,8 @@ namespace PDFExtractor.Modules.Bookmarks.ViewModels
         void ExecuteImportBookmarksCommand()
         {
             Microsoft.Win32.OpenFileDialog openFile = new Microsoft.Win32.OpenFileDialog();
-            openFile.Title = "Valitse kirjanmerkkitiedosto";
-            openFile.Filter = "Tekstitiedosto |*.txt";
+            openFile.Title = Resources.Labels.Bookmarks_SelectBookmarkFile;
+            openFile.Filter = Resources.Labels.Bookmarks_TextFile + " |*.txt";
             openFile.InitialDirectory = Path.GetDirectoryName(FilePath);
 
             if (openFile.ShowDialog() != true)

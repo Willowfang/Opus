@@ -1,4 +1,5 @@
-﻿using Prism.Mvvm;
+﻿using Prism.Events;
+using Prism.Mvvm;
 using Prism.Regions;
 
 namespace PDFExtractor.Core.Base
@@ -6,10 +7,12 @@ namespace PDFExtractor.Core.Base
     public class ViewModelBase : BindableBase, INavigationAware
     {
         protected IRegionManager RegionManager { get; }
+        protected IEventAggregator Aggregator { get; }
 
-        public ViewModelBase(IRegionManager regionManager)
+        public ViewModelBase(IRegionManager regionManager, IEventAggregator aggregator)
         {
             RegionManager = regionManager;
+            Aggregator = aggregator;
         }
 
         public virtual bool IsNavigationTarget(NavigationContext navigationContext)

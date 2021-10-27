@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PDFExtractor.Core.Events
 {
-    public class DialogEvent : PubSubEvent<string>
+    public class ViewChangeEvent : PubSubEvent<string>
     {
     }
 }

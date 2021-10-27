@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PDFExtractor.Core.Constants;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,17 @@ namespace PDFExtractor.Views
         public MainWindowView()
         {
             InitializeComponent();
+        }
+
+        private void Window_Initialized(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            SplitButton.IsChecked = true;
+            SplitButton.Command.Execute(SchemeNames.SPLIT);
         }
     }
 }

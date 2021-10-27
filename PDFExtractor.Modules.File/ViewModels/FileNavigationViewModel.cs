@@ -1,25 +1,16 @@
 ﻿using Microsoft.Win32;
-using PDFExtractor.Core;
 using PDFExtractor.Core.Base;
+using PDFExtractor.Core.Constants;
 using PDFExtractor.Core.Events;
 using Prism.Commands;
 using Prism.Events;
-using Prism.Mvvm;
 using Prism.Regions;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace PDFExtractor.Modules.File.ViewModels
 {
     public class FileNavigationViewModel : ViewModelBase
     {
-        private IEventAggregator aggregator;
-
         private string fileName;
         public string FileName
         {
@@ -27,10 +18,10 @@ namespace PDFExtractor.Modules.File.ViewModels
             set { SetProperty(ref fileName, value); }
         }
 
-        public FileNavigationViewModel(IRegionManager regionManager, IEventAggregator eventAggregator) : base(regionManager)
+        public FileNavigationViewModel(IRegionManager regionManager, IEventAggregator eventAggregator) 
+            : base(regionManager, eventAggregator)
         {
-            aggregator = eventAggregator;
-            FileName = "Avaa PDF";
+            FileName = Resources.Labels.FileButtonSingle;
         }
 
         private DelegateCommand _openFile;
@@ -40,14 +31,14 @@ namespace PDFExtractor.Modules.File.ViewModels
         void ExecuteOpenFile()
         {
             OpenFileDialog openDialog = new OpenFileDialog();
-            openDialog.Title = "Valitse tiedosto";
+            openDialog.Title = Resources.Labels.FileDialogSingle;
             openDialog.Filter = "PDF |*.pdf";
 
             if (openDialog.ShowDialog() != true)
                 return;
 
             FileName = openDialog.FileName;
-            aggregator.GetEvent<FileSelectedEvent>().Publish(fileName);
+            Aggregator.GetEvent<FileSelectedEvent>().Publish(fileName);
         }
     }
 }

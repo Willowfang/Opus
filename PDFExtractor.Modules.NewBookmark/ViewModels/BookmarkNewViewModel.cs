@@ -1,8 +1,10 @@
 ﻿using ExtLib;
+using PDFExtractor.Core.Base;
 using PDFExtractor.Core.Events;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
+using Prism.Regions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +13,8 @@ using System.Threading.Tasks;
 
 namespace PDFExtractor.Modules.NewBookmark.ViewModels
 {
-    public class BookmarkNewViewModel : BindableBase
+    public class BookmarkNewViewModel : ViewModelBase
     {
-        private IEventAggregator aggregator;
-
         private int startPage;
         public int StartPage
         {
@@ -34,9 +34,9 @@ namespace PDFExtractor.Modules.NewBookmark.ViewModels
             set { SetProperty(ref title, value); }
         }
 
-        public BookmarkNewViewModel(IEventAggregator eventAggregator)
+        public BookmarkNewViewModel(IRegionManager regionManager, IEventAggregator eventAggregator)
+            : base (regionManager, eventAggregator)
         {
-            aggregator = eventAggregator;
             eventAggregator.GetEvent<FileSelectedEvent>().Subscribe(emptyBoxes);
         }
 
@@ -51,7 +51,7 @@ namespace PDFExtractor.Modules.NewBookmark.ViewModels
             mark.EndPage = EndPage;
             mark.IsSelected = true;
 
-            aggregator.GetEvent<BookmarkAddedEvent>().Publish(mark);
+            Aggregator.GetEvent<BookmarkAddedEvent>().Publish(mark);
 
             emptyBoxes(null);
         }
