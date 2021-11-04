@@ -1,20 +1,17 @@
-﻿using System;
+﻿using iText.Kernel.Pdf;
+using iText.Kernel.Pdf.Canvas.Parser;
+using iText.Kernel.Pdf.Canvas.Parser.Listener;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using iText.Forms;
-using iText.Kernel.Pdf;
-using iText.Kernel.Pdf.Canvas.Parser;
-using iText.Kernel.Pdf.Canvas.Parser.Listener;
-using iText.Kernel.Pdf.Navigation;
-using iText.Kernel.Utils;
-using PDFLib.ExtensionMethods;
+using System.Threading.Tasks;
 
-namespace PDFLib.Deprecated
+namespace PDFLib.Internal
 {
-    public static class ExtractionDEPRECATED
+    internal static class ExtractionDEPRECATED
     {
         #region IN_DEVELOPMENT
 
@@ -72,7 +69,7 @@ namespace PDFLib.Deprecated
             public ReportFile MainReport { get; set; }
             public List<ReportFile> AdditionalReports { get; set; }
         }
-        
+
         private static string GetFullText(string sourceFile)
         {
             var pdfDocument = new PdfDocument(new PdfReader(sourceFile));
@@ -119,7 +116,7 @@ namespace PDFLib.Deprecated
                 string heading = headings[i];
                 Charge currentCharge = new Charge();
                 int endIndex = 0;
-                
+
                 if (i == headings.Length - 1)
                 {
                     foreach (int ind in generalIndexes)
@@ -165,7 +162,7 @@ namespace PDFLib.Deprecated
                         continue;
                     if (!name.Contains(c.CaseNumberOnly))
                         continue;
-                    if (name.EndsWith("ht") || name.EndsWith("htl") || name.EndsWith("henkilötietolehti") )
+                    if (name.EndsWith("ht") || name.EndsWith("htl") || name.EndsWith("henkilötietolehti"))
                         continue;
 
                     relatedFiles.Add(new Charge.ReportFile() { FilePath = file });
@@ -311,5 +308,4 @@ namespace PDFLib.Deprecated
         #endregion
 
     }
-
 }

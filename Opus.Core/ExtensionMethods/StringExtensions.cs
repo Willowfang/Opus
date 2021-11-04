@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace PDFLib.ExtensionMethods
+namespace Opus.Core.ExtensionMethods
 {
     public static class StringExtensions
     {

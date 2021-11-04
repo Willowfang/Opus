@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Opus.Core</name>
+    </assembly>
+    <members>
+        <member name="M:Opus.Core.ExtensionMethods.StringExtensions.ReplaceIllegal(System.String)">
+            <summary>
+            Replaces illegal filepath characters in a string and returns a new string
+            </summary>
+            <param name="original"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Opus.Core.Resources.DefaultValues">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Opus.Core.Resources.DefaultValues.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Opus.Core.Resources.DefaultValues.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Opus.Core.Resources.DefaultValues.Identifier">
+            <summary>
+              Looks up a localized string similar to työkappale.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Opus.Services</name>
+    </assembly>
+    <members>
+        <member name="T:Opus.Services.Configuration.IConfiguration">
+            <summary>
+            Static storage class for configuration services
+            </summary>
+        </member>
+        <member name="T:Opus.Services.Configuration.IConfiguration.App">
+            <summary>
+            Provides functionality for application-wide effects
+            </summary>
+        </member>
+        <member name="M:Opus.Services.Configuration.IConfiguration.App.ChangeLanguage(System.String)">
+            <summary>
+            Change language preference
+            </summary>
+            <param name="ISO639_1">Language to assign</param>
+        </member>
+        <member name="M:Opus.Services.Configuration.IConfiguration.App.GetLanguage">
+            <summary>
+            Return current language code in ISO639-1 format
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Opus.Services.Configuration.IConfiguration.Sign">
+            <summary>
+            Provides funtionality for signature-related tasks
+            </summary>
+        </member>
+        <member name="P:Opus.Services.Configuration.IConfiguration.Sign.SignatureRemovePostfix">
+            <summary>
+            Postfix for unsigned files
+            </summary>
+        </member>
+        <member name="T:Opus.Services.Configuration.IConfiguration.Merge">
+            <summary>
+            Provides functionality for tasks related to file merging
+            </summary>
+        </member>
+        <member name="T:Opus.Services.Data.IDataObject">
+            <summary>
+            Provides constraints on types used as data models
+            </summary>
+        </member>
+        <member name="P:Opus.Services.Data.IDataObject.Id">
+            <summary>
+            Unique identifier of object instance
+            </summary>
+        </member>
+        <member name="T:Opus.Services.Data.IDataProvider">
+            <summary>
+            Provides methods for saving, deleting and retrieving data
+            </summary>
+        </member>
+        <member name="M:Opus.Services.Data.IDataProvider.GetAll``1">
+            <summary>
+            Get all data of a specific type
+            </summary>
+            <typeparam name="T">Type of data</typeparam>
+            <returns>All data</returns>
+        </member>
+        <member name="M:Opus.Services.Data.IDataProvider.GetOne``1(``0)">
+            <summary>
+            Find an object.
+            </summary>
+            <typeparam name="T">Type of the object to find</typeparam>
+            <param name="instance">Type instance</param>
+            <returns>Found object. If no matching object found, return default(T).</returns>
+        </member>
+        <member name="M:Opus.Services.Data.IDataProvider.Save``1(``0)">
+            <summary>
+            Save a data instance
+            </summary>
+            <typeparam name="T">Type of data</typeparam>
+            <param name="instance">Type instance to save</param>
+            <returns>Saved instance</returns>
+        </member>
+        <member name="M:Opus.Services.Data.IDataProvider.Delete``1(``0)">
+            <summary>
+            Delete a data instance
+            </summary>
+            <typeparam name="T">Type of data</typeparam>
+            <param name="instance">Type instance to delete</param>
+            <returns>Deleted instance</returns>
+        </member>
+        <member name="M:Opus.Services.Data.IDataProvider.Clear``1">
+            <summary>
+            Clear all data of a type
+            </summary>
+            <typeparam name="T">Type to clear</typeparam>
+        </member>
+        <member name="T:Opus.Services.UI.IDialogAssist">
+            <summary>
+            Provides functionality for associating schemes and
+            a Prism region with a MaterialDesign in Xaml dialog
+            </summary>
+        </member>
+        <member name="P:Opus.Services.UI.IDialogAssist.DialogRegionName">
+            <summary>
+            Name of the dialog region
+            </summary>
+        </member>
+        <member name="M:Opus.Services.UI.IDialogAssist.Add``1(System.String)">
+            <summary>
+            Associate a scheme and a view with the dialog.
+            </summary>
+            <typeparam name="T">Type of the view</typeparam>
+            <param name="schemeName">Scheme to link with</param>
+        </member>
+        <member name="T:Opus.Services.UI.INavigationAssist">
+            <summary>
+            Provides service for linking schemes (identifiers for easy navigation), 
+            Prism regions and views together.
+            </summary>
+        </member>
+        <member name="M:Opus.Services.UI.INavigationAssist.Add``1(System.String,System.String[])">
+            <summary>
+            Associate schemes with a region and a view.
+            </summary>
+            <typeparam name="T">Type of the view</typeparam>
+            <param name="regionName">Name of the Prism region</param>
+            <param name="schemeNames">Schemes to associate the region and view with</param>
+        </member>
+    </members>
+</doc>
