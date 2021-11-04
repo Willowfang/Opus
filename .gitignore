@@ -341,3 +341,9 @@ healthchecksdb
 
 # Installer project
 /Opus.Install/
+
+# Resource directories
+Resources/
+
+# Configuration files
+*.ops
