@@ -3,7 +3,7 @@ using Opus.Core.ServiceImplementations.Configuration;
 using Opus.Core.ServiceImplementations.Data;
 using PDFLib.Services;
 using System.IO;
-using Opus.Methods;
+using System.Windows.Forms;
 
 namespace Opus.ContextMenu
 {
@@ -107,5 +107,20 @@ namespace Opus.ContextMenu
                 Extraction.ExtractCMD(file, dir, Resources.SearchTerms.Appendice);
             }
         }
+    }
+
+    public static class FolderSelection
+    {
+        public static string SelectFolder()
+        {
+            FolderBrowserDialog browseDialog = new FolderBrowserDialog();
+            browseDialog.ShowNewFolderButton = true;
+
+            if (browseDialog.ShowDialog() == DialogResult.Cancel)
+                return null;
+            else
+                return browseDialog.SelectedPath;
+        }
+
     }
 }
