@@ -347,3 +347,6 @@ Resources/
 
 # Configuration files
 *.ops
+
+# Resource files
+*.resx
