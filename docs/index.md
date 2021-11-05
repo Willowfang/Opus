@@ -20,7 +20,7 @@ Opus on lisensoitu GNU Affero General Public License 3.0 -lisenssillä. Ohjelma 
 ### [Prism](https://github.com/PrismLibrary/Prism)
 - [MIT License](https://www.nuget.org/packages/Prism.Unity/8.0.0.1909/license)
 
-### [iText7](https://www.nuget.org/packages/Prism.Unity/8.0.0.1909/license)
+### [iText7](https://itextpdf.com/)
 - [AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0.html)
 
 ### [LiteDB](https://github.com/mbdavid/LiteDB)
