@@ -1,4 +1,11 @@
-## Welcome to GitHub Pages
+<div class="row">
+  <div class="column">
+    <img src="https://codex-fi.github.io/Opus/LogoCX_transparent.png" width="48">
+  </div>
+  <div class="column">
+    <h1>Opuksesta yleisesti</h1>
+  </div>
+ </div>
 
 You can use the [editor on GitHub](https://github.com/CodeX-fi/Opus/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
 
