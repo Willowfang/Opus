@@ -10,7 +10,7 @@ Opus on avoimen lähdekoodin ohjelma. Kyseinen lähdekoodi on saatavilla GitHub 
 
 Opus on lisensoitu GNU Affero General Public License 3.0 -lisenssillä. Ohjelma ja sen lähdekoodi ovat vapaasti käytettävissä, jaettavissa ja muokattavissa mainitun lisenssin ehtojen mukaisesti.
 
-* GNU Affero Public License 3.0: [Link](https://www.gnu.org/licenses/agpl-3.0.html)
+* [GNU Affero Public License 3.0](https://www.gnu.org/licenses/agpl-3.0.html)
 
 ## Avoimen lähdekoodin riippuvuudet
 
