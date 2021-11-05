@@ -14,18 +14,14 @@ Opus on lisensoitu GNU Affero General Public License 3.0 -lisenssillä. Ohjelma 
 
 ## Avoimen lähdekoodin riippuvuudet
 
-### MaterialDesignThemes
-- [Link](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)
-- MIT License: [Link](https://licenses.nuget.org/MIT)
+### [MaterialDesignThemes](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)
+- [MIT License](https://licenses.nuget.org/MIT)
 
-### Prism
-- [Link](https://github.com/PrismLibrary/Prism)
-- MIT License: [Link](https://www.nuget.org/packages/Prism.Unity/8.0.0.1909/license)
+### [Prism](https://github.com/PrismLibrary/Prism)
+- [MIT License](https://www.nuget.org/packages/Prism.Unity/8.0.0.1909/license)
 
-### iText7
-- [Link](https://www.nuget.org/packages/Prism.Unity/8.0.0.1909/license)
-- AGPL 3.0: [Link](https://www.gnu.org/licenses/agpl-3.0.html)
+### [iText7](https://www.nuget.org/packages/Prism.Unity/8.0.0.1909/license)
+- [AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0.html)
 
-### LiteDB
-- [Link](https://github.com/mbdavid/LiteDB)
-- MIT License: [Link](https://github.com/mbdavid/LiteDB/blob/master/LICENSE)
+### [LiteDB](https://github.com/mbdavid/LiteDB)
+- [MIT License](https://github.com/mbdavid/LiteDB/blob/master/LICENSE)
