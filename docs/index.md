@@ -1,44 +1,31 @@
-<div class="row">
-  <div class="column">
-    <img src="https://codex-fi.github.io/Opus/LogoCX_feathered.png" width="48">
-  </div>
-  <div class="column">
-    <h1>Opuksesta yleisesti</h1>
-  </div>
- </div>
+# Opuksesta yleisesti
 
-You can use the [editor on GitHub](https://github.com/CodeX-fi/Opus/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+Opus on ohjelma, joka helpottaa toistuvien työnkulkuun liittyvien tehtävien tekemistä. Sen avulla voit muun muassa poistaa helposti .pdf -tiedostoista allekirjoituksia, erotella niistä liitteitä tai koota niitä yhteen. Ohjelma sisältää graafisen käyttöliittymän tarkempaan työskentelyyn, mutta yksinkertaisemmat toiminnot on mahdollista toteuttaa komentokehotteen kautta. Lisäksi valmis asennus tukee yksinkertaisimpia toimintoja Windowsin Context Menun kautta eli klikkaamalla oikealla hiiren näppäimellä tiedostoja tai kansioita.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Lähdekoodi
 
-### Markdown
+Opus on avoimen lähdekoodin ohjelma. Kyseinen lähdekoodi on saatavilla GitHub -palvelusta klikkaamalla sivun vasemmassa laidassa olevaa linkkiä. Opus on riippuvainen muutamasta hyvin tunnetusta avoimen lähdekoodin kirjastosta.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Lisenssi
 
-```markdown
-Syntax highlighted code block
+Opus on lisensoitu GNU Affero General Public License 3.0 -lisenssillä. Ohjelma ja sen lähdekoodi ovat vapaasti käytettävissä, jaettavissa ja muokattavissa mainitun lisenssin ehtojen mukaisesti.
 
-# Header 1
-## Header 2
-### Header 3
+* GNU Affero Public License 3.0: [Link](https://www.gnu.org/licenses/agpl-3.0.html)
 
-- Bulleted
-- List
+## Avoimen lähdekoodin riippuvuudet
 
-1. Numbered
-2. List
+### MaterialDesignThemes
+- [Link](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)
+- MIT License: [Link](https://licenses.nuget.org/MIT)
 
-**Bold** and _Italic_ and `Code` text
+### Prism
+- [Link](https://github.com/PrismLibrary/Prism)
+- MIT License: [Link](https://www.nuget.org/packages/Prism.Unity/8.0.0.1909/license)
 
-[Link](url) and ![Image](src)
-```
+### iText7
+- [Link](https://www.nuget.org/packages/Prism.Unity/8.0.0.1909/license)
+- AGPL 3.0: [Link](https://www.gnu.org/licenses/agpl-3.0.html)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/CodeX-fi/Opus/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### LiteDB
+- [Link](https://github.com/mbdavid/LiteDB)
+- MIT License: [Link](https://github.com/mbdavid/LiteDB/blob/master/LICENSE)
