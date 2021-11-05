@@ -11,5 +11,10 @@ Tässä osiossa kerrotaan, kuinka kirjanmerkkien erottelu tapahtuu graafisen kä
 
 - Klikkaa aloitusvalikkoa (ikkunan kuva) työpöydän vasemmassa alalaidassa ja etsi selaamalla valikosta O-kirjaimen kohdalta Opus. Klikkaa kuvaketta.
 
-## 2. Perusnäkymä
+## 2. Avaa tiedosto
+
+- Klikkaa ruudun ylälaidassa keskellä olevaa paniketta "Avaa tiedosto". Tiedostonvalintaikkuna aukeaa.
+- Etsi tiedosto, jonka haluat avata ja tuplaklikkaa sitä tai klikkaa sitä kerran ja valitse sitten "Avaa".
+- Tiedosto aukeaa ohjelmaan ja sen sisältämät kirjanmerkit luetellaan alempana kirjanmerkkiruudussa.
+
 
