@@ -25,3 +25,6 @@ Klikkaa aloitusvalikkoa (ikkunan kuva) työpöydän vasemmassa alalaidassa ja et
 2. Jos haluat poistaa tekemäsi valinnan, klikkaa merkkiä uudestaan. 
 3. Jos valitset ylätason merkin, myös alatason merkit valitaan.
 4. Alaosan painikkeista voit valita kerralla kaikki kirjanmerkit tai poistaa kaikki valinnat.
+
+<img src="https://codex-fi.github.io/Opus/ui/gif/select_bookmarks.gif" width="400">
+
