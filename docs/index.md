@@ -3,10 +3,16 @@
 ### Yleistä
 
   * #### [Opuksesta](#opuksesta-yleisesti)
+    * ##### [Lähdekoodi](#lähdekoodi)
+    * ##### [Lisenssi](#lisenssi)
+    * ##### [Avoimen lähdekoodin riippuvuudet](#avoimen-lähdekoodin-riippuvuudet)
 
 ### Kirjanmerkkien erotteleminen
 
   * #### [Käyttöliittymä](#kirjanmerkkien-erottaminen-käyttöliittymässä)
+    * ##### [Avaa Opus](#avaa-opus)
+    * ##### [Avaa tiedosto](#avaa-tiedosto)
+    * ##### [Valitse kirjanmerkki](#valitse-kirjanmerkki)
 
 <br/>
 
