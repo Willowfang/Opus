@@ -1,7 +1,5 @@
 # Kirjanmerkkien erottaminen käyttöliittymässä
 
-[Valinta](#valitse-kirjanmerkkeja)
-
 Opuksen avulla kirjanmerkkejä voi erottaa graafisen käyttöliittymän avulla, klikkaamalla hiiren oikealla painikkeella resurssienhallinnassa tai käyttämällä komentoriviä.
 Tässä osiossa kerrotaan, kuinka kirjanmerkkien erottelu tapahtuu graafisen käyttöliittymän avulla.
 
