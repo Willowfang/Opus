@@ -1,7 +1,7 @@
 # Yleistä
 
-  * ### [Opuksesta](https://codex-fi.github.io/Opus/about.md)
+  * ### [Opuksesta](about.md)
 
 # Kirjanmerkkien erotteleminen
 
-  * ### [Käyttöliittymä](https://codex-fi.github.io/Opus/ui/split.md)
+  * ### [Käyttöliittymä](ui/split.md)
