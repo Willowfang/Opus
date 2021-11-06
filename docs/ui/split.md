@@ -1,5 +1,7 @@
 # Kirjanmerkkien erottaminen käyttöliittymässä
 
+[Valinta](#valitse-kirjanmerkkeja)
+
 Opuksen avulla kirjanmerkkejä voi erottaa graafisen käyttöliittymän avulla, klikkaamalla hiiren oikealla painikkeella resurssienhallinnassa tai käyttämällä komentoriviä.
 Tässä osiossa kerrotaan, kuinka kirjanmerkkien erottelu tapahtuu graafisen käyttöliittymän avulla.
 
@@ -19,7 +21,7 @@ Klikkaa aloitusvalikkoa (ikkunan kuva) työpöydän vasemmassa alalaidassa ja et
 
 <img src="https://codex-fi.github.io/Opus/ui/gif/open_file.gif" width="400">
 
-## Valitse kirjanmerkkejä
+## Valitse kirjanmerkkeja
 
 1. Klikkaa kirjanmerkkiruudusta niitä kirjanmerkkejä, jotka haluat erottaa. Kyseiset kirjanmerkit tulevat maalatuiksi. 
 2. Jos haluat poistaa tekemäsi valinnan, klikkaa merkkiä uudestaan. 
