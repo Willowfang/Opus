@@ -1,56 +1,56 @@
-# Sisällysluettelo
+## Sisällysluettelo
 
-## Yleistä
+### Yleistä
 
-  * ### [Opuksesta](#opuksesta-yleisesti)
+  * #### [Opuksesta](#opuksesta-yleisesti)
 
-## Kirjanmerkkien erotteleminen
+### Kirjanmerkkien erotteleminen
 
-  * ### [Käyttöliittymä](#kirjanmerkkien-erottaminen-käyttöliittymässä)
+  * #### [Käyttöliittymä](#kirjanmerkkien-erottaminen-käyttöliittymässä)
 
-# Opuksesta yleisesti
+## Opuksesta yleisesti
 
 Opus on ohjelma, joka helpottaa toistuvien työnkulkuun liittyvien tehtävien tekemistä. Sen avulla voit muun muassa poistaa helposti .pdf -tiedostoista allekirjoituksia, erotella niistä liitteitä tai koota niitä yhteen. Ohjelma sisältää graafisen käyttöliittymän tarkempaan työskentelyyn, mutta yksinkertaisemmat toiminnot on mahdollista toteuttaa komentokehotteen kautta. Lisäksi valmis asennus tukee yksinkertaisimpia toimintoja Windowsin Context Menun kautta eli klikkaamalla oikealla hiiren näppäimellä tiedostoja tai kansioita.
 
-## Lähdekoodi
+### Lähdekoodi
 
 Opus on avoimen lähdekoodin ohjelma. Kyseinen lähdekoodi on saatavilla GitHub -palvelusta klikkaamalla sivun vasemmassa laidassa olevaa linkkiä. Opus on riippuvainen muutamasta hyvin tunnetusta avoimen lähdekoodin kirjastosta.
 
-## Lisenssi
+### Lisenssi
 
 Opus on lisensoitu GNU Affero General Public License 3.0 -lisenssillä. Ohjelma ja sen lähdekoodi ovat vapaasti käytettävissä, jaettavissa ja muokattavissa mainitun lisenssin ehtojen mukaisesti.
 
 * [GNU Affero Public License 3.0](https://www.gnu.org/licenses/agpl-3.0.html)
 
-## Avoimen lähdekoodin riippuvuudet
+### Avoimen lähdekoodin riippuvuudet
 
-### [MaterialDesignThemes](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)
+#### [MaterialDesignThemes](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)
 - [MIT License](https://licenses.nuget.org/MIT)
 
-### [Prism](https://github.com/PrismLibrary/Prism)
+#### [Prism](https://github.com/PrismLibrary/Prism)
 - [MIT License](https://www.nuget.org/packages/Prism.Unity/8.0.0.1909/license)
 
-### [iText7](https://itextpdf.com/)
+#### [iText7](https://itextpdf.com/)
 - [AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0.html)
 
-### [LiteDB](https://github.com/mbdavid/LiteDB)
+#### [LiteDB](https://github.com/mbdavid/LiteDB)
 - [MIT License](https://github.com/mbdavid/LiteDB/blob/master/LICENSE)
 
 
-# Kirjanmerkkien erottaminen käyttöliittymässä
+## Kirjanmerkkien erottaminen käyttöliittymässä
 
 Opuksen avulla kirjanmerkkejä voi erottaa graafisen käyttöliittymän avulla, klikkaamalla hiiren oikealla painikkeella resurssienhallinnassa tai käyttämällä komentoriviä.
 Tässä osiossa kerrotaan, kuinka kirjanmerkkien erottelu tapahtuu graafisen käyttöliittymän avulla.
 
-## Avaa Opus
+### Avaa Opus
 
 Kirjoita Windowsin hakukenttään "opus" ja oikean tuloksen kohdalla paina Enter tai klikkaa kuvaketta.
 
-#### TAI
+##### TAI
 
 Klikkaa aloitusvalikkoa (ikkunan kuva) työpöydän vasemmassa alalaidassa ja etsi selaamalla valikosta O-kirjaimen kohdalta Opus. Klikkaa kuvaketta.
 
-## Avaa tiedosto
+### Avaa tiedosto
 
 1. Klikkaa ruudun ylälaidassa keskellä olevaa paniketta "Avaa tiedosto". Tiedostonvalintaikkuna aukeaa.
 2. Etsi tiedosto, jonka haluat avata ja tuplaklikkaa sitä tai klikkaa sitä kerran ja valitse sitten "Avaa".
@@ -58,7 +58,7 @@ Klikkaa aloitusvalikkoa (ikkunan kuva) työpöydän vasemmassa alalaidassa ja et
 
 <img src="https://codex-fi.github.io/Opus/ui/gif/open_file.gif" width="400">
 
-## Valitse kirjanmerkkeja
+### Valitse kirjanmerkkeja
 
 1. Klikkaa kirjanmerkkiruudusta niitä kirjanmerkkejä, jotka haluat erottaa. Kyseiset kirjanmerkit tulevat maalatuiksi. 
 2. Jos haluat poistaa tekemäsi valinnan, klikkaa merkkiä uudestaan. 
