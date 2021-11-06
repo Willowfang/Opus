@@ -1,20 +1,26 @@
-## Sisällysluettelo
+# Sisällysluettelo
 
 ### Yleistä
 
-  * #### [Opuksesta](#opuksesta-yleisesti)
-    * ##### [Lähdekoodi](#lähdekoodi)
-    * ##### [Lisenssi](#lisenssi)
-    * ##### [Avoimen lähdekoodin riippuvuudet](#avoimen-lähdekoodin-riippuvuudet)
+1. #### [Opuksesta](#opuksesta-yleisesti)
+   1.1. [Lähdekoodi](#lähdekoodi)
+   
+   1.2. [Lisenssi](#lisenssi)
+   
+   1.3. [Avoimen lähdekoodin riippuvuudet](#avoimen-lähdekoodin-riippuvuudet)
 
 ### Kirjanmerkkien erotteleminen
 
-  * #### [Käyttöliittymä](#kirjanmerkkien-erottaminen-käyttöliittymässä)
-    * ##### [Avaa Opus](#avaa-opus)
-    * ##### [Avaa tiedosto](#avaa-tiedosto)
-    * ##### [Valitse kirjanmerkki](#valitse-kirjanmerkki)
+ 2. #### [Käyttöliittymä](#kirjanmerkkien-erottaminen-käyttöliittymässä)
+    2.1. [Avaa Opus](#avaa-opus)
+    
+    2.2. [Avaa tiedosto](#avaa-tiedosto)
+    
+    2.3. [Valitse kirjanmerkkejä](#valitse-kirjanmerkkejä)
 
 <br/>
+
+---
 
 ## Opuksesta yleisesti
 
@@ -46,6 +52,12 @@ Opus on lisensoitu GNU Affero General Public License 3.0 -lisenssillä. Ohjelma 
 
 <br/>
 
+[Sisällysluetteloon](#sisällysluettelo)
+
+<br/>
+
+---
+
 ## Kirjanmerkkien erottaminen käyttöliittymässä
 
 Opuksen avulla kirjanmerkkejä voi erottaa graafisessa käyttöliittymässä, klikkaamalla hiiren oikealla painikkeella kohdetta resurssienhallinnassa tai käyttämällä komentoriviä.
@@ -75,3 +87,5 @@ Klikkaa aloitusvalikkoa (ikkunan kuva) työpöydän vasemmassa alalaidassa ja et
 4. Alaosan painikkeista voit valita kerralla kaikki kirjanmerkit tai poistaa kaikki valinnat.
 
 <img src="https://codex-fi.github.io/Opus/ui/gif/select_bookmarks.gif" width="400"><br/><br/>
+
+[Sisällysluetteloon](#sisällysluettelo)
