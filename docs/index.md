@@ -24,6 +24,8 @@
 
 ## Opuksesta yleisesti
 
+_**[Sisällysluettelo](#sisällysluettelo)**_
+
 Opus on ohjelma, joka helpottaa toistuvien työnkulkuun liittyvien tehtävien tekemistä. Sen avulla voit muun muassa poistaa .pdf -tiedostoista allekirjoituksia sekä erotella niistä liitteitä tai koota niitä yhteen. Ohjelma sisältää graafisen käyttöliittymän tarkempaan työskentelyyn, mutta yksinkertaisimmat toiminnot on mahdollista toteuttaa myös komentokehotteen kautta. Lisäksi valmis asennus tukee mainittuja toimintoja Windowsin Context Menun kautta eli klikkaamalla oikealla hiiren näppäimellä tiedostoja tai kansioita.
 
 ### Lähdekoodi
@@ -52,13 +54,11 @@ Opus on lisensoitu GNU Affero General Public License 3.0 -lisenssillä. Ohjelma 
 
 <br/>
 
-[Sisällysluetteloon](#sisällysluettelo)
-
-<br/>
-
 ---
 
 ## Kirjanmerkkien erottaminen käyttöliittymässä
+
+_**[Sisällysluettelo](#sisällysluettelo)**_
 
 Opuksen avulla kirjanmerkkejä voi erottaa graafisessa käyttöliittymässä, klikkaamalla hiiren oikealla painikkeella kohdetta resurssienhallinnassa tai käyttämällä komentoriviä.
 Tässä osiossa kerrotaan, kuinka kirjanmerkkien erottelu tapahtuu graafisen käyttöliittymän avulla.
