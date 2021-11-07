@@ -35,15 +35,10 @@ namespace Opus
             if (e.Args.Length > 0)
             {
                 if (e.Args[0] == "-remove") RemoveSignature.GetService(Signature.GetService(), 
-                    SignConfiguration.GetService(Provider, AppConfig)).RunCommand(e.Args[1]);
+                    SignConfiguration.GetService(Provider, AppConfig)).RunCommand(e.Args);
 
-                if (e.Args[0] == "-splitall") ExtractAll.GetService(Extraction.GetService()).RunCommand(e.Args[1]);
-
-                if (e.Args[0] == "-splitapp") ExtractAppendices.GetService(Extraction.GetService()).RunCommand(e.Args[1]);
-
-                if (e.Args[0] == "-splitalldir") DirExtractAll.GetService(Extraction.GetService()).RunCommand(e.Args[1]);
-
-                if (e.Args[0] == "-splitappdir") DirExtractAppendices.GetService(Extraction.GetService()).RunCommand(e.Args[1]);
+                if (e.Args[0] == "-split") ExtractDocument.GetService(Extraction.GetService()).RunCommand(e.Args);
+                if (e.Args[0] == "-splitdir") ExtractDirectory.GetService(Extraction.GetService()).RunCommand(e.Args);
 
                 Current.Shutdown();
             }

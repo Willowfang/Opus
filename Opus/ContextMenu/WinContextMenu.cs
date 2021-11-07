@@ -9,7 +9,7 @@ namespace Opus.ContextMenu
 {
     public interface IContextMenuCommand
     {
-        public void RunCommand(string parameter);
+        public void RunCommand(string[] parameters);
     }
 
     public class RemoveSignature : IContextMenuCommand
@@ -25,86 +25,68 @@ namespace Opus.ContextMenu
         public static IContextMenuCommand GetService(ISignature signature, IConfiguration.Sign configuration) 
             => new RemoveSignature(signature, configuration);
 
-        public void RunCommand(string filePath)
+        public void RunCommand(string[] parameters)
         {
-            filePath.Replace("\"", "");
+            if (parameters.Length != 2)
+                return;
+
+            string filePath = parameters[1];
             Signature.RemoveCMD(filePath, Configuration.SignatureRemovePostfix);
         }
     }
 
-    public class ExtractAll : IContextMenuCommand
+    public class ExtractDocument : IContextMenuCommand
     {
         private IExtraction Extraction;
 
-        private ExtractAll(IExtraction extractionService) { Extraction = extractionService; }
+        private ExtractDocument(IExtraction extractionService) { Extraction = extractionService; }
         public static IContextMenuCommand GetService(IExtraction extractionService) 
-            => new ExtractAll(extractionService);
+            => new ExtractDocument(extractionService);
 
-        public void RunCommand(string filePath)
+        public void RunCommand(string[] parameters)
         {
+            if (parameters.Length < 2 || parameters.Length > 3)
+                return;
+
+            string filePath = parameters[1];
+
             string dir = Directory.CreateDirectory(Path.Combine(Path.GetDirectoryName(filePath),
                 Path.GetFileNameWithoutExtension(filePath) + Resources.Postfixes.Split)).FullName;
 
-            Extraction.ExtractCMD(filePath, dir);
+            if (parameters.Length == 2)
+                Extraction.ExtractCMD(filePath, dir);
+            else
+                Extraction.ExtractCMD(filePath, dir, parameters[2]);
         }
     }
-    public class ExtractAppendices : IContextMenuCommand
+    public class ExtractDirectory : IContextMenuCommand
     {
         private IExtraction Extraction;
 
-        private ExtractAppendices(IExtraction extractionService) { Extraction = extractionService; }
-        public static IContextMenuCommand GetService(IExtraction extractionService) 
-            => new ExtractAppendices(extractionService);
-
-        public void RunCommand(string filePath)
-        {
-            string dir = Directory.CreateDirectory(Path.Combine(Path.GetDirectoryName(filePath),
-                Path.GetFileNameWithoutExtension(filePath) + Resources.Postfixes.SplitAppendices)).FullName;
-
-            Extraction.ExtractCMD(filePath, dir, Resources.SearchTerms.Appendice);
-        }
-    }
-    public class DirExtractAll : IContextMenuCommand
-    {
-        private IExtraction Extraction;
-
-        private DirExtractAll(IExtraction extractionService) { Extraction = extractionService; }
+        private ExtractDirectory(IExtraction extractionService) { Extraction = extractionService; }
         public static IContextMenuCommand GetService(IExtraction extractionService)
-            => new DirExtractAll(extractionService);
+            => new ExtractDirectory(extractionService);
 
-        public void RunCommand(string directoryPath)
+        public void RunCommand(string[] parameters)
         {
+            if (parameters.Length < 2 || parameters.Length > 3)
+                return;
+
             string parentFolder = FolderSelection.SelectFolder();
             if (parentFolder == null)
                 return;
+
+            string directoryPath = parameters[1];
 
             foreach (string file in Directory.GetFiles(directoryPath, "*.pdf", SearchOption.AllDirectories))
             {
                 string dir = Directory.CreateDirectory(Path.Combine(parentFolder,
                     Path.GetFileNameWithoutExtension(file) + Resources.Postfixes.Split)).FullName;
-                Extraction.ExtractCMD(file, dir);
-            }
-        }
-    }
-    public class DirExtractAppendices : IContextMenuCommand
-    {
-        private IExtraction Extraction;
 
-        private DirExtractAppendices(IExtraction extractionService) { Extraction = extractionService; }
-        public static IContextMenuCommand GetService(IExtraction extractionService)
-            => new DirExtractAppendices(extractionService);
-
-        public void RunCommand(string directoryPath)
-        {
-            string parentFolder = FolderSelection.SelectFolder();
-            if (parentFolder == null)
-                return;
-
-            foreach (string file in Directory.GetFiles(directoryPath, "*.pdf", SearchOption.AllDirectories))
-            {
-                string dir = Directory.CreateDirectory(Path.Combine(parentFolder,
-                    Path.GetFileNameWithoutExtension(file) + Resources.Postfixes.SplitAppendices)).FullName;
-                Extraction.ExtractCMD(file, dir, Resources.SearchTerms.Appendice);
+                if (parameters.Length == 2)
+                    Extraction.ExtractCMD(file, dir);
+                else
+                    Extraction.ExtractCMD(file, dir, parameters[2]);
             }
         }
     }

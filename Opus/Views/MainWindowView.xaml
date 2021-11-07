@@ -21,30 +21,25 @@
         WindowStartupLocation="CenterScreen"
         Loaded="Window_Loaded">
     <Window.Resources>
-        <Style TargetType="{x:Type ListViewItem}" BasedOn="{StaticResource MaterialDesignListBoxItem}"
-               x:Key="CustomList">
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Height" Value="60"/>
-            <Setter Property="Width" Value="80"/>
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Style.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="0"/>
-                </Style>
-            </Style.Resources>
-        </Style>
-        <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource MaterialDesignToolRadioButton}"
+        <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource MaterialDesignTabRadioButtonLeft}"
                x:Key="MainMenuButton">
-            <Setter Property="Width" Value="60"/>
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Height" Value="50"/>
             <Setter Property="GroupName" Value="MainMenuB"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Margin" Value="0, 0, 0, 0"/>
             <Setter Property="Cursor" Value="Hand"/>
-            <Style.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="0"/>
-                </Style>
-            </Style.Resources>
+            <Setter Property="Opacity" Value="0.8"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}"/>
+            <Style.Triggers>
+                <Trigger Property="IsChecked" Value="False">
+                    <Setter Property="Foreground" Value="{DynamicResource PrimaryHueLightBrush}"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidBrush}"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
     </Window.Resources>
     <Window.Icon>
@@ -57,7 +52,8 @@
             </ContentControl>
         </materialDesign:DialogHost.DialogContent>
         <Grid>
-            <ContentControl Content="{StaticResource LogoVector}"/>
+            <ContentControl Content="{StaticResource LogoVector}" HorizontalAlignment="Center"
+                            Margin="0, 0, -100, 0"/>
             <DockPanel>
                 <StackPanel HorizontalAlignment="Center" Margin="16, 20, 0, 0">
                     <TextBlock Style="{DynamicResource MaterialDesignTextBlock}"
@@ -66,17 +62,17 @@
                                Opacity="0.8"/>
                     <Separator Style="{DynamicResource MaterialDesignDarkSeparator}" Margin="5, 0, 5, 0"/>
                     <RadioButton Style="{DynamicResource MainMenuButton}"
-                                     Command="{Binding NavigateCommand}"
-                                     CommandParameter="{x:Static const:SchemeNames.SPLIT}"
-                                     x:Name="SplitButton">
+                                 Command="{Binding NavigateCommand}"
+                                 CommandParameter="{x:Static const:SchemeNames.SPLIT}"
+                                 x:Name="SplitButton">
                         <materialDesign:PackIcon Width="30" Height="30" 
-                                                 Kind="FileDocumentMultiple" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
+                                                 Kind="FileDocumentMultiple"/>
                     </RadioButton>
                     <RadioButton Style="{DynamicResource MainMenuButton}"
-                                     Command="{Binding NavigateCommand}"
-                                     CommandParameter="{x:Static const:SchemeNames.SIGNATURE}">
+                                 Command="{Binding NavigateCommand}"
+                                 CommandParameter="{x:Static const:SchemeNames.SIGNATURE}">
                         <materialDesign:PackIcon Width="30" Height="30" 
-                                                 Kind="Draw" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
+                                                 Kind="Draw"/>
                     </RadioButton>
                 </StackPanel>
                 <materialDesign:Card Padding="32" Margin="16" DockPanel.Dock="Top" Opacity="0.8">
