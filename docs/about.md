@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Tietoja
-nav-order: 1
+nav_order: 1
 description: "Opus on ohjelma tyypillisimpien pdf-tiedostoihin liittyvien työnkulkujen helpottamiseen"
 ---
 
@@ -45,14 +45,14 @@ Opus on lisensoitu GNU Affero General Public License 3.0 -lisenssillä. Ohjelma 
 
 ### Avoimen lähdekoodin riippuvuudet
 
-#### [MaterialDesignThemes](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)
-- [MIT License](https://licenses.nuget.org/MIT)
+**[MaterialDesignThemes](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)**
+- [MIT License](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/blob/master/LICENSE)
 
-#### [Prism](https://github.com/PrismLibrary/Prism)
-- [MIT License](https://www.nuget.org/packages/Prism.Unity/8.0.0.1909/license)
+**[Prism](https://github.com/PrismLibrary/Prism)**
+- [MIT License](https://github.com/PrismLibrary/Prism/blob/master/LICENSE)
 
-#### [iText7](https://itextpdf.com/)
-- [AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0.html)
+**[iText7](https://github.com/itext/itext7-dotnet)**
+- [AGPL 3.0](https://github.com/itext/itext7-dotnet/blob/develop/LICENSE.md)
 
-#### [LiteDB](https://github.com/mbdavid/LiteDB)
+**[LiteDB](https://github.com/mbdavid/LiteDB)**
 - [MIT License](https://github.com/mbdavid/LiteDB/blob/master/LICENSE)
