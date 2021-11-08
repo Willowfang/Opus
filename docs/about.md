@@ -17,7 +17,9 @@ Nimi "Opus" tulee latinan sanasta, joka tarkoittaa työtä. Mahdollinen yhteys k
 
 ### Tarkoitus
 
-Opus on ohjelma, joka helpottaa toistuvien työnkulkuun liittyvien tehtävien tekemistä. Sen avulla voit muun muassa poistaa .pdf -tiedostoista allekirjoituksia sekä erotella niistä liitteitä tai koota niitä yhteen. Ohjelma sisältää graafisen käyttöliittymän tarkempaan työskentelyyn, mutta yksinkertaisimmat toiminnot on mahdollista toteuttaa myös komentokehotteen kautta. Lisäksi valmis asennus tukee mainittuja toimintoja Windowsin Context Menun kautta eli klikkaamalla oikealla hiiren näppäimellä tiedostoja tai kansioita.
+Opus on ohjelma, joka helpottaa toistuvien työnkulkuun liittyvien tehtävien tekemistä. Sen avulla voit muun muassa poistaa .pdf -tiedostoista allekirjoituksia sekä erotella niistä liitteitä tai koota niitä yhteen.
+
+Ohjelma sisältää graafisen käyttöliittymän tarkempaan työskentelyyn, mutta yksinkertaisimmat toiminnot on mahdollista toteuttaa myös komentokehotteen kautta. Lisäksi valmis asennus tukee mainittuja toimintoja Windowsin Context Menun kautta eli klikkaamalla oikealla hiiren näppäimellä tiedostoja tai kansioita.
 
 ### Lähdekoodi
 
