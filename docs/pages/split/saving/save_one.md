@@ -17,5 +17,5 @@ Uusi tiedosto tallennetaan valitsemaasi paikkaan valitsemallasi nimellä sisält
 ---
 
 <div class="instruction_image">
-  <img src="https://codex-fi.github.io/Opus/ui/gif/save_one_file.gif" width="100%">
+  <img src="https://codex-fi.github.io/Opus/ui/gif/save_one_file.gif">
 </div>
