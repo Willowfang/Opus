@@ -36,5 +36,5 @@ Näiden toimenpiteiden johdosta alkuperäiseen tiedostoon **EI** tehdä mitään
 ---
 
 <div class="instruction_image">
-  <img src="https://codex-fi.github.io/Opus/ui/gif/create_and_delete.gif" width="100%">
+  <img src="https://codex-fi.github.io/Opus/ui/gif/create_and_delete.gif">
 </div> 
