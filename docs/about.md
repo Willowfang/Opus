@@ -5,23 +5,11 @@ nav_order: 1
 description: "Opus on ohjelma tyypillisimpien pdf-tiedostoihin liittyvien työnkulkujen helpottamiseen"
 ---
 
-<style>
-  div.instruction {
-    width: 250px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-  }
-</style>
-
 # Opus
 {: .fs-9 }
 
 Nimi "Opus" tulee latinan sanasta, joka tarkoittaa työtä. Mahdollinen yhteys kotimaan opuksiin jää lukijan pääteltäväksi. 
 {: .fs-6 .fw-300 }
-
-<div class="instruction">
-  <img src="https://codex-fi.github.io/Opus/ui/gif/open_file.gif" style="width: 100%">
-</div>
 
 ---
 
@@ -43,7 +31,9 @@ Opus on lisensoitu GNU Affero General Public License 3.0 -lisenssillä. Ohjelma 
 
 * [GNU Affero Public License 3.0](https://www.gnu.org/licenses/agpl-3.0.html)
 
-### Avoimen lähdekoodin riippuvuudet
+### Avoimen lähdekoodin riippuvuudet 
+
+<br>
 
 **[MaterialDesignThemes](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)**
 - [MIT License](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/blob/master/LICENSE)
