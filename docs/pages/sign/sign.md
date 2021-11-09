@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Allekirjoituksen poistaminen
+has_children: true
 nav_order: 4
 ---
 
