@@ -31,6 +31,6 @@ Alaosan painikkeista voit valita kerralla kaikki kirjanmerkit tai poistaa kaikki
 ---
 
 <div class="instruction_image">
-  <img src="https://codex-fi.github.io/Opus/ui/gif/select_bookmarks.gif" width="100%">
+  <img src="https://codex-fi.github.io/Opus/ui/gif/select_bookmarks.gif">
 </div>
 
