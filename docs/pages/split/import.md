@@ -34,5 +34,5 @@ Kirjanmerkeille ei voi tekstitiedostossa määrittää päättymissivua, joten v
 ---
 
 <div class="instruction_image">
-  <img src="https://codex-fi.github.io/Opus/ui/gif/import_bookmarks.gif" width="100%">
+  <img src="https://codex-fi.github.io/Opus/ui/gif/import_bookmarks.gif">
 </div>
