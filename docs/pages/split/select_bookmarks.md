@@ -28,6 +28,8 @@ Jos valitset ylätason merkin, myös kaikki alatason merkit valitaan.
 
 Alaosan painikkeista voit valita kerralla kaikki kirjanmerkit tai poistaa kaikki valinnat.
 
+---
+
 <div class="instruction_image">
   <img src="https://codex-fi.github.io/Opus/ui/gif/select_bookmarks.gif" width="100%">
 </div>
