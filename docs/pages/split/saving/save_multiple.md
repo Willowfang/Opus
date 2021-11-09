@@ -17,5 +17,5 @@ Uudet tiedostot tallennetaan valitsemaasi paikkaan nimettynä kirjanmerkkien muk
 ---
 
 <div class="instruction_image">
-  <img src="https://codex-fi.github.io/Opus/ui/gif/save_separate.gif" width="100%">
+  <img src="https://codex-fi.github.io/Opus/ui/gif/save_separate.gif">
 </div>
