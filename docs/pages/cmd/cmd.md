@@ -42,3 +42,42 @@ Tietyllä merkkijonolla alkavien kirjanmerkkien erotteleminen tapahtuu antamalla
 
 Merkkijonolla alkavat kirjanmerkit tallennetaan omiksi tiedostoikseen edeltävässä kohdassa kuvattuun kansioon.
 
+## Kaikkien kirjanmerkkien erotteleminen kansiosta
+
+Komentokehotteen avulla on mahdollista myös erotella kaikki kirjanmerkit kansion ja sen alikansioiden sisältämistä tiedostoista rekursiivisesti:
+
+    [Lähdekansio]
+       |- Tiedosto1.pdf <- EROTELLAAN
+       |-- [Kansio]
+       |      |- Tiedosto2.pdf <- EROTELLAAN
+       |      |-- [Kansio]
+       |             |- Tiedosto3.pdf <- EROTELLAAN
+       |-- [Kansio]
+              |- Tiedosto4.pdf <- EROTELLAAN
+       
+    [Kohdekansio]
+          |-- [Tiedosto1_erotellut]
+          |             |- Kirjanmerkki 1.pdf
+          |             |- Kirjanmerkki 2.pdf
+          |-- [Tiedosto2_erotellut]
+          |             |- Kirjanmerkki 1.pdf
+          |-- [Tiedosto3_erotellut]
+          |             |- Kirjanmerkki 1.pdf
+          |             |- Kirjanmerkki 2.pdf
+          |             |- Kirjanmerkki 3.pdf
+          |-- [Tiedosto4_erotellut]
+                        |- Kirjanmerkki 1.pdf
+
+Kansiossa sijaitsevien tiedostojen kirjanmerkkien erotteleminen tapahtuu komennolla `-splitdir`, jolle annetaan argumenttina sen kansion sijainti, jonka alla olevat tiedostot halutaan ottaa käsittelyyn:
+
+    C:\>opus -splitdir "C:\Tiedostot"
+
+Kohdekansion valitsemiseksi aukeaa ikkuna. Jokaista tiedostoa varten luodaan kohdekansion alle oma kansionsa.
+
+## Valittujen kirjanmerkkien erotteleminen kansiosta
+
+Kansiosta on mahdollista erottaa rekursiivisesti tiedostoista myös vain tietyt kirjanmerkit, lisäämällä edeltävän kohdan komentoon vielä argumentin halutusta merkkijonosta:
+
+    C:\>opus -splitdir "C:\Tiedostot\" "Liite"
+    
+Erotellut kirjanmerkit tallennetaan samanlaiseen rakenteeseen, kuin edeltävässä kohdassa on selostettu.
