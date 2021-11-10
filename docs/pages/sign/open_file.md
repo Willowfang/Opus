@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Tiedoston avaaminen
+title: Tiedoston lisääminen
 parent: Allekirjoituksen poistaminen
 nav_order: 1
 ---
 
-# Tiedoston avaaminen
+# Tiedoston lisääminen
 
 ---
 Valitse ikkunan vasemman puolen valikosta kirjanmerkkien poistotyökalun kuvake. Ikkunan otsikoksi tulee "Poista allekirjoituksia".
