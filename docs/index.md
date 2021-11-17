@@ -1,1 +1,0 @@
-# [Käyttöohje](manual.html)
