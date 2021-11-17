@@ -5,8 +5,6 @@ using Prism.Modularity;
 using Opus.Views;
 using System.Globalization;
 using System.Threading;
-using PDFLib.Services;
-using PDFLib.Implementation;
 using Opus.ContextMenu;
 using Opus.Services.UI;
 using Opus.Core.ServiceImplementations.UI;
@@ -16,6 +14,8 @@ using Opus.Core.Constants;
 using Opus.Services.Configuration;
 using Opus.Core.ServiceImplementations.Configuration;
 using Unity.Injection;
+using CX.PdfLib.Services;
+using CX.PdfLib.Implementation;
 
 namespace Opus
 {
@@ -26,38 +26,60 @@ namespace Opus
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            IDataProvider Provider = DataProviderLiteDB.GetService();
-            IDataProvider ProviderLang = DataProviderLanguage.GetService();
-            IConfiguration.App AppConfig = AppConfiguration.GetService(ProviderLang);
-            CultureInfo ci = new CultureInfo(AppConfig.GetLanguage());
-            Thread.CurrentThread.CurrentUICulture = ci;
+            // Create a temporary container and register types.
+            // Temporary container is used in selecting language
+            // and performing I/O operations without initializing UI.
+            var tempContainer = CreateContainerExtension();
+            RegisterTypes(tempContainer);
+            SetLanguage(tempContainer);
 
+            // If started with arguments, display no UI,
+            // run command and exit.
             if (e.Args.Length > 0)
             {
-                if (e.Args[0] == "-remove") RemoveSignature.GetService(Signature.GetService(), 
-                    SignConfiguration.GetService(Provider, AppConfig)).RunCommand(e.Args);
-
-                if (e.Args[0] == "-split") ExtractDocument.GetService(Extraction.GetService()).RunCommand(e.Args);
-                if (e.Args[0] == "-splitdir") ExtractDirectory.GetService(Extraction.GetService()).RunCommand(e.Args);
-
+                StartUpNoUI(tempContainer, e.Args);
                 Current.Shutdown();
             }
+            // Otherwise, initialize Prism and show UI
             else
             {
                 base.OnStartup(e);
             }
         }
 
+        /// <summary>
+        /// Perform the command line command provided in arguments
+        /// </summary>
+        /// <param name="container">Temporary container for registered types</param>
+        /// <param name="arguments">Given arguments</param>
+        private void StartUpNoUI(IContainerExtension container, string[] arguments)
+        {
+            if (arguments[0] == "-remove") container.Register<IContextMenuCommand, RemoveSignature>();
+            if (arguments[0] == "-split") container.Register<IContextMenuCommand, ExtractDocument>();
+            if (arguments[0] == "-splitdir") container.Register<IContextMenuCommand, ExtractDirectory>();
+
+            if (container.IsRegistered(typeof(IContextMenuCommand)))
+                container.Resolve<IContextMenuCommand>().RunCommand(arguments);
+        }
+
+        /// <summary>
+        /// Set application display language
+        /// </summary>
+        /// <param name="container">Temporary container for registered types</param>
+        private void SetLanguage(IContainerExtension container)
+        {
+            CultureInfo ci = new CultureInfo(container.Resolve<IConfiguration.App>().GetLanguage());
+            Thread.CurrentThread.CurrentUICulture = ci;
+        }
+
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            // Model services
-            containerRegistry.Register<IBookmark, Bookmark>();
-            containerRegistry.Register<IFilePDF, FilePDF>();
-
             // Services for manipulating data
-            containerRegistry.Register<IBookmarkOperator, BookmarkOperator>();
-            containerRegistry.Register<IExtraction, Extraction>();
-            containerRegistry.Register<ISignature, Signature>();
+            containerRegistry.Register<IBookmarker, Bookmarker>();
+            containerRegistry.Register<IExtractor, Extractor>();
+            containerRegistry.Register<ISigner, Signer>();
+            containerRegistry.Register<IMerger, Merger>();
+            containerRegistry.Register<IManipulator, Manipulator>();
 
             // UI-related services
             containerRegistry.RegisterSingleton<INavigationAssist, NavigationAssist>();

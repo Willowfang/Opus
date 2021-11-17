@@ -1,9 +1,10 @@
 ﻿using Opus.Services.Configuration;
-using Opus.Core.ServiceImplementations.Configuration;
-using Opus.Core.ServiceImplementations.Data;
-using PDFLib.Services;
+using CX.PdfLib.Services;
 using System.IO;
 using System.Windows.Forms;
+using CX.PdfLib.Services.Data;
+using System.Collections.Generic;
+using CX.PdfLib.Implementation.Data;
 
 namespace Opus.ContextMenu
 {
@@ -12,38 +13,67 @@ namespace Opus.ContextMenu
         public void RunCommand(string[] parameters);
     }
 
-    public class RemoveSignature : IContextMenuCommand
+    internal abstract class MenuCommandBase : IContextMenuCommand
     {
-        private ISignature Signature;
+        protected IManipulator Manipulator;
+
+        public abstract void RunCommand(string[] parameters);
+    }
+
+    internal abstract class MenuCommandExtractBase : MenuCommandBase
+    {
+        protected IList<IExtractRange> GetRanges(string filePath)
+        {
+            List<IExtractRange> ranges = new List<IExtractRange>();
+            foreach (ILeveledBookmark bookmark in Manipulator.FindBookmarks(filePath))
+            {
+                ranges.Add(new ExtractRange(bookmark.Title, bookmark.Pages));
+            }
+
+            return ranges;
+        }
+
+        protected IList<IExtractRange> GetRanges(string filePath, string preFix)
+        {
+            List<IExtractRange> ranges = new List<IExtractRange>();
+            foreach (ILeveledBookmark bookmark in Manipulator.FindBookmarks(filePath))
+            {
+                if (bookmark.Title.ToLower().StartsWith(preFix.ToLower()))
+                {
+                    ranges.Add(new ExtractRange(bookmark.Title, bookmark.Pages));
+                }
+            }
+
+            return ranges;
+        }
+    }
+
+    internal class RemoveSignature : MenuCommandBase
+    {
         private IConfiguration.Sign Configuration;
 
-        private RemoveSignature(ISignature signature, IConfiguration.Sign conf) 
+        public RemoveSignature(IManipulator manipulator, IConfiguration.Sign conf) 
         { 
-            Signature = signature;
+            Manipulator = manipulator;
             Configuration = conf;
         }
-        public static IContextMenuCommand GetService(ISignature signature, IConfiguration.Sign configuration) 
-            => new RemoveSignature(signature, configuration);
 
-        public void RunCommand(string[] parameters)
+        public override void RunCommand(string[] parameters)
         {
             if (parameters.Length != 2)
                 return;
 
             string filePath = parameters[1];
-            Signature.RemoveCMD(filePath, Configuration.SignatureRemovePostfix);
+            Manipulator.RemoveSignature(filePath, new DirectoryInfo(Path.GetDirectoryName(filePath)),
+                Configuration.SignatureRemovePostfix);
         }
     }
 
-    public class ExtractDocument : IContextMenuCommand
+    internal class ExtractDocument : MenuCommandExtractBase
     {
-        private IExtraction Extraction;
+        public ExtractDocument(IManipulator manipulator) { Manipulator = manipulator; }
 
-        private ExtractDocument(IExtraction extractionService) { Extraction = extractionService; }
-        public static IContextMenuCommand GetService(IExtraction extractionService) 
-            => new ExtractDocument(extractionService);
-
-        public void RunCommand(string[] parameters)
+        public override void RunCommand(string[] parameters)
         {
             if (parameters.Length < 2 || parameters.Length > 3)
                 return;
@@ -53,21 +83,21 @@ namespace Opus.ContextMenu
             string dir = Directory.CreateDirectory(Path.Combine(Path.GetDirectoryName(filePath),
                 Path.GetFileNameWithoutExtension(filePath) + Resources.Postfixes.Split)).FullName;
 
+            IList<IExtractRange> ranges;
+
             if (parameters.Length == 2)
-                Extraction.ExtractCMD(filePath, dir);
+                ranges = GetRanges(filePath);
             else
-                Extraction.ExtractCMD(filePath, dir, parameters[2]);
+                ranges = GetRanges(filePath, parameters[2]);
+
+            Manipulator.Extract(filePath, new DirectoryInfo(dir), ranges);
         }
     }
-    public class ExtractDirectory : IContextMenuCommand
+    internal class ExtractDirectory : MenuCommandExtractBase
     {
-        private IExtraction Extraction;
+        public ExtractDirectory(IManipulator manipulator) { Manipulator = manipulator; }
 
-        private ExtractDirectory(IExtraction extractionService) { Extraction = extractionService; }
-        public static IContextMenuCommand GetService(IExtraction extractionService)
-            => new ExtractDirectory(extractionService);
-
-        public void RunCommand(string[] parameters)
+        public override void RunCommand(string[] parameters)
         {
             if (parameters.Length < 2 || parameters.Length > 3)
                 return;
@@ -83,10 +113,13 @@ namespace Opus.ContextMenu
                 string dir = Directory.CreateDirectory(Path.Combine(parentFolder,
                     Path.GetFileNameWithoutExtension(file) + Resources.Postfixes.Split)).FullName;
 
+                IList<IExtractRange> ranges;
                 if (parameters.Length == 2)
-                    Extraction.ExtractCMD(file, dir);
+                    ranges = GetRanges(file);
                 else
-                    Extraction.ExtractCMD(file, dir, parameters[2]);
+                    ranges = GetRanges(file, parameters[2]);
+
+                Manipulator.Extract(file, new DirectoryInfo(dir), ranges);
             }
         }
     }
@@ -105,4 +138,5 @@ namespace Opus.ContextMenu
         }
 
     }
+
 }

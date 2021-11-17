@@ -1,8 +1,5 @@
 ﻿using Prism.Events;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using PDFLib.Services;
+using CX.PdfLib.Services.Data;
 
 namespace Opus.Core.Events
 {

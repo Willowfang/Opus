@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
@@ -10,7 +10,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Opus.Core\Opus.Core.csproj" />
-    <ProjectReference Include="..\PDFLib\PDFLib.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="CodeX-PdfLib">
+      <HintPath>..\..\..\CodeX\Libraries\PdfLib\bin\Release\net5.0\CodeX-PdfLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Resources\DialogMessages.Designer.cs">

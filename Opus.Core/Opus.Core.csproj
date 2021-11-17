@@ -17,7 +17,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Opus.Services\Opus.Services.csproj" />
-    <ProjectReference Include="..\PDFLib\PDFLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CodeX-PdfLib">
+      <HintPath>..\..\..\CodeX\Libraries\PdfLib\bin\Release\net5.0\CodeX-PdfLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
