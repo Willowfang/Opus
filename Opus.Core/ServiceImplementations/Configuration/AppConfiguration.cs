@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Opus.Services.Data;
+﻿using Opus.Services.Data;
 using Opus.Services.Configuration;
 using System.Threading;
 using Opus.Core.ServiceImplementations.Data;
