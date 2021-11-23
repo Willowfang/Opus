@@ -7,6 +7,8 @@
         xmlns:const="clr-namespace:Opus.Core.Constants;assembly=Opus.Core"
         xmlns:local="clr-namespace:Opus"
         xmlns:res="clr-namespace:Opus.Resources"
+        xmlns:dialog="clr-namespace:Opus.Core.Dialog;assembly=Opus.Core"
+        xmlns:conv="clr-namespace:Opus.Core.Converters;assembly=Opus.Core"
         mc:Ignorable="d"
         Title="" MinHeight="600" Height="800" MinWidth="640" Width="640"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
@@ -21,36 +23,16 @@
         WindowStartupLocation="CenterScreen"
         Loaded="Window_Loaded">
     <Window.Resources>
-        <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource MaterialDesignTabRadioButtonLeft}"
-               x:Key="MainMenuButton">
-            <Setter Property="Width" Value="40"/>
-            <Setter Property="Height" Value="50"/>
-            <Setter Property="GroupName" Value="MainMenuB"/>
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="Margin" Value="0, 0, 0, 0"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Opacity" Value="0.8"/>
-            <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}"/>
-            <Style.Triggers>
-                <Trigger Property="IsChecked" Value="False">
-                    <Setter Property="Foreground" Value="{DynamicResource PrimaryHueLightBrush}"/>
-                </Trigger>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidBrush}"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/DataTemplates.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Window.Resources>
     <Window.Icon>
         <DrawingImage/>
     </Window.Icon>
-    <materialDesign:DialogHost IsOpen="{Binding DialogIsShowing}">
-        <materialDesign:DialogHost.DialogContent>
-            <ContentControl prism:RegionManager.RegionName="{x:Static const:RegionNames.SHELL_DIALOG}">
-                
-            </ContentControl>
-        </materialDesign:DialogHost.DialogContent>
+    <materialDesign:DialogHost IsOpen="{Binding DialogIsShowing}" DialogContent="{Binding CurrentDialog}">
         <Grid>
             <ContentControl Content="{StaticResource LogoVector}" HorizontalAlignment="Center"
                             Margin="0, 0, -100, 0"/>

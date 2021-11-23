@@ -1,9 +1,9 @@
 ﻿using Prism.Events;
-using CX.PdfLib.Services.Data;
+using Opus.Core.Events.Data;
 
 namespace Opus.Core.Events
 {
-    public class BookmarkAddedEvent : PubSubEvent<IBookmark>
+    public class BookmarkAddedEvent : PubSubEvent<BookmarkInfo>
     {
     }
 }

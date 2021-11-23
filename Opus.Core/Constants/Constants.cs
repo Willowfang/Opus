@@ -20,6 +20,7 @@ namespace Opus.Core.Constants
     {
         public const string SHELL_MAINSECTION = "ShellMainSection";
         public const string SHELL_DIALOG = "MainSectionDialogRegion";
+        public const string DIALOG_CONTENT = "DialogRegionContent";
 
         public const string MAINSECTION_ONE = "MainSectionSingle";
 

@@ -1,9 +1,9 @@
-﻿using PDFLib.Implementation;
-using Opus.Core.Base;
+﻿using Opus.Core.Base;
 using Opus.Core.Events;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Regions;
+using Opus.Core.Events.Data;
 
 namespace Opus.Modules.Options.ViewModels
 {
@@ -40,14 +40,18 @@ namespace Opus.Modules.Options.ViewModels
 
         void ExecuteAddCommand()
         {
-            Bookmark mark =
-                new Bookmark(Title, StartPage);
-            mark.EndPage = EndPage;
-            mark.IsSelected = true;
-
-            Aggregator.GetEvent<BookmarkAddedEvent>().Publish(mark);
-
-            emptyBoxes(null);
+            if (StartPage == 0 || EndPage == 0)
+                Aggregator.GetEvent<DialogMessageEvent>().Publish(Resources.Messages.PageNumberZero);
+            else if (EndPage - StartPage < 0)
+                Aggregator.GetEvent<DialogMessageEvent>().Publish(Resources.Messages.PageNumberNegative);
+            else if (string.IsNullOrWhiteSpace(Title))
+                Aggregator.GetEvent<DialogMessageEvent>().Publish(Resources.Messages.BookmarkTitleNull);
+            else
+            {
+                BookmarkInfo info = new BookmarkInfo(StartPage, EndPage, Title);
+                Aggregator.GetEvent<BookmarkAddedEvent>().Publish(info);
+                emptyBoxes(null);
+            }
         }
 
         private DelegateCommand clearNameCommand;

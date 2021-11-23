@@ -14,7 +14,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Opus.Core\Opus.Core.csproj" />
     <ProjectReference Include="..\Opus.Modules.Action\Opus.Modules.Action.csproj" />
-    <ProjectReference Include="..\Opus.Modules.Dialog\Opus.Modules.Dialog.csproj" />
     <ProjectReference Include="..\Opus.Modules.File\Opus.Modules.File.csproj" />
     <ProjectReference Include="..\Opus.Modules.MainSection\Opus.Modules.MainSection.csproj" />
     <ProjectReference Include="..\Opus.Modules.Options\Opus.Modules.Options.csproj" />
@@ -94,10 +93,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="PathSelection\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="4.2.1" />
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.37" />
     <PackageReference Include="Prism.Unity" Version="8.1.97" />
@@ -105,7 +100,10 @@
 
   <ItemGroup>
     <Reference Include="CodeX-PdfLib">
-      <HintPath>..\..\..\CodeX\Libraries\PdfLib\bin\Release\net5.0\CodeX-PdfLib.dll</HintPath>
+      <HintPath>..\..\..\CodeX\Libraries\PdfLib\bin\Debug\net5.0\CodeX-PdfLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeX-PdfLib-iText7">
+      <HintPath>..\..\..\CodeX\Libraries\PdfLib.iText7\bin\Debug\net5.0\CodeX-PdfLib-iText7.dll</HintPath>
     </Reference>
   </ItemGroup>
 

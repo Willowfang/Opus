@@ -13,9 +13,8 @@ using Opus.Core.ServiceImplementations.Data;
 using Opus.Core.Constants;
 using Opus.Services.Configuration;
 using Opus.Core.ServiceImplementations.Configuration;
-using Unity.Injection;
 using CX.PdfLib.Services;
-using CX.PdfLib.Implementation;
+using CX.PdfLib.iText7;
 
 namespace Opus
 {
@@ -24,25 +23,29 @@ namespace Opus
     /// </summary>
     public partial class App : PrismApplication
     {
+        private IContainerProvider initialContainer;
+
         protected override void OnStartup(StartupEventArgs e)
         {
             // Create a temporary container and register types.
             // Temporary container is used in selecting language
             // and performing I/O operations without initializing UI.
-            var tempContainer = CreateContainerExtension();
-            RegisterTypes(tempContainer);
-            SetLanguage(tempContainer);
+            var extension = CreateContainerExtension();
+            initialContainer = extension;
+            RegisterTypes(extension);
+            SetLanguage(initialContainer);
 
             // If started with arguments, display no UI,
             // run command and exit.
             if (e.Args.Length > 0)
             {
-                StartUpNoUI(tempContainer, e.Args);
+                StartUpNoUI(extension, e.Args);
                 Current.Shutdown();
             }
             // Otherwise, initialize Prism and show UI
             else
             {
+                initialContainer = null;
                 base.OnStartup(e);
             }
         }
@@ -66,7 +69,7 @@ namespace Opus
         /// Set application display language
         /// </summary>
         /// <param name="container">Temporary container for registered types</param>
-        private void SetLanguage(IContainerExtension container)
+        private void SetLanguage(IContainerProvider container)
         {
             CultureInfo ci = new CultureInfo(container.Resolve<IConfiguration.App>().GetLanguage());
             Thread.CurrentThread.CurrentUICulture = ci;
@@ -79,6 +82,7 @@ namespace Opus
             containerRegistry.Register<IExtractor, Extractor>();
             containerRegistry.Register<ISigner, Signer>();
             containerRegistry.Register<IMerger, Merger>();
+            containerRegistry.Register<IConverter, ConverterWord>();
             containerRegistry.Register<IManipulator, Manipulator>();
 
             // UI-related services
@@ -91,8 +95,9 @@ namespace Opus
                 ServiceNames.LANGUAGEPROVIDER);
 
             // Configuration services
+            var regContainer = initialContainer ??= Container;
             containerRegistry.RegisterSingleton<IConfiguration.App>(x =>
-                AppConfiguration.GetImplementation(Container.Resolve<IDataProvider>(ServiceNames.LANGUAGEPROVIDER)));
+                AppConfiguration.GetImplementation(regContainer.Resolve<IDataProvider>(ServiceNames.LANGUAGEPROVIDER)));
             containerRegistry.RegisterSingleton<IConfiguration.Sign, SignConfiguration>();
         }
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
@@ -101,7 +106,6 @@ namespace Opus
             moduleCatalog.AddModule<Modules.File.FileModule>();
             moduleCatalog.AddModule<Modules.Action.ActionModule>();
             moduleCatalog.AddModule<Modules.Options.OptionsModule>();
-            moduleCatalog.AddModule<Modules.Dialog.DialogModule>();
         }
         protected override Window CreateShell()
         {

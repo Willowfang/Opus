@@ -10,6 +10,7 @@
                 <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="BlueGrey"  SecondaryColor="Amber" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
                 <ResourceDictionary Source="/Images/Vectors.xaml"/>
+                <ResourceDictionary Source="/Styles/Buttons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

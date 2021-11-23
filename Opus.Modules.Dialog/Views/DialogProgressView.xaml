@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Opus.Modules.Dialog.Views.DialogProgressView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:prism="http://prismlibrary.com/"        
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <StackPanel>
+            <ProgressBar Style="{DynamicResource MaterialDesignCircularProgressBar}"
+                         Width="80" Height="80" Value="{Binding Percent}"
+                         Margin="32, 32, 32, 10"/>
+            <TextBlock HorizontalAlignment="Center" 
+                       Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       Margin="32, 16, 32, 5" Text="{Binding Phase}"
+                       Width="250"
+                       TextAlignment="Center"
+                       FontSize="14"/>
+            <TextBlock HorizontalAlignment="Center" 
+                       Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       Margin="32, 0, 32, 10" Text="{Binding Item}"
+                       Width="250"
+                       TextAlignment="Center"
+                       FontSize="10"/>
+            <Button HorizontalAlignment="Center" Margin="16" 
+                    Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                    IsEnabled="{Binding ShowCloseButton}"
+                    Style="{DynamicResource MaterialDesignOutlinedButton}">Sulje</Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

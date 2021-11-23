@@ -11,21 +11,26 @@ using System;
 using System.Windows.Controls;
 using Opus.Core.Base;
 using Prism.Regions;
-using Opus.Services.Configuration;
+using CX.PdfLib.Services;
+using CX.PdfLib.Services.Data;
+using CX.PdfLib.Common;
+using Opus.Core.Wrappers;
+using Opus.Core.Events.Data;
+using System.Threading.Tasks;
+using AsyncAwaitBestPractices.MVVM;
 using Opus.Core.Constants;
-using PDFLib.Services;
+using System.Threading;
+using Opus.Core.Dialog;
 
 namespace Opus.Modules.Action.ViewModels
 {
     public class BookmarksViewModel : ViewModelBase
     {
-        private int PageNumber;
-        private IBookmarkOperator BookmarkOperator;
-        private IExtraction Extractor;
+        private IManipulator Manipulator;
 
-        public ObservableCollection<IBookmark> FileBookmarks { get; set; }
-        private IBookmark selectedBookmark;
-        public IBookmark SelectedBookmark
+        public ObservableCollection<BookmarkStorage> FileBookmarks { get; set; }
+        private BookmarkStorage selectedBookmark;
+        public BookmarkStorage SelectedBookmark
         {
             get { return selectedBookmark; }
             set { SetProperty(ref selectedBookmark, value); }
@@ -34,64 +39,58 @@ namespace Opus.Modules.Action.ViewModels
         private string FilePath;
 
         public BookmarksViewModel(IRegionManager regionManager, IEventAggregator eventAggregator, 
-            IBookmarkOperator bmOperator, IExtraction extractor)
+            IManipulator manipulator)
             : base(regionManager, eventAggregator)
         {
             eventAggregator.GetEvent<FileSelectedEvent>().Subscribe(FileSelected);
             eventAggregator.GetEvent<BookmarkAddedEvent>().Subscribe(BookmarkAdded);
-            FileBookmarks = new ObservableCollection<IBookmark>();
-            BookmarkOperator = bmOperator;
-            Extractor = extractor;
+            FileBookmarks = new ObservableCollection<BookmarkStorage>();
+            Manipulator = manipulator;
         }
 
-        private void BookmarkAdded(IBookmark mark)
+        private void BookmarkAdded(BookmarkInfo input)
         {
-            List<IBookmark> originalList = FileBookmarks.ToList();
+            // Sort the bookmarks in order in a new list. Find the parent of the newly added bookmark,
+            // if it has a parent. 
+            List<BookmarkStorage> sorted = FileBookmarks.OrderBy(x => x.Value.StartPage).ToList();
+            BookmarkStorage parent = sorted.FindParent(input.StartPage, input.EndPage);
+            int level = parent == null ? 1 : parent.Value.Level + 1;
+            BookmarkStorage addMark = new BookmarkStorage(new LeveledBookmark(level, input.Title, 
+                input.StartPage, input.EndPage - input.StartPage + 1));
 
-            List<IBookmark> parents =
-                originalList.FindAll(x => x.StartPage <= mark.StartPage && x.EndPage > mark.EndPage);
-            if (parents.Count > 0)
-            {
-                IBookmark parent = parents.First(x => x.Level == parents.Max(x => x.Level));
-                mark.Level = parent.Level + 1;
-                mark.ParentId = parent.Id;
+            BookmarkStorage precedingSibling = sorted.FindPrecedingSibling(addMark, parent);
+            IList<BookmarkStorage> children = sorted.FindChildren(addMark);
 
-                List<IBookmark> siblings = originalList.FindAll(x => x.ParentId == parent.Id);
-                if (siblings.Count < 1)
-                {
-                    FileBookmarks.Insert(FileBookmarks.IndexOf(FileBookmarks.First(x => x.Id == parent.Id)) + 1, mark);
-                }
-                else
-                {
-                    IBookmark closestSibling = siblings.FirstOrDefault(x => x.StartPage > mark.StartPage);
-                    if (closestSibling == null)
-                    {
-                        FileBookmarks.Insert(FileBookmarks.IndexOf(FileBookmarks.Last(x => x.ParentId == parent.Id)) + 1, mark);
-                    }
-                    else
-                    {
-                        FileBookmarks.Insert(FileBookmarks.IndexOf(FileBookmarks.First(x => x.Id == closestSibling.Id)) - 1, mark);
-                    }
-                }
-            }
-            else
+            // Default as first bookmark
+            int index = 0;
+            // Sub-level bookmark, but first of its kind
+            if (parent != null && precedingSibling == null)
+                index = FileBookmarks.IndexOf(parent) + 1;
+            // Not the first of its kind, top-level or sub-level
+            if (precedingSibling != null)
+                index = FileBookmarks.IndexOf(precedingSibling) + 1;
+
+            addMark.IsSelected = true;
+            FileBookmarks.Insert(index, addMark);
+            foreach (BookmarkStorage child in children)
             {
-                mark.ParentId = Guid.Empty;
-                mark.Level = 1;
-                IBookmark next = FileBookmarks.FirstOrDefault(x => x.Level == 0 && x.StartPage > mark.StartPage);
-                if (next == null)
-                    FileBookmarks.Add(mark);
-                else
-                    FileBookmarks.Insert(FileBookmarks.IndexOf(next) - 1, mark);
+                int childIndex = FileBookmarks.IndexOf(child);
+                FileBookmarks.RemoveAt(childIndex);
+                FileBookmarks.Insert(childIndex, new BookmarkStorage(
+                    new LeveledBookmark(child.Value.Level + 1, child.Value.Title, child.Value.Pages)));
             }
+            SelectChildrenRecursively(addMark);
+
         }
 
-        private void FileSelected(string filePath)
+        private async void FileSelected(string filePath)
         {
             FileBookmarks.Clear();
             FilePath = filePath;
-            BookmarkOperator.GetBookmarks(filePath).ForEach(x => FileBookmarks.Add(x));
-            PageNumber = BookmarkOperator.GetLastPage(filePath);
+            foreach (ILeveledBookmark found in await Manipulator.FindBookmarksAsync(filePath))
+            {
+                FileBookmarks.Add(new BookmarkStorage(found));
+            }
         }
 
         private DelegateCommand clearCommand;
@@ -101,6 +100,7 @@ namespace Opus.Modules.Action.ViewModels
         void ExecuteClearCommand()
         {
             SelectedBookmark = null;
+            
         }
 
         private DelegateCommand deleteCommand;
@@ -112,11 +112,11 @@ namespace Opus.Modules.Action.ViewModels
             FileBookmarks.RemoveAll(x => x.IsSelected);
         }
 
-        private DelegateCommand saveSeparateCommand;
-        public DelegateCommand SaveSeparateCommand =>
-            saveSeparateCommand ?? (saveSeparateCommand = new DelegateCommand(ExecuteSaveSeparateCommand));
+        private IAsyncCommand saveSeparateCommand;
+        public IAsyncCommand SaveSeparateCommand =>
+            saveSeparateCommand ?? (saveSeparateCommand = new AsyncCommand(ExecuteSaveSeparateCommand));
 
-        void ExecuteSaveSeparateCommand()
+        private async Task ExecuteSaveSeparateCommand()
         {
             FolderBrowserDialog browseDialog = new FolderBrowserDialog();
             browseDialog.Description = Resources.Labels.Bookmarks_SelectFolder;
@@ -126,16 +126,16 @@ namespace Opus.Modules.Action.ViewModels
             if (browseDialog.ShowDialog() == DialogResult.Cancel)
                 return;
 
-            Extractor.ExtractSeparate(FilePath, browseDialog.SelectedPath, FileBookmarks);
+            await Manipulator.ExtractAsync(FilePath, new DirectoryInfo(browseDialog.SelectedPath),
+                FileBookmarks.Where(x => x.IsSelected).Select(y => y.Value), ShowProgress());
             SelectedBookmark = null;
-            Aggregator.GetEvent<DialogMessageEvent>().Publish(Resources.DialogMessages.Bookmarks_MultipleSaved);
         }
 
-        private DelegateCommand saveFileCommand;
-        public DelegateCommand SaveFileCommand =>
-            saveFileCommand ?? (saveFileCommand = new DelegateCommand(ExecuteSaveFileCommand));
+        private IAsyncCommand saveFileCommand;
+        public IAsyncCommand SaveFileCommand =>
+            saveFileCommand ?? (saveFileCommand = new AsyncCommand(ExecuteSaveFileCommand));
 
-        void ExecuteSaveFileCommand()
+        private async Task ExecuteSaveFileCommand()
         {
             Microsoft.Win32.SaveFileDialog saveDialog = new Microsoft.Win32.SaveFileDialog();
             saveDialog.Title = Resources.Labels.Bookmarks_SelectPath;
@@ -145,29 +145,9 @@ namespace Opus.Modules.Action.ViewModels
             if (saveDialog.ShowDialog() != true)
                 return;
 
-            Extractor.Extract(FilePath, saveDialog.FileName, FileBookmarks);
+            await Manipulator.ExtractAsync(FilePath, new FileInfo(saveDialog.FileName),
+                FileBookmarks.Where(x => x.IsSelected).Select(y => y.Value), ShowProgress());
             SelectedBookmark = null;
-            Aggregator.GetEvent<DialogMessageEvent>().Publish(Resources.DialogMessages.Bookmarks_SingleSaved);
-        }
-
-        private DelegateCommand importBookmarksCommand;
-        public DelegateCommand ImportBookmarksCommand =>
-            importBookmarksCommand ?? (importBookmarksCommand = new DelegateCommand(ExecuteImportBookmarksCommand));
-
-        void ExecuteImportBookmarksCommand()
-        {
-            Microsoft.Win32.OpenFileDialog openFile = new Microsoft.Win32.OpenFileDialog();
-            openFile.Title = Resources.Labels.Bookmarks_SelectBookmarkFile;
-            openFile.Filter = Resources.Labels.Bookmarks_TextFile + " |*.txt";
-            openFile.InitialDirectory = Path.GetDirectoryName(FilePath);
-
-            if (openFile.ShowDialog() != true)
-                return;
-
-            List<IBookmark> imported = BookmarkOperator.ImportBookmarks(openFile.FileName, PageNumber);
-            FileBookmarks.Clear();
-            foreach (IBookmark import in imported)
-                FileBookmarks.Add(import);
         }
 
         private DelegateCommand<SelectionChangedEventArgs> selectChildrenCommand;
@@ -177,22 +157,22 @@ namespace Opus.Modules.Action.ViewModels
         void ExecuteSelectChildrenCommand(SelectionChangedEventArgs parameter)
         {
             if (parameter.AddedItems.Count > 0)
-                SelectChildrenRecursively(parameter.AddedItems[0] as IBookmark);
+                SelectChildrenRecursively(parameter.AddedItems[0] as BookmarkStorage);
             if (parameter.RemovedItems.Count > 0)
-                DeSelectChildrenRecursively(parameter.RemovedItems[0] as IBookmark);
+                DeSelectChildrenRecursively(parameter.RemovedItems[0] as BookmarkStorage);
         }
 
-        private void SelectChildrenRecursively(IBookmark mark)
+        private void SelectChildrenRecursively(BookmarkStorage mark)
         {
-            foreach (IBookmark child in FileBookmarks.Where(x => x.ParentId == mark.Id))
+            foreach (BookmarkStorage child in FileBookmarks.FindChildren(mark))
             {
                 child.IsSelected = true;
                 SelectChildrenRecursively(child);
             }
         }
-        private void DeSelectChildrenRecursively(IBookmark mark)
+        private void DeSelectChildrenRecursively(BookmarkStorage mark)
         {
-            foreach (IBookmark child in FileBookmarks.Where(x => x.ParentId == mark.Id))
+            foreach (BookmarkStorage child in FileBookmarks.FindChildren(mark))
             {
                 child.IsSelected = false;
                 DeSelectChildrenRecursively(child);
@@ -205,10 +185,21 @@ namespace Opus.Modules.Action.ViewModels
 
         void ExecuteSelectAllCommand()
         {
-            foreach (IBookmark mark in FileBookmarks)
+            foreach (BookmarkStorage mark in FileBookmarks)
             {
                 mark.IsSelected = true;
             }
+        }
+
+        private IProgress<ProgressReport> ShowProgress()
+        {
+            Aggregator.GetEvent<ShowDialogEvent>().Publish(new ProgressDialog(0, ProgressPhase.Unassigned.GetResourceString()));
+            return new Progress<ProgressReport>(report =>
+            {
+                Aggregator.GetEvent<ShowDialogEvent>().Publish(
+                    new ProgressDialog(report.Percentage, report.CurrentPhase.GetResourceString(),
+                    report.CurrentItem));
+            });
         }
     }
 }

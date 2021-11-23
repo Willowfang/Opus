@@ -1,6 +1,4 @@
-﻿using PDFLib.Implementation;
-using PDFLib.Services;
-using Opus.Core.Base;
+﻿using Opus.Core.Base;
 using Opus.Core.Events;
 using Opus.Core.ExtensionMethods;
 using Prism.Commands;
@@ -10,38 +8,44 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Forms;
 using Opus.Services.Configuration;
+using CX.PdfLib.Services;
+using Opus.Core.Wrappers;
+using AsyncAwaitBestPractices.MVVM;
+using System.Threading.Tasks;
+using Opus.Core.Constants;
+using Opus.Core.Dialog;
 
 namespace Opus.Modules.Action.ViewModels
 {
     public class SignatureRemovalViewModel : ViewModelBase
     {
-        public ObservableCollection<IFilePDF> SignatureFiles { get; set; }
+        public ObservableCollection<FileStorage> SignatureFiles { get; set; }
 
-        private IFilePDF selectedFile;
-        public IFilePDF SelectedFile
+        private FileStorage selectedFile;
+        public FileStorage SelectedFile
         {
             get => selectedFile;
             set => SetProperty(ref selectedFile, value);
         }
 
         private IConfiguration.Sign Configuration;
-        private ISignature Signature;
+        private IManipulator Manipulator;
 
         public SignatureRemovalViewModel(IRegionManager regionManager, IEventAggregator eventAggregator, 
-            IConfiguration.Sign conf, ISignature signature)
+            IConfiguration.Sign conf, IManipulator manipulator)
             : base(regionManager, eventAggregator)
         {
             Aggregator.GetEvent<FilesAddedEvent>().Subscribe(FilesAdded);
-            SignatureFiles = new ObservableCollection<IFilePDF>();
+            SignatureFiles = new ObservableCollection<FileStorage>();
             Configuration = conf;
-            Signature = signature;
+            Manipulator = manipulator;
         }
 
         private void FilesAdded(string[] addedFiles)
         {
             foreach (string file in addedFiles)
             {
-                SignatureFiles.Add(new FilePDF(file));
+                SignatureFiles.Add(new FileStorage(file));
             }
         }
 
@@ -63,11 +67,11 @@ namespace Opus.Modules.Action.ViewModels
             SignatureFiles.Clear();
         }
 
-        private DelegateCommand _removeSignatureCommand;
-        public DelegateCommand RemoveSignatureCommand =>
-            _removeSignatureCommand ?? (_removeSignatureCommand = new DelegateCommand(ExecuteRemoveSignatureCommand));
+        private IAsyncCommand _removeSignatureCommand;
+        public IAsyncCommand RemoveSignatureCommand =>
+            _removeSignatureCommand ?? (_removeSignatureCommand = new AsyncCommand(ExecuteRemoveSignatureCommand));
 
-        private void ExecuteRemoveSignatureCommand()
+        private async Task ExecuteRemoveSignatureCommand()
         {
             FolderBrowserDialog browseDialog = new FolderBrowserDialog();
             browseDialog.Description = Resources.Labels.Bookmarks_SelectFolder;
@@ -77,8 +81,9 @@ namespace Opus.Modules.Action.ViewModels
             if (browseDialog.ShowDialog() == DialogResult.Cancel)
                 return;
 
-            Signature.Remove(SignatureFiles.ToArray(), browseDialog.SelectedPath, Configuration.SignatureRemovePostfix);
-            Aggregator.GetEvent<DialogMessageEvent>().Publish(Resources.DialogMessages.Bookmarks_MultipleSaved);
+            await Manipulator.RemoveSignatureAsync(SignatureFiles.Where(x => x.IsSelected).Select(y => y.FilePath).ToArray(),
+                new System.IO.DirectoryInfo(browseDialog.SelectedPath), Configuration.SignatureRemovePostfix);
+            Aggregator.GetEvent<ShowDialogEvent>().Publish(new MessageDialog(Resources.DialogMessages.SignatureRemoved));
         }
     }
 }

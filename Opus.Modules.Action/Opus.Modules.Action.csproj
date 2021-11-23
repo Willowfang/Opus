@@ -13,7 +13,10 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="CodeX-PdfLib">
-      <HintPath>..\..\..\CodeX\Libraries\PdfLib\bin\Release\net5.0\CodeX-PdfLib.dll</HintPath>
+      <HintPath>..\..\..\CodeX\Libraries\PdfLib\bin\Debug\net5.0\CodeX-PdfLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeX-PdfLib-iText7">
+      <HintPath>..\..\..\CodeX\Libraries\PdfLib.iText7\bin\Debug\net5.0\CodeX-PdfLib-iText7.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

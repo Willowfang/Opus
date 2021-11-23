@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opus.Modules.Options", "Opu
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Opus.Install", "Opus.Install\Opus.Install.wixproj", "{FDA3D605-FC20-4BFF-8524-E1866CFD3D13}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opus.Modules.Dialog", "Opus.Modules.Dialog\Opus.Modules.Dialog.csproj", "{C52A788C-929A-46A8-B591-338FCAA87DAE}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opus.Modules.MainSection", "Opus.Modules.MainSection\Opus.Modules.MainSection.csproj", "{01C7AB3F-9094-436B-AC75-29D9CEC4B3C6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opus.Services", "Opus.Services\Opus.Services.csproj", "{70392446-C175-4DC9-A3B1-1C9E2D42CB76}"
@@ -75,14 +73,6 @@ Global
 		{FDA3D605-FC20-4BFF-8524-E1866CFD3D13}.Release|Any CPU.ActiveCfg = Release|x86
 		{FDA3D605-FC20-4BFF-8524-E1866CFD3D13}.Release|x86.ActiveCfg = Release|x86
 		{FDA3D605-FC20-4BFF-8524-E1866CFD3D13}.Release|x86.Build.0 = Release|x86
-		{C52A788C-929A-46A8-B591-338FCAA87DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C52A788C-929A-46A8-B591-338FCAA87DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C52A788C-929A-46A8-B591-338FCAA87DAE}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{C52A788C-929A-46A8-B591-338FCAA87DAE}.Debug|x86.Build.0 = Debug|Any CPU
-		{C52A788C-929A-46A8-B591-338FCAA87DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C52A788C-929A-46A8-B591-338FCAA87DAE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C52A788C-929A-46A8-B591-338FCAA87DAE}.Release|x86.ActiveCfg = Release|Any CPU
-		{C52A788C-929A-46A8-B591-338FCAA87DAE}.Release|x86.Build.0 = Release|Any CPU
 		{01C7AB3F-9094-436B-AC75-29D9CEC4B3C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{01C7AB3F-9094-436B-AC75-29D9CEC4B3C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01C7AB3F-9094-436B-AC75-29D9CEC4B3C6}.Debug|x86.ActiveCfg = Debug|Any CPU

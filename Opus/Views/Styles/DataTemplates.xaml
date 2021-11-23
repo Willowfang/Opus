@@ -1,0 +1,71 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dialog="clr-namespace:Opus.Core.Dialog;assembly=Opus.Core"
+                    xmlns:c="clr-namespace:Opus.Core.Converters;assembly=Opus.Core"
+                    xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes">
+
+    <!--CONVERTERS-->
+    <c:ZeroToTrueConverter x:Key="ZeroToTrueC"/>
+    <c:PercentToVisibilityConverter x:Key="PercentToVisibilityC"/>
+    <c:PercentToBooleanConverter x:Key="PercentToBooleanC"/>
+
+    <!--MESSAGE DIALOG-->
+    <DataTemplate DataType="{x:Type dialog:MessageDialog}">
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Center"
+                       Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       Margin="32, 32, 32, 10"
+                       Text="{Binding Content}"
+                       MinWidth="150" MaxWidth="250"
+                       TextWrapping="Wrap" TextAlignment="Center"
+                       FontSize="14"/>
+            <Button HorizontalAlignment="Center"
+                    Margin="16"
+                    Command="{x:Static md:DialogHost.CloseDialogCommand}"
+                    Style="{DynamicResource md:MaterialDesignOutlinedButton}"
+                    Content="OK"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <!--PROGRESS DIALOG-->
+    <DataTemplate DataType="{x:Type dialog:ProgressDialog}">
+        <StackPanel>
+            <Grid Width="40" Height="40"
+                  Margin="32, 32, 32, 10">
+                <ProgressBar Style="{DynamicResource MaterialDesignCircularProgressBar}"
+                             Width="40" Height="40"
+                             Value="{Binding Percent}"
+                             VerticalAlignment="Center" HorizontalAlignment="Center"
+                             Visibility="{Binding ElementName=Check, Path=IsVisible, Converter={StaticResource InverseBoolToVisConverter}}"
+                             IsIndeterminate="{Binding Percent, Converter={StaticResource ZeroToTrueC}}"/>
+                <md:PackIcon x:Name="Check"
+                             Height="40" Width="40"
+                             Kind="CheckCircle"
+                             VerticalAlignment="Center" HorizontalAlignment="Center"
+                             Foreground="{DynamicResource PrimaryHueMidBrush}"
+                             Visibility="{Binding Percent, Converter={StaticResource PercentToVisibilityC}, ConverterParameter=100}"/>
+            </Grid>
+            <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       HorizontalAlignment="Center"
+                       MinWidth="120" MaxWidth="250"
+                       Margin="32, 0, 32, 5"
+                       TextAlignment="Center"
+                       FontSize="16"
+                       Text="{Binding Phase}"/>
+            <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       HorizontalAlignment="Center"
+                       MinWidth="120" MaxWidth="250"
+                       Margin="32, 0, 32, 0"
+                       TextAlignment="Center"
+                       FontSize="10"
+                       Text="{Binding Item}"
+                       Visibility="{Binding Item, Converter={StaticResource NullableToVisibilityConverter}}"/>
+            <Button Style="{DynamicResource MaterialDesignOutlinedButton}"
+                    HorizontalAlignment="Center"
+                    Margin="16"
+                    Command="{x:Static md:DialogHost.CloseDialogCommand}"
+                    IsEnabled="{Binding Percent, Converter={StaticResource PercentToBooleanC}, ConverterParameter=100}"
+                    Content="Sulje"/>
+        </StackPanel>
+    </DataTemplate>
+</ResourceDictionary>

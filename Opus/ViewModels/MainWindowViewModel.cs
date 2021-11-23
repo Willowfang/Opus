@@ -4,15 +4,28 @@ using System.IO;
 using Opus.Core.Base;
 using Opus.Core.Constants;
 using Opus.Core.Events;
+using Opus.Core.Dialog;
 using Opus.Services.Configuration;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Regions;
+using CX.PdfLib.Common;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace Opus.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
+        private IDialog currentDialog;
+        public IDialog CurrentDialog
+        {
+            get => currentDialog;
+            set => SetProperty(ref currentDialog, value);
+        }
+        public ProgressDialog Progress { get; }
+        public MessageDialog Message { get; }
+
         private string title;
         public string Title
         {
@@ -33,12 +46,30 @@ namespace Opus.ViewModels
             IConfiguration.App config)
             : base(regionManager, eventAggregator)
         {
-            eventAggregator.GetEvent<DialogMessageEvent>().Subscribe(ShowDialogMessage);
+            eventAggregator.GetEvent<ShowDialogEvent>().Subscribe(ShowDialog);
             Configuration = config;
+            Progress = new ProgressDialog();
+            Message = new MessageDialog();
+            CurrentDialog = Message;
         }
 
-        private void ShowDialogMessage(string message)
+        private void ShowDialog(IDialog dialog)
         {
+            if (dialog is ProgressDialog progress)
+            {
+                CurrentDialog = Progress;
+
+                Progress.Percent = progress.Percent;
+                Progress.Phase = progress.Phase;
+                Progress.Item = progress.Item;
+            }
+            if (dialog is MessageDialog message)
+            {
+                CurrentDialog = Message;
+
+                Message.Content = message.Content;
+            }
+
             DialogIsShowing = true;
         }
 
@@ -109,6 +140,14 @@ namespace Opus.ViewModels
 
             Configuration.ChangeLanguage(language);
             Aggregator.GetEvent<DialogMessageEvent>().Publish(Resources.Messages.LanguageChange);
+        }
+
+        private DelegateCommand<string> dialogChange;
+        public DelegateCommand<string> DialogChange => dialogChange ??= new DelegateCommand<string>(ExecuteDialogChange);
+
+        private void ExecuteDialogChange(string schemeName)
+        {
+            Aggregator.GetEvent<ViewChangeEvent>().Publish(schemeName);
         }
     }
 }

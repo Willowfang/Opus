@@ -1,4 +1,5 @@
-﻿using Opus.Services.UI;
+﻿using Opus.Core.Constants;
+using Opus.Services.UI;
 using Prism.Events;
 using Prism.Regions;
 
@@ -9,7 +10,10 @@ namespace Opus.Core.ServiceImplementations.UI
         public string DialogRegionName { get; set; }
 
         public DialogAssist(IEventAggregator aggregator, IRegionManager manager)
-            : base(aggregator, manager) { }
+            : base(aggregator, manager) 
+        {
+
+        }
 
         public void Add<T>(string schemeName)
         {
@@ -21,6 +25,8 @@ namespace Opus.Core.ServiceImplementations.UI
         {
             if (schemeName == CurrentScheme)
                 return;
+
+            var IRegionCollection = RegionManager.Regions;
 
             SchemeNavigator navigate = Schemes.Find(x => x.SchemeName == schemeName);
             if (navigate != null)

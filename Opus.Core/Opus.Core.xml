@@ -4,13 +4,6 @@
         <name>Opus.Core</name>
     </assembly>
     <members>
-        <member name="M:Opus.Core.ExtensionMethods.StringExtensions.ReplaceIllegal(System.String)">
-            <summary>
-            Replaces illegal filepath characters in a string and returns a new string
-            </summary>
-            <param name="original"></param>
-            <returns></returns>
-        </member>
         <member name="T:Opus.Core.Resources.DefaultValues">
             <summary>
               A strongly-typed resource class, for looking up localized strings, etc.
@@ -31,6 +24,68 @@
             <summary>
               Looks up a localized string similar to työkappale.
             </summary>
+        </member>
+        <member name="T:Opus.Core.Resources.PhaseNames">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Opus.Core.Resources.PhaseNames.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Opus.Core.Resources.PhaseNames.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Opus.Core.Resources.PhaseNames.AddingBookmarks">
+            <summary>
+              Looks up a localized string similar to Lisätään kirjanmerkkejä....
+            </summary>
+        </member>
+        <member name="P:Opus.Core.Resources.PhaseNames.Extracting">
+            <summary>
+              Looks up a localized string similar to Erotetaan kirjanmerkkejä....
+            </summary>
+        </member>
+        <member name="P:Opus.Core.Resources.PhaseNames.Finished">
+            <summary>
+              Looks up a localized string similar to Valmis!.
+            </summary>
+        </member>
+        <member name="P:Opus.Core.Resources.PhaseNames.Unassigned">
+            <summary>
+              Looks up a localized string similar to Suoritetaan....
+            </summary>
+        </member>
+        <member name="T:Opus.Core.Wrappers.BookmarkStorage">
+            <summary>
+            Storage class for displaying and selecting bookmarks
+            </summary>
+        </member>
+        <member name="P:Opus.Core.Wrappers.BookmarkStorage.Value">
+            <summary>
+            Bookmark contained in storage
+            </summary>
+        </member>
+        <member name="P:Opus.Core.Wrappers.BookmarkStorage.IsSelected">
+            <summary>
+            Is the current bookmark selected
+            </summary>
+        </member>
+        <member name="P:Opus.Core.Wrappers.BookmarkStorage.Range">
+            <summary>
+            Pages between start page and end page as a string
+            </summary>
+        </member>
+        <member name="M:Opus.Core.Wrappers.BookmarkStorage.#ctor(CX.PdfLib.Services.Data.ILeveledBookmark)">
+            <summary>
+            Create a new storage class for a bookmark
+            </summary>
+            <param name="value">Bookmark to store</param>
         </member>
     </members>
 </doc>

@@ -4,7 +4,6 @@ using System.IO;
 using System.Windows.Forms;
 using CX.PdfLib.Services.Data;
 using System.Collections.Generic;
-using CX.PdfLib.Implementation.Data;
 
 namespace Opus.ContextMenu
 {
@@ -22,29 +21,23 @@ namespace Opus.ContextMenu
 
     internal abstract class MenuCommandExtractBase : MenuCommandBase
     {
-        protected IList<IExtractRange> GetRanges(string filePath)
+        protected IList<ILeveledBookmark> GetBookmarks(string filePath)
         {
-            List<IExtractRange> ranges = new List<IExtractRange>();
-            foreach (ILeveledBookmark bookmark in Manipulator.FindBookmarks(filePath))
-            {
-                ranges.Add(new ExtractRange(bookmark.Title, bookmark.Pages));
-            }
-
-            return ranges;
+            return Manipulator.FindBookmarks(filePath);
         }
 
-        protected IList<IExtractRange> GetRanges(string filePath, string preFix)
+        protected IList<ILeveledBookmark> GetBookmarks(string filePath, string preFix)
         {
-            List<IExtractRange> ranges = new List<IExtractRange>();
+            List<ILeveledBookmark> selected = new List<ILeveledBookmark>();
             foreach (ILeveledBookmark bookmark in Manipulator.FindBookmarks(filePath))
             {
                 if (bookmark.Title.ToLower().StartsWith(preFix.ToLower()))
                 {
-                    ranges.Add(new ExtractRange(bookmark.Title, bookmark.Pages));
+                    selected.Add(bookmark);
                 }
             }
 
-            return ranges;
+            return selected;
         }
     }
 
@@ -83,12 +76,12 @@ namespace Opus.ContextMenu
             string dir = Directory.CreateDirectory(Path.Combine(Path.GetDirectoryName(filePath),
                 Path.GetFileNameWithoutExtension(filePath) + Resources.Postfixes.Split)).FullName;
 
-            IList<IExtractRange> ranges;
+            IList<ILeveledBookmark> ranges;
 
             if (parameters.Length == 2)
-                ranges = GetRanges(filePath);
+                ranges = GetBookmarks(filePath);
             else
-                ranges = GetRanges(filePath, parameters[2]);
+                ranges = GetBookmarks(filePath, parameters[2]);
 
             Manipulator.Extract(filePath, new DirectoryInfo(dir), ranges);
         }
@@ -113,11 +106,11 @@ namespace Opus.ContextMenu
                 string dir = Directory.CreateDirectory(Path.Combine(parentFolder,
                     Path.GetFileNameWithoutExtension(file) + Resources.Postfixes.Split)).FullName;
 
-                IList<IExtractRange> ranges;
+                IList<ILeveledBookmark> ranges;
                 if (parameters.Length == 2)
-                    ranges = GetRanges(file);
+                    ranges = GetBookmarks(file);
                 else
-                    ranges = GetRanges(file, parameters[2]);
+                    ranges = GetBookmarks(file, parameters[2]);
 
                 Manipulator.Extract(file, new DirectoryInfo(dir), ranges);
             }
