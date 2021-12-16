@@ -14,6 +14,7 @@ namespace Opus.Modules.Options
 
             navigation.Add<BookmarkNewView>(RegionNames.MAINSECTION_THREE_OPTIONS, SchemeNames.SPLIT);
             navigation.Add<IdentifierView>(RegionNames.MAINSECTION_THREE_OPTIONS, SchemeNames.SIGNATURE);
+            navigation.Add<MergeOptionsView>(RegionNames.MAINSECTION_THREE_OPTIONS, SchemeNames.MERGE);
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

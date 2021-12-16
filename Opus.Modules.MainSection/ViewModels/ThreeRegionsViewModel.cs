@@ -6,7 +6,6 @@ namespace Opus.Modules.MainSection.ViewModels
 {
     public class ThreeRegionsViewModel : ViewModelBase
     {
-        public ThreeRegionsViewModel(IRegionManager manager, IEventAggregator aggregator)
-            : base(manager, aggregator) { }
+        public ThreeRegionsViewModel() { }
     }
 }

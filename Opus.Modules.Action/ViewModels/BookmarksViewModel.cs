@@ -1,6 +1,5 @@
 ﻿using System.Collections.ObjectModel;
 using Prism.Events;
-using Opus.Core.Events;
 using Prism.Commands;
 using System.Windows.Forms;
 using Opus.Core.ExtensionMethods;
@@ -15,20 +14,28 @@ using CX.PdfLib.Services;
 using CX.PdfLib.Services.Data;
 using CX.PdfLib.Common;
 using Opus.Core.Wrappers;
-using Opus.Core.Events.Data;
+using Opus.Events.Data;
 using System.Threading.Tasks;
 using AsyncAwaitBestPractices.MVVM;
 using Opus.Core.Constants;
 using System.Threading;
-using Opus.Core.Dialog;
+using Opus.Services.Input;
+using Opus.Events;
+using Opus.Services.UI;
+using Opus.Services.Implementation.UI.Dialogs;
 
 namespace Opus.Modules.Action.ViewModels
 {
     public class BookmarksViewModel : ViewModelBase
     {
         private IManipulator Manipulator;
+        private IPathSelection Input;
+        private IEventAggregator eventAggregator;
+        private IDialogAssist dialogAssist;
+        private string currentFilePath;
 
         public ObservableCollection<BookmarkStorage> FileBookmarks { get; set; }
+
         private BookmarkStorage selectedBookmark;
         public BookmarkStorage SelectedBookmark
         {
@@ -36,16 +43,16 @@ namespace Opus.Modules.Action.ViewModels
             set { SetProperty(ref selectedBookmark, value); }
         }
 
-        private string FilePath;
-
-        public BookmarksViewModel(IRegionManager regionManager, IEventAggregator eventAggregator, 
-            IManipulator manipulator)
-            : base(regionManager, eventAggregator)
+        public BookmarksViewModel(IEventAggregator eventAggregator, 
+            IManipulator manipulator, IPathSelection input, IDialogAssist dialogAssist)
         {
             eventAggregator.GetEvent<FileSelectedEvent>().Subscribe(FileSelected);
             eventAggregator.GetEvent<BookmarkAddedEvent>().Subscribe(BookmarkAdded);
             FileBookmarks = new ObservableCollection<BookmarkStorage>();
             Manipulator = manipulator;
+            Input = input;
+            this.eventAggregator = eventAggregator;
+            this.dialogAssist = dialogAssist;
         }
 
         private void BookmarkAdded(BookmarkInfo input)
@@ -86,7 +93,7 @@ namespace Opus.Modules.Action.ViewModels
         private async void FileSelected(string filePath)
         {
             FileBookmarks.Clear();
-            FilePath = filePath;
+            currentFilePath = filePath;
             foreach (ILeveledBookmark found in await Manipulator.FindBookmarksAsync(filePath))
             {
                 FileBookmarks.Add(new BookmarkStorage(found));
@@ -118,16 +125,14 @@ namespace Opus.Modules.Action.ViewModels
 
         private async Task ExecuteSaveSeparateCommand()
         {
-            FolderBrowserDialog browseDialog = new FolderBrowserDialog();
-            browseDialog.Description = Resources.Labels.Bookmarks_SelectFolder;
-            browseDialog.UseDescriptionForTitle = true;
-            browseDialog.ShowNewFolderButton = true;
+            string path = Input.OpenDirectory(Resources.Labels.Bookmarks_SelectFolder);
+            if (path == null) return;
 
-            if (browseDialog.ShowDialog() == DialogResult.Cancel)
-                return;
+            var result = ShowProgress();
+            Task extract = Manipulator.ExtractAsync(currentFilePath, new DirectoryInfo(path),
+                FileBookmarks.Where(x => x.IsSelected).Select(y => y.Value), result.progress);
 
-            await Manipulator.ExtractAsync(FilePath, new DirectoryInfo(browseDialog.SelectedPath),
-                FileBookmarks.Where(x => x.IsSelected).Select(y => y.Value), ShowProgress());
+            await result.dialog;
             SelectedBookmark = null;
         }
 
@@ -137,16 +142,16 @@ namespace Opus.Modules.Action.ViewModels
 
         private async Task ExecuteSaveFileCommand()
         {
-            Microsoft.Win32.SaveFileDialog saveDialog = new Microsoft.Win32.SaveFileDialog();
-            saveDialog.Title = Resources.Labels.Bookmarks_SelectPath;
-            saveDialog.Filter = "PDF (.pdf)|*.pdf";
-            saveDialog.InitialDirectory = Path.GetDirectoryName(FilePath);
+            string path = Input.SaveFile(Resources.Labels.Bookmarks_SelectPath, FileType.PDF,
+                new DirectoryInfo(Path.GetDirectoryName(currentFilePath)));
+            if (path == null) return;
 
-            if (saveDialog.ShowDialog() != true)
-                return;
+            var result = ShowProgress();
+            Task extract = Manipulator.ExtractAsync(currentFilePath, new FileInfo(path),
+                FileBookmarks.Where(x => x.IsSelected).Select(y => y.Value), result.progress);
 
-            await Manipulator.ExtractAsync(FilePath, new FileInfo(saveDialog.FileName),
-                FileBookmarks.Where(x => x.IsSelected).Select(y => y.Value), ShowProgress());
+            await result.dialog;
+
             SelectedBookmark = null;
         }
 
@@ -191,15 +196,21 @@ namespace Opus.Modules.Action.ViewModels
             }
         }
 
-        private IProgress<ProgressReport> ShowProgress()
+        private (Task dialog, IProgress<ProgressReport> progress) ShowProgress()
         {
-            Aggregator.GetEvent<ShowDialogEvent>().Publish(new ProgressDialog(0, ProgressPhase.Unassigned.GetResourceString()));
-            return new Progress<ProgressReport>(report =>
+            ProgressDialog dialog = new ProgressDialog()
             {
-                Aggregator.GetEvent<ShowDialogEvent>().Publish(
-                    new ProgressDialog(report.Percentage, report.CurrentPhase.GetResourceString(),
-                    report.CurrentItem));
+                TotalPercent = 0,
+                Phase = ProgressPhase.Unassigned.GetResourceString()
+            };
+            Progress<ProgressReport> progress = new Progress<ProgressReport>(report =>
+            {
+                dialog.TotalPercent = report.Percentage;
+                dialog.Phase = report.CurrentPhase.GetResourceString();
+                dialog.Part = report.CurrentItem;
             });
+
+            return (dialogAssist.Show(dialog), progress);
         }
     }
 }

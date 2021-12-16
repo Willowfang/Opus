@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Opus.Services.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -42,7 +43,28 @@ namespace Opus.Services.Configuration
         /// </summary>
         public interface Merge
         {
-            
+            /// <summary>
+            /// If true, page numbers will be added to a merged document 
+            /// </summary>
+            public bool AddPageNumbers { get; set; }
+        }
+        /// <summary>
+        /// Provides functionality for tasks related to composing a pdf-file
+        /// from separate files
+        /// </summary>
+        public interface Compose
+        {
+            /// <summary>
+            /// Get all saved composition profiles
+            /// </summary>
+            /// <returns></returns>
+            public IList<ICompositionProfile> GetProfiles();
+            /// <summary>
+            /// Save a new profile
+            /// </summary>
+            /// <param name="profile">Profile to save</param>
+            /// <returns>Saved profile</returns>
+            public ICompositionProfile SaveProfile(ICompositionProfile profile);
         }
     }
 }

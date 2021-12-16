@@ -7,10 +7,8 @@
         xmlns:const="clr-namespace:Opus.Core.Constants;assembly=Opus.Core"
         xmlns:local="clr-namespace:Opus"
         xmlns:res="clr-namespace:Opus.Resources"
-        xmlns:dialog="clr-namespace:Opus.Core.Dialog;assembly=Opus.Core"
-        xmlns:conv="clr-namespace:Opus.Core.Converters;assembly=Opus.Core"
         mc:Ignorable="d"
-        Title="" MinHeight="600" Height="800" MinWidth="640" Width="640"
+        Title="" MinHeight="600" Height="800" MinWidth="600" Width="600"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -32,7 +30,7 @@
     <Window.Icon>
         <DrawingImage/>
     </Window.Icon>
-    <materialDesign:DialogHost IsOpen="{Binding DialogIsShowing}" DialogContent="{Binding CurrentDialog}">
+    <materialDesign:DialogHost IsOpen="{Binding Dialog.IsShowing}" DialogContent="{Binding Dialog.Current}">
         <Grid>
             <ContentControl Content="{StaticResource LogoVector}" HorizontalAlignment="Center"
                             Margin="0, 0, -100, 0"/>
@@ -55,6 +53,12 @@
                                  CommandParameter="{x:Static const:SchemeNames.SIGNATURE}">
                         <materialDesign:PackIcon Width="30" Height="30" 
                                                  Kind="Draw"/>
+                    </RadioButton>
+                    <RadioButton Style="{DynamicResource MainMenuButton}"
+                                 Command="{Binding NavigateCommand}"
+                                 CommandParameter="{x:Static const:SchemeNames.MERGE}">
+                        <materialDesign:PackIcon Width="30" Height="30" 
+                                                 Kind="Merge"/>
                     </RadioButton>
                 </StackPanel>
                 <materialDesign:Card Padding="32" Margin="16" DockPanel.Dock="Top" Opacity="0.8">
@@ -93,7 +97,7 @@
                         </materialDesign:PopupBox>
                     </Grid>
                 </materialDesign:Card>
-                <ContentControl DockPanel.Dock="Top" 
+                <ContentControl DockPanel.Dock="Top" Margin="0, 0, 0, 10"
                                 prism:RegionManager.RegionName="{x:Static const:RegionNames.SHELL_MAINSECTION}"/>
             </DockPanel>
         </Grid>

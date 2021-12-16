@@ -4,25 +4,20 @@
         <name>Opus.Core</name>
     </assembly>
     <members>
-        <member name="T:Opus.Core.Resources.DefaultValues">
+        <member name="T:Opus.Core.Resources.Labels">
             <summary>
               A strongly-typed resource class, for looking up localized strings, etc.
             </summary>
         </member>
-        <member name="P:Opus.Core.Resources.DefaultValues.ResourceManager">
+        <member name="P:Opus.Core.Resources.Labels.ResourceManager">
             <summary>
               Returns the cached ResourceManager instance used by this class.
             </summary>
         </member>
-        <member name="P:Opus.Core.Resources.DefaultValues.Culture">
+        <member name="P:Opus.Core.Resources.Labels.Culture">
             <summary>
               Overrides the current thread's CurrentUICulture property for all
               resource lookups using this strongly typed resource class.
-            </summary>
-        </member>
-        <member name="P:Opus.Core.Resources.DefaultValues.Identifier">
-            <summary>
-              Looks up a localized string similar to työkappale.
             </summary>
         </member>
         <member name="T:Opus.Core.Resources.PhaseNames">
@@ -46,6 +41,16 @@
               Looks up a localized string similar to Lisätään kirjanmerkkejä....
             </summary>
         </member>
+        <member name="P:Opus.Core.Resources.PhaseNames.AddingPageNumbers">
+            <summary>
+              Looks up a localized string similar to Lisätään sivunumeroita....
+            </summary>
+        </member>
+        <member name="P:Opus.Core.Resources.PhaseNames.Converting">
+            <summary>
+              Looks up a localized string similar to Muunnetaan tiedostoja....
+            </summary>
+        </member>
         <member name="P:Opus.Core.Resources.PhaseNames.Extracting">
             <summary>
               Looks up a localized string similar to Erotetaan kirjanmerkkejä....
@@ -54,6 +59,16 @@
         <member name="P:Opus.Core.Resources.PhaseNames.Finished">
             <summary>
               Looks up a localized string similar to Valmis!.
+            </summary>
+        </member>
+        <member name="P:Opus.Core.Resources.PhaseNames.GettingBookmarks">
+            <summary>
+              Looks up a localized string similar to Noudetaan kirjanmerkkejä....
+            </summary>
+        </member>
+        <member name="P:Opus.Core.Resources.PhaseNames.Merging">
+            <summary>
+              Looks up a localized string similar to Yhdistetään tiedostoja....
             </summary>
         </member>
         <member name="P:Opus.Core.Resources.PhaseNames.Unassigned">

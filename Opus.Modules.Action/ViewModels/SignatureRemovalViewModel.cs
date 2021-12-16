@@ -1,5 +1,4 @@
 ﻿using Opus.Core.Base;
-using Opus.Core.Events;
 using Opus.Core.ExtensionMethods;
 using Prism.Commands;
 using Prism.Events;
@@ -13,32 +12,60 @@ using Opus.Core.Wrappers;
 using AsyncAwaitBestPractices.MVVM;
 using System.Threading.Tasks;
 using Opus.Core.Constants;
-using Opus.Core.Dialog;
+using Opus.Services.Input;
+using Opus.Services.UI;
+using Opus.Events;
+using CX.PdfLib.Common;
+using Opus.Services.Implementation.UI.Dialogs;
 
 namespace Opus.Modules.Action.ViewModels
 {
-    public class SignatureRemovalViewModel : ViewModelBase
+    public class SignatureRemovalViewModel : ViewModelBase, INavigationTarget
     {
-        public ObservableCollection<FileStorage> SignatureFiles { get; set; }
+        // Signature-related configuration service
+        private IConfiguration.Sign configuration;
+        // General PDF-manipulator service
+        private IManipulator manipulator;
+        // Service for getting user input related to file paths
+        private IPathSelection input;
+        // Prism events service
+        private IEventAggregator eventAggregator;
+        /// <summary>
+        /// Common service for displaying and updating a dialog
+        /// </summary>
+        private IDialogAssist dialogAssist;
 
+        // Collection for files that will have their signatures removed
+        public ObservableCollection<FileStorage> SignatureFiles { get; set; }
         private FileStorage selectedFile;
+        // Currently selected file
         public FileStorage SelectedFile
         {
             get => selectedFile;
             set => SetProperty(ref selectedFile, value);
         }
 
-        private IConfiguration.Sign Configuration;
-        private IManipulator Manipulator;
-
-        public SignatureRemovalViewModel(IRegionManager regionManager, IEventAggregator eventAggregator, 
-            IConfiguration.Sign conf, IManipulator manipulator)
-            : base(regionManager, eventAggregator)
+        public SignatureRemovalViewModel(IEventAggregator eventAggregator, 
+            IConfiguration.Sign configuration, IManipulator manipulator, IPathSelection input,
+            INavigationTargetRegistry navRegistry, IDialogAssist dialogAssist)
         {
-            Aggregator.GetEvent<FilesAddedEvent>().Subscribe(FilesAdded);
             SignatureFiles = new ObservableCollection<FileStorage>();
-            Configuration = conf;
-            Manipulator = manipulator;
+            this.configuration = configuration;
+            this.manipulator = manipulator;
+            this.input = input;
+            this.eventAggregator = eventAggregator;
+            this.dialogAssist = dialogAssist;
+            navRegistry.AddTarget(SchemeNames.SIGNATURE, this);
+        }
+
+        SubscriptionToken filesAddedSubscription;
+        public void OnArrival()
+        {
+            filesAddedSubscription = eventAggregator.GetEvent<FilesAddedEvent>().Subscribe(FilesAdded);
+        }
+        public void WhenLeaving()
+        {
+            eventAggregator.GetEvent<FilesAddedEvent>().Unsubscribe(filesAddedSubscription);
         }
 
         private void FilesAdded(string[] addedFiles)
@@ -73,17 +100,13 @@ namespace Opus.Modules.Action.ViewModels
 
         private async Task ExecuteRemoveSignatureCommand()
         {
-            FolderBrowserDialog browseDialog = new FolderBrowserDialog();
-            browseDialog.Description = Resources.Labels.Bookmarks_SelectFolder;
-            browseDialog.UseDescriptionForTitle = true;
-            browseDialog.ShowNewFolderButton = true;
+            string path = input.OpenDirectory(Resources.Labels.Bookmarks_SelectFolder);
+            if (path == null) return;
 
-            if (browseDialog.ShowDialog() == DialogResult.Cancel)
-                return;
-
-            await Manipulator.RemoveSignatureAsync(SignatureFiles.Where(x => x.IsSelected).Select(y => y.FilePath).ToArray(),
-                new System.IO.DirectoryInfo(browseDialog.SelectedPath), Configuration.SignatureRemovePostfix);
-            Aggregator.GetEvent<ShowDialogEvent>().Publish(new MessageDialog(Resources.DialogMessages.SignatureRemoved));
+            dialogAssist.Show(new ProgressDialog(0, ProgressPhase.Unassigned.GetResourceString()));
+            await manipulator.RemoveSignatureAsync(SignatureFiles.Where(x => x.IsSelected).Select(y => y.FilePath).ToArray(),
+                new System.IO.DirectoryInfo(path), configuration.SignatureRemovePostfix);
+            dialogAssist.Show(new MessageDialog(Resources.DialogMessages.SignatureRemoved));
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using Opus.Core.Base;
-using Opus.Core.Events;
+using Opus.Events;
+using Opus.Services.Input;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Regions;
@@ -9,8 +10,15 @@ namespace Opus.Modules.File.ViewModels
 {
     public class FileMultipleViewModel : ViewModelBase
     {
-        public FileMultipleViewModel(IRegionManager regionManager, IEventAggregator eventAggregator) 
-            : base(regionManager, eventAggregator) { }
+        private IPathSelection input;
+        private IEventAggregator eventAggregator;
+
+        public FileMultipleViewModel(IEventAggregator eventAggregator,
+            IPathSelection input) 
+        {
+            this.input = input;
+            this.eventAggregator = eventAggregator;
+        }
 
         private DelegateCommand _addFiles;
         public DelegateCommand AddFiles =>
@@ -18,15 +26,11 @@ namespace Opus.Modules.File.ViewModels
 
         private void ExecuteAddFiles()
         {
-            OpenFileDialog openFile = new OpenFileDialog();
-            openFile.Title = Resources.Labels.FileDialogMultiple;
-            openFile.Filter = "PDF |*.pdf";
-            openFile.Multiselect = true;
-
-            if (openFile.ShowDialog() != true)
-                return;
-
-            Aggregator.GetEvent<FilesAddedEvent>().Publish(openFile.FileNames);
+            string[] path = input.OpenFiles(Resources.Labels.FileDialogMultiple,
+                FileType.PDF);
+            if (path.Length == 0) return;
+            
+            eventAggregator.GetEvent<FilesAddedEvent>().Publish(path);
         }
     }
 }

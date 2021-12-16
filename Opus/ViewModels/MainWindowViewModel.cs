@@ -3,28 +3,21 @@ using System.Diagnostics;
 using System.IO;
 using Opus.Core.Base;
 using Opus.Core.Constants;
-using Opus.Core.Events;
-using Opus.Core.Dialog;
 using Opus.Services.Configuration;
 using Prism.Commands;
 using Prism.Events;
-using Prism.Regions;
-using CX.PdfLib.Common;
+using Opus.Services.UI;
+using Opus.Events;
+using Opus.Services.Implementation.UI.Dialogs;
+using AsyncAwaitBestPractices.MVVM;
 using System.Threading.Tasks;
-using System.Threading;
 
 namespace Opus.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        private IDialog currentDialog;
-        public IDialog CurrentDialog
-        {
-            get => currentDialog;
-            set => SetProperty(ref currentDialog, value);
-        }
-        public ProgressDialog Progress { get; }
-        public MessageDialog Message { get; }
+        private IConfiguration.App configuration;
+        private IEventAggregator eventAggregator;
 
         private string title;
         public string Title
@@ -33,44 +26,15 @@ namespace Opus.ViewModels
             set => SetProperty(ref title, value);
         }
 
-        private bool dialogIsShowing;
-        public bool DialogIsShowing
+        public IDialogAssist Dialog { get; set; }
+
+
+        public MainWindowViewModel(IEventAggregator eventAggregator, 
+            IConfiguration.App config, IDialogAssist dialogAssist)
         {
-            get { return dialogIsShowing; }
-            set { SetProperty(ref dialogIsShowing, value); }
-        }
-
-        private IConfiguration.App Configuration;
-
-        public MainWindowViewModel(IRegionManager regionManager, IEventAggregator eventAggregator, 
-            IConfiguration.App config)
-            : base(regionManager, eventAggregator)
-        {
-            eventAggregator.GetEvent<ShowDialogEvent>().Subscribe(ShowDialog);
-            Configuration = config;
-            Progress = new ProgressDialog();
-            Message = new MessageDialog();
-            CurrentDialog = Message;
-        }
-
-        private void ShowDialog(IDialog dialog)
-        {
-            if (dialog is ProgressDialog progress)
-            {
-                CurrentDialog = Progress;
-
-                Progress.Percent = progress.Percent;
-                Progress.Phase = progress.Phase;
-                Progress.Item = progress.Item;
-            }
-            if (dialog is MessageDialog message)
-            {
-                CurrentDialog = Message;
-
-                Message.Content = message.Content;
-            }
-
-            DialogIsShowing = true;
+            configuration = config;
+            this.eventAggregator = eventAggregator;
+            this.Dialog = dialogAssist;
         }
 
         private DelegateCommand openLicenses;
@@ -121,33 +85,27 @@ namespace Opus.ViewModels
 
         void ExecuteNavigation(string name)
         {
-            Aggregator.GetEvent<ViewChangeEvent>().Publish(name);
+            eventAggregator.GetEvent<ViewChangeEvent>().Publish(name);
             if (name == SchemeNames.SPLIT)
                 Title = Resources.Labels.Title_Split.ToUpper();
             if (name == SchemeNames.SIGNATURE)
                 Title = Resources.Labels.Title_Signature.ToUpper();
+            if (name == SchemeNames.MERGE)
+                Title = Resources.Labels.Title_Merge.ToUpper();
         }
 
-        private DelegateCommand<string> _languageCommand;
-        public DelegateCommand<string> LanguageCommand =>
-            _languageCommand ?? (_languageCommand = new DelegateCommand<string>(ExecuteLanguage));
+        private IAsyncCommand<string> _languageCommand;
+        public IAsyncCommand<string> LanguageCommand =>
+            _languageCommand ?? (_languageCommand = new AsyncCommand<string>(ExecuteLanguage));
 
-        void ExecuteLanguage(string language)
+        private async Task ExecuteLanguage(string language)
         {
-            var lang = Configuration.GetLanguage();
+            var lang = configuration.GetLanguage();
             if (language == lang)
                 return;
 
-            Configuration.ChangeLanguage(language);
-            Aggregator.GetEvent<DialogMessageEvent>().Publish(Resources.Messages.LanguageChange);
-        }
-
-        private DelegateCommand<string> dialogChange;
-        public DelegateCommand<string> DialogChange => dialogChange ??= new DelegateCommand<string>(ExecuteDialogChange);
-
-        private void ExecuteDialogChange(string schemeName)
-        {
-            Aggregator.GetEvent<ViewChangeEvent>().Publish(schemeName);
+            configuration.ChangeLanguage(language);
+            await Dialog.Show(new MessageDialog(Resources.Messages.LanguageChange));
         }
     }
 }

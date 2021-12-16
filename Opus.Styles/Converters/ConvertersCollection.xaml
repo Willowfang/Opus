@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:c="clr-namespace:Opus.Styles.Converters">
+
+    <c:BooleanToOppositeVisibility x:Key="BooleanToOppositeVisibility"/>
+    <c:EmptyToBoolConverter x:Key="EmptyToBool"/>
+    <c:LevelToMargin x:Key="LevelToMargin"/>
+    <c:NullToBoolConverter x:Key="NullToBool"/>
+    <c:PercentToBooleanConverter x:Key="PercentToBoolean"/>
+    <c:PercentToVisibilityConverter x:Key="PercentToVisibility"/>
+    <c:ZeroToTrueConverter x:Key="ZeroToTrue"/>
+    <c:SegmentNameConverter x:Key="SegmentName"/>
+    <c:LevelToFontWeightConverter x:Key="LevelToFontWeight"/>
+
+</ResourceDictionary>

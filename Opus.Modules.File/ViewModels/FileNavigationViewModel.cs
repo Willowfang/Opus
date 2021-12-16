@@ -1,7 +1,8 @@
 ﻿using Microsoft.Win32;
 using Opus.Core.Base;
 using Opus.Core.Constants;
-using Opus.Core.Events;
+using Opus.Events;
+using Opus.Services.Input;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Regions;
@@ -11,6 +12,9 @@ namespace Opus.Modules.File.ViewModels
 {
     public class FileNavigationViewModel : ViewModelBase
     {
+        private IPathSelection input;
+        private IEventAggregator eventAggregator;
+
         private string fileName;
         public string FileName
         {
@@ -18,10 +22,12 @@ namespace Opus.Modules.File.ViewModels
             set { SetProperty(ref fileName, value); }
         }
 
-        public FileNavigationViewModel(IRegionManager regionManager, IEventAggregator eventAggregator) 
-            : base(regionManager, eventAggregator)
+        public FileNavigationViewModel(IEventAggregator eventAggregator,
+            IPathSelection input) 
         {
             FileName = Resources.Labels.FileButtonSingle;
+            this.input = input;
+            this.eventAggregator = eventAggregator;
         }
 
         private DelegateCommand _openFile;
@@ -30,15 +36,12 @@ namespace Opus.Modules.File.ViewModels
 
         void ExecuteOpenFile()
         {
-            OpenFileDialog openDialog = new OpenFileDialog();
-            openDialog.Title = Resources.Labels.FileDialogSingle;
-            openDialog.Filter = "PDF |*.pdf";
+            string path = input.OpenFile(Resources.Labels.FileDialogSingle,
+                FileType.PDF);
+            if (path == null) return;
 
-            if (openDialog.ShowDialog() != true)
-                return;
-
-            FileName = openDialog.FileName;
-            Aggregator.GetEvent<FileSelectedEvent>().Publish(fileName);
+            FileName = path;
+            eventAggregator.GetEvent<FileSelectedEvent>().Publish(path);
         }
     }
 }

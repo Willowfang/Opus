@@ -7,14 +7,17 @@ using System.Globalization;
 using System.Threading;
 using Opus.ContextMenu;
 using Opus.Services.UI;
-using Opus.Core.ServiceImplementations.UI;
+using Opus.Services.Implementation.UI;
 using Opus.Services.Data;
-using Opus.Core.ServiceImplementations.Data;
+using Opus.Services.Implementation.Data;
 using Opus.Core.Constants;
 using Opus.Services.Configuration;
-using Opus.Core.ServiceImplementations.Configuration;
+using Opus.Services.Implementation.Configuration;
 using CX.PdfLib.Services;
 using CX.PdfLib.iText7;
+using Opus.Services.Input;
+using Opus.Services.Implementation.Input;
+using System.IO;
 
 namespace Opus
 {
@@ -75,6 +78,7 @@ namespace Opus
             Thread.CurrentThread.CurrentUICulture = ci;
         }
 
+        // Overrides for Prism application methods
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             // Services for manipulating data
@@ -86,19 +90,21 @@ namespace Opus
             containerRegistry.Register<IManipulator, Manipulator>();
 
             // UI-related services
-            containerRegistry.RegisterSingleton<INavigationAssist, NavigationAssist>();
+            containerRegistry.RegisterManySingleton<NavigationAssist>(
+                typeof(INavigationAssist),
+                typeof(INavigationTargetRegistry));
+            containerRegistry.Register<IPathSelection, PathSelectionWin>();
             containerRegistry.RegisterSingleton<IDialogAssist, DialogAssist>();
 
             // Data services
-            containerRegistry.RegisterSingleton<IDataProvider, DataProviderLiteDB>();
-            containerRegistry.RegisterSingleton(typeof(IDataProvider), typeof(DataProviderLanguage),
-                ServiceNames.LANGUAGEPROVIDER);
+            var provider = new DataProviderLiteDB(Path.Combine(FilePaths.CONFIG_DIRECTORY,
+                "App" + FilePaths.CONFIG_EXTENSION));
+            containerRegistry.RegisterInstance<IDataProvider>(provider);
 
             // Configuration services
-            var regContainer = initialContainer ??= Container;
-            containerRegistry.RegisterSingleton<IConfiguration.App>(x =>
-                AppConfiguration.GetImplementation(regContainer.Resolve<IDataProvider>(ServiceNames.LANGUAGEPROVIDER)));
+            containerRegistry.RegisterSingleton<IConfiguration.App, AppConfiguration>();
             containerRegistry.RegisterSingleton<IConfiguration.Sign, SignConfiguration>();
+            containerRegistry.RegisterSingleton<IConfiguration.Merge, MergeConfiguration>();
         }
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {

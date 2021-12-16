@@ -12,23 +12,17 @@ namespace Opus.Modules.Options.ViewModels
         private string identifier;
         public string Identifier
         {
-            get
-            {
-                return identifier ?? configuration.SignatureRemovePostfix;
-            }
+            get => identifier ?? configuration.SignatureRemovePostfix;
             set
             {
                 configuration.SignatureRemovePostfix = value;
-                identifier = value;
-                RaisePropertyChanged();
+                SetProperty(ref identifier, value);
             }
         }
 
-        public IdentifierViewModel(IRegionManager regionManager, IEventAggregator eventAggregator, 
-            IConfiguration.Sign conf)
-            : base(regionManager, eventAggregator)
+        public IdentifierViewModel(IConfiguration.Sign configuration)
         {
-            configuration = conf;
+            this.configuration = configuration;
         }
     }
 }

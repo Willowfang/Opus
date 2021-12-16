@@ -24,6 +24,9 @@ namespace Opus.Core.Constants
 
         public const string MAINSECTION_ONE = "MainSectionSingle";
 
+        public const string MAINSECTION_TWO_OPTIONS = "MainSectionDualOptions";
+        public const string MAINSECTION_TWO_ACTION = "MainSectionDualAction";
+
         public const string MAINSECTION_THREE_FILE = "MainSectionFileRegion";
         public const string MAINSECTION_THREE_ACTION = "MainSectionActionRegion";
         public const string MAINSECTION_THREE_OPTIONS = "MainSectionOptionsRegion";
@@ -33,12 +36,7 @@ namespace Opus.Core.Constants
     {
         public const string SPLIT = "split";
         public const string SIGNATURE = "signature";
-        public const string JOIN = "join";
-
-        public static class Dialog
-        {
-            public const string MESSAGE = "message";
-            public const string PROGRESS = "progress";
-        }
+        public const string MERGE = "merge";
+        public const string COMPOSE = "compose";
     }
 }

@@ -1,0 +1,54 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- SELECTION LIST VIEW ITEM-->
+    <Style TargetType="{x:Type ListViewItem}" x:Key="SelectionItem"
+           BasedOn="{StaticResource MaterialDesignToolToggleListBoxItem}">
+        <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="FocusManager.FocusedElement" 
+                        Value="{Binding RelativeSource={RelativeSource Self}}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <!-- SELECTION LIST VIEW -->
+    <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource MaterialDesignListBox}"
+           x:Key="SelectionList">
+        <Setter Property="SelectionMode" Value="Multiple"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource SelectionItem}"/>
+    </Style>
+
+    <DataTemplate x:Key="MergeList">
+        <Grid>
+            <TextBlock Grid.Column="0"
+                       Text="{Binding Title}"
+                       TextTrimming="CharacterEllipsis"
+                       Margin="{Binding Level, Converter={StaticResource LevelToMargin}, Mode=OneWay}"
+                       FontWeight="{Binding Level, Converter={StaticResource LevelToFontWeight}, Mode=OneWay}"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="ExtractList">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="{Binding Value.Title}"
+                       TextTrimming="CharacterEllipsis"
+                       Margin="{Binding Value.Level, Converter={StaticResource LevelToMargin}}"
+                       FontWeight="{Binding Value.Level, Converter={StaticResource LevelToFontWeight}, Mode=OneWay}"/>
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
+                       Margin="10, 0, 10, 0"
+                       Grid.Column="1"/>
+            <TextBlock Grid.Column="2" Text="{Binding Range}"
+                       Width="70"/>
+        </Grid>
+    </DataTemplate>
+    
+</ResourceDictionary>

@@ -13,18 +13,12 @@
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True">
     <UserControl.Resources>
-        <conv:BooleanToOppositeVisibility x:Key="BooleanToOppositeVisibilityConverter"/>
-        <conv:NullToBoolConverter x:Key="NullToBoolConverter"/>
-        <conv:LevelToMargin x:Key="LevelToMarginConverter"/>
-        <Style TargetType="{x:Type ListViewItem}" x:Key="InheritedList" 
-               BasedOn="{StaticResource MaterialDesignToolToggleListBoxItem}">
-            <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}"/>
-            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-        </Style>
-        <Style TargetType="{x:Type Button}" x:Key="ToolButton"
+        <ResourceDictionary>
+            <Style TargetType="{x:Type Button}" x:Key="ToolButton"
                BasedOn="{StaticResource MaterialDesignIconButton}">
-            <Setter Property="Margin" Value="5, 16, 5, 0"/>
-        </Style>
+                <Setter Property="Margin" Value="5, 16, 5, 0"/>
+            </Style>
+        </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -32,47 +26,26 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <ListView ItemsSource="{Binding FileBookmarks}"
-                  Style="{StaticResource MaterialDesignListBox}"
+                  Style="{StaticResource SelectionList}"
                   SelectedItem="{Binding SelectedBookmark}"
-                  IsSynchronizedWithCurrentItem="True"
-                  SelectionMode="Multiple"
-                  ItemContainerStyle="{StaticResource InheritedList}"
                   Grid.Row="0"
-                  x:Name="BookmarksList">
+                  x:Name="BookmarksList"
+                  ItemTemplate="{StaticResource ExtractList}">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="SelectionChanged">
                     <prism:InvokeCommandAction Command="{Binding SelectChildrenCommand}"/>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="{Binding Value.Title}"
-                                   TextTrimming="CharacterEllipsis"
-                                   Margin="{Binding Value.Level, Converter={StaticResource LevelToMarginConverter}}"/>
-                        <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
-                                   Margin="10, 0, 10, 0"
-                                   Grid.Column="1"/>
-                        <TextBlock Grid.Column="2" Text="{Binding Range}"
-                                   Width="70"/>
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
         </ListView>
 
         <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBoolConverter}}"
+                    IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
                     Command="{Binding SaveFileCommand}">
                 <materialDesign:PackIcon Kind="ContentSave"/>
             </Button>
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBoolConverter}}"
+                    IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
                     Command="{Binding SaveSeparateCommand}">
                 <materialDesign:PackIcon Kind="ContentSaveAll"/>
             </Button>
@@ -82,13 +55,13 @@
                 <materialDesign:PackIcon Kind="SelectAll"/>
             </Button>
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBoolConverter}}"
+                    IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
                     Command="{Binding ClearCommand}">
                 <materialDesign:PackIcon Kind="Close"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBoolConverter}}"
+                    IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
                     Command="{Binding DeleteCommand}">
                 <materialDesign:PackIcon Kind="Delete"/>
             </Button>

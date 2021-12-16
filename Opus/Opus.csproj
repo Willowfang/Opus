@@ -17,7 +17,9 @@
     <ProjectReference Include="..\Opus.Modules.File\Opus.Modules.File.csproj" />
     <ProjectReference Include="..\Opus.Modules.MainSection\Opus.Modules.MainSection.csproj" />
     <ProjectReference Include="..\Opus.Modules.Options\Opus.Modules.Options.csproj" />
+    <ProjectReference Include="..\Opus.Services.Implementation\Opus.Services.Implementation.csproj" />
     <ProjectReference Include="..\Opus.Services\Opus.Services.csproj" />
+    <ProjectReference Include="..\Opus.Styles\Opus.Styles.csproj" />
   </ItemGroup>
 
   <ItemGroup>

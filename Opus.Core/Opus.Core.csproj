@@ -11,12 +11,12 @@
 
   <ItemGroup>
     <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="6.0.3" />
-    <PackageReference Include="LiteDB" Version="5.0.11" />
     <PackageReference Include="MaterialDesignThemes" Version="4.2.1" />
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Opus.Services.Implementation\Opus.Services.Implementation.csproj" />
     <ProjectReference Include="..\Opus.Services\Opus.Services.csproj" />
   </ItemGroup>
 
@@ -30,10 +30,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Resources\DefaultValues.Designer.cs">
-      <DependentUpon>DefaultValues.resx</DependentUpon>
+    <Compile Update="Resources\Labels.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DependentUpon>Labels.resx</DependentUpon>
     </Compile>
     <Compile Update="Resources\PhaseNames.Designer.cs">
       <DependentUpon>PhaseNames.resx</DependentUpon>
@@ -43,13 +43,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resources\DefaultValues.en.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\DefaultValues.resx">
-      <SubType>Designer</SubType>
-      <LastGenOutput>DefaultValues.Designer.cs</LastGenOutput>
-      <Generator>PublicResXFileCodeGenerator</Generator>
+    <EmbeddedResource Update="Resources\Labels.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Labels.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\PhaseNames.resx">
       <LastGenOutput>PhaseNames.Designer.cs</LastGenOutput>

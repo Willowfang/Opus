@@ -1,14 +1,19 @@
 ﻿using Opus.Core.Base;
-using Opus.Core.Events;
+using Opus.Events;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Regions;
-using Opus.Core.Events.Data;
+using Opus.Events.Data;
+using Opus.Services.UI;
+using Opus.Services.Implementation.UI.Dialogs;
 
 namespace Opus.Modules.Options.ViewModels
 {
     public class BookmarkNewViewModel : ViewModelBase
     {
+        private IEventAggregator eventAggregator;
+        private IDialogAssist dialogAssist;
+
         private int startPage;
         public int StartPage
         {
@@ -28,28 +33,35 @@ namespace Opus.Modules.Options.ViewModels
             set { SetProperty(ref title, value); }
         }
 
-        public BookmarkNewViewModel(IRegionManager regionManager, IEventAggregator eventAggregator)
-            : base (regionManager, eventAggregator)
+        public BookmarkNewViewModel(IEventAggregator eventAggregator, IDialogAssist dialogAssist)
         {
             eventAggregator.GetEvent<FileSelectedEvent>().Subscribe(emptyBoxes);
+            this.eventAggregator = eventAggregator;
+            this.dialogAssist = dialogAssist;
         }
 
         private DelegateCommand addCommand;
         public DelegateCommand AddCommand =>
             addCommand ?? (addCommand = new DelegateCommand(ExecuteAddCommand));
 
-        void ExecuteAddCommand()
+        private void ExecuteAddCommand()
         {
             if (StartPage == 0 || EndPage == 0)
-                Aggregator.GetEvent<DialogMessageEvent>().Publish(Resources.Messages.PageNumberZero);
+            {
+                dialogAssist.Show(new MessageDialog(Resources.Messages.PageNumberZero));
+            }
             else if (EndPage - StartPage < 0)
-                Aggregator.GetEvent<DialogMessageEvent>().Publish(Resources.Messages.PageNumberNegative);
+            {
+                dialogAssist.Show(new MessageDialog(Resources.Messages.PageNumberNegative));
+            }
             else if (string.IsNullOrWhiteSpace(Title))
-                Aggregator.GetEvent<DialogMessageEvent>().Publish(Resources.Messages.BookmarkTitleNull);
+            {
+                dialogAssist.Show(new MessageDialog(Resources.Messages.BookmarkTitleNull));
+            }
             else
             {
                 BookmarkInfo info = new BookmarkInfo(StartPage, EndPage, Title);
-                Aggregator.GetEvent<BookmarkAddedEvent>().Publish(info);
+                eventAggregator.GetEvent<BookmarkAddedEvent>().Publish(info);
                 emptyBoxes(null);
             }
         }

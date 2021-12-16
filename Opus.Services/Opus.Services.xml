@@ -41,6 +41,106 @@
             Provides functionality for tasks related to file merging
             </summary>
         </member>
+        <member name="P:Opus.Services.Configuration.IConfiguration.Merge.AddPageNumbers">
+            <summary>
+            If true, page numbers will be added to a merged document 
+            </summary>
+        </member>
+        <member name="T:Opus.Services.Configuration.IConfiguration.Compose">
+            <summary>
+            Provides functionality for tasks related to composing a pdf-file
+            from separate files
+            </summary>
+        </member>
+        <member name="M:Opus.Services.Configuration.IConfiguration.Compose.GetProfiles">
+            <summary>
+            Get all saved composition profiles
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Opus.Services.Configuration.IConfiguration.Compose.SaveProfile(Opus.Services.Data.ICompositionProfile)">
+            <summary>
+            Save a new profile
+            </summary>
+            <param name="profile">Profile to save</param>
+            <returns>Saved profile</returns>
+        </member>
+        <member name="P:Opus.Services.Data.ICompositionFile.NameFromFile">
+            <summary>
+            Get name for segment from the filename
+            </summary>
+        </member>
+        <member name="P:Opus.Services.Data.ICompositionFile.SearchTerm">
+            <summary>
+            The term to search files with
+            </summary>
+        </member>
+        <member name="P:Opus.Services.Data.ICompositionFile.ToRemove">
+            <summary>
+            Parts of the filename to exclude from search and final file name
+            </summary>
+        </member>
+        <member name="P:Opus.Services.Data.ICompositionFile.MinCount">
+            <summary>
+            Minimum required number of documents fulfilling the conditions.
+            0 indicates no documents matching the conditions need to be found.
+            </summary>
+        </member>
+        <member name="P:Opus.Services.Data.ICompositionFile.MaxCount">
+            <summary>
+            Maximun number of documents fulfilling the conditions.
+            0 indicates an unlimited number of documents.
+            </summary>
+        </member>
+        <member name="M:Opus.Services.Data.ICompositionFile.EvaluateFile(System.String)">
+            <summary>
+            Evaluate a file for a match against <see cref="P:Opus.Services.Data.ICompositionFile.SearchTerm"/>
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Opus.Services.Data.ICompositionProfile">
+            <summary>
+            A profile for compositing a pdf-document from
+            given files
+            </summary>
+        </member>
+        <member name="P:Opus.Services.Data.ICompositionProfile.ProfileName">
+            <summary>
+            Name of the profile
+            </summary>
+        </member>
+        <member name="P:Opus.Services.Data.ICompositionProfile.Segments">
+            <summary>
+            Segments in the current profile in the order they
+            are to be included
+            </summary>
+        </member>
+        <member name="P:Opus.Services.Data.ICompositionProfile.AddPageNumbers">
+            <summary>
+            If true, page numbers will be added to the new document
+            </summary>
+        </member>
+        <member name="P:Opus.Services.Data.ICompositionProfile.IsEditable">
+            <summary>
+            If true, the user can edit this profile
+            </summary>
+        </member>
+        <member name="T:Opus.Services.Data.ICompositionSegment">
+            <summary>
+            A segment of a <see cref="T:Opus.Services.Data.ICompositionProfile"/>
+            </summary>
+        </member>
+        <member name="P:Opus.Services.Data.ICompositionSegment.DisplayName">
+            <summary>
+            Name to display to the user
+            </summary>
+        </member>
+        <member name="P:Opus.Services.Data.ICompositionSegment.SegmentName">
+            <summary>
+            Name of the segment
+            </summary>
+        </member>
         <member name="T:Opus.Services.Data.IDataObject">
             <summary>
             Provides constraints on types used as data models
@@ -71,6 +171,14 @@
             <param name="instance">Type instance</param>
             <returns>Found object. If no matching object found, return default(T).</returns>
         </member>
+        <member name="M:Opus.Services.Data.IDataProvider.GetOneById``1(System.Int32)">
+            <summary>
+            Find an object by it's id
+            </summary>
+            <typeparam name="T">Type of object to find</typeparam>
+            <param name="id">Id of object</param>
+            <returns>Found object. If no matching object found, return default(T)</returns>
+        </member>
         <member name="M:Opus.Services.Data.IDataProvider.Save``1(``0)">
             <summary>
             Save a data instance
@@ -93,23 +201,116 @@
             </summary>
             <typeparam name="T">Type to clear</typeparam>
         </member>
-        <member name="T:Opus.Services.UI.IDialogAssist">
+        <member name="T:Opus.Services.Events.IEventHost">
             <summary>
-            Provides functionality for associating schemes and
-            a Prism region with a MaterialDesign in Xaml dialog
+            Service for registering events and storing their info
             </summary>
         </member>
-        <member name="P:Opus.Services.UI.IDialogAssist.DialogRegionName">
+        <member name="T:Opus.Services.Input.IPathSelection">
             <summary>
-            Name of the dialog region
+            Get user input for file and directory paths
             </summary>
         </member>
-        <member name="M:Opus.Services.UI.IDialogAssist.Add``1(System.String)">
+        <member name="M:Opus.Services.Input.IPathSelection.OpenFile(System.String)">
             <summary>
-            Associate a scheme and a view with the dialog.
+            Ask the user for a file path of any file
             </summary>
-            <typeparam name="T">Type of the view</typeparam>
-            <param name="schemeName">Scheme to link with</param>
+            <param name="description">Description for file selection</param>
+            <returns>Selected file path. Null, if canceled.</returns>
+        </member>
+        <member name="M:Opus.Services.Input.IPathSelection.OpenFile(System.String,Opus.Services.Input.FileType)">
+            <summary>
+            Ask the user for a file path of a particular file type
+            </summary>
+            <param name="description">Description for file selection</param>
+            <param name="fileType">Type of the file</param>
+            <returns>Selected file path. Null, if canceled.</returns>
+        </member>
+        <member name="M:Opus.Services.Input.IPathSelection.OpenFile(System.String,System.Collections.Generic.IEnumerable{Opus.Services.Input.FileType})">
+            <summary>
+            Ask the user for a file path of a file of any of the given types
+            </summary>
+            <param name="description">Description for file selection</param>
+            <param name="fileTypes">Accepted types</param>
+            <returns>Selected file path. Null, if canceled.</returns>
+        </member>
+        <member name="M:Opus.Services.Input.IPathSelection.OpenFiles(System.String)">
+            <summary>
+            Ask the user for one or more file paths
+            </summary>
+            <param name="description">Description for file selection</param>
+            <returns>Selected file paths. Empty, if canceled.</returns>
+        </member>
+        <member name="M:Opus.Services.Input.IPathSelection.OpenFiles(System.String,Opus.Services.Input.FileType)">
+            <summary>
+            Ask the user for one or more file paths of a given type
+            </summary>
+            <param name="description">Description for file selection</param>
+            <param name="fileType">Type of accepted files</param>
+            <returns>Selected file paths. Empty, if canceled.</returns>
+        </member>
+        <member name="M:Opus.Services.Input.IPathSelection.OpenFiles(System.String,System.Collections.Generic.IEnumerable{Opus.Services.Input.FileType})">
+            <summary>
+            Ask the user for one or more file paths of any of the given types
+            </summary>
+            <param name="description">Description for file selection</param>
+            <param name="fileTypes">Types of accepted files</param>
+            <returns>Selected file paths. Empty, if canceled.</returns>
+        </member>
+        <member name="M:Opus.Services.Input.IPathSelection.OpenDirectory(System.String)">
+            <summary>
+            Ask the user for a directory path
+            </summary>
+            <param name="description">Description for directory selection</param>
+            <returns>Selected directory path. Null, if canceled.</returns>
+        </member>
+        <member name="M:Opus.Services.Input.IPathSelection.SaveFile(System.String)">
+            <summary>
+            Ask the user for a file path for saving a file of any type
+            </summary>
+            <param name="description">Description of file selection</param>
+            <returns>Selected file path. Null, if canceled.</returns>
+        </member>
+        <member name="M:Opus.Services.Input.IPathSelection.SaveFile(System.String,System.IO.DirectoryInfo)">
+            <summary>
+            Ask the user for a file path for saving a file of any type
+            </summary>
+            <param name="description">Description of file selection</param>
+            <param name="initialDirectory">Directory to start the selection from</param>
+            <returns>Selected file path. Null, if canceled.</returns>
+        </member>
+        <member name="M:Opus.Services.Input.IPathSelection.SaveFile(System.String,Opus.Services.Input.FileType)">
+            <summary>
+            Ask the user for a file path for saving a file of a particular type
+            </summary>
+            <param name="description">Description for file selection</param>
+            <param name="fileType">Type of accepted file</param>
+            <returns>Selected file path. Null, if canceled.</returns>
+        </member>
+        <member name="M:Opus.Services.Input.IPathSelection.SaveFile(System.String,Opus.Services.Input.FileType,System.IO.DirectoryInfo)">
+            <summary>
+            Ask the user for a file path for saving a file of a particular type
+            </summary>
+            <param name="description">Description for file selection</param>
+            <param name="fileType">Type of accepted file</param>
+            <param name="initialDirectory">Directory to start the selection from</param>
+            <returns>Selected file path. Null, if canceled.</returns>
+        </member>
+        <member name="P:Opus.Services.UI.IDialogAssist.IsShowing">
+            <summary>
+            Indicates whether the dialog is visible
+            </summary>
+        </member>
+        <member name="P:Opus.Services.UI.IDialogAssist.Active">
+            <summary>
+            Currently visible dialog
+            </summary>
+        </member>
+        <member name="M:Opus.Services.UI.IDialogAssist.Show(Opus.Services.UI.IDialog)">
+            <summary>
+            Show a dialog asynchronously and return it when ready
+            </summary>
+            <param name="dialog">Dialog to show</param>
         </member>
         <member name="T:Opus.Services.UI.INavigationAssist">
             <summary>
@@ -124,6 +325,21 @@
             <typeparam name="T">Type of the view</typeparam>
             <param name="regionName">Name of the Prism region</param>
             <param name="schemeNames">Schemes to associate the region and view with</param>
+        </member>
+        <member name="T:Opus.Services.UI.INavigationTarget">
+            <summary>
+            Service for navigation targets of <see cref="T:Opus.Services.UI.INavigationAssist"/>
+            </summary>
+        </member>
+        <member name="M:Opus.Services.UI.INavigationTarget.OnArrival">
+            <summary>
+            Operations to perform when navigated to by <see cref="T:Opus.Services.UI.INavigationAssist"/>
+            </summary>
+        </member>
+        <member name="M:Opus.Services.UI.INavigationTarget.WhenLeaving">
+            <summary>
+            Operations to perform when navigated from by <see cref="T:Opus.Services.UI.INavigationAssist"/>
+            </summary>
         </member>
     </members>
 </doc>

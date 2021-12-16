@@ -17,35 +17,35 @@
                        Style="{DynamicResource MaterialDesignHeadline6TextBlock}"
                        Text="{x:Static res:Labels.NewBookmark_Title}"/>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="16, 10, 16, 10" RadiusX="2" RadiusY="2"/>
-                <StackPanel HorizontalAlignment="Center">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{x:Static res:Labels.NewBookmark_Pages}" VerticalAlignment="Center" Margin="0, 0, 10, 0"
+            <StackPanel HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{x:Static res:Labels.NewBookmark_Pages}" VerticalAlignment="Center" Margin="0, 0, 10, 0"
                                FontSize="16"/>
-                        <TextBox Text="{Binding StartPage}" 
+                    <TextBox Text="{Binding StartPage}" 
                              Width="50" TextAlignment="Center"
                              GotFocus="TextBox_GotFocus"
                              PreviewTextInput="TextBox_PreviewTextInput"
                              FontSize="16"/>
-                        <TextBlock Text="-" VerticalAlignment="Center" Margin="10, 0, 10, 0"
+                    <TextBlock Text="-" VerticalAlignment="Center" Margin="10, 0, 10, 0"
                                FontSize="16"/>
-                        <TextBox Text="{Binding EndPage}"
+                    <TextBox Text="{Binding EndPage}"
                              Width="50" TextAlignment="Center"
                              GotFocus="TextBox_GotFocus"
                              PreviewTextInput="TextBox_PreviewTextInput"
                              FontSize="16"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{x:Static res:Labels.NewBookmark_Name}" VerticalAlignment="Center" Margin="0, 0, 10, 0"
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{x:Static res:Labels.NewBookmark_Name}" VerticalAlignment="Center" Margin="0, 0, 10, 0"
                                FontSize="16"/>
-                        <TextBox Text="{Binding Title}" 
+                    <TextBox Text="{Binding Title}" 
                              Width="200" TextAlignment="Left"
                              GotFocus="TextBox_GotFocus"
                              FontSize="16"/>
-                    </StackPanel>
                 </StackPanel>
+            </StackPanel>
             <Button Style="{DynamicResource MaterialDesignIconButton}"
                     VerticalAlignment="Center"
-                    Margin="30, 10, 10, 0"
+                    Margin="15, 10, 10, 0"
                     Command="{Binding AddCommand}">
                 <materialDesign:PackIcon Kind="PlusCircle"/>
             </Button>
