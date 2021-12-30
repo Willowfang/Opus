@@ -26,7 +26,7 @@ namespace Opus.Modules.File.ViewModels
 
         private void ExecuteAddFiles()
         {
-            string[] path = input.OpenFiles(Resources.Labels.FileDialogMultiple,
+            string[] path = input.OpenFiles(Resources.UserInput.Descriptions.SelectOpenFiles,
                 FileType.PDF);
             if (path.Length == 0) return;
             

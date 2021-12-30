@@ -92,5 +92,13 @@ namespace Opus.Services.Input
         /// <param name="initialDirectory">Directory to start the selection from</param>
         /// <returns>Selected file path. Null, if canceled.</returns>
         public string SaveFile(string description, FileType fileType, DirectoryInfo initialDirectory);
+        /// <summary>
+        /// Ask the user for a file path for saving a file of a particular type
+        /// </summary>
+        /// <param name="description">Description for file selection</param>
+        /// <param name="fileType">Type of accepted file</param>
+        /// <param name="initialFile">Suggestion file location and name</param>
+        /// <returns>Selected file path. Null, if canceled.</returns>
+        public string SaveFile(string description, FileType fileType, string initialFile);
     }
 }

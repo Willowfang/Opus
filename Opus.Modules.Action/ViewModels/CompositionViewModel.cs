@@ -1,10 +1,13 @@
-﻿using CX.PdfLib.Common;
+﻿using AsyncAwaitBestPractices.MVVM;
+using CX.PdfLib.Common;
+using CX.PdfLib.Services;
 using CX.PdfLib.Services.Data;
 using Opus.Core.Base;
 using Opus.Core.Constants;
 using Opus.Events;
 using Opus.Services.Configuration;
 using Opus.Services.Data;
+using Opus.Services.Implementation.Data;
 using Opus.Services.Implementation.UI;
 using Opus.Services.Implementation.UI.Dialogs;
 using Opus.Services.Input;
@@ -18,8 +21,8 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Windows.Input;
 
 namespace Opus.Modules.Action.ViewModels
 {
@@ -40,11 +43,12 @@ namespace Opus.Modules.Action.ViewModels
         /// <summary>
         /// Composition-specific configuration
         /// </summary>
-        private IConfiguration.Compose configuration;
+        private IConfiguration configuration;
         /// <summary>
         /// Common service for dialog control
         /// </summary>
         private IDialogAssist dialogAssist;
+        private ICompositionOptions options;
         /// <summary>
         /// Directory to search for composition files
         /// </summary>
@@ -56,12 +60,6 @@ namespace Opus.Modules.Action.ViewModels
         /// their corresponding info for adding bookmarks.
         /// </summary>
         public ObservableCollection<ICompositionProfile> Profiles { get; }
-        private IReorderCollection<ICompositionSegment> segments;
-        public IReorderCollection<ICompositionSegment> Segments
-        {
-            get => segments;
-            set => SetProperty(ref segments, value);
-        }
 
         /// <summary>
         /// The profile that is currently selected
@@ -70,79 +68,270 @@ namespace Opus.Modules.Action.ViewModels
         public ICompositionProfile SelectedProfile
         {
             get => selectedProfile;
-            set => SetProperty(ref selectedProfile, value);
-        }
-        /// <summary>
-        /// Currently selected segment from <see cref="SelectedProfile"/>
-        /// </summary>
-        private ICompositionSegment selectedSegment;
-        public ICompositionSegment SelectedSegment
-        {
-            get => selectedSegment;
-            set => SetProperty(ref selectedSegment, value);
+            set
+            {
+                if (selectedProfile != null && selectedProfile.Segments != null)
+                {
+                    selectedProfile.Segments.CollectionReordered -= CollectionReordered;
+                }
+
+                SetProperty(ref selectedProfile, value);
+                configuration.DefaultProfile = value != null ? value.Id : Guid.Empty;
+
+                if (selectedProfile != null && selectedProfile.Segments != null)
+                {
+                    selectedProfile.Segments.CollectionReordered += CollectionReordered;
+                }
+
+                RaisePropertyChanged(nameof(SelectedProfile.Segments));
+            }
         }
 
-        private bool isEditEnabled;
-        public bool IsEditEnabled
+        private bool addSegmentMenuOpen;
+        public bool AddSegmentMenuOpen
         {
-            get => isEditEnabled;
-            set => SetProperty(ref isEditEnabled, value);
+            get => addSegmentMenuOpen;
+            set => SetProperty(ref addSegmentMenuOpen, value);
         }
 
-        public CompositionViewModel(IEventAggregator aggregator, IManipulator manipulator,
-            IPathSelection input, IConfiguration.Compose configuration, INavigationTargetRegistry navReg,
-            IDialogAssist dialogAssist)
+        public CompositionViewModel(IEventAggregator aggregator,
+            IPathSelection input, IConfiguration configuration, INavigationTargetRegistry navReg,
+            IDialogAssist dialogAssist, ICompositionOptions options, IManipulator manipulator)
         {
             this.aggregator = aggregator;
             this.manipulator = manipulator;
             this.input = input;
             this.configuration = configuration;
             this.dialogAssist = dialogAssist;
+            this.options = options;
 
-            Profiles = new ObservableCollection<ICompositionProfile>(configuration.GetProfiles());
+            IList<ICompositionProfile> profs = options.GetProfiles() ?? new List<ICompositionProfile>();
+            Profiles = new ObservableCollection<ICompositionProfile>(profs);
             navReg.AddTarget(SchemeNames.COMPOSE, this);
+
+            SelectedProfile = Profiles.FirstOrDefault(x => x.Id == configuration.DefaultProfile);
         }
 
         /// <summary>
         /// When the view associated with this view model is active and showing, subscribe to receive
-        /// notifications of enabling edit mode, new profiles, new segments and selected directory. 
-        /// When inactive and not showing, do not receive notifications.
+        /// notifications of directory selection.
         /// </summary>
-        SubscriptionToken editEnabledSubscription;
-        SubscriptionToken profileAddedSubscription;
-        SubscriptionToken segmentAddedSubscription;
         SubscriptionToken directorySelectedSubscription;
         public void OnArrival()
         {
-            editEnabledSubscription = aggregator.GetEvent<EditEnableEvent>().Subscribe(x => IsEditEnabled = x);
-            profileAddedSubscription =
-                aggregator.GetEvent<CompositionProfileEvent>().Subscribe(AddProfile);
-            segmentAddedSubscription =
-                aggregator.GetEvent<CompositionSegmentEvent>().Subscribe(AddSegment);
+            directorySelectedSubscription = aggregator.GetEvent<DirectorySelectedEvent>().Subscribe(DirectorySelected);
         }
         public void WhenLeaving()
         {
-            aggregator.GetEvent<EditEnableEvent>().Unsubscribe(editEnabledSubscription);
-            aggregator.GetEvent<CompositionProfileEvent>().Unsubscribe(profileAddedSubscription);
-            aggregator.GetEvent<CompositionSegmentEvent>().Unsubscribe(segmentAddedSubscription);
+            aggregator.GetEvent<DirectorySelectedEvent>().Unsubscribe(directorySelectedSubscription);
         }
 
-        private void AddProfile(ICompositionProfile profile)
+        private void DirectorySelected(string path)
         {
+            selectedDirectory = path;
+        }
+
+        private void CollectionReordered(object sender, CollectionReorderedEventArgs e)
+        {
+            options.SaveProfile(SelectedProfile);
+        }
+
+        private DelegateCommand editable;
+        public DelegateCommand Editable =>
+            editable ??= new DelegateCommand(ExecuteEditable);
+
+        private void ExecuteEditable()
+        {
+            SelectedProfile.IsEditable = !SelectedProfile.IsEditable;
+            options.SaveProfile(SelectedProfile);
+        }
+
+        #region COMMANDS
+
+        private DelegateCommand openSegmentMenu;
+        public DelegateCommand OpenSegmentMenu =>
+            openSegmentMenu ??= new DelegateCommand(() => AddSegmentMenuOpen = true);
+
+        private IAsyncCommand editProfile;
+        public IAsyncCommand EditProfile =>
+            editProfile ??= new AsyncCommand(ExecuteEditProfile);
+        private async Task ExecuteEditProfile()
+        {
+            CompositionProfileDialog dialog = new CompositionProfileDialog(
+                Resources.Labels.Dialogs.CompositionProfile.EditTitle, SelectedProfile.ProfileName, 
+                Profiles.ToList())
+            {
+                ProfileName = SelectedProfile.ProfileName,
+                AddPageNumbers = SelectedProfile.AddPageNumbers
+            };
+
+            await dialogAssist.Show(dialog);
+
+            if (dialog.IsCanceled) return;
+
+            SelectedProfile.AddPageNumbers = dialog.AddPageNumbers;
+            SelectedProfile.ProfileName = dialog.ProfileName;
+
+            options.SaveProfile(SelectedProfile);
+        }
+
+        private IAsyncCommand addProfile;
+        public IAsyncCommand AddProfile =>
+            addProfile ??= new AsyncCommand(ExecuteAddProfile);
+        private async Task ExecuteAddProfile()
+        {
+            CompositionProfileDialog dialog = new CompositionProfileDialog(
+                Resources.Labels.Dialogs.CompositionProfile.NewTitle, Profiles.ToList())
+            {
+                AddPageNumbers = true
+            };
+
+            await dialogAssist.Show(dialog);
+
+            if (dialog.IsCanceled) return;
+
+            ICompositionProfile profile = options.CreateProfile(dialog.ProfileName,
+                dialog.AddPageNumbers, true);
+
+            options.SaveProfile(profile);
             Profiles.Add(profile);
             SelectedProfile = profile;
         }
-        private void AddSegment(ICompositionSegment segment)
+
+        private IAsyncCommand deleteProfile;
+        public IAsyncCommand DeleteProfile =>
+            deleteProfile ??= new AsyncCommand(ExecuteDeleteProfile);
+        private async Task ExecuteDeleteProfile()
         {
-            SelectedProfile.Segments.Items.Add(segment);
-            SelectedSegment = segment;
+            ConfirmationDialog dialog = new ConfirmationDialog(Resources.Labels.Dialogs.Confirmation.DeleteCompositionProfileTitle,
+                Resources.Messages.Composition.ProfileDeleteConfirmation);
+
+            await dialogAssist.Show(dialog);
+
+            if (dialog.IsCanceled) return;
+
+            options.DeleteProfile(SelectedProfile);
+            Profiles.Remove(SelectedProfile);
         }
+
+        private IAsyncCommand addFileSegment;
+        public IAsyncCommand AddFileSegment =>
+            addFileSegment ??= new AsyncCommand(ExecuteAddFileSegment);
+        private async Task ExecuteAddFileSegment()
+        {
+            CompositionFileSegmentDialog dialog = new CompositionFileSegmentDialog(
+                Resources.Labels.Dialogs.CompositionFileSegment.NewTitle);
+
+            await dialogAssist.Show(dialog);
+
+            if (dialog.IsCanceled) return;
+
+            ICompositionFile segment = options.CreateFileSegment(dialog.SegmentName);
+            segment.NameFromFile = dialog.NameFromFile;
+            segment.SetSearchTerm(dialog.SearchTerm);
+            if (dialog.ToRemove != null)
+            {
+                segment.SetToRemove(dialog.ToRemove);
+            }
+            segment.MinCount = dialog.MinCount;
+            segment.MaxCount = dialog.MaxCount;
+            segment.Example = dialog.Example;
+
+            SelectedProfile.Segments.Add(segment);
+            options.SaveProfile(SelectedProfile);
+        }
+
+        private IAsyncCommand editSegment;
+        public IAsyncCommand EditSegment =>
+            editSegment ??= new AsyncCommand(ExecuteEditSegment);
+        private async Task ExecuteEditSegment()
+        {
+            if (SelectedProfile.Segments.SelectedItem is ICompositionFile fileSegment)
+            {
+                CompositionFileSegmentDialog dialog = new CompositionFileSegmentDialog(
+                Resources.Labels.Dialogs.CompositionFileSegment.EditTitle);
+
+                dialog.SegmentName = fileSegment.SegmentName;
+                dialog.NameFromFile = fileSegment.NameFromFile;
+                dialog.SearchTerm = fileSegment.SearchTerm.ToString();
+                dialog.ToRemove = fileSegment.ToRemove.ToString();
+                dialog.MinCount = fileSegment.MinCount;
+                dialog.MaxCount = fileSegment.MaxCount;
+                dialog.Example = fileSegment.Example;
+
+                await dialogAssist.Show(dialog);
+
+                if (dialog.IsCanceled) return;
+
+                fileSegment.SegmentName = dialog.SegmentName;
+                fileSegment.NameFromFile = dialog.NameFromFile;
+                fileSegment.SetSearchTerm(dialog.SearchTerm);
+                fileSegment.SetToRemove(dialog.ToRemove);
+                fileSegment.MinCount = dialog.MinCount;
+                fileSegment.MaxCount = dialog.MaxCount;
+                fileSegment.Example = dialog.Example;
+
+                options.SaveProfile(SelectedProfile);
+            }
+            else if (SelectedProfile.Segments.SelectedItem is ICompositionTitle titleSegment)
+            {
+                CompositionTitleSegmentDialog dialog = new CompositionTitleSegmentDialog(
+                    Resources.Labels.Dialogs.CompositionFileSegment.EditTitle);
+                
+                dialog.SegmentName = titleSegment.SegmentName;
+
+                await dialogAssist.Show(dialog);
+
+                if (dialog.IsCanceled) return;
+
+                titleSegment.SegmentName = dialog.SegmentName;
+
+                options.SaveProfile(SelectedProfile);
+            }
+
+        }
+
+        private IAsyncCommand addTitleSegment;
+        public IAsyncCommand AddTitleSegment =>
+            addTitleSegment ??= new AsyncCommand(ExecuteAddTitleSegment);
+        private async Task ExecuteAddTitleSegment()
+        {
+            CompositionTitleSegmentDialog dialog = new CompositionTitleSegmentDialog(
+                Resources.Labels.Dialogs.CompositionFileSegment.NewTitle);
+
+            await dialogAssist.Show(dialog);
+
+            if (dialog.IsCanceled) return;
+
+            ICompositionTitle segment = options.CreateTitleSegment(dialog.SegmentName);
+            SelectedProfile.Segments.Add(segment);
+            options.SaveProfile(SelectedProfile);
+        }
+
+        private IAsyncCommand deleteSegment;
+        public IAsyncCommand DeleteSegment =>
+            deleteSegment ??= new AsyncCommand(ExecuteDeleteSegment);
+        private async Task ExecuteDeleteSegment()
+        {
+            ConfirmationDialog dialog = new ConfirmationDialog(Resources.Labels.Dialogs.Confirmation.DeleteCompositionSegmentTitle,
+                Resources.Messages.Composition.SegmentDeleteConfirmation);
+
+            await dialogAssist.Show(dialog);
+
+            if (dialog.IsCanceled) return;
+
+            SelectedProfile.Segments.Remove(SelectedProfile.Segments.SelectedItem);
+            options.SaveProfile(SelectedProfile);
+        }
+
+        #endregion
 
         private async Task Compose()
         {
             if (selectedDirectory == null)
             {
-                dialogAssist.Show(new MessageDialog(Resources.DialogMessages.Composition_DirectoryNull));
+                await dialogAssist.Show(new MessageDialog(Resources.Labels.General.Error, 
+                    Resources.Messages.Composition.FolderNotSelected));
                 return;
             }
 
@@ -161,7 +350,7 @@ namespace Opus.Modules.Action.ViewModels
         {
             List<IMergeInput> inputs = new List<IMergeInput>();
 
-            foreach (ICompositionSegment segment in SelectedProfile.Segments.Items)
+            foreach (ICompositionSegment segment in SelectedProfile.Segments)
             {
                 if (segment is ICompositionFile fileSegment)
                 {

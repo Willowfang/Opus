@@ -6,64 +6,38 @@
     <members>
         <member name="T:Opus.Services.Configuration.IConfiguration">
             <summary>
-            Static storage class for configuration services
+            Application configuration service
             </summary>
         </member>
-        <member name="T:Opus.Services.Configuration.IConfiguration.App">
+        <member name="P:Opus.Services.Configuration.IConfiguration.LanguageCode">
             <summary>
-            Provides functionality for application-wide effects
+            Application language in ISO639-1 format
             </summary>
         </member>
-        <member name="M:Opus.Services.Configuration.IConfiguration.App.ChangeLanguage(System.String)">
+        <member name="P:Opus.Services.Configuration.IConfiguration.ExtractionPrefix">
             <summary>
-            Change language preference
-            </summary>
-            <param name="ISO639_1">Language to assign</param>
-        </member>
-        <member name="M:Opus.Services.Configuration.IConfiguration.App.GetLanguage">
-            <summary>
-            Return current language code in ISO639-1 format
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="T:Opus.Services.Configuration.IConfiguration.Sign">
-            <summary>
-            Provides funtionality for signature-related tasks
+            Prefix for extracted files
             </summary>
         </member>
-        <member name="P:Opus.Services.Configuration.IConfiguration.Sign.SignatureRemovePostfix">
+        <member name="P:Opus.Services.Configuration.IConfiguration.ExtractionSuffix">
             <summary>
-            Postfix for unsigned files
+            Suffix for extracted files
             </summary>
         </member>
-        <member name="T:Opus.Services.Configuration.IConfiguration.Merge">
+        <member name="P:Opus.Services.Configuration.IConfiguration.MergeAddPageNumbers">
             <summary>
-            Provides functionality for tasks related to file merging
+            If true, page numbers will be added to a merged document
             </summary>
         </member>
-        <member name="P:Opus.Services.Configuration.IConfiguration.Merge.AddPageNumbers">
+        <member name="P:Opus.Services.Configuration.IConfiguration.CompositionSearchSubDirectories">
             <summary>
-            If true, page numbers will be added to a merged document 
+            Include subdirectories when searching for composition files
             </summary>
         </member>
-        <member name="T:Opus.Services.Configuration.IConfiguration.Compose">
+        <member name="P:Opus.Services.Configuration.IConfiguration.DefaultProfile">
             <summary>
-            Provides functionality for tasks related to composing a pdf-file
-            from separate files
+            The <see cref="T:Opus.Services.Data.ICompositionProfile"/> to select by default
             </summary>
-        </member>
-        <member name="M:Opus.Services.Configuration.IConfiguration.Compose.GetProfiles">
-            <summary>
-            Get all saved composition profiles
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Opus.Services.Configuration.IConfiguration.Compose.SaveProfile(Opus.Services.Data.ICompositionProfile)">
-            <summary>
-            Save a new profile
-            </summary>
-            <param name="profile">Profile to save</param>
-            <returns>Saved profile</returns>
         </member>
         <member name="P:Opus.Services.Data.ICompositionFile.NameFromFile">
             <summary>
@@ -75,10 +49,22 @@
             The term to search files with
             </summary>
         </member>
+        <member name="M:Opus.Services.Data.ICompositionFile.SetSearchTerm(System.String)">
+            <summary>
+            Set the search term. Creates a compiled regex for faster searching.
+            </summary>
+            <param name="regex">Regex string</param>
+        </member>
         <member name="P:Opus.Services.Data.ICompositionFile.ToRemove">
             <summary>
             Parts of the filename to exclude from search and final file name
             </summary>
+        </member>
+        <member name="M:Opus.Services.Data.ICompositionFile.SetToRemove(System.String)">
+            <summary>
+            Set the part to ignore and remove. Creates a compiled regex for faster removal.
+            </summary>
+            <param name="regex"></param>
         </member>
         <member name="P:Opus.Services.Data.ICompositionFile.MinCount">
             <summary>
@@ -92,11 +78,77 @@
             0 indicates an unlimited number of documents.
             </summary>
         </member>
+        <member name="P:Opus.Services.Data.ICompositionFile.Example">
+            <summary>
+            Example file name for displaying to user
+            </summary>
+        </member>
         <member name="M:Opus.Services.Data.ICompositionFile.EvaluateFile(System.String)">
             <summary>
             Evaluate a file for a match against <see cref="P:Opus.Services.Data.ICompositionFile.SearchTerm"/>
             </summary>
             <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Opus.Services.Data.ICompositionOptions.CreateProfile(System.String)">
+            <summary>
+            Create a new <see cref="T:Opus.Services.Data.ICompositionProfile"/>
+            with default settings
+            </summary>
+            <param name="name">Name of the profile</param>
+            <returns></returns>
+        </member>
+        <member name="M:Opus.Services.Data.ICompositionOptions.CreateProfile(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Create a new <see cref="T:Opus.Services.Data.ICompositionProfile"/>
+            with an empty list of segments
+            </summary>
+            <param name="name">Name of the profile</param>
+            <param name="addPageNumbers">Add page numbers to final document</param>
+            <param name="isEditable">The user can edit the profile</param>
+            <returns></returns>
+        </member>
+        <member name="M:Opus.Services.Data.ICompositionOptions.CreateProfile(System.String,System.Boolean,System.Boolean,System.Collections.Generic.List{Opus.Services.Data.ICompositionSegment})">
+            <summary>
+            Create a new <see cref="T:Opus.Services.Data.ICompositionProfile"/>
+            </summary>
+            <param name="name">Name of the profile</param>
+            <param name="addPageNumbers">Add page numbers to final document</param>
+            <param name="isEditable">The user can edit the profile</param>
+            <param name="segments">Segments in the profile</param>
+            <returns></returns>
+        </member>
+        <member name="M:Opus.Services.Data.ICompositionOptions.GetProfiles">
+            <summary>
+            Return all <see cref="T:Opus.Services.Data.ICompositionProfile"/>s from the data provider
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Opus.Services.Data.ICompositionOptions.SaveProfile(Opus.Services.Data.ICompositionProfile)">
+            <summary>
+            Save the <see cref="T:Opus.Services.Data.ICompositionProfile"/> with the data provider
+            </summary>
+            <param name="profile">Profile to save</param>
+            <returns></returns>
+        </member>
+        <member name="M:Opus.Services.Data.ICompositionOptions.DeleteProfile(Opus.Services.Data.ICompositionProfile)">
+            <summary>
+            Delete an <see cref="T:Opus.Services.Data.ICompositionProfile"/> via the data provider
+            </summary>
+            <param name="profile">Profile to delete</param>
+        </member>
+        <member name="M:Opus.Services.Data.ICompositionOptions.CreateFileSegment(System.String)">
+            <summary>
+            Create a new <see cref="T:Opus.Services.Data.ICompositionSegment"/> for files
+            </summary>
+            <param name="segmentName">Name of the segment</param>
+            <returns></returns>
+        </member>
+        <member name="M:Opus.Services.Data.ICompositionOptions.CreateTitleSegment(System.String)">
+            <summary>
+            Create a new <see cref="T:Opus.Services.Data.ICompositionSegment"/> for a title
+            </summary>
+            <param name="segmentName">Name of the segment</param>
             <returns></returns>
         </member>
         <member name="T:Opus.Services.Data.ICompositionProfile">
@@ -201,6 +253,11 @@
             </summary>
             <typeparam name="T">Type to clear</typeparam>
         </member>
+        <member name="P:Opus.Services.Data.ISignatureOptions.Suffix">
+            <summary>
+            The localized suffix for unsigned files
+            </summary>
+        </member>
         <member name="T:Opus.Services.Events.IEventHost">
             <summary>
             Service for registering events and storing their info
@@ -296,6 +353,15 @@
             <param name="initialDirectory">Directory to start the selection from</param>
             <returns>Selected file path. Null, if canceled.</returns>
         </member>
+        <member name="M:Opus.Services.Input.IPathSelection.SaveFile(System.String,Opus.Services.Input.FileType,System.String)">
+            <summary>
+            Ask the user for a file path for saving a file of a particular type
+            </summary>
+            <param name="description">Description for file selection</param>
+            <param name="fileType">Type of accepted file</param>
+            <param name="initialFile">Suggestion file location and name</param>
+            <returns>Selected file path. Null, if canceled.</returns>
+        </member>
         <member name="P:Opus.Services.UI.IDialogAssist.IsShowing">
             <summary>
             Indicates whether the dialog is visible
@@ -339,6 +405,11 @@
         <member name="M:Opus.Services.UI.INavigationTarget.WhenLeaving">
             <summary>
             Operations to perform when navigated from by <see cref="T:Opus.Services.UI.INavigationAssist"/>
+            </summary>
+        </member>
+        <member name="E:Opus.Services.UI.ReorderCollection`1.CollectionReordered">
+            <summary>
+            Occurs when the collection has been reordered.
             </summary>
         </member>
     </members>

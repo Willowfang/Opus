@@ -39,6 +39,9 @@ namespace Opus.Services.Implementation.UI.Dialogs
             set => SetProperty(ref part, value);
         }
 
+        public ProgressDialog(string dialogTitle)
+            : base(dialogTitle) { }
+
         protected override void ExecuteClose()
         {
             if (TotalPercent < 100)

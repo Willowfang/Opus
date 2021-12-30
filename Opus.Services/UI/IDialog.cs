@@ -5,6 +5,7 @@ namespace Opus.Services.UI
 {
     public interface IDialog
     {
+        public string DialogTitle { get; }
         public bool IsCanceled { get; }
         public TaskCompletionSource DialogClosed { get; set; }
         public ICommand Save { get; }

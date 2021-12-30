@@ -16,7 +16,7 @@ namespace Opus.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        private IConfiguration.App configuration;
+        private IConfiguration configuration;
         private IEventAggregator eventAggregator;
 
         private string title;
@@ -30,7 +30,7 @@ namespace Opus.ViewModels
 
 
         public MainWindowViewModel(IEventAggregator eventAggregator, 
-            IConfiguration.App config, IDialogAssist dialogAssist)
+            IConfiguration config, IDialogAssist dialogAssist)
         {
             configuration = config;
             this.eventAggregator = eventAggregator;
@@ -44,7 +44,7 @@ namespace Opus.ViewModels
         void ExecuteOpenLicenses()
         {
             var p = new Process();
-            p.StartInfo = new ProcessStartInfo(Path.Combine(AppContext.BaseDirectory, "TextFiles", Resources.Hyperlinks.Licenses))
+            p.StartInfo = new ProcessStartInfo(Path.Combine(AppContext.BaseDirectory, "TextFiles", Resources.Hyperlinks.Hyperlinks.Licenses))
             {
                 UseShellExecute = true
             };
@@ -58,7 +58,7 @@ namespace Opus.ViewModels
         void ExecuteOpenManual()
         {
             var p = new Process();
-            p.StartInfo = new ProcessStartInfo(@Resources.Hyperlinks.UserManual)
+            p.StartInfo = new ProcessStartInfo(@Resources.Hyperlinks.Hyperlinks.UserManual)
             {
                 UseShellExecute = true
             };
@@ -72,7 +72,7 @@ namespace Opus.ViewModels
         void ExecuteOpenSourceCode()
         {
             var p = new Process();
-            p.StartInfo = new ProcessStartInfo(@Resources.Hyperlinks.SourceCode)
+            p.StartInfo = new ProcessStartInfo(@Resources.Hyperlinks.Hyperlinks.SourceCode)
             {
                 UseShellExecute = true
             };
@@ -87,11 +87,13 @@ namespace Opus.ViewModels
         {
             eventAggregator.GetEvent<ViewChangeEvent>().Publish(name);
             if (name == SchemeNames.SPLIT)
-                Title = Resources.Labels.Title_Split.ToUpper();
+                Title = Resources.Labels.MainWindow.Titles.Extract.ToUpper();
             if (name == SchemeNames.SIGNATURE)
-                Title = Resources.Labels.Title_Signature.ToUpper();
+                Title = Resources.Labels.MainWindow.Titles.Signature.ToUpper();
             if (name == SchemeNames.MERGE)
-                Title = Resources.Labels.Title_Merge.ToUpper();
+                Title = Resources.Labels.MainWindow.Titles.Merge.ToUpper();
+            if (name == SchemeNames.COMPOSE)
+                Title = Resources.Labels.MainWindow.Titles.Compose.ToUpper();
         }
 
         private IAsyncCommand<string> _languageCommand;
@@ -100,12 +102,13 @@ namespace Opus.ViewModels
 
         private async Task ExecuteLanguage(string language)
         {
-            var lang = configuration.GetLanguage();
+            var lang = configuration.LanguageCode;
             if (language == lang)
                 return;
 
-            configuration.ChangeLanguage(language);
-            await Dialog.Show(new MessageDialog(Resources.Messages.LanguageChange));
+            configuration.LanguageCode = language;
+            await Dialog.Show(new MessageDialog(Resources.Labels.General.Notification,
+                Resources.Messages.MainWindow.ChangeLanguage));
         }
     }
 }

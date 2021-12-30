@@ -74,13 +74,17 @@ namespace Opus
         /// <param name="container">Temporary container for registered types</param>
         private void SetLanguage(IContainerProvider container)
         {
-            CultureInfo ci = new CultureInfo(container.Resolve<IConfiguration.App>().GetLanguage());
+            CultureInfo ci = new CultureInfo(container.Resolve<IConfiguration>().LanguageCode);
             Thread.CurrentThread.CurrentUICulture = ci;
         }
 
         // Overrides for Prism application methods
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            // Configuration services
+            string configPath = Path.Combine(FilePaths.CONFIG_DIRECTORY, "Config" + FilePaths.CONFIG_EXTENSION);
+            containerRegistry.RegisterSingleton<IConfiguration>(x => Configuration.Load(configPath));
+
             // Services for manipulating data
             containerRegistry.Register<IBookmarker, Bookmarker>();
             containerRegistry.Register<IExtractor, Extractor>();
@@ -100,11 +104,8 @@ namespace Opus
             var provider = new DataProviderLiteDB(Path.Combine(FilePaths.CONFIG_DIRECTORY,
                 "App" + FilePaths.CONFIG_EXTENSION));
             containerRegistry.RegisterInstance<IDataProvider>(provider);
-
-            // Configuration services
-            containerRegistry.RegisterSingleton<IConfiguration.App, AppConfiguration>();
-            containerRegistry.RegisterSingleton<IConfiguration.Sign, SignConfiguration>();
-            containerRegistry.RegisterSingleton<IConfiguration.Merge, MergeConfiguration>();
+            containerRegistry.RegisterSingleton<ISignatureOptions, SignatureOptions>();
+            containerRegistry.RegisterSingleton<ICompositionOptions, CompositionOptions>();
         }
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {

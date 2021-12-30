@@ -25,7 +25,7 @@ namespace Opus.Modules.File.ViewModels
         public FileNavigationViewModel(IEventAggregator eventAggregator,
             IPathSelection input) 
         {
-            FileName = Resources.Labels.FileButtonSingle;
+            FileName = Resources.Buttons.General.SelectFile;
             this.input = input;
             this.eventAggregator = eventAggregator;
         }
@@ -36,7 +36,7 @@ namespace Opus.Modules.File.ViewModels
 
         void ExecuteOpenFile()
         {
-            string path = input.OpenFile(Resources.Labels.FileDialogSingle,
+            string path = input.OpenFile(Resources.UserInput.Descriptions.SelectOpenFile,
                 FileType.PDF);
             if (path == null) return;
 

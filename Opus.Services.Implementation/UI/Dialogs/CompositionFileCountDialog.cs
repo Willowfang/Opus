@@ -33,7 +33,8 @@ namespace Opus.Services.Implementation.UI.Dialogs
         public DelegateCommand RemoveFile { get; }
 
         public CompositionFileCountDialog(IList<IFileEvaluationResult> files, ICompositionFile fileSegment, 
-            IPathSelection input, IDialogAssist dialog)
+            IPathSelection input, IDialogAssist dialog, string dialogTitle)
+            : base(dialogTitle)
         {
             AddFiles = new DelegateCommand(ExecuteAddFiles);
             RemoveFile = new DelegateCommand(ExecuteRemoveFile);
@@ -44,20 +45,20 @@ namespace Opus.Services.Implementation.UI.Dialogs
             Files.CollectionChanged += FilePaths_CollectionChanged;
         }
 
-        private void FilePaths_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        private void FilePaths_CollectionChanged(object? sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             SaveCommand.RaiseCanExecuteChanged();
         }
 
         private void ExecuteAddFiles()
         {
-            string[] paths = input.OpenFiles(Resources.Labels.CompositionCountDialog_AddFiles,
+            string[] paths = input.OpenFiles(Resources.UserInput.Descriptions.SelectOpenFiles,
                 new List<FileType>() { FileType.PDF, FileType.Word });
             int pathCount = paths.Count();
             if (pathCount + Files.Count > Segment.MaxCount)
             {
-                dialog.Show(new MessageDialog(string.Format(
-                    Resources.Labels.CompositionCountDialog_TooManySelected, Segment.SegmentName, Segment.MaxCount)));
+                dialog.Show(new MessageDialog(Resources.Labels.General.Error, string.Format(
+                    Resources.Validation.Composition.TooManyFilesSelected, Segment.SegmentName, Segment.MaxCount)));
                 return;
             }
 

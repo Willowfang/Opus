@@ -1,70 +1,130 @@
 ﻿<UserControl x:Class="Opus.Modules.Action.Views.CompositionView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             xmlns:res="clr-namespace:Opus.Modules.Action.Resources"
+             xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             xmlns:data="clr-namespace:Opus.Services.Implementation.Data;assembly=Opus.Services.Implementation"
              xmlns:prism="http://prismlibrary.com/"             
              prism:ViewModelLocator.AutoWireViewModel="True">
     <UserControl.Resources>
         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/CompositionDataTemplates.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="{x:Type TextBlock}" x:Key="SegmentHeaderText"
+                   BasedOn="{StaticResource MaterialDesignTextBlock}">
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidBrush}"/>
+            </Style>
             <Style TargetType="{x:Type Button}" x:Key="ToolButton"
                    BasedOn="{StaticResource MaterialDesignIconButton}">
                 <Setter Property="Margin" Value="5, 16, 5, 0"/>
             </Style>
+            <CollectionViewSource x:Key="ProfileSource"
+                                  Source="{Binding Profiles}">
+                <CollectionViewSource.SortDescriptions>
+                    <scm:SortDescription PropertyName="IsEditable"/>
+                    <scm:SortDescription PropertyName="ProfileName" Direction="Ascending"/>
+                </CollectionViewSource.SortDescriptions>
+            </CollectionViewSource>
+            <ContextMenu x:Key="AddSegmentMenu"
+                         Placement="Center"
+                         PlacementTarget="{Binding ElementName=AddSegmentButton}"
+                         Style="{StaticResource ButtonContextMenu}"
+                         ItemContainerStyle="{StaticResource ButtonContextMenuItem}"
+                         IsOpen="{Binding AddSegmentMenuOpen}">
+                <MenuItem Header="Otsikko"/>
+                <MenuItem Header="Tiedosto"/>
+            </ContextMenu>
         </ResourceDictionary>
     </UserControl.Resources>
-    <Grid IsEnabled="{Binding IsEditEnabled}">
+    <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" 
+                        Grid.Column="0">
+                <Button Style="{StaticResource ToolButton}"
+                        Command="{Binding AddProfile}"
+                        Margin="0">
+                    <materialDesign:PackIcon Kind="PlusThick"/>
+                </Button>
+            </StackPanel>
+            <Rectangle Grid.Column="1" Width="2" Fill="LightGray" Opacity="0.5" Margin="5" RadiusX="2" RadiusY="2"/>
+            <ComboBox Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
+                      Grid.Column="2"
+                      materialDesign:HintAssist.Hint="Profiili"
+                      materialDesign:HintAssist.FloatingOffset="0, -22"
+                      materialDesign:HintAssist.FloatingScale="0.9"
+                      Width="200"
+                      FontSize="16"
+                      Margin="0, 12, 0, 0"
+                      materialDesign:ComboBoxAssist.ShowSelectedItem="True"
+                      SelectedItem="{Binding SelectedProfile, Mode=TwoWay}"
+                      ItemsSource="{Binding Source={StaticResource ProfileSource}}"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      VerticalContentAlignment="Bottom"
+                      HorizontalContentAlignment="Left">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock TextTrimming="CharacterEllipsis"
+                                   Text="{Binding ProfileName}"
+                                   FontWeight="{Binding IsEditable, Converter={StaticResource NegativeToBold}}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Rectangle Grid.Column="3" Width="2" Fill="LightGray" Opacity="0.5" Margin="5" RadiusX="2" RadiusY="2"/>
+            <StackPanel Orientation="Horizontal" Grid.Column="4">
+                <Button Style="{StaticResource ToolButton}"
+                        Command="{Binding EditProfile}"
+                        IsEnabled="{Binding SelectedProfile.IsEditable}"
+                        Margin="0">
+                    <materialDesign:PackIcon Kind="Pencil"/>
+                </Button>
+                <Button Style="{StaticResource ToolButton}"
+                        Command="{Binding DeleteProfile}"
+                        IsEnabled="{Binding SelectedProfile.IsEditable}"
+                        Margin="0">
+                    <materialDesign:PackIcon Kind="Delete"/>
+                </Button>
+
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="2"
+              Margin="10, 15, 10, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0"
+                       Text="Nimi" TextAlignment="Left"
+                       Style="{StaticResource SegmentHeaderText}"/>
+        </Grid>
+
+        <Separator Grid.Row="3" Margin="10, 10, 10, 10"/>
+
         <ListView ItemsSource="{Binding SelectedProfile.Segments}"
                   Style="{StaticResource SelectionList}"
-                  SelectedItem="{Binding SelectedSegment}"
+                  SelectedItem="{Binding SelectedProfile.Segments.SelectedItem}"
                   SelectionMode="Single"
-                  Grid.Row="0"
+                  Grid.Row="4"
                   x:Name="SegmentsList">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0"
-                                   TextTrimming="CharacterEllipsis"
-                                   Margin="{Binding Level, Converter={StaticResource LevelToMargin}}">
-                            <!-- If name is based on filename, display "[filename]".
-                                 If it is not based on filename and is compulsory, display name as it is.
-                                 If it is not based on filename and not compulsory, display (name).-->
-                            <TextBlock.Text>
-                                <MultiBinding Converter="{StaticResource SegmentName}"
-                                              ConverterParameter="{x:Static res:Labels.Composition_NameFromFile}">
-                                    <Binding Path="GetNameFromFile"/>
-                                    <Binding Path="SegmentName"/>
-                                    <Binding Path="IsCompulsory"/>
-                                </MultiBinding>
-                            </TextBlock.Text>
-                        </TextBlock>
-                        <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
-                                   Margin="10, 0, 10, 0"
-                                   Grid.Column="1"/>
-                        <TextBlock Grid.Column="2" Text="{Binding MinCount}"
-                                   Width="70"/>
-                        <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
-                                   Margin="10, 0, 10, 0"
-                                   Grid.Column="3"/>
-                        <!-- If maxcount is anything other than zero, display it
-                             with two digits. If count is zero, display infinity symbol.-->
-                        <TextBlock Grid.Column="4" Text="{Binding MaxCount, StringFormat={}{0:00;;&#x221E;}}"
-                                   Width="70"/>
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
             <ListView.InputBindings>
                 <KeyBinding Key="Up" Modifiers="Ctrl" Command="{Binding SelectedProfile.Segments.MoveUp}"/>
                 <KeyBinding Key="Down" Modifiers="Ctrl" Command="{Binding SelectedProfile.Segments.MoveDown}"/>
@@ -73,21 +133,33 @@
             </ListView.InputBindings>
         </ListView>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Grid.Row="5" HorizontalAlignment="Center"
+                    IsEnabled="{Binding SelectedProfile.IsEditable}">
             <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding ElementName=SegmentsList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                    Command="{Binding EditCommand}">
+                    Command="{Binding EditSegment}">
                 <materialDesign:PackIcon Kind="Pencil"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
-            <Button Style="{StaticResource ToolButton}"
-                    Command="{Binding AddCommand}">
-                <materialDesign:PackIcon Kind="PlusThick"/>
+            <Button Style="{StaticResource ToolButton}" x:Name="AddSegmentButton"
+                    Command="{Binding OpenSegmentMenu}">
+                <materialDesign:PopupBox PlacementMode="TopAndAlignCentres" StaysOpen="False"
+                                         IsPopupOpen="{Binding AddSegmentMenuOpen}">
+                    <materialDesign:PopupBox.ToggleContent>
+                        <materialDesign:PackIcon Kind="PlusThick" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
+                    </materialDesign:PopupBox.ToggleContent>
+                    <StackPanel>
+                        <Button Style="{StaticResource DialogButton}"
+                                Content="Otsikko" Command="{Binding AddTitleSegment}"/>
+                        <Button Style="{StaticResource DialogButton}"
+                                Content="Tiedosto" Command="{Binding AddFileSegment}"/>
+                    </StackPanel>
+                </materialDesign:PopupBox>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                    Command="{Binding DeleteCommand}">
+                    Command="{Binding DeleteSegment}">
                 <materialDesign:PackIcon Kind="Delete"/>
             </Button>
         </StackPanel>

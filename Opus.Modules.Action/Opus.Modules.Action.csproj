@@ -21,26 +21,4 @@
       <HintPath>..\..\..\CodeX\Libraries\PdfLib.iText7\bin\Debug\net5.0\CodeX-PdfLib-iText7.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Update="Resources\DialogMessages.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>DialogMessages.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Labels.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Labels.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Resources\DialogMessages.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>DialogMessages.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Labels.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Labels.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
 </Project>

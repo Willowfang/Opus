@@ -51,19 +51,23 @@ namespace Opus.Services.Implementation.Input
 
         public string? SaveFile(string description)
         {
-            return SaveDialogFile(description, null, null);
+            return SaveDialogFile(description, null, null, null);
         }
         public string? SaveFile(string description, DirectoryInfo initialDirectory)
         {
-            return SaveDialogFile(description, null, initialDirectory);
+            return SaveDialogFile(description, null, initialDirectory, null);
         }
         public string? SaveFile(string description, FileType fileType)
         {
-            return SaveDialogFile(description, GetFilter(fileType), null);
+            return SaveDialogFile(description, GetFilter(fileType), null, null);
         }
         public string? SaveFile(string description, FileType fileType, DirectoryInfo initialDirectory)
         {
-            return SaveDialogFile(description, GetFilter(fileType), initialDirectory);
+            return SaveDialogFile(description, GetFilter(fileType), initialDirectory, null);
+        }
+        public string? SaveFile(string description, FileType fileType, string initialFile)
+        {
+            return SaveDialogFile(description, GetFilter(fileType), null, initialFile);
         }
 
         private string? OpenDialogFile(string description, string? filter)
@@ -83,12 +87,17 @@ namespace Opus.Services.Implementation.Input
             return dialog.FileNames;
         }
         
-        private string? SaveDialogFile(string description, string? filter, DirectoryInfo? initialDirectory)
+        private string? SaveDialogFile(string description, string? filter, DirectoryInfo? initialDirectory,
+            string? initialFile)
         {
             Microsoft.Win32.SaveFileDialog dialog = new Microsoft.Win32.SaveFileDialog();
             dialog.Title = description;
             dialog.Filter = filter;
             if (initialDirectory != null) dialog.InitialDirectory = initialDirectory.FullName;
+            if (initialFile != null)
+            {
+                dialog.FileName = initialFile;
+            }
 
             if (dialog.ShowDialog() == false)
                 return null;

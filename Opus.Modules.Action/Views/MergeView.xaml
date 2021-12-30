@@ -17,7 +17,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <ListView ItemsSource="{Binding Collection.Items}"
+        <ListView ItemsSource="{Binding Collection}"
                   Style="{StaticResource SelectionList}"
                   SelectedItem="{Binding Collection.SelectedItem}"
                   Grid.Row="0"
@@ -34,20 +34,27 @@
 
         <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding Collection.Items.Count, Converter={StaticResource EmptyToBool}, Mode=OneWay}"
+                    IsEnabled="{Binding Collection.Count, Converter={StaticResource EmptyToBool}, Mode=OneWay}"
                     Command="{Binding MergeCommand}">
                 <md:PackIcon Kind="ContentSave"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding Collection.Items.Count, Converter={StaticResource EmptyToBool}, Mode=OneWay}"
-                    Command="{Binding ClearCommand}">
-                <md:PackIcon Kind="Close"/>
+                    IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
+                    Command="{Binding EditCommand}">
+                <md:PackIcon Kind="Pencil"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{StaticResource ToolButton}"
+                    IsEnabled="{Binding Collection.Count, Converter={StaticResource EmptyToBool}, Mode=OneWay}"
+                    Command="{Binding ClearCommand}"
+                    Margin="5, 16, 0, 0">
+                <md:PackIcon Kind="Close"/>
+            </Button>
+            <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                    Command="{Binding DeleteCommand}">
+                    Command="{Binding DeleteCommand}"
+                    Margin="0, 16, 0, 0">
                 <md:PackIcon Kind="Delete"/>
             </Button>
         </StackPanel>

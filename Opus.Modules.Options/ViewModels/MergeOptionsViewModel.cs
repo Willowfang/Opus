@@ -1,31 +1,33 @@
-﻿using Opus.Core.Base;
+﻿using AsyncAwaitBestPractices.MVVM;
+using Opus.Core.Base;
 using Opus.Services.Configuration;
+using Opus.Services.Implementation.UI.Dialogs;
+using Opus.Services.UI;
 using Prism.Commands;
 using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Opus.Modules.Options.ViewModels
 {
-    public class MergeOptionsViewModel : ViewModelBase
+    public class MergeOptionsViewModel : OptionsViewModelBase<MergeSettingsDialog>
     {
-        private IConfiguration.Merge configuration;
+        public MergeOptionsViewModel(IConfiguration configuration, IDialogAssist dialogAssist)
+            : base(dialogAssist, configuration) { }
 
-        private bool addPages;
-        public bool AddPages
+        protected override MergeSettingsDialog CreateDialog()
         {
-            get => addPages;
-            set
+            return new MergeSettingsDialog(Resources.Labels.General.Settings)
             {
-                configuration.AddPageNumbers = value;
-                SetProperty(ref addPages, value);
-            }
+                AddPageNumbers = configuration.MergeAddPageNumbers
+            };
         }
-        public MergeOptionsViewModel(IConfiguration.Merge configuration)
+
+        protected override void SaveSettings(MergeSettingsDialog dialog)
         {
-            this.configuration = configuration;
-            addPages = configuration.AddPageNumbers;
+            configuration.MergeAddPageNumbers = dialog.AddPageNumbers;
         }
     }
 }

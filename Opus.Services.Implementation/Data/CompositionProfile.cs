@@ -1,22 +1,60 @@
 ﻿using Opus.Services.Data;
 using Opus.Services.UI;
+using Prism.Mvvm;
 
 namespace Opus.Services.Implementation.Data
 {
     /// <summary>
     /// For comments, see <see cref="ICompositionProfile"/>
     /// </summary>
-    public class CompositionProfile : ICompositionProfile
+    internal class CompositionProfile : DataObject<CompositionProfile>, IDataObject, ICompositionProfile
     {
-        public int Id { get; set; }
-        public string? ProfileName { get; set; }
-        public IReorderCollection<ICompositionSegment> Segments { get; }
-        public bool AddPageNumbers { get; set; }
-        public bool IsEditable { get; set; }
-
-        public CompositionProfile(IReorderCollection<ICompositionSegment> segments)
+        private string? profileName;
+        public string? ProfileName
         {
-            Segments = segments;
+            get => profileName;
+            set
+            {
+                SetProperty(ref profileName, value);
+            }
+        }
+
+        private ReorderCollection<ICompositionSegment>? segments;
+        public ReorderCollection<ICompositionSegment>? Segments
+        {
+            get => segments;
+            set => SetProperty(ref segments, value);
+        }
+
+        private bool addPageNumbers;
+        public bool AddPageNumbers
+        {
+            get => addPageNumbers;
+            set
+            {
+                SetProperty(ref addPageNumbers, value);
+            }
+        }
+
+        private bool isEditable;
+        public bool IsEditable
+        {
+            get => isEditable;
+            set
+            {
+                SetProperty(ref isEditable, value);
+                if (Segments is not null) Segments.CanReorder = value;
+            }
+        }
+
+        public override int GetHashCode()
+        {
+            return ProfileName != null ? ProfileName.GetHashCode() : this.Id.GetHashCode();
+        }
+
+        protected override bool CheckEquality(CompositionProfile current, CompositionProfile other)
+        {
+            return current.Id == other.Id || current.ProfileName == other.ProfileName;
         }
     }
 }

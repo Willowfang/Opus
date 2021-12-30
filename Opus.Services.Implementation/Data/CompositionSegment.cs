@@ -10,8 +10,15 @@ namespace Opus.Services.Implementation.Data
 {
     public abstract class CompositionSegment : BindableBase, ICompositionSegment
     {
+        public abstract string? StructureName { get; }
         public abstract string? DisplayName { get; }
         public abstract string? SegmentName { get; set; }
-        public int Level { get; set; }
+
+        private int level;
+        public int Level
+        {
+            get => level;
+            set => SetProperty(ref level, value);
+        }
     }
 }

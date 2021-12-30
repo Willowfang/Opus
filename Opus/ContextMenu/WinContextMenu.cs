@@ -4,6 +4,7 @@ using System.IO;
 using System.Windows.Forms;
 using CX.PdfLib.Services.Data;
 using System.Collections.Generic;
+using Opus.Services.Data;
 
 namespace Opus.ContextMenu
 {
@@ -43,12 +44,12 @@ namespace Opus.ContextMenu
 
     internal class RemoveSignature : MenuCommandBase
     {
-        private IConfiguration.Sign Configuration;
+        private ISignatureOptions options;
 
-        public RemoveSignature(IManipulator manipulator, IConfiguration.Sign conf) 
+        public RemoveSignature(IManipulator manipulator, ISignatureOptions options) 
         { 
             Manipulator = manipulator;
-            Configuration = conf;
+            this.options = options;
         }
 
         public override void RunCommand(string[] parameters)
@@ -58,7 +59,7 @@ namespace Opus.ContextMenu
 
             string filePath = parameters[1];
             Manipulator.RemoveSignature(filePath, new DirectoryInfo(Path.GetDirectoryName(filePath)),
-                Configuration.SignatureRemovePostfix);
+                options.Suffix);
         }
     }
 
@@ -74,7 +75,7 @@ namespace Opus.ContextMenu
             string filePath = parameters[1];
 
             string dir = Directory.CreateDirectory(Path.Combine(Path.GetDirectoryName(filePath),
-                Path.GetFileNameWithoutExtension(filePath) + Resources.Postfixes.Split)).FullName;
+                Path.GetFileNameWithoutExtension(filePath) + Resources.DefaultValues.DefaultValues.UnsignedSuffix)).FullName;
 
             IList<ILeveledBookmark> ranges;
 
@@ -104,7 +105,7 @@ namespace Opus.ContextMenu
             foreach (string file in Directory.GetFiles(directoryPath, "*.pdf", SearchOption.AllDirectories))
             {
                 string dir = Directory.CreateDirectory(Path.Combine(parentFolder,
-                    Path.GetFileNameWithoutExtension(file) + Resources.Postfixes.Split)).FullName;
+                    Path.GetFileNameWithoutExtension(file) + Resources.DefaultValues.DefaultValues.UnsignedSuffix)).FullName;
 
                 IList<ILeveledBookmark> ranges;
                 if (parameters.Length == 2)

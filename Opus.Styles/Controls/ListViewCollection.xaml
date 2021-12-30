@@ -22,8 +22,9 @@
         <Setter Property="ItemContainerStyle" Value="{StaticResource SelectionItem}"/>
     </Style>
 
+    <!--MERGE LIST TEMPLATE-->
     <DataTemplate x:Key="MergeList">
-        <Grid>
+        <Grid ToolTip="{Binding FileName}">
             <TextBlock Grid.Column="0"
                        Text="{Binding Title}"
                        TextTrimming="CharacterEllipsis"
@@ -32,6 +33,7 @@
         </Grid>
     </DataTemplate>
 
+    <!--EXTRACTION LIST TEMPLATE-->
     <DataTemplate x:Key="ExtractList">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -50,5 +52,5 @@
                        Width="70"/>
         </Grid>
     </DataTemplate>
-    
+
 </ResourceDictionary>

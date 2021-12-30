@@ -11,5 +11,7 @@
     <c:ZeroToTrueConverter x:Key="ZeroToTrue"/>
     <c:SegmentNameConverter x:Key="SegmentName"/>
     <c:LevelToFontWeightConverter x:Key="LevelToFontWeight"/>
+    <c:BooleanAllNegative x:Key="BooleanAllNegative"/>
+    <c:BooleanToFontWeight x:Key="NegativeToBold"/>
 
 </ResourceDictionary>

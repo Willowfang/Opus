@@ -37,7 +37,7 @@ namespace Opus.Modules.Action.ViewModels
         /// <summary>
         /// Merge-specific configuration
         /// </summary>
-        private IConfiguration.Merge configuration;
+        private IConfiguration configuration;
         /// <summary>
         /// Common service for displaying and updating a dialog
         /// </summary>
@@ -46,23 +46,14 @@ namespace Opus.Modules.Action.ViewModels
         /// <summary>
         /// Files to be merged
         /// </summary>
-        public IReorderCollection<FileStorage> Collection { get; }
-        /// <summary>
-        /// Currently selected file
-        /// </summary>
-        private FileStorage selectedFile;
-        public FileStorage SelectedFile
-        {
-            get => selectedFile;
-            set => SetProperty(ref selectedFile, value);
-        }
+        public ReorderCollection<FileStorage> Collection { get; }
 
         public MergeViewModel(IEventAggregator eventAggregator, IManipulator manipulator,
             IPathSelection input, INavigationTargetRegistry navRegistry,
-            IConfiguration.Merge configuration, IReorderCollection<FileStorage> collection,
+            IConfiguration configuration,
             IDialogAssist dialogAssist)
         {
-            Collection = collection;
+            Collection = new ReorderCollection<FileStorage>();
             this.eventAggregator = eventAggregator;
             this.manipulator = manipulator;
             this.input = input;
@@ -89,7 +80,23 @@ namespace Opus.Modules.Action.ViewModels
         {
             foreach (var file in files)
             {
-                Collection.Items.Add(new FileStorage(file));
+                Collection.Add(new FileStorage(file));
+            }
+        }
+
+        private IAsyncCommand editCommand;
+        public IAsyncCommand EditCommand => editCommand ??=
+            new AsyncCommand(ExecuteEditCommand);
+        private async Task ExecuteEditCommand()
+        {
+            FileTitleDialog fileDialog = new FileTitleDialog(Resources.Labels.Dialogs.FileTitle.Edit)
+            {
+                Title = Collection.SelectedItem.Title
+            };
+            await dialogAssist.Show(fileDialog);
+            if (!fileDialog.IsCanceled)
+            {
+                Collection.SelectedItem.Title = fileDialog.Title;
             }
         }
 
@@ -99,7 +106,7 @@ namespace Opus.Modules.Action.ViewModels
             new DelegateCommand(ExecuteDeleteCommand);
         private void ExecuteDeleteCommand()
         {
-            Collection.Items.RemoveAll(x => x.IsSelected);
+            Collection.RemoveAll(x => x.IsSelected);
         }
 
         // Delete all containers from collection
@@ -108,7 +115,7 @@ namespace Opus.Modules.Action.ViewModels
             new DelegateCommand(ExecuteClearCommand);
         private void ExecuteClearCommand()
         {
-            Collection.Items.Clear();
+            Collection.Clear();
         }
 
         // Merge files. Get option selection for stamping the pages with page numbers.
@@ -117,12 +124,13 @@ namespace Opus.Modules.Action.ViewModels
             new AsyncCommand(ExecuteMergeCommand);
         private async Task ExecuteMergeCommand()
         {
-            string path = input.SaveFile(Resources.Labels.Bookmarks_SelectPath, FileType.PDF);
+            string path = input.SaveFile(Resources.UserInput.Descriptions.SelectSaveFile, FileType.PDF);
             if (path == null) return;
 
             IList<IMergeInput> inputs = await Task.Run(GetMergeInputs);
             var result = ShowProgress();
-            Task merge = manipulator.MergeWithBookmarksAsync(inputs, path, configuration.AddPageNumbers, result.progress);
+            Task merge = manipulator.MergeWithBookmarksAsync(inputs, path, 
+                configuration.MergeAddPageNumbers, result.progress);
 
             await result.dialog;
         }
@@ -130,7 +138,7 @@ namespace Opus.Modules.Action.ViewModels
         private IList<IMergeInput> GetMergeInputs()
         {
             List<IMergeInput> inputs = new List<IMergeInput>();
-            foreach (FileStorage file in Collection.Items)
+            foreach (FileStorage file in Collection)
             {
                 inputs.Add(new MergeInput(file.FilePath, file.Title, file.Level));
             }
@@ -139,7 +147,7 @@ namespace Opus.Modules.Action.ViewModels
 
         private (Task dialog, IProgress<ProgressReport> progress) ShowProgress()
         {
-            ProgressDialog dialog = new ProgressDialog()
+            ProgressDialog dialog = new ProgressDialog(null)
             {
                 TotalPercent = 0,
                 Phase = ProgressPhase.Unassigned.GetResourceString()

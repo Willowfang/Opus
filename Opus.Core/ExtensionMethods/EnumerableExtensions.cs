@@ -13,14 +13,14 @@ namespace Opus.Core.ExtensionMethods
         {
             return phase switch
             {
-                ProgressPhase.Unassigned => Resources.PhaseNames.Unassigned,
-                ProgressPhase.AddingBookmarks => Resources.PhaseNames.AddingBookmarks,
-                ProgressPhase.AddingPageNumbers => Resources.PhaseNames.AddingPageNumbers,
-                ProgressPhase.Converting => Resources.PhaseNames.Converting,
-                ProgressPhase.Extracting => Resources.PhaseNames.Extracting,
-                ProgressPhase.GettingBookmarks => Resources.PhaseNames.GettingBookmarks,
-                ProgressPhase.Merging => Resources.PhaseNames.Merging,
-                ProgressPhase.Finished => Resources.PhaseNames.Finished,
+                ProgressPhase.Unassigned => Resources.Operations.PhaseNames.Unassigned,
+                ProgressPhase.AddingBookmarks => Resources.Operations.PhaseNames.AddingBookmarks,
+                ProgressPhase.AddingPageNumbers => Resources.Operations.PhaseNames.AddingPageNumbers,
+                ProgressPhase.Converting => Resources.Operations.PhaseNames.Converting,
+                ProgressPhase.Extracting => Resources.Operations.PhaseNames.Extracting,
+                ProgressPhase.GettingBookmarks => Resources.Operations.PhaseNames.GettingBookmarks,
+                ProgressPhase.Merging => Resources.Operations.PhaseNames.Merging,
+                ProgressPhase.Finished => Resources.Operations.PhaseNames.Finished,
                 _ => throw new ArgumentOutOfRangeException("Phase not defined")
             };
         }

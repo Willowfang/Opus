@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Opus.Events
 {
-    internal class DirectorySelectedEvent : PubSubEvent<string>
+    public class DirectorySelectedEvent : PubSubEvent<string>
     {
     }
 }

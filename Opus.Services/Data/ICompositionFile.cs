@@ -16,11 +16,21 @@ namespace Opus.Services.Data
         /// <summary>
         /// The term to search files with
         /// </summary>
-        public Regex SearchTerm { get; set; }
+        public Regex SearchTerm { get; }
+        /// <summary>
+        /// Set the search term. Creates a compiled regex for faster searching.
+        /// </summary>
+        /// <param name="regex">Regex string</param>
+        public void SetSearchTerm(string regex);
         /// <summary>
         /// Parts of the filename to exclude from search and final file name
         /// </summary>
-        public Regex ToRemove { get; set; }
+        public Regex ToRemove { get; }
+        /// <summary>
+        /// Set the part to ignore and remove. Creates a compiled regex for faster removal.
+        /// </summary>
+        /// <param name="regex"></param>
+        public void SetToRemove(string regex);
         /// <summary>
         /// Minimum required number of documents fulfilling the conditions.
         /// 0 indicates no documents matching the conditions need to be found.
@@ -31,6 +41,10 @@ namespace Opus.Services.Data
         /// 0 indicates an unlimited number of documents.
         /// </summary>
         public int MaxCount { get; set; }
+        /// <summary>
+        /// Example file name for displaying to user
+        /// </summary>
+        public string Example { get; set; }
 
         /// <summary>
         /// Evaluate a file for a match against <see cref="SearchTerm"/>

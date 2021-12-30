@@ -12,20 +12,24 @@ namespace Opus.Services.Implementation.Data
     /// </summary>
     public class CompositionFile : CompositionSegment, ICompositionFile
     {
+        public override string? StructureName
+        {
+            get
+            {
+                if (NameFromFile)
+                    return Resources.Labels.Composition.Descriptions.NameFromFile;
+
+                return SegmentName;
+            }
+        }
         public override string? DisplayName
         {
             get
             {
-                string? name = segmentName;
-                if (NameFromFile)
-                {
-                    name = Resources.Labels.Composition_NameFromFile;
-                }
-                if (MinCount > 0 && name != null)
-                {
-                    name = $"({name})";
-                }
-                return name;
+                if (MinCount == 0 && SegmentName != null)
+                    return $"({SegmentName})";
+
+                return SegmentName;
             }
         }
         private string? segmentName;
@@ -39,24 +43,28 @@ namespace Opus.Services.Implementation.Data
             }
         }
         public bool NameFromFile { get; set; }
-        public Regex? SearchTerm { get; set; }
-        public Regex? ToRemove { get; set; }
+
+        public Regex? SearchTerm { get; private set; }
+        public void SetSearchTerm(string regex)
+        {
+            SearchTerm = new Regex(regex, RegexOptions.Compiled);
+        }
+        public Regex? ToRemove { get; private set; }
+        public void SetToRemove(string regex)
+        {
+            ToRemove = new Regex(regex, RegexOptions.Compiled);
+        }
         public int MinCount { get; set; }
         public int MaxCount { get; set; }
+        public string? Example { get; set; }
 
-        public CompositionFile()
-        {
-            MinCount = 1;
-            MaxCount = 0;
-        }
-        public CompositionFile(string segmentName, bool getNameFromFile = false, 
-            int minCount = 1, int maxCount = 0, int level = 1)
+        public CompositionFile() { }
+        public CompositionFile(string segmentName)
         {
             SegmentName = segmentName;
-            NameFromFile = getNameFromFile;
-            MinCount = minCount;
-            MaxCount = maxCount;
-            Level = level;
+            MinCount = 1;
+            MaxCount = 0;
+            Level = 1;
         }
 
         public IFileEvaluationResult EvaluateFile(string filePath)

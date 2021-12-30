@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Opus.Events\Opus.Events.csproj" />
+    <ProjectReference Include="..\Opus.Resources\Opus.Resources.csproj" />
     <ProjectReference Include="..\Opus.Services\Opus.Services.csproj" />
   </ItemGroup>
 
@@ -24,52 +25,6 @@
     <Reference Include="CodeX-PdfLib-iText7">
       <HintPath>..\..\..\CodeX\Libraries\PdfLib.iText7\bin\Debug\net5.0\CodeX-PdfLib-iText7.dll</HintPath>
     </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Resources\CompositionParts.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>CompositionParts.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\CompositionPhases.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>CompositionPhases.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\DefaultValues.Designer.cs">
-      <DependentUpon>DefaultValues.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Update="Resources\Labels.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Labels.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Resources\CompositionParts.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>CompositionParts.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\CompositionPhases.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>CompositionPhases.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\DefaultValues.en.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\DefaultValues.resx">
-      <SubType>Designer</SubType>
-      <LastGenOutput>DefaultValues.Designer.cs</LastGenOutput>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Labels.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Labels.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

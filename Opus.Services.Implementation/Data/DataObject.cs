@@ -1,10 +1,17 @@
 ﻿using Opus.Services.Data;
+using Prism.Mvvm;
+using System;
 
 namespace Opus.Services.Implementation.Data
 {
-    public abstract class DataObject<T> : IDataObject where T : DataObject<T>
+    public abstract class DataObject<T> : BindableBase where T : DataObject<T>
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
+
+        public DataObject()
+        {
+            Id = Guid.NewGuid();
+        }
 
         public override bool Equals(object? obj) =>
             obj is DataObject<T> other && Equals(other);

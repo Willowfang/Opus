@@ -17,13 +17,14 @@ using Opus.Services.UI;
 using Opus.Events;
 using CX.PdfLib.Common;
 using Opus.Services.Implementation.UI.Dialogs;
+using Opus.Services.Data;
 
 namespace Opus.Modules.Action.ViewModels
 {
     public class SignatureRemovalViewModel : ViewModelBase, INavigationTarget
     {
         // Signature-related configuration service
-        private IConfiguration.Sign configuration;
+        private ISignatureOptions options;
         // General PDF-manipulator service
         private IManipulator manipulator;
         // Service for getting user input related to file paths
@@ -46,11 +47,11 @@ namespace Opus.Modules.Action.ViewModels
         }
 
         public SignatureRemovalViewModel(IEventAggregator eventAggregator, 
-            IConfiguration.Sign configuration, IManipulator manipulator, IPathSelection input,
+            ISignatureOptions options, IManipulator manipulator, IPathSelection input,
             INavigationTargetRegistry navRegistry, IDialogAssist dialogAssist)
         {
             SignatureFiles = new ObservableCollection<FileStorage>();
-            this.configuration = configuration;
+            this.options = options;
             this.manipulator = manipulator;
             this.input = input;
             this.eventAggregator = eventAggregator;
@@ -100,13 +101,21 @@ namespace Opus.Modules.Action.ViewModels
 
         private async Task ExecuteRemoveSignatureCommand()
         {
-            string path = input.OpenDirectory(Resources.Labels.Bookmarks_SelectFolder);
+            string path = input.OpenDirectory(Resources.UserInput.Descriptions.SelectSaveFolder);
             if (path == null) return;
 
-            dialogAssist.Show(new ProgressDialog(0, ProgressPhase.Unassigned.GetResourceString()));
-            await manipulator.RemoveSignatureAsync(SignatureFiles.Where(x => x.IsSelected).Select(y => y.FilePath).ToArray(),
-                new System.IO.DirectoryInfo(path), configuration.SignatureRemovePostfix);
-            dialogAssist.Show(new MessageDialog(Resources.DialogMessages.SignatureRemoved));
+            ProgressDialog progressDialog = new ProgressDialog(null)
+            {
+                TotalPercent = 0,
+                Phase = ProgressPhase.Unassigned.GetResourceString()
+            };
+
+            Task progressTask = dialogAssist.Show(progressDialog);
+            await manipulator.RemoveSignatureAsync(SignatureFiles.Select(y => y.FilePath).ToArray(),
+                new System.IO.DirectoryInfo(path), options.Suffix);
+            progressDialog.TotalPercent = 100;
+            progressDialog.Phase = ProgressPhase.Finished.GetResourceString();
+            await progressTask;
         }
     }
 }

@@ -22,7 +22,7 @@ namespace Opus.Services.Data
         /// Segments in the current profile in the order they
         /// are to be included
         /// </summary>
-        public IReorderCollection<ICompositionSegment> Segments { get; }
+        public ReorderCollection<ICompositionSegment> Segments { get; }
         /// <summary>
         /// If true, page numbers will be added to the new document
         /// </summary>

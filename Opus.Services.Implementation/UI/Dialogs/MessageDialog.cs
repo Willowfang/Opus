@@ -18,7 +18,8 @@ namespace Opus.Services.Implementation.UI.Dialogs
             set => SetProperty(ref content, value);
         }
 
-        public MessageDialog(string content = null)
+        public MessageDialog(string dialogTitle, string content)
+            : base(dialogTitle)
         {
             Content = content;
         }

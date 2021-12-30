@@ -5,68 +5,83 @@ using Opus.Services.UI;
 using Prism.Commands;
 using Prism.Mvvm;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 
 namespace Opus.Services.Implementation.UI.Dialogs
 {
-    public class CompositionProfileDialog : DialogBase, IDialog
+    public class CompositionProfileDialog : DialogBase, IDialog, IDataErrorInfo
     {
-        public IList<ICompositionProfile> Profiles { get; }
-        public ICompositionProfile CurrentProfile { get; }
-        public bool IsNewProfile { get; }
+        private string? originalProfileName;
 
-        private string? nameHelper;
-        public string? NameHelper
+        public IList<ICompositionProfile> Profiles { get; }
+
+        private bool suppressError;
+        public bool SuppressError
         {
-            get => nameHelper;
-            set => SetProperty(ref nameHelper, value);
-        }
-        public string Name
-        {
-            get => CurrentProfile.ProfileName;
+            get => suppressError;
             set
             {
-                CurrentProfile.ProfileName = value;
-                NameHelper = null;
+                SetProperty(ref suppressError, value);
             }
         }
 
-        public CompositionProfileDialog(IList<ICompositionProfile> profiles)
+        private string? profileName;
+        public string? ProfileName
         {
-            Profiles = profiles;
-            IsNewProfile = true;
-            CurrentProfile = new CompositionProfile(new ReorderCollection<ICompositionSegment>());
-        }
-
-        public CompositionProfileDialog(IList<ICompositionProfile> profiles, ICompositionProfile current)
-        {
-            Profiles = profiles;
-            IsNewProfile = false;
-
-            var copyCurrent = new CompositionProfile(current.Segments);
-            copyCurrent.Id = current.Id;
-            copyCurrent.IsEditable = current.IsEditable;
-            copyCurrent.ProfileName = current.ProfileName;
-            CurrentProfile = copyCurrent;
-        }
-        protected override void ExecuteSave()
-        {
-            if (string.IsNullOrWhiteSpace(CurrentProfile.ProfileName))
+            get => profileName;
+            set
             {
-                NameHelper = Resources.Labels.CompositionProfileDialog_NameEmpty;
-                return;
+                SetProperty(ref profileName, value);
             }
+        }
 
-            if (IsNewProfile)
+        private bool addPageNumbers;
+        public bool AddPageNumbers
+        {
+            get => addPageNumbers;
+            set => SetProperty(ref addPageNumbers, value);
+        }
+
+        public CompositionProfileDialog(string dialogTitle, IList<ICompositionProfile> profiles)
+            : base(dialogTitle)
+        {
+            Profiles = profiles;
+            originalProfileName = null;
+        }
+
+        public CompositionProfileDialog(string dialogTitle, string originalName,
+            IList<ICompositionProfile> profiles) : this(dialogTitle, profiles)
+        {
+            this.originalProfileName = originalName;
+        }
+
+        public string? Error
+        {
+            get => null;
+        }
+
+        public string this[string propertyName]
+        {
+            get
             {
-                if (Profiles.Any(x => x.ProfileName.ToLower() == CurrentProfile.ProfileName.ToLower()))
+                if (propertyName == nameof(ProfileName))
                 {
-                    NameHelper = Resources.Labels.CompositionProfileDialog_NameExists;
-                    return;
+                    if (string.IsNullOrEmpty(ProfileName))
+                    {
+                        SuppressError = true;
+                        return Resources.Validation.General.NameEmpty;
+                    }
+                    if (Profiles.Any(x => x.ProfileName == ProfileName) &&
+                        ProfileName != originalProfileName)
+                    {
+                        SuppressError = false;
+                        return Resources.Validation.Composition.ProfileNameExists;
+                    }
                 }
-            }
 
-            base.ExecuteSave();
+                return string.Empty;
+            }
         }
     }
 }

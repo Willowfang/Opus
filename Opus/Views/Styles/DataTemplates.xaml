@@ -2,91 +2,404 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:dialog="clr-namespace:Opus.Services.Implementation.UI.Dialogs;assembly=Opus.Services.Implementation"
                     xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
-                    xmlns:res="clr-namespace:Opus.Resources">
+                    xmlns:resButtons="clr-namespace:Opus.Resources.Buttons;assembly=Opus.Resources"
+                    xmlns:resDialog="clr-namespace:Opus.Resources.Labels.Dialogs;assembly=Opus.Resources"
+                    xmlns:resLabels="clr-namespace:Opus.Resources.Labels;assembly=Opus.Resources">
 
     <!--MESSAGE DIALOG-->
     <DataTemplate DataType="{x:Type dialog:MessageDialog}">
         <StackPanel>
-            <TextBlock HorizontalAlignment="Center"
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+            <TextBlock Style="{DynamicResource DialogContentTextBlock}"
+                       Text="{Binding Content}"/>
+            <Button Style="{StaticResource DialogOkButton}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <!-- CONFIRMATION DIALOG-->
+    <DataTemplate DataType="{x:Type dialog:ConfirmationDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+            <TextBlock Style="{DynamicResource DialogContentTextBlock}"
+                       Text="{Binding Content}"/>
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+    <!--FILE TITLE DIALOG-->
+    <DataTemplate DataType="{x:Type dialog:FileTitleDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+            <TextBox Style="{DynamicResource HintedValidationTextBox}"
+                     Text="{Binding Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                     FontSize="16"
+                     Width="250"
+                     x:Name="TitleText"
+                     md:HintAssist.Hint="{x:Static resDialog:FileTitle.Edit}"/>
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"
+                        IsEnabled="{Binding ElementName=TitleText, Path=(Validation.HasError), 
+                            Converter={StaticResource InvertBooleanConverter}}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+    <!--NEW BOOKMARK DIALOG-->
+    <DataTemplate DataType="{x:Type dialog:BookmarkDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+            <TextBox Style="{DynamicResource HintedTextBox}"
+                     Text="{Binding Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                     Width="250"
+                     Name="TitleText"
+                     md:ValidationAssist.Suppress="True"
+                     md:HintAssist.Hint="{x:Static resLabels:General.Name}"/>
+            <StackPanel Style="{StaticResource NumberFieldStackPanel}">
+                <TextBox Style="{DynamicResource NumberTextBox}"
+                         Text="{Binding StartPage, UpdateSourceTrigger=PropertyChanged, 
+                            ValidatesOnDataErrors=True, ValidatesOnExceptions=True}"
+                         Width="70"
+                         Name="StartPageText"
+                         md:HintAssist.Hint="{x:Static resLabels:General.Start}"/>
+                <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
+                <TextBox Style="{DynamicResource NumberTextBox}"
+                         Text="{Binding EndPage, UpdateSourceTrigger=PropertyChanged, 
+                            ValidatesOnDataErrors=True, ValidatesOnExceptions=True}"
+                         Width="70"
+                         Name="EndPageText"
+                         md:HintAssist.Hint="{x:Static resLabels:General.End}"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}">
+                    <Button.IsEnabled>
+                        <MultiBinding Converter="{StaticResource BooleanAllNegative}">
+                            <Binding ElementName="TitleText" Path="(Validation.HasError)"/>
+                            <Binding ElementName="StartPageText" Path="(Validation.HasError)"/>
+                            <Binding ElementName="EndPageText" Path="(Validation.HasError)"/>
+                        </MultiBinding>
+                    </Button.IsEnabled>
+                </Button>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+    <!--EXTRACT SETTINGS DIALOG-->
+    <DataTemplate DataType="{x:Type dialog:ExtractSettingsDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+            <TextBox Style="{DynamicResource HintedTextBox}"
+                     Text="{Binding Prefix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     Width="180"
+                     md:HintAssist.Hint="{x:Static resLabels:General.Prefix}"
+                     md:HintAssist.HelperText="{x:Static resDialog:ExtractionOptions.PrefixHelper}"/>
+            <TextBox Style="{DynamicResource HintedTextBox}"
+                     Text="{Binding Suffix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     Width="180"
+                     md:HintAssist.Hint="{x:Static resLabels:General.Suffix}"
+                     md:HintAssist.HelperText="{x:Static resDialog:ExtractionOptions.SuffixHelper}"/>
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+    <!--SIGNATURE SETTINGS DIALOG-->
+    <DataTemplate DataType="{x:Type dialog:SignatureSettingsDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+            <TextBox Style="{DynamicResource HintedValidationTextBox}"
+                     Text="{Binding Suffix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                     Width="180"
+                     Name="SuffixText"
+                     md:HintAssist.Hint="{x:Static resLabels:General.Suffix}"
+                     md:HintAssist.HelperText="{x:Static resDialog:SignatureOptions.SuffixHelper}"/>
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"
+                        IsEnabled="{Binding ElementName=SuffixText, Path=(Validation.HasError), 
+                            Converter={StaticResource InvertBooleanConverter}}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+    <!--MERGE SETTINGS DIALOG-->
+    <DataTemplate DataType="{x:Type dialog:MergeSettingsDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+            <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                       VerticalAlignment="Center"
                        Style="{DynamicResource MaterialDesignCaptionTextBlock}"
-                       Margin="32, 32, 32, 10"
-                       Text="{Binding Content}"
-                       MinWidth="150" MaxWidth="250"
-                       TextWrapping="Wrap" TextAlignment="Center"
-                       FontSize="14"/>
-            <Button HorizontalAlignment="Center"
-                    Margin="16"
-                    Command="{Binding Close}"
-                    Style="{DynamicResource MaterialDesignOutlinedButton}"
-                    Content="OK"/>
+                       Text="{x:Static resDialog:MergeOptions.PageNumbersTitle}"
+                       Margin="0, 0, 0, 10"/>
+            <CheckBox Style="{DynamicResource MaterialDesignSwitchToggleButton}"
+                      IsChecked="{Binding AddPageNumbers}"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Cursor="Hand"/>
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+    <!--COMPOSITION SETTINGS DIALOG-->
+    <DataTemplate DataType="{x:Type dialog:CompositionSettingsDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+            <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                       VerticalAlignment="Center"
+                       Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       Text="{x:Static resDialog:CompositionOptions.SubDirectories}"
+                       Margin="0, 0, 0, 10"/>
+            <CheckBox Style="{DynamicResource MaterialDesignSwitchToggleButton}"
+                      IsChecked="{Binding SearchSubDirectories, Mode=TwoWay}"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Cursor="Hand"/>
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
         </StackPanel>
     </DataTemplate>
 
     <!--COMPOSITION PROFILE DIALOG-->
     <DataTemplate DataType="{x:Type dialog:CompositionProfileDialog}">
         <StackPanel>
-            <TextBox Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
-                     md:HintAssist.Hint="{x:Static res:Labels.CompositionProfileDialog_Name}"
-                     md:HintAssist.HelperText="{Binding NameHelper}"
-                     Text="{Binding CurrentProfile.ProfileName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                     Width="150"/>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+            <TextBox Style="{DynamicResource HintedValidationTextBox}"
+                     md:HintAssist.Hint="{x:Static resLabels:General.Name}"
+                     Text="{Binding ProfileName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
+                     ValidatesOnDataErrors=True}"
+                     Name="TitleText"
+                     md:ValidationAssist.Suppress="{Binding SuppressError}"
+                     Width="200"/>
             <Separator Style="{DynamicResource MaterialDesignSeparator}"
                        Margin="10"/>
-            <ToggleButton Style="{DynamicResource MaterialDesignSwitchToggleButton}"
-                          IsChecked="{Binding CurrentProfile.AddPageNumbers, Mode=TwoWay}"
-                          md:HintAssist.Hint="{x:Static res:Labels.CompositionProfileDialog_PageNumbers}"/>
+            <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                       VerticalAlignment="Center"
+                       Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       Text="{x:Static resLabels:General.AddPageNumbers}"
+                       Margin="0, 0, 0, 10"/>
+            <CheckBox Style="{DynamicResource MaterialDesignSwitchToggleButton}"
+                      IsChecked="{Binding AddPageNumbers, Mode=TwoWay}"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Cursor="Hand"/>
             <Separator Style="{DynamicResource MaterialDesignSeparator}"
                        Margin="10"/>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button HorizontalAlignment="Center"
-                        Margin="16, 0, 16, 16"
-                        Command="{Binding Save}"
-                        Style="{DynamicResource MaterialDesignOutlinedButton}"
-                        Content="{x:Static res:Labels.CompositionProfileDialog_SaveButton}"/>
-                <Button HorizontalAlignment="Center"
-                        Margin="16, 0, 16, 16"
-                        Command="{Binding Save}"
-                        Style="{DynamicResource MaterialDesignOutlinedButton}"
-                        Content="{x:Static res:Labels.CompositionProfileDialog_CancelButton}"/>
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"
+                        IsEnabled="{Binding ElementName=TitleText, Path=(Validation.HasError), 
+                            Converter={StaticResource InvertBooleanConverter}}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+    
+    <!--COMPOSITION FILESEGMENT DIALOG-->
+    <DataTemplate DataType="{x:Type dialog:CompositionFileSegmentDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+            <TextBox Style="{DynamicResource HintedValidationTextBox}"
+                     md:HintAssist.Hint="{x:Static resLabels:General.Name}"
+                     Text="{Binding SegmentName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
+                     ValidatesOnDataErrors=True}"
+                     Name="CompositionFileTitleText"
+                     Width="200"/>
+            <CheckBox Style="{DynamicResource MaterialDesignCheckBox}"
+                      Content="{x:Static resDialog:CompositionFileSegment.NameFromFileDescription}" 
+                      FontSize="14"
+                      IsChecked="{Binding NameFromFile}"
+                      HorizontalAlignment="Center"
+                      Margin="20, 0, 20, 10"/>
+            <Separator Style="{DynamicResource MaterialDesignSeparator}"
+                       Margin="10"/>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBox Style="{DynamicResource HintedTextBox}"
+                             md:HintAssist.Hint="{x:Static resLabels:General.SearchExpression}"
+                             Text="{Binding SearchTerm, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
+                                ValidatesOnDataErrors=True}"
+                             Name="CompositionFileSearchExpressionText"
+                             Width="200"/>
+                    <TextBox Style="{DynamicResource HintedTextBox}"
+                             md:HintAssist.Hint="{x:Static resLabels:General.IgnoreExpression}"
+                             Text="{Binding ToRemove, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
+                                ValidatesOnDataErrors=True}"
+                             Name="CompositionFileIgnoreExpressionText"
+                             Width="200"/>
+                </StackPanel>
+                <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5" RadiusX="2" RadiusY="2"/>
+                <StackPanel>
+                    <TextBox Style="{DynamicResource NumberTextBox}"
+                             Text="{Binding MinCount, UpdateSourceTrigger=PropertyChanged}"
+                             Width="70"
+                             Name="CompositionFileMinCountText"
+                             md:HintAssist.Hint="{x:Static resLabels:General.Minimum}"/>
+                    <TextBox Style="{DynamicResource NumberTextBox}"
+                             Text="{Binding MaxCount, UpdateSourceTrigger=PropertyChanged}"
+                             Width="70"
+                             Name="CompositionFileMaxCountText"
+                             md:HintAssist.Hint="{x:Static resLabels:General.Maximum}"/>
+                </StackPanel>
+            </StackPanel>
+            <Separator Style="{DynamicResource MaterialDesignSeparator}"
+                       Margin="10, 10, 10, 0"/>
+            <TextBox Style="{DynamicResource HintedValidationTextBox}"
+                     md:HintAssist.Hint="{x:Static resLabels:General.Example}"
+                     Text="{Binding Example, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     Width="200"/>
+            <Separator Style="{DynamicResource MaterialDesignSeparator}"
+                       Margin="10"/>
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}">
+                    <Button.IsEnabled>
+                        <MultiBinding Converter="{StaticResource BooleanAllNegative}">
+                            <Binding ElementName="CompositionFileTitleText" Path="(Validation.HasError)"/>
+                            <Binding ElementName="CompositionFileSearchExpressionText" Path="(Validation.HasError)"/>
+                            <Binding ElementName="CompositionFileIgnoreExpressionText" Path="(Validation.HasError)"/>
+                            <Binding ElementName="CompositionFileMinCountText" Path="(Validation.HasError)"/>
+                            <Binding ElementName="CompositionFileMaxCountText" Path="(Validation.HasError)"/>
+                        </MultiBinding>
+                    </Button.IsEnabled>
+                </Button>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+    <!--COMPOSITION TITLESEGMENT DIALOG-->
+    <DataTemplate DataType="{x:Type dialog:CompositionTitleSegmentDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+            <TextBox Style="{DynamicResource HintedValidationTextBox}"
+                     md:HintAssist.Hint="{x:Static resLabels:General.Name}"
+                     Text="{Binding SegmentName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
+                        ValidatesOnDataErrors=True}"
+                     Name="CompositionTitleNameText"
+                     Width="200"/>
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"
+                        IsEnabled="{Binding ElementName=CompositionTitleNameText, Path=(Validation.HasError),
+                            Converter={StaticResource InvertBooleanConverter}}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
             </StackPanel>
         </StackPanel>
     </DataTemplate>
 
     <!--PROGRESS DIALOG-->
     <DataTemplate DataType="{x:Type dialog:ProgressDialog}">
-        <StackPanel Background="{DynamicResource MaterialDesignPaper}">
-            <Grid Width="40" Height="40"
+        <StackPanel>
+            <Grid Width="60" Height="60"
                   Margin="32, 32, 32, 10">
+                <Ellipse Width="60"
+                         Height="60"
+                         Fill="Transparent"
+                         Stroke="{DynamicResource MaterialDesignDarkBackground}"
+                         Opacity="0.3"
+                         StrokeThickness="2"/>
                 <ProgressBar Style="{DynamicResource MaterialDesignCircularProgressBar}"
-                             Width="40" Height="40"
+                             Width="60" Height="60"
                              Value="{Binding TotalPercent}"
+                             IsIndeterminate="{Binding TotalPercent, Converter={StaticResource ZeroToTrue}}"
                              VerticalAlignment="Center" HorizontalAlignment="Center"
-                             x:Name="MainProgress"/>
-                <md:PackIcon x:Name="Check">
-                    <md:PackIcon.Style>
-                        <Style TargetType="md:PackIcon">
-                            <Setter Property="Height" Value="35"/>
-                            <Setter Property="Width" Value="35"/>
-                            <Setter Property="VerticalAlignment" Value="Center"/>
-                            <Setter Property="HorizontalAlignment" Value="Center"/>
-                            <Setter Property="Foreground" Value="{DynamicResource PrimaryHueDarkBrush}"/>
-                            <Setter Property="Kind" Value="ClockOutline"/>
+                             x:Name="MainProgress">
+                </ProgressBar>
+                <TextBlock HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Text="{Binding TotalPercent, StringFormat={}{0}%}">
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock"
+                               BasedOn="{StaticResource MaterialDesignSubtitle2TextBlock}">
                             <Style.Triggers>
-                                <DataTrigger Binding="{Binding ElementName=MainProgress, Path=Value}" Value="100">
-                                    <Setter Property="Kind" Value="CheckCircle"/>
+                                <DataTrigger Binding="{Binding ElementName=MainProgress, Path=Value}"
+                                             Value="100">
+                                    <Setter Property="Opacity" Value="0"/>
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>
-                    </md:PackIcon.Style>
-                </md:PackIcon>
+                    </TextBlock.Style>
+                </TextBlock>
+                <ContentControl Content="{StaticResource LogoIconVector}" HorizontalAlignment="Center"
+                                Name="Logo">
+                    <ContentControl.Style>
+                        <Style TargetType="ContentControl">
+                            <Setter Property="Opacity" Value="0"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ElementName=MainProgress, Path=Value}"
+                                             Value="100">
+                                    <DataTrigger.EnterActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation
+                                                    Storyboard.TargetProperty="Opacity"
+                                                    To="1" Duration="0:0:1"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </DataTrigger.EnterActions>
+                                    <DataTrigger.ExitActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation
+                                                    Storyboard.TargetProperty="Opacity"
+                                                    To="0" Duration="0:0:0"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </DataTrigger.ExitActions>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ContentControl.Style>
+                    <ContentControl.Triggers>
+                        <EventTrigger RoutedEvent="ContentControl.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="Logo"
+                                        Storyboard.TargetProperty="Height"
+                                        From="50" To="45" Duration="0:0:1.5"
+                                        AutoReverse="True" RepeatBehavior="Forever"/>
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="Logo"
+                                        Storyboard.TargetProperty="Width"
+                                        From="50" To="45" Duration="0:0:1.5"
+                                        AutoReverse="True" RepeatBehavior="Forever"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </ContentControl.Triggers>
+                </ContentControl>
             </Grid>
-            <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}"
-                       HorizontalAlignment="Center"
-                       MinWidth="120" MaxWidth="250"
-                       Margin="32, 0, 32, 5"
-                       TextAlignment="Center"
-                       FontSize="16"
-                       Text="{Binding Phase}"/>
+            <Grid Height="50">
+                <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Width="180"
+                           Margin="32, 0, 32, 5"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"
+                           FontSize="16"
+                           Text="{Binding Phase}"/>
+            </Grid>
             <ProgressBar Style="{DynamicResource MaterialDesignLinearProgressBar}"
                          Width="120"
                          Height="10"
@@ -97,7 +410,7 @@
                          Margin="32, 0, 32, 0"/>
             <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}"
                        HorizontalAlignment="Center"
-                       MinWidth="120" MaxWidth="250"
+                       Width="180"
                        Margin="32, 0, 32, 0"
                        TextAlignment="Center"
                        FontSize="10"
@@ -105,14 +418,13 @@
                        Visibility="{Binding Part, Converter={StaticResource NullableToVisibilityConverter}}"/>
             <Button Command="{Binding Close}">
                 <Button.Style>
-                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignOutlinedButton}">
+                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource DialogButton}">
                         <Setter Property="HorizontalAlignment" Value="Center"/>
-                        <Setter Property="Margin" Value="16"/>
-                        <Setter Property="IsEnabled" Value="False"/>
-                        <Setter Property="Content" Value="{x:Static res:Labels.ProgressDialog_Cancel}"/>
+                        <Setter Property="Margin" Value="16, 5, 16, 26"/>
+                        <Setter Property="Content" Value="{x:Static resButtons:General.Cancel}"/>
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding ElementName=MainProgress, Path=Value}" Value="100">
-                                <Setter Property="Content" Value="{x:Static res:Labels.ProgressDialog_Close}"/>
+                                <Setter Property="Content" Value="{x:Static resButtons:General.Close}"/>
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>

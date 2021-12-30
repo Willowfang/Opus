@@ -8,6 +8,8 @@ namespace Opus.Services.Implementation.UI
 {
     public abstract class DialogBase : BindableBase, IDialog
     {
+        public string DialogTitle { get; protected set; }
+
         private bool isCanceled;
         public bool IsCanceled
         {
@@ -21,11 +23,12 @@ namespace Opus.Services.Implementation.UI
         protected DelegateCommand CloseCommand;
         public ICommand Close => CloseCommand;
 
-        public DialogBase()
+        public DialogBase(string dialogTitle)
         {
             SaveCommand = new DelegateCommand(ExecuteSave, SaveCanExecute);
             CloseCommand = new DelegateCommand(ExecuteClose, CloseCanExecute);
             DialogClosed = new TaskCompletionSource();
+            DialogTitle = dialogTitle;
         }
         protected virtual void ExecuteSave() 
         {

@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opus.Styles", "Opus.Styles\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opus.Services.Implementation", "Opus.Services.Implementation\Opus.Services.Implementation.csproj", "{E6EC6042-A841-4197-860B-3E8935263482}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opus.Events", "Opus.Events\Opus.Events.csproj", "{3AE46508-337A-48E4-9B23-83F3CA1E7C3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opus.Events", "Opus.Events\Opus.Events.csproj", "{3AE46508-337A-48E4-9B23-83F3CA1E7C3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opus.Resources", "Opus.Resources\Opus.Resources.csproj", "{4D43527B-D902-4828-85F3-A0FF0DF8480A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -119,6 +121,14 @@ Global
 		{3AE46508-337A-48E4-9B23-83F3CA1E7C3C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3AE46508-337A-48E4-9B23-83F3CA1E7C3C}.Release|x86.ActiveCfg = Release|Any CPU
 		{3AE46508-337A-48E4-9B23-83F3CA1E7C3C}.Release|x86.Build.0 = Release|Any CPU
+		{4D43527B-D902-4828-85F3-A0FF0DF8480A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D43527B-D902-4828-85F3-A0FF0DF8480A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D43527B-D902-4828-85F3-A0FF0DF8480A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4D43527B-D902-4828-85F3-A0FF0DF8480A}.Debug|x86.Build.0 = Debug|Any CPU
+		{4D43527B-D902-4828-85F3-A0FF0DF8480A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D43527B-D902-4828-85F3-A0FF0DF8480A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D43527B-D902-4828-85F3-A0FF0DF8480A}.Release|x86.ActiveCfg = Release|Any CPU
+		{4D43527B-D902-4828-85F3-A0FF0DF8480A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

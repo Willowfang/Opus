@@ -19,11 +19,13 @@ namespace Opus.Services.Implementation.Data
             using (var db = new LiteDatabase(databasePath))
             {
                 var collection = db.GetCollection<T>();
-                var exists = collection.FindOne(x => x.Id == instance.Id);
+                /* var exists = collection.FindOne(x => x.Id == instance.Id);
                 if (exists == null)
                     collection.Insert(instance);
                 else
-                    collection.Update(instance);
+                    collection.Update(instance);*/
+
+                collection.Upsert(instance);
 
                 return instance;
             }

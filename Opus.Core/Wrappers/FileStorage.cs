@@ -8,9 +8,15 @@ namespace Opus.Core.Wrappers
     {
         private bool isSelected;
         private int level;
+        private string title;
 
         public string FilePath { get; }
-        public string Title => Path.GetFileNameWithoutExtension(FilePath);
+        public string FileName { get; }
+        public string Title
+        {
+            get => title;
+            set => SetProperty(ref title, value);
+        }
         public int Level
         {
             get => level;
@@ -25,7 +31,9 @@ namespace Opus.Core.Wrappers
         public FileStorage(string filePath)
         {
             FilePath = filePath;
+            FileName = Path.GetFileName(filePath);
             Level = 1;
+            Title = Path.GetFileNameWithoutExtension(filePath);
         }
     }
 }

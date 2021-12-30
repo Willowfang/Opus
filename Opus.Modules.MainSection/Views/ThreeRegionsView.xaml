@@ -6,16 +6,17 @@
              xmlns:prism="http://prismlibrary.com/"             
              prism:ViewModelLocator.AutoWireViewModel="True">
     <DockPanel>
-        <materialDesign:Card Padding="20" Margin="16, 8, 16, 8" DockPanel.Dock="Top" Opacity="0.8"
-                             prism:RegionManager.RegionName="{x:Static const:RegionNames.MAINSECTION_THREE_FILE}">
+        <Grid DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <materialDesign:Card Padding="20" Grid.Column="0" Margin="16, 8, 8, 8" Opacity="0.8"
+                             prism:RegionManager.RegionName="{x:Static const:RegionNames.MAINSECTION_THREE_FILE}"/>
+            <materialDesign:Card Padding="10" Grid.Column="1" Margin="8, 8, 16, 8" Opacity="0.8"
+                                 prism:RegionManager.RegionName="{x:Static const:RegionNames.MAINSECTION_THREE_OPTIONS}"/>
+        </Grid>
 
-        </materialDesign:Card>
-        <DockPanel DockPanel.Dock="Top">
-            <materialDesign:Card Padding="32" Margin="16, 8, 16, 8" Opacity="0.8"
-                                 prism:RegionManager.RegionName="{x:Static const:RegionNames.MAINSECTION_THREE_OPTIONS}">
-
-            </materialDesign:Card>
-        </DockPanel>
         <materialDesign:Card Padding="32" Margin="16, 8, 16, 8" Opacity="0.8" Grid.Column="0"
                              prism:RegionManager.RegionName="{x:Static const:RegionNames.MAINSECTION_THREE_ACTION}">
 

@@ -9,6 +9,7 @@ namespace Opus.Services.Implementation.Data
 {
     public class CompositionTitle : CompositionSegment, ICompositionTitle
     {
+        public override string? StructureName => DisplayName;
         public override string? DisplayName
         {
             get => segmentName;
@@ -22,6 +23,13 @@ namespace Opus.Services.Implementation.Data
                 SetProperty(ref segmentName, value);
                 RaisePropertyChanged(nameof(DisplayName));
             }
+        }
+
+        public CompositionTitle() { }
+        public CompositionTitle(string segmentName)
+        {
+            SegmentName = segmentName;
+            Level = 1;
         }
     }
 }

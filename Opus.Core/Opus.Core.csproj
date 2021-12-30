@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Opus.Resources\Opus.Resources.csproj" />
     <ProjectReference Include="..\Opus.Services.Implementation\Opus.Services.Implementation.csproj" />
     <ProjectReference Include="..\Opus.Services\Opus.Services.csproj" />
   </ItemGroup>
@@ -27,30 +28,6 @@
     <Reference Include="CodeX-PdfLib-iText7">
       <HintPath>..\..\..\CodeX\Libraries\PdfLib.iText7\bin\Debug\net5.0\CodeX-PdfLib-iText7.dll</HintPath>
     </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Resources\Labels.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Labels.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\PhaseNames.Designer.cs">
-      <DependentUpon>PhaseNames.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Resources\Labels.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Labels.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\PhaseNames.resx">
-      <LastGenOutput>PhaseNames.Designer.cs</LastGenOutput>
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
