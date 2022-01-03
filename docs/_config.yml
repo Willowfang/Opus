@@ -1,4 +1,5 @@
-theme: jekyll-theme-minimal
+remote_theme: pmarsceill/just-the-docs
 title: "Opus käyttöohje"
 description: Täältä löytyvät käyttöohjeet Opus-ohjelman käyttämiseen. Ohjeita päivitetään tarpeen mukaan. Sisällysluettelosta löydät tarkemman sisällön.
-logo: LogoCX_feathered.png
+logo: img/LogoCX_name_black.png
+color_scheme: opus
