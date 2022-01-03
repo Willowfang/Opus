@@ -12,7 +12,8 @@ namespace Opus.Modules.MainSection
         {
             var navigator = containerProvider.Resolve<INavigationAssist>();
 
-            navigator.Add<ThreeRegionsView>(RegionNames.SHELL_MAINSECTION, SchemeNames.SPLIT, SchemeNames.SIGNATURE);
+            navigator.Add<ThreeRegionsView>(RegionNames.SHELL_MAINSECTION, SchemeNames.SPLIT, SchemeNames.SIGNATURE,
+                SchemeNames.MERGE);
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

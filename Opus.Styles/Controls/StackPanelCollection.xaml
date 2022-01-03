@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes">
+
+    <Style TargetType="{x:Type StackPanel}" x:Key="DialogButtonStackPanel">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="10, 20, 10, 20"/>
+    </Style>
+
+    <Style TargetType="{x:Type StackPanel}" BasedOn="{StaticResource DialogButtonStackPanel}"
+           x:Key="NumberFieldStackPanel">
+        <Setter Property="Margin" Value="10, 0, 10, 0"/>
+    </Style>
+    
+</ResourceDictionary>

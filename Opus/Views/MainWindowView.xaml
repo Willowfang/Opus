@@ -6,9 +6,9 @@
         xmlns:prism="http://prismlibrary.com/"
         xmlns:const="clr-namespace:Opus.Core.Constants;assembly=Opus.Core"
         xmlns:local="clr-namespace:Opus"
-        xmlns:res="clr-namespace:Opus.Resources"
+        xmlns:resMain="clr-namespace:Opus.Resources.Labels.MainWindow;assembly=Opus.Resources"
         mc:Ignorable="d"
-        Title="" MinHeight="600" Height="800" MinWidth="640" Width="640"
+        Title="" MinHeight="600" Height="800" MinWidth="600" Width="600"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -21,36 +21,16 @@
         WindowStartupLocation="CenterScreen"
         Loaded="Window_Loaded">
     <Window.Resources>
-        <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource MaterialDesignTabRadioButtonLeft}"
-               x:Key="MainMenuButton">
-            <Setter Property="Width" Value="40"/>
-            <Setter Property="Height" Value="50"/>
-            <Setter Property="GroupName" Value="MainMenuB"/>
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="Margin" Value="0, 0, 0, 0"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Opacity" Value="0.8"/>
-            <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}"/>
-            <Style.Triggers>
-                <Trigger Property="IsChecked" Value="False">
-                    <Setter Property="Foreground" Value="{DynamicResource PrimaryHueLightBrush}"/>
-                </Trigger>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidBrush}"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/DataTemplates.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Window.Resources>
     <Window.Icon>
         <DrawingImage/>
     </Window.Icon>
-    <materialDesign:DialogHost IsOpen="{Binding DialogIsShowing}">
-        <materialDesign:DialogHost.DialogContent>
-            <ContentControl prism:RegionManager.RegionName="{x:Static const:RegionNames.SHELL_DIALOG}">
-                
-            </ContentControl>
-        </materialDesign:DialogHost.DialogContent>
+    <materialDesign:DialogHost IsOpen="{Binding Dialog.IsShowing}" DialogContent="{Binding Dialog.Active}">
         <Grid>
             <ContentControl Content="{StaticResource LogoVector}" HorizontalAlignment="Center"
                             Margin="0, 0, -100, 0"/>
@@ -62,17 +42,25 @@
                                Opacity="0.8"/>
                     <Separator Style="{DynamicResource MaterialDesignDarkSeparator}" Margin="5, 0, 5, 0"/>
                     <RadioButton Style="{DynamicResource MainMenuButton}"
-                                 Command="{Binding NavigateCommand}"
                                  CommandParameter="{x:Static const:SchemeNames.SPLIT}"
                                  x:Name="SplitButton">
                         <materialDesign:PackIcon Width="30" Height="30" 
                                                  Kind="FileDocumentMultiple"/>
                     </RadioButton>
                     <RadioButton Style="{DynamicResource MainMenuButton}"
-                                 Command="{Binding NavigateCommand}"
                                  CommandParameter="{x:Static const:SchemeNames.SIGNATURE}">
                         <materialDesign:PackIcon Width="30" Height="30" 
                                                  Kind="Draw"/>
+                    </RadioButton>
+                    <RadioButton Style="{DynamicResource MainMenuButton}"
+                                 CommandParameter="{x:Static const:SchemeNames.MERGE}">
+                        <materialDesign:PackIcon Width="30" Height="30" 
+                                                 Kind="Merge"/>
+                    </RadioButton>
+                    <RadioButton Style="{DynamicResource MainMenuButton}"
+                                 CommandParameter="{x:Static const:SchemeNames.COMPOSE}">
+                        <materialDesign:PackIcon Width="30" Height="30" 
+                                                 Kind="Layers"/>
                     </RadioButton>
                 </StackPanel>
                 <materialDesign:Card Padding="32" Margin="16" DockPanel.Dock="Top" Opacity="0.8">
@@ -93,17 +81,17 @@
                                         <VirtualizingStackPanel Orientation="Vertical"/>
                                     </ItemsPanelTemplate>
                                 </Menu.ItemsPanel>
-                                <MenuItem Header="{x:Static res:Labels.HelpMenu_UserManual}" Command="{Binding OpenManual}"/>
-                                <MenuItem Header="{x:Static res:Labels.HelpMenu_Licenses}" Command="{Binding OpenLicenses}"/>
-                                <MenuItem Header="{x:Static res:Labels.HelpMenu_SourceCode}" Command="{Binding OpenSourceCode}"/>
-                                <MenuItem Header="{x:Static res:Labels.HelpMenu_Language}">
-                                    <MenuItem Header="{x:Static res:Labels.Language_fi}"
+                                <MenuItem Header="{x:Static resMain:HelpMenu.UserManual}" Command="{Binding OpenManual}"/>
+                                <MenuItem Header="{x:Static resMain:HelpMenu.Licences}" Command="{Binding OpenLicenses}"/>
+                                <MenuItem Header="{x:Static resMain:HelpMenu.SourceCode}" Command="{Binding OpenSourceCode}"/>
+                                <MenuItem Header="{x:Static resMain:HelpMenu.Language}">
+                                    <MenuItem Header="{x:Static resMain:Languages.Finnish}"
                                               Command="{Binding LanguageCommand}"
                                               CommandParameter="fi"/>
-                                    <MenuItem Header="{x:Static res:Labels.Language_sv}"
+                                    <MenuItem Header="{x:Static resMain:Languages.Swedish}"
                                               Command="{Binding LanguageCommand}"
                                               CommandParameter="sv"/>
-                                    <MenuItem Header="{x:Static res:Labels.Language_en}"
+                                    <MenuItem Header="{x:Static resMain:Languages.English}"
                                               Command="{Binding LanguageCommand}"
                                               CommandParameter="en"/>
                                 </MenuItem>
@@ -111,7 +99,7 @@
                         </materialDesign:PopupBox>
                     </Grid>
                 </materialDesign:Card>
-                <ContentControl DockPanel.Dock="Top" 
+                <ContentControl DockPanel.Dock="Top" Margin="0, 0, 0, 10"
                                 prism:RegionManager.RegionName="{x:Static const:RegionNames.SHELL_MAINSECTION}"/>
             </DockPanel>
         </Grid>

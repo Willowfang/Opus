@@ -4,6 +4,7 @@ using Prism.Regions;
 using Opus.Modules.Action.Views;
 using Opus.Core.Constants;
 using Opus.Services.UI;
+using Opus.Core.Wrappers;
 
 namespace Opus.Modules.Action
 {
@@ -13,13 +14,15 @@ namespace Opus.Modules.Action
         {
             var navigator = containerProvider.Resolve<INavigationAssist>();
 
-            navigator.Add<BookmarksView>(RegionNames.MAINSECTION_THREE_ACTION, SchemeNames.SPLIT);
+            navigator.Add<ExtractionView>(RegionNames.MAINSECTION_THREE_ACTION, SchemeNames.SPLIT);
             navigator.Add<SignatureRemovalView>(RegionNames.MAINSECTION_THREE_ACTION, SchemeNames.SIGNATURE);
+            navigator.Add<MergeView>(RegionNames.MAINSECTION_THREE_ACTION, SchemeNames.MERGE);
+            navigator.Add<CompositionView>(RegionNames.MAINSECTION_THREE_ACTION, SchemeNames.COMPOSE);
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            
         }
     }
 }

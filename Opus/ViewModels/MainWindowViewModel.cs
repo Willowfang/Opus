@@ -3,16 +3,22 @@ using System.Diagnostics;
 using System.IO;
 using Opus.Core.Base;
 using Opus.Core.Constants;
-using Opus.Core.Events;
 using Opus.Services.Configuration;
 using Prism.Commands;
 using Prism.Events;
-using Prism.Regions;
+using Opus.Services.UI;
+using Opus.Events;
+using Opus.Services.Implementation.UI.Dialogs;
+using AsyncAwaitBestPractices.MVVM;
+using System.Threading.Tasks;
 
 namespace Opus.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
+        private IConfiguration configuration;
+        private IEventAggregator eventAggregator;
+
         private string title;
         public string Title
         {
@@ -20,26 +26,15 @@ namespace Opus.ViewModels
             set => SetProperty(ref title, value);
         }
 
-        private bool dialogIsShowing;
-        public bool DialogIsShowing
-        {
-            get { return dialogIsShowing; }
-            set { SetProperty(ref dialogIsShowing, value); }
-        }
+        public IDialogAssist Dialog { get; set; }
 
-        private IConfiguration.App Configuration;
 
-        public MainWindowViewModel(IRegionManager regionManager, IEventAggregator eventAggregator, 
-            IConfiguration.App config)
-            : base(regionManager, eventAggregator)
+        public MainWindowViewModel(IEventAggregator eventAggregator, 
+            IConfiguration config, IDialogAssist dialogAssist)
         {
-            eventAggregator.GetEvent<DialogMessageEvent>().Subscribe(ShowDialogMessage);
-            Configuration = config;
-        }
-
-        private void ShowDialogMessage(string message)
-        {
-            DialogIsShowing = true;
+            configuration = config;
+            this.eventAggregator = eventAggregator;
+            this.Dialog = dialogAssist;
         }
 
         private DelegateCommand openLicenses;
@@ -49,7 +44,7 @@ namespace Opus.ViewModels
         void ExecuteOpenLicenses()
         {
             var p = new Process();
-            p.StartInfo = new ProcessStartInfo(Path.Combine(AppContext.BaseDirectory, "TextFiles", Resources.Hyperlinks.Licenses))
+            p.StartInfo = new ProcessStartInfo(Path.Combine(AppContext.BaseDirectory, "TextFiles", Resources.Hyperlinks.Hyperlinks.Licenses))
             {
                 UseShellExecute = true
             };
@@ -63,7 +58,7 @@ namespace Opus.ViewModels
         void ExecuteOpenManual()
         {
             var p = new Process();
-            p.StartInfo = new ProcessStartInfo(@Resources.Hyperlinks.UserManual)
+            p.StartInfo = new ProcessStartInfo(@Resources.Hyperlinks.Hyperlinks.UserManual)
             {
                 UseShellExecute = true
             };
@@ -77,7 +72,7 @@ namespace Opus.ViewModels
         void ExecuteOpenSourceCode()
         {
             var p = new Process();
-            p.StartInfo = new ProcessStartInfo(@Resources.Hyperlinks.SourceCode)
+            p.StartInfo = new ProcessStartInfo(@Resources.Hyperlinks.Hyperlinks.SourceCode)
             {
                 UseShellExecute = true
             };
@@ -90,25 +85,30 @@ namespace Opus.ViewModels
 
         void ExecuteNavigation(string name)
         {
-            Aggregator.GetEvent<ViewChangeEvent>().Publish(name);
+            eventAggregator.GetEvent<ViewChangeEvent>().Publish(name);
             if (name == SchemeNames.SPLIT)
-                Title = Resources.Labels.Title_Split.ToUpper();
+                Title = Resources.Labels.MainWindow.Titles.Extract.ToUpper();
             if (name == SchemeNames.SIGNATURE)
-                Title = Resources.Labels.Title_Signature.ToUpper();
+                Title = Resources.Labels.MainWindow.Titles.Signature.ToUpper();
+            if (name == SchemeNames.MERGE)
+                Title = Resources.Labels.MainWindow.Titles.Merge.ToUpper();
+            if (name == SchemeNames.COMPOSE)
+                Title = Resources.Labels.MainWindow.Titles.Compose.ToUpper();
         }
 
-        private DelegateCommand<string> _languageCommand;
-        public DelegateCommand<string> LanguageCommand =>
-            _languageCommand ?? (_languageCommand = new DelegateCommand<string>(ExecuteLanguage));
+        private IAsyncCommand<string> _languageCommand;
+        public IAsyncCommand<string> LanguageCommand =>
+            _languageCommand ?? (_languageCommand = new AsyncCommand<string>(ExecuteLanguage));
 
-        void ExecuteLanguage(string language)
+        private async Task ExecuteLanguage(string language)
         {
-            var lang = Configuration.GetLanguage();
+            var lang = configuration.LanguageCode;
             if (language == lang)
                 return;
 
-            Configuration.ChangeLanguage(language);
-            Aggregator.GetEvent<DialogMessageEvent>().Publish(Resources.Messages.LanguageChange);
+            configuration.LanguageCode = language;
+            await Dialog.Show(new MessageDialog(Resources.Labels.General.Notification,
+                Resources.Messages.MainWindow.ChangeLanguage));
         }
     }
 }

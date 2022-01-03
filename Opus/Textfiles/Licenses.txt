@@ -8,7 +8,7 @@ GNU Affero General Public License 3.0: https://www.gnu.org/licenses/agpl-3.0.htm
 
 Ohjelman lähdekoodi on saatavissa osoitteesta: https://github.com/CodeX-fi/ExtractPdf
 
-****AVOIMEN LÄHDEKOODIN RIIPPUVUUDET****
+**** AVOIMEN LÄHDEKOODIN RIIPPUVUUDET ****
 
 MaterialDesignThemes
 	- https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit
@@ -20,4 +20,14 @@ Prism
 
 iText7
 	- https://itextpdf.com/
-	- https://www.gnu.org/licenses/agpl-3.0.html
+	- AGPL 3.0: https://www.gnu.org/licenses/agpl-3.0.html
+
+LiteDB
+	- https://www.litedb.org/
+	- MIT License: https://github.com/mbdavid/LiteDB/blob/master/LICENSE
+
+**** MUUT ****
+
+System.Text.Json InterfaceConverter
+- vpekarek @ https://github.com/vpekarek/InterfaceConverter.SystemTextJson
+- MIT License: https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt

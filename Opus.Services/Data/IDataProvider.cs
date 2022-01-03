@@ -25,6 +25,13 @@ namespace Opus.Services.Data
         /// <returns>Found object. If no matching object found, return default(T).</returns>
         public T GetOne<T>(T instance);
         /// <summary>
+        /// Find an object by it's id
+        /// </summary>
+        /// <typeparam name="T">Type of object to find</typeparam>
+        /// <param name="id">Id of object</param>
+        /// <returns>Found object. If no matching object found, return default(T)</returns>
+        public T GetOneById<T>(int id) where T : IDataObject;
+        /// <summary>
         /// Save a data instance
         /// </summary>
         /// <typeparam name="T">Type of data</typeparam>

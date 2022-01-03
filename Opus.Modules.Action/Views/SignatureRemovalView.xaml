@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:conv="clr-namespace:Opus.Core.Converters;assembly=Opus.Core"
              xmlns:local="clr-namespace:Opus.Modules.Action.Views"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
@@ -11,16 +10,9 @@
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True">
     <UserControl.Resources>
-        <conv:NullToBoolConverter x:Key="NullToBoolConverter"/>
-        <conv:EmptyToBoolConverter x:Key="EmptyToBoolConverter"/>
-        <Style TargetType="{x:Type ListViewItem}" x:Key="InheritedList" 
-               BasedOn="{StaticResource MaterialDesignToolToggleListBoxItem}">
-            <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}"/>
-            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-        </Style>
         <Style TargetType="{x:Type Button}" x:Key="ToolButton"
                BasedOn="{StaticResource MaterialDesignIconButton}">
-            <Setter Property="Margin" Value="10, 16, 10, 0"/>
+            <Setter Property="Margin" Value="5, 16, 5, 0"/>
         </Style>
     </UserControl.Resources>
     <Grid>
@@ -29,10 +21,8 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <ListView ItemsSource="{Binding SignatureFiles}"
-                  Style="{StaticResource MaterialDesignListBox}"
+                  Style="{StaticResource SelectionList}"
                   SelectedItem="{Binding SelectedFile}"
-                  SelectionMode="Multiple"
-                  ItemContainerStyle="{StaticResource InheritedList}"
                   Grid.Row="0"
                   x:Name="FilesList">
             <ListView.ItemTemplate>
@@ -48,19 +38,19 @@
 
         <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding SignatureFiles.Count, Converter={StaticResource EmptyToBoolConverter}, Mode=OneWay}"
+                    IsEnabled="{Binding SignatureFiles.Count, Converter={StaticResource EmptyToBool}, Mode=OneWay}"
                     Command="{Binding RemoveSignatureCommand}">
                 <materialDesign:PackIcon Kind="ContentSave"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding SignatureFiles.Count, Converter={StaticResource EmptyToBoolConverter}, Mode=OneWay}"
+                    IsEnabled="{Binding SignatureFiles.Count, Converter={StaticResource EmptyToBool}, Mode=OneWay}"
                     Command="{Binding ClearCommand}">
                 <materialDesign:PackIcon Kind="Close"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBoolConverter}}"
+                    IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
                     Command="{Binding DeleteCommand}">
                 <materialDesign:PackIcon Kind="Delete"/>
             </Button>

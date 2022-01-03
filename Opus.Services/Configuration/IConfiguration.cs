@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Opus.Services.Data.Composition;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,42 +8,33 @@ using System.Threading.Tasks;
 namespace Opus.Services.Configuration
 {
     /// <summary>
-    /// Static storage class for configuration services
+    /// Application configuration service
     /// </summary>
-    public static class IConfiguration
+    public interface IConfiguration
     {
         /// <summary>
-        /// Provides functionality for application-wide effects
+        /// Application language in ISO639-1 format
         /// </summary>
-        public interface App
-        {
-            /// <summary>
-            /// Change language preference
-            /// </summary>
-            /// <param name="ISO639_1">Language to assign</param>
-            public void ChangeLanguage(string ISO639_1);
-            /// <summary>
-            /// Return current language code in ISO639-1 format
-            /// </summary>
-            /// <returns></returns>
-            public string GetLanguage();
-        }
+        public string LanguageCode { get; set; }
         /// <summary>
-        /// Provides funtionality for signature-related tasks
+        /// Prefix for extracted files
         /// </summary>
-        public interface Sign
-        {
-            /// <summary>
-            /// Postfix for unsigned files
-            /// </summary>
-            public string SignatureRemovePostfix { get; set; }
-        }
+        public string ExtractionPrefix { get; set; }
         /// <summary>
-        /// Provides functionality for tasks related to file merging
+        /// Suffix for extracted files
         /// </summary>
-        public interface Merge
-        {
-            
-        }
+        public string ExtractionSuffix { get; set; }
+        /// <summary>
+        /// If true, page numbers will be added to a merged document
+        /// </summary>
+        public bool MergeAddPageNumbers { get; set; }
+        /// <summary>
+        /// Include subdirectories when searching for composition files
+        /// </summary>
+        public bool CompositionSearchSubDirectories { get; set; }
+        /// <summary>
+        /// The <see cref="ICompositionProfile"/> to select by default
+        /// </summary>
+        public Guid DefaultProfile { get; set; }
     }
 }

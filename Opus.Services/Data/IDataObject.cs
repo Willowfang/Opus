@@ -14,6 +14,6 @@ namespace Opus.Services.Data
         /// <summary>
         /// Unique identifier of object instance
         /// </summary>
-        public int Id { get; }
+        public Guid Id { get; set; }
     }
 }

@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes">
+
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MaterialDesignTextBox}"
+           x:Key="HintedTextBox">
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="TextAlignment" Value="Left"/>
+        <Setter Property="md:HintAssist.FloatingOffset" Value="0, -22"/>
+        <Setter Property="md:HintAssist.FloatingScale" Value="0.9"/>
+        <Setter Property="md:HintAssist.IsFloating" Value="True"/>
+        <Setter Property="md:ValidationAssist.Background" Value="Transparent"/>
+        <Setter Property="md:TextFieldAssist.HasClearButton" Value="True"/>
+        <Setter Property="Margin" Value="20, 30, 20, 10"/>
+    </Style>
+
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource HintedTextBox}"
+           x:Key="HintedValidationTextBox">
+        <Setter Property="md:ValidationAssist.Suppress" Value="True"/>
+    </Style>
+
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource HintedValidationTextBox}"
+           x:Key="NumberTextBox">
+        <Setter Property="md:TextFieldAssist.HasClearButton" Value="False"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+    </Style>
+
+</ResourceDictionary>

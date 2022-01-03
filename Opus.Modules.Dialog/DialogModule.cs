@@ -12,14 +12,18 @@ namespace Opus.Modules.Dialog
         public void OnInitialized(IContainerProvider containerProvider)
         {
             var dialog = containerProvider.Resolve<IDialogAssist>();
+            var manager = containerProvider.Resolve<IRegionManager>();
+            manager.RegisterViewWithRegion<DialogContentView>(RegionNames.SHELL_DIALOG);
 
-            dialog.DialogRegionName = RegionNames.SHELL_DIALOG;
+            dialog.DialogRegionName = RegionNames.DIALOG_CONTENT;
             dialog.Add<DialogMessageView>(SchemeNames.Dialog.MESSAGE);
+            dialog.Add<DialogProgressView>(SchemeNames.Dialog.PROGRESS);
+
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            
+
         }
     }
 }

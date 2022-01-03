@@ -4,33 +4,31 @@
         <name>Opus.Core</name>
     </assembly>
     <members>
-        <member name="M:Opus.Core.ExtensionMethods.StringExtensions.ReplaceIllegal(System.String)">
+        <member name="T:Opus.Core.Wrappers.BookmarkStorage">
             <summary>
-            Replaces illegal filepath characters in a string and returns a new string
-            </summary>
-            <param name="original"></param>
-            <returns></returns>
-        </member>
-        <member name="T:Opus.Core.Resources.DefaultValues">
-            <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
+            Storage class for displaying and selecting bookmarks
             </summary>
         </member>
-        <member name="P:Opus.Core.Resources.DefaultValues.ResourceManager">
+        <member name="P:Opus.Core.Wrappers.BookmarkStorage.Value">
             <summary>
-              Returns the cached ResourceManager instance used by this class.
+            Bookmark contained in storage
             </summary>
         </member>
-        <member name="P:Opus.Core.Resources.DefaultValues.Culture">
+        <member name="P:Opus.Core.Wrappers.BookmarkStorage.IsSelected">
             <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
+            Is the current bookmark selected
             </summary>
         </member>
-        <member name="P:Opus.Core.Resources.DefaultValues.Identifier">
+        <member name="P:Opus.Core.Wrappers.BookmarkStorage.Range">
             <summary>
-              Looks up a localized string similar to työkappale.
+            Pages between start page and end page as a string
             </summary>
+        </member>
+        <member name="M:Opus.Core.Wrappers.BookmarkStorage.#ctor(CX.PdfLib.Services.Data.ILeveledBookmark)">
+            <summary>
+            Create a new storage class for a bookmark
+            </summary>
+            <param name="value">Bookmark to store</param>
         </member>
     </members>
 </doc>

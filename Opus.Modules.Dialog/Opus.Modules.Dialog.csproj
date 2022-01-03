@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
@@ -9,5 +9,23 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Opus.Core\Opus.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="CodeX-PdfLib">
+      <HintPath>..\..\..\CodeX\Libraries\PdfLib\bin\Debug\net5.0\CodeX-PdfLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\PhaseNames.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PhaseNames.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\PhaseNames.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PhaseNames.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
