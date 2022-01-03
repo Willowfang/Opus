@@ -1,14 +1,13 @@
-﻿using Opus.Services.Configuration;
-using Opus.Services.Data;
-using Opus.Services.Implementation.UI;
+﻿using Opus.Services.Data;
+using Opus.Services.Data.Composition;
 using Opus.Services.UI;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
-namespace Opus.Services.Implementation.Data
+namespace Opus.Services.Implementation.Data.Composition
 {
     public class CompositionOptions : ICompositionOptions
     {
@@ -79,6 +78,40 @@ namespace Opus.Services.Implementation.Data
         public void DeleteProfile(ICompositionProfile profile)
         {
             dataProvider.Delete(profile);
+        }
+
+        public bool ExportProfile(ICompositionProfile profile, string filePath)
+        {
+            if (Path.GetExtension(filePath) != Resources.Files.FileExtensions.Profile)
+                throw new ArgumentException(nameof(filePath));
+
+            try
+            {
+                string json = JsonSerializer.Serialize(profile);
+                File.WriteAllText(filePath, json);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public ICompositionProfile? ImportProfile(string filePath)
+        {
+            if (Path.GetExtension(filePath) != Resources.Files.FileExtensions.Profile)
+                throw new ArgumentException(nameof(filePath));
+
+            try
+            {
+                string json = File.ReadAllText(filePath);
+                ICompositionProfile? profile = JsonSerializer.Deserialize<ICompositionProfile>(json);
+                return profile;
+            }
+            catch
+            {
+                throw new IOException(nameof(ICompositionProfile));
+            }
         }
 
         #endregion

@@ -18,6 +18,7 @@ using Opus.Events;
 using CX.PdfLib.Common;
 using Opus.Services.Implementation.UI.Dialogs;
 using Opus.Services.Data;
+using Opus.Services.Extensions;
 
 namespace Opus.Modules.Action.ViewModels
 {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Opus.Services.Data
+namespace Opus.Services.Data.Composition
 {
     public interface ICompositionOptions
     {
@@ -51,6 +51,9 @@ namespace Opus.Services.Data
         /// </summary>
         /// <param name="profile">Profile to delete</param>
         public void DeleteProfile(ICompositionProfile profile);
+
+        public ICompositionProfile ImportProfile(string filePath);
+        public bool ExportProfile(ICompositionProfile profile, string filePath);
 
         /// <summary>
         /// Create a new <see cref="ICompositionSegment"/> for files

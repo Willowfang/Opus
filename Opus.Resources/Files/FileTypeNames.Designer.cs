@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Opus.Resources.Labels.Dialogs {
+namespace Opus.Resources.Files {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Opus.Resources.Labels.Dialogs {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class CompositionProfile {
+    public class FileTypeNames {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal CompositionProfile() {
+        internal FileTypeNames() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Opus.Resources.Labels.Dialogs {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Opus.Resources.Labels.Dialogs.CompositionProfile", typeof(CompositionProfile).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Opus.Resources.Files.FileTypeNames", typeof(FileTypeNames).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,29 +61,38 @@ namespace Opus.Resources.Labels.Dialogs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Muokkaa profiilia.
+        ///   Looks up a localized string similar to Word.
         /// </summary>
-        public static string EditTitle {
+        public static string Doc {
             get {
-                return ResourceManager.GetString("EditTitle", resourceCulture);
+                return ResourceManager.GetString("Doc", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tuo profiili.
+        ///   Looks up a localized string similar to Word.
         /// </summary>
-        public static string ImportTitle {
+        public static string Docx {
             get {
-                return ResourceManager.GetString("ImportTitle", resourceCulture);
+                return ResourceManager.GetString("Docx", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Uusi profiili.
+        ///   Looks up a localized string similar to PDF.
         /// </summary>
-        public static string NewTitle {
+        public static string Pdf {
             get {
-                return ResourceManager.GetString("NewTitle", resourceCulture);
+                return ResourceManager.GetString("Pdf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profiili.
+        /// </summary>
+        public static string Profile {
+            get {
+                return ResourceManager.GetString("Profile", resourceCulture);
             }
         }
     }

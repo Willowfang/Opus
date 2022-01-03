@@ -1,13 +1,14 @@
-﻿using Opus.Services.Data;
+﻿using Opus.Services.Data.Composition;
+using Opus.Services.Implementation.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Opus.Services.Implementation.Data
+namespace Opus.Services.Implementation.Data.Composition
 {
-    public class EvaluationResult : IFileEvaluationResult
+    public class EvaluationResult : SelectableBase, IFileEvaluationResult
     {
         public OutcomeType Outcome { get; }
         public string? FilePath { get; }

@@ -1,4 +1,5 @@
 ﻿using CX.PdfLib.Services.Data;
+using Prism.Commands;
 using Prism.Mvvm;
 using System.IO;
 

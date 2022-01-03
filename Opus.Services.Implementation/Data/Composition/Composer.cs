@@ -8,13 +8,34 @@ using CX.PdfLib.Common;
 using CX.PdfLib.Services;
 using CX.PdfLib.Services.Data;
 using Opus.Services.Data;
+using Opus.Services.Data.Composition;
 using Opus.Services.Implementation.UI.Dialogs;
 using Opus.Services.Input;
 using Opus.Services.UI;
+using Opus.Services.Extensions;
 
-namespace Opus.Services.Implementation.Data
+namespace Opus.Services.Implementation.Data.Composition
 {
-    public class Composer : ICompositor
+    public class ComposerFactory : IComposerFactory
+    {
+        private IDialogAssist dialogAssist;
+        private IPathSelection input;
+        private IManipulator manipulator;
+
+        public ComposerFactory(IDialogAssist dialogAssist, IPathSelection input, IManipulator manipulator)
+        {
+            this.dialogAssist = dialogAssist;
+            this.input = input;
+            this.manipulator = manipulator;
+        }
+
+        public IComposer Create()
+        {
+            return new Composer(dialogAssist, input, manipulator);
+        }
+    }
+
+    public class Composer : IComposer
     {
         /// <summary>
         /// Service for showing dialogs
@@ -45,10 +66,8 @@ namespace Opus.Services.Implementation.Data
         private CancellationTokenSource cancelSource;
         private CancellationToken cancelToken;
 
-        private string? outputFilePath;
-
         /// <summary>
-        /// Create an implementation instance for <see cref="ICompositor"/>
+        /// Create an implementation instance for <see cref="IComposer"/>
         /// </summary>
         /// <param name="dialogAssist">Service for showing <see cref="IDialog"/> instances</param>
         /// <param name="input">Service for retrieving user input</param>
@@ -79,10 +98,6 @@ namespace Opus.Services.Implementation.Data
         /// <returns></returns>
         public async Task Compose(string directory, ICompositionProfile compositionProfile)
         {
-            string initialPath = Path.Combine(directory, new DirectoryInfo(directory).Name + ".pdf");
-            outputFilePath = await Task.Run(() => input.SaveFile(Resources.UserInput.Descriptions.SelectSaveFile,
-                FileType.PDF, initialPath));
-
             progressDialog = new ProgressDialog(string.Empty)
             {
                 TotalPercent = 0,
@@ -138,7 +153,7 @@ namespace Opus.Services.Implementation.Data
             totalProgress = new Progress<int>(addition =>
             {
                 currentTotal += addition;
-                progressDialog.TotalPercent = currentTotal / totalAmount * 100;
+                progressDialog.TotalPercent = currentTotal * 100 / totalAmount;
             });
 
             List<IMergeInput> inputs = new List<IMergeInput>();
@@ -151,6 +166,17 @@ namespace Opus.Services.Implementation.Data
             }
 
             RemoveEmptyTitles(inputs);
+
+            if (cancelToken.IsCancellationRequested)
+                return;
+
+            await ExecuteComposition(directory, inputs, compositionProfile.AddPageNumbers);
+
+            if (cancelToken.IsCancellationRequested)
+                return;
+
+            progressDialog.Phase = ProgressPhase.Finished.GetResourceString();
+            progressDialog.Part = null;
         }
 
         private async Task<List<IMergeInput>> EvaluateSegment(ICompositionSegment segment, IEnumerable<string> files)
@@ -179,7 +205,7 @@ namespace Opus.Services.Implementation.Data
             partProgress = new Progress<int>(addition =>
             {
                 currentPartTotal += addition;
-                progressDialog.PartPercent = currentPartTotal / files.Count() * 100;
+                progressDialog.PartPercent = currentPartTotal * 100 / files.Count();
             });
 
             List<IFileEvaluationResult> evaluationResults = new List<IFileEvaluationResult>();
@@ -235,19 +261,18 @@ namespace Opus.Services.Implementation.Data
         private async Task<List<IMergeInput>> AskForCorrectFiles(IList<IFileEvaluationResult> results, ICompositionFile fileSegment)
         {
             progressDialog.PartPercent = 0;
-            CompositionFileCountDialog countDialog = new CompositionFileCountDialog(results, fileSegment, input, dialogAssist, Resources.Labels.Dialogs.CompositionFileCount.SearchResult);
+            CompositionFileCountDialog countDialog = new CompositionFileCountDialog(results, fileSegment, input, Resources.Labels.Dialogs.CompositionFileCount.SearchResult);
             await dialogAssist.Show(countDialog);
             if (countDialog.IsCanceled)
             {
                 progressDialog.Close.Execute(null);
                 return new List<IMergeInput>();
             }
-            return AddFileMerges(countDialog.Files.ToList(), fileSegment);
+            return AddFileMerges(countDialog.Results, fileSegment);
         }
 
         private void RemoveEmptyTitles(List<IMergeInput> inputs)
         {
-            
             progressDialog.PartPercent = 0;
             int currentAmount = 0;
 
@@ -280,10 +305,29 @@ namespace Opus.Services.Implementation.Data
             }
         }
 
-        private async Task ExecuteComposition(List<IMergeInput> inputs)
+        private async Task ExecuteComposition(string directory, List<IMergeInput> inputs, bool addPageNumbers)
         {
-            
-            
+            progressDialog.PartPercent = 0;
+            progressDialog.Phase = Resources.Operations.PhaseNames.Merging;
+
+            IProgress<ProgressReport> mergeProgress = new Progress<ProgressReport>(progress =>
+            {
+                progressDialog.PartPercent = progress.Percentage;
+                progressDialog.Phase = progress.CurrentPhase.GetResourceString();
+                totalProgress?.Report(progress.Percentage);
+            });
+
+            string filePath = await Task.Run(() => input.SaveFile(Resources.UserInput.Descriptions.SelectSaveFile,
+                FileType.PDF, new DirectoryInfo(directory).Name + ".pdf"));
+
+            if (string.IsNullOrEmpty(filePath))
+            {
+                progressDialog.Close.Execute(null);
+                return;
+            }
+
+            await manipulator.MergeWithBookmarksAsync(inputs, filePath, addPageNumbers,
+                mergeProgress, cancelToken);
         }
     }
 }

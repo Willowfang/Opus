@@ -1,4 +1,4 @@
-﻿using Opus.Services.Data;
+﻿using Opus.Services.Data.Composition;
 using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Opus.Services.Implementation.Data
+namespace Opus.Services.Implementation.Data.Composition
 {
     public abstract class CompositionSegment : BindableBase, ICompositionSegment
     {

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Opus.Resources.Labels.Dialogs {
+namespace Opus.Resources.Buttons.Composition {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Opus.Resources.Labels.Dialogs {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class CompositionProfile {
+    public class Menus {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal CompositionProfile() {
+        internal Menus() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Opus.Resources.Labels.Dialogs {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Opus.Resources.Labels.Dialogs.CompositionProfile", typeof(CompositionProfile).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Opus.Resources.Buttons.Composition.Menus", typeof(Menus).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,29 +61,56 @@ namespace Opus.Resources.Labels.Dialogs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Muokkaa profiilia.
+        ///   Looks up a localized string similar to Kopioi.
         /// </summary>
-        public static string EditTitle {
+        public static string CopyProfile {
             get {
-                return ResourceManager.GetString("EditTitle", resourceCulture);
+                return ResourceManager.GetString("CopyProfile", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tuo profiili.
+        ///   Looks up a localized string similar to Vie.
         /// </summary>
-        public static string ImportTitle {
+        public static string ExportProfile {
             get {
-                return ResourceManager.GetString("ImportTitle", resourceCulture);
+                return ResourceManager.GetString("ExportProfile", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Uusi profiili.
+        ///   Looks up a localized string similar to Tuo.
         /// </summary>
-        public static string NewTitle {
+        public static string ImportProfile {
             get {
-                return ResourceManager.GetString("NewTitle", resourceCulture);
+                return ResourceManager.GetString("ImportProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uusi.
+        /// </summary>
+        public static string NewProfile {
+            get {
+                return ResourceManager.GetString("NewProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tiedosto.
+        /// </summary>
+        public static string NewSegmentFile {
+            get {
+                return ResourceManager.GetString("NewSegmentFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Otsikko.
+        /// </summary>
+        public static string NewSegmentTitle {
+            get {
+                return ResourceManager.GetString("NewSegmentTitle", resourceCulture);
             }
         }
     }

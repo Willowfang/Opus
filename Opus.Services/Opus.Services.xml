@@ -36,71 +36,69 @@
         </member>
         <member name="P:Opus.Services.Configuration.IConfiguration.DefaultProfile">
             <summary>
-            The <see cref="T:Opus.Services.Data.ICompositionProfile"/> to select by default
+            The <see cref="T:Opus.Services.Data.Composition.ICompositionProfile"/> to select by default
             </summary>
         </member>
-        <member name="P:Opus.Services.Data.ICompositionFile.NameFromFile">
+        <member name="P:Opus.Services.Data.Composition.ICompositionFile.NameFromFile">
             <summary>
             Get name for segment from the filename
             </summary>
         </member>
-        <member name="P:Opus.Services.Data.ICompositionFile.SearchTerm">
+        <member name="P:Opus.Services.Data.Composition.ICompositionFile.SearchExpression">
             <summary>
             The term to search files with
             </summary>
         </member>
-        <member name="M:Opus.Services.Data.ICompositionFile.SetSearchTerm(System.String)">
+        <member name="P:Opus.Services.Data.Composition.ICompositionFile.SearchExpressionString">
             <summary>
             Set the search term. Creates a compiled regex for faster searching.
             </summary>
-            <param name="regex">Regex string</param>
         </member>
-        <member name="P:Opus.Services.Data.ICompositionFile.ToRemove">
+        <member name="P:Opus.Services.Data.Composition.ICompositionFile.IgnoreExpression">
             <summary>
             Parts of the filename to exclude from search and final file name
             </summary>
         </member>
-        <member name="M:Opus.Services.Data.ICompositionFile.SetToRemove(System.String)">
+        <member name="P:Opus.Services.Data.Composition.ICompositionFile.IgnoreExpressionString">
             <summary>
             Set the part to ignore and remove. Creates a compiled regex for faster removal.
             </summary>
-            <param name="regex"></param>
         </member>
-        <member name="P:Opus.Services.Data.ICompositionFile.MinCount">
+        <member name="P:Opus.Services.Data.Composition.ICompositionFile.MinCount">
             <summary>
             Minimum required number of documents fulfilling the conditions.
             0 indicates no documents matching the conditions need to be found.
             </summary>
         </member>
-        <member name="P:Opus.Services.Data.ICompositionFile.MaxCount">
+        <member name="P:Opus.Services.Data.Composition.ICompositionFile.MaxCount">
             <summary>
             Maximun number of documents fulfilling the conditions.
             0 indicates an unlimited number of documents.
             </summary>
         </member>
-        <member name="P:Opus.Services.Data.ICompositionFile.Example">
+        <member name="P:Opus.Services.Data.Composition.ICompositionFile.Example">
             <summary>
             Example file name for displaying to user
             </summary>
         </member>
-        <member name="M:Opus.Services.Data.ICompositionFile.EvaluateFile(System.String)">
+        <member name="M:Opus.Services.Data.Composition.ICompositionFile.EvaluateFile(System.String)">
             <summary>
-            Evaluate a file for a match against <see cref="P:Opus.Services.Data.ICompositionFile.SearchTerm"/>
+            Evaluate a file for a match against <see cref="P:Opus.Services.Data.Composition.ICompositionFile.SearchExpression"/>
             </summary>
             <param name="filePath"></param>
             <returns></returns>
         </member>
-        <member name="M:Opus.Services.Data.ICompositionOptions.CreateProfile(System.String)">
+        <member name="M:Opus.Services.Data.Composition.ICompositionOptions.CreateProfile(System.String)">
             <summary>
-            Create a new <see cref="T:Opus.Services.Data.ICompositionProfile"/>
+            Create a new <see cref="T:Opus.Services.Data.Composition.ICompositionProfile"/>
             with default settings
             </summary>
             <param name="name">Name of the profile</param>
             <returns></returns>
         </member>
-        <member name="M:Opus.Services.Data.ICompositionOptions.CreateProfile(System.String,System.Boolean,System.Boolean)">
+        <member name="M:Opus.Services.Data.Composition.ICompositionOptions.CreateProfile(System.String,System.Boolean,System.Boolean)">
             <summary>
-            Create a new <see cref="T:Opus.Services.Data.ICompositionProfile"/>
+            Create a new <see cref="T:Opus.Services.Data.Composition.ICompositionProfile"/>
             with an empty list of segments
             </summary>
             <param name="name">Name of the profile</param>
@@ -108,9 +106,9 @@
             <param name="isEditable">The user can edit the profile</param>
             <returns></returns>
         </member>
-        <member name="M:Opus.Services.Data.ICompositionOptions.CreateProfile(System.String,System.Boolean,System.Boolean,System.Collections.Generic.List{Opus.Services.Data.ICompositionSegment})">
+        <member name="M:Opus.Services.Data.Composition.ICompositionOptions.CreateProfile(System.String,System.Boolean,System.Boolean,System.Collections.Generic.List{Opus.Services.Data.Composition.ICompositionSegment})">
             <summary>
-            Create a new <see cref="T:Opus.Services.Data.ICompositionProfile"/>
+            Create a new <see cref="T:Opus.Services.Data.Composition.ICompositionProfile"/>
             </summary>
             <param name="name">Name of the profile</param>
             <param name="addPageNumbers">Add page numbers to final document</param>
@@ -118,77 +116,77 @@
             <param name="segments">Segments in the profile</param>
             <returns></returns>
         </member>
-        <member name="M:Opus.Services.Data.ICompositionOptions.GetProfiles">
+        <member name="M:Opus.Services.Data.Composition.ICompositionOptions.GetProfiles">
             <summary>
-            Return all <see cref="T:Opus.Services.Data.ICompositionProfile"/>s from the data provider
+            Return all <see cref="T:Opus.Services.Data.Composition.ICompositionProfile"/>s from the data provider
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Opus.Services.Data.ICompositionOptions.SaveProfile(Opus.Services.Data.ICompositionProfile)">
+        <member name="M:Opus.Services.Data.Composition.ICompositionOptions.SaveProfile(Opus.Services.Data.Composition.ICompositionProfile)">
             <summary>
-            Save the <see cref="T:Opus.Services.Data.ICompositionProfile"/> with the data provider
+            Save the <see cref="T:Opus.Services.Data.Composition.ICompositionProfile"/> with the data provider
             </summary>
             <param name="profile">Profile to save</param>
             <returns></returns>
         </member>
-        <member name="M:Opus.Services.Data.ICompositionOptions.DeleteProfile(Opus.Services.Data.ICompositionProfile)">
+        <member name="M:Opus.Services.Data.Composition.ICompositionOptions.DeleteProfile(Opus.Services.Data.Composition.ICompositionProfile)">
             <summary>
-            Delete an <see cref="T:Opus.Services.Data.ICompositionProfile"/> via the data provider
+            Delete an <see cref="T:Opus.Services.Data.Composition.ICompositionProfile"/> via the data provider
             </summary>
             <param name="profile">Profile to delete</param>
         </member>
-        <member name="M:Opus.Services.Data.ICompositionOptions.CreateFileSegment(System.String)">
+        <member name="M:Opus.Services.Data.Composition.ICompositionOptions.CreateFileSegment(System.String)">
             <summary>
-            Create a new <see cref="T:Opus.Services.Data.ICompositionSegment"/> for files
+            Create a new <see cref="T:Opus.Services.Data.Composition.ICompositionSegment"/> for files
             </summary>
             <param name="segmentName">Name of the segment</param>
             <returns></returns>
         </member>
-        <member name="M:Opus.Services.Data.ICompositionOptions.CreateTitleSegment(System.String)">
+        <member name="M:Opus.Services.Data.Composition.ICompositionOptions.CreateTitleSegment(System.String)">
             <summary>
-            Create a new <see cref="T:Opus.Services.Data.ICompositionSegment"/> for a title
+            Create a new <see cref="T:Opus.Services.Data.Composition.ICompositionSegment"/> for a title
             </summary>
             <param name="segmentName">Name of the segment</param>
             <returns></returns>
         </member>
-        <member name="T:Opus.Services.Data.ICompositionProfile">
+        <member name="T:Opus.Services.Data.Composition.ICompositionProfile">
             <summary>
             A profile for compositing a pdf-document from
             given files
             </summary>
         </member>
-        <member name="P:Opus.Services.Data.ICompositionProfile.ProfileName">
+        <member name="P:Opus.Services.Data.Composition.ICompositionProfile.ProfileName">
             <summary>
             Name of the profile
             </summary>
         </member>
-        <member name="P:Opus.Services.Data.ICompositionProfile.Segments">
+        <member name="P:Opus.Services.Data.Composition.ICompositionProfile.Segments">
             <summary>
             Segments in the current profile in the order they
             are to be included
             </summary>
         </member>
-        <member name="P:Opus.Services.Data.ICompositionProfile.AddPageNumbers">
+        <member name="P:Opus.Services.Data.Composition.ICompositionProfile.AddPageNumbers">
             <summary>
             If true, page numbers will be added to the new document
             </summary>
         </member>
-        <member name="P:Opus.Services.Data.ICompositionProfile.IsEditable">
+        <member name="P:Opus.Services.Data.Composition.ICompositionProfile.IsEditable">
             <summary>
             If true, the user can edit this profile
             </summary>
         </member>
-        <member name="T:Opus.Services.Data.ICompositionSegment">
+        <member name="T:Opus.Services.Data.Composition.ICompositionSegment">
             <summary>
-            A segment of a <see cref="T:Opus.Services.Data.ICompositionProfile"/>
+            A segment of a <see cref="T:Opus.Services.Data.Composition.ICompositionProfile"/>
             </summary>
         </member>
-        <member name="P:Opus.Services.Data.ICompositionSegment.DisplayName">
+        <member name="P:Opus.Services.Data.Composition.ICompositionSegment.DisplayName">
             <summary>
             Name to display to the user
             </summary>
         </member>
-        <member name="P:Opus.Services.Data.ICompositionSegment.SegmentName">
+        <member name="P:Opus.Services.Data.Composition.ICompositionSegment.SegmentName">
             <summary>
             Name of the segment
             </summary>

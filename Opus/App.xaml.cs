@@ -18,6 +18,9 @@ using CX.PdfLib.iText7;
 using Opus.Services.Input;
 using Opus.Services.Implementation.Input;
 using System.IO;
+using Opus.Services.Implementation.UI.Dialogs;
+using Opus.Services.Data.Composition;
+using Opus.Services.Implementation.Data.Composition;
 
 namespace Opus
 {
@@ -37,6 +40,7 @@ namespace Opus
             initialContainer = extension;
             RegisterTypes(extension);
             SetLanguage(initialContainer);
+            UpdateProfiles(initialContainer);
 
             // If started with arguments, display no UI,
             // run command and exit.
@@ -78,6 +82,35 @@ namespace Opus
             Thread.CurrentThread.CurrentUICulture = ci;
         }
 
+        private void UpdateProfiles(IContainerProvider container)
+        {
+            ICompositionOptions options = container.Resolve<ICompositionOptions>();
+
+            bool errorFlag = false;
+
+            if (Directory.Exists(FilePaths.PROFILE_DIRECTORY) == false) return;
+
+            foreach (string filePath in Directory.GetFiles(FilePaths.PROFILE_DIRECTORY))
+            {
+                try
+                {
+                    ICompositionProfile profile = options.ImportProfile(filePath);
+                    options.SaveProfile(profile);
+                    File.Delete(filePath);
+                }
+                catch
+                {
+                    errorFlag = true;
+                }
+            }
+
+            if (errorFlag)
+            {
+                MessageBox.Show(Opus.Resources.Messages.StartUp.ProfileUpdateFailed,
+                        Opus.Resources.Labels.General.Error);
+            }
+        }
+
         // Overrides for Prism application methods
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
@@ -106,6 +139,7 @@ namespace Opus
             containerRegistry.RegisterInstance<IDataProvider>(provider);
             containerRegistry.RegisterSingleton<ISignatureOptions, SignatureOptions>();
             containerRegistry.RegisterSingleton<ICompositionOptions, CompositionOptions>();
+            containerRegistry.Register<IComposerFactory, ComposerFactory>();
         }
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {

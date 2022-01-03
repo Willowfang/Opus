@@ -90,9 +90,15 @@ namespace Opus.Services.UI
 
         public ReorderCollection() { }
         public ReorderCollection(IEnumerable<T> items)
-            : base(items) { }
+            : base(items) 
+        {
+            CanReorder = true;
+        }
         public ReorderCollection(List<T> items)
-            : base(items) { }
+            : base(items) 
+        {
+            CanReorder = true;
+        }
 
         protected void SetProperty<TValue>(ref TValue field, TValue value, [CallerMemberName] string propertyName = null)
         {

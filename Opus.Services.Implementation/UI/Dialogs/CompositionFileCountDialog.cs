@@ -1,48 +1,66 @@
-﻿using Opus.Services.Data;
-using Opus.Services.Implementation.Data;
-using Opus.Services.Implementation.UI;
+﻿using Opus.Services.Data.Composition;
+using Opus.Services.Extensions;
+using Opus.Services.Implementation.Data.Composition;
 using Opus.Services.Input;
 using Opus.Services.UI;
 using Prism.Commands;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Opus.Services.Implementation.UI.Dialogs
 {
     public class CompositionFileCountDialog : DialogBase, IDialog
     {
-        public ObservableCollection<IFileEvaluationResult> Files { get; set; }
+        public ObservableCollection<EvaluationWrapper> Files { get; set; }
         public ICompositionFile Segment { get; set; }
 
         private IPathSelection input;
-        private IDialogAssist dialog;
 
-        private IFileEvaluationResult? selectedFile;
-        public IFileEvaluationResult? SelectedFile
+        private EvaluationWrapper? selectedFile;
+        public EvaluationWrapper? SelectedFile
         {
             get => selectedFile;
             set => SetProperty(ref selectedFile, value);
         }
 
         public DelegateCommand AddFiles { get; }
-        public DelegateCommand RemoveFile { get; }
+        public DelegateCommand AddFile { get; }
+        public DelegateCommand RemoveFiles { get; }
+
+        public bool SingleSelection { get; }
+        public string DialogTextContent { get; }
+
+        public IList<IFileEvaluationResult> Results
+        {
+            get => Files.Select(x => x.Result).ToList();
+        }
 
         public CompositionFileCountDialog(IList<IFileEvaluationResult> files, ICompositionFile fileSegment, 
-            IPathSelection input, IDialogAssist dialog, string dialogTitle)
+            IPathSelection input, string dialogTitle)
             : base(dialogTitle)
         {
             AddFiles = new DelegateCommand(ExecuteAddFiles);
-            RemoveFile = new DelegateCommand(ExecuteRemoveFile);
-            Files = new ObservableCollection<IFileEvaluationResult>(files);
+            RemoveFiles = new DelegateCommand(ExecuteRemoveFiles);
+            AddFile = new DelegateCommand(ExecuteAddFile);
+            Files = new ObservableCollection<EvaluationWrapper>();
+            foreach (var file in files)
+            {
+                Files.Add(new EvaluationWrapper(file));
+            }
             Segment = fileSegment;
             this.input = input;
-            this.dialog = dialog;
             Files.CollectionChanged += FilePaths_CollectionChanged;
+
+            DialogTextContent = Resources.Validation.Composition.WrongNumberOfFiles;
+
+            if (files.Count == 0 && fileSegment.MinCount == 1 &&
+                fileSegment.MaxCount == 1)
+            {
+                SingleSelection = true;
+                DialogTextContent = Resources.Validation.Composition.OneFileNotFound;
+            }
         }
 
         private void FilePaths_CollectionChanged(object? sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
@@ -54,28 +72,31 @@ namespace Opus.Services.Implementation.UI.Dialogs
         {
             string[] paths = input.OpenFiles(Resources.UserInput.Descriptions.SelectOpenFiles,
                 new List<FileType>() { FileType.PDF, FileType.Word });
-            int pathCount = paths.Count();
-            if (pathCount + Files.Count > Segment.MaxCount)
-            {
-                dialog.Show(new MessageDialog(Resources.Labels.General.Error, string.Format(
-                    Resources.Validation.Composition.TooManyFilesSelected, Segment.SegmentName, Segment.MaxCount)));
-                return;
-            }
 
             foreach (string path in paths)
             {
-                Files.Add(EvaluationResult.Match(path, Path.GetFileNameWithoutExtension(path)));
+                Files.Add(new EvaluationWrapper(path));
             }
         }
 
-        private void ExecuteRemoveFile()
+        private void ExecuteAddFile()
         {
-            if (SelectedFile == null)
-            {
-                return;
-            }    
+            string path = input.OpenFile(Resources.UserInput.Descriptions.SelectOpenFile,
+                FileType.PDF);
 
-            Files.Remove(SelectedFile);
+            if (Files.Count == 0)
+            {
+                Files.Add(new EvaluationWrapper(path));
+            }
+            else
+            {
+                Files[0] = new EvaluationWrapper(path);
+            }
+        }
+
+        private void ExecuteRemoveFiles()
+        {
+            Files.RemoveAll(x => x.IsSelected);
         }
 
         protected override bool SaveCanExecute()

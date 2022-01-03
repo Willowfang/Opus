@@ -79,6 +79,15 @@ namespace Opus.Resources.Validation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Etsintälausetta vastaavaa tiedostoa ei löydetty. Valitse oikea tiedosto..
+        /// </summary>
+        public static string OneFileNotFound {
+            get {
+                return ResourceManager.GetString("OneFileNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Samanniminen profiili on jo olemassa.
         /// </summary>
         public static string ProfileNameExists {
@@ -88,11 +97,20 @@ namespace Opus.Resources.Validation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Osion &apos;{0}&apos; tiedostojen enimmäismäärä on {1}..
+        ///   Looks up a localized string similar to Hyväksyttyjen tiedostojen määrä on korkeintaan {0}..
         /// </summary>
         public static string TooManyFilesSelected {
             get {
                 return ResourceManager.GetString("TooManyFilesSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Oikeaa määrää hakua vastaavia tiedostoja ei löydetty valitusta kansiosta. Valitse oikeat tiedostot..
+        /// </summary>
+        public static string WrongNumberOfFiles {
+            get {
+                return ResourceManager.GetString("WrongNumberOfFiles", resourceCulture);
             }
         }
     }

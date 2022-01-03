@@ -79,6 +79,60 @@ namespace Opus.Resources.Messages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Profiilin vieminen epäonnistui..
+        /// </summary>
+        public static string ProfileExportFailed {
+            get {
+                return ResourceManager.GetString("ProfileExportFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profiilin vieminen onnistui!.
+        /// </summary>
+        public static string ProfileExportSuccess {
+            get {
+                return ResourceManager.GetString("ProfileExportSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Samalla nimellä on jo olemassa profiili. Tuodulle profiilille on valittava uusi nimi..
+        /// </summary>
+        public static string ProfileImportExists {
+            get {
+                return ResourceManager.GetString("ProfileImportExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profiilitiedoston lukeminen epäonnistui..
+        /// </summary>
+        public static string ProfileImportFailed {
+            get {
+                return ResourceManager.GetString("ProfileImportFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profiilin tuominen onnistui!.
+        /// </summary>
+        public static string ProfileImportSuccess {
+            get {
+                return ResourceManager.GetString("ProfileImportSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tiedostolla on väärä pääte. Päätteen on oltava {0}..
+        /// </summary>
+        public static string ProfileWrongExtension {
+            get {
+                return ResourceManager.GetString("ProfileWrongExtension", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Osio poistetaan. Haluatko jatkaa?.
         /// </summary>
         public static string SegmentDeleteConfirmation {

@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Update="Buttons\Composition\Menus.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Menus.resx</DependentUpon>
+    </Compile>
     <Compile Update="Buttons\General.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -14,6 +19,16 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>DefaultValues.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Files\FileExtensions.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FileExtensions.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Files\FileTypeNames.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FileTypeNames.resx</DependentUpon>
     </Compile>
     <Compile Update="Hyperlinks\Hyperlinks.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -105,6 +120,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>MainWindow.resx</DependentUpon>
     </Compile>
+    <Compile Update="Messages\StartUp.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>StartUp.resx</DependentUpon>
+    </Compile>
     <Compile Update="Operations\PhaseNames.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -133,6 +153,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Buttons\Composition\Menus.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Menus.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Buttons\General.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>General.Designer.cs</LastGenOutput>
@@ -140,6 +164,14 @@
     <EmbeddedResource Update="DefaultValues\DefaultValues.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>DefaultValues.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Files\FileExtensions.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FileExtensions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Files\FileTypeNames.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FileTypeNames.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Hyperlinks\Hyperlinks.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -212,6 +244,10 @@
     <EmbeddedResource Update="Messages\MainWindow.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MainWindow.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Messages\StartUp.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>StartUp.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Operations\PhaseNames.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

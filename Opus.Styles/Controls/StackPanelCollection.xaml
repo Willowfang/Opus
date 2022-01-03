@@ -5,7 +5,7 @@
     <Style TargetType="{x:Type StackPanel}" x:Key="DialogButtonStackPanel">
         <Setter Property="Orientation" Value="Horizontal"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="Margin" Value="10, 20, 10, 16"/>
+        <Setter Property="Margin" Value="10, 20, 10, 20"/>
     </Style>
 
     <Style TargetType="{x:Type StackPanel}" BasedOn="{StaticResource DialogButtonStackPanel}"

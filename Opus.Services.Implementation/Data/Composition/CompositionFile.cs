@@ -1,11 +1,11 @@
-﻿using Opus.Services.Data;
+﻿using Opus.Services.Data.Composition;
 using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace Opus.Services.Implementation.Data
+namespace Opus.Services.Implementation.Data.Composition
 {
     /// <summary>
     /// For comments, see <see cref="ICompositionSegment"/>
@@ -44,16 +44,43 @@ namespace Opus.Services.Implementation.Data
         }
         public bool NameFromFile { get; set; }
 
-        public Regex? SearchTerm { get; private set; }
-        public void SetSearchTerm(string regex)
+        private Regex? searchExpression;
+        public Regex? SearchExpression
         {
-            SearchTerm = new Regex(regex, RegexOptions.Compiled);
+            get => searchExpression;
         }
-        public Regex? ToRemove { get; private set; }
-        public void SetToRemove(string regex)
+        private string? searchExpressionString;
+        public string? SearchExpressionString
         {
-            ToRemove = new Regex(regex, RegexOptions.Compiled);
+            get => searchExpressionString;
+            set
+            {
+                searchExpressionString = value;
+                if (value != null)
+                    searchExpression = new Regex(value, RegexOptions.Compiled);
+                else
+                    searchExpression = null;
+            }
         }
+        private Regex? ignoreExpression;
+        public Regex? IgnoreExpression
+        {
+            get => ignoreExpression;
+        }
+        private string? ignoreExpressionString;
+        public string? IgnoreExpressionString
+        {
+            get => ignoreExpressionString;
+            set
+            {
+                ignoreExpressionString = value;
+                if (value != null)
+                    ignoreExpression = new Regex(value, RegexOptions.Compiled);
+                else
+                    ignoreExpression = null;
+            }
+        }
+
         public int MinCount { get; set; }
         public int MaxCount { get; set; }
         public string? Example { get; set; }
@@ -69,15 +96,15 @@ namespace Opus.Services.Implementation.Data
 
         public IFileEvaluationResult EvaluateFile(string filePath)
         {
-            if (SearchTerm == null)
-                throw new NullReferenceException(nameof(SearchTerm));
+            if (SearchExpression == null)
+                throw new NullReferenceException(nameof(SearchExpression));
 
             string name = Path.GetFileNameWithoutExtension(filePath);
-            if (ToRemove != null)
+            if (IgnoreExpression != null)
             {
-                name = ToRemove.Replace(name, "");
+                name = IgnoreExpression.Replace(name, "");
             }
-            if (SearchTerm.IsMatch(name))
+            if (SearchExpression.IsMatch(name))
             {
                 return EvaluationResult.Match(filePath, name);
             }

@@ -61,6 +61,15 @@ namespace Opus.Resources.Labels.Dialogs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Profiilin nimeäminen.
+        /// </summary>
+        public static string CompositionImportProfileExists {
+            get {
+                return ResourceManager.GetString("CompositionImportProfileExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Profiilin poistaminen.
         /// </summary>
         public static string DeleteCompositionProfileTitle {

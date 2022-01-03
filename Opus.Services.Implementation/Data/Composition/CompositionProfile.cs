@@ -1,8 +1,9 @@
 ﻿using Opus.Services.Data;
+using Opus.Services.Data.Composition;
 using Opus.Services.UI;
 using Prism.Mvvm;
 
-namespace Opus.Services.Implementation.Data
+namespace Opus.Services.Implementation.Data.Composition
 {
     /// <summary>
     /// For comments, see <see cref="ICompositionProfile"/>
@@ -49,7 +50,7 @@ namespace Opus.Services.Implementation.Data
 
         public override int GetHashCode()
         {
-            return ProfileName != null ? ProfileName.GetHashCode() : this.Id.GetHashCode();
+            return ProfileName != null ? ProfileName.GetHashCode() : Id.GetHashCode();
         }
 
         protected override bool CheckEquality(CompositionProfile current, CompositionProfile other)

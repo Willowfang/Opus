@@ -1,4 +1,5 @@
-﻿using Opus.Services.UI;
+﻿using Opus.Services.Helpers;
+using Opus.Services.UI;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -6,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Opus.Services.Data
+namespace Opus.Services.Data.Composition
 {
     /// <summary>
     /// A profile for compositing a pdf-document from
     /// given files
     /// </summary>
+    [JsonInterfaceConverter(typeof(InterfaceConverter<ICompositionProfile>))]
     public interface ICompositionProfile : IDataObject
     {
         /// <summary>

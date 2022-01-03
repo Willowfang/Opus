@@ -13,5 +13,6 @@
     <c:LevelToFontWeightConverter x:Key="LevelToFontWeight"/>
     <c:BooleanAllNegative x:Key="BooleanAllNegative"/>
     <c:BooleanToFontWeight x:Key="NegativeToBold"/>
+    <c:NullToString x:Key="NullToString"/>
 
 </ResourceDictionary>

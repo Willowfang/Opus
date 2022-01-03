@@ -10,7 +10,8 @@ namespace Opus.Services.Input
     public enum FileType
     {
         PDF,
-        Word
+        Word,
+        Profile
     }
 
     /// <summary>

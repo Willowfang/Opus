@@ -18,5 +18,12 @@
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="Margin" Value="20, 15, 20, 10"/>
     </Style>
-    
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="SegmentHeaderText"
+                   BasedOn="{StaticResource MaterialDesignTextBlock}">
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidBrush}"/>
+    </Style>
+
 </ResourceDictionary>

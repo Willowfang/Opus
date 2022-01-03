@@ -79,6 +79,15 @@ namespace Opus.Resources.Buttons {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Vahvista.
+        /// </summary>
+        public static string Confirm {
+            get {
+                return ResourceManager.GetString("Confirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to OK.
         /// </summary>
         public static string OK {

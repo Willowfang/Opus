@@ -2,9 +2,11 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:dialog="clr-namespace:Opus.Services.Implementation.UI.Dialogs;assembly=Opus.Services.Implementation"
                     xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+                    xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
                     xmlns:resButtons="clr-namespace:Opus.Resources.Buttons;assembly=Opus.Resources"
                     xmlns:resDialog="clr-namespace:Opus.Resources.Labels.Dialogs;assembly=Opus.Resources"
-                    xmlns:resLabels="clr-namespace:Opus.Resources.Labels;assembly=Opus.Resources">
+                    xmlns:resLabels="clr-namespace:Opus.Resources.Labels;assembly=Opus.Resources"
+                    xmlns:resValidation="clr-namespace:Opus.Resources.Validation;assembly=Opus.Resources">
 
     <!--MESSAGE DIALOG-->
     <DataTemplate DataType="{x:Type dialog:MessageDialog}">
@@ -13,7 +15,9 @@
                        Text="{Binding DialogTitle}"/>
             <TextBlock Style="{DynamicResource DialogContentTextBlock}"
                        Text="{Binding Content}"/>
-            <Button Style="{StaticResource DialogOkButton}"/>
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogOkButton}"/>
+            </StackPanel>
         </StackPanel>
     </DataTemplate>
 
@@ -25,7 +29,8 @@
             <TextBlock Style="{DynamicResource DialogContentTextBlock}"
                        Text="{Binding Content}"/>
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
-                <Button Style="{StaticResource DialogSaveButton}"/>
+                <Button Style="{StaticResource DialogSaveButton}"
+                        Content="{x:Static resButtons:General.Confirm}"/>
                 <Button Style="{StaticResource DialogCancelButton}"/>
             </StackPanel>
         </StackPanel>
@@ -41,11 +46,11 @@
                      FontSize="16"
                      Width="250"
                      x:Name="TitleText"
-                     md:HintAssist.Hint="{x:Static resDialog:FileTitle.Edit}"/>
+                     md:HintAssist.Hint="{x:Static resLabels:General.Name}"/>
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}"
                         IsEnabled="{Binding ElementName=TitleText, Path=(Validation.HasError), 
-                            Converter={StaticResource InvertBooleanConverter}}"/>
+                        Converter={StaticResource InvertBooleanConverter}}"/>
                 <Button Style="{StaticResource DialogCancelButton}"/>
             </StackPanel>
         </StackPanel>
@@ -65,14 +70,14 @@
             <StackPanel Style="{StaticResource NumberFieldStackPanel}">
                 <TextBox Style="{DynamicResource NumberTextBox}"
                          Text="{Binding StartPage, UpdateSourceTrigger=PropertyChanged, 
-                            ValidatesOnDataErrors=True, ValidatesOnExceptions=True}"
+                         ValidatesOnDataErrors=True, ValidatesOnExceptions=True}"
                          Width="70"
                          Name="StartPageText"
                          md:HintAssist.Hint="{x:Static resLabels:General.Start}"/>
                 <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
                 <TextBox Style="{DynamicResource NumberTextBox}"
                          Text="{Binding EndPage, UpdateSourceTrigger=PropertyChanged, 
-                            ValidatesOnDataErrors=True, ValidatesOnExceptions=True}"
+                         ValidatesOnDataErrors=True, ValidatesOnExceptions=True}"
                          Width="70"
                          Name="EndPageText"
                          md:HintAssist.Hint="{x:Static resLabels:General.End}"/>
@@ -128,7 +133,7 @@
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}"
                         IsEnabled="{Binding ElementName=SuffixText, Path=(Validation.HasError), 
-                            Converter={StaticResource InvertBooleanConverter}}"/>
+                        Converter={StaticResource InvertBooleanConverter}}"/>
                 <Button Style="{StaticResource DialogCancelButton}"/>
             </StackPanel>
         </StackPanel>
@@ -237,13 +242,13 @@
                     <TextBox Style="{DynamicResource HintedTextBox}"
                              md:HintAssist.Hint="{x:Static resLabels:General.SearchExpression}"
                              Text="{Binding SearchTerm, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
-                                ValidatesOnDataErrors=True}"
+                             ValidatesOnDataErrors=True}"
                              Name="CompositionFileSearchExpressionText"
                              Width="200"/>
                     <TextBox Style="{DynamicResource HintedTextBox}"
                              md:HintAssist.Hint="{x:Static resLabels:General.IgnoreExpression}"
                              Text="{Binding ToRemove, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
-                                ValidatesOnDataErrors=True}"
+                             ValidatesOnDataErrors=True}"
                              Name="CompositionFileIgnoreExpressionText"
                              Width="200"/>
                 </StackPanel>
@@ -294,13 +299,135 @@
             <TextBox Style="{DynamicResource HintedValidationTextBox}"
                      md:HintAssist.Hint="{x:Static resLabels:General.Name}"
                      Text="{Binding SegmentName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
-                        ValidatesOnDataErrors=True}"
+                     ValidatesOnDataErrors=True}"
                      Name="CompositionTitleNameText"
                      Width="200"/>
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}"
                         IsEnabled="{Binding ElementName=CompositionTitleNameText, Path=(Validation.HasError),
-                            Converter={StaticResource InvertBooleanConverter}}"/>
+                        Converter={StaticResource InvertBooleanConverter}}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+    <!--COMPOSITION FILE COUNT DIALOG-->
+    <DataTemplate DataType="{x:Type dialog:CompositionFileCountDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding Segment.SegmentName}"/>
+            <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       FontSize="14" Width="350"
+                       TextAlignment="Justify"
+                       TextWrapping="Wrap"
+                       Text="{Binding DialogTextContent}"
+                       Margin="15, 15, 15, 0"/>
+            <StackPanel Orientation="Horizontal"
+                        Margin="15"
+                        HorizontalAlignment="Center"
+                        Visibility="{Binding SingleSelection, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <Button Style="{DynamicResource MaterialDesignOutlinedButton}"
+                        Margin="0, 0, 15, 0"
+                        Width="260"
+                        VerticalContentAlignment="Center"
+                        VerticalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        ToolTip="{Binding Files[0].FilePath}"
+                        Command="{Binding Files[0].OpenFile}">
+                    <TextBlock FontSize="14"
+                               Text="{Binding Files[0].FileName}"
+                               TextTrimming="CharacterEllipsis"/>
+                </Button>
+                <Button Style="{DynamicResource MaterialDesignIconButton}"
+                        Command="{Binding AddFile}">
+                    <md:PackIcon Kind="Folder" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
+                </Button>
+            </StackPanel>
+            <Grid Margin="15, 15, 15, 0"
+                  Visibility="{Binding SingleSelection, Converter={StaticResource BooleanToOppositeVisibility}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Column="0"
+                            Grid.Row="0"
+                            Grid.ColumnSpan="2"
+                            HorizontalAlignment="Center">
+                    <TextBlock Style="{StaticResource SegmentHeaderText}"
+                               Text="{x:Static resDialog:CompositionFileCount.FilesFound}"
+                               HorizontalAlignment="Center"
+                               Margin="10, 0, 10, 10"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Margin="10, 0, 10, 0">
+                            <Run Text="{x:Static resDialog:CompositionFileCount.MinimumFiles}"/>
+                            <Run Text="{Binding Segment.MinCount}" FontWeight="ExtraBold"/>
+                        </TextBlock>
+                        <TextBlock Margin="10, 0, 10, 0">
+                            <Run Text="{x:Static resDialog:CompositionFileCount.MaximumFiles}"/>
+                            <Run Text="{Binding Segment.MaxCount, StringFormat={}{0:#;;&#x221E;}}" FontWeight="ExtraBold"/>
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+                <Separator Margin="15" Grid.Row="1" Grid.Column="0"
+                           Grid.ColumnSpan="2" Style="{DynamicResource MaterialDesignSeparator}"/>
+                <ListView ItemsSource="{Binding Files}"
+                          Grid.Column="0"
+                          Grid.Row="2"
+                          Height="120"
+                          Width="350"
+                          SelectedItem="{Binding SelectedFile}"
+                          Style="{DynamicResource SelectionList}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <ContentControl Grid.Column="0">
+                                    <TextBlock Text="{Binding FileName}"
+                                               TextTrimming="CharacterEllipsis"/>
+                                    <behaviors:Interaction.Triggers>
+                                        <behaviors:EventTrigger EventName="MouseDoubleClick">
+                                            <behaviors:InvokeCommandAction Command="{Binding OpenFile}"/>
+                                        </behaviors:EventTrigger>
+                                    </behaviors:Interaction.Triggers>
+                                </ContentControl>
+                                <md:PackIcon Grid.Column="1"
+                                             Margin="10, 0, 10, 0"
+                                             Kind="FolderInformation"
+                                             VerticalAlignment="Center"
+                                             Foreground="{DynamicResource PrimaryHueMidBrush}"
+                                             ToolTip="{Binding FilePath}"
+                                             ToolTipService.InitialShowDelay="0"
+                                             ToolTipService.ShowDuration="30000"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <StackPanel VerticalAlignment="Center"
+                            Grid.Column="1"
+                            Grid.Row="2">
+                    <Button Style="{DynamicResource MaterialDesignIconButton}"
+                            Command="{Binding AddFiles}">
+                        <md:PackIcon Kind="PlusThick"/>
+                    </Button>
+                    <Button Style="{DynamicResource MaterialDesignIconButton}"
+                            Command="{Binding RemoveFiles}">
+                        <md:PackIcon Kind="MinusThick"/>
+                    </Button>
+                </StackPanel>
+                <Separator Margin="15" Grid.Row="3" Grid.Column="0"
+                           Grid.ColumnSpan="2" Style="{DynamicResource MaterialDesignSeparator}"/>
+            </Grid>
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"/>
                 <Button Style="{StaticResource DialogCancelButton}"/>
             </StackPanel>
         </StackPanel>
@@ -404,6 +531,7 @@
                          Width="120"
                          Height="10"
                          Value="{Binding PartPercent}"
+                         IsIndeterminate="{Binding PartPercent, Converter={StaticResource ZeroToTrue}}"
                          VerticalAlignment="Center"
                          HorizontalAlignment="Center"
                          Visibility="{Binding Part, Converter={StaticResource NullableToVisibilityConverter}}"

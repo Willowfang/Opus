@@ -4,7 +4,8 @@
              xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
-             xmlns:data="clr-namespace:Opus.Services.Implementation.Data;assembly=Opus.Services.Implementation"
+             xmlns:resButtons="clr-namespace:Opus.Resources.Buttons.Composition;assembly=Opus.Resources"
+             xmlns:resLabels="clr-namespace:Opus.Resources.Labels;assembly=Opus.Resources"
              xmlns:prism="http://prismlibrary.com/"             
              prism:ViewModelLocator.AutoWireViewModel="True">
     <UserControl.Resources>
@@ -12,12 +13,6 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles/CompositionDataTemplates.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-            <Style TargetType="{x:Type TextBlock}" x:Key="SegmentHeaderText"
-                   BasedOn="{StaticResource MaterialDesignTextBlock}">
-                <Setter Property="FontWeight" Value="Bold"/>
-                <Setter Property="FontSize" Value="14"/>
-                <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidBrush}"/>
-            </Style>
             <Style TargetType="{x:Type Button}" x:Key="ToolButton"
                    BasedOn="{StaticResource MaterialDesignIconButton}">
                 <Setter Property="Margin" Value="5, 16, 5, 0"/>
@@ -29,15 +24,6 @@
                     <scm:SortDescription PropertyName="ProfileName" Direction="Ascending"/>
                 </CollectionViewSource.SortDescriptions>
             </CollectionViewSource>
-            <ContextMenu x:Key="AddSegmentMenu"
-                         Placement="Center"
-                         PlacementTarget="{Binding ElementName=AddSegmentButton}"
-                         Style="{StaticResource ButtonContextMenu}"
-                         ItemContainerStyle="{StaticResource ButtonContextMenuItem}"
-                         IsOpen="{Binding AddSegmentMenuOpen}">
-                <MenuItem Header="Otsikko"/>
-                <MenuItem Header="Tiedosto"/>
-            </ContextMenu>
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
@@ -60,15 +46,30 @@
             <StackPanel Orientation="Horizontal" 
                         Grid.Column="0">
                 <Button Style="{StaticResource ToolButton}"
-                        Command="{Binding AddProfile}"
+                        Command="{Binding OpenProfileMenu}"
                         Margin="0">
-                    <materialDesign:PackIcon Kind="PlusThick"/>
+                    <materialDesign:PopupBox PlacementMode="TopAndAlignCentres" StaysOpen="False"
+                                             IsPopupOpen="{Binding AddProfileMenuOpen}">
+                        <materialDesign:PopupBox.ToggleContent>
+                            <materialDesign:PackIcon Kind="NotePlus" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
+                        </materialDesign:PopupBox.ToggleContent>
+                        <StackPanel>
+                            <Button Style="{StaticResource DialogButton}"
+                                    Content="{x:Static resButtons:Menus.NewProfile}" Command="{Binding AddProfile}"/>
+                            <Button Style="{StaticResource DialogButton}"
+                                    Content="{x:Static resButtons:Menus.CopyProfile}" Command="{Binding CopyProfile}"/>
+                            <Button Style="{StaticResource DialogButton}"
+                                    Content="{x:Static resButtons:Menus.ImportProfile}" Command="{Binding ImportProfile}"/>
+                            <Button Style="{StaticResource DialogButton}"
+                                    Content="{x:Static resButtons:Menus.ExportProfile}" Command="{Binding ExportProfile}"/>
+                        </StackPanel>
+                    </materialDesign:PopupBox>
                 </Button>
             </StackPanel>
             <Rectangle Grid.Column="1" Width="2" Fill="LightGray" Opacity="0.5" Margin="5" RadiusX="2" RadiusY="2"/>
             <ComboBox Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
                       Grid.Column="2"
-                      materialDesign:HintAssist.Hint="Profiili"
+                      materialDesign:HintAssist.Hint="{x:Static resLabels:General.Profile}"
                       materialDesign:HintAssist.FloatingOffset="0, -22"
                       materialDesign:HintAssist.FloatingScale="0.9"
                       Width="200"
@@ -113,7 +114,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0"
-                       Text="Nimi" TextAlignment="Left"
+                       Text="{x:Static resLabels:General.Name}" TextAlignment="Left"
                        Style="{StaticResource SegmentHeaderText}"/>
         </Grid>
 
@@ -133,36 +134,43 @@
             </ListView.InputBindings>
         </ListView>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="5" HorizontalAlignment="Center"
-                    IsEnabled="{Binding SelectedProfile.IsEditable}">
+        <StackPanel Orientation="Horizontal" Grid.Row="5" HorizontalAlignment="Center">
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding ElementName=SegmentsList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                    Command="{Binding EditSegment}">
-                <materialDesign:PackIcon Kind="Pencil"/>
+                    IsEnabled="{Binding SelectedDirectory, Converter={StaticResource NullToBool}}"
+                    Command="{Binding Compose}">
+                <materialDesign:PackIcon Kind="ContentSave"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
-            <Button Style="{StaticResource ToolButton}" x:Name="AddSegmentButton"
-                    Command="{Binding OpenSegmentMenu}">
-                <materialDesign:PopupBox PlacementMode="TopAndAlignCentres" StaysOpen="False"
-                                         IsPopupOpen="{Binding AddSegmentMenuOpen}">
-                    <materialDesign:PopupBox.ToggleContent>
-                        <materialDesign:PackIcon Kind="PlusThick" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
-                    </materialDesign:PopupBox.ToggleContent>
-                    <StackPanel>
-                        <Button Style="{StaticResource DialogButton}"
-                                Content="Otsikko" Command="{Binding AddTitleSegment}"/>
-                        <Button Style="{StaticResource DialogButton}"
-                                Content="Tiedosto" Command="{Binding AddFileSegment}"/>
-                    </StackPanel>
-                </materialDesign:PopupBox>
-            </Button>
-            <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
-            <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                    Command="{Binding DeleteSegment}">
-                <materialDesign:PackIcon Kind="Delete"/>
-            </Button>
+            <StackPanel Orientation="Horizontal"
+                        IsEnabled="{Binding SelectedProfile.IsEditable}">
+                <Button Style="{StaticResource ToolButton}"
+                        IsEnabled="{Binding ElementName=SegmentsList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
+                        Command="{Binding EditSegment}">
+                    <materialDesign:PackIcon Kind="Pencil"/>
+                </Button>
+                <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
+                <Button Style="{StaticResource ToolButton}" x:Name="AddSegmentButton"
+                        Command="{Binding OpenSegmentMenu}">
+                    <materialDesign:PopupBox PlacementMode="TopAndAlignCentres" StaysOpen="False"
+                                             IsPopupOpen="{Binding AddSegmentMenuOpen}">
+                        <materialDesign:PopupBox.ToggleContent>
+                            <materialDesign:PackIcon Kind="PlusThick" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
+                        </materialDesign:PopupBox.ToggleContent>
+                        <StackPanel>
+                            <Button Style="{StaticResource DialogButton}"
+                                    Content="{x:Static resButtons:Menus.NewSegmentTitle}" Command="{Binding AddTitleSegment}"/>
+                            <Button Style="{StaticResource DialogButton}"
+                                    Content="{x:Static resButtons:Menus.NewSegmentFile}" Command="{Binding AddFileSegment}"/>
+                        </StackPanel>
+                    </materialDesign:PopupBox>
+                </Button>
+                <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
+                <Button Style="{StaticResource ToolButton}"
+                        IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
+                        Command="{Binding DeleteSegment}">
+                    <materialDesign:PackIcon Kind="Delete"/>
+                </Button>
+            </StackPanel>
         </StackPanel>
-
     </Grid>
 </UserControl>

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Opus.Services.Data
+namespace Opus.Services.Base
 {
-    public interface ICompositor
+    public interface ISelectable
     {
+        public bool IsSelected { get; set; }
     }
 }

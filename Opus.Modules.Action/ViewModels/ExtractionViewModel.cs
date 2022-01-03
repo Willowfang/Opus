@@ -24,6 +24,7 @@ using Opus.Events;
 using Opus.Services.UI;
 using Opus.Services.Implementation.UI.Dialogs;
 using Opus.Services.Configuration;
+using Opus.Services.Extensions;
 
 namespace Opus.Modules.Action.ViewModels
 {

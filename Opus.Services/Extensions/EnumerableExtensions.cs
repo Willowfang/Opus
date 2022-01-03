@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Opus.Core.ExtensionMethods
+namespace Opus.Services.Extensions
 {
     public static class EnumerableExtensions
     {

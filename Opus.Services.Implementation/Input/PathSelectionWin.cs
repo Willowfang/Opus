@@ -1,4 +1,5 @@
 ﻿using Opus.Services.Input;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
@@ -114,15 +115,27 @@ namespace Opus.Services.Implementation.Input
             List<string> filters = new List<string>();
             foreach (FileType fileType in fileTypes)
             {
-                if (fileType == FileType.PDF)
-                    filters.Add("PDF | *.pdf");
-                else if (fileType == FileType.Word)
+                if (fileType == FileType.Word)
                 {
-                    filters.Add("Word | *.doc");
-                    filters.Add("Word | *.docx");
+                    filters.Add(FilterString(Resources.Files.FileTypeNames.Doc, Resources.Files.FileExtensions.Doc));
+                    filters.Add(FilterString(Resources.Files.FileTypeNames.Docx, Resources.Files.FileExtensions.Docx));
+                }
+                else if (fileType == FileType.PDF)
+                {
+                    filters.Add(FilterString(Resources.Files.FileTypeNames.Pdf, Resources.Files.FileExtensions.Pdf));
+                }
+                else if (fileType == FileType.Profile)
+                {
+                    filters.Add(FilterString(Resources.Files.FileTypeNames.Profile,
+                        Resources.Files.FileExtensions.Profile));
                 }
             }
             return string.Join("|", filters);
+        }
+
+        private string FilterString(string fileType, string extension)
+        {
+            return String.Join(" ", fileType, "|", "*" + extension);
         }
     }
 }

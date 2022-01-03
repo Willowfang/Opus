@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Opus.Resources.Labels.Dialogs {
+namespace Opus.Resources.Messages {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Opus.Resources.Labels.Dialogs {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class CompositionProfile {
+    public class StartUp {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal CompositionProfile() {
+        internal StartUp() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Opus.Resources.Labels.Dialogs {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Opus.Resources.Labels.Dialogs.CompositionProfile", typeof(CompositionProfile).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Opus.Resources.Messages.StartUp", typeof(StartUp).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,29 +61,11 @@ namespace Opus.Resources.Labels.Dialogs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Muokkaa profiilia.
+        ///   Looks up a localized string similar to Profiileille on uusia päivityksiä, mutta niiden päivittäminen epäonnistui. Ole yhteydessä järjestelmänvalvojaan..
         /// </summary>
-        public static string EditTitle {
+        public static string ProfileUpdateFailed {
             get {
-                return ResourceManager.GetString("EditTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Tuo profiili.
-        /// </summary>
-        public static string ImportTitle {
-            get {
-                return ResourceManager.GetString("ImportTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Uusi profiili.
-        /// </summary>
-        public static string NewTitle {
-            get {
-                return ResourceManager.GetString("NewTitle", resourceCulture);
+                return ResourceManager.GetString("ProfileUpdateFailed", resourceCulture);
             }
         }
     }

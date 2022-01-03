@@ -8,6 +8,7 @@ using Opus.Core.ExtensionMethods;
 using Opus.Core.Wrappers;
 using Opus.Events;
 using Opus.Services.Configuration;
+using Opus.Services.Extensions;
 using Opus.Services.Implementation.UI.Dialogs;
 using Opus.Services.Input;
 using Opus.Services.UI;
@@ -49,8 +50,7 @@ namespace Opus.Modules.Action.ViewModels
         public ReorderCollection<FileStorage> Collection { get; }
 
         public MergeViewModel(IEventAggregator eventAggregator, IManipulator manipulator,
-            IPathSelection input, INavigationTargetRegistry navRegistry,
-            IConfiguration configuration,
+            IPathSelection input, INavigationTargetRegistry navRegistry, IConfiguration configuration, 
             IDialogAssist dialogAssist)
         {
             Collection = new ReorderCollection<FileStorage>();

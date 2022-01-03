@@ -14,6 +14,7 @@ namespace Opus.Core.Constants
     {
         public const string CONFIG_EXTENSION = ".ops";
         public static string CONFIG_DIRECTORY = AppContext.BaseDirectory;
+        public static string PROFILE_DIRECTORY = Path.Combine(AppContext.BaseDirectory, "ProfileImport");
     }
 
     public static class RegionNames

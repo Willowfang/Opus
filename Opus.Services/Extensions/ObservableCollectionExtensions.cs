@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 
-namespace Opus.Core.ExtensionMethods
+namespace Opus.Services.Extensions
 {
     public static class ObservableCollectionExtensions
     {

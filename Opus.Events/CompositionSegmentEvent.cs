@@ -1,4 +1,4 @@
-﻿using Opus.Services.Data;
+﻿using Opus.Services.Data.Composition;
 using Prism.Events;
 
 namespace Opus.Events

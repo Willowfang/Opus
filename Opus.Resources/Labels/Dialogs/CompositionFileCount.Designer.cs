@@ -61,6 +61,33 @@ namespace Opus.Resources.Labels.Dialogs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tiedostot.
+        /// </summary>
+        public static string FilesFound {
+            get {
+                return ResourceManager.GetString("FilesFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enintään: .
+        /// </summary>
+        public static string MaximumFiles {
+            get {
+                return ResourceManager.GetString("MaximumFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vähintään: .
+        /// </summary>
+        public static string MinimumFiles {
+            get {
+                return ResourceManager.GetString("MinimumFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Haun tulos.
         /// </summary>
         public static string SearchResult {

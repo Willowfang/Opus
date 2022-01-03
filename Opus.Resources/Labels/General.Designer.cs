@@ -70,6 +70,15 @@ namespace Opus.Resources.Labels {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kopio.
+        /// </summary>
+        public static string Copy {
+            get {
+                return ResourceManager.GetString("Copy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Loppu.
         /// </summary>
         public static string End {
@@ -151,11 +160,29 @@ namespace Opus.Resources.Labels {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Profiili.
+        /// </summary>
+        public static string Profile {
+            get {
+                return ResourceManager.GetString("Profile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hakulause.
         /// </summary>
         public static string SearchExpression {
             get {
                 return ResourceManager.GetString("SearchExpression", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Osio.
+        /// </summary>
+        public static string Segment {
+            get {
+                return ResourceManager.GetString("Segment", resourceCulture);
             }
         }
         
