@@ -350,3 +350,9 @@ Resources/
 
 # Resource files
 *.resx
+
+# Resources project
+/Opus.Resources/
+
+# Pages
+/docs/
