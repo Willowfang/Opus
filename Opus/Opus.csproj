@@ -5,11 +5,31 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <ApplicationIcon>logocx.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appIcon.ico" />
+    <None Remove="Images\Bookmark.png" />
+    <None Remove="Images\logocx.ico" />
+    <None Remove="Images\LogoCX.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Bookmark.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="logocx.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Opus.Core\Opus.Core.csproj" />
@@ -39,7 +59,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="appIcon.ico">
+    <None Update="ProfileImport\Esitutkintapöytäkirja.opusprofile">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Textfiles\Licenses.txt">
@@ -64,6 +84,18 @@
     <Reference Include="CodeX-PdfLib-iText7">
       <HintPath>..\..\..\CodeX\Libraries\PdfLib.iText7\bin\Debug\net5.0\CodeX-PdfLib-iText7.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\LogoCX.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Views\MainWindowView.xaml">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Page>
   </ItemGroup>
 
 </Project>

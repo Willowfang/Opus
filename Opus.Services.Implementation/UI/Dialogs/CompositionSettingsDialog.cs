@@ -16,6 +16,13 @@ namespace Opus.Services.Implementation.UI.Dialogs
             set => SetProperty(ref searchSubDirectories, value);
         }
 
+        private bool deleteConverted;
+        public bool DeleteConverted
+        {
+            get => deleteConverted;
+            set => SetProperty(ref deleteConverted, value);
+        }
+
         public CompositionSettingsDialog(string dialogTitle)
             : base(dialogTitle) { }
     }

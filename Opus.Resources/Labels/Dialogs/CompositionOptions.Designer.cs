@@ -61,6 +61,15 @@ namespace Opus.Resources.Labels.Dialogs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Poista muunnetut tiedostot.
+        /// </summary>
+        public static string DeleteConverted {
+            get {
+                return ResourceManager.GetString("DeleteConverted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Etsi tiedostoja myös alikansioista.
         /// </summary>
         public static string SubDirectories {

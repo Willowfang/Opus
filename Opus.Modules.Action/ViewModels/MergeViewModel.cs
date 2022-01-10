@@ -17,6 +17,7 @@ using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Opus.Modules.Action.ViewModels
@@ -53,7 +54,10 @@ namespace Opus.Modules.Action.ViewModels
             IPathSelection input, INavigationTargetRegistry navRegistry, IConfiguration configuration, 
             IDialogAssist dialogAssist)
         {
-            Collection = new ReorderCollection<FileStorage>();
+            Collection = new ReorderCollection<FileStorage>()
+            {
+                CanReorder = true
+            };
             this.eventAggregator = eventAggregator;
             this.manipulator = manipulator;
             this.input = input;
@@ -128,9 +132,13 @@ namespace Opus.Modules.Action.ViewModels
             if (path == null) return;
 
             IList<IMergeInput> inputs = await Task.Run(GetMergeInputs);
-            var result = ShowProgress();
+
+            CancellationTokenSource tokenSource = new CancellationTokenSource();
+            CancellationToken token = tokenSource.Token;
+
+            var result = ShowProgress(tokenSource);
             Task merge = manipulator.MergeWithBookmarksAsync(inputs, path, 
-                configuration.MergeAddPageNumbers, result.progress);
+                configuration.MergeAddPageNumbers, result.progress, token);
 
             await result.dialog;
         }
@@ -145,9 +153,9 @@ namespace Opus.Modules.Action.ViewModels
             return inputs;
         }
 
-        private (Task dialog, IProgress<ProgressReport> progress) ShowProgress()
+        private (Task dialog, IProgress<ProgressReport> progress) ShowProgress(CancellationTokenSource tokenSource)
         {
-            ProgressDialog dialog = new ProgressDialog(null)
+            ProgressDialog dialog = new ProgressDialog(null, tokenSource)
             {
                 TotalPercent = 0,
                 Phase = ProgressPhase.Unassigned.GetResourceString()

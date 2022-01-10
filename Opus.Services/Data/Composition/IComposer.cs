@@ -17,6 +17,7 @@ namespace Opus.Services.Data
 
     public interface IComposer 
     {
-        public Task Compose(string directory, ICompositionProfile profile);
+        public Task Compose(string directory, ICompositionProfile profile, bool deleteConverted,
+            bool searchSubDirectories);
     }
 }

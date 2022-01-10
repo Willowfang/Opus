@@ -11,15 +11,28 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <materialDesign:Card Padding="20" Grid.Column="0" Margin="16, 8, 8, 8" Opacity="0.8"
-                             prism:RegionManager.RegionName="{x:Static const:RegionNames.MAINSECTION_THREE_FILE}"/>
-            <materialDesign:Card Padding="10" Grid.Column="1" Margin="8, 8, 16, 8" Opacity="0.8"
-                                 prism:RegionManager.RegionName="{x:Static const:RegionNames.MAINSECTION_THREE_OPTIONS}"/>
+            <materialDesign:Card Padding="20" Grid.Column="0" Margin="16, 8, 8, 8" Opacity="1"
+                                 prism:RegionManager.RegionName="{x:Static const:RegionNames.MAINSECTION_THREE_FILE}"
+                                 materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                <materialDesign:Card.Background>
+                    <SolidColorBrush Color="White" Opacity="0.7"/>
+                </materialDesign:Card.Background>
+            </materialDesign:Card>
+            <materialDesign:Card Padding="10" Grid.Column="1" Margin="8, 8, 16, 8" Opacity="1"
+                                 prism:RegionManager.RegionName="{x:Static const:RegionNames.MAINSECTION_THREE_OPTIONS}"
+                                 materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                <materialDesign:Card.Background>
+                    <SolidColorBrush Color="White" Opacity="0.7"/>
+                </materialDesign:Card.Background>
+            </materialDesign:Card>
         </Grid>
 
-        <materialDesign:Card Padding="32" Margin="16, 8, 16, 8" Opacity="0.8" Grid.Column="0"
-                             prism:RegionManager.RegionName="{x:Static const:RegionNames.MAINSECTION_THREE_ACTION}">
-
+        <materialDesign:Card Padding="32" Margin="16, 8, 16, 8" Opacity="1" Grid.Column="0"
+                             prism:RegionManager.RegionName="{x:Static const:RegionNames.MAINSECTION_THREE_ACTION}"
+                             materialDesign:ShadowAssist.ShadowDepth="Depth3">
+            <materialDesign:Card.Background>
+                <SolidColorBrush Color="White" Opacity="0.8"/>
+            </materialDesign:Card.Background>
         </materialDesign:Card>
     </DockPanel>
 </UserControl>

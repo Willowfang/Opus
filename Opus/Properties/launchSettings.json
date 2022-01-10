@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "Opus": {
+      "commandName": "Project"
+    },
+    "Opus compose": {
+      "commandName": "Project",
+      "commandLineArgs": "-compose \"C:\\Users\\jbjok\\OneDrive\\Desktop\\Esimerkki\\Pöytäkirja\""
+    },
+    "Opus extract file": {
+      "commandName": "Project",
+      "commandLineArgs": "-extract \"C:\\Users\\jbjok\\OneDrive\\Desktop\\Esimerkki\\Alice's Adventures in Wonderland.pdf\""
+    }
+  }
+}

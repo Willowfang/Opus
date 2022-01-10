@@ -20,13 +20,15 @@ namespace Opus.Modules.Options.ViewModels
         {
             return new CompositionSettingsDialog(Resources.Labels.General.Settings)
             {
-                SearchSubDirectories = configuration.CompositionSearchSubDirectories
+                SearchSubDirectories = configuration.CompositionSearchSubDirectories,
+                DeleteConverted = configuration.CompositionDeleteConverted
             };
         }
 
         protected override void SaveSettings(CompositionSettingsDialog dialog)
         {
             configuration.CompositionSearchSubDirectories = dialog.SearchSubDirectories;
+            configuration.CompositionDeleteConverted = dialog.DeleteConverted;
         }
     }
 }

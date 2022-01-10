@@ -2,11 +2,14 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:dialog="clr-namespace:Opus.Services.Implementation.UI.Dialogs;assembly=Opus.Services.Implementation"
                     xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+                    xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
                     xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
                     xmlns:resButtons="clr-namespace:Opus.Resources.Buttons;assembly=Opus.Resources"
                     xmlns:resDialog="clr-namespace:Opus.Resources.Labels.Dialogs;assembly=Opus.Resources"
                     xmlns:resLabels="clr-namespace:Opus.Resources.Labels;assembly=Opus.Resources"
                     xmlns:resValidation="clr-namespace:Opus.Resources.Validation;assembly=Opus.Resources">
+    
+    <!-- Contains datatemplates for various dialogs-->
 
     <!--MESSAGE DIALOG-->
     <DataTemplate DataType="{x:Type dialog:MessageDialog}">
@@ -170,9 +173,21 @@
                        VerticalAlignment="Center"
                        Style="{DynamicResource MaterialDesignCaptionTextBlock}"
                        Text="{x:Static resDialog:CompositionOptions.SubDirectories}"
-                       Margin="0, 0, 0, 10"/>
+                       Margin="0, 15, 0, 10"/>
             <CheckBox Style="{DynamicResource MaterialDesignSwitchToggleButton}"
                       IsChecked="{Binding SearchSubDirectories, Mode=TwoWay}"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Cursor="Hand"/>
+            <Separator Style="{DynamicResource MaterialDesignSeparator}"
+                       Margin="15"/>
+            <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                       VerticalAlignment="Center"
+                       Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       Text="{x:Static resDialog:CompositionOptions.DeleteConverted}"
+                       Margin="0, 0, 0, 10"/>
+            <CheckBox Style="{DynamicResource MaterialDesignSwitchToggleButton}"
+                      IsChecked="{Binding DeleteConverted, Mode=TwoWay}"
                       VerticalAlignment="Center"
                       HorizontalAlignment="Center"
                       Cursor="Hand"/>
@@ -310,14 +325,59 @@
             </StackPanel>
         </StackPanel>
     </DataTemplate>
+    
+    <!--COMPOSITION PROFILE SELECTION DIALOG-->
+    <DataTemplate DataType="{x:Type dialog:CompositionProfileSelectionDialog}">
+        <StackPanel Margin="10">
+            <StackPanel.Resources>
+                <CollectionViewSource x:Key="ProfileSource"
+                          Source="{Binding Profiles}">
+                    <CollectionViewSource.SortDescriptions>
+                        <scm:SortDescription PropertyName="IsEditable"/>
+                        <scm:SortDescription PropertyName="ProfileName" Direction="Ascending"/>
+                    </CollectionViewSource.SortDescriptions>
+                </CollectionViewSource>
+            </StackPanel.Resources>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+            <ComboBox Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
+                      Grid.Column="2"
+                      md:HintAssist.Hint="{x:Static resLabels:General.Profile}"
+                      md:HintAssist.FloatingOffset="0, -22"
+                      md:HintAssist.FloatingScale="0.9"
+                      Width="200"
+                      FontSize="16"
+                      Margin="0, 30, 0, 0"
+                      md:ComboBoxAssist.ShowSelectedItem="True"
+                      SelectedItem="{Binding SelectedProfile, Mode=TwoWay}"
+                      ItemsSource="{Binding Source={StaticResource ProfileSource}}"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      VerticalContentAlignment="Bottom"
+                      HorizontalContentAlignment="Left">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock TextTrimming="CharacterEllipsis"
+                                   Text="{Binding ProfileName}"
+                                   FontWeight="{Binding IsEditable, Converter={StaticResource NegativeToBold}}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"
+                        Content="{x:Static resButtons:General.Confirm}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
 
     <!--COMPOSITION FILE COUNT DIALOG-->
     <DataTemplate DataType="{x:Type dialog:CompositionFileCountDialog}">
-        <StackPanel>
+        <StackPanel Margin="10">
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
                        Text="{Binding Segment.SegmentName}"/>
             <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}"
-                       FontSize="14" Width="350"
+                       FontSize="14" Width="280"
                        TextAlignment="Justify"
                        TextWrapping="Wrap"
                        Text="{Binding DialogTextContent}"
@@ -326,9 +386,9 @@
                         Margin="15"
                         HorizontalAlignment="Center"
                         Visibility="{Binding SingleSelection, Converter={StaticResource BooleanToVisibilityConverter}}">
-                <Button Style="{DynamicResource MaterialDesignOutlinedButton}"
+                <Button Style="{DynamicResource MaterialDesignOutlinedDarkButton}"
                         Margin="0, 0, 15, 0"
-                        Width="260"
+                        Width="230"
                         VerticalContentAlignment="Center"
                         VerticalAlignment="Center"
                         HorizontalContentAlignment="Center"

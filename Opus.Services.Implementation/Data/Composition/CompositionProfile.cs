@@ -6,7 +6,7 @@ using Prism.Mvvm;
 namespace Opus.Services.Implementation.Data.Composition
 {
     /// <summary>
-    /// For comments, see <see cref="ICompositionProfile"/>
+    /// Concrete implementation of <see cref="ICompositionProfile"/>.
     /// </summary>
     internal class CompositionProfile : DataObject<CompositionProfile>, IDataObject, ICompositionProfile
     {

@@ -135,12 +135,6 @@
         </ListView>
 
         <StackPanel Orientation="Horizontal" Grid.Row="5" HorizontalAlignment="Center">
-            <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding SelectedDirectory, Converter={StaticResource NullToBool}}"
-                    Command="{Binding Compose}">
-                <materialDesign:PackIcon Kind="ContentSave"/>
-            </Button>
-            <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <StackPanel Orientation="Horizontal"
                         IsEnabled="{Binding SelectedProfile.IsEditable}">
                 <Button Style="{StaticResource ToolButton}"

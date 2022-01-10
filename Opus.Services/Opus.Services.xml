@@ -34,6 +34,12 @@
             Include subdirectories when searching for composition files
             </summary>
         </member>
+        <member name="P:Opus.Services.Configuration.IConfiguration.CompositionDeleteConverted">
+            <summary>
+            If true, files converted to pdf during composition will be deleted. Said
+            files will be deleted when cancelling, regardless of the value of this property.
+            </summary>
+        </member>
         <member name="P:Opus.Services.Configuration.IConfiguration.DefaultProfile">
             <summary>
             The <see cref="T:Opus.Services.Data.Composition.ICompositionProfile"/> to select by default
@@ -151,29 +157,33 @@
         </member>
         <member name="T:Opus.Services.Data.Composition.ICompositionProfile">
             <summary>
-            A profile for compositing a pdf-document from
-            given files
+            A profile for composing a pdf-document from various files and titles.
+            Provides instructions on how to compose the final file. May be exported
+            to a JSON-based file and imported from said file type.
             </summary>
         </member>
         <member name="P:Opus.Services.Data.Composition.ICompositionProfile.ProfileName">
             <summary>
-            Name of the profile
+            Name of the profile.
             </summary>
         </member>
         <member name="P:Opus.Services.Data.Composition.ICompositionProfile.Segments">
             <summary>
             Segments in the current profile in the order they
-            are to be included
+            are to be included. Segments include information on the title,
+            search criteria and number of files to include, among other things.
             </summary>
         </member>
         <member name="P:Opus.Services.Data.Composition.ICompositionProfile.AddPageNumbers">
             <summary>
-            If true, page numbers will be added to the new document
+            If true, page numbers will be added to the final product.
             </summary>
         </member>
         <member name="P:Opus.Services.Data.Composition.ICompositionProfile.IsEditable">
             <summary>
-            If true, the user can edit this profile
+            If true, the user can edit this profile. Uneditable profiles can be created by the
+            administrator to prevent users from changing their content. This property does not
+            prevent tampering with the profile directly in the database.
             </summary>
         </member>
         <member name="T:Opus.Services.Data.Composition.ICompositionSegment">
@@ -254,11 +264,6 @@
         <member name="P:Opus.Services.Data.ISignatureOptions.Suffix">
             <summary>
             The localized suffix for unsigned files
-            </summary>
-        </member>
-        <member name="T:Opus.Services.Events.IEventHost">
-            <summary>
-            Service for registering events and storing their info
             </summary>
         </member>
         <member name="T:Opus.Services.Input.IPathSelection">

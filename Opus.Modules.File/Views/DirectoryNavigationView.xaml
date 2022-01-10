@@ -5,6 +5,6 @@
              prism:ViewModelLocator.AutoWireViewModel="True">
     <Grid>
         <Button Content="{Binding DirectoryName}" Command="{Binding OpenDirectory}" 
-                Style="{DynamicResource MaterialDesignRaisedDarkButton}"/>
+                Style="{DynamicResource InputPathButton}"/>
     </Grid>
 </UserControl>

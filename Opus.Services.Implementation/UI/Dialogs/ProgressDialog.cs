@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Opus.Services.Implementation.UI.Dialogs
@@ -39,13 +40,19 @@ namespace Opus.Services.Implementation.UI.Dialogs
             set => SetProperty(ref part, value);
         }
 
-        public ProgressDialog(string dialogTitle)
-            : base(dialogTitle) { }
+        private CancellationTokenSource cancellationSource;
+
+        public ProgressDialog(string dialogTitle, CancellationTokenSource cancellationSource)
+            : base(dialogTitle) 
+        {
+            this.cancellationSource = cancellationSource;
+        }
 
         protected override void ExecuteClose()
         {
             if (TotalPercent < 100)
             {
+                cancellationSource.Cancel();
                 base.ExecuteClose();
             }
             else

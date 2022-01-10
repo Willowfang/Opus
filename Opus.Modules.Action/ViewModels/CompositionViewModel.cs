@@ -45,16 +45,6 @@ namespace Opus.Modules.Action.ViewModels
         private ICompositionOptions options;
         private IComposerFactory composerFactory;
 
-        private string selectedDirectory;
-        /// <summary>
-        /// Directory to search for composition files
-        /// </summary>
-        private string SelectedDirectory
-        {
-            get => selectedDirectory;
-            set => SetProperty(ref selectedDirectory, value);
-        }
-
         /// <summary>
         /// All profiles stored in the database. Composition profiles
         /// determine what files are to be added and in what order, as well as 
@@ -136,9 +126,9 @@ namespace Opus.Modules.Action.ViewModels
             aggregator.GetEvent<DirectorySelectedEvent>().Unsubscribe(directorySelectedSubscription);
         }
 
-        private void DirectorySelected(string path)
+        private async void DirectorySelected(string path)
         {
-            SelectedDirectory = path;
+            await ExecuteComposition(path);
         }
 
         private void CollectionReordered(object sender, CollectionReorderedEventArgs e)
@@ -461,20 +451,11 @@ namespace Opus.Modules.Action.ViewModels
             options.SaveProfile(SelectedProfile);
         }
 
-        private IAsyncCommand compose;
-        public IAsyncCommand Compose =>
-            compose ??= new AsyncCommand(ExecuteComposition);
-        private async Task ExecuteComposition()
+        private async Task ExecuteComposition(string directory)
         {
-            if (SelectedDirectory == null)
-            {
-                await dialogAssist.Show(new MessageDialog(Resources.Labels.General.Error,
-                    Resources.Messages.Composition.FolderNotSelected));
-                return;
-            }
-
             IComposer composer = composerFactory.Create();
-            await composer.Compose(SelectedDirectory, SelectedProfile);
+            await composer.Compose(directory, SelectedProfile, configuration.CompositionDeleteConverted,
+                configuration.CompositionSearchSubDirectories);
         }
 
         #endregion

@@ -87,7 +87,12 @@ namespace Opus.Services.Implementation.Data.Composition
 
             try
             {
-                string json = JsonSerializer.Serialize(profile);
+                JsonSerializerOptions options = new JsonSerializerOptions()
+                {
+                    WriteIndented = true
+                };
+
+                string json = JsonSerializer.Serialize(profile, options);
                 File.WriteAllText(filePath, json);
                 return true;
             }

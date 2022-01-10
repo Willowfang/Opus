@@ -11,9 +11,14 @@ using Opus.Events;
 using Opus.Services.Implementation.UI.Dialogs;
 using AsyncAwaitBestPractices.MVVM;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Opus.ViewModels
 {
+    /// <summary>
+    /// Responsible for handling UX when the program is started
+    /// in full GUI mode
+    /// </summary>
     public class MainWindowViewModel : ViewModelBase
     {
         private IConfiguration configuration;
@@ -26,6 +31,10 @@ namespace Opus.ViewModels
             set => SetProperty(ref title, value);
         }
 
+        /// <summary>
+        /// Responsible for showing, closing and otherwise
+        /// handling all dialogs.
+        /// </summary>
         public IDialogAssist Dialog { get; set; }
 
 
@@ -37,10 +46,10 @@ namespace Opus.ViewModels
             this.Dialog = dialogAssist;
         }
 
+        #region LICENSE
         private DelegateCommand openLicenses;
         public DelegateCommand OpenLicenses =>
             openLicenses ?? (openLicenses = new DelegateCommand(ExecuteOpenLicenses));
-
         void ExecuteOpenLicenses()
         {
             var p = new Process();
@@ -50,11 +59,12 @@ namespace Opus.ViewModels
             };
             p.Start();
         }
+        #endregion LICENSE
 
+        #region MANUAL
         private DelegateCommand openManual;
         public DelegateCommand OpenManual =>
             openManual ?? (openManual = new DelegateCommand(ExecuteOpenManual));
-
         void ExecuteOpenManual()
         {
             var p = new Process();
@@ -64,11 +74,12 @@ namespace Opus.ViewModels
             };
             p.Start();
         }
+        #endregion MANUAL
 
+        #region SOURCE CODE
         private DelegateCommand openSourceCode;
         public DelegateCommand OpenSourceCode =>
             openSourceCode ?? (openSourceCode = new DelegateCommand(ExecuteOpenSourceCode));
-
         void ExecuteOpenSourceCode()
         {
             var p = new Process();
@@ -78,11 +89,28 @@ namespace Opus.ViewModels
             };
             p.Start();
         }
+        #endregion SOURCE CODE
 
+        #region LANGUAGE
+        private IAsyncCommand<string> _languageCommand;
+        public IAsyncCommand<string> LanguageCommand =>
+            _languageCommand ?? (_languageCommand = new AsyncCommand<string>(ExecuteLanguage));
+        private async Task ExecuteLanguage(string language)
+        {
+            var lang = configuration.LanguageCode;
+            if (language == lang)
+                return;
+
+            configuration.LanguageCode = language;
+            await Dialog.Show(new MessageDialog(Resources.Labels.General.Notification,
+                Resources.Messages.MainWindow.ChangeLanguage));
+        }
+        #endregion LANGUAGE
+
+        #region NAVIGATION
         private DelegateCommand<string> _navigateCommand;
         public DelegateCommand<string> NavigateCommand =>
             _navigateCommand ?? (_navigateCommand = new DelegateCommand<string>(ExecuteNavigation));
-
         void ExecuteNavigation(string name)
         {
             eventAggregator.GetEvent<ViewChangeEvent>().Publish(name);
@@ -96,19 +124,13 @@ namespace Opus.ViewModels
                 Title = Resources.Labels.MainWindow.Titles.Compose.ToUpper();
         }
 
-        private IAsyncCommand<string> _languageCommand;
-        public IAsyncCommand<string> LanguageCommand =>
-            _languageCommand ?? (_languageCommand = new AsyncCommand<string>(ExecuteLanguage));
-
-        private async Task ExecuteLanguage(string language)
+        private DelegateCommand exitCommand;
+        public DelegateCommand ExitCommand =>
+            exitCommand ??= new DelegateCommand(ExecuteExit);
+        private void ExecuteExit()
         {
-            var lang = configuration.LanguageCode;
-            if (language == lang)
-                return;
-
-            configuration.LanguageCode = language;
-            await Dialog.Show(new MessageDialog(Resources.Labels.General.Notification,
-                Resources.Messages.MainWindow.ChangeLanguage));
+            Application.Current.Shutdown();
         }
+        #endregion NAVIGATION
     }
 }

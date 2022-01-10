@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows;
 using System.Windows.Forms;
 
 namespace Opus.Services.Implementation.Input
@@ -94,6 +95,7 @@ namespace Opus.Services.Implementation.Input
             Microsoft.Win32.SaveFileDialog dialog = new Microsoft.Win32.SaveFileDialog();
             dialog.Title = description;
             dialog.Filter = filter;
+
             if (initialDirectory != null) dialog.InitialDirectory = initialDirectory.FullName;
             if (initialFile != null)
             {

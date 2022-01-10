@@ -29,7 +29,25 @@ namespace Opus.Views
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             SplitButton.IsChecked = true;
-            SplitButton.Command.Execute(SchemeNames.SPLIT);
+            SplitButton.Command.Execute(Opus.Core.Constants.SchemeNames.SPLIT);
+        }
+
+        private void TopBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void Minimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void Maximize_Click(object sender, RoutedEventArgs e)
+        {
+            if (WindowState != WindowState.Maximized)
+                WindowState = WindowState.Maximized;
+            else
+                WindowState = WindowState.Normal;
         }
     }
 }
