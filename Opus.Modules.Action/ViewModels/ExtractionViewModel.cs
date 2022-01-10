@@ -201,9 +201,12 @@ namespace Opus.Modules.Action.ViewModels
                 bookmarks = AddPrefixSuffix(bookmarks);
             }
 
-            var result = ShowProgress();
+            CancellationTokenSource tokenSource = new CancellationTokenSource();
+            CancellationToken token = tokenSource.Token;
+
+            var result = ShowProgress(tokenSource);
             Task extract = Manipulator.ExtractAsync(currentFilePath, new DirectoryInfo(path),
-                bookmarks, result.progress);
+                bookmarks, result.progress, token);
 
             await result.dialog;
             SelectedBookmark = null;
@@ -241,9 +244,12 @@ namespace Opus.Modules.Action.ViewModels
                 new DirectoryInfo(Path.GetDirectoryName(currentFilePath)));
             if (path == null) return;
 
-            var result = ShowProgress();
+            CancellationTokenSource tokenSource = new CancellationTokenSource();
+            CancellationToken token = tokenSource.Token;
+
+            var result = ShowProgress(tokenSource);
             Task extract = Manipulator.ExtractAsync(currentFilePath, new FileInfo(path),
-                FileBookmarks.Where(x => x.IsSelected).Select(y => y.Value), result.progress);
+                FileBookmarks.Where(x => x.IsSelected).Select(y => y.Value), result.progress, token);
 
             await result.dialog;
 
@@ -291,9 +297,9 @@ namespace Opus.Modules.Action.ViewModels
             }
         }
 
-        private (Task dialog, IProgress<ProgressReport> progress) ShowProgress()
+        private (Task dialog, IProgress<ProgressReport> progress) ShowProgress(CancellationTokenSource cancelSource)
         {
-            ProgressDialog dialog = new ProgressDialog(null)
+            ProgressDialog dialog = new ProgressDialog(null, cancelSource)
             {
                 TotalPercent = 0,
                 Phase = ProgressPhase.Unassigned.GetResourceString()

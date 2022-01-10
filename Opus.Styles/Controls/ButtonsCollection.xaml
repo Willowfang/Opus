@@ -4,28 +4,35 @@
                     xmlns:resButtons="clr-namespace:Opus.Resources.Buttons;assembly=Opus.Resources">
 
     <!-- MAIN MENU BUTTON -->
-    <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource MaterialDesignTabRadioButtonLeft}"
+    <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource MaterialDesignFlatButton}"
            x:Key="MainMenuButton">
         <Setter Property="Command" Value="{Binding NavigateCommand}"/>
-        <Setter Property="Width" Value="40"/>
+        <Setter Property="Width" Value="80"/>
         <Setter Property="Height" Value="50"/>
+        <Setter Property="Padding" Value="0"/>
         <Setter Property="GroupName" Value="MainMenuB"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Cursor" Value="Hand"/>
-        <Setter Property="Opacity" Value="0.8"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHueMidBrush}"/>
+        <Setter Property="Opacity" Value="1"/>
+        <Setter Property="Foreground" Value="{DynamicResource SecondaryHueMidBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource SecondaryHueMidBrush}"/>
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="False">
                 <Setter Property="Foreground" Value="{DynamicResource PrimaryHueLightBrush}"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidBrush}"/>
+                <Setter Property="Foreground" Value="{DynamicResource SecondaryHueMidBrush}"/>
             </Trigger>
         </Style.Triggers>
     </Style>
 
-    <!--DIALOG BUTTON-->
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFlatButton}"
+           x:Key="InputPathButton">
+        <Setter Property="Foreground" Value="{DynamicResource MaterialDesignShadowBrush}"/>
+    </Style>
+
+    <!--DIALOG BUTTONS-->
     <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFlatButton}"
            x:Key="DialogButton">
         <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -35,6 +42,7 @@
     <Style TargetType="{x:Type Button}" BasedOn="{StaticResource DialogButton}"
            x:Key="DialogSaveButton">
         <Setter Property="Command" Value="{Binding Save}"/>
+        <Setter Property="Foreground" Value="{DynamicResource SecondaryHueDarkBrush}"/>
         <Setter Property="Content" Value="{x:Static resButtons:General.Save}"/>
         <Setter Property="IsDefault" Value="True"/>
     </Style>

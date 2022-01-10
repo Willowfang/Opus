@@ -15,6 +15,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>General.resx</DependentUpon>
     </Compile>
+    <Compile Update="ContextMenu\Arguments.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Arguments.resx</DependentUpon>
+    </Compile>
     <Compile Update="DefaultValues\DefaultValues.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -64,6 +69,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>CompositionProfile.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Labels\Dialogs\CompositionProfileSelection.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CompositionProfileSelection.resx</DependentUpon>
     </Compile>
     <Compile Update="Labels\Dialogs\Confirmation.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -161,6 +171,10 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>General.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="ContextMenu\Arguments.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Arguments.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="DefaultValues\DefaultValues.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>DefaultValues.Designer.cs</LastGenOutput>
@@ -200,6 +214,10 @@
     <EmbeddedResource Update="Labels\Dialogs\CompositionProfile.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>CompositionProfile.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Labels\Dialogs\CompositionProfileSelection.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CompositionProfileSelection.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Labels\Dialogs\Confirmation.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

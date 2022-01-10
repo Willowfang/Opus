@@ -3,11 +3,7 @@ using Opus.Events;
 using Opus.Services.Input;
 using Prism.Commands;
 using Prism.Events;
-using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 namespace Opus.Modules.File.ViewModels
 {
@@ -43,7 +39,6 @@ namespace Opus.Modules.File.ViewModels
         {
             string path = input.OpenDirectory(Resources.UserInput.Descriptions.SelectOpenFolder);
             if (path == null) return;
-            DirectoryName = path;
             eventAggregator.GetEvent<DirectorySelectedEvent>().Publish(path);
         }
     }

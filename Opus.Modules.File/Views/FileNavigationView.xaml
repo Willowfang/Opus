@@ -11,6 +11,6 @@
              prism:ViewModelLocator.AutoWireViewModel="True" >
     <Grid>
         <Button Content="{Binding FileName}" Command="{Binding OpenFile}" 
-                Style="{DynamicResource MaterialDesignRaisedDarkButton}"/>
+                Style="{DynamicResource InputPathButton}"/>
     </Grid>
 </UserControl>

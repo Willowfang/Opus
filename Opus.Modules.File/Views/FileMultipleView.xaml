@@ -11,6 +11,6 @@
              prism:ViewModelLocator.AutoWireViewModel="True">
     <Grid>
         <Button Content="{x:Static resButton:General.SelectFiles}" Command="{Binding AddFiles}" 
-                Style="{DynamicResource MaterialDesignRaisedDarkButton}"/>
+                Style="{DynamicResource InputPathButton}"/>
     </Grid>
 </UserControl>

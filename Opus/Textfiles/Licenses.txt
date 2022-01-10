@@ -6,7 +6,7 @@ lisenssin ehtojen mukaisesti.
 
 GNU Affero General Public License 3.0: https://www.gnu.org/licenses/agpl-3.0.html
 
-Ohjelman lähdekoodi on saatavissa osoitteesta: https://github.com/CodeX-fi/ExtractPdf
+Ohjelman lähdekoodi on saatavissa osoitteesta: https://github.com/CodeX-fi
 
 **** AVOIMEN LÄHDEKOODIN RIIPPUVUUDET ****
 
@@ -25,6 +25,10 @@ iText7
 LiteDB
 	- https://www.litedb.org/
 	- MIT License: https://github.com/mbdavid/LiteDB/blob/master/LICENSE
+
+AsyncAwaitBestPractices
+	- https://github.com/brminnick/AsyncAwaitBestPractices
+	- MIT License: https://github.com/brminnick/AsyncAwaitBestPractices/blob/main/LICENSE.md
 
 **** MUUT ****
 

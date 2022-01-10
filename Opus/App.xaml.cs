@@ -5,7 +5,6 @@ using Prism.Modularity;
 using Opus.Views;
 using System.Globalization;
 using System.Threading;
-using Opus.ContextMenu;
 using Opus.Services.UI;
 using Opus.Services.Implementation.UI;
 using Opus.Services.Data;
@@ -18,9 +17,9 @@ using CX.PdfLib.iText7;
 using Opus.Services.Input;
 using Opus.Services.Implementation.Input;
 using System.IO;
-using Opus.Services.Implementation.UI.Dialogs;
 using Opus.Services.Data.Composition;
 using Opus.Services.Implementation.Data.Composition;
+using Opus.ViewModels;
 
 namespace Opus
 {
@@ -29,62 +28,31 @@ namespace Opus
     /// </summary>
     public partial class App : PrismApplication
     {
-        private IContainerProvider initialContainer;
+        private string[] arguments;
 
         protected override void OnStartup(StartupEventArgs e)
         {
-            // Create a temporary container and register types.
-            // Temporary container is used in selecting language
-            // and performing I/O operations without initializing UI.
-            var extension = CreateContainerExtension();
-            initialContainer = extension;
-            RegisterTypes(extension);
-            SetLanguage(initialContainer);
-            UpdateProfiles(initialContainer);
-
-            // If started with arguments, display no UI,
-            // run command and exit.
             if (e.Args.Length > 0)
-            {
-                StartUpNoUI(extension, e.Args);
-                Current.Shutdown();
-            }
-            // Otherwise, initialize Prism and show UI
+                arguments = e.Args;
             else
-            {
-                initialContainer = null;
-                base.OnStartup(e);
-            }
-        }
+                arguments = null;
 
-        /// <summary>
-        /// Perform the command line command provided in arguments
-        /// </summary>
-        /// <param name="container">Temporary container for registered types</param>
-        /// <param name="arguments">Given arguments</param>
-        private void StartUpNoUI(IContainerExtension container, string[] arguments)
-        {
-            if (arguments[0] == "-remove") container.Register<IContextMenuCommand, RemoveSignature>();
-            if (arguments[0] == "-split") container.Register<IContextMenuCommand, ExtractDocument>();
-            if (arguments[0] == "-splitdir") container.Register<IContextMenuCommand, ExtractDirectory>();
-
-            if (container.IsRegistered(typeof(IContextMenuCommand)))
-                container.Resolve<IContextMenuCommand>().RunCommand(arguments);
+            base.OnStartup(e);
         }
 
         /// <summary>
         /// Set application display language
         /// </summary>
         /// <param name="container">Temporary container for registered types</param>
-        private void SetLanguage(IContainerProvider container)
+        private void SetLanguage()
         {
-            CultureInfo ci = new CultureInfo(container.Resolve<IConfiguration>().LanguageCode);
+            CultureInfo ci = new CultureInfo(Container.Resolve<IConfiguration>().LanguageCode);
             Thread.CurrentThread.CurrentUICulture = ci;
         }
 
-        private void UpdateProfiles(IContainerProvider container)
+        private void UpdateProfiles()
         {
-            ICompositionOptions options = container.Resolve<ICompositionOptions>();
+            ICompositionOptions options = Container.Resolve<ICompositionOptions>();
 
             bool errorFlag = false;
 
@@ -117,6 +85,7 @@ namespace Opus
             // Configuration services
             string configPath = Path.Combine(FilePaths.CONFIG_DIRECTORY, "Config" + FilePaths.CONFIG_EXTENSION);
             containerRegistry.RegisterSingleton<IConfiguration>(x => Configuration.Load(configPath));
+            SetLanguage();
 
             // Services for manipulating data
             containerRegistry.Register<IBookmarker, Bookmarker>();
@@ -139,7 +108,13 @@ namespace Opus
             containerRegistry.RegisterInstance<IDataProvider>(provider);
             containerRegistry.RegisterSingleton<ISignatureOptions, SignatureOptions>();
             containerRegistry.RegisterSingleton<ICompositionOptions, CompositionOptions>();
+
+            UpdateProfiles();
+
             containerRegistry.Register<IComposerFactory, ComposerFactory>();
+
+            // Context Menu
+            containerRegistry.Register<IContextMenu, WinContextMenu>();
         }
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
@@ -150,8 +125,22 @@ namespace Opus
         }
         protected override Window CreateShell()
         {
-            var w = Container.Resolve<MainWindowView>();
-            return w;
+            return arguments == null ? Container.Resolve<MainWindowView>() : Container.Resolve<ContextMenuView>();
+        }
+
+        protected override void OnInitialized()
+        {
+            base.OnInitialized();
+            if (MainWindow.DataContext is ContextMenuViewModel viewModel)
+            {
+                RunContext(viewModel);
+            }
+        }
+
+        private async void RunContext(ContextMenuViewModel viewModel)
+        {
+            await viewModel.ContextMenu.Run(arguments);
+            Current.Shutdown();
         }
     }
 }

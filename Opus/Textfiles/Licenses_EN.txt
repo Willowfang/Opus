@@ -6,7 +6,7 @@ in accordance with the conditions set out in the aforementioned license.
 
 GNU Affero General Public License 3.0: https://www.gnu.org/licenses/agpl-3.0.html
 
-The source code of the application is available at: https://github.com/CodeX-fi/ExtractPdf
+The source code of the application is available at: https://github.com/CodeX-fi
 
 **** OPEN SOURCE DEPENDENCIES ****
 
@@ -25,6 +25,10 @@ iText7
 LiteDB
 	- https://www.litedb.org/
 	- MIT License: https://github.com/mbdavid/LiteDB/blob/master/LICENSE
+
+AsyncAwaitBestPractices
+	- https://github.com/brminnick/AsyncAwaitBestPractices
+	- MIT License: https://github.com/brminnick/AsyncAwaitBestPractices/blob/main/LICENSE.md
 
 **** OTHERS ****
 

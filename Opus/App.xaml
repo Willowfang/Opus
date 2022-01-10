@@ -20,6 +20,7 @@
                 <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Controls/StackPanelCollection.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Controls/ContextMenuCollection.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="{StaticResource Primary500}"/>
         </ResourceDictionary>
     </Application.Resources>
 </prism:PrismApplication>

@@ -79,6 +79,15 @@ namespace Opus.Resources.Operations {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tallennussijainnin valinta....
+        /// </summary>
+        public static string ChoosingDestination {
+            get {
+                return ResourceManager.GetString("ChoosingDestination", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Muunnetaan tiedostoja....
         /// </summary>
         public static string Converting {

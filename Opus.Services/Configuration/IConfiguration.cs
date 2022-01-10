@@ -33,6 +33,11 @@ namespace Opus.Services.Configuration
         /// </summary>
         public bool CompositionSearchSubDirectories { get; set; }
         /// <summary>
+        /// If true, files converted to pdf during composition will be deleted. Said
+        /// files will be deleted when cancelling, regardless of the value of this property.
+        /// </summary>
+        public bool CompositionDeleteConverted { get; set; }
+        /// <summary>
         /// The <see cref="ICompositionProfile"/> to select by default
         /// </summary>
         public Guid DefaultProfile { get; set; }

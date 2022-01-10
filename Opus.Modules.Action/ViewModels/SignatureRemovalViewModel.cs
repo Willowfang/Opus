@@ -19,6 +19,7 @@ using CX.PdfLib.Common;
 using Opus.Services.Implementation.UI.Dialogs;
 using Opus.Services.Data;
 using Opus.Services.Extensions;
+using System.Threading;
 
 namespace Opus.Modules.Action.ViewModels
 {
@@ -105,7 +106,9 @@ namespace Opus.Modules.Action.ViewModels
             string path = input.OpenDirectory(Resources.UserInput.Descriptions.SelectSaveFolder);
             if (path == null) return;
 
-            ProgressDialog progressDialog = new ProgressDialog(null)
+            CancellationTokenSource tokenSource = new CancellationTokenSource();
+
+            ProgressDialog progressDialog = new ProgressDialog(null, tokenSource)
             {
                 TotalPercent = 0,
                 Phase = ProgressPhase.Unassigned.GetResourceString()

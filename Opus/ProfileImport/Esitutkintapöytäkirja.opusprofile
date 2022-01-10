@@ -1,0 +1,446 @@
+{
+  "$type": "Opus.Services.Implementation.Data.Composition.CompositionProfile",
+  "ProfileName": "Esitutkintap\u00F6yt\u00E4kirja",
+  "Segments": [
+    {
+      "$type": "Opus.Services.Implementation.Data.Composition.CompositionFile",
+      "StructureName": "Kansilehti",
+      "DisplayName": "Kansilehti",
+      "SegmentName": "Kansilehti",
+      "NameFromFile": false,
+      "SearchExpression": {
+        "Options": 8,
+        "RightToLeft": false,
+        "MatchTimeout": {
+          "Ticks": -10000,
+          "Days": 0,
+          "Hours": 0,
+          "Milliseconds": -1,
+          "Minutes": 0,
+          "Seconds": 0,
+          "TotalDays": -1.1574074074074074E-08,
+          "TotalHours": -2.7777777777777776E-07,
+          "TotalMilliseconds": -1,
+          "TotalMinutes": -1.6666666666666667E-05,
+          "TotalSeconds": -0.001
+        }
+      },
+      "SearchExpressionString": "^[kK]ansilehti",
+      "IgnoreExpression": {
+        "Options": 8,
+        "RightToLeft": false,
+        "MatchTimeout": {
+          "Ticks": -10000,
+          "Days": 0,
+          "Hours": 0,
+          "Milliseconds": -1,
+          "Minutes": 0,
+          "Seconds": 0,
+          "TotalDays": -1.1574074074074074E-08,
+          "TotalHours": -2.7777777777777776E-07,
+          "TotalMilliseconds": -1,
+          "TotalMinutes": -1.6666666666666667E-05,
+          "TotalSeconds": -0.001
+        }
+      },
+      "IgnoreExpressionString": "^[^a-zA-Z\u00E5\u00E4\u00F6\u00C5\u00C4\u00D6]*",
+      "MinCount": 1,
+      "MaxCount": 1,
+      "Example": "Kansilehti.pdf",
+      "Level": 1
+    },
+    {
+      "$type": "Opus.Services.Implementation.Data.Composition.CompositionFile",
+      "StructureName": "Johdanto",
+      "DisplayName": "(Johdanto)",
+      "SegmentName": "Johdanto",
+      "NameFromFile": false,
+      "SearchExpression": {
+        "Options": 8,
+        "RightToLeft": false,
+        "MatchTimeout": {
+          "Ticks": -10000,
+          "Days": 0,
+          "Hours": 0,
+          "Milliseconds": -1,
+          "Minutes": 0,
+          "Seconds": 0,
+          "TotalDays": -1.1574074074074074E-08,
+          "TotalHours": -2.7777777777777776E-07,
+          "TotalMilliseconds": -1,
+          "TotalMinutes": -1.6666666666666667E-05,
+          "TotalSeconds": -0.001
+        }
+      },
+      "SearchExpressionString": "^[jJ]ohdanto",
+      "IgnoreExpression": {
+        "Options": 8,
+        "RightToLeft": false,
+        "MatchTimeout": {
+          "Ticks": -10000,
+          "Days": 0,
+          "Hours": 0,
+          "Milliseconds": -1,
+          "Minutes": 0,
+          "Seconds": 0,
+          "TotalDays": -1.1574074074074074E-08,
+          "TotalHours": -2.7777777777777776E-07,
+          "TotalMilliseconds": -1,
+          "TotalMinutes": -1.6666666666666667E-05,
+          "TotalSeconds": -0.001
+        }
+      },
+      "IgnoreExpressionString": "^[^a-zA-Z\u00E5\u00E4\u00F6\u00C5\u00C4\u00D6]*",
+      "MinCount": 0,
+      "MaxCount": 1,
+      "Example": "Johdanto.pdf",
+      "Level": 1
+    },
+    {
+      "$type": "Opus.Services.Implementation.Data.Composition.CompositionFile",
+      "StructureName": "Tutkintailmoitus",
+      "DisplayName": "Tutkintailmoitus",
+      "SegmentName": "Tutkintailmoitus",
+      "NameFromFile": false,
+      "SearchExpression": {
+        "Options": 8,
+        "RightToLeft": false,
+        "MatchTimeout": {
+          "Ticks": -10000,
+          "Days": 0,
+          "Hours": 0,
+          "Milliseconds": -1,
+          "Minutes": 0,
+          "Seconds": 0,
+          "TotalDays": -1.1574074074074074E-08,
+          "TotalHours": -2.7777777777777776E-07,
+          "TotalMilliseconds": -1,
+          "TotalMinutes": -1.6666666666666667E-05,
+          "TotalSeconds": -0.001
+        }
+      },
+      "SearchExpressionString": "^[tT]utkintailmoitus",
+      "IgnoreExpression": {
+        "Options": 8,
+        "RightToLeft": false,
+        "MatchTimeout": {
+          "Ticks": -10000,
+          "Days": 0,
+          "Hours": 0,
+          "Milliseconds": -1,
+          "Minutes": 0,
+          "Seconds": 0,
+          "TotalDays": -1.1574074074074074E-08,
+          "TotalHours": -2.7777777777777776E-07,
+          "TotalMilliseconds": -1,
+          "TotalMinutes": -1.6666666666666667E-05,
+          "TotalSeconds": -0.001
+        }
+      },
+      "IgnoreExpressionString": "^[^a-zA-Z\u00E5\u00E4\u00F6\u00C5\u00C4\u00D6]*",
+      "MinCount": 1,
+      "MaxCount": 1,
+      "Example": "Tutkintailmoitus.pdf",
+      "Level": 1
+    },
+    {
+      "$type": "Opus.Services.Implementation.Data.Composition.CompositionTitle",
+      "StructureName": "Kuulustelut",
+      "DisplayName": "Kuulustelut",
+      "SegmentName": "Kuulustelut",
+      "Level": 1
+    },
+    {
+      "$type": "Opus.Services.Implementation.Data.Composition.CompositionFile",
+      "StructureName": "[tiedoston nimi]",
+      "DisplayName": "(Asianomistajat)",
+      "SegmentName": "Asianomistajat",
+      "NameFromFile": true,
+      "SearchExpression": {
+        "Options": 8,
+        "RightToLeft": false,
+        "MatchTimeout": {
+          "Ticks": -10000,
+          "Days": 0,
+          "Hours": 0,
+          "Milliseconds": -1,
+          "Minutes": 0,
+          "Seconds": 0,
+          "TotalDays": -1.1574074074074074E-08,
+          "TotalHours": -2.7777777777777776E-07,
+          "TotalMilliseconds": -1,
+          "TotalMinutes": -1.6666666666666667E-05,
+          "TotalSeconds": -0.001
+        }
+      },
+      "SearchExpressionString": "^[aA][oO]\\s\u002B",
+      "IgnoreExpression": {
+        "Options": 8,
+        "RightToLeft": false,
+        "MatchTimeout": {
+          "Ticks": -10000,
+          "Days": 0,
+          "Hours": 0,
+          "Milliseconds": -1,
+          "Minutes": 0,
+          "Seconds": 0,
+          "TotalDays": -1.1574074074074074E-08,
+          "TotalHours": -2.7777777777777776E-07,
+          "TotalMilliseconds": -1,
+          "TotalMinutes": -1.6666666666666667E-05,
+          "TotalSeconds": -0.001
+        }
+      },
+      "IgnoreExpressionString": "^[^a-zA-Z\u00E5\u00E4\u00F6\u00C5\u00C4\u00D6]*",
+      "MinCount": 0,
+      "MaxCount": 0,
+      "Example": "AO M\u00F6tt\u00F6nen, Matti.pdf",
+      "Level": 2
+    },
+    {
+      "$type": "Opus.Services.Implementation.Data.Composition.CompositionFile",
+      "StructureName": "[tiedoston nimi]",
+      "DisplayName": "Ep\u00E4illyt",
+      "SegmentName": "Ep\u00E4illyt",
+      "NameFromFile": true,
+      "SearchExpression": {
+        "Options": 8,
+        "RightToLeft": false,
+        "MatchTimeout": {
+          "Ticks": -10000,
+          "Days": 0,
+          "Hours": 0,
+          "Milliseconds": -1,
+          "Minutes": 0,
+          "Seconds": 0,
+          "TotalDays": -1.1574074074074074E-08,
+          "TotalHours": -2.7777777777777776E-07,
+          "TotalMilliseconds": -1,
+          "TotalMinutes": -1.6666666666666667E-05,
+          "TotalSeconds": -0.001
+        }
+      },
+      "SearchExpressionString": "^[rR][eE]\\s\u002B",
+      "IgnoreExpression": {
+        "Options": 8,
+        "RightToLeft": false,
+        "MatchTimeout": {
+          "Ticks": -10000,
+          "Days": 0,
+          "Hours": 0,
+          "Milliseconds": -1,
+          "Minutes": 0,
+          "Seconds": 0,
+          "TotalDays": -1.1574074074074074E-08,
+          "TotalHours": -2.7777777777777776E-07,
+          "TotalMilliseconds": -1,
+          "TotalMinutes": -1.6666666666666667E-05,
+          "TotalSeconds": -0.001
+        }
+      },
+      "IgnoreExpressionString": "^[^a-zA-Z\u00E5\u00E4\u00F6\u00C5\u00C4\u00D6]*",
+      "MinCount": 1,
+      "MaxCount": 0,
+      "Example": "RE M\u00F6tt\u00F6nen, Matti.pdf",
+      "Level": 2
+    },
+    {
+      "$type": "Opus.Services.Implementation.Data.Composition.CompositionFile",
+      "StructureName": "[tiedoston nimi]",
+      "DisplayName": "(Todistajat)",
+      "SegmentName": "Todistajat",
+      "NameFromFile": true,
+      "SearchExpression": {
+        "Options": 8,
+        "RightToLeft": false,
+        "MatchTimeout": {
+          "Ticks": -10000,
+          "Days": 0,
+          "Hours": 0,
+          "Milliseconds": -1,
+          "Minutes": 0,
+          "Seconds": 0,
+          "TotalDays": -1.1574074074074074E-08,
+          "TotalHours": -2.7777777777777776E-07,
+          "TotalMilliseconds": -1,
+          "TotalMinutes": -1.6666666666666667E-05,
+          "TotalSeconds": -0.001
+        }
+      },
+      "SearchExpressionString": "^[tT][oO][dD]\\s\u002B",
+      "IgnoreExpression": {
+        "Options": 8,
+        "RightToLeft": false,
+        "MatchTimeout": {
+          "Ticks": -10000,
+          "Days": 0,
+          "Hours": 0,
+          "Milliseconds": -1,
+          "Minutes": 0,
+          "Seconds": 0,
+          "TotalDays": -1.1574074074074074E-08,
+          "TotalHours": -2.7777777777777776E-07,
+          "TotalMilliseconds": -1,
+          "TotalMinutes": -1.6666666666666667E-05,
+          "TotalSeconds": -0.001
+        }
+      },
+      "IgnoreExpressionString": "^[^a-zA-Z\u00E5\u00E4\u00F6\u00C5\u00C4\u00D6]*",
+      "MinCount": 0,
+      "MaxCount": 0,
+      "Example": "TOD M\u00F6tt\u00F6nen, Matti.pdf",
+      "Level": 2
+    },
+    {
+      "$type": "Opus.Services.Implementation.Data.Composition.CompositionFile",
+      "StructureName": "[tiedoston nimi]",
+      "DisplayName": "(Muut kuultavat)",
+      "SegmentName": "Muut kuultavat",
+      "NameFromFile": true,
+      "SearchExpression": {
+        "Options": 8,
+        "RightToLeft": false,
+        "MatchTimeout": {
+          "Ticks": -10000,
+          "Days": 0,
+          "Hours": 0,
+          "Milliseconds": -1,
+          "Minutes": 0,
+          "Seconds": 0,
+          "TotalDays": -1.1574074074074074E-08,
+          "TotalHours": -2.7777777777777776E-07,
+          "TotalMilliseconds": -1,
+          "TotalMinutes": -1.6666666666666667E-05,
+          "TotalSeconds": -0.001
+        }
+      },
+      "SearchExpressionString": "^[mM][uU][uU]\\s\u002B",
+      "IgnoreExpression": {
+        "Options": 8,
+        "RightToLeft": false,
+        "MatchTimeout": {
+          "Ticks": -10000,
+          "Days": 0,
+          "Hours": 0,
+          "Milliseconds": -1,
+          "Minutes": 0,
+          "Seconds": 0,
+          "TotalDays": -1.1574074074074074E-08,
+          "TotalHours": -2.7777777777777776E-07,
+          "TotalMilliseconds": -1,
+          "TotalMinutes": -1.6666666666666667E-05,
+          "TotalSeconds": -0.001
+        }
+      },
+      "IgnoreExpressionString": "^[^a-zA-Z\u00E5\u00E4\u00F6\u00C5\u00C4\u00D6]*",
+      "MinCount": 0,
+      "MaxCount": 0,
+      "Example": "MUU M\u00F6tt\u00F6nen, Matti.pdf",
+      "Level": 2
+    },
+    {
+      "$type": "Opus.Services.Implementation.Data.Composition.CompositionFile",
+      "StructureName": "Merkint\u00E4lehti",
+      "DisplayName": "Merkint\u00E4lehti",
+      "SegmentName": "Merkint\u00E4lehti",
+      "NameFromFile": false,
+      "SearchExpression": {
+        "Options": 8,
+        "RightToLeft": false,
+        "MatchTimeout": {
+          "Ticks": -10000,
+          "Days": 0,
+          "Hours": 0,
+          "Milliseconds": -1,
+          "Minutes": 0,
+          "Seconds": 0,
+          "TotalDays": -1.1574074074074074E-08,
+          "TotalHours": -2.7777777777777776E-07,
+          "TotalMilliseconds": -1,
+          "TotalMinutes": -1.6666666666666667E-05,
+          "TotalSeconds": -0.001
+        }
+      },
+      "SearchExpressionString": "^[mM]erkint\u00E4lehti",
+      "IgnoreExpression": {
+        "Options": 8,
+        "RightToLeft": false,
+        "MatchTimeout": {
+          "Ticks": -10000,
+          "Days": 0,
+          "Hours": 0,
+          "Milliseconds": -1,
+          "Minutes": 0,
+          "Seconds": 0,
+          "TotalDays": -1.1574074074074074E-08,
+          "TotalHours": -2.7777777777777776E-07,
+          "TotalMilliseconds": -1,
+          "TotalMinutes": -1.6666666666666667E-05,
+          "TotalSeconds": -0.001
+        }
+      },
+      "IgnoreExpressionString": "^[^a-zA-Z\u00E5\u00E4\u00F6\u00C5\u00C4\u00D6]*",
+      "MinCount": 1,
+      "MaxCount": 1,
+      "Example": "Merkint\u00E4lehti.pdf",
+      "Level": 1
+    },
+    {
+      "$type": "Opus.Services.Implementation.Data.Composition.CompositionTitle",
+      "StructureName": "Liitteet",
+      "DisplayName": "Liitteet",
+      "SegmentName": "Liitteet",
+      "Level": 1
+    },
+    {
+      "$type": "Opus.Services.Implementation.Data.Composition.CompositionFile",
+      "StructureName": "[tiedoston nimi]",
+      "DisplayName": "(Liitteet)",
+      "SegmentName": "Liitteet",
+      "NameFromFile": true,
+      "SearchExpression": {
+        "Options": 8,
+        "RightToLeft": false,
+        "MatchTimeout": {
+          "Ticks": -10000,
+          "Days": 0,
+          "Hours": 0,
+          "Milliseconds": -1,
+          "Minutes": 0,
+          "Seconds": 0,
+          "TotalDays": -1.1574074074074074E-08,
+          "TotalHours": -2.7777777777777776E-07,
+          "TotalMilliseconds": -1,
+          "TotalMinutes": -1.6666666666666667E-05,
+          "TotalSeconds": -0.001
+        }
+      },
+      "SearchExpressionString": "^[lL]iite\\s*\\d\u002B",
+      "IgnoreExpression": {
+        "Options": 8,
+        "RightToLeft": false,
+        "MatchTimeout": {
+          "Ticks": -10000,
+          "Days": 0,
+          "Hours": 0,
+          "Milliseconds": -1,
+          "Minutes": 0,
+          "Seconds": 0,
+          "TotalDays": -1.1574074074074074E-08,
+          "TotalHours": -2.7777777777777776E-07,
+          "TotalMilliseconds": -1,
+          "TotalMinutes": -1.6666666666666667E-05,
+          "TotalSeconds": -0.001
+        }
+      },
+      "IgnoreExpressionString": "^[^a-zA-Z\u00E5\u00E4\u00F6\u00C5\u00C4\u00D6]*",
+      "MinCount": 0,
+      "MaxCount": 0,
+      "Example": "Liite 1, Valokuvaliite.pdf",
+      "Level": 2
+    }
+  ],
+  "AddPageNumbers": true,
+  "IsEditable": false,
+  "Id": "ac3ffb22-9f0b-4388-9067-b1184bce5d6b"
+}

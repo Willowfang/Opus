@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31829.152
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opus", "Opus\Opus.csproj", "{A2017786-C65C-4EB9-877F-D35B3B7DDED4}"
 EndProject
@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opus.Services.Implementatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opus.Events", "Opus.Events\Opus.Events.csproj", "{3AE46508-337A-48E4-9B23-83F3CA1E7C3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opus.Resources", "Opus.Resources\Opus.Resources.csproj", "{4D43527B-D902-4828-85F3-A0FF0DF8480A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opus.Resources", "Opus.Resources\Opus.Resources.csproj", "{4D43527B-D902-4828-85F3-A0FF0DF8480A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

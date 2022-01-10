@@ -21,6 +21,7 @@ namespace Opus.Services.Extensions
                 ProgressPhase.GettingBookmarks => Resources.Operations.PhaseNames.GettingBookmarks,
                 ProgressPhase.Merging => Resources.Operations.PhaseNames.Merging,
                 ProgressPhase.Finished => Resources.Operations.PhaseNames.Finished,
+                ProgressPhase.ChoosingDestination => Resources.Operations.PhaseNames.ChoosingDestination,
                 _ => throw new ArgumentOutOfRangeException("Phase not defined")
             };
         }

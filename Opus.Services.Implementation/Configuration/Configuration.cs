@@ -46,6 +46,13 @@ namespace Opus.Services.Implementation.Configuration
             set => SetProperty(ref compositionSearchSubDirectories, value, SaveConfiguration);
         }
 
+        private bool compositionDeleteConverted;
+        public bool CompositionDeleteConverted
+        {
+            get => compositionDeleteConverted;
+            set => SetProperty(ref compositionDeleteConverted, value, SaveConfiguration);
+        }
+
         private Guid defaultProfile;
         public Guid DefaultProfile
         {

@@ -81,7 +81,7 @@ namespace Opus.Services.Implementation.Data.Composition
             cancelToken = cancelSource.Token;
 
             // Create an initial progress dialog
-            progressDialog = new ProgressDialog(string.Empty)
+            progressDialog = new ProgressDialog(string.Empty, cancelSource)
             {
                 TotalPercent = 0,
                 PartPercent = 0,
@@ -96,9 +96,13 @@ namespace Opus.Services.Implementation.Data.Composition
         /// <param name="compositionProfile">Profile containing the <see cref="ICompositionSegment"/>s to do
         /// the composition by</param>
         /// <returns></returns>
-        public async Task Compose(string directory, ICompositionProfile compositionProfile)
+        public async Task Compose(string directory, ICompositionProfile compositionProfile,
+            bool deleteConverted, bool searchSubDirectories)
         {
-            progressDialog = new ProgressDialog(string.Empty)
+            cancelSource = new CancellationTokenSource();
+            cancelToken = cancelSource.Token;
+
+            progressDialog = new ProgressDialog(string.Empty, cancelSource)
             {
                 TotalPercent = 0,
                 PartPercent = 0,
@@ -106,23 +110,15 @@ namespace Opus.Services.Implementation.Data.Composition
             };
 
             // Show progress to the user
-            Task progress = ShowProgress();
+            Task progress = dialogAssist.Show(progressDialog);
             // Start composing
-            Task compose = ComposeInternal(directory, compositionProfile);
+            Task compose = ComposeInternal(directory, compositionProfile, deleteConverted, searchSubDirectories);
 
             await Task.WhenAll(progress, compose);
         }
 
-        private async Task ShowProgress()
-        {
-            await dialogAssist.Show(progressDialog);
-            if (progressDialog.IsCanceled)
-            {
-                cancelSource.Cancel();
-            }
-        }
-
-        private async Task ComposeInternal(string directory, ICompositionProfile compositionProfile)
+        private async Task ComposeInternal(string directory, ICompositionProfile compositionProfile,
+            bool deleteConverted, bool searchSubDirectories)
         {
             if (directory == null)
                 throw new ArgumentNullException(nameof(directory));
@@ -131,7 +127,10 @@ namespace Opus.Services.Implementation.Data.Composition
             if (compositionProfile == null)
                 throw new ArgumentNullException(nameof(compositionProfile));
 
-            IEnumerable<string> files = Directory.GetFiles(directory, "*.*", SearchOption.AllDirectories)
+            SearchOption subDirs = searchSubDirectories == true ? 
+                SearchOption.AllDirectories : SearchOption.TopDirectoryOnly;
+
+            IEnumerable<string> files = Directory.GetFiles(directory, "*.*", subDirs)
                 .Where(x => x.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase) ||
                 x.EndsWith(".docx", StringComparison.OrdinalIgnoreCase) ||
                 x.EndsWith(".doc", StringComparison.OrdinalIgnoreCase));
@@ -170,7 +169,8 @@ namespace Opus.Services.Implementation.Data.Composition
             if (cancelToken.IsCancellationRequested)
                 return;
 
-            await ExecuteComposition(directory, inputs, compositionProfile.AddPageNumbers);
+            await ExecuteComposition(directory, inputs, compositionProfile.AddPageNumbers,
+                deleteConverted);
 
             if (cancelToken.IsCancellationRequested)
                 return;
@@ -305,16 +305,21 @@ namespace Opus.Services.Implementation.Data.Composition
             }
         }
 
-        private async Task ExecuteComposition(string directory, List<IMergeInput> inputs, bool addPageNumbers)
+        private async Task ExecuteComposition(string directory, List<IMergeInput> inputs, bool addPageNumbers, 
+            bool deleteConverted)
         {
             progressDialog.PartPercent = 0;
+            progressDialog.Part = Resources.Operations.PhaseNames.ChoosingDestination;
             progressDialog.Phase = Resources.Operations.PhaseNames.Merging;
+
+            int alreadyReportedPercent = 0;
 
             IProgress<ProgressReport> mergeProgress = new Progress<ProgressReport>(progress =>
             {
                 progressDialog.PartPercent = progress.Percentage;
-                progressDialog.Phase = progress.CurrentPhase.GetResourceString();
-                totalProgress?.Report(progress.Percentage);
+                progressDialog.Part = progress.CurrentPhase.GetResourceString();
+                totalProgress?.Report(progress.Percentage - alreadyReportedPercent);
+                alreadyReportedPercent = progress.Percentage;
             });
 
             string filePath = await Task.Run(() => input.SaveFile(Resources.UserInput.Descriptions.SelectSaveFile,
@@ -326,8 +331,21 @@ namespace Opus.Services.Implementation.Data.Composition
                 return;
             }
 
-            await manipulator.MergeWithBookmarksAsync(inputs, filePath, addPageNumbers,
+            IList<string> created = await manipulator.MergeWithBookmarksAsync(inputs, filePath, addPageNumbers,
                 mergeProgress, cancelToken);
+
+            if (cancelToken.IsCancellationRequested == false)
+            {
+                created.Remove(filePath);
+            }
+
+            if (deleteConverted || cancelToken.IsCancellationRequested)
+            {
+                foreach (string file in created)
+                {
+                    File.Delete(file);
+                }
+            }
         }
     }
 }
