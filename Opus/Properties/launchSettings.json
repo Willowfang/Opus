@@ -9,7 +9,7 @@
     },
     "Opus extract file": {
       "commandName": "Project",
-      "commandLineArgs": "-extract \"C:\\Users\\jbjok\\OneDrive\\Desktop\\Esimerkki\\Alice's Adventures in Wonderland.pdf\""
+      "commandLineArgs": "-extract \"C:\\Users\\jbjok\\OneDrive\\Desktop\\Esimerkki\\Pöytäkirja.pdf\""
     }
   }
 }
