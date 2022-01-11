@@ -92,6 +92,11 @@ namespace Opus.Modules.Action.ViewModels
             set => SetProperty(ref addProfileMenuOpen, value);
         }
 
+        public bool ProfileContentShow
+        {
+            get => true;
+        }
+
         public CompositionViewModel(IEventAggregator aggregator,
             IPathSelection input, IConfiguration configuration, INavigationTargetRegistry navReg,
             IDialogAssist dialogAssist, ICompositionOptions options, IManipulator manipulator,

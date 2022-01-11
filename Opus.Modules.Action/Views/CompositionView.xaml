@@ -120,19 +120,32 @@
 
         <Separator Grid.Row="3" Margin="10, 10, 10, 10"/>
 
-        <ListView ItemsSource="{Binding SelectedProfile.Segments}"
+        <Grid Grid.Row="4">
+            <TextBlock Style="{DynamicResource MaterialDesignSubtitle1TextBlock}"
+                       Text="{x:Static resLabels:General.NoContent}"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"
+                       Margin="30">
+                <TextBlock.Visibility>
+                    <MultiBinding Converter="{StaticResource ZeroAndTrue}">
+                        <Binding Path="SelectedProfile.Segments.Count"/>
+                        <Binding Path="ProfileContentShow"/>
+                    </MultiBinding>
+                </TextBlock.Visibility>
+            </TextBlock>
+            <ListView ItemsSource="{Binding SelectedProfile.Segments}"
                   Style="{StaticResource SelectionList}"
                   SelectedItem="{Binding SelectedProfile.Segments.SelectedItem}"
                   SelectionMode="Single"
-                  Grid.Row="4"
                   x:Name="SegmentsList">
-            <ListView.InputBindings>
-                <KeyBinding Key="Up" Modifiers="Ctrl" Command="{Binding SelectedProfile.Segments.MoveUp}"/>
-                <KeyBinding Key="Down" Modifiers="Ctrl" Command="{Binding SelectedProfile.Segments.MoveDown}"/>
-                <KeyBinding Key="Left" Modifiers="Ctrl" Command="{Binding SelectedProfile.Segments.MoveLeft}"/>
-                <KeyBinding Key="Right" Modifiers="Ctrl" Command="{Binding SelectedProfile.Segments.MoveRight}"/>
-            </ListView.InputBindings>
-        </ListView>
+                <ListView.InputBindings>
+                    <KeyBinding Key="Up" Modifiers="Ctrl" Command="{Binding SelectedProfile.Segments.MoveUp}"/>
+                    <KeyBinding Key="Down" Modifiers="Ctrl" Command="{Binding SelectedProfile.Segments.MoveDown}"/>
+                    <KeyBinding Key="Left" Modifiers="Ctrl" Command="{Binding SelectedProfile.Segments.MoveLeft}"/>
+                    <KeyBinding Key="Right" Modifiers="Ctrl" Command="{Binding SelectedProfile.Segments.MoveRight}"/>
+                </ListView.InputBindings>
+            </ListView>
+        </Grid>
 
         <StackPanel Orientation="Horizontal" Grid.Row="5" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal"

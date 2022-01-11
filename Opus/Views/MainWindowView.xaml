@@ -9,7 +9,7 @@
         xmlns:resMain="clr-namespace:Opus.Resources.Labels.MainWindow;assembly=Opus.Resources"
         xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
-        Title="Opus" MinHeight="600" Height="800" MinWidth="600" Width="600"
+        Title="Opus" MinHeight="600" Height="800" MinWidth="570" Width="570"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -38,14 +38,14 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Border Grid.Row="0" Padding="5, 5, 5, 5" Margin="0, 0, 0, 0" x:Name="TopBar"
+            <materialDesign:Card Grid.Row="0" Padding="5, 5, 5, 5" Margin="0, 0, 0, 0" x:Name="TopBar"
                     materialDesign:ShadowAssist.ShadowDepth="Depth0"
                     MouseLeftButtonDown="TopBar_MouseLeftButtonDown"
                     Opacity="1">
-                <Border.Background>
-                    <SolidColorBrush Color="White" Opacity="1"/>
-                </Border.Background>
-                <StackPanel HorizontalAlignment="Right" Margin="0, 0, 15, 0"
+                <materialDesign:Card.Effect>
+                    <DropShadowEffect ShadowDepth="4" BlurRadius="8" Color="White"/>
+                </materialDesign:Card.Effect>
+                <StackPanel HorizontalAlignment="Right" Margin="0, 0, 10, 0"
                             Orientation="Horizontal">
                     <Button Style="{DynamicResource MaterialDesignFlatButton}" Height="25" Width="25" Padding="0"
                             Margin="0, 0, 10, 0"
@@ -62,15 +62,18 @@
                         <materialDesign:PackIcon Kind="CloseThick" Width="25"/>
                     </Button>
                 </StackPanel>
-            </Border>
+            </materialDesign:Card>
             <Grid Grid.Row="1" Margin="0, 0, 0, 0">
                 <ContentControl Content="{StaticResource Divided}" HorizontalAlignment="Center"
                                 Margin="0, 0, -100, 0" Opacity="0.2"/>
                 <DockPanel>
                     <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth0"
-                            HorizontalAlignment="Center" Margin="5, 0, 0, 0"
+                            HorizontalAlignment="Center" Margin="0, 0, 0, 0"
                             Opacity="1">
-                        <StackPanel Margin="0, 0, 0, 0">
+                        <materialDesign:Card.Effect>
+                            <DropShadowEffect ShadowDepth="4" BlurRadius="8" Color="White"/>
+                        </materialDesign:Card.Effect>
+                        <StackPanel Margin="5, 0, 0, 0">
                             <Image Source="/Images/Bookmark.png" Grid.Row="0" Grid.Column="0"
                                    Width="60" Margin="0, 10, 0, 0"/>
                             <Separator Style="{DynamicResource MaterialDesignDarkSeparator}" Margin="5, 10, 5, 10"/>

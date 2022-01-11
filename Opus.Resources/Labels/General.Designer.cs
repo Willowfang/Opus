@@ -142,6 +142,24 @@ namespace Opus.Resources.Labels {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ei kirjanmerkkejä.
+        /// </summary>
+        public static string NoBookmarks {
+            get {
+                return ResourceManager.GetString("NoBookmarks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ei sisältöä.
+        /// </summary>
+        public static string NoContent {
+            get {
+                return ResourceManager.GetString("NoContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ilmoitus.
         /// </summary>
         public static string Notification {
