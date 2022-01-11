@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:resLabels="clr-namespace:Opus.Resources.Labels;assembly=Opus.Resources"
              xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="500"
@@ -23,18 +24,31 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <ListView ItemsSource="{Binding FileBookmarks}"
+        <Grid Grid.Row="0">
+            <TextBlock Style="{DynamicResource MaterialDesignSubtitle1TextBlock}"
+                       Text="{x:Static resLabels:General.NoBookmarks}"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"
+                       Margin="30">
+                <TextBlock.Visibility>
+                    <MultiBinding Converter="{StaticResource ZeroAndTrue}">
+                        <Binding Path="FileBookmarks.Count"/>
+                        <Binding Path="IsFileSelected"/>
+                    </MultiBinding>
+                </TextBlock.Visibility>
+            </TextBlock>
+            <ListView ItemsSource="{Binding FileBookmarks}"
                   Style="{StaticResource SelectionList}"
                   SelectedItem="{Binding SelectedBookmark}"
-                  Grid.Row="0"
                   x:Name="BookmarksList"
                   ItemTemplate="{StaticResource ExtractList}">
-            <i:Interaction.Triggers>
-                <i:EventTrigger EventName="SelectionChanged">
-                    <prism:InvokeCommandAction Command="{Binding SelectChildrenCommand}"/>
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
-        </ListView>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <prism:InvokeCommandAction Command="{Binding SelectChildrenCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </ListView>
+        </Grid>
 
         <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
             <Button Style="{StaticResource ToolButton}"

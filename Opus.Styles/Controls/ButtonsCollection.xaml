@@ -42,7 +42,6 @@
     <Style TargetType="{x:Type Button}" BasedOn="{StaticResource DialogButton}"
            x:Key="DialogSaveButton">
         <Setter Property="Command" Value="{Binding Save}"/>
-        <Setter Property="Foreground" Value="{DynamicResource SecondaryHueDarkBrush}"/>
         <Setter Property="Content" Value="{x:Static resButtons:General.Save}"/>
         <Setter Property="IsDefault" Value="True"/>
     </Style>

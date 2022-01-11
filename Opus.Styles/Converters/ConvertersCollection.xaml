@@ -14,5 +14,6 @@
     <c:BooleanAllNegative x:Key="BooleanAllNegative"/>
     <c:BooleanToFontWeight x:Key="NegativeToBold"/>
     <c:NullToString x:Key="NullToString"/>
+    <c:ZeroAndTrue x:Key="ZeroAndTrue"/>
 
 </ResourceDictionary>
