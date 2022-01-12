@@ -7,6 +7,12 @@ nav_order: 1
 
 # Ohjelman avaaminen
 
+## Sisällys
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
 ---
 
 ## Windowsin hakukenttä
