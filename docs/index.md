@@ -45,3 +45,11 @@ Opus on lisensoitu GNU Affero General Public License 3.0 -lisenssillä. Ohjelma 
 
 **[LiteDB](https://github.com/mbdavid/LiteDB)**
 - [MIT License](https://github.com/mbdavid/LiteDB/blob/master/LICENSE)
+
+**[AsyncAwaitBestPractices](https://github.com/brminnick/AsyncAwaitBestPractices)**
+- [MIT License](https://github.com/brminnick/AsyncAwaitBestPractices/blob/main/LICENSE.md)
+
+### Muut
+
+**[System.Text.Json InterfaceConverter @ vpekarek](https://github.com/vpekarek/InterfaceConverter.SystemTextJson)
+- [MIT License](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
