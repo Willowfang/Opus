@@ -32,8 +32,7 @@ Opus on lisensoitu GNU Affero General Public License 3.0 -lisenssillä. Ohjelma 
 * [GNU Affero Public License 3.0](https://www.gnu.org/licenses/agpl-3.0.html)
 
 ### Avoimen lähdekoodin riippuvuudet 
-  
-  
+---
 **[MaterialDesignThemes](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)**
 - [MIT License](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/blob/master/LICENSE)
 
@@ -50,7 +49,6 @@ Opus on lisensoitu GNU Affero General Public License 3.0 -lisenssillä. Ohjelma 
 - [MIT License](https://github.com/brminnick/AsyncAwaitBestPractices/blob/main/LICENSE.md)
 
 ### Muut
-  
-  
+---
 **[System.Text.Json InterfaceConverter @ vpekarek](https://github.com/vpekarek/InterfaceConverter.SystemTextJson)**
 - [MIT License](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
