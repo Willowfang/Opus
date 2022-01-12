@@ -15,5 +15,5 @@ tekemäsi asetukset ja muutokset säilyvät, vaikka vaihtaisit välillä toiseen
 ---
 
 <div class="instruction_image">
-  <img src="https://codex-fi.github.io/Opus/ui/gif/general/MainMenu.gif">
+  <img src="https://codex-fi.github.io/Opus/ui/gif/open_file.gif">
 </div>
