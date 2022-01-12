@@ -14,5 +14,5 @@ Klikkaa ruudun ylälaidassa keskellä olevaa painiketta "Avaa tiedosto". Tiedost
 ---
 
 <div class="instruction_image">
-  <img src="https://codex-fi.github.io/Opus/ui/gif/open_file.gif">
+  <img src="https://codex-fi.github.io/Opus/ui/gif/extract/open_file.gif">
 </div>
