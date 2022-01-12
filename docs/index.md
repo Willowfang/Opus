@@ -33,20 +33,20 @@ Opus on lisensoitu GNU Affero General Public License 3.0 -lisenssillä. Ohjelma 
 
 ### Avoimen lähdekoodin riippuvuudet
 - **[MaterialDesignThemes](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)**
-- [MIT License](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/blob/master/LICENSE)
+   - [MIT License](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/blob/master/LICENSE)
 
 - **[Prism](https://github.com/PrismLibrary/Prism)**
-- [MIT License](https://github.com/PrismLibrary/Prism/blob/master/LICENSE)
+   - [MIT License](https://github.com/PrismLibrary/Prism/blob/master/LICENSE)
 
 - **[iText7](https://github.com/itext/itext7-dotnet)**
-- [AGPL 3.0](https://github.com/itext/itext7-dotnet/blob/develop/LICENSE.md)
+   - [AGPL 3.0](https://github.com/itext/itext7-dotnet/blob/develop/LICENSE.md)
 
 - **[LiteDB](https://github.com/mbdavid/LiteDB)**
-- [MIT License](https://github.com/mbdavid/LiteDB/blob/master/LICENSE)
+   - [MIT License](https://github.com/mbdavid/LiteDB/blob/master/LICENSE)
 
 - **[AsyncAwaitBestPractices](https://github.com/brminnick/AsyncAwaitBestPractices)**
-- [MIT License](https://github.com/brminnick/AsyncAwaitBestPractices/blob/main/LICENSE.md)
+   - [MIT License](https://github.com/brminnick/AsyncAwaitBestPractices/blob/main/LICENSE.md)
 
 ### Muut
 - **[System.Text.Json InterfaceConverter @ vpekarek](https://github.com/vpekarek/InterfaceConverter.SystemTextJson)**
-- [MIT License](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
+   - [MIT License](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
