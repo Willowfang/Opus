@@ -27,7 +27,7 @@ Avaa erottelun asetukset klikkaamalla hammasrataksen kuvaa tiedostovalitsimen oi
 Alkuliitteeseen voit lisätä sellaisen haluamasi tekstin, joka lisätään jokaisesta erotellusta kirjanmerkistä luodun tiedoston nimen alkuun. 
 Jos alkuliitteenä on esimerkiksi "Eroteltu", kirjanmerkeistä luodut tiedostot nimetään seuraavasti:
 
-   Kirjanmerkki 1 --> Eroteltu Kirjanmerkki 1.pdf
+> Kirjanmerkki 1 --> Eroteltu Kirjanmerkki 1.pdf
 
 ### Jälkiliite
 
