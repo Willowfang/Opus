@@ -16,15 +16,13 @@ nav_order: 2
 
 ---
 
-## Kirjanmerkkien valitseminen
-
-### Yksittäisten merkkien valinta
+## Yksittäisten merkkien valinta
 
 Klikkaa kirjanmerkkiruudusta niitä kirjanmerkkejä, jotka haluat erottaa. Kyseiset kirjanmerkit tulevat maalatuiksi. Jos haluat poistaa tekemäsi valinnan, klikkaa merkkiä uudestaan.
 
 Jos valitset ylätason merkin, myös kaikki alatason merkit valitaan.
 
-### Kaikkien merkkien valitseminen ja valintojen poistaminen
+## Kaikkien merkkien valitseminen ja valintojen poistaminen
 
 Alaosan painikkeista voit valita kerralla kaikki kirjanmerkit tai poistaa kaikki valinnat.
 
