@@ -18,7 +18,7 @@ nav_order: 3
 
 ## Uuden kirjanmerkin luominen
 
-Klikkaa kirjanmerkkinäkymän alalaidassa +-merkkin kuvaa. Uuden kirjanmerkin luonti-ikkuna aukeaa. Syötä kirjanmerkille haluamasi nimi sekä aloitus- ja lopetussivu. Jos valitsemasi sivuväli osuus toisen kirjanmerkin sivuvälin sisään, uusi kirjanmerkki jäsennetään kyseisen toisen kirjanmerkin alle.
+Klikkaa kirjanmerkkinäkymän alalaidassa +-merkin kuvaa. Uuden kirjanmerkin luonti-ikkuna aukeaa. Syötä kirjanmerkille haluamasi nimi sekä aloitus- ja lopetussivu. Jos valitsemasi sivuväli osuus toisen kirjanmerkin sivuvälin sisään, uusi kirjanmerkki jäsennetään kyseisen toisen kirjanmerkin alle.
 
 Nimi sekä alku- ja loppusivu ovat pakollisia kenttiä. Alkusivu ei voi olla suurempi, kuin loppusivu. Kun haluat tallentaa luomasi kirjanmerkin, valitse tallenna. Kirjanmerkki lisätään listaan.
 
