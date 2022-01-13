@@ -3,95 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:resValidation="clr-namespace:Opus.Resources.Validation;assembly=Opus.Resources"
              xmlns:resDialog="clr-namespace:Opus.Resources.Labels.Dialogs;assembly=Opus.Resources"
              xmlns:local="clr-namespace:Opus.Views.Styles"
              mc:Ignorable="d">
     <StackPanel Background="{DynamicResource MaterialDesignPaper}">
         <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
-                   Text="{Binding DialogTitle}"/>
+                       Text="Kansilehti"/>
         <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}"
-                   FontSize="14" Width="300"
-                   TextWrapping="Wrap">
-        </TextBlock>
-        <Grid Margin="15">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <StackPanel Grid.Column="0"
-                        Grid.Row="0"
-                        HorizontalAlignment="Center">
-                <TextBlock Style="{StaticResource SegmentHeaderText}"
-                           Text="{x:Static resDialog:CompositionFileCount.FilesFound}"
-                           HorizontalAlignment="Center"
-                           Margin="10"/>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <TextBlock Margin="10, 0, 10, 0">
-                        <Run Text="{x:Static resDialog:CompositionFileCount.MinimumFiles}"/>
-                        <Run Text="{Binding Segment.MinCount}" FontWeight="Bold"/>
-                    </TextBlock>
-                    <TextBlock Margin="10, 0, 10, 0">
-                        <Run Text="{x:Static resDialog:CompositionFileCount.MaximumFiles}"/>
-                        <Run Text="{Binding Segment.MaxCount}"/>
-                    </TextBlock>
-                </StackPanel>
-            </StackPanel>
-            <Separator Margin="15" Grid.Row="1" Grid.Column="0"
-                       Grid.ColumnSpan="2"/>
-            <ListView ItemsSource="{Binding Files}"
-                      Grid.Column="0"
-                      Grid.Row="2"
-                      Height="150"
-                      Width="300"
-                      SelectedItem="{Binding SelectedFile}"
-                      Style="{DynamicResource SelectionList}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding Name}"
-                                       TextTrimming="CharacterEllipsis"
-                                       Grid.Column="0"/>
-                            <Button Grid.Column="1"
-                                    Style="{DynamicResource MaterialDesignIconButton}">
-                                <materialDesign:PackIcon Kind="File"
-                                                         Foreground="{DynamicResource PrimaryHueMidBrush}"/>
-                            </Button>
-                            <materialDesign:PackIcon Kind="FolderInformation"
-                                                     Foreground="{DynamicResource PrimaryHueMidBrush}"
-                                                     ToolTip="{Binding FilePath}"
-                                                     ToolTipService.InitialShowDelay="0"
-                                                     ToolTipService.ShowDuration="30000"/>
-                        </Grid>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <StackPanel VerticalAlignment="Center"
-                        Grid.Column="1"
-                        Grid.Row="2">
-                <Button Style="{DynamicResource MaterialDesignIconButton}">
-                    <materialDesign:PackIcon Kind="PlusThick"/>
-                </Button>
-                <Button Style="{DynamicResource MaterialDesignIconButton}">
-                    <materialDesign:PackIcon Kind="MinusThick"/>
-                </Button>
-            </StackPanel>
-        </Grid>
-        <Separator Margin="15, 0, 15, 15"/>
-        <StackPanel Style="{StaticResource DialogButtonStackPanel}">
-            <Button Style="{StaticResource DialogSaveButton}"/>
-            <Button Style="{StaticResource DialogCancelButton}"/>
+                       FontSize="14" Width="300"
+                       TextAlignment="Justify"
+                       TextWrapping="Wrap"
+                       Text="{x:Static resValidation:Composition.OneFileNotFound}"
+                       Margin="15, 15, 15, 0"/>
+        <StackPanel Orientation="Horizontal"
+                        Margin="15"
+                        HorizontalAlignment="Center"
+                        Visibility="{Binding SingleSelection, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <Button Style="{DynamicResource MaterialDesignFlatButton}"
+                        Margin="0, 0, 15, 0"
+                        Width="230"
+                        VerticalContentAlignment="Center"
+                        VerticalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        ToolTip="{Binding Files[0].FilePath}"
+                        Command="{Binding Files[0].OpenFile}">
+                <TextBlock FontSize="14"
+                               Text="{Binding Files[0].FileName}"
+                               TextTrimming="CharacterEllipsis"/>
+            </Button>
+            <Button Style="{DynamicResource MaterialDesignIconButton}"
+                        Command="{Binding AddFile}">
+                <md:PackIcon Kind="Folder" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
+            </Button>
         </StackPanel>
     </StackPanel>
 </UserControl>
