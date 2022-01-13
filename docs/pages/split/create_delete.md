@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Luominen ja poistaminen
+title: Merkkien luominen ja poistaminen
 parent: Kirjanmerkkien erotteleminen
 nav_order: 3
 ---
