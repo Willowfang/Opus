@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Merkkien luominen ja poistaminen
-parent: Kirjanmerkkien erotteleminen
-nav_order: 4
+parent: Kirjanmerkit
+nav_order: 2
 ---
 
 # Kirjanmerkkien luominen ja poistaminen
