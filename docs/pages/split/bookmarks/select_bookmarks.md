@@ -2,6 +2,7 @@
 layout: default
 title: Merkkien valitseminen
 parent: Kirjanmerkit
+grand_parent: Kirjanmerkkien erotteleminen
 nav_order: 1
 ---
 
