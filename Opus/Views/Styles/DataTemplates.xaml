@@ -377,7 +377,7 @@
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
                        Text="{Binding Segment.SegmentName}"/>
             <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}"
-                       FontSize="14" Width="280"
+                       FontSize="14" Width="300"
                        TextAlignment="Justify"
                        TextWrapping="Wrap"
                        Text="{Binding DialogTextContent}"
@@ -386,7 +386,7 @@
                         Margin="15"
                         HorizontalAlignment="Center"
                         Visibility="{Binding SingleSelection, Converter={StaticResource BooleanToVisibilityConverter}}">
-                <Button Style="{DynamicResource MaterialDesignOutlinedDarkButton}"
+                <Button Style="{DynamicResource MaterialDesignFlatButton}"
                         Margin="0, 0, 15, 0"
                         Width="230"
                         VerticalContentAlignment="Center"
@@ -440,7 +440,7 @@
                           Grid.Column="0"
                           Grid.Row="2"
                           Height="120"
-                          Width="350"
+                          Width="300"
                           SelectedItem="{Binding SelectedFile}"
                           Style="{DynamicResource SelectionList}">
                     <ListView.ItemTemplate>
