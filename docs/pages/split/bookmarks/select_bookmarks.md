@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Merkkien valitseminen
-parent: Kirjanmerkkien erotteleminen
-nav_order: 3
+parent: Kirjanmerkit
+nav_order: 1
 ---
 
 # Kirjanmerkkien valitseminen
