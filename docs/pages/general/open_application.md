@@ -1,10 +1,17 @@
 ---
 layout: default
 title: Ohjelman avaaminen
-nav_order: 2
+parent: Yleistä
+nav_order: 1
 ---
 
 # Ohjelman avaaminen
+
+## Sisällys
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 ---
 
