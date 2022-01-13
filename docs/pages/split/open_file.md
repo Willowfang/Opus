@@ -2,7 +2,7 @@
 layout: default
 title: Tiedoston avaaminen
 parent: Kirjanmerkkien erotteleminen
-nav_order: 1
+nav_order: 2
 ---
 
 # Tiedoston avaaminen
