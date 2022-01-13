@@ -18,12 +18,9 @@ nav_order: 3
 
 ## Uuden kirjanmerkin luominen
 
-Syötä uuden kirjanmerkin kenttään sivunumerot ja erotettavan osan nimi.
+Klikkaa kirjanmerkkinäkymän alalaidassa +-merkkin kuvaa. Uuden kirjanmerkin luonti-ikkuna aukeaa. Syötä kirjanmerkille haluamasi nimi sekä aloitus- ja lopetussivu. Jos valitsemasi sivuväli osuus toisen kirjanmerkin sivuvälin sisään, uusi kirjanmerkki jäsennetään kyseisen toisen kirjanmerkin alle.
 
-> Esim. sivut 12-15
-> "Tiliote 7.11.2021"
-
-Klikkaa +-merkkiä kentän oikeassa laidassa. Uusi kirjanmerkki ilmestyy paikalleen kirjanmerkkikenttään. Jos luodun merkin sivuväli sijoittuu olemassa olevan kirjanmerkin sivuvälin sisään, uusi kirjanmerkki luodaan edeltävän kirjanmerkin alaisuuteen ja sisennetään.
+Nimi sekä alku- ja loppusivu ovat pakollisia kenttiä. Alkusivu ei voi olla suurempi, kuin loppusivu. Kun haluat tallentaa luomasi kirjanmerkin, valitse tallenna. Kirjanmerkki lisätään listaan.
 
 ## Kirjanmerkin poistaminen
 
@@ -36,5 +33,5 @@ Näiden toimenpiteiden johdosta alkuperäiseen tiedostoon **EI** tehdä mitään
 ---
 
 <div class="instruction_image">
-  <img src="https://codex-fi.github.io/Opus/ui/gif/create_and_delete.gif">
+  <img src="https://codex-fi.github.io/Opus/ui/gif/extract/add_and_delete.gif">
 </div> 
