@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Valitseminen
+title: Merkkien valitseminen
 parent: Kirjanmerkkien erotteleminen
 nav_order: 2
 ---
