@@ -32,6 +32,13 @@ namespace Opus.Services.Implementation.Configuration
             set => SetProperty(ref extractionSuffix, value, SaveConfiguration);
         }
 
+        private bool extractionPrefixSuffixAsk;
+        public bool ExtractionPrefixSuffixAsk
+        {
+            get => extractionPrefixSuffixAsk;
+            set => SetProperty(ref extractionPrefixSuffixAsk, value, SaveConfiguration);
+        }
+
         private bool mergeAddPageNumbers;
         public bool MergeAddPageNumbers
         {
