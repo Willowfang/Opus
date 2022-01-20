@@ -115,9 +115,25 @@
                      Width="180"
                      md:HintAssist.Hint="{x:Static resLabels:General.Suffix}"
                      md:HintAssist.HelperText="{x:Static resDialog:ExtractionOptions.SuffixHelper}"/>
+            <StackPanel Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}">
+                <Separator Style="{DynamicResource MaterialDesignSeparator}"
+                       Margin="10, 20, 10, 20"/>
+                <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                       VerticalAlignment="Center"
+                       Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       Text="{x:Static resDialog:ExtractionOptions.AlwaysAskTitle}"
+                       Margin="0, 0, 0, 10"/>
+                <CheckBox Style="{DynamicResource MaterialDesignSwitchToggleButton}"
+                      IsChecked="{Binding AlwaysAsk}"
+                      x:Name="AlwaysAskCB"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Cursor="Hand"/>
+            </StackPanel>
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}"/>
-                <Button Style="{StaticResource DialogCancelButton}"/>
+                <Button Style="{StaticResource DialogCancelButton}"
+                        Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}"/>
             </StackPanel>
         </StackPanel>
     </DataTemplate>

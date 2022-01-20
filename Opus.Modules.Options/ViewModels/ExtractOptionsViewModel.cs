@@ -22,7 +22,8 @@ namespace Opus.Modules.Options.ViewModels
             return new ExtractSettingsDialog(Resources.Labels.General.Settings)
             {
                 Prefix = configuration.ExtractionPrefix,
-                Suffix = configuration.ExtractionSuffix
+                Suffix = configuration.ExtractionSuffix,
+                AlwaysAsk = configuration.ExtractionPrefixSuffixAsk
             };
         }
 
@@ -30,6 +31,7 @@ namespace Opus.Modules.Options.ViewModels
         {
             configuration.ExtractionPrefix = dialog.Prefix;
             configuration.ExtractionSuffix = dialog.Suffix;
+            configuration.ExtractionPrefixSuffixAsk = dialog.AlwaysAsk;
         }
     }
 }

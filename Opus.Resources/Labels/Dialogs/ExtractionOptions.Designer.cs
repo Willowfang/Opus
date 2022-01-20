@@ -61,6 +61,15 @@ namespace Opus.Resources.Labels.Dialogs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kysy aina erikseen.
+        /// </summary>
+        public static string AlwaysAskTitle {
+            get {
+                return ResourceManager.GetString("AlwaysAskTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Lisätään tiedostonimien alkuun.
         /// </summary>
         public static string PrefixHelper {
