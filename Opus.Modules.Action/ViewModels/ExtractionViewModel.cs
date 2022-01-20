@@ -198,7 +198,7 @@ namespace Opus.Modules.Action.ViewModels
             if (!string.IsNullOrEmpty(configuration.ExtractionPrefix) ||
                 !string.IsNullOrEmpty(configuration.ExtractionSuffix))
             {
-                bookmarks = AddPrefixSuffix(bookmarks);
+                bookmarks = await AddPrefixSuffix(bookmarks);
             }
 
             CancellationTokenSource tokenSource = new CancellationTokenSource();
@@ -212,20 +212,40 @@ namespace Opus.Modules.Action.ViewModels
             SelectedBookmark = null;
         }
 
-        private IEnumerable<ILeveledBookmark> AddPrefixSuffix(IEnumerable<ILeveledBookmark> bookmarks)
+        private async Task<IEnumerable<ILeveledBookmark>> AddPrefixSuffix(IEnumerable<ILeveledBookmark> bookmarks)
         {
+            string prefix = configuration.ExtractionPrefix;
+            string suffix = configuration.ExtractionSuffix;
+
+            if (configuration.ExtractionPrefixSuffixAsk)
+            {
+                ExtractSettingsDialog dialog = new ExtractSettingsDialog(Resources.Labels.General.Settings, true)
+                {
+                    Prefix = configuration.ExtractionPrefix,
+                    Suffix = configuration.ExtractionSuffix
+                };
+
+                await dialogAssist.Show(dialog);
+
+                prefix = dialog.Prefix;
+                suffix = dialog.Suffix;
+            }
+
+            if (string.IsNullOrEmpty(prefix) && string.IsNullOrEmpty(suffix))
+                return bookmarks;
+
             IList<ILeveledBookmark> added = new List<ILeveledBookmark>();
             foreach (ILeveledBookmark bookmark in bookmarks)
             {
                 string title = null;
-                if (!string.IsNullOrEmpty(configuration.ExtractionPrefix))
+                if (!string.IsNullOrEmpty(prefix))
                 {
-                    title = configuration.ExtractionPrefix + " ";
+                    title = prefix + " ";
                 }
                 title = title + bookmark.Title;
-                if (!string.IsNullOrEmpty(configuration.ExtractionSuffix))
+                if (!string.IsNullOrEmpty(suffix))
                 {
-                    title = title + " " + configuration.ExtractionSuffix;
+                    title = title + " " + suffix;
                 }
 
                 added.Add(new LeveledBookmark(bookmark.Level, title, bookmark.Pages));

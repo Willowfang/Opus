@@ -24,6 +24,12 @@
             Suffix for extracted files
             </summary>
         </member>
+        <member name="P:Opus.Services.Configuration.IConfiguration.ExtractionPrefixSuffixAsk">
+            <summary>
+            If true, prefix and suffix values will be asked every time
+            an extraction is done
+            </summary>
+        </member>
         <member name="P:Opus.Services.Configuration.IConfiguration.MergeAddPageNumbers">
             <summary>
             If true, page numbers will be added to a merged document

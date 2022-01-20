@@ -25,6 +25,11 @@ namespace Opus.Services.Configuration
         /// </summary>
         public string ExtractionSuffix { get; set; }
         /// <summary>
+        /// If true, prefix and suffix values will be asked every time
+        /// an extraction is done
+        /// </summary>
+        public bool ExtractionPrefixSuffixAsk { get; set; }
+        /// <summary>
         /// If true, page numbers will be added to a merged document
         /// </summary>
         public bool MergeAddPageNumbers { get; set; }

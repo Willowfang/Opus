@@ -29,7 +29,19 @@ namespace Opus.Services.Implementation.UI.Dialogs
             }
         }
 
-        public ExtractSettingsDialog(string dialogTitle)
-            : base(dialogTitle) { }
+        private bool alwaysAsk;
+        public bool AlwaysAsk
+        {
+            get => alwaysAsk;
+            set => SetProperty(ref alwaysAsk, value);
+        }
+
+        public bool IsAsking { get; }
+
+        public ExtractSettingsDialog(string dialogTitle, bool isAsking = false)
+            : base(dialogTitle) 
+        {
+            IsAsking = isAsking;
+        }
     }
 }
