@@ -13,7 +13,7 @@ namespace Opus.Services.Implementation.StaticHelpers
 {
     public static class BookmarkMethods
     {
-        public static async Task<(string prefix, string suffix)> AskForAffixes(IDialogAssist dialogAssist, 
+        public static async Task<(string prefix, string suffix)> AskForAffixes(IDialogAssist dialogAssist,
             IConfiguration configuration)
         {
             string prefix = configuration.ExtractionPrefix;

@@ -237,7 +237,7 @@ namespace Opus.Services.Implementation.UI
         private IList<ILeveledBookmark> GetBookmarks(string filePath)
         {
             IList<ILeveledBookmark> foundBookMarks = manipulator.FindBookmarks(filePath);
-            return AddPrefixSuffix(foundBookMarks).ToList();
+            return foundBookMarks;
         }
 
         private IList<ILeveledBookmark> GetBookmarks(string filePath, string preFix)
@@ -251,35 +251,7 @@ namespace Opus.Services.Implementation.UI
                 }
             }
 
-            return AddPrefixSuffix(selected).ToList();
-        }
-
-        private IEnumerable<ILeveledBookmark> AddPrefixSuffix(IEnumerable<ILeveledBookmark> bookmarks)
-        {
-            if (string.IsNullOrEmpty(configuration.ExtractionPrefix) &&
-                string.IsNullOrEmpty(configuration.ExtractionSuffix))
-            {
-                return bookmarks;
-            }    
-
-            IList<ILeveledBookmark> added = new List<ILeveledBookmark>();
-            foreach (ILeveledBookmark bookmark in bookmarks)
-            {
-                string title = string.Empty;
-                if (!string.IsNullOrEmpty(configuration.ExtractionPrefix))
-                {
-                    title = configuration.ExtractionPrefix + " ";
-                }
-                title = title + bookmark.Title;
-                if (!string.IsNullOrEmpty(configuration.ExtractionSuffix))
-                {
-                    title = title + " " + configuration.ExtractionSuffix;
-                }
-
-                added.Add(new LeveledBookmark(bookmark.Level, title, bookmark.Pages));
-            }
-
-            return added;
+            return selected;
         }
     }
 }
