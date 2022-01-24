@@ -5,6 +5,7 @@ using Opus.Services.Configuration;
 using Opus.Services.Data;
 using Opus.Services.Data.Composition;
 using Opus.Services.Extensions;
+using Opus.Services.Implementation.StaticHelpers;
 using Opus.Services.Implementation.UI.Dialogs;
 using Opus.Services.Input;
 using Opus.Services.UI;
@@ -79,6 +80,9 @@ namespace Opus.Services.Implementation.UI
             else
                 ranges = GetBookmarks(filePath, arguments[2]);
 
+            (string prefix, string suffix) = await BookmarkMethods.AskForAffixes(dialogAssist, configuration);
+            IEnumerable<ILeveledBookmark> bookmarks = BookmarkMethods.AddAffixes(ranges, prefix, suffix);
+
             CancellationTokenSource cancellationSource = new CancellationTokenSource();
             CancellationToken token = cancellationSource.Token;
             ProgressDialog dialog = new ProgressDialog(string.Empty, cancellationSource)
@@ -94,7 +98,7 @@ namespace Opus.Services.Implementation.UI
             });
 
             Task showProgress = dialogAssist.Show(dialog);
-            Task extract = manipulator.ExtractAsync(filePath, new DirectoryInfo(dir), ranges,
+            Task extract = manipulator.ExtractAsync(filePath, new DirectoryInfo(dir), bookmarks,
                 progress, token);
 
             await showProgress;
@@ -129,8 +133,11 @@ namespace Opus.Services.Implementation.UI
                 dialog.TotalPercent = currentAmount * 100 / totalAmount;
             });
 
+            (string prefix, string suffix) = await BookmarkMethods.AskForAffixes(dialogAssist, configuration);
+
             Task showProgress = dialogAssist.Show(dialog);
-            Task extract = InternalExtractAll(files, parentFolder, arguments, progress, token, createdPaths);
+            Task extract = InternalExtractAll(files, parentFolder, arguments, progress, token, createdPaths,
+                prefix, suffix);
 
             await Task.WhenAll(showProgress, extract);
 
@@ -151,7 +158,7 @@ namespace Opus.Services.Implementation.UI
 
         private async Task InternalExtractAll(string[] files, string parentFolder, 
             string[] arguments, IProgress<ProgressReport> progress, CancellationToken token,
-            List<FileSystemInfo> createdPaths)
+            List<FileSystemInfo> createdPaths, string prefix, string suffix)
         {
             foreach (string file in files)
             {
@@ -167,8 +174,10 @@ namespace Opus.Services.Implementation.UI
                 else
                     ranges = GetBookmarks(file, arguments[2]);
 
-                createdPaths.AddRange(await manipulator.ExtractAsync(file, new DirectoryInfo(dirLocation), ranges, progress,
-                    token));
+                IEnumerable<ILeveledBookmark> bookmarks = BookmarkMethods.AddAffixes(ranges, prefix, suffix);
+
+                createdPaths.AddRange(await manipulator.ExtractAsync(file, new DirectoryInfo(dirLocation), bookmarks,
+                    progress, token));
             }
         }
 
