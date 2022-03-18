@@ -75,7 +75,8 @@ namespace Opus.Modules.Action.ViewModels
         {
             foreach (string file in addedFiles)
             {
-                SignatureFiles.Add(new FileStorage(file));
+                if (!SignatureFiles.Any(f => f.FilePath == file))
+                    SignatureFiles.Add(new FileStorage(file));
             }
         }
 

@@ -43,15 +43,15 @@
                 <Path Name="LogoIconFill" Opacity="1" StrokeThickness="0.308434" Data="M 128.51562 4.9960938 C 128.38082 4.9753595 128.24223 4.9795262 128.10547 5.0136719 C 126.42241 5.9090198 126.81356 8.3502683 126.27734 9.9316406 C 124.75308 18.41764 123.70995 27.268579 119.66992 35.011719 C 118.75861 36.862105 116.94761 38.267465 114.80078 38.464844 C 102.85944 41.081491 90.629935 41.982199 78.529297 43.357422 C 74.575441 43.720328 70.619037 44.175804 66.642578 44.154297 C 65.565092 40.990078 61.008572 38.650904 58.25 41.203125 C 56.197704 43.020963 54.336833 46.774568 56.71875 49.050781 C 58.469851 50.000936 58.19294 51.518416 57.558594 53.167969 C 50.906844 80.602718 44.19492 108.02175 37.667969 135.48633 C 38.764899 138.44901 40.912035 141.05216 42.878906 143.55078 C 47.444947 148.96114 54.204628 153.62287 61.589844 152.875 C 70.519204 151.8036 77.321591 145.14074 82.841797 138.57812 C 83.949715 136.93547 86.5191 135.37356 85.298828 133.0957 C 78.10224 105.87752 70.887217 78.663625 63.625 51.462891 C 65.009763 50.191703 66.552685 48.688564 68.191406 47.988281 C 83.094768 50.275579 98.097795 52.210231 112.74609 55.933594 C 114.07659 56.429737 116.27116 56.537589 116.16992 58.470703 C 117.02466 63.820061 117.31803 69.395928 116.6875 74.835938 C 116.39158 78.089877 112.65524 78.582392 110.16797 79.40625 C 101.23934 82.006704 92.034089 83.028162 82.876953 84.251953 C 81.337005 85.459804 83.335774 87.283296 83.628906 88.683594 C 86.005301 93.446558 87.704473 98.686812 91.070312 102.87305 C 93.106718 105.03237 96.83038 104.65921 98.695312 102.44531 C 99.481202 102.13054 100.91041 99.825888 101.34766 100.70703 C 105.69537 120.72839 107.83761 141.22612 107.64062 161.6875 C 107.44588 177.47371 105.57096 193.34236 101.05859 208.51367 C 100.16551 211.25405 103.0049 213.20442 104.03125 215.44336 C 111.69301 227.00763 119.01581 238.81047 127.03516 250.13086 C 127.58997 251.27695 129.34772 251.67168 129.8125 250.20312 C 138.4943 236.99636 147.14056 223.7668 155.80273 210.54688 C 155.92726 208.06071 154.56486 205.64318 154.12109 203.17383 C 147.7442 178.06478 147.97204 151.89176 150.96094 126.33789 C 152.01969 117.58167 153.42829 108.87166 155.33594 100.24609 C 157.60756 101.95619 159.71972 105.04547 162.98047 104.20703 C 166.37692 103.50002 167.58187 99.675545 169.10547 97.013672 C 170.91775 93.158241 172.88263 89.34719 174.35938 85.351562 C 174.10281 83.473843 171.57113 84.186072 170.24219 83.755859 C 161.03052 82.643425 151.74385 81.247192 142.88477 78.263672 C 140.34247 77.711308 139.6618 74.991371 139.71289 72.746094 C 139.72089 67.64279 139.53588 62.412763 140.75391 57.410156 C 141.46752 56.150075 143.41187 56.296859 144.61523 55.730469 C 159.13568 52.176955 173.94665 50.18976 188.71094 47.945312 C 190.12879 49.119932 191.70307 50.127458 192.97461 51.46875 C 185.94447 78.161373 178.62736 104.77886 171.875 131.54297 C 171.41703 133.40063 170.72115 135.6598 172.50391 137.08008 C 178.15452 143.96204 184.91553 151.209 194.12695 152.73438 C 200.91581 153.90439 207.60419 150.13834 212.13281 145.31641 C 214.67041 142.43573 217.31907 139.40647 218.74805 135.8125 C 218.61446 132.40984 217.24924 129.12379 216.64062 125.77148 C 210.61199 100.65315 204.4997 75.554965 198.40039 50.453125 C 200.08542 49.204626 201.71839 47.206451 200.76367 44.990234 C 199.99765 42.161934 197.09142 39.057075 193.93945 40.40625 C 192.09213 40.943326 190.6656 42.371004 189.98828 44.154297 C 179.01315 43.892005 168.11212 42.257684 157.20508 40.982422 C 151.34083 40.064992 145.26061 39.650677 139.69141 37.806641 C 136.48579 36.223202 135.69953 32.268468 134.50977 29.208984 C 131.98478 21.570659 131.13271 13.547826 129.42383 5.7382812 C 129.2844 5.3460209 128.92003 5.0582964 128.51562 4.9960938 z M 141.89453 100.08594 L 142.20312 209.11719 C 142.20312 209.11719 124.77646 164.85702 141.89453 100.08594 z " Effect="{StaticResource PathBlur}">
                     <Path.Fill>
                         <LinearGradientBrush>
-                            <GradientStop Color="{StaticResource Primary600}"
+                            <GradientStop Color="{StaticResource Accent700}"
                                           Offset="0.0"/>
-                            <GradientStop Color="{StaticResource Primary600}"
+                            <GradientStop Color="{StaticResource Accent700}"
                                           Offset="0.0"/>
-                            <GradientStop Color="{StaticResource Primary600}"
+                            <GradientStop Color="{StaticResource Accent700}"
                                           Offset="0.1"/>
-                            <GradientStop Color="{StaticResource Primary600}"
+                            <GradientStop Color="{StaticResource Accent700}"
                                           Offset="0.2"/>
-                            <GradientStop Color="{StaticResource Primary600}"
+                            <GradientStop Color="{StaticResource Accent700}"
                                           Offset="1.0"/>
                         </LinearGradientBrush>
                     </Path.Fill>
@@ -77,8 +77,8 @@
                                         AutoReverse="True" RepeatBehavior="Forever"/>
                                     <ColorAnimation
                                         Storyboard.TargetProperty="(Path.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)"
-                                        From="{StaticResource Primary600}"
-                                        To="{StaticResource Primary200}"
+                                        From="{StaticResource Accent700}"
+                                        To="{StaticResource Accent100}"
                                         Duration="0:0:1.5"
                                         AutoReverse="True"
                                         RepeatBehavior="Forever"/>
@@ -137,5 +137,148 @@
             </Canvas>
         </Canvas>
     </Viewbox>
+
+        <DrawingImage x:Key="OpusBackgroundDrawingImage">
+            <DrawingImage.Drawing>
+                <DrawingGroup ClipGeometry="M0,0 V1920 H1080 V0 H0 Z">
+                    <DrawingGroup.Transform>
+                        <TranslateTransform X="1337.7727" Y="1392.0104" />
+                    </DrawingGroup.Transform>
+                    <DrawingGroup Opacity="1" Transform="1,0,0,1,59.906395,53.915756" />
+                    <DrawingGroup Opacity="1" Transform="1,0,0,1,59.906395,53.915756">
+                        <DrawingGroup Opacity="1" Transform="0,-0.94404469,0.91783607,0,-10.861016,1809.5489">
+                            <DrawingGroup>
+                                <DrawingGroup.ClipGeometry>
+                                    <RectangleGeometry RadiusX="0" RadiusY="0" Rect="-59.9064,-53.9158,2033.822,1177.1606" />
+                                </DrawingGroup.ClipGeometry>
+                                <DrawingGroup>
+                                    <DrawingGroup.ClipGeometry>
+                                        <RectangleGeometry RadiusX="0" RadiusY="0" Rect="-59.9064,-53.9158,2033.822,1177.1606" />
+                                    </DrawingGroup.ClipGeometry>
+                                    <GeometryDrawing>
+                                        <GeometryDrawing.Brush>
+                                            <LinearGradientBrush StartPoint="-59.906395,534.66455" EndPoint="1973.9156,534.66455" MappingMode="Absolute" SpreadMethod="Pad" Opacity="1">
+                                                <GradientStop Color="#FF051625" Offset="0" />
+                                                <GradientStop Color="#FF00060B" Offset="1" />
+                                            </LinearGradientBrush>
+                                        </GeometryDrawing.Brush>
+                                        <GeometryDrawing.Geometry>
+                                            <RectangleGeometry RadiusX="0" RadiusY="0" Rect="-59.9064,-53.9158,2033.822,1177.1606" />
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingGroup>
+                            <DrawingGroup Transform="-0.91307611115233,0.407789179899293,-0.407789179899293,-0.91307611115233,0,0">
+                                <DrawingGroup.ClipGeometry>
+                                    <RectangleGeometry RadiusX="0" RadiusY="0" Rect="-59.9064,-53.9158,2033.822,1177.1606" Transform="-0.91307611115233,0.407789179899293,-0.407789179899293,-0.91307611115233,0,0" />
+                                </DrawingGroup.ClipGeometry>
+                                <DrawingGroup>
+                                    <DrawingGroup.ClipGeometry>
+                                        <RectangleGeometry RadiusX="0" RadiusY="0" Rect="-59.9064,-53.9158,2033.822,1177.1606" Transform="-0.91307611115233,0.407789179899293,-0.407789179899293,-0.91307611115233,0,0" />
+                                    </DrawingGroup.ClipGeometry>
+                                    <GeometryDrawing>
+                                        <GeometryDrawing.Brush>
+                                            <LinearGradientBrush StartPoint="-582.08826,53.874359" EndPoint="792.76355,53.874359" MappingMode="Absolute" SpreadMethod="Pad" Opacity="1" Transform="1,0,0,1,-755.68439,-577.23936">
+                                                <GradientStop Color="#FF051625" Offset="0" />
+                                                <GradientStop Color="#FF00060B" Offset="1" />
+                                            </LinearGradientBrush>
+                                        </GeometryDrawing.Brush>
+                                        <GeometryDrawing.Geometry>
+                                            <RectangleGeometry RadiusX="0" RadiusY="0" Rect="-1337.7727,-721.0561,1374.8518,395.3822" />
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingGroup>
+                            <DrawingGroup Transform="0.749658352577079,0.661825017970324,-0.661825017970324,0.749658352577079,-2.46882219854322E-06,-1.2988454653719E-06">
+                                <DrawingGroup.ClipGeometry>
+                                    <RectangleGeometry RadiusX="0" RadiusY="0" Rect="-59.9064,-53.9158,2033.822,1177.1606" Transform="0.749658352577079,0.661825017970324,-0.661825017970324,0.749658352577079,-2.46882219854322E-06,-1.2988454653719E-06" />
+                                </DrawingGroup.ClipGeometry>
+                                <DrawingGroup>
+                                    <DrawingGroup.ClipGeometry>
+                                        <RectangleGeometry RadiusX="0" RadiusY="0" Rect="-59.9064,-53.9158,2033.822,1177.1606" Transform="0.749658352577079,0.661825017970324,-0.661825017970324,0.749658352577079,-2.46882219854322E-06,-1.2988454653719E-06" />
+                                    </DrawingGroup.ClipGeometry>
+                                    <GeometryDrawing>
+                                        <GeometryDrawing.Brush>
+                                            <LinearGradientBrush StartPoint="1168.1747,-53.915741" EndPoint="2306.3962,-53.915741" MappingMode="Absolute" SpreadMethod="Pad" Opacity="1" Transform="1,0,0,1,-678.68545,-656.90143">
+                                                <GradientStop Color="#FF051625" Offset="0" />
+                                                <GradientStop Color="#FF00060B" Offset="1" />
+                                            </LinearGradientBrush>
+                                        </GeometryDrawing.Brush>
+                                        <GeometryDrawing.Geometry>
+                                            <RectangleGeometry RadiusX="0" RadiusY="0" Rect="489.4892,-1142.1433,1138.2216,862.6521" />
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingGroup>
+                            <DrawingGroup Transform="0.952080396306975,-0.305847868993644,0.305847868993644,0.952080396306975,0,0">
+                                <DrawingGroup.ClipGeometry>
+                                    <RectangleGeometry RadiusX="0" RadiusY="0" Rect="-59.9064,-53.9158,2033.822,1177.1606" Transform="0.952080396306975,-0.305847868993644,0.305847868993644,0.952080396306975,0,0" />
+                                </DrawingGroup.ClipGeometry>
+                                <DrawingGroup>
+                                    <DrawingGroup.ClipGeometry>
+                                        <RectangleGeometry RadiusX="0" RadiusY="0" Rect="-59.9064,-53.9158,2033.822,1177.1606" Transform="0.952080396306975,-0.305847868993644,0.305847868993644,0.952080396306975,0,0" />
+                                    </DrawingGroup.ClipGeometry>
+                                    <GeometryDrawing>
+                                        <GeometryDrawing.Brush>
+                                            <LinearGradientBrush StartPoint="287.55069,416.34949" EndPoint="892.60529,416.34949" MappingMode="Absolute" SpreadMethod="Pad" Opacity="1" Transform="1,0,0,1,792.81704,528.12051">
+                                                <GradientStop Color="#FF051625" Offset="0" />
+                                                <GradientStop Color="#FF00060B" Offset="1" />
+                                            </LinearGradientBrush>
+                                        </GeometryDrawing.Brush>
+                                        <GeometryDrawing.Geometry>
+                                            <RectangleGeometry RadiusX="0" RadiusY="0" Rect="1080.3677,18.9162,605.0546,1851.1077" />
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingGroup>
+                            <DrawingGroup Transform="0.23092176,-0.97297232,0.96666944,0.25602772,0,0">
+                                <DrawingGroup.ClipGeometry>
+                                    <RectangleGeometry RadiusX="0" RadiusY="0" Rect="-60.2917,-53.6031,2046.9021,1170.335" Transform="0.23092176,-0.97297232,0.96666944,0.25602772,0,0" />
+                                </DrawingGroup.ClipGeometry>
+                                <DrawingGroup>
+                                    <DrawingGroup.ClipGeometry>
+                                        <RectangleGeometry RadiusX="0" RadiusY="0" Rect="-60.2917,-53.6031,2046.9021,1170.335" Transform="0.23092176,-0.97297232,0.96666944,0.25602772,0,0" />
+                                    </DrawingGroup.ClipGeometry>
+                                    <GeometryDrawing>
+                                        <GeometryDrawing.Brush>
+                                            <LinearGradientBrush StartPoint="12.508309,1224.6917" EndPoint="551.98022,1224.6917" MappingMode="Absolute" SpreadMethod="Pad" Opacity="1">
+                                                <GradientStop Color="#FF051625" Offset="0" />
+                                                <GradientStop Color="#FF00060B" Offset="1" />
+                                            </LinearGradientBrush>
+                                        </GeometryDrawing.Brush>
+                                        <GeometryDrawing.Geometry>
+                                            <RectangleGeometry RadiusX="0" RadiusY="0" Rect="12.5083,382.7836,539.4719,1683.8162" />
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingGroup>
+                            <DrawingGroup Transform="-0.973629136127582,-0.228136593477371,0.228136593477371,-0.973629136127582,0,0">
+                                <DrawingGroup.ClipGeometry>
+                                    <RectangleGeometry RadiusX="0" RadiusY="0" Rect="-59.9064,-53.9158,2033.822,1177.1606" Transform="-0.973629136127582,-0.228136593477371,0.228136593477371,-0.973629136127582,0,0" />
+                                </DrawingGroup.ClipGeometry>
+                                <DrawingGroup>
+                                    <DrawingGroup.ClipGeometry>
+                                        <RectangleGeometry RadiusX="0" RadiusY="0" Rect="-59.9064,-53.9158,2033.822,1177.1606" Transform="-0.973629136127582,-0.228136593477371,0.228136593477371,-0.973629136127582,0,0" />
+                                    </DrawingGroup.ClipGeometry>
+                                    <GeometryDrawing>
+                                        <GeometryDrawing.Brush>
+                                            <LinearGradientBrush StartPoint="-64.412491,513.88055" EndPoint="567.59998,513.88055" MappingMode="Absolute" SpreadMethod="Pad" Opacity="1" Transform="1,0,0,1,-486.16641,-1035.7506">
+                                                <GradientStop Color="#FF051625" Offset="0" />
+                                                <GradientStop Color="#FF00060B" Offset="1" />
+                                            </LinearGradientBrush>
+                                        </GeometryDrawing.Brush>
+                                        <GeometryDrawing.Geometry>
+                                            <RectangleGeometry RadiusX="0" RadiusY="0" Rect="-550.5789,-1392.0104,632.0124,1740.2808" />
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingGroup>
+                        </DrawingGroup>
+                    </DrawingGroup>
+                    <DrawingGroup Opacity="1" Transform="1,0,0,1,59.906395,53.915756" />
+                    <DrawingGroup Opacity="1" Transform="1,0,0,1,59.906395,53.915756" />
+                </DrawingGroup>
+            </DrawingImage.Drawing>
+        </DrawingImage>
 
 </ResourceDictionary>

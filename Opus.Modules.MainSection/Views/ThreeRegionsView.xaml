@@ -15,14 +15,14 @@
                                  prism:RegionManager.RegionName="{x:Static const:RegionNames.MAINSECTION_THREE_FILE}"
                                  materialDesign:ShadowAssist.ShadowDepth="Depth3">
                 <materialDesign:Card.Background>
-                    <SolidColorBrush Color="White" Opacity="0.8"/>
+                    <SolidColorBrush Color="{DynamicResource MaterialDesignShadow}" Opacity="0.9"/>
                 </materialDesign:Card.Background>
             </materialDesign:Card>
             <materialDesign:Card Padding="10" Grid.Column="1" Margin="8, 8, 16, 8" Opacity="1"
                                  prism:RegionManager.RegionName="{x:Static const:RegionNames.MAINSECTION_THREE_OPTIONS}"
                                  materialDesign:ShadowAssist.ShadowDepth="Depth3">
                 <materialDesign:Card.Background>
-                    <SolidColorBrush Color="White" Opacity="0.8"/>
+                    <SolidColorBrush Color="{DynamicResource MaterialDesignShadow}" Opacity="0.9"/>
                 </materialDesign:Card.Background>
             </materialDesign:Card>
         </Grid>
@@ -31,7 +31,7 @@
                              prism:RegionManager.RegionName="{x:Static const:RegionNames.MAINSECTION_THREE_ACTION}"
                              materialDesign:ShadowAssist.ShadowDepth="Depth3">
             <materialDesign:Card.Background>
-                <SolidColorBrush Color="White" Opacity="0.8"/>
+                <SolidColorBrush Color="{DynamicResource MaterialDesignShadow}" Opacity="0.9"/>
             </materialDesign:Card.Background>
         </materialDesign:Card>
     </DockPanel>

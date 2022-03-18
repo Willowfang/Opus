@@ -21,10 +21,59 @@
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0" HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Style="{StaticResource MaterialDesignIconButton}"
+                    Grid.Column="0"
+                    Margin="0, 0, 10, 0"
+                    IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Command="{Binding ViewFileCommand}">
+                <materialDesign:PackIcon Kind="Eye"/>
+            </Button>
+            <ComboBox Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
+                      Grid.Column="1"
+                      materialDesign:HintAssist.Hint="{x:Static resLabels:General.File}"
+                      materialDesign:HintAssist.FloatingOffset="0, -22"
+                      materialDesign:HintAssist.FloatingScale="0.9"
+                      Width="250"
+                      x:Name="FilesList"
+                      FontSize="16"
+                      Margin="0, 0, 0, 10"
+                      materialDesign:ComboBoxAssist.ShowSelectedItem="True"
+                      SelectedItem="{Binding SelectedFile, Mode=TwoWay}"
+                      ItemsSource="{Binding Files}"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      VerticalContentAlignment="Bottom"
+                      HorizontalContentAlignment="Left">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock TextTrimming="CharacterEllipsis"
+                                   Text="{Binding FileName}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Button Style="{StaticResource MaterialDesignIconButton}"
+                    Grid.Column="2"
+                    Margin="10, 0, 0, 0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
+                    Command="{Binding DeleteFileCommand}">
+                <materialDesign:PackIcon Kind="Delete"/>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1">
             <TextBlock Style="{DynamicResource MaterialDesignSubtitle1TextBlock}"
                        Text="{x:Static resLabels:General.NoBookmarks}"
                        HorizontalAlignment="Center"
@@ -38,10 +87,10 @@
                 </TextBlock.Visibility>
             </TextBlock>
             <ListView ItemsSource="{Binding FileBookmarks}"
-                  Style="{StaticResource SelectionList}"
-                  SelectedItem="{Binding SelectedBookmark}"
-                  x:Name="BookmarksList"
-                  ItemTemplate="{StaticResource ExtractList}">
+                      Style="{StaticResource SelectionList}"
+                      SelectedItem="{Binding SelectedBookmark}"
+                      x:Name="BookmarksList"
+                      ItemTemplate="{StaticResource ExtractList}">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="SelectionChanged">
                         <prism:InvokeCommandAction Command="{Binding SelectChildrenCommand}"/>
@@ -50,7 +99,7 @@
             </ListView>
         </Grid>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
             <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
                     Command="{Binding SaveFileCommand}">

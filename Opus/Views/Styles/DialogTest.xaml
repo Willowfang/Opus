@@ -9,34 +9,33 @@
              xmlns:local="clr-namespace:Opus.Views.Styles"
              mc:Ignorable="d">
     <StackPanel Background="{DynamicResource MaterialDesignPaper}">
-        <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
-                       Text="Kansilehti"/>
-        <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}"
-                       FontSize="14" Width="300"
-                       TextAlignment="Justify"
-                       TextWrapping="Wrap"
-                       Text="{x:Static resValidation:Composition.OneFileNotFound}"
-                       Margin="15, 15, 15, 0"/>
-        <StackPanel Orientation="Horizontal"
-                        Margin="15"
-                        HorizontalAlignment="Center"
-                        Visibility="{Binding SingleSelection, Converter={StaticResource BooleanToVisibilityConverter}}">
-            <Button Style="{DynamicResource MaterialDesignFlatButton}"
-                        Margin="0, 0, 15, 0"
-                        Width="230"
-                        VerticalContentAlignment="Center"
-                        VerticalAlignment="Center"
-                        HorizontalContentAlignment="Center"
-                        ToolTip="{Binding Files[0].FilePath}"
-                        Command="{Binding Files[0].OpenFile}">
-                <TextBlock FontSize="14"
-                               Text="{Binding Files[0].FileName}"
-                               TextTrimming="CharacterEllipsis"/>
-            </Button>
-            <Button Style="{DynamicResource MaterialDesignIconButton}"
-                        Command="{Binding AddFile}">
-                <md:PackIcon Kind="Folder" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
-            </Button>
+        <StackPanel Margin="10">
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="Järjestä kirjanmerkkejä"/>
+            <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                       VerticalAlignment="Center"
+                       Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       Text="Valitse ja paina sitten CTRL + nuolinäppäimet"
+                       Margin="0, 0, 0, 10"/>
+            <ListView ItemsSource="{Binding Bookmarks}"
+                      Width="300"
+                      Height="400"
+                      Style="{StaticResource SelectionList}"
+                      SelectedItem="{Binding Bookmarks.SelectedItem}"
+                      Grid.Row="0"
+                      SelectionMode="Single"
+                      x:Name="FilesList"
+                      ItemTemplate="{StaticResource ExtractionOrderList}">
+                <ListView.InputBindings>
+                    <KeyBinding Key="Up" Modifiers="Ctrl" Command="{Binding Bookmarks.MoveUp}"/>
+                    <KeyBinding Key="Down" Modifiers="Ctrl" Command="{Binding Bookmarks.MoveDown}"/>
+                </ListView.InputBindings>
+            </ListView>
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"
+                        Content="Vahvista"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
         </StackPanel>
     </StackPanel>
 </UserControl>

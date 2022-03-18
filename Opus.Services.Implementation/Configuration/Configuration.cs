@@ -9,6 +9,8 @@ namespace Opus.Services.Implementation.Configuration
 {
     public class Configuration : BindableBase, IConfiguration
     {
+        private const string pdfToolsLocation = @"C:\Program Files\Tracker Software\PDF Tools\PDFXTools.exe";
+
         public string? ConfigurationFile { get; set; }
 
         private string? languageCode;
@@ -18,11 +20,11 @@ namespace Opus.Services.Implementation.Configuration
             set => SetProperty(ref languageCode, value, SaveConfiguration);
         }
 
-        private string? extractionPrefix;
-        public string? ExtractionPrefix
+        private string? extractionTitle;
+        public string? ExtractionTitle
         {
-            get => extractionPrefix;
-            set => SetProperty(ref extractionPrefix, value, SaveConfiguration);
+            get => extractionTitle;
+            set => SetProperty(ref extractionTitle, value, SaveConfiguration);
         }
 
         private string? extractionSuffix;
@@ -33,10 +35,38 @@ namespace Opus.Services.Implementation.Configuration
         }
 
         private bool extractionPrefixSuffixAsk;
-        public bool ExtractionPrefixSuffixAsk
+        public bool ExtractionTitleAsk
         {
             get => extractionPrefixSuffixAsk;
             set => SetProperty(ref extractionPrefixSuffixAsk, value, SaveConfiguration);
+        }
+
+        private bool extractionConvertPdfA;
+        public bool ExtractionConvertPdfA
+        {
+            get => extractionConvertPdfA;
+            set => SetProperty(ref extractionConvertPdfA, value, SaveConfiguration);
+        }
+
+        private bool extractionPdfADisabled;
+        public bool ExtractionPdfADisabled
+        {
+            get => extractionPdfADisabled;
+            set => SetProperty(ref extractionPdfADisabled, value);
+        }
+
+        private int annotations;
+        public int Annotations
+        {
+            get => annotations;
+            set => SetProperty(ref annotations, value, SaveConfiguration);
+        }
+
+        private bool groupByFiles;
+        public bool GroupByFiles
+        {
+            get => groupByFiles;
+            set => SetProperty(ref groupByFiles, value, SaveConfiguration);
         }
 
         private bool mergeAddPageNumbers;
@@ -71,16 +101,25 @@ namespace Opus.Services.Implementation.Configuration
 
         public static IConfiguration Load(string configFile)
         {
+            Configuration configuration;
             if (File.Exists(configFile))
             {
                 string json = File.ReadAllText(configFile);
                 Configuration? config = JsonSerializer.Deserialize<Configuration>(json);
-                return config ?? CreateNew(configFile);
+                configuration = config ?? CreateNew(configFile);
             }
             else
             {
-                return CreateNew(configFile);
+                configuration = CreateNew(configFile);
             }
+
+            if (File.Exists(pdfToolsLocation) == false)
+            {
+                configuration.ExtractionConvertPdfA = false;
+                configuration.ExtractionPdfADisabled = true;
+            }
+
+            return configuration;
         }
 
         private static Configuration CreateNew(string configFile)
@@ -89,10 +128,11 @@ namespace Opus.Services.Implementation.Configuration
             {
                 ConfigurationFile = configFile,
                 LanguageCode = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName,
-                ExtractionPrefix = null,
-                ExtractionSuffix = null,
+                ExtractionTitle = Resources.DefaultValues.DefaultValues.Bookmark,
                 MergeAddPageNumbers = true,
-                CompositionSearchSubDirectories = true
+                CompositionSearchSubDirectories = true,
+                ExtractionTitleAsk = true,
+                GroupByFiles = true
             };
         }
 

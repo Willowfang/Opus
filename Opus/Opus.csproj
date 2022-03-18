@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <AssemblyVersion>0.0.4.0</AssemblyVersion>
     <ApplicationIcon>logocx.ico</ApplicationIcon>
   </PropertyGroup>
 
@@ -15,8 +15,11 @@
   <ItemGroup>
     <None Remove="appIcon.ico" />
     <None Remove="Images\Bookmark.png" />
+    <None Remove="Images\Bookmark2.png" />
     <None Remove="Images\logocx.ico" />
     <None Remove="Images\LogoCX.png" />
+    <None Remove="Images\OpusBackground.png" />
+    <None Remove="Images\OpusBackground2.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -72,7 +75,7 @@
 
   <ItemGroup>
     <PackageReference Include="MaterialDesignColors" Version="2.0.4" />
-    <PackageReference Include="MaterialDesignThemes" Version="4.2.1" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.3.0" />
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.37" />
     <PackageReference Include="Prism.Unity" Version="8.1.97" />
   </ItemGroup>
@@ -84,12 +87,18 @@
     <Reference Include="CodeX-PdfLib-iText7">
       <HintPath>..\..\..\CodeX\Libraries\PdfLib.iText7\bin\Debug\net5.0\CodeX-PdfLib-iText7.dll</HintPath>
     </Reference>
+    <Reference Include="PdfLib.PDFTools">
+      <HintPath>..\..\..\CodeX\Libraries\PdfLib.PDFTools\bin\Debug\net5.0\PdfLib.PDFTools.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Bookmark2.png" />
     <Resource Include="Images\LogoCX.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\OpusBackground.png" />
+    <Resource Include="Images\OpusBackground2.png" />
   </ItemGroup>
 
   <ItemGroup>

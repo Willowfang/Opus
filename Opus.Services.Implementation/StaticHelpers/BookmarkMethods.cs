@@ -8,55 +8,100 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CX.PdfLib.Extensions;
+using Opus.Services.Implementation.Data.Extraction;
+using System.IO;
 
 namespace Opus.Services.Implementation.StaticHelpers
 {
     public static class BookmarkMethods
     {
-        public static async Task<(string prefix, string suffix)> AskForAffixes(IDialogAssist dialogAssist,
+        public static async Task<string> AskForTitle(IDialogAssist dialogAssist,
             IConfiguration configuration)
         {
-            string prefix = configuration.ExtractionPrefix;
-            string suffix = configuration.ExtractionSuffix;
+            string title = configuration.ExtractionTitle;
 
-            if (configuration.ExtractionPrefixSuffixAsk)
+            if (configuration.ExtractionTitleAsk)
             {
                 ExtractSettingsDialog dialog = new ExtractSettingsDialog(Resources.Labels.General.Settings, true)
                 {
-                    Prefix = configuration.ExtractionPrefix,
-                    Suffix = configuration.ExtractionSuffix
+                    Title = configuration.ExtractionTitle
                 };
 
                 await dialogAssist.Show(dialog);
 
-                prefix = dialog.Prefix;
-                suffix = dialog.Suffix;
+                title = dialog.Title;
             }
 
-            return (prefix, suffix);
+            if (string.IsNullOrEmpty(title))
+                title = Resources.DefaultValues.DefaultValues.Bookmark;
+
+            return title;
         }
 
-        public static IEnumerable<ILeveledBookmark> AddAffixes(IEnumerable<ILeveledBookmark> bookmarks,
-            string prefix, string suffix)
+        public static IEnumerable<ILeveledBookmark> GetParentsOnly(IEnumerable<ILeveledBookmark> originals)
         {
-            IList<ILeveledBookmark> added = new List<ILeveledBookmark>();
+            List<ILeveledBookmark> parents = new List<ILeveledBookmark>();
+            foreach (ILeveledBookmark original in originals)
+            {
+                if (original.IsChild(originals) == false)
+                    parents.Add(original);
+            }
+
+            return parents;
+        }
+
+        public static IEnumerable<FileAndBookmarkWrapper> GetRenamedAndIndexed(IEnumerable<ILeveledBookmark> bookmarks, IList<FileAndBookmarkWrapper> order, string titleTemplate, string filePath)
+        {
+            IList<FileAndBookmarkWrapper> added = new List<FileAndBookmarkWrapper>();
             foreach (ILeveledBookmark bookmark in bookmarks)
             {
-                string title = string.Empty;
-                if (!string.IsNullOrEmpty(prefix))
+                FileAndBookmarkWrapper? compare = order.FirstOrDefault(w => w.FilePath == filePath 
+                && w.Bookmark == bookmark);
+                int index = compare != null ? order.IndexOf(compare) : 0;
+
+                string bmReplace = Resources.DefaultValues.DefaultValues.Bookmark;
+                string fileReplace = Resources.DefaultValues.DefaultValues.File;
+                string numberReplace = Resources.DefaultValues.DefaultValues.Number;
+
+                string title = titleTemplate;
+                if (title.Contains(bmReplace))
                 {
-                    title = prefix + " ";
+                    title = title.Replace(bmReplace, bookmark.Title);
                 }
-                title = title + bookmark.Title;
-                if (!string.IsNullOrEmpty(suffix))
+                if (title.Contains(fileReplace))
                 {
-                    title = title + " " + suffix;
+                    title = title.Replace(fileReplace, Path.GetFileNameWithoutExtension(filePath));
+                }
+                if (title.Contains(numberReplace))
+                {
+                    title = title.Replace(numberReplace, (index + 1).ToString());
                 }
 
-                added.Add(new LeveledBookmark(bookmark.Level, title, bookmark.Pages));
+                int identicalCount = added.Where(b => b.Bookmark.Title == title).Count();
+
+                if (identicalCount > 0)
+                {
+                    title = $"{title} {identicalCount + 1}";
+                }
+
+                ILeveledBookmark renamed = new LeveledBookmark(bookmark.Level, title, bookmark.Pages);
+                added.Add(new FileAndBookmarkWrapper(renamed, filePath, index));
             }
 
             return added;
+        }
+
+        public static IList<ILeveledBookmark> AdjustLevels(IEnumerable<ILeveledBookmark> bookmarks,
+            int adjustment)
+        {
+            IList<ILeveledBookmark> adjusted = new List<ILeveledBookmark>();
+            foreach (var bookmark in bookmarks)
+            {
+                adjusted.Add(new LeveledBookmark(bookmark.Level + adjustment, bookmark.Title, bookmark.Pages));
+            }
+
+            return adjusted;
         }
     }
 }

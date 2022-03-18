@@ -9,24 +9,11 @@ namespace Opus.Services.Implementation.UI.Dialogs
 {
     public class ExtractSettingsDialog : DialogBase, IDialog
     {
-        private string? prefix;
-        public string? Prefix
+        private string? title;
+        public string? Title
         {
-            get => prefix;
-            set
-            {
-                SetProperty(ref prefix, value);
-            }
-        }
-
-        private string? suffix;
-        public string? Suffix
-        {
-            get => suffix;
-            set
-            {
-                SetProperty(ref suffix, value);
-            }
+            get => title;
+            set => SetProperty(ref title, value);
         }
 
         private bool alwaysAsk;
@@ -34,6 +21,22 @@ namespace Opus.Services.Implementation.UI.Dialogs
         {
             get => alwaysAsk;
             set => SetProperty(ref alwaysAsk, value);
+        }
+
+        private bool pdfA;
+        public bool PdfA
+        {
+            get => pdfA;
+            set => SetProperty(ref pdfA, value);
+        }
+
+        public bool PdfADisabled { get; set; }
+
+        private int annotations;
+        public int Annotations
+        {
+            get => annotations;
+            set => SetProperty(ref annotations, value);
         }
 
         public bool IsAsking { get; }

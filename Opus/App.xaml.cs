@@ -20,6 +20,8 @@ using System.IO;
 using Opus.Services.Data.Composition;
 using Opus.Services.Implementation.Data.Composition;
 using Opus.ViewModels;
+using PdfLib.PDFTools;
+using Opus.Core.Executors;
 
 namespace Opus
 {
@@ -88,6 +90,7 @@ namespace Opus
             SetLanguage();
 
             // Services for manipulating data
+            containerRegistry.Register<IPdfAConverter, PdfAConverter>();
             containerRegistry.Register<IBookmarker, Bookmarker>();
             containerRegistry.Register<IExtractor, Extractor>();
             containerRegistry.Register<ISigner, Signer>();
@@ -109,12 +112,14 @@ namespace Opus
             containerRegistry.RegisterSingleton<ISignatureOptions, SignatureOptions>();
             containerRegistry.RegisterSingleton<ICompositionOptions, CompositionOptions>();
 
+            containerRegistry.Register<IExtractionExecutor, ExtractionExecutor>();
+
             UpdateProfiles();
 
             containerRegistry.Register<IComposerFactory, ComposerFactory>();
 
             // Context Menu
-            containerRegistry.Register<IContextMenu, WinContextMenu>();
+            containerRegistry.Register<IContextMenu, ContextMenuExecutor>();
         }
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {

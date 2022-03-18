@@ -106,6 +106,15 @@ namespace Opus.Resources.Labels {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tiedosto.
+        /// </summary>
+        public static string File {
+            get {
+                return ResourceManager.GetString("File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sivuutettavien lause.
         /// </summary>
         public static string IgnoreExpression {

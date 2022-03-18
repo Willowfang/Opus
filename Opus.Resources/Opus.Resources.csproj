@@ -85,6 +85,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>ExtractionOptions.resx</DependentUpon>
     </Compile>
+    <Compile Update="Labels\Dialogs\ExtractionOrder.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ExtractionOrder.resx</DependentUpon>
+    </Compile>
     <Compile Update="Labels\Dialogs\FileTitle.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -125,6 +130,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Composition.resx</DependentUpon>
     </Compile>
+    <Compile Update="Messages\Extraction.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Extraction.resx</DependentUpon>
+    </Compile>
     <Compile Update="Messages\MainWindow.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -154,6 +164,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Composition.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Validation\Extraction.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Extraction.resx</DependentUpon>
     </Compile>
     <Compile Update="Validation\General.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -227,6 +242,10 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ExtractionOptions.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Labels\Dialogs\ExtractionOrder.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExtractionOrder.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Labels\Dialogs\FileTitle.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>FileTitle.Designer.cs</LastGenOutput>
@@ -259,6 +278,10 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Composition.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Messages\Extraction.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Extraction.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Messages\MainWindow.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MainWindow.Designer.cs</LastGenOutput>
@@ -282,6 +305,10 @@
     <EmbeddedResource Update="Validation\Composition.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Composition.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Validation\Extraction.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Extraction.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Validation\General.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

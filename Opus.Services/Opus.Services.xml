@@ -14,20 +14,35 @@
             Application language in ISO639-1 format
             </summary>
         </member>
-        <member name="P:Opus.Services.Configuration.IConfiguration.ExtractionPrefix">
+        <member name="P:Opus.Services.Configuration.IConfiguration.ExtractionTitle">
             <summary>
-            Prefix for extracted files
+            Title for extraction
             </summary>
         </member>
-        <member name="P:Opus.Services.Configuration.IConfiguration.ExtractionSuffix">
+        <member name="P:Opus.Services.Configuration.IConfiguration.ExtractionTitleAsk">
             <summary>
-            Suffix for extracted files
-            </summary>
-        </member>
-        <member name="P:Opus.Services.Configuration.IConfiguration.ExtractionPrefixSuffixAsk">
-            <summary>
-            If true, prefix and suffix values will be asked every time
+            If true, title will be asked every time
             an extraction is done
+            </summary>
+        </member>
+        <member name="P:Opus.Services.Configuration.IConfiguration.ExtractionConvertPdfA">
+            <summary>
+            Convert resulting pdf-files to pdf/a
+            </summary>
+        </member>
+        <member name="P:Opus.Services.Configuration.IConfiguration.ExtractionPdfADisabled">
+            <summary>
+            Indicates if conversion to pdf/a is possible
+            </summary>
+        </member>
+        <member name="P:Opus.Services.Configuration.IConfiguration.Annotations">
+            <summary>
+            Annotation handling option
+            </summary>
+        </member>
+        <member name="P:Opus.Services.Configuration.IConfiguration.GroupByFiles">
+            <summary>
+            Indicates whether individual bookmarks are grouped by source files
             </summary>
         </member>
         <member name="P:Opus.Services.Configuration.IConfiguration.MergeAddPageNumbers">
