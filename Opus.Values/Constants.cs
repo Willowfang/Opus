@@ -3,18 +3,23 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace Opus.Core.Constants
+namespace Opus.Values
 {
-    public static class ServiceNames
+    public static class SupportedTypes
     {
-        public const string LANGUAGEPROVIDER = "LanguageProvider";
+        public static readonly string[] CULTURES = { "fi", "sv", "en" };
     }
 
     public static class FilePaths
     {
+        public const string PDF_EXTENSION = ".pdf";
         public const string CONFIG_EXTENSION = ".ops";
-        public static string CONFIG_DIRECTORY = AppContext.BaseDirectory;
-        public static string PROFILE_DIRECTORY = Path.Combine(AppContext.BaseDirectory, "ProfileImport");
+        public static readonly string CONFIG_DIRECTORY = AppContext.BaseDirectory;
+        public static readonly string PROFILE_DIRECTORY = Path.Combine(AppContext.BaseDirectory, "ProfileImport");
+        public static readonly string LOCALUPDATEINFOLOCATION = Path.Combine(AppContext.BaseDirectory, "UpdateInfo.json");
+        public static readonly string TEST_LOCALUPDATEINFOLOC = @"C:\Users\Public\UpdateInfo.json";
+        public static readonly string SETUPFILENAME = "Opus.msi";
+        public const string UPDATEINFONAME = "UpdateInfo.json";
     }
 
     public static class RegionNames
@@ -36,7 +41,7 @@ namespace Opus.Core.Constants
     public static class SchemeNames
     {
         public const string SPLIT = "split";
-        public const string SIGNATURE = "signature";
+        public const string WORKCOPY = "workcopy";
         public const string MERGE = "merge";
         public const string COMPOSE = "compose";
     }

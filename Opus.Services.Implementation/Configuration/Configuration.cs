@@ -4,11 +4,16 @@ using System.IO;
 using Prism.Mvvm;
 using System.Threading;
 using System;
+using Opus.Services.Implementation.Logging;
+using CX.LoggingLib;
+using LoggingLib.Defaults;
 
 namespace Opus.Services.Implementation.Configuration
 {
     public class Configuration : BindableBase, IConfiguration
     {
+        private const string pdfToolsLocation = @"C:\Program Files\Tracker Software\PDF Tools\PDFXTools.exe";
+
         public string? ConfigurationFile { get; set; }
 
         private string? languageCode;
@@ -18,25 +23,60 @@ namespace Opus.Services.Implementation.Configuration
             set => SetProperty(ref languageCode, value, SaveConfiguration);
         }
 
-        private string? extractionPrefix;
-        public string? ExtractionPrefix
+        private string? extractionTitle;
+        public string? ExtractionTitle
         {
-            get => extractionPrefix;
-            set => SetProperty(ref extractionPrefix, value, SaveConfiguration);
+            get => extractionTitle;
+            set => SetProperty(ref extractionTitle, value, SaveConfiguration);
         }
 
-        private string? extractionSuffix;
-        public string? ExtractionSuffix
+        private bool extractionTitleAsk;
+        public bool ExtractionTitleAsk
         {
-            get => extractionSuffix;
-            set => SetProperty(ref extractionSuffix, value, SaveConfiguration);
+            get => extractionTitleAsk;
+            set => SetProperty(ref extractionTitleAsk, value, SaveConfiguration);
         }
 
-        private bool extractionPrefixSuffixAsk;
-        public bool ExtractionPrefixSuffixAsk
+        private bool extractionConvertPdfA;
+        public bool ExtractionConvertPdfA
         {
-            get => extractionPrefixSuffixAsk;
-            set => SetProperty(ref extractionPrefixSuffixAsk, value, SaveConfiguration);
+            get => extractionConvertPdfA;
+            set => SetProperty(ref extractionConvertPdfA, value, SaveConfiguration);
+        }
+
+        private bool extractionPdfADisabled;
+        public bool ExtractionPdfADisabled
+        {
+            get => extractionPdfADisabled;
+            set => SetProperty(ref extractionPdfADisabled, value);
+        }
+
+        private int annotations;
+        public int Annotations
+        {
+            get => annotations;
+            set => SetProperty(ref annotations, value, SaveConfiguration);
+        }
+
+        private bool groupByFiles;
+        public bool GroupByFiles
+        {
+            get => groupByFiles;
+            set => SetProperty(ref groupByFiles, value, SaveConfiguration);
+        }
+
+        private string? unsignedTitleTemplate;
+        public string? UnsignedTitleTemplate
+        {
+            get => unsignedTitleTemplate;
+            set => SetProperty(ref unsignedTitleTemplate, value, SaveConfiguration);
+        }
+
+        private bool workCopyFlattenRedactions;
+        public bool WorkCopyFlattenRedactions
+        {
+            get => workCopyFlattenRedactions;
+            set => SetProperty(ref workCopyFlattenRedactions, value, SaveConfiguration);
         }
 
         private bool mergeAddPageNumbers;
@@ -69,18 +109,63 @@ namespace Opus.Services.Implementation.Configuration
 
         public Configuration() { }
 
-        public static IConfiguration Load(string configFile)
+        public static IConfiguration Load(string configFile, ILogbook? logbook = null)
         {
+            if (logbook == null)
+                logbook = EmptyLogbook.Create();
+
+            Configuration configuration;
             if (File.Exists(configFile))
             {
-                string json = File.ReadAllText(configFile);
-                Configuration? config = JsonSerializer.Deserialize<Configuration>(json);
-                return config ?? CreateNew(configFile);
+                string json;
+
+                try
+                {
+                    json = File.ReadAllText(configFile);
+                }
+                catch (Exception e) 
+                    when (e is ArgumentException || 
+                          e is PathTooLongException ||
+                          e is IOException ||
+                          e is UnauthorizedAccessException ||
+                          e is System.Security.SecurityException)
+                {
+                    logbook.Write($"Configuration file load failed.", LogLevel.Error, e, nameof(Configuration));
+                    throw;
+                }
+
+                Configuration? config;
+
+                try
+                {
+                    config = JsonSerializer.Deserialize<Configuration>(json);
+                }
+                catch (ArgumentNullException e)
+                {
+                    logbook.Write($"Configuration file deserialization failed.", LogLevel.Error, e, nameof(Configuration));
+                    throw;
+                }
+                catch (JsonException e)
+                {
+                    logbook.Write($"Configuration file deserialization failed. Corrupted or incompatible JSON-file. Creating new configuration.", LogLevel.Error, e, nameof(Configuration));
+
+                    config = CreateNew(configFile);
+                }
+                
+                configuration = config ?? CreateNew(configFile);
             }
             else
             {
-                return CreateNew(configFile);
+                configuration = CreateNew(configFile);
             }
+
+            if (File.Exists(pdfToolsLocation) == false)
+            {
+                configuration.ExtractionConvertPdfA = false;
+                configuration.ExtractionPdfADisabled = true;
+            }
+
+            return configuration;
         }
 
         private static Configuration CreateNew(string configFile)
@@ -89,10 +174,12 @@ namespace Opus.Services.Implementation.Configuration
             {
                 ConfigurationFile = configFile,
                 LanguageCode = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName,
-                ExtractionPrefix = null,
-                ExtractionSuffix = null,
+                ExtractionTitle = Resources.Placeholders.FileNames.Bookmark,
                 MergeAddPageNumbers = true,
-                CompositionSearchSubDirectories = true
+                CompositionSearchSubDirectories = true,
+                ExtractionTitleAsk = true,
+                GroupByFiles = true,
+                WorkCopyFlattenRedactions = true
             };
         }
 

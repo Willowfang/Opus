@@ -70,20 +70,65 @@ namespace Opus.Resources.Labels.Dialogs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lisätään tiedostonimien alkuun.
+        ///   Looks up a localized string similar to Merkinnät.
         /// </summary>
-        public static string PrefixHelper {
+        public static string Annotations {
             get {
-                return ResourceManager.GetString("PrefixHelper", resourceCulture);
+                return ResourceManager.GetString("Annotations", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lisätään tiedotonimien loppuun.
+        ///   Looks up a localized string similar to Pidä kaikki.
         /// </summary>
-        public static string SuffixHelper {
+        public static string Keep {
             get {
-                return ResourceManager.GetString("SuffixHelper", resourceCulture);
+                return ResourceManager.GetString("Keep", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Muotoile nimen malli.
+        /// </summary>
+        public static string NameHelper {
+            get {
+                return ResourceManager.GetString("NameHelper", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nimen rakenne.
+        /// </summary>
+        public static string NameTemplate {
+            get {
+                return ResourceManager.GetString("NameTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Muunna pdf/a -muotoon.
+        /// </summary>
+        public static string PdfA {
+            get {
+                return ResourceManager.GetString("PdfA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Poista kaikki.
+        /// </summary>
+        public static string RemoveAll {
+            get {
+                return ResourceManager.GetString("RemoveAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Poista valitut.
+        /// </summary>
+        public static string RemoveUser {
+            get {
+                return ResourceManager.GetString("RemoveUser", resourceCulture);
             }
         }
     }

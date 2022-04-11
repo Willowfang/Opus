@@ -63,27 +63,27 @@ namespace Opus.Resources.Labels.MainWindow {
         /// <summary>
         ///   Looks up a localized string similar to Englanti.
         /// </summary>
-        public static string English {
+        public static string en {
             get {
-                return ResourceManager.GetString("English", resourceCulture);
+                return ResourceManager.GetString("en", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Suomi.
         /// </summary>
-        public static string Finnish {
+        public static string fi {
             get {
-                return ResourceManager.GetString("Finnish", resourceCulture);
+                return ResourceManager.GetString("fi", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Ruotsi.
         /// </summary>
-        public static string Swedish {
+        public static string sv {
             get {
-                return ResourceManager.GetString("Swedish", resourceCulture);
+                return ResourceManager.GetString("sv", resourceCulture);
             }
         }
     }

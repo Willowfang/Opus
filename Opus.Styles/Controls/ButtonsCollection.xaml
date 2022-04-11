@@ -19,7 +19,7 @@
         <Setter Property="BorderBrush" Value="{DynamicResource SecondaryHueMidBrush}"/>
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="False">
-                <Setter Property="Foreground" Value="{DynamicResource PrimaryHueLightBrush}"/>
+                <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidBrush}"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Foreground" Value="{DynamicResource PrimaryHueDarkBrush}"/>
@@ -34,13 +34,29 @@
         </Style.Triggers>
     </Style>
 
+    <Style TargetType="{x:Type Button}" x:Key="HeaderMenuButton" 
+           BasedOn="{StaticResource MaterialDesignFlatButton}">
+        <Setter Property="Foreground" Value="{DynamicResource MaterialDesignDarkForeground}"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="120"/>
+        <Setter Property="Margin" Value="0"/>
+    </Style>
+
+    <Style TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource MaterialDesignFlatButton}"
+           x:Key="HeaderMenuToggleButton">
+        <Setter Property="Foreground" Value="{DynamicResource MaterialDesignDarkForeground}"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="120"/>
+        <Setter Property="Margin" Value="0"/>
+    </Style>
+
     <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFlatButton}"
            x:Key="InputPathButton">
-        <Setter Property="Foreground" Value="{DynamicResource MaterialDesignShadowBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource MaterialDesignDarkForeground}"/>
     </Style>
 
     <!--DIALOG BUTTONS-->
-    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFlatButton}"
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFlatSecondaryButton}"
            x:Key="DialogButton">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Margin" Value="10, 0, 10, 0"/>
@@ -85,5 +101,11 @@
                 </DataTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+    
+    <!--RADIO BUTTON TAB-->
+    <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource MaterialDesignTabRadioButton}"
+           x:Key="TabRadioButton">
+        <Setter Property="Cursor" Value="Hand"/>
     </Style>
 </ResourceDictionary>

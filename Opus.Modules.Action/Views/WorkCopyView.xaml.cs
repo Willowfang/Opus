@@ -16,9 +16,9 @@ namespace Opus.Modules.Action.Views
     /// <summary>
     /// Interaction logic for SignatureRemovalView.xaml
     /// </summary>
-    public partial class SignatureRemovalView : UserControl
+    public partial class WorkCopyView : UserControl
     {
-        public SignatureRemovalView()
+        public WorkCopyView()
         {
             InitializeComponent();
         }

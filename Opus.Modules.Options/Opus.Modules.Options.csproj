@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <AssemblyName>Opus.Modules.Options</AssemblyName>
   </PropertyGroup>
@@ -9,5 +9,10 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Opus.Core\Opus.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="CodeX-LoggingLib">
+      <HintPath>..\..\..\CodeX\Libraries\LoggingLib\bin\Debug\net6.0\CodeX-LoggingLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

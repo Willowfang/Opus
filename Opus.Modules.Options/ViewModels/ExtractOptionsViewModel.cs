@@ -9,29 +9,33 @@ using Opus.Services.Implementation.UI.Dialogs;
 using AsyncAwaitBestPractices.MVVM;
 using System.Threading.Tasks;
 using Opus.Services.Configuration;
+using CX.LoggingLib;
 
 namespace Opus.Modules.Options.ViewModels
 {
     public class ExtractOptionsViewModel : OptionsViewModelBase<ExtractSettingsDialog>
     {
-        public ExtractOptionsViewModel(IDialogAssist dialogAssist, IConfiguration configuration)
-            : base(dialogAssist, configuration) { }
+        public ExtractOptionsViewModel(IDialogAssist dialogAssist, IConfiguration configuration, ILogbook logbook)
+            : base(dialogAssist, configuration, logbook) { }
 
         protected override ExtractSettingsDialog CreateDialog()
         {
             return new ExtractSettingsDialog(Resources.Labels.General.Settings)
             {
-                Prefix = configuration.ExtractionPrefix,
-                Suffix = configuration.ExtractionSuffix,
-                AlwaysAsk = configuration.ExtractionPrefixSuffixAsk
+                Title = configuration.ExtractionTitle,
+                AlwaysAsk = configuration.ExtractionTitleAsk,
+                PdfA = configuration.ExtractionConvertPdfA,
+                PdfADisabled = configuration.ExtractionPdfADisabled,
+                Annotations = configuration.Annotations
             };
         }
 
         protected override void SaveSettings(ExtractSettingsDialog dialog)
         {
-            configuration.ExtractionPrefix = dialog.Prefix;
-            configuration.ExtractionSuffix = dialog.Suffix;
-            configuration.ExtractionPrefixSuffixAsk = dialog.AlwaysAsk;
+            configuration.ExtractionTitle = dialog.Title;
+            configuration.ExtractionTitleAsk = dialog.AlwaysAsk;
+            configuration.ExtractionConvertPdfA = dialog.PdfA;
+            configuration.Annotations = dialog.Annotations;
         }
     }
 }

@@ -1,10 +1,10 @@
 ﻿using AsyncAwaitBestPractices.MVVM;
+using CX.LoggingLib;
 using CX.PdfLib.Common;
 using CX.PdfLib.Services;
 using CX.PdfLib.Services.Data;
 using Opus.Core.Base;
-using Opus.Core.Constants;
-using Opus.Core.ExtensionMethods;
+using Opus.Values;
 using Opus.Core.Wrappers;
 using Opus.Events;
 using Opus.Services.Configuration;
@@ -19,10 +19,11 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Opus.Modules.Action.ViewModels
 {
-    public class MergeViewModel : ViewModelBase, INavigationTarget
+    public class MergeViewModel : ViewModelBaseLogging<MergeViewModel>, INavigationTarget
     {
         /// <summary>
         /// Common event handling service
@@ -31,7 +32,6 @@ namespace Opus.Modules.Action.ViewModels
         /// <summary>
         /// Service for performing manipulations on a pdf-file
         /// </summary>
-        private IManipulator manipulator;
         /// <summary>
         /// Service handling user input for file and directory paths
         /// </summary>
@@ -44,25 +44,31 @@ namespace Opus.Modules.Action.ViewModels
         /// Common service for displaying and updating a dialog
         /// </summary>
         private IDialogAssist dialogAssist;
+        private IMergingService mergingService;
 
         /// <summary>
         /// Files to be merged
         /// </summary>
         public ReorderCollection<FileStorage> Collection { get; }
 
-        public MergeViewModel(IEventAggregator eventAggregator, IManipulator manipulator,
-            IPathSelection input, INavigationTargetRegistry navRegistry, IConfiguration configuration, 
-            IDialogAssist dialogAssist)
+        public MergeViewModel(
+            IEventAggregator eventAggregator,
+            IPathSelection input, 
+            INavigationTargetRegistry navRegistry, 
+            IConfiguration configuration, 
+            IDialogAssist dialogAssist,
+            IMergingService mergingService,
+            ILogbook logbook) : base(logbook)
         {
             Collection = new ReorderCollection<FileStorage>()
             {
                 CanReorder = true
             };
             this.eventAggregator = eventAggregator;
-            this.manipulator = manipulator;
             this.input = input;
             this.configuration = configuration;
             this.dialogAssist = dialogAssist;
+            this.mergingService = mergingService;
             navRegistry.AddTarget(SchemeNames.MERGE, this);
         }
 
@@ -75,10 +81,14 @@ namespace Opus.Modules.Action.ViewModels
         public void OnArrival()
         {
             filesAddedSubscription = eventAggregator.GetEvent<FilesAddedEvent>().Subscribe(FilesAdded);
+
+            logbook.Write($"{this} subscribed to {nameof(FilesAddedEvent)}.", LogLevel.Debug);
         }
         public void WhenLeaving()
         {
             eventAggregator.GetEvent<FilesAddedEvent>().Unsubscribe(filesAddedSubscription);
+
+            logbook.Write($"{this} unsubscribed from {nameof(FilesAddedEvent)}.", LogLevel.Debug);
         }
         private void FilesAdded(string[] files)
         {
@@ -98,10 +108,14 @@ namespace Opus.Modules.Action.ViewModels
                 Title = Collection.SelectedItem.Title
             };
             await dialogAssist.Show(fileDialog);
-            if (!fileDialog.IsCanceled)
+
+            if (fileDialog.IsCanceled)
             {
-                Collection.SelectedItem.Title = fileDialog.Title;
+                logbook.Write($"Cancellation requested at {nameof(IDialog)} '{fileDialog}'.", LogLevel.Information);
+                return;
             }
+
+            Collection.SelectedItem.Title = fileDialog.Title;
         }
 
         // Delete selected selected containers from collection
@@ -136,11 +150,33 @@ namespace Opus.Modules.Action.ViewModels
             CancellationTokenSource tokenSource = new CancellationTokenSource();
             CancellationToken token = tokenSource.Token;
 
-            var result = ShowProgress(tokenSource);
-            Task merge = manipulator.MergeWithBookmarksAsync(inputs, path, 
-                configuration.MergeAddPageNumbers, result.progress, token);
+            ProgressContainer container = dialogAssist.ShowProgress(tokenSource);
 
-            await result.dialog;
+            logbook.Write($"Started merging.", LogLevel.Information);
+
+            MergingOptions options = new MergingOptions(inputs, new FileInfo(path), configuration.MergeAddPageNumbers, false);
+            options.Cancellation = token;
+            options.Progress = container.Reporting;
+
+            try
+            {
+                await mergingService.MergeWithOptions(options);
+            }
+            catch (Exception e)
+            {
+                logbook.Write($"Merging encountered an error", LogLevel.Error, e);
+
+                container.ProgressDialog.CloseOnError();
+
+                MessageDialog message = new MessageDialog(Resources.Labels.General.Error,
+                    Resources.Messages.Merging.MergeFailed);
+
+                await dialogAssist.Show(message);
+            }
+
+            await container.Show;
+
+            logbook.Write($"Merging finished.", LogLevel.Information);
         }
 
         private IList<IMergeInput> GetMergeInputs()
@@ -151,23 +187,6 @@ namespace Opus.Modules.Action.ViewModels
                 inputs.Add(new MergeInput(file.FilePath, file.Title, file.Level));
             }
             return inputs;
-        }
-
-        private (Task dialog, IProgress<ProgressReport> progress) ShowProgress(CancellationTokenSource tokenSource)
-        {
-            ProgressDialog dialog = new ProgressDialog(null, tokenSource)
-            {
-                TotalPercent = 0,
-                Phase = ProgressPhase.Unassigned.GetResourceString()
-            };
-            Progress<ProgressReport> progress = new Progress<ProgressReport>(report =>
-            {
-                dialog.TotalPercent = report.Percentage;
-                dialog.Phase = report.CurrentPhase.GetResourceString();
-                dialog.Part = report.CurrentItem;
-            });
-
-            return (dialogAssist.Show(dialog), progress);
         }
     }
 }

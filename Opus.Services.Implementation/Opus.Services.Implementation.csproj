@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
 	  <UseWindowsForms>true</UseWindowsForms>
@@ -10,20 +10,29 @@
   <ItemGroup>
     <PackageReference Include="LiteDB" Version="5.0.11" />
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+    <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Opus.Events\Opus.Events.csproj" />
+    <ProjectReference Include="..\Opus.ExtensionMethods\Opus.ExtensionMethods.csproj" />
     <ProjectReference Include="..\Opus.Resources\Opus.Resources.csproj" />
     <ProjectReference Include="..\Opus.Services\Opus.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="CodeX-LoggingLib">
+      <HintPath>..\..\..\CodeX\Libraries\LoggingLib\bin\Debug\net6.0\CodeX-LoggingLib.dll</HintPath>
+    </Reference>
     <Reference Include="CodeX-PdfLib">
-      <HintPath>..\..\..\CodeX\Libraries\PdfLib\bin\Debug\net5.0\CodeX-PdfLib.dll</HintPath>
+      <HintPath>..\..\..\CodeX\Libraries\PdfLib\bin\Debug\net6.0\CodeX-PdfLib.dll</HintPath>
     </Reference>
     <Reference Include="CodeX-PdfLib-iText7">
-      <HintPath>..\..\..\CodeX\Libraries\PdfLib.iText7\bin\Debug\net5.0\CodeX-PdfLib-iText7.dll</HintPath>
+      <HintPath>..\..\..\CodeX\Libraries\PdfLib.iText7\bin\Debug\net6.0\CodeX-PdfLib-iText7.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfLib.PDFTools">
+      <HintPath>..\..\..\CodeX\Libraries\PdfLib.PDFTools\bin\Debug\net6.0\PdfLib.PDFTools.dll</HintPath>
     </Reference>
   </ItemGroup>
 

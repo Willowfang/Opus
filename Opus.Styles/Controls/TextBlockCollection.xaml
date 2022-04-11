@@ -19,11 +19,24 @@
         <Setter Property="Margin" Value="20, 15, 20, 10"/>
     </Style>
 
+    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource MaterialDesignCaptionTextBlock}"
+           x:Key="UpdateNotesTextBlock">
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="DimGray"/>
+    </Style>
+
     <Style TargetType="{x:Type TextBlock}" x:Key="SegmentHeaderText"
                    BasedOn="{StaticResource MaterialDesignTextBlock}">
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidBrush}"/>
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="HeaderMenuText"
+           BasedOn="{StaticResource MaterialDesignButtonTextBlock}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
     </Style>
 
 </ResourceDictionary>

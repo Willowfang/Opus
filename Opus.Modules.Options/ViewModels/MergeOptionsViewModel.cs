@@ -1,4 +1,5 @@
 ﻿using AsyncAwaitBestPractices.MVVM;
+using CX.LoggingLib;
 using Opus.Core.Base;
 using Opus.Services.Configuration;
 using Opus.Services.Implementation.UI.Dialogs;
@@ -14,8 +15,8 @@ namespace Opus.Modules.Options.ViewModels
 {
     public class MergeOptionsViewModel : OptionsViewModelBase<MergeSettingsDialog>
     {
-        public MergeOptionsViewModel(IConfiguration configuration, IDialogAssist dialogAssist)
-            : base(dialogAssist, configuration) { }
+        public MergeOptionsViewModel(IConfiguration configuration, IDialogAssist dialogAssist, ILogbook logbook)
+            : base(dialogAssist, configuration, logbook) { }
 
         protected override MergeSettingsDialog CreateDialog()
         {

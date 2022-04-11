@@ -16,9 +16,9 @@ namespace Opus.Modules.Options.Views
     /// <summary>
     /// Interaction logic for IdentifierView.xaml
     /// </summary>
-    public partial class SignatureOptionsView : UserControl
+    public partial class WorkCopyOptionsView : UserControl
     {
-        public SignatureOptionsView()
+        public WorkCopyOptionsView()
         {
             InitializeComponent();
         }

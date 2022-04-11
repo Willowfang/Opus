@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
-        xmlns:const="clr-namespace:Opus.Core.Constants;assembly=Opus.Core"
+        xmlns:const="clr-namespace:Opus.Values;assembly=Opus.Values"
         xmlns:local="clr-namespace:Opus"
         xmlns:resMain="clr-namespace:Opus.Resources.Labels.MainWindow;assembly=Opus.Resources"
         xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
@@ -16,12 +16,16 @@
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
-        Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         prism:ViewModelLocator.AutoWireViewModel="True"
         WindowStartupLocation="CenterScreen"
         x:Name="MainWindow"
         Loaded="Window_Loaded">
+    <Window.Background>
+        <!--BACKGROUND IMAGE-->
+        <ImageBrush ImageSource="/Opus;component/Images/OpusBackground.png"
+                    Stretch="Fill"/>
+    </Window.Background>
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="1" CornerRadius="15" CaptionHeight="0" UseAeroCaptionButtons="False" ResizeBorderThickness="7"/>
     </WindowChrome.WindowChrome>
@@ -33,18 +37,31 @@
         </ResourceDictionary>
     </Window.Resources>
     <materialDesign:DialogHost IsOpen="{Binding Dialog.IsShowing}" DialogContent="{Binding Dialog.Active}">
+        <materialDesign:DialogHost.DialogBackground>
+            <SolidColorBrush Color="#FF0F1316" Opacity="1"/>
+        </materialDesign:DialogHost.DialogBackground>
+        
+        <!--MAIN GRID-->
+        
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+
+            <!--TOPBAR-->
             <materialDesign:Card Grid.Row="0" Padding="5, 5, 5, 5" Margin="0, 0, 0, 0" x:Name="TopBar"
-                    materialDesign:ShadowAssist.ShadowDepth="Depth0"
-                    MouseLeftButtonDown="TopBar_MouseLeftButtonDown"
-                    Opacity="1">
+                                 materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                                 MouseLeftButtonDown="TopBar_MouseLeftButtonDown"
+                                 Opacity="1">
+                <materialDesign:Card.Background>
+                    <SolidColorBrush Color="{DynamicResource MaterialDesignShadow}" Opacity="0.7"/>
+                </materialDesign:Card.Background>
                 <materialDesign:Card.Effect>
-                    <DropShadowEffect ShadowDepth="4" BlurRadius="8" Color="White"/>
+                    <DropShadowEffect ShadowDepth="4" Opacity="0" BlurRadius="8" Color="White"/>
                 </materialDesign:Card.Effect>
+                
+                <!--TOPBAR BUTTONS-->
                 <StackPanel HorizontalAlignment="Right" Margin="0, 0, 10, 0"
                             Orientation="Horizontal">
                     <Button Style="{DynamicResource MaterialDesignFlatButton}" Height="25" Width="25" Padding="0"
@@ -63,21 +80,31 @@
                     </Button>
                 </StackPanel>
             </materialDesign:Card>
+            
+            <!--CONTENT GRID-->
             <Grid Grid.Row="1" Margin="0, 0, 0, 0">
                 <ContentControl Content="{StaticResource Divided}" HorizontalAlignment="Center"
-                                Margin="0, 0, -100, 0" Opacity="0.2"/>
+                                Margin="0, 0, -100, 0" Opacity="0"/>
                 <DockPanel>
+                    
+                    <!--MAIN MENU-->
                     <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth0"
-                            HorizontalAlignment="Center" Margin="0, 0, 0, 0"
-                            Opacity="1">
+                                         HorizontalAlignment="Center" Margin="0, 0, 0, 0"
+                                         Opacity="1">
+                        <materialDesign:Card.Background>
+                            <SolidColorBrush Color="{DynamicResource MaterialDesignShadow}" Opacity="0.7"/>
+                        </materialDesign:Card.Background>
                         <materialDesign:Card.Effect>
-                            <DropShadowEffect ShadowDepth="4" BlurRadius="8" Color="White"/>
+                            <DropShadowEffect ShadowDepth="4" Opacity="0" BlurRadius="8" Color="White"/>
                         </materialDesign:Card.Effect>
                         <StackPanel Margin="5, 0, 0, 0">
-                            <Image Source="/Images/Bookmark.png" Grid.Row="0" Grid.Column="0"
-                                   Width="60" Margin="0, 10, 0, 0"/>
-                            <Separator Style="{DynamicResource MaterialDesignDarkSeparator}" Margin="5, 10, 5, 10"/>
+                            
+                            <!--LOGO-->
+                            <Image Source="/Opus;component/Images/LogoCX.png" Grid.Row="0" Grid.Column="0"
+                                   Width="50" Margin="0, 10, 0, 0"/>
+                            <Separator Style="{DynamicResource MaterialDesignLightSeparator}" Margin="5, 10, 5, 10"/>
 
+                            <!--MAIN MENU BUTTONS-->
                             <RadioButton Style="{DynamicResource MainMenuButton}"
                                          CommandParameter="{x:Static const:SchemeNames.SPLIT}"
                                          x:Name="SplitButton">
@@ -85,7 +112,7 @@
                                                          Kind="FileDocumentMultiple"/>
                             </RadioButton>
                             <RadioButton Style="{DynamicResource MainMenuButton}"
-                                         CommandParameter="{x:Static const:SchemeNames.SIGNATURE}">
+                                         CommandParameter="{x:Static const:SchemeNames.WORKCOPY}">
                                 <materialDesign:PackIcon Width="30" Height="30" 
                                                          Kind="Draw"/>
                             </RadioButton>
@@ -102,12 +129,13 @@
                         </StackPanel>
                     </materialDesign:Card>
 
+                    <!--HEADER-->
                     <materialDesign:Card Margin="16, 10, 16, 16"
                                          Padding="30, 0, 30, 0" DockPanel.Dock="Top" Opacity="1"
                                          materialDesign:ShadowAssist.ShadowDepth="Depth3"
                                          Height="100">
                         <materialDesign:Card.Background>
-                            <SolidColorBrush Color="White" Opacity="0.7"/>
+                            <SolidColorBrush Color="{DynamicResource MaterialDesignShadow}" Opacity="0.9"/>
                         </materialDesign:Card.Background>
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -120,28 +148,45 @@
                                        Style="{DynamicResource MaterialDesignHeadline5TextBlock}"
                                        Text="{Binding Title}"
                                        VerticalAlignment="Center"/>
-                            <materialDesign:PopupBox Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center">
-                                <Menu HorizontalAlignment="Center">
-                                    <Menu.ItemsPanel>
-                                        <ItemsPanelTemplate>
-                                            <VirtualizingStackPanel Orientation="Vertical"/>
-                                        </ItemsPanelTemplate>
-                                    </Menu.ItemsPanel>
-                                    <MenuItem Header="{x:Static resMain:HelpMenu.UserManual}" Command="{Binding OpenManual}"/>
-                                    <MenuItem Header="{x:Static resMain:HelpMenu.Licences}" Command="{Binding OpenLicenses}"/>
-                                    <MenuItem Header="{x:Static resMain:HelpMenu.SourceCode}" Command="{Binding OpenSourceCode}"/>
-                                    <MenuItem Header="{x:Static resMain:HelpMenu.Language}">
-                                        <MenuItem Header="{x:Static resMain:Languages.Finnish}"
-                                                  Command="{Binding LanguageCommand}"
-                                                  CommandParameter="fi"/>
-                                        <MenuItem Header="{x:Static resMain:Languages.Swedish}"
-                                                  Command="{Binding LanguageCommand}"
-                                                  CommandParameter="sv"/>
-                                        <MenuItem Header="{x:Static resMain:Languages.English}"
-                                                  Command="{Binding LanguageCommand}"
-                                                  CommandParameter="en"/>
-                                    </MenuItem>
-                                </Menu>
+                            <materialDesign:PopupBox Grid.Column="2" 
+                                                     HorizontalAlignment="Right" 
+                                                     VerticalAlignment="Center"
+                                                     StaysOpen="True">
+                                <StackPanel>
+                                    <Button Style="{DynamicResource HeaderMenuButton}"
+                                            Command="{Binding OpenManual}"
+                                            Content="{x:Static resMain:HelpMenu.UserManual}"/>
+                                    <Button Style="{DynamicResource HeaderMenuButton}"
+                                            Command="{Binding OpenLicenses}"
+                                            Content="{x:Static resMain:HelpMenu.Licences}"/>
+                                    <Button Style="{DynamicResource HeaderMenuButton}"
+                                            Command="{Binding OpenSourceCode}"
+                                            Content="{x:Static resMain:HelpMenu.SourceCode}"/>
+                                    <ToggleButton Style="{DynamicResource HeaderMenuToggleButton}"
+                                                  x:Name="LanguageButton">
+                                        <StackPanel>
+                                            <TextBlock Style="{DynamicResource MaterialDesignButtonTextBlock}"
+                                                       Text="{x:Static resMain:HelpMenu.Language}"
+                                                       VerticalAlignment="Center"
+                                                       HorizontalAlignment="Center"/>
+                                            <Popup IsOpen="{Binding IsChecked, ElementName=LanguageButton}"
+                                                   StaysOpen="False">
+                                                <ItemsControl ItemsSource="{Binding Languages}" x:Name="LanguageMenu"
+                                                              Background="{DynamicResource MaterialDesignDarkBackground}">
+                                                    <ItemsControl.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <Button Style="{DynamicResource HeaderMenuButton}" 
+                                                                    Content="{Binding Name}"
+                                                                    Command="{Binding ElementName=LanguageMenu, 
+                                                                    Path=DataContext.LanguageCommand}"
+                                                                    CommandParameter="{Binding Code}"/>
+                                                        </DataTemplate>
+                                                    </ItemsControl.ItemTemplate>
+                                                </ItemsControl>
+                                            </Popup>
+                                        </StackPanel>
+                                    </ToggleButton>
+                                </StackPanel>
                             </materialDesign:PopupBox>
                         </Grid>
                     </materialDesign:Card>

@@ -17,18 +17,38 @@ namespace Opus.Services.Configuration
         /// </summary>
         public string LanguageCode { get; set; }
         /// <summary>
-        /// Prefix for extracted files
+        /// Title for extraction
         /// </summary>
-        public string ExtractionPrefix { get; set; }
+        public string ExtractionTitle { get; set; }
         /// <summary>
-        /// Suffix for extracted files
-        /// </summary>
-        public string ExtractionSuffix { get; set; }
-        /// <summary>
-        /// If true, prefix and suffix values will be asked every time
+        /// If true, title will be asked every time
         /// an extraction is done
         /// </summary>
-        public bool ExtractionPrefixSuffixAsk { get; set; }
+        public bool ExtractionTitleAsk { get; set; }
+        /// <summary>
+        /// Convert resulting pdf-files to pdf/a
+        /// </summary>
+        public bool ExtractionConvertPdfA { get; set; }
+        /// <summary>
+        /// Indicates if conversion to pdf/a is possible
+        /// </summary>
+        public bool ExtractionPdfADisabled { get; set; }
+        /// <summary>
+        /// Annotation handling option
+        /// </summary>
+        public int Annotations { get; set; }
+        /// <summary>
+        /// Indicates whether individual bookmarks are grouped by source files
+        /// </summary>
+        public bool GroupByFiles { get; set; }
+        /// <summary>
+        /// Title for files that have had their signatures removed
+        /// </summary>
+        public string UnsignedTitleTemplate { get; set; }
+        /// <summary>
+        /// Flatten redactions when creating work copies
+        /// </summary>
+        public bool WorkCopyFlattenRedactions { get; set; }
         /// <summary>
         /// If true, page numbers will be added to a merged document
         /// </summary>

@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using Opus.Core.Base;
-using Opus.Core.Constants;
+using Opus.Values;
 using Opus.Services.Configuration;
 using Prism.Commands;
 using Prism.Events;
@@ -12,6 +12,12 @@ using Opus.Services.Implementation.UI.Dialogs;
 using AsyncAwaitBestPractices.MVVM;
 using System.Threading.Tasks;
 using System.Windows;
+using CX.LoggingLib;
+using System.Collections;
+using Opus.Core.Wrappers;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using Opus.Core.Executors;
 
 namespace Opus.ViewModels
 {
@@ -19,10 +25,10 @@ namespace Opus.ViewModels
     /// Responsible for handling UX when the program is started
     /// in full GUI mode
     /// </summary>
-    public class MainWindowViewModel : ViewModelBase
+    public class MainWindowViewModel : ViewModelBaseLogging<MainWindowViewModel>
     {
-        private IConfiguration configuration;
-        private IEventAggregator eventAggregator;
+        private readonly IConfiguration configuration;
+        private readonly IEventAggregator eventAggregator;
 
         private string title;
         public string Title
@@ -37,13 +43,24 @@ namespace Opus.ViewModels
         /// </summary>
         public IDialogAssist Dialog { get; set; }
 
+        public ObservableCollection<LanguageOption> Languages { get; }
 
-        public MainWindowViewModel(IEventAggregator eventAggregator, 
-            IConfiguration config, IDialogAssist dialogAssist)
+        public MainWindowViewModel(
+            IEventAggregator eventAggregator, 
+            IConfiguration config, 
+            IDialogAssist dialogAssist,
+            IUpdateExecutor updateExecutor,
+            ILogbook logbook) : base(logbook)
         {
             configuration = config;
             this.eventAggregator = eventAggregator;
             this.Dialog = dialogAssist;
+            Languages = new ObservableCollection<LanguageOption>();
+
+            foreach (string code in SupportedTypes.CULTURES)
+            {
+                Languages.Add(new LanguageOption(code, Resources.Labels.MainWindow.Languages.ResourceManager.GetString(code)));
+            }
         }
 
         #region LICENSE
@@ -97,6 +114,8 @@ namespace Opus.ViewModels
             _languageCommand ?? (_languageCommand = new AsyncCommand<string>(ExecuteLanguage));
         private async Task ExecuteLanguage(string language)
         {
+            logbook.Write($"Change of language to {language} requested.", LogLevel.Information);
+
             var lang = configuration.LanguageCode;
             if (language == lang)
                 return;
@@ -113,11 +132,13 @@ namespace Opus.ViewModels
             _navigateCommand ?? (_navigateCommand = new DelegateCommand<string>(ExecuteNavigation));
         void ExecuteNavigation(string name)
         {
+            logbook.Write($"Navigation requested for scheme {name}.", LogLevel.Information);
+
             eventAggregator.GetEvent<ViewChangeEvent>().Publish(name);
             if (name == SchemeNames.SPLIT)
                 Title = Resources.Labels.MainWindow.Titles.Extract.ToUpper();
-            if (name == SchemeNames.SIGNATURE)
-                Title = Resources.Labels.MainWindow.Titles.Signature.ToUpper();
+            if (name == SchemeNames.WORKCOPY)
+                Title = Resources.Labels.MainWindow.Titles.Workcopy.ToUpper();
             if (name == SchemeNames.MERGE)
                 Title = Resources.Labels.MainWindow.Titles.Merge.ToUpper();
             if (name == SchemeNames.COMPOSE)

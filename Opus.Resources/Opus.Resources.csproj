@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -80,10 +80,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Confirmation.resx</DependentUpon>
     </Compile>
+    <Compile Update="Labels\Dialogs\ExtractionAnnotations.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ExtractionAnnotations.resx</DependentUpon>
+    </Compile>
     <Compile Update="Labels\Dialogs\ExtractionOptions.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>ExtractionOptions.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Labels\Dialogs\ExtractionOrder.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ExtractionOrder.resx</DependentUpon>
     </Compile>
     <Compile Update="Labels\Dialogs\FileTitle.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -95,10 +105,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>MergeOptions.resx</DependentUpon>
     </Compile>
-    <Compile Update="Labels\Dialogs\SignatureOptions.Designer.cs">
+    <Compile Update="Labels\Dialogs\WorkCopyOptions.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>SignatureOptions.resx</DependentUpon>
+      <DependentUpon>WorkCopyOptions.resx</DependentUpon>
     </Compile>
     <Compile Update="Labels\General.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -125,10 +135,35 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Composition.resx</DependentUpon>
     </Compile>
+    <Compile Update="Messages\ContextMenu.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ContextMenu.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Messages\Extraction.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Extraction.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Messages\General.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>General.resx</DependentUpon>
+    </Compile>
     <Compile Update="Messages\MainWindow.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>MainWindow.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Messages\Merging.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Merging.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Messages\Signature.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Signature.resx</DependentUpon>
     </Compile>
     <Compile Update="Messages\StartUp.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -140,10 +175,40 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>PhaseNames.resx</DependentUpon>
     </Compile>
+    <Compile Update="Placeholders\FileNames.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FileNames.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ToolTips\Composition\Buttons.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Buttons.resx</DependentUpon>
+    </Compile>
     <Compile Update="ToolTips\Composition\SegmentList.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>SegmentList.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ToolTips\Composition\Settings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ToolTips\Extraction.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Extraction.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ToolTips\Merge.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Merge.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ToolTips\WorkCopy.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>WorkCopy.resx</DependentUpon>
     </Compile>
     <Compile Update="UserInput\Descriptions.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -154,6 +219,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Composition.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Validation\Extraction.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Extraction.resx</DependentUpon>
     </Compile>
     <Compile Update="Validation\General.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -223,9 +293,17 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Confirmation.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Labels\Dialogs\ExtractionAnnotations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExtractionAnnotations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Labels\Dialogs\ExtractionOptions.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ExtractionOptions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Labels\Dialogs\ExtractionOrder.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExtractionOrder.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Labels\Dialogs\FileTitle.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -235,9 +313,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MergeOptions.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Labels\Dialogs\SignatureOptions.resx">
+    <EmbeddedResource Update="Labels\Dialogs\WorkCopyOptions.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>SignatureOptions.Designer.cs</LastGenOutput>
+      <LastGenOutput>WorkCopyOptions.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Labels\General.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -259,9 +337,29 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Composition.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Messages\ContextMenu.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContextMenu.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Messages\Extraction.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Extraction.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Messages\General.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>General.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Messages\MainWindow.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MainWindow.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Messages\Merging.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Merging.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Messages\Signature.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Signature.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Messages\StartUp.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -271,9 +369,36 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>PhaseNames.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Placeholders\FileNames.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Placeholders\FileNames.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FileNames.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ToolTips\Composition\Buttons.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Buttons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="ToolTips\Composition\SegmentList.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>SegmentList.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ToolTips\Composition\Settings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ToolTips\Extraction.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Extraction.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ToolTips\Merge.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Merge.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ToolTips\WorkCopy.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WorkCopy.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="UserInput\Descriptions.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -282,6 +407,10 @@
     <EmbeddedResource Update="Validation\Composition.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Composition.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Validation\Extraction.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Extraction.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Validation\General.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

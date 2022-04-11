@@ -1,4 +1,5 @@
-﻿using Opus.Services.Implementation.UI;
+﻿using CX.LoggingLib;
+using Opus.Services.Implementation.UI;
 using Opus.Services.UI;
 using Prism.Mvvm;
 using System;

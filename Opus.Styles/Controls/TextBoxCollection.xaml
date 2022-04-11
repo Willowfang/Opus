@@ -8,9 +8,11 @@
         <Setter Property="TextAlignment" Value="Left"/>
         <Setter Property="md:HintAssist.FloatingOffset" Value="0, -22"/>
         <Setter Property="md:HintAssist.FloatingScale" Value="0.9"/>
+        <Setter Property="md:HintAssist.Foreground" Value="{DynamicResource SecondaryHueMidBrush}"/>
         <Setter Property="md:HintAssist.IsFloating" Value="True"/>
         <Setter Property="md:ValidationAssist.Background" Value="Transparent"/>
         <Setter Property="md:TextFieldAssist.HasClearButton" Value="True"/>
+        <Setter Property="md:TextFieldAssist.UnderlineBrush" Value="{DynamicResource SecondaryHueMidBrush}"/>
         <Setter Property="Margin" Value="20, 30, 20, 10"/>
     </Style>
 

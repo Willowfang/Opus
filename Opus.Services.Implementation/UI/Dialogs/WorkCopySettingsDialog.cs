@@ -1,4 +1,5 @@
-﻿using Opus.Services.UI;
+﻿using CX.LoggingLib;
+using Opus.Services.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,16 +9,23 @@ using System.Threading.Tasks;
 
 namespace Opus.Services.Implementation.UI.Dialogs
 {
-    public class SignatureSettingsDialog : DialogBase, IDialog, IDataErrorInfo
+    public class WorkCopySettingsDialog : DialogBase, IDialog, IDataErrorInfo
     {
-        private string? suffix;
-        public string? Suffix
+        private string? titleTemplate;
+        public string? TitleTemplate
         {
-            get => suffix;
+            get => titleTemplate;
             set
             {
-                SetProperty(ref suffix, value);
+                SetProperty(ref titleTemplate, value);
             }
+        }
+
+        private bool flattenRedactions;
+        public bool FlattenRedactions
+        {
+            get => flattenRedactions;
+            set => SetProperty(ref flattenRedactions, value);
         }
 
         public string? Error
@@ -25,16 +33,16 @@ namespace Opus.Services.Implementation.UI.Dialogs
             get => null;
         }
 
-        public SignatureSettingsDialog(string dialogTitle)
+        public WorkCopySettingsDialog(string dialogTitle)
             : base(dialogTitle) { }
 
         public string this[string propertyName]
         {
             get
             {
-                if (propertyName == nameof(Suffix))
+                if (propertyName == nameof(TitleTemplate))
                 {
-                    if (string.IsNullOrEmpty(suffix))
+                    if (string.IsNullOrEmpty(titleTemplate))
                     {
                         return Resources.Validation.General.NameEmpty;
                     }

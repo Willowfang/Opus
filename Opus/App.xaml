@@ -7,9 +7,9 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.BlueGrey.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Cyan.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Amber.xaml" />
-                <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="BlueGrey" SecondaryColor="Amber" />
+                <materialDesign:BundledTheme BaseTheme="Dark" PrimaryColor="Cyan" SecondaryColor="Amber" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
                 <ResourceDictionary Source="/Images/Vectors.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Converters/ConvertersCollection.xaml"/>
@@ -20,6 +20,8 @@
                 <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Controls/StackPanelCollection.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Controls/ContextMenuCollection.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Controls/PackIconCollection.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Controls/CheckBoxCollection.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Controls/ToolTipsCollection.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="{StaticResource Primary500}"/>
             <SolidColorBrush x:Key="SecondaryHueMidBrush" Color="{StaticResource Accent700}"/>

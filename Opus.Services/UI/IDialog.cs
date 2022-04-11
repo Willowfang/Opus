@@ -10,5 +10,7 @@ namespace Opus.Services.UI
         public TaskCompletionSource DialogClosed { get; set; }
         public ICommand Save { get; }
         public ICommand Close { get; }
+
+        public void CloseOnError();
     }
 }

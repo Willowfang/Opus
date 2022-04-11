@@ -1,4 +1,5 @@
-﻿using Opus.Services.Data.Composition;
+﻿using CX.LoggingLib;
+using Opus.Services.Data.Composition;
 using Opus.Services.Extensions;
 using Opus.Services.Implementation.Data.Composition;
 using Opus.Services.Input;
@@ -45,10 +46,12 @@ namespace Opus.Services.Implementation.UI.Dialogs
             RemoveFiles = new DelegateCommand(ExecuteRemoveFiles);
             AddFile = new DelegateCommand(ExecuteAddFile);
             Files = new ObservableCollection<EvaluationWrapper>();
+
             foreach (var file in files)
             {
                 Files.Add(new EvaluationWrapper(file));
             }
+
             Segment = fileSegment;
             this.input = input;
             Files.CollectionChanged += FilePaths_CollectionChanged;

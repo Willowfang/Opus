@@ -1,4 +1,6 @@
-﻿using Opus.Services.UI;
+﻿using CX.LoggingLib;
+using Opus.Services.Implementation.Logging;
+using Opus.Services.UI;
 using Prism.Commands;
 using Prism.Mvvm;
 using System.Threading.Tasks;
@@ -46,6 +48,11 @@ namespace Opus.Services.Implementation.UI
         protected virtual bool CloseCanExecute()
         {
             return true;
+        }
+
+        public virtual void CloseOnError()
+        {
+            ExecuteClose();
         }
     }
 }

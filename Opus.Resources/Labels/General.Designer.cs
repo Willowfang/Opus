@@ -106,6 +106,15 @@ namespace Opus.Resources.Labels {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tiedosto.
+        /// </summary>
+        public static string File {
+            get {
+                return ResourceManager.GetString("File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sivuutettavien lause.
         /// </summary>
         public static string IgnoreExpression {
@@ -138,6 +147,15 @@ namespace Opus.Resources.Labels {
         public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nimen muoto.
+        /// </summary>
+        public static string NameTemplate {
+            get {
+                return ResourceManager.GetString("NameTemplate", resourceCulture);
             }
         }
         
@@ -228,6 +246,15 @@ namespace Opus.Resources.Labels {
         public static string Suffix {
             get {
                 return ResourceManager.GetString("Suffix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Päivitys.
+        /// </summary>
+        public static string Update {
+            get {
+                return ResourceManager.GetString("Update", resourceCulture);
             }
         }
     }

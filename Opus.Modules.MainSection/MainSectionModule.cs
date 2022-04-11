@@ -1,7 +1,7 @@
 ﻿using Opus.Modules.MainSection.Views;
 using Prism.Ioc;
 using Prism.Modularity;
-using Opus.Core.Constants;
+using Opus.Values;
 using Opus.Services.UI;
 
 namespace Opus.Modules.MainSection
@@ -12,7 +12,7 @@ namespace Opus.Modules.MainSection
         {
             var navigator = containerProvider.Resolve<INavigationAssist>();
 
-            navigator.Add<ThreeRegionsView>(RegionNames.SHELL_MAINSECTION, SchemeNames.SPLIT, SchemeNames.SIGNATURE,
+            navigator.Add<ThreeRegionsView>(RegionNames.SHELL_MAINSECTION, SchemeNames.SPLIT, SchemeNames.WORKCOPY,
                 SchemeNames.MERGE);
         }
 

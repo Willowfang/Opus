@@ -32,6 +32,25 @@
                        FontWeight="{Binding Level, Converter={StaticResource LevelToFontWeight}, Mode=OneWay}"/>
         </Grid>
     </DataTemplate>
+    
+    <!--EXTRACTION ORDER LIST TEMPLATE-->
+    <DataTemplate x:Key="ExtractionOrderList">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="{Binding Bookmark.Title}"
+                       TextTrimming="CharacterEllipsis"/>
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
+                       Foreground="LightGray"
+                       Margin="10, 0, 10, 0"
+                       Grid.Column="1"/>
+            <TextBlock Grid.Column="2" Text="{Binding FileName}"
+                       TextTrimming="CharacterEllipsis"/>
+        </Grid>
+    </DataTemplate>
 
     <!--EXTRACTION LIST TEMPLATE-->
     <DataTemplate x:Key="ExtractList">
@@ -46,6 +65,7 @@
                        Margin="{Binding Value.Level, Converter={StaticResource LevelToMargin}}"
                        FontWeight="{Binding Value.Level, Converter={StaticResource LevelToFontWeight}, Mode=OneWay}"/>
             <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
+                       Foreground="LightGray"
                        Margin="10, 0, 10, 0"
                        Grid.Column="1"/>
             <TextBlock Grid.Column="2" Text="{Binding Range}"

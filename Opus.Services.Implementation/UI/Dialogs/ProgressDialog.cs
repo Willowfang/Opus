@@ -1,4 +1,6 @@
-﻿using Opus.Services.Implementation.UI;
+﻿using CX.LoggingLib;
+using CX.PdfLib.Common;
+using Opus.Services.Implementation.UI;
 using Opus.Services.UI;
 using Prism.Mvvm;
 using System;
@@ -59,6 +61,12 @@ namespace Opus.Services.Implementation.UI.Dialogs
             {
                 base.ExecuteSave();
             }
+        }
+
+        public override void CloseOnError()
+        {
+            cancellationSource.Cancel();
+            base.CloseOnError();
         }
     }
 }

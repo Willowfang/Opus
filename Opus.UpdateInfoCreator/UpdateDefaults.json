@@ -1,0 +1,10 @@
+﻿{
+  "Version": "1.0.0.0",
+  "Notes": [
+    "Lisätty mahdollisuus hävittämismerkintöjen kiinnittämiseen",
+    "Tuotettavien työkappaleiden nimi muokattavissa vapaasti",
+    "Lisätty ToolTipit suurimpaan osaan valinnoista",
+    "Lisätty automaattiset päivitykset"
+  ],
+  "SetupFileDirectory": "C:\\Users\\jbjok\\OneDrive - O365 Turun yliopisto\\Koodaus\\PDFExtractor\\Kirjalliset todisteet\\Opus.Install\\bin\\Debug\\fi-FI\\"
+}

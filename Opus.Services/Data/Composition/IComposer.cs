@@ -10,14 +10,9 @@ using System.Threading.Tasks;
 
 namespace Opus.Services.Data
 {
-    public interface IComposerFactory
+    public interface IComposer
     {
-        public IComposer Create();
-    }
-
-    public interface IComposer 
-    {
-        public Task Compose(string directory, ICompositionProfile profile, bool deleteConverted,
-            bool searchSubDirectories);
+        public Task Compose(string directory, ICompositionProfile compositionProfile,
+            bool deleteConverted, bool searchSubDirectories);
     }
 }
