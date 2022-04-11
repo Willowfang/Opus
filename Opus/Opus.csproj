@@ -13,7 +13,7 @@
   </PropertyGroup>
 
 	<PropertyGroup>
-		<SetupFileDir>\\\\ohna01\\data\\OH9010\\1 Yhteinen\\Ohjelmat\\Opus\\</SetupFileDir>
+		<SetupFileDir></SetupFileDir>
 	</PropertyGroup>
 
   <ItemGroup>
