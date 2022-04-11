@@ -1,5 +1,7 @@
-﻿using Opus.Services.Data;
+﻿using CX.LoggingLib;
+using Opus.Services.Data;
 using Opus.Services.Data.Composition;
+using Opus.Services.Implementation.Logging;
 using Opus.Services.UI;
 using System;
 using System.Collections.Generic;
@@ -9,11 +11,11 @@ using System.Text.Json.Serialization;
 
 namespace Opus.Services.Implementation.Data.Composition
 {
-    public class CompositionOptions : ICompositionOptions
+    public class CompositionOptions : LoggingCapable<CompositionOptions>, ICompositionOptions
     {
         private IDataProvider dataProvider;
 
-        public CompositionOptions(IDataProvider dataProvider)
+        public CompositionOptions(IDataProvider dataProvider, ILogbook logbook) : base(logbook)
         {
             this.dataProvider = dataProvider;
         }
@@ -83,7 +85,7 @@ namespace Opus.Services.Implementation.Data.Composition
         public bool ExportProfile(ICompositionProfile profile, string filePath)
         {
             if (Path.GetExtension(filePath) != Resources.Files.FileExtensions.Profile)
-                throw new ArgumentException(nameof(filePath));
+                throw new ArgumentException(filePath);
 
             try
             {
@@ -96,8 +98,34 @@ namespace Opus.Services.Implementation.Data.Composition
                 File.WriteAllText(filePath, json);
                 return true;
             }
-            catch
+            catch (ArgumentException e)
             {
+                logbook.Write($"Saving of {nameof(ICompositionProfile)} '{profile.ProfileName}' to {filePath} failed.",
+                    LogLevel.Error, e);
+                return false;
+            }
+            catch (NotSupportedException e)
+            {
+                logbook.Write($"JSON conversion of {nameof(ICompositionProfile)} '{profile.ProfileName}' failed.",
+                    LogLevel.Error, e);
+                return false;
+            }
+            catch (PathTooLongException e)
+            {
+                logbook.Write($"Saving of {nameof(ICompositionProfile)} '{profile.ProfileName}' to {filePath} failed.",
+                    LogLevel.Error, e);
+                return false;
+            }
+            catch (IOException e)
+            {
+                logbook.Write($"Saving of {nameof(ICompositionProfile)} '{profile.ProfileName}' to {filePath} failed.",
+                    LogLevel.Error, e);
+                return false;
+            }
+            catch (UnauthorizedAccessException e)
+            {
+                logbook.Write($"Saving of {nameof(ICompositionProfile)} '{profile.ProfileName}' to {filePath} failed.",
+                    LogLevel.Error, e);
                 return false;
             }
         }
@@ -105,17 +133,50 @@ namespace Opus.Services.Implementation.Data.Composition
         public ICompositionProfile? ImportProfile(string filePath)
         {
             if (Path.GetExtension(filePath) != Resources.Files.FileExtensions.Profile)
-                throw new ArgumentException(nameof(filePath));
+                throw new ArgumentException(filePath);
 
+            ICompositionProfile? profile = null;
             try
             {
                 string json = File.ReadAllText(filePath);
-                ICompositionProfile? profile = JsonSerializer.Deserialize<ICompositionProfile>(json);
+                profile = JsonSerializer.Deserialize<ICompositionProfile>(json);
                 return profile;
             }
-            catch
+            catch (ArgumentException e)
             {
-                throw new IOException(nameof(ICompositionProfile));
+                logbook.Write($"Importing {nameof(ICompositionProfile)} from {filePath} failed.",
+                    LogLevel.Error, e);
+                throw;
+            }
+            catch (NotSupportedException e)
+            {
+                logbook.Write($"JSON deserialization of {nameof(ICompositionProfile)} {filePath} failed.",
+                    LogLevel.Error, e);
+                throw;
+            }
+            catch (JsonException e)
+            {
+                logbook.Write($"JSON deserialization of {nameof(ICompositionProfile)} {filePath} failed.",
+                    LogLevel.Error, e);
+                throw;
+            }
+            catch (PathTooLongException e)
+            {
+                logbook.Write($"Importing {nameof(ICompositionProfile)} from {filePath} failed.",
+                    LogLevel.Error, e);
+                throw;
+            }
+            catch (IOException e)
+            {
+                logbook.Write($"Importing {nameof(ICompositionProfile)} from {filePath} failed.",
+                    LogLevel.Error, e);
+                throw;
+            }
+            catch (UnauthorizedAccessException e)
+            {
+                logbook.Write($"Importing {nameof(ICompositionProfile)} from {filePath} failed.",
+                    LogLevel.Error, e);
+                throw;
             }
         }
 

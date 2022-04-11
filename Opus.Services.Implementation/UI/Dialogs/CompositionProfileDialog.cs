@@ -1,4 +1,5 @@
-﻿using Opus.Services.Data.Composition;
+﻿using CX.LoggingLib;
+using Opus.Services.Data.Composition;
 using Opus.Services.Implementation.Data;
 using Opus.Services.Implementation.UI;
 using Opus.Services.UI;

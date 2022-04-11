@@ -1,10 +1,13 @@
-﻿using CX.PdfLib.Common;
+﻿using CX.LoggingLib;
+using CX.PdfLib.Common;
 using CX.PdfLib.Services;
 using CX.PdfLib.Services.Data;
 using Opus.Core.Wrappers;
+using Opus.ExtensionMethods;
 using Opus.Services.Configuration;
 using Opus.Services.Extensions;
 using Opus.Services.Implementation.Data.Extraction;
+using Opus.Services.Implementation.Logging;
 using Opus.Services.Implementation.StaticHelpers;
 using Opus.Services.Implementation.UI.Dialogs;
 using Opus.Services.UI;
@@ -12,7 +15,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -22,42 +24,25 @@ namespace Opus.Core.Executors
     {
         public Task Save(FileSystemInfo destination, IList<FileAndBookmarksStorage> files);
     }
-    public class ExtractionExecutor : IExtractionExecutor
+    public class ExtractionExecutor : LoggingCapable<ExtractionExecutor>, IExtractionExecutor
     {
         private IConfiguration configuration;
         private IDialogAssist dialogAssist;
-        private IManipulator manipulator;
+        private IExtractionService extractionService;
+        private IAnnotationService annotationService;
+        private bool canceled;
 
-        public ExtractionExecutor(IConfiguration configuration, IDialogAssist dialogAssist, IManipulator manipulator)
+        public ExtractionExecutor(
+            IConfiguration configuration, 
+            IDialogAssist dialogAssist, 
+            IExtractionService extractionService,
+            IAnnotationService annotationService,
+            ILogbook logbook) : base(logbook)
         {
             this.configuration = configuration;
             this.dialogAssist = dialogAssist;
-            this.manipulator = manipulator;
-        }
-
-        private async Task<IList<FileAndBookmarkWrapper>> GetOrderedBookmarks(IList<FileAndBookmarksStorage> files, 
-            bool showDialog, bool singleFile)
-        {
-            ExtractOrderDialog orderDialog = new ExtractOrderDialog(Resources.Labels.Dialogs.ExtractionOrder.Title,
-                singleFile, configuration.GroupByFiles);
-            foreach (FileAndBookmarksStorage file in files)
-            {
-                IEnumerable<ILeveledBookmark> bookmarks = file.Bookmarks.Where(x => x.IsSelected).Select(y => y.Value);
-                bookmarks = BookmarkMethods.GetParentsOnly(bookmarks);
-                foreach (ILeveledBookmark bookmark in bookmarks)
-                {
-                    orderDialog.Bookmarks.Add(new FileAndBookmarkWrapper(bookmark, file.FilePath));
-                }
-            }
-
-            if (showDialog)
-            {
-                await dialogAssist.Show(orderDialog);
-                if (orderDialog.IsCanceled) return null;
-                configuration.GroupByFiles = orderDialog.GroupByFiles;
-            }
-
-            return orderDialog.Bookmarks.ToList();
+            this.extractionService = extractionService;
+            this.annotationService = annotationService;
         }
 
         public async Task Save(FileSystemInfo destination, IList<FileAndBookmarksStorage> files)
@@ -66,14 +51,13 @@ namespace Opus.Core.Executors
 
             string title = await BookmarkMethods.AskForTitle(dialogAssist, configuration);
 
-            IList<FileAndBookmarkWrapper> orderedBookmarks = await GetOrderedBookmarks(files, destination is FileInfo
-                || title.Contains(Resources.DefaultValues.DefaultValues.Number), destination is FileInfo);
+            bool destinationIsFileOrNumbered = destination is FileInfo ||
+                title.Contains(Resources.Placeholders.FileNames.Number);
+
+            IList<FileAndBookmarkWrapper> orderedBookmarks = await OrderBookmarks(files, destinationIsFileOrNumbered,
+                destination is FileInfo);
 
             if (orderedBookmarks == null) return;
-
-            CancellationTokenSource tokenSource = new CancellationTokenSource();
-            CancellationToken token = tokenSource.Token;
-            var result = ShowProgress(tokenSource);
 
             foreach (FileAndBookmarksStorage storage in files)
             {
@@ -99,10 +83,17 @@ namespace Opus.Core.Executors
 
             ExtractionOptions options = new ExtractionOptions(products, destination);
 
-            options.Progress = result.progress;
+            await SelectAnnotations(options, files);
+
+            if (canceled) return;
+
+            CancellationTokenSource tokenSource = new CancellationTokenSource();
+            CancellationToken token = tokenSource.Token;
+            ProgressContainer container = dialogAssist.ShowProgress(tokenSource);
+
+            options.Progress = container.Reporting;
             options.Cancellation = token;
             options.PdfA = configuration.ExtractionConvertPdfA;
-            options.Annotations = (AnnotationOption)configuration.Annotations;
 
             List<string> failedConversions = new List<string>();
             options.PdfAConversionFinished += async (s, e) =>
@@ -116,28 +107,91 @@ namespace Opus.Core.Executors
                 }
             };
 
-            if (token.IsCancellationRequested) return;
+            if (token.IsCancellationRequested)
+            {
+                logbook.Write($"Extraction was cancelled with token {token.GetHashCode()}.", LogLevel.Debug);
+                return;
+            }
 
-            Task extract = manipulator.ExtractAsync(options);
+            logbook.Write("Extraction options: {@Options}", LogLevel.Debug, customContent: options);
 
-            await result.dialog;
+            Task extract = extractionService.Extract(options);
+
+            await Task.WhenAll(extract, container.Show);
         }
 
-        private (Task dialog, IProgress<ProgressReport> progress) ShowProgress(CancellationTokenSource cancelSource)
+        private async Task<IList<FileAndBookmarkWrapper>> OrderBookmarks(IList<FileAndBookmarksStorage> files,
+            bool showDialog, bool singleFile)
         {
-            ProgressDialog dialog = new ProgressDialog(null, cancelSource)
+            ExtractOrderDialog orderDialog = new ExtractOrderDialog(Resources.Labels.Dialogs.ExtractionOrder.Title,
+                singleFile, configuration.GroupByFiles);
+            foreach (FileAndBookmarksStorage file in files)
             {
-                TotalPercent = 0,
-                Phase = ProgressPhase.Unassigned.GetResourceString()
-            };
-            Progress<ProgressReport> progress = new Progress<ProgressReport>(report =>
-            {
-                dialog.TotalPercent = report.Percentage;
-                dialog.Phase = report.CurrentPhase.GetResourceString();
-                dialog.Part = report.CurrentItem;
-            });
+                IEnumerable<ILeveledBookmark> bookmarks = file.Bookmarks.Where(x => x.IsSelected).Select(y => y.Value);
+                bookmarks = BookmarkMethods.GetParentsOnly(bookmarks);
+                foreach (ILeveledBookmark bookmark in bookmarks)
+                {
+                    orderDialog.Bookmarks.Add(new FileAndBookmarkWrapper(bookmark, file.FilePath));
+                }
+            }
 
-            return (dialogAssist.Show(dialog), progress);
+            if (showDialog)
+            {
+                await dialogAssist.Show(orderDialog);
+                if (orderDialog.IsCanceled)
+                {
+                    logbook.Write($"Cancellation in {nameof(IDialog)} '{orderDialog.DialogTitle}'.", LogLevel.Information);
+                    return null;
+                }
+                configuration.GroupByFiles = orderDialog.GroupByFiles;
+            }
+
+            return orderDialog.Bookmarks.ToList();
+        }
+
+        private async Task SelectAnnotations(ExtractionOptions options, IList<FileAndBookmarksStorage> files)
+        {
+            options.Annotations = (AnnotationOption)configuration.Annotations;
+
+            if (options.Annotations == AnnotationOption.Keep ||
+                options.Annotations == AnnotationOption.RemoveAll)
+                return;
+
+            HashSet<string> allTitlesSet = new HashSet<string>();
+
+            foreach (FileAndBookmarksStorage file in files)
+            {
+                if (string.IsNullOrWhiteSpace(file.FilePath))
+                    continue;
+
+                foreach (string title in await annotationService.GetTitles(file.FilePath))
+                {
+                    allTitlesSet.Add(title);
+                }
+            }
+
+            if (allTitlesSet.Count() == 0)
+                return;
+
+            List<string> allTitlesList = allTitlesSet.ToList();
+            if (allTitlesList.Contains(Environment.UserName))
+            {
+                allTitlesList.Remove(Environment.UserName);
+                allTitlesList.Insert(0, Environment.UserName);
+            }
+
+            ExtractAnnotationsDialog annotDialog = new ExtractAnnotationsDialog(
+                Resources.Labels.Dialogs.ExtractionAnnotations.Title, allTitlesList);
+
+            await dialogAssist.Show(annotDialog);
+
+            if (annotDialog.IsCanceled)
+            {
+                canceled = true;
+                return;
+            }
+
+            options.AnnotationUsersToRemove = annotDialog.GetSelectedCreators();
         }
     }
 }

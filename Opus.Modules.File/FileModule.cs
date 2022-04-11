@@ -1,7 +1,7 @@
 ﻿using Opus.Modules.File.Views;
 using Prism.Ioc;
 using Prism.Modularity;
-using Opus.Core.Constants;
+using Opus.Values;
 using Opus.Services.UI;
 
 namespace Opus.Modules.File
@@ -13,7 +13,7 @@ namespace Opus.Modules.File
             var navigator = containerProvider.Resolve<INavigationAssist>();
 
             navigator.Add<FileMultipleView>(RegionNames.MAINSECTION_THREE_FILE, SchemeNames.SPLIT);
-            navigator.Add<FileMultipleView>(RegionNames.MAINSECTION_THREE_FILE, SchemeNames.SIGNATURE);
+            navigator.Add<FileMultipleView>(RegionNames.MAINSECTION_THREE_FILE, SchemeNames.WORKCOPY);
             navigator.Add<FileMultipleView>(RegionNames.MAINSECTION_THREE_FILE, SchemeNames.MERGE);
             navigator.Add<DirectoryNavigationView>(RegionNames.MAINSECTION_THREE_FILE, SchemeNames.COMPOSE);
         }

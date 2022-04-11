@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:Opus.Modules.MainSection.Views"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:const="clr-namespace:Opus.Core.Constants;assembly=Opus.Core"
+             xmlns:const="clr-namespace:Opus.Values;assembly=Opus.Values"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
              xmlns:prism="http://prismlibrary.com/"

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Win32;
 using Opus.Core.Base;
-using Opus.Core.Constants;
+using Opus.Values;
 using Opus.Events;
 using Opus.Services.Input;
 using Prism.Commands;

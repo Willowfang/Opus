@@ -7,7 +7,9 @@
                     xmlns:resButtons="clr-namespace:Opus.Resources.Buttons;assembly=Opus.Resources"
                     xmlns:resDialog="clr-namespace:Opus.Resources.Labels.Dialogs;assembly=Opus.Resources"
                     xmlns:resLabels="clr-namespace:Opus.Resources.Labels;assembly=Opus.Resources"
-                    xmlns:resValidation="clr-namespace:Opus.Resources.Validation;assembly=Opus.Resources">
+                    xmlns:resValidation="clr-namespace:Opus.Resources.Validation;assembly=Opus.Resources"
+                    xmlns:resToolTips="clr-namespace:Opus.Resources.ToolTips;assembly=Opus.Resources"
+                    xmlns:resCompositionToolTips="clr-namespace:Opus.Resources.ToolTips.Composition;assembly=Opus.Resources">
     
     <!-- Contains datatemplates for various dialogs-->
 
@@ -20,6 +22,36 @@
                        Text="{Binding Content}"/>
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogOkButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+    
+    <!--UPDATE DIALOG-->
+    <DataTemplate DataType="{x:Type dialog:UpdateDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+            <TextBlock Style="{DynamicResource DialogContentTextBlock}"
+                       Text="{Binding UpdateMessage}"
+                       Width="250"/>
+            <ItemsControl ItemsSource="{Binding Notes}"
+                          HorizontalAlignment="Center"
+                          Width="200"
+                          Visibility="{Binding ShowNotes, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Style="{DynamicResource UpdateNotesTextBlock}"
+                                   Margin="0, 0, 0, 0"
+                                   Text="{Binding ., StringFormat=- {0}}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <TextBlock Style="{DynamicResource DialogContentTextBlock}"
+                       Text="{Binding UpdateConfirmation}"/>
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"
+                        Content="{x:Static resButtons:General.Confirm}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
             </StackPanel>
         </StackPanel>
     </DataTemplate>
@@ -126,7 +158,8 @@
                               x:Name="AlwaysAskCB"
                               VerticalAlignment="Center"
                               HorizontalAlignment="Center"
-                              Cursor="Hand"/>
+                              Cursor="Hand"
+                              ToolTip="{x:Static resToolTips:Extraction.SettingsAlwaysAsk}"/>
                 </StackPanel>
                 <StackPanel>
                     <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
@@ -140,7 +173,8 @@
                               x:Name="PdfACB"
                               VerticalAlignment="Center"
                               HorizontalAlignment="Center"
-                              Cursor="Hand"/>
+                              Cursor="Hand"
+                              ToolTip="{x:Static resToolTips:Extraction.SettingsPdfA}"/>
                     <TextBlock Style="{DynamicResource MaterialDesignHelperTextBlock}"
                                HorizontalAlignment="Center" VerticalAlignment="Center"
                                Text="{x:Static resValidation:Extraction.PdfTools}"
@@ -164,17 +198,20 @@
                                  Content="{x:Static resDialog:ExtractionOptions.Keep}"
                                  GroupName="AnnotOption"
                                  IsChecked="{Binding Annotations, Converter={StaticResource BooleanToInt}, 
-                                 ConverterParameter=0}"/>
+                                 ConverterParameter=0}"
+                                 ToolTip="{x:Static resToolTips:Extraction.SettingsAnnotationsKeep}"/>
                     <RadioButton Style="{DynamicResource TabRadioButton}"
                                  Content="{x:Static resDialog:ExtractionOptions.RemoveUser}"
                                  GroupName="AnnotOption"
                                  IsChecked="{Binding Annotations, Converter={StaticResource BooleanToInt}, 
-                                 ConverterParameter=1}"/>
+                                 ConverterParameter=1}"
+                                 ToolTip="{x:Static resToolTips:Extraction.SettingsAnnotationsUser}"/>
                     <RadioButton Style="{DynamicResource TabRadioButton}"
                                  Content="{x:Static resDialog:ExtractionOptions.RemoveAll}"
                                  GroupName="AnnotOption"
                                  IsChecked="{Binding Annotations, Converter={StaticResource BooleanToInt}, 
-                                 ConverterParameter=2}"/>
+                                 ConverterParameter=2}"
+                                 ToolTip="{x:Static resToolTips:Extraction.SettingsAnnotationsAll}"/>
                 </StackPanel>
             </StackPanel>
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
@@ -185,20 +222,133 @@
         </StackPanel>
     </DataTemplate>
 
-    <!--SIGNATURE SETTINGS DIALOG-->
-    <DataTemplate DataType="{x:Type dialog:SignatureSettingsDialog}">
+    <!--EXTRACTION BOOKMARK ORDER DIALOG-->
+    <DataTemplate DataType="{x:Type dialog:ExtractOrderDialog}">
+        <StackPanel Margin="10">
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       Width="370"
+                       Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       FontStyle="Italic"
+                       Text="{x:Static resDialog:ExtractionOrder.Instructions}"
+                       Margin="10, 10, 10, 20"/>
+            <ListView ItemsSource="{Binding Bookmarks}"
+                      Width="370"
+                      Height="350"
+                      Style="{StaticResource SelectionList}"
+                      SelectedItem="{Binding Bookmarks.SelectedItem}"
+                      Grid.Row="0"
+                      SelectionMode="Single"
+                      x:Name="FilesList"
+                      ItemTemplate="{StaticResource ExtractionOrderList}">
+                <ListView.InputBindings>
+                    <KeyBinding Key="Up" Modifiers="Ctrl" Command="{Binding Bookmarks.MoveUp}"/>
+                    <KeyBinding Key="Down" Modifiers="Ctrl" Command="{Binding Bookmarks.MoveDown}"/>
+                </ListView.InputBindings>
+            </ListView>
+            <StackPanel Margin="0, 0, 10, 0"
+                        Visibility="{Binding SingleFile, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                           VerticalAlignment="Center"
+                           Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                           Text="{x:Static resDialog:ExtractionOrder.GroupByFiles}"
+                           Margin="0, 0, 0, 10"/>
+                <CheckBox Style="{DynamicResource OptionSwitch}"
+                          IsChecked="{Binding GroupByFiles}"
+                          x:Name="GroupByFilesCB"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Center"
+                          Cursor="Hand"
+                          ToolTip="{x:Static resToolTips:Extraction.BookmarkOrderDialogGroupByFiles}"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"
+                        Content="{x:Static resButtons:General.Confirm}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+    <!--EXTRACTION ANNOTATIONS DIALOG-->
+    <DataTemplate DataType="{x:Type dialog:ExtractAnnotationsDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       Width="370"
+                       Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       FontStyle="Italic"
+                       Text="{x:Static resDialog:ExtractionAnnotations.Instructions}"
+                       Margin="10, 10, 10, 20"/>
+            <ItemsControl ItemsSource="{Binding Creators}"
+                          Width="200">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox Style="{DynamicResource MaterialDesignAccentCheckBox}"
+                                      Grid.Column="0"
+                                      IsChecked="{Binding IsChecked, Mode=TwoWay}"/>
+                            <TextBlock Grid.Column="1"
+                                       Margin="5, 0, 0, 0"
+                                       VerticalAlignment="Center"
+                                       Text="{Binding Name, 
+                                       Converter={StaticResource UserNameReplacement}, ConverterParameter=Omat}"
+                                       FontWeight="{Binding Name, 
+                                       Converter={StaticResource UserNameToFontWeight}}"
+                                       TextTrimming="CharacterEllipsis"/>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+    <!--WORKCOPY SETTINGS DIALOG-->
+    <DataTemplate DataType="{x:Type dialog:WorkCopySettingsDialog}">
         <StackPanel>
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
                        Text="{Binding DialogTitle}"/>
             <TextBox Style="{DynamicResource HintedValidationTextBox}"
-                     Text="{Binding Suffix, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
-                     Width="180"
-                     Name="SuffixText"
-                     md:HintAssist.Hint="{x:Static resLabels:General.Suffix}"
-                     md:HintAssist.HelperText="{x:Static resDialog:SignatureOptions.SuffixHelper}"/>
+                     Text="{Binding TitleTemplate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
+                     ValidatesOnDataErrors=True}"
+                     Width="250"
+                     Name="TemplateText"
+                     md:HintAssist.Hint="{x:Static resLabels:General.NameTemplate}"
+                     md:HintAssist.HelperText="{x:Static resDialog:WorkCopyOptions.NameHelper}"/>
+            <Separator Style="{DynamicResource MaterialDesignSeparator}"
+                       Margin="10, 20, 10, 20"/>
+            <StackPanel Margin="0, 0, 0, 0">
+                <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                           VerticalAlignment="Center"
+                           Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                           Text="{x:Static resDialog:WorkCopyOptions.FlattenRedactions}"
+                           Margin="0, 0, 0, 10"/>
+                <CheckBox Style="{DynamicResource OptionSwitch}"
+                          IsChecked="{Binding FlattenRedactions, Mode=TwoWay}"
+                          x:Name="FlattenRedactionsCB"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Center"
+                          Cursor="Hand"
+                          ToolTip="{x:Static resToolTips:WorkCopy.SettingsRedaction}"/>
+            </StackPanel>
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}"
-                        IsEnabled="{Binding ElementName=SuffixText, Path=(Validation.HasError), 
+                        IsEnabled="{Binding ElementName=TemplateText, Path=(Validation.HasError), 
                         Converter={StaticResource InvertBooleanConverter}}"/>
                 <Button Style="{StaticResource DialogCancelButton}"/>
             </StackPanel>
@@ -241,7 +391,8 @@
                       IsChecked="{Binding SearchSubDirectories, Mode=TwoWay}"
                       VerticalAlignment="Center"
                       HorizontalAlignment="Center"
-                      Cursor="Hand"/>
+                      Cursor="Hand"
+                      ToolTip="{x:Static resCompositionToolTips:Settings.Subdirectories}"/>
             <Separator Style="{DynamicResource MaterialDesignSeparator}"
                        Margin="15"/>
             <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
@@ -253,7 +404,8 @@
                       IsChecked="{Binding DeleteConverted, Mode=TwoWay}"
                       VerticalAlignment="Center"
                       HorizontalAlignment="Center"
-                      Cursor="Hand"/>
+                      Cursor="Hand"
+                      ToolTip="{x:Static resCompositionToolTips:Settings.DeleteConverted}"/>
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}"/>
                 <Button Style="{StaticResource DialogCancelButton}"/>
@@ -434,56 +586,6 @@
             </StackPanel>
         </StackPanel>
     </DataTemplate>
-    
-    <!--EXTRACTION BOOKMARK ORDER DIALOG-->
-    <DataTemplate DataType="{x:Type dialog:ExtractOrderDialog}">
-        <StackPanel Margin="10">
-            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
-                       Text="{Binding DialogTitle}"/>
-            <TextBlock HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       TextWrapping="Wrap"
-                       TextAlignment="Center"
-                       Width="370"
-                       Style="{DynamicResource MaterialDesignCaptionTextBlock}"
-                       FontStyle="Italic"
-                       Text="{x:Static resDialog:ExtractionOrder.Instructions}"
-                       Margin="10, 10, 10, 20"/>
-            <ListView ItemsSource="{Binding Bookmarks}"
-                      Width="370"
-                      Height="350"
-                      Style="{StaticResource SelectionList}"
-                      SelectedItem="{Binding Bookmarks.SelectedItem}"
-                      Grid.Row="0"
-                      SelectionMode="Single"
-                      x:Name="FilesList"
-                      ItemTemplate="{StaticResource ExtractionOrderList}">
-                <ListView.InputBindings>
-                    <KeyBinding Key="Up" Modifiers="Ctrl" Command="{Binding Bookmarks.MoveUp}"/>
-                    <KeyBinding Key="Down" Modifiers="Ctrl" Command="{Binding Bookmarks.MoveDown}"/>
-                </ListView.InputBindings>
-            </ListView>
-            <StackPanel Margin="0, 0, 10, 0"
-                        Visibility="{Binding SingleFile, Converter={StaticResource BooleanToVisibilityConverter}}">
-                <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
-                           VerticalAlignment="Center"
-                               Style="{DynamicResource MaterialDesignCaptionTextBlock}"
-                               Text="{x:Static resDialog:ExtractionOrder.GroupByFiles}"
-                               Margin="0, 0, 0, 10"/>
-                <CheckBox Style="{DynamicResource OptionSwitch}"
-                              IsChecked="{Binding GroupByFiles}"
-                              x:Name="GroupByFilesCB"
-                              VerticalAlignment="Center"
-                              HorizontalAlignment="Center"
-                              Cursor="Hand"/>
-            </StackPanel>
-            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
-                <Button Style="{StaticResource DialogSaveButton}"
-                        Content="{x:Static resButtons:General.Confirm}"/>
-                <Button Style="{StaticResource DialogCancelButton}"/>
-            </StackPanel>
-        </StackPanel>
-    </DataTemplate>
 
     <!--COMPOSITION FILE COUNT DIALOG-->
     <DataTemplate DataType="{x:Type dialog:CompositionFileCountDialog}">
@@ -625,15 +727,15 @@
                              Foreground="{DynamicResource SecondaryHueMidBrush}"
                              Width="60" Height="60"
                              Value="{Binding TotalPercent}"
-                             IsIndeterminate="{Binding TotalPercent, Converter={StaticResource ZeroToTrue}}"
+                             IsIndeterminate="True"
                              VerticalAlignment="Center" HorizontalAlignment="Center"
                              x:Name="MainProgress">
                 </ProgressBar>
                 <TextBlock HorizontalAlignment="Center"
                            VerticalAlignment="Center"
                            Text="{Binding TotalPercent, StringFormat={}{0}%}"
-                           Visibility="{Binding ElementName=MainProgress, Path=IsIndeterminate, 
-                           Converter={StaticResource BooleanToOppositeVisibility}}">
+                           Visibility="{Binding TotalPercent, 
+                           Converter={StaticResource NotZeroToVisibilityConverter}}">
                     <TextBlock.Style>
                         <Style TargetType="TextBlock"
                                BasedOn="{StaticResource MaterialDesignSubtitle2TextBlock}">

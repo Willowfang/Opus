@@ -9,13 +9,14 @@ using Opus.Services.Implementation.UI.Dialogs;
 using AsyncAwaitBestPractices.MVVM;
 using System.Threading.Tasks;
 using Opus.Services.Configuration;
+using CX.LoggingLib;
 
 namespace Opus.Modules.Options.ViewModels
 {
     public class ExtractOptionsViewModel : OptionsViewModelBase<ExtractSettingsDialog>
     {
-        public ExtractOptionsViewModel(IDialogAssist dialogAssist, IConfiguration configuration)
-            : base(dialogAssist, configuration) { }
+        public ExtractOptionsViewModel(IDialogAssist dialogAssist, IConfiguration configuration, ILogbook logbook)
+            : base(dialogAssist, configuration, logbook) { }
 
         protected override ExtractSettingsDialog CreateDialog()
         {

@@ -42,6 +42,14 @@ namespace Opus.Services.Configuration
         /// </summary>
         public bool GroupByFiles { get; set; }
         /// <summary>
+        /// Title for files that have had their signatures removed
+        /// </summary>
+        public string UnsignedTitleTemplate { get; set; }
+        /// <summary>
+        /// Flatten redactions when creating work copies
+        /// </summary>
+        public bool WorkCopyFlattenRedactions { get; set; }
+        /// <summary>
         /// If true, page numbers will be added to a merged document
         /// </summary>
         public bool MergeAddPageNumbers { get; set; }

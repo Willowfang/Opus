@@ -151,6 +151,15 @@ namespace Opus.Resources.Labels {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nimen muoto.
+        /// </summary>
+        public static string NameTemplate {
+            get {
+                return ResourceManager.GetString("NameTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ei kirjanmerkkejä.
         /// </summary>
         public static string NoBookmarks {
@@ -237,6 +246,15 @@ namespace Opus.Resources.Labels {
         public static string Suffix {
             get {
                 return ResourceManager.GetString("Suffix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Päivitys.
+        /// </summary>
+        public static string Update {
+            get {
+                return ResourceManager.GetString("Update", resourceCulture);
             }
         }
     }

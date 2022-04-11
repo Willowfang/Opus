@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using CX.PdfLib.Extensions;
 using Opus.Services.Implementation.Data.Extraction;
 using System.IO;
+using CX.LoggingLib;
+using Opus.ExtensionMethods;
 
 namespace Opus.Services.Implementation.StaticHelpers
 {
@@ -34,7 +36,7 @@ namespace Opus.Services.Implementation.StaticHelpers
             }
 
             if (string.IsNullOrEmpty(title))
-                title = Resources.DefaultValues.DefaultValues.Bookmark;
+                title = Resources.Placeholders.FileNames.Bookmark;
 
             return title;
         }
@@ -51,7 +53,7 @@ namespace Opus.Services.Implementation.StaticHelpers
             return parents;
         }
 
-        public static IEnumerable<FileAndBookmarkWrapper> GetRenamedAndIndexed(IEnumerable<ILeveledBookmark> bookmarks, IList<FileAndBookmarkWrapper> order, string titleTemplate, string filePath)
+        public static IEnumerable<FileAndBookmarkWrapper> GetRenamedAndIndexed(IEnumerable<ILeveledBookmark> bookmarks, IList<FileAndBookmarkWrapper> order, string titleTemplate, string filePath, ILogbook? logbook = null)
         {
             IList<FileAndBookmarkWrapper> added = new List<FileAndBookmarkWrapper>();
             foreach (ILeveledBookmark bookmark in bookmarks)
@@ -60,11 +62,13 @@ namespace Opus.Services.Implementation.StaticHelpers
                 && w.Bookmark == bookmark);
                 int index = compare != null ? order.IndexOf(compare) : 0;
 
-                string bmReplace = Resources.DefaultValues.DefaultValues.Bookmark;
-                string fileReplace = Resources.DefaultValues.DefaultValues.File;
-                string numberReplace = Resources.DefaultValues.DefaultValues.Number;
+                string bmReplace = Resources.Placeholders.FileNames.Bookmark;
+                string fileReplace = Resources.Placeholders.FileNames.File;
+                string numberReplace = Resources.Placeholders.FileNames.Number;
 
                 string title = titleTemplate;
+                title = title.ReplacePlaceholder(Placeholders.Bookmark, bookmark.Title);
+
                 if (title.Contains(bmReplace))
                 {
                     title = title.Replace(bmReplace, bookmark.Title);
@@ -88,6 +92,9 @@ namespace Opus.Services.Implementation.StaticHelpers
                 ILeveledBookmark renamed = new LeveledBookmark(bookmark.Level, title, bookmark.Pages);
                 added.Add(new FileAndBookmarkWrapper(renamed, filePath, index));
             }
+
+            if (logbook != null)
+                logbook.Write($"{nameof(FileAndBookmarkWrapper)}s renamed according to {nameof(titleTemplate)} '{titleTemplate}' and indexed by {nameof(IEnumerable<ILeveledBookmark>)} {bookmarks}.", LogLevel.Debug);
 
             return added;
         }

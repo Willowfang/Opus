@@ -4,6 +4,9 @@ using System.IO;
 using Prism.Mvvm;
 using System.Threading;
 using System;
+using Opus.Services.Implementation.Logging;
+using CX.LoggingLib;
+using LoggingLib.Defaults;
 
 namespace Opus.Services.Implementation.Configuration
 {
@@ -27,18 +30,11 @@ namespace Opus.Services.Implementation.Configuration
             set => SetProperty(ref extractionTitle, value, SaveConfiguration);
         }
 
-        private string? extractionSuffix;
-        public string? ExtractionSuffix
-        {
-            get => extractionSuffix;
-            set => SetProperty(ref extractionSuffix, value, SaveConfiguration);
-        }
-
-        private bool extractionPrefixSuffixAsk;
+        private bool extractionTitleAsk;
         public bool ExtractionTitleAsk
         {
-            get => extractionPrefixSuffixAsk;
-            set => SetProperty(ref extractionPrefixSuffixAsk, value, SaveConfiguration);
+            get => extractionTitleAsk;
+            set => SetProperty(ref extractionTitleAsk, value, SaveConfiguration);
         }
 
         private bool extractionConvertPdfA;
@@ -67,6 +63,20 @@ namespace Opus.Services.Implementation.Configuration
         {
             get => groupByFiles;
             set => SetProperty(ref groupByFiles, value, SaveConfiguration);
+        }
+
+        private string? unsignedTitleTemplate;
+        public string? UnsignedTitleTemplate
+        {
+            get => unsignedTitleTemplate;
+            set => SetProperty(ref unsignedTitleTemplate, value, SaveConfiguration);
+        }
+
+        private bool workCopyFlattenRedactions;
+        public bool WorkCopyFlattenRedactions
+        {
+            get => workCopyFlattenRedactions;
+            set => SetProperty(ref workCopyFlattenRedactions, value, SaveConfiguration);
         }
 
         private bool mergeAddPageNumbers;
@@ -99,13 +109,49 @@ namespace Opus.Services.Implementation.Configuration
 
         public Configuration() { }
 
-        public static IConfiguration Load(string configFile)
+        public static IConfiguration Load(string configFile, ILogbook? logbook = null)
         {
+            if (logbook == null)
+                logbook = EmptyLogbook.Create();
+
             Configuration configuration;
             if (File.Exists(configFile))
             {
-                string json = File.ReadAllText(configFile);
-                Configuration? config = JsonSerializer.Deserialize<Configuration>(json);
+                string json;
+
+                try
+                {
+                    json = File.ReadAllText(configFile);
+                }
+                catch (Exception e) 
+                    when (e is ArgumentException || 
+                          e is PathTooLongException ||
+                          e is IOException ||
+                          e is UnauthorizedAccessException ||
+                          e is System.Security.SecurityException)
+                {
+                    logbook.Write($"Configuration file load failed.", LogLevel.Error, e, nameof(Configuration));
+                    throw;
+                }
+
+                Configuration? config;
+
+                try
+                {
+                    config = JsonSerializer.Deserialize<Configuration>(json);
+                }
+                catch (ArgumentNullException e)
+                {
+                    logbook.Write($"Configuration file deserialization failed.", LogLevel.Error, e, nameof(Configuration));
+                    throw;
+                }
+                catch (JsonException e)
+                {
+                    logbook.Write($"Configuration file deserialization failed. Corrupted or incompatible JSON-file. Creating new configuration.", LogLevel.Error, e, nameof(Configuration));
+
+                    config = CreateNew(configFile);
+                }
+                
                 configuration = config ?? CreateNew(configFile);
             }
             else
@@ -128,11 +174,12 @@ namespace Opus.Services.Implementation.Configuration
             {
                 ConfigurationFile = configFile,
                 LanguageCode = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName,
-                ExtractionTitle = Resources.DefaultValues.DefaultValues.Bookmark,
+                ExtractionTitle = Resources.Placeholders.FileNames.Bookmark,
                 MergeAddPageNumbers = true,
                 CompositionSearchSubDirectories = true,
                 ExtractionTitleAsk = true,
-                GroupByFiles = true
+                GroupByFiles = true,
+                WorkCopyFlattenRedactions = true
             };
         }
 

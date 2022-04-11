@@ -1,7 +1,9 @@
-﻿using System;
+﻿using CX.PdfLib.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Opus.Services.UI
@@ -21,5 +23,12 @@ namespace Opus.Services.UI
         /// </summary>
         /// <param name="dialog">Dialog to show</param>
         public Task<IDialog> Show(IDialog dialog);
+        /// <summary>
+        /// Show a progress dialog and return the associated task and dialog as wella as the associated IProgress
+        /// for reporting progress to the dialog.
+        /// </summary>
+        /// <param name="cancelSource">Cancellation source mainly for user cancellation interaction</param>
+        /// <returns></returns>
+        public ProgressContainer ShowProgress(CancellationTokenSource cancelSource);
     }
 }

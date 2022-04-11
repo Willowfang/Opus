@@ -9,7 +9,6 @@ using Opus.Services.UI;
 using Opus.Services.Implementation.UI;
 using Opus.Services.Data;
 using Opus.Services.Implementation.Data;
-using Opus.Core.Constants;
 using Opus.Services.Configuration;
 using Opus.Services.Implementation.Configuration;
 using CX.PdfLib.Services;
@@ -22,6 +21,13 @@ using Opus.Services.Implementation.Data.Composition;
 using Opus.ViewModels;
 using PdfLib.PDFTools;
 using Opus.Core.Executors;
+using CX.LoggingLib;
+using LoggingLib.Defaults;
+using Opus.Services.Implementation.Logging;
+using Opus.Values;
+using System.Reflection;
+using System;
+using System.Diagnostics;
 
 namespace Opus
 {
@@ -31,6 +37,7 @@ namespace Opus
     public partial class App : PrismApplication
     {
         private string[] arguments;
+        private bool updating;
 
         protected override void OnStartup(StartupEventArgs e)
         {
@@ -40,6 +47,12 @@ namespace Opus
                 arguments = null;
 
             base.OnStartup(e);
+        }
+
+        protected override void OnExit(ExitEventArgs e)
+        {
+            (Container.Resolve<ILogbook>() as SeriLogbook).CloseAndFlush();
+            base.OnExit(e);
         }
 
         /// <summary>
@@ -84,19 +97,25 @@ namespace Opus
         // Overrides for Prism application methods
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            // Logging services
+            if (arguments == null)
+                containerRegistry.RegisterSingleton<ILogbook, SeriLogbook>();
+            else
+                containerRegistry.RegisterSingleton<ILogbook>(x => EmptyLogbook.Create());
+
             // Configuration services
             string configPath = Path.Combine(FilePaths.CONFIG_DIRECTORY, "Config" + FilePaths.CONFIG_EXTENSION);
-            containerRegistry.RegisterSingleton<IConfiguration>(x => Configuration.Load(configPath));
+            containerRegistry.RegisterSingleton<IConfiguration>(x => Configuration.Load(configPath, Container.Resolve<ILogbook>()));
             SetLanguage();
 
             // Services for manipulating data
-            containerRegistry.Register<IPdfAConverter, PdfAConverter>();
-            containerRegistry.Register<IBookmarker, Bookmarker>();
-            containerRegistry.Register<IExtractor, Extractor>();
-            containerRegistry.Register<ISigner, Signer>();
-            containerRegistry.Register<IMerger, Merger>();
-            containerRegistry.Register<IConverter, ConverterWord>();
-            containerRegistry.Register<IManipulator, Manipulator>();
+            containerRegistry.Register<IAnnotationService, AnnotationService>();
+            containerRegistry.Register<IPdfAConvertService, PdfAConverter>();
+            containerRegistry.Register<IBookmarkService, BookmarkService>();
+            containerRegistry.Register<IExtractionService, ExtractionService>();
+            containerRegistry.Register<ISigningService, SigningService>();
+            containerRegistry.Register<IMergingService, MergingService>();
+            containerRegistry.Register<IWordConvertService, WordConvertService>();
 
             // UI-related services
             containerRegistry.RegisterManySingleton<NavigationAssist>(
@@ -109,17 +128,22 @@ namespace Opus
             var provider = new DataProviderLiteDB(Path.Combine(FilePaths.CONFIG_DIRECTORY,
                 "App" + FilePaths.CONFIG_EXTENSION));
             containerRegistry.RegisterInstance<IDataProvider>(provider);
-            containerRegistry.RegisterSingleton<ISignatureOptions, SignatureOptions>();
             containerRegistry.RegisterSingleton<ICompositionOptions, CompositionOptions>();
 
             containerRegistry.Register<IExtractionExecutor, ExtractionExecutor>();
+            containerRegistry.Register<ISignatureExecutor, SignatureExecutor>();
 
             UpdateProfiles();
 
-            containerRegistry.Register<IComposerFactory, ComposerFactory>();
+            containerRegistry.Register<IComposer, Composer>();
 
             // Context Menu
             containerRegistry.Register<IContextMenu, ContextMenuExecutor>();
+            
+            containerRegistry.RegisterSingleton<IUpdateExecutor, UpdateExecutor>();
+
+            ILogbook logbook = Container.Resolve<ILogbook>();
+            logbook.Write("Types registered.", LogLevel.Debug, callerName: "Application");
         }
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
@@ -127,16 +151,26 @@ namespace Opus
             moduleCatalog.AddModule<Modules.File.FileModule>();
             moduleCatalog.AddModule<Modules.Action.ActionModule>();
             moduleCatalog.AddModule<Modules.Options.OptionsModule>();
+
+            ILogbook logbook = Container.Resolve<ILogbook>();
+            logbook.Write("Modules configured.", LogLevel.Debug, callerName: "Application");
         }
         protected override Window CreateShell()
         {
+            updating = Container.Resolve<IUpdateExecutor>().CheckForUpdates();
+
             return arguments == null ? Container.Resolve<MainWindowView>() : Container.Resolve<ContextMenuView>();
         }
 
         protected override void OnInitialized()
         {
             base.OnInitialized();
-            if (MainWindow.DataContext is ContextMenuViewModel viewModel)
+
+            if (updating)
+            {
+                Update();
+            }
+            else if (MainWindow.DataContext is ContextMenuViewModel viewModel)
             {
                 RunContext(viewModel);
             }
@@ -146,6 +180,23 @@ namespace Opus
         {
             await viewModel.ContextMenu.Run(arguments);
             Current.Shutdown();
+        }
+
+        private async void Update()
+        {
+            bool initilized = await Container.Resolve<IUpdateExecutor>().InitializeUpdate();
+
+            if (initilized)
+            {
+                Current.Shutdown();
+            }
+            else
+            {
+                if (MainWindow.DataContext is ContextMenuViewModel viewModel)
+                {
+                    RunContext(viewModel);
+                }
+            }
         }
     }
 }

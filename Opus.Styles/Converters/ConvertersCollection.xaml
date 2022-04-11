@@ -16,5 +16,7 @@
     <c:NullToString x:Key="NullToString"/>
     <c:ZeroAndTrue x:Key="ZeroAndTrue"/>
     <c:BooleanToInt x:Key="BooleanToInt"/>
+    <c:UserNameReplace x:Key="UserNameReplacement"/>
+    <c:UserNameToFontWeight x:Key="UserNameToFontWeight"/>
 
 </ResourceDictionary>

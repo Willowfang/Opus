@@ -61,38 +61,11 @@ namespace Opus.Resources.DefaultValues {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [kirjanmerkki].
+        ///   Looks up a localized string similar to [tiedosto]_työkappale.
         /// </summary>
-        public static string Bookmark {
+        public static string UnsignedTemplate {
             get {
-                return ResourceManager.GetString("Bookmark", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to [tiedosto].
-        /// </summary>
-        public static string File {
-            get {
-                return ResourceManager.GetString("File", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to [numero].
-        /// </summary>
-        public static string Number {
-            get {
-                return ResourceManager.GetString("Number", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to työkappale.
-        /// </summary>
-        public static string UnsignedSuffix {
-            get {
-                return ResourceManager.GetString("UnsignedSuffix", resourceCulture);
+                return ResourceManager.GetString("UnsignedTemplate", resourceCulture);
             }
         }
     }

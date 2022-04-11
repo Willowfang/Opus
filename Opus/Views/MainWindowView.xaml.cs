@@ -1,4 +1,4 @@
-﻿using Opus.Core.Constants;
+﻿using Opus.Values;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +29,7 @@ namespace Opus.Views
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             SplitButton.IsChecked = true;
-            SplitButton.Command.Execute(Opus.Core.Constants.SchemeNames.SPLIT);
+            SplitButton.Command.Execute(SchemeNames.SPLIT);
         }
 
         private void TopBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

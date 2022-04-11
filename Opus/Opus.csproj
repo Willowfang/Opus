@@ -2,15 +2,19 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
-    <AssemblyVersion>0.0.4.0</AssemblyVersion>
+    <AssemblyVersion>1.0.7.0</AssemblyVersion>
     <ApplicationIcon>logocx.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
+
+	<PropertyGroup>
+		<SetupFileDir>\\\\ohna01\\data\\OH9010\\1 Yhteinen\\Ohjelmat\\Opus\\</SetupFileDir>
+	</PropertyGroup>
 
   <ItemGroup>
     <None Remove="appIcon.ico" />
@@ -81,14 +85,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="CodeX-LoggingLib">
+      <HintPath>..\..\..\CodeX\Libraries\LoggingLib\bin\Debug\net6.0\CodeX-LoggingLib.dll</HintPath>
+    </Reference>
     <Reference Include="CodeX-PdfLib">
-      <HintPath>..\..\..\CodeX\Libraries\PdfLib\bin\Debug\net5.0\CodeX-PdfLib.dll</HintPath>
+      <HintPath>..\..\..\CodeX\Libraries\PdfLib\bin\Debug\net6.0\CodeX-PdfLib.dll</HintPath>
     </Reference>
     <Reference Include="CodeX-PdfLib-iText7">
-      <HintPath>..\..\..\CodeX\Libraries\PdfLib.iText7\bin\Debug\net5.0\CodeX-PdfLib-iText7.dll</HintPath>
+      <HintPath>..\..\..\CodeX\Libraries\PdfLib.iText7\bin\Debug\net6.0\CodeX-PdfLib-iText7.dll</HintPath>
     </Reference>
     <Reference Include="PdfLib.PDFTools">
-      <HintPath>..\..\..\CodeX\Libraries\PdfLib.PDFTools\bin\Debug\net5.0\PdfLib.PDFTools.dll</HintPath>
+      <HintPath>..\..\..\CodeX\Libraries\PdfLib.PDFTools\bin\Debug\net6.0\PdfLib.PDFTools.dll</HintPath>
     </Reference>
   </ItemGroup>
 
@@ -107,4 +114,22 @@
     </Page>
   </ItemGroup>
 
+	<Target Name="PostBuildMacros">
+		<GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
+			<Output TaskParameter="Assemblies" ItemName="Targets" />
+		</GetAssemblyIdentity>
+		<ItemGroup>
+			<VersionNumber Include="$([System.Text.RegularExpressions.Regex]::Replace(&quot;%(Targets.Version)&quot;, &quot;^(.+?)(\.0+)$&quot;, &quot;$1&quot;))" />
+		</ItemGroup>
+	</Target>
+	<PropertyGroup>
+		<PostBuildEventDependsOn>
+			$(PostBuildEventDependsOn);
+			PostBuildMacros;
+		</PostBuildEventDependsOn>
+		<PostBuildEvent>cd "$(MSBuildProjectDirectory)"
+cd ..
+echo { "Version": "$(AssemblyVersion)", "Notes": [], "SetupFileDirectory": "$(SetupFileDir)" } | jq.exe . &gt; "UpdateInfo.json"</PostBuildEvent>
+	</PropertyGroup>	
+	
 </Project>

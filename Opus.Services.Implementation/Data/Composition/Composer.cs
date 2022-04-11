@@ -13,29 +13,38 @@ using Opus.Services.Implementation.UI.Dialogs;
 using Opus.Services.Input;
 using Opus.Services.UI;
 using Opus.Services.Extensions;
+using CX.LoggingLib;
 
 namespace Opus.Services.Implementation.Data.Composition
 {
-    public class ComposerFactory : IComposerFactory
+    public class Composer : IComposer
     {
         private IDialogAssist dialogAssist;
         private IPathSelection input;
-        private IManipulator manipulator;
+        private ILogbook logbook;
+        private IMergingService mergingService;
 
-        public ComposerFactory(IDialogAssist dialogAssist, IPathSelection input, IManipulator manipulator)
+        public Composer(
+            IDialogAssist dialogAssist, 
+            IPathSelection input,
+            IMergingService mergingService,
+            ILogbook logbook)
         {
             this.dialogAssist = dialogAssist;
             this.input = input;
-            this.manipulator = manipulator;
+            this.logbook = logbook;
+            this.mergingService = mergingService;
         }
 
-        public IComposer Create()
+        public async Task Compose(string directory, ICompositionProfile compositionProfile,
+            bool deleteConverted, bool searchSubDirectories)
         {
-            return new Composer(dialogAssist, input, manipulator);
+            await new ComposerWorker(dialogAssist, input, mergingService, logbook)
+                .Compose(directory, compositionProfile, deleteConverted, searchSubDirectories);
         }
     }
 
-    public class Composer : IComposer
+    internal class ComposerWorker : LoggingEnabled<ComposerWorker>
     {
         /// <summary>
         /// Service for showing dialogs
@@ -45,11 +54,7 @@ namespace Opus.Services.Implementation.Data.Composition
         /// Service for getting user input
         /// </summary>
         private IPathSelection input;
-        /// <summary>
-        /// Service for manipulating pdf files
-        /// </summary>
-        private IManipulator manipulator;
-
+        private IMergingService mergingService;
         /// <summary>
         /// Dialog model for showing progress
         /// </summary>
@@ -67,16 +72,20 @@ namespace Opus.Services.Implementation.Data.Composition
         private CancellationToken cancelToken;
 
         /// <summary>
-        /// Create an implementation instance for <see cref="IComposer"/>
+        /// Create an implementation instance for <see cref="IComposerDefunct"/>
         /// </summary>
         /// <param name="dialogAssist">Service for showing <see cref="IDialog"/> instances</param>
         /// <param name="input">Service for retrieving user input</param>
         /// <param name="manipulator">Service for manipulating pdf files</param>
-        public Composer(IDialogAssist dialogAssist, IPathSelection input, IManipulator manipulator)
+        public ComposerWorker(
+            IDialogAssist dialogAssist, 
+            IPathSelection input,
+            IMergingService mergingService,
+            ILogbook logbook) : base(logbook)
         {
             this.dialogAssist = dialogAssist;
             this.input = input;
-            this.manipulator = manipulator;
+            this.mergingService = mergingService;
             cancelSource = new CancellationTokenSource();
             cancelToken = cancelSource.Token;
 
@@ -111,10 +120,43 @@ namespace Opus.Services.Implementation.Data.Composition
 
             // Show progress to the user
             Task progress = dialogAssist.Show(progressDialog);
+
             // Start composing
             Task compose = ComposeInternal(directory, compositionProfile, deleteConverted, searchSubDirectories);
 
-            await Task.WhenAll(progress, compose);
+            try
+            {
+                await Task.WhenAll(progress, compose);
+            }
+            catch (ArgumentNullException e) when (e.Message == nameof(directory))
+            {
+                MessageDialog dialog = new MessageDialog(Resources.Labels.General.Error, Resources.Messages.Composition.PathNull);
+                await dialogAssist.Show(dialog);
+
+                logbook.Write($"Internal composition method threw an exception.", LogLevel.Error, e);
+
+                return;
+            }
+            catch (ArgumentNullException e) when (e.Message == nameof(compositionProfile))
+            {
+                MessageDialog dialog = new MessageDialog(Resources.Labels.General.Error,
+                    Resources.Messages.Composition.ProfileNotExists);
+                await dialogAssist.Show(dialog);
+
+                logbook.Write($"Internal composition method threw an exception.", LogLevel.Error, e);
+
+                return;
+            }
+            catch (DirectoryNotFoundException e)
+            {
+                MessageDialog dialog = new MessageDialog(Resources.Labels.General.Error,
+                    Resources.Messages.Composition.PathNotExists);
+                await dialogAssist.Show(dialog);
+
+                logbook.Write($"Internal composition method threw an exception.", LogLevel.Error, e);
+
+                return;
+            }
         }
 
         private async Task ComposeInternal(string directory, ICompositionProfile compositionProfile,
@@ -123,7 +165,7 @@ namespace Opus.Services.Implementation.Data.Composition
             if (directory == null)
                 throw new ArgumentNullException(nameof(directory));
             if (!Directory.Exists(directory))
-                throw new ArgumentException(nameof(directory));
+                throw new DirectoryNotFoundException(nameof(directory));
             if (compositionProfile == null)
                 throw new ArgumentNullException(nameof(compositionProfile));
 
@@ -167,13 +209,19 @@ namespace Opus.Services.Implementation.Data.Composition
             RemoveEmptyTitles(inputs);
 
             if (cancelToken.IsCancellationRequested)
+            {
+                logbook.Write($"Cancellation requested at token '{cancelToken.GetHashCode()}'.", LogLevel.Debug);
                 return;
+            }
 
             await ExecuteComposition(directory, inputs, compositionProfile.AddPageNumbers,
-                deleteConverted);
+                deleteConverted, cancelToken);
 
             if (cancelToken.IsCancellationRequested)
+            {
+                logbook.Write($"Cancellation requested at token '{cancelToken.GetHashCode()}'.", LogLevel.Debug);
                 return;
+            }
 
             progressDialog.Phase = ProgressPhase.Finished.GetResourceString();
             progressDialog.Part = null;
@@ -306,7 +354,7 @@ namespace Opus.Services.Implementation.Data.Composition
         }
 
         private async Task ExecuteComposition(string directory, List<IMergeInput> inputs, bool addPageNumbers, 
-            bool deleteConverted)
+            bool deleteConverted, CancellationToken token)
         {
             progressDialog.PartPercent = 0;
             progressDialog.Part = Resources.Operations.PhaseNames.ChoosingDestination;
@@ -331,19 +379,43 @@ namespace Opus.Services.Implementation.Data.Composition
                 return;
             }
 
-            IList<string> created = await manipulator.MergeWithBookmarksAsync(inputs, filePath, addPageNumbers,
-                mergeProgress, cancelToken);
+            FileInfo output = new FileInfo(filePath);
+
+            bool convertWord = inputs.Where(f => string.IsNullOrEmpty(f.FilePath) == false).Any(i => Path.GetExtension(i.FilePath).ToLower().Contains(".doc"));
+
+            MergingOptions options = new MergingOptions(inputs, output, addPageNumbers, convertWord);
+            options.Cancellation = token;
+            options.Progress = mergeProgress;
+
+            IList<FileSystemInfo>? created = null;
+            try
+            {
+                created = await mergingService.MergeWithOptions(options);
+            }
+            catch (Exception e)
+            {
+                logbook.Write($"Merging failed.", LogLevel.Error, e);
+                throw;
+            }
+
+            if (created == null)
+            {
+                return;
+            }
 
             if (cancelToken.IsCancellationRequested == false)
             {
-                created.Remove(filePath);
+                FileSystemInfo? info = created.FirstOrDefault(x => x.FullName == filePath);
+                if (info != null)
+                    created.Remove(info);
             }
 
             if (deleteConverted || cancelToken.IsCancellationRequested)
             {
-                foreach (string file in created)
+                foreach (FileSystemInfo file in created)
                 {
-                    File.Delete(file);
+                    if (file.Exists)
+                        file.Delete();
                 }
             }
         }

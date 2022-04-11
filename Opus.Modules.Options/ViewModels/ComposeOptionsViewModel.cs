@@ -1,4 +1,5 @@
-﻿using Opus.Core.Base;
+﻿using CX.LoggingLib;
+using Opus.Core.Base;
 using Opus.Services.Configuration;
 using Opus.Services.Implementation.UI.Dialogs;
 using Opus.Services.UI;
@@ -13,8 +14,8 @@ namespace Opus.Modules.Options.ViewModels
 {
     public class ComposeOptionsViewModel : OptionsViewModelBase<CompositionSettingsDialog>
     {
-        public ComposeOptionsViewModel(IDialogAssist dialogAssist, IConfiguration configuration)
-            : base(dialogAssist, configuration) { }
+        public ComposeOptionsViewModel(IDialogAssist dialogAssist, IConfiguration configuration, ILogbook logbook)
+            : base(dialogAssist, configuration, logbook) { }
 
         protected override CompositionSettingsDialog CreateDialog()
         {

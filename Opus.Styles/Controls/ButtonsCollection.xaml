@@ -34,6 +34,22 @@
         </Style.Triggers>
     </Style>
 
+    <Style TargetType="{x:Type Button}" x:Key="HeaderMenuButton" 
+           BasedOn="{StaticResource MaterialDesignFlatButton}">
+        <Setter Property="Foreground" Value="{DynamicResource MaterialDesignDarkForeground}"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="120"/>
+        <Setter Property="Margin" Value="0"/>
+    </Style>
+
+    <Style TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource MaterialDesignFlatButton}"
+           x:Key="HeaderMenuToggleButton">
+        <Setter Property="Foreground" Value="{DynamicResource MaterialDesignDarkForeground}"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="120"/>
+        <Setter Property="Margin" Value="0"/>
+    </Style>
+
     <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFlatButton}"
            x:Key="InputPathButton">
         <Setter Property="Foreground" Value="{DynamicResource MaterialDesignDarkForeground}"/>

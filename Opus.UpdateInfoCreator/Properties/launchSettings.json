@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Opus.UpdateInfoCreator": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\jbjok\\OneDrive\\Documents\\InfoTest.json\" 0.0.4.0"
+    }
+  }
+}

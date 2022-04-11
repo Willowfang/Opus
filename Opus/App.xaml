@@ -21,6 +21,7 @@
                 <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Controls/ContextMenuCollection.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Controls/PackIconCollection.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Controls/CheckBoxCollection.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Controls/ToolTipsCollection.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="{StaticResource Primary500}"/>
             <SolidColorBrush x:Key="SecondaryHueMidBrush" Color="{StaticResource Accent700}"/>

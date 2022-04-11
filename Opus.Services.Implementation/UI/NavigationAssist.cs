@@ -1,13 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using CX.LoggingLib;
 using Opus.Events;
+using Opus.Services.Implementation.Logging;
 using Opus.Services.UI;
 using Prism.Events;
 using Prism.Regions;
 
 namespace Opus.Services.Implementation.UI
 {
-    public class NavigationAssist : INavigationAssist, INavigationTargetRegistry
+    public class NavigationAssist : LoggingCapable<NavigationAssist>, INavigationAssist, INavigationTargetRegistry
     {
         protected class SchemeTarget
         {
@@ -40,7 +42,8 @@ namespace Opus.Services.Implementation.UI
         protected List<SchemeTarget> Targets;
         protected string? CurrentScheme;
              
-        public NavigationAssist(IEventAggregator aggregator, IRegionManager manager)
+        public NavigationAssist(IEventAggregator aggregator, IRegionManager manager, ILogbook logbook)
+            : base(logbook)
         {
             Aggregator = aggregator;
             Manager = manager;
@@ -61,6 +64,9 @@ namespace Opus.Services.Implementation.UI
             {
                 Schemes.Add(new SchemeNavigator(schemeName, regionName, typeof(TView).Name));
             }
+
+            logbook.Write($"Region '{regionName}' registered with navigation schemes" + "'{@SchemeNames}'.", LogLevel.Debug,
+                customContent: schemeNames);
         }
 
         public void AddTarget(string schemeName, INavigationTarget target)
@@ -79,6 +85,8 @@ namespace Opus.Services.Implementation.UI
             Targets.FindAll(target => target.SchemeName == CurrentScheme).ForEach(x => x.Target.WhenLeaving());
 
             CurrentScheme = schemeName;
+
+            logbook.Write($"View navigated to scheme '{schemeName}'.", LogLevel.Debug);
         }
     }
 }

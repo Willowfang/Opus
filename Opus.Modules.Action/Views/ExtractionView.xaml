@@ -6,6 +6,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:resLabels="clr-namespace:Opus.Resources.Labels;assembly=Opus.Resources"
+             xmlns:resTooltips="clr-namespace:Opus.Resources.ToolTips;assembly=Opus.Resources"
              xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="500"
@@ -37,7 +38,8 @@
                     IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Command="{Binding ViewFileCommand}">
+                    Command="{Binding ViewFileCommand}"
+                    ToolTip="{x:Static resTooltips:Extraction.ViewFileButton}">
                 <materialDesign:PackIcon Kind="Eye"/>
             </Button>
             <ComboBox Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
@@ -69,7 +71,8 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                    Command="{Binding DeleteFileCommand}">
+                    Command="{Binding DeleteFileCommand}"
+                    ToolTip="{x:Static resTooltips:Extraction.DeleteFileButton}">
                 <materialDesign:PackIcon Kind="Delete"/>
             </Button>
         </Grid>
@@ -102,40 +105,47 @@
         <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
             <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                    Command="{Binding SaveFileCommand}">
+                    Command="{Binding SaveFileCommand}"
+                    ToolTip="{x:Static resTooltips:Extraction.SaveAsSingleButton}">
                 <materialDesign:PackIcon Kind="ContentSave"/>
             </Button>
             <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                    Command="{Binding SaveSeparateCommand}">
+                    Command="{Binding SaveSeparateCommand}"
+                    ToolTip="{x:Static resTooltips:Extraction.SaveAsMultipleButton}">
                 <materialDesign:PackIcon Kind="ContentSaveAll"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                    Command="{Binding EditCommand}">
+                    Command="{Binding EditCommand}"
+                    ToolTip="{x:Static resTooltips:Extraction.EditButton}">
                 <materialDesign:PackIcon Kind="Pencil"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding IsFileSelected}"
-                    Command="{Binding SelectAllCommand}">
+                    Command="{Binding SelectAllCommand}"
+                    ToolTip="{x:Static resTooltips:Extraction.SelectAllButton}">
                 <materialDesign:PackIcon Kind="SelectAll"/>
             </Button>
             <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                    Command="{Binding ClearCommand}">
+                    Command="{Binding ClearCommand}"
+                    ToolTip="{x:Static resTooltips:Extraction.ClearButton}">
                 <materialDesign:PackIcon Kind="Close"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding IsFileSelected}"
-                    Command="{Binding AddCommand}">
+                    Command="{Binding AddCommand}"
+                    ToolTip="{x:Static resTooltips:Extraction.AddButton}">
                 <materialDesign:PackIcon Kind="PlusBold"/>
             </Button>
             <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding ElementName=BookmarksList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                    Command="{Binding DeleteCommand}">
+                    Command="{Binding DeleteCommand}"
+                    ToolTip="{x:Static resTooltips:Extraction.DeleteButton}">
                 <materialDesign:PackIcon Kind="Delete"/>
             </Button>
         </StackPanel>

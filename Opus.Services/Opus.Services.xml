@@ -45,6 +45,16 @@
             Indicates whether individual bookmarks are grouped by source files
             </summary>
         </member>
+        <member name="P:Opus.Services.Configuration.IConfiguration.UnsignedTitleTemplate">
+            <summary>
+            Title for files that have had their signatures removed
+            </summary>
+        </member>
+        <member name="P:Opus.Services.Configuration.IConfiguration.WorkCopyFlattenRedactions">
+            <summary>
+            Flatten redactions when creating work copies
+            </summary>
+        </member>
         <member name="P:Opus.Services.Configuration.IConfiguration.MergeAddPageNumbers">
             <summary>
             If true, page numbers will be added to a merged document
@@ -282,11 +292,6 @@
             </summary>
             <typeparam name="T">Type to clear</typeparam>
         </member>
-        <member name="P:Opus.Services.Data.ISignatureOptions.Suffix">
-            <summary>
-            The localized suffix for unsigned files
-            </summary>
-        </member>
         <member name="T:Opus.Services.Input.IPathSelection">
             <summary>
             Get user input for file and directory paths
@@ -401,6 +406,14 @@
             Show a dialog asynchronously and return it when ready
             </summary>
             <param name="dialog">Dialog to show</param>
+        </member>
+        <member name="M:Opus.Services.UI.IDialogAssist.ShowProgress(System.Threading.CancellationTokenSource)">
+            <summary>
+            Show a progress dialog and return the associated task and dialog as wella as the associated IProgress
+            for reporting progress to the dialog.
+            </summary>
+            <param name="cancelSource">Cancellation source mainly for user cancellation interaction</param>
+            <returns></returns>
         </member>
         <member name="T:Opus.Services.UI.INavigationAssist">
             <summary>

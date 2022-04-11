@@ -1,4 +1,5 @@
-﻿using CX.PdfLib.Services.Data;
+﻿using CX.LoggingLib;
+using CX.PdfLib.Services.Data;
 using Opus.Services.Implementation.Data.Extraction;
 using Opus.Services.UI;
 using Prism.Commands;

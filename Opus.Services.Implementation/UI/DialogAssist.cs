@@ -1,12 +1,18 @@
-﻿using Opus.Services.UI;
+﻿using CX.LoggingLib;
+using CX.PdfLib.Common;
+using Opus.Services.Extensions;
+using Opus.Services.Implementation.Logging;
+using Opus.Services.Implementation.UI.Dialogs;
+using Opus.Services.UI;
 using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Opus.Services.Implementation.UI
 {
-    public class DialogAssist : BindableBase, IDialogAssist
+    public class DialogAssist : LoggingCapable<DialogAssist>, IDialogAssist
     {
         private bool isShowing;
         public bool IsShowing
@@ -24,7 +30,7 @@ namespace Opus.Services.Implementation.UI
 
         private List<IDialog> currentDialogs;
 
-        public DialogAssist()
+        public DialogAssist(ILogbook logbook) : base(logbook)
         {
             currentDialogs = new List<IDialog>();
         }
@@ -32,13 +38,33 @@ namespace Opus.Services.Implementation.UI
         public async Task<IDialog> Show(IDialog dialog)
         {
             if (dialog == null)
+            {
+                logbook.Write($"{nameof(IDialog)} to show was null.", LogLevel.Debug);
                 throw new ArgumentNullException(nameof(dialog));
+            }
 
             currentDialogs.Insert(0, dialog);
             ActivateNext();
             await dialog.DialogClosed.Task;
             CloseDialog(dialog);
             return dialog;
+        }
+
+        public ProgressContainer ShowProgress(CancellationTokenSource cancelSource)
+        {
+            ProgressDialog dialog = new ProgressDialog(null, cancelSource)
+            {
+                TotalPercent = 0,
+                Phase = ProgressPhase.Unassigned.GetResourceString()
+            };
+            Progress<ProgressReport> progress = new Progress<ProgressReport>(report =>
+            {
+                dialog.TotalPercent = report.Percentage;
+                dialog.Phase = report.CurrentPhase.GetResourceString();
+                dialog.Part = report.CurrentItem;
+            });
+
+            return new ProgressContainer(Show(dialog), dialog, progress);
         }
 
         private void ActivateNext()

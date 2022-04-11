@@ -88,11 +88,11 @@ namespace Opus.Resources.Labels.MainWindow {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Poista allekirjoituksia.
+        ///   Looks up a localized string similar to Luo työkappaleita.
         /// </summary>
-        public static string Signature {
+        public static string Workcopy {
             get {
-                return ResourceManager.GetString("Signature", resourceCulture);
+                return ResourceManager.GetString("Workcopy", resourceCulture);
             }
         }
     }

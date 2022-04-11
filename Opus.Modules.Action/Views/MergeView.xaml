@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:prism="http://prismlibrary.com/"
+             xmlns:resToolTips="clr-namespace:Opus.Resources.ToolTips;assembly=Opus.Resources"
              prism:ViewModelLocator.AutoWireViewModel="True">
     <UserControl.Resources>
         <ResourceDictionary>
@@ -35,26 +36,30 @@
         <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
             <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding Collection.Count, Converter={StaticResource EmptyToBool}, Mode=OneWay}"
-                    Command="{Binding MergeCommand}">
+                    Command="{Binding MergeCommand}"
+                    ToolTip="{x:Static resToolTips:Merge.MergeButton}">
                 <md:PackIcon Kind="ContentSave"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                    Command="{Binding EditCommand}">
+                    Command="{Binding EditCommand}"
+                    ToolTip="{x:Static resToolTips:Merge.EditButton}">
                 <md:PackIcon Kind="Pencil"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding Collection.Count, Converter={StaticResource EmptyToBool}, Mode=OneWay}"
                     Command="{Binding ClearCommand}"
-                    Margin="5, 16, 0, 0">
+                    Margin="5, 16, 0, 0"
+                    ToolTip="{x:Static resToolTips:Merge.ClearButton}">
                 <md:PackIcon Kind="Close"/>
             </Button>
             <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
                     Command="{Binding DeleteCommand}"
-                    Margin="0, 16, 0, 0">
+                    Margin="0, 16, 0, 0"
+                    ToolTip="{x:Static resToolTips:Merge.DeleteButton}">
                 <md:PackIcon Kind="Delete"/>
             </Button>
         </StackPanel>

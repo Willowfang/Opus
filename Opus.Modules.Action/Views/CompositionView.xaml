@@ -6,6 +6,7 @@
              xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
              xmlns:resButtons="clr-namespace:Opus.Resources.Buttons.Composition;assembly=Opus.Resources"
              xmlns:resLabels="clr-namespace:Opus.Resources.Labels;assembly=Opus.Resources"
+             xmlns:resToolTips="clr-namespace:Opus.Resources.ToolTips.Composition;assembly=Opus.Resources"
              xmlns:prism="http://prismlibrary.com/"             
              prism:ViewModelLocator.AutoWireViewModel="True">
     <UserControl.Resources>
@@ -49,7 +50,8 @@
                         Command="{Binding OpenProfileMenu}"
                         Margin="0">
                     <materialDesign:PopupBox PlacementMode="TopAndAlignCentres" StaysOpen="False"
-                                             IsPopupOpen="{Binding AddProfileMenuOpen}">
+                                             IsPopupOpen="{Binding AddProfileMenuOpen}"
+                                             ToolTip="{x:Static resToolTips:Buttons.ProfilePopup}">
                         <materialDesign:PopupBox.ToggleContent>
                             <materialDesign:PackIcon Kind="NotePlus" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                         </materialDesign:PopupBox.ToggleContent>
@@ -95,13 +97,15 @@
                 <Button Style="{StaticResource ToolButton}"
                         Command="{Binding EditProfile}"
                         IsEnabled="{Binding SelectedProfile.IsEditable}"
-                        Margin="0">
+                        Margin="0"
+                        ToolTip="{x:Static resToolTips:Buttons.ProfileEditButton}">
                     <materialDesign:PackIcon Kind="Pencil"/>
                 </Button>
                 <Button Style="{StaticResource ToolButton}"
                         Command="{Binding DeleteProfile}"
                         IsEnabled="{Binding SelectedProfile.IsEditable}"
-                        Margin="0">
+                        Margin="0"
+                        ToolTip="{x:Static resToolTips:Buttons.DeleteProfileButton}">
                     <materialDesign:PackIcon Kind="Delete"/>
                 </Button>
 
@@ -152,14 +156,16 @@
                         IsEnabled="{Binding SelectedProfile.IsEditable}">
                 <Button Style="{StaticResource ToolButton}"
                         IsEnabled="{Binding ElementName=SegmentsList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                        Command="{Binding EditSegment}">
+                        Command="{Binding EditSegment}"
+                        ToolTip="{x:Static resToolTips:Buttons.SegmentEditButton}">
                     <materialDesign:PackIcon Kind="Pencil"/>
                 </Button>
                 <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
                 <Button Style="{StaticResource ToolButton}" x:Name="AddSegmentButton"
                         Command="{Binding OpenSegmentMenu}">
                     <materialDesign:PopupBox PlacementMode="TopAndAlignCentres" StaysOpen="False"
-                                             IsPopupOpen="{Binding AddSegmentMenuOpen}">
+                                             IsPopupOpen="{Binding AddSegmentMenuOpen}"
+                                             ToolTip="{x:Static resToolTips:Buttons.SegmentPopup}">
                         <materialDesign:PopupBox.ToggleContent>
                             <materialDesign:PackIcon Kind="PlusThick" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                         </materialDesign:PopupBox.ToggleContent>
@@ -174,7 +180,8 @@
                 <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
                 <Button Style="{StaticResource ToolButton}"
                         IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                        Command="{Binding DeleteSegment}">
+                        Command="{Binding DeleteSegment}"
+                        ToolTip="{x:Static resToolTips:Buttons.SegmentDeleteButton}">
                     <materialDesign:PackIcon Kind="Delete"/>
                 </Button>
             </StackPanel>

@@ -1,4 +1,4 @@
-﻿using Opus.Core.Constants;
+﻿using Opus.Values;
 using Opus.Services.UI;
 using Opus.Modules.Options.Views;
 using Prism.Ioc;
@@ -13,7 +13,7 @@ namespace Opus.Modules.Options
             var navigation = containerProvider.Resolve<INavigationAssist>();
 
             navigation.Add<ExtractOptionsView>(RegionNames.MAINSECTION_THREE_OPTIONS, SchemeNames.SPLIT);
-            navigation.Add<SignatureOptionsView>(RegionNames.MAINSECTION_THREE_OPTIONS, SchemeNames.SIGNATURE);
+            navigation.Add<WorkCopyOptionsView>(RegionNames.MAINSECTION_THREE_OPTIONS, SchemeNames.WORKCOPY);
             navigation.Add<MergeOptionsView>(RegionNames.MAINSECTION_THREE_OPTIONS, SchemeNames.MERGE);
             navigation.Add<ComposeOptionsView>(RegionNames.MAINSECTION_THREE_OPTIONS, SchemeNames.COMPOSE);
         }

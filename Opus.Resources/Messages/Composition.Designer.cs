@@ -70,6 +70,24 @@ namespace Opus.Resources.Messages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Koonti epäonnistui. Lähdekansiota ei löytynyt..
+        /// </summary>
+        public static string PathNotExists {
+            get {
+                return ResourceManager.GetString("PathNotExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Koonti epäonnistui. Annettu polku on tyhjä..
+        /// </summary>
+        public static string PathNull {
+            get {
+                return ResourceManager.GetString("PathNull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Profilli poistetaan. Haluatko jatkaa?.
         /// </summary>
         public static string ProfileDeleteConfirmation {
@@ -120,6 +138,15 @@ namespace Opus.Resources.Messages {
         public static string ProfileImportSuccess {
             get {
                 return ResourceManager.GetString("ProfileImportSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Koonti epäonnistui. Valittu profiili on tyhjä..
+        /// </summary>
+        public static string ProfileNotExists {
+            get {
+                return ResourceManager.GetString("ProfileNotExists", resourceCulture);
             }
         }
         

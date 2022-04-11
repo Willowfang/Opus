@@ -68,5 +68,23 @@ namespace Opus.Resources.Messages {
                 return ResourceManager.GetString("ProfileUpdateFailed", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Opukselle on saatavilla päivitys {0}, johon on tehty seuraavia muutoksia:.
+        /// </summary>
+        public static string Update {
+            get {
+                return ResourceManager.GetString("Update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Asennetaanko päivitys nyt?.
+        /// </summary>
+        public static string UpdateConfirm {
+            get {
+                return ResourceManager.GetString("UpdateConfirm", resourceCulture);
+            }
+        }
     }
 }

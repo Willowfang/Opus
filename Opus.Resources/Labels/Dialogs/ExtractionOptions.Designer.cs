@@ -115,15 +115,6 @@ namespace Opus.Resources.Labels.Dialogs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lisätään tiedostonimien alkuun.
-        /// </summary>
-        public static string PrefixHelper {
-            get {
-                return ResourceManager.GetString("PrefixHelper", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Poista kaikki.
         /// </summary>
         public static string RemoveAll {
@@ -133,20 +124,11 @@ namespace Opus.Resources.Labels.Dialogs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Poista omat.
+        ///   Looks up a localized string similar to Poista valitut.
         /// </summary>
         public static string RemoveUser {
             get {
                 return ResourceManager.GetString("RemoveUser", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Lisätään tiedotonimien loppuun.
-        /// </summary>
-        public static string SuffixHelper {
-            get {
-                return ResourceManager.GetString("SuffixHelper", resourceCulture);
             }
         }
     }
