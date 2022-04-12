@@ -21,16 +21,19 @@ using Opus.Services.Implementation.UI.Dialogs;
 using Opus.Services.Extensions;
 using Opus.Core.Executors;
 using CX.LoggingLib;
+using CX.PdfLib.Extensions;
+using Opus.Services.Configuration;
 
 namespace Opus.Modules.Action.ViewModels
 {
     public class ExtractionViewModel : ViewModelBaseLogging<ExtractionViewModel>, INavigationTarget
     {
-        private IExtractionExecutor executor;
-        private IPathSelection Input;
-        private IDialogAssist dialogAssist;
-        private IEventAggregator eventAggregator;
-        private IBookmarkService bookmarkService;
+        private readonly IExtractionExecutor executor;
+        private readonly IPathSelection Input;
+        private readonly IDialogAssist dialogAssist;
+        private readonly IEventAggregator eventAggregator;
+        private readonly IBookmarkService bookmarkService;
+        private readonly IConfiguration configuration;
         private string currentFilePath;
 
         public ObservableCollection<FileAndBookmarksStorage> Files { get; private set; }
@@ -79,6 +82,7 @@ namespace Opus.Modules.Action.ViewModels
             INavigationTargetRegistry navregistry, 
             IExtractionExecutor executor,
             IBookmarkService bookmarkService,
+            IConfiguration configuration,
             ILogbook logbook) : base(logbook)
         {
             this.eventAggregator = eventAggregator;
@@ -88,6 +92,7 @@ namespace Opus.Modules.Action.ViewModels
             this.dialogAssist = dialogAssist;
             this.executor = executor;
             this.bookmarkService = bookmarkService;
+            this.configuration = configuration;
             navregistry.AddTarget(SchemeNames.SPLIT, this);
         }
 
@@ -246,6 +251,12 @@ namespace Opus.Modules.Action.ViewModels
 
         private async Task ExecuteSaveSeparateCommand()
         {
+            if (configuration.ExtractionCreateZip)
+            {
+                await SaveAsZip(false);
+                return;
+            }
+
             string path = Input.OpenDirectory(Resources.UserInput.Descriptions.SelectSaveFolder);
             if (path == null) return;
 
@@ -264,6 +275,12 @@ namespace Opus.Modules.Action.ViewModels
 
         private async Task ExecuteSaveFileCommand()
         {
+            if (configuration.ExtractionCreateZip)
+            {
+                await SaveAsZip(true);
+                return;
+            }
+
             string path = Input.SaveFile(Resources.UserInput.Descriptions.SelectSaveFile, FileType.PDF,
                 new DirectoryInfo(Path.GetDirectoryName(currentFilePath)));
             if (path == null) return;
@@ -273,6 +290,44 @@ namespace Opus.Modules.Action.ViewModels
             logbook.Write($"Starting extraction to file.", LogLevel.Information);
 
             await executor.Save(destination, Files);
+
+            logbook.Write($"Extraction finished.", LogLevel.Information);
+        }
+
+        private async Task SaveAsZip(bool saveSingular)
+        {
+            FileSystemInfo destination;
+            DirectoryInfo tempDir = new DirectoryInfo(Path.Combine(Path.GetTempPath(), Path.GetRandomFileName()));
+            tempDir.Create();
+
+            if (saveSingular)
+            {
+                ExtractSettingsDialog fileNameDialog = new ExtractSettingsDialog(
+                Resources.Labels.Dialogs.ExtractionOptions.ZipDialogTitle, true,
+                Resources.Labels.Dialogs.ExtractionOptions.ZipName,
+                Resources.Labels.Dialogs.ExtractionOptions.ZipNameHelper, false);
+
+                await dialogAssist.Show(fileNameDialog);
+
+                if (fileNameDialog.IsCanceled) return;
+
+                string fileName = Path.GetFileNameWithoutExtension(fileNameDialog.Title.ReplaceIllegal()) + ".pdf";
+                string fullPath = Path.Combine(tempDir.FullName, fileName);
+                destination = new FileInfo(fullPath);
+            }
+            else
+            {
+                destination = tempDir;
+            }
+
+            string zipPath = Input.SaveFile(Resources.UserInput.Descriptions.SelectSaveFile, FileType.Zip,
+                new DirectoryInfo(Path.GetDirectoryName(currentFilePath)));
+            FileInfo zipFile = new FileInfo(zipPath);
+
+            logbook.Write($"Starting extraction to zip-file.", LogLevel.Information);
+
+            await executor.SaveAsZip(destination, Files, zipFile);
+            await Task.Run(() => tempDir.Delete(true));
 
             logbook.Write($"Extraction finished.", LogLevel.Information);
         }

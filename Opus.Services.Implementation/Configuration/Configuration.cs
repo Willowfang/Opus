@@ -51,6 +51,13 @@ namespace Opus.Services.Implementation.Configuration
             set => SetProperty(ref extractionPdfADisabled, value);
         }
 
+        private bool extractionCreateZip;
+        public bool ExtractionCreateZip
+        {
+            get => extractionCreateZip;
+            set => SetProperty(ref extractionCreateZip, value, SaveConfiguration);
+        }
+
         private int annotations;
         public int Annotations
         {

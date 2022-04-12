@@ -35,6 +35,12 @@
             Indicates if conversion to pdf/a is possible
             </summary>
         </member>
+        <member name="P:Opus.Services.Configuration.IConfiguration.ExtractionCreateZip">
+            <summary>
+             Indicates whether extracted files should be compressed
+             into a zip file instead of separate pdfs
+            </summary>
+        </member>
         <member name="P:Opus.Services.Configuration.IConfiguration.Annotations">
             <summary>
             Annotation handling option

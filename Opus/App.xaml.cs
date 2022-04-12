@@ -28,6 +28,8 @@ using Opus.Values;
 using System.Reflection;
 using System;
 using System.Diagnostics;
+using CX.ZipLib;
+using CX.ZipLib.Framework;
 
 namespace Opus
 {
@@ -116,6 +118,7 @@ namespace Opus
             containerRegistry.Register<ISigningService, SigningService>();
             containerRegistry.Register<IMergingService, MergingService>();
             containerRegistry.Register<IWordConvertService, WordConvertService>();
+            containerRegistry.Register<IZipService, ZipService>();
 
             // UI-related services
             containerRegistry.RegisterManySingleton<NavigationAssist>(

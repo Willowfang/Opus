@@ -26,5 +26,12 @@ namespace Opus.ExtensionMethods
 
             return template;
         }
+
+        public static string ReplaceIllegal(this string original)
+        {
+            string processed = original.Replace(":", "");
+            processed = processed.Replace("/", "-");
+            return string.Join("", processed.Split(Path.GetInvalidFileNameChars()));
+        }
     }
 }

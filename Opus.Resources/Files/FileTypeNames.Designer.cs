@@ -95,5 +95,14 @@ namespace Opus.Resources.Files {
                 return ResourceManager.GetString("Profile", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zip.
+        /// </summary>
+        public static string Zip {
+            get {
+                return ResourceManager.GetString("Zip", resourceCulture);
+            }
+        }
     }
 }

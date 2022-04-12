@@ -138,10 +138,13 @@
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
                        Text="{Binding DialogTitle}"/>
             <TextBox Style="{DynamicResource HintedTextBox}"
-                     Text="{Binding Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     x:Name="TitleTextBox"
+                     Text="{Binding Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
+                     ValidatesOnDataErrors=True}"
+                     md:ValidationAssist.Suppress="True"
                      Width="300"
-                     md:HintAssist.Hint="{x:Static resDialog:ExtractionOptions.NameTemplate}"
-                     md:HintAssist.HelperText="{x:Static resDialog:ExtractionOptions.NameHelper}"/>
+                     md:HintAssist.Hint="{Binding NameDescription}"
+                     md:HintAssist.HelperText="{Binding NameHelper}"/>
             <Separator Style="{DynamicResource MaterialDesignSeparator}"
                        Margin="10, 20, 10, 20"
                        Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}"/>
@@ -182,7 +185,25 @@
                                Visibility="{Binding PdfADisabled, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                 </StackPanel>
             </StackPanel>
-            
+
+            <Separator Style="{DynamicResource MaterialDesignSeparator}"
+                       Margin="10, 20, 10, 20"
+                       Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}"/>
+            <StackPanel Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}">
+                <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                           VerticalAlignment="Center"
+                           Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                           Text="{x:Static resDialog:ExtractionOptions.CreateZipTitle}"
+                           
+                           Margin="0, 0, 0, 10"/>
+                <CheckBox Style="{DynamicResource OptionSwitch}"
+                          IsChecked="{Binding CreateZip}"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Center"
+                          Cursor="Hand"
+                          ToolTip="{x:Static resToolTips:Extraction.SettingsCreateZip}"/>
+            </StackPanel>
+
             <StackPanel Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}"
                         Margin="0, 0, 0, 10">
                 <Separator Style="{DynamicResource MaterialDesignSeparator}"
@@ -215,7 +236,9 @@
                 </StackPanel>
             </StackPanel>
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
-                <Button Style="{StaticResource DialogSaveButton}"/>
+                <Button Style="{StaticResource DialogSaveButton}"
+                        IsEnabled="{Binding ElementName=TitleTextBox, Path=(Validation.HasError),
+                        Converter={StaticResource InvertBooleanConverter}}"/>
                 <Button Style="{StaticResource DialogCancelButton}"
                         Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}"/>
             </StackPanel>

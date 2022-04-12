@@ -34,6 +34,11 @@ namespace Opus.Services.Configuration
         /// </summary>
         public bool ExtractionPdfADisabled { get; set; }
         /// <summary>
+        ///  Indicates whether extracted files should be compressed
+        ///  into a zip file instead of separate pdfs
+        /// </summary>
+        public bool ExtractionCreateZip { get; set; }
+        /// <summary>
         /// Annotation handling option
         /// </summary>
         public int Annotations { get; set; }

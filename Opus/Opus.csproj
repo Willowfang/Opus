@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
-    <AssemblyVersion>1.0.7.0</AssemblyVersion>
+    <AssemblyVersion>1.0.8.0</AssemblyVersion>
     <ApplicationIcon>logocx.ico</ApplicationIcon>
   </PropertyGroup>
 
@@ -93,6 +93,12 @@
     </Reference>
     <Reference Include="CodeX-PdfLib-iText7">
       <HintPath>..\..\..\CodeX\Libraries\PdfLib.iText7\bin\Debug\net6.0\CodeX-PdfLib-iText7.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeX-ZipLib">
+      <HintPath>..\..\..\CodeX\Libraries\ZipLib\bin\Debug\net6.0\CodeX-ZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeX-ZipLib.Framework">
+      <HintPath>..\..\..\CodeX\Libraries\ZipLib.Framework\bin\Debug\net6.0\CodeX-ZipLib.Framework.dll</HintPath>
     </Reference>
     <Reference Include="PdfLib.PDFTools">
       <HintPath>..\..\..\CodeX\Libraries\PdfLib.PDFTools\bin\Debug\net6.0\PdfLib.PDFTools.dll</HintPath>

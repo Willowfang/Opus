@@ -79,6 +79,24 @@ namespace Opus.Resources.Labels.Dialogs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Osien nimeäminen.
+        /// </summary>
+        public static string AskDialogTitle {
+            get {
+                return ResourceManager.GetString("AskDialogTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pakkaa zip-tiedostoon.
+        /// </summary>
+        public static string CreateZipTitle {
+            get {
+                return ResourceManager.GetString("CreateZipTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pidä kaikki.
         /// </summary>
         public static string Keep {
@@ -129,6 +147,33 @@ namespace Opus.Resources.Labels.Dialogs {
         public static string RemoveUser {
             get {
                 return ResourceManager.GetString("RemoveUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tiedoston nimi.
+        /// </summary>
+        public static string ZipDialogTitle {
+            get {
+                return ResourceManager.GetString("ZipDialogTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pakattavan tiedoston nimi.
+        /// </summary>
+        public static string ZipName {
+            get {
+                return ResourceManager.GetString("ZipName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nimi sille yksittäiselle tiedostolle, joka zip-tiedoston sisään pakataan.
+        /// </summary>
+        public static string ZipNameHelper {
+            get {
+                return ResourceManager.GetString("ZipNameHelper", resourceCulture);
             }
         }
     }

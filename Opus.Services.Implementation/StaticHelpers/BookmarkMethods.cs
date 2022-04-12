@@ -25,7 +25,8 @@ namespace Opus.Services.Implementation.StaticHelpers
 
             if (configuration.ExtractionTitleAsk)
             {
-                ExtractSettingsDialog dialog = new ExtractSettingsDialog(Resources.Labels.General.Settings, true)
+                ExtractSettingsDialog dialog = new ExtractSettingsDialog(
+                    Resources.Labels.Dialogs.ExtractionOptions.AskDialogTitle, true)
                 {
                     Title = configuration.ExtractionTitle
                 };

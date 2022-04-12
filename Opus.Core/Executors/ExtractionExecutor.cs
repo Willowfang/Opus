@@ -2,6 +2,7 @@
 using CX.PdfLib.Common;
 using CX.PdfLib.Services;
 using CX.PdfLib.Services.Data;
+using CX.ZipLib;
 using Opus.Core.Wrappers;
 using Opus.ExtensionMethods;
 using Opus.Services.Configuration;
@@ -23,13 +24,16 @@ namespace Opus.Core.Executors
     public interface IExtractionExecutor
     {
         public Task Save(FileSystemInfo destination, IList<FileAndBookmarksStorage> files);
+        public Task SaveAsZip(FileSystemInfo fileDestination, IList<FileAndBookmarksStorage> files,
+            FileInfo zipFile);
     }
     public class ExtractionExecutor : LoggingCapable<ExtractionExecutor>, IExtractionExecutor
     {
-        private IConfiguration configuration;
-        private IDialogAssist dialogAssist;
-        private IExtractionService extractionService;
-        private IAnnotationService annotationService;
+        private readonly IConfiguration configuration;
+        private readonly IDialogAssist dialogAssist;
+        private readonly IExtractionService extractionService;
+        private readonly IAnnotationService annotationService;
+        private readonly IZipService zipService;
         private bool canceled;
 
         public ExtractionExecutor(
@@ -37,15 +41,59 @@ namespace Opus.Core.Executors
             IDialogAssist dialogAssist, 
             IExtractionService extractionService,
             IAnnotationService annotationService,
+            IZipService zipService,
             ILogbook logbook) : base(logbook)
         {
             this.configuration = configuration;
             this.dialogAssist = dialogAssist;
             this.extractionService = extractionService;
             this.annotationService = annotationService;
+            this.zipService = zipService;
+        }
+
+        public async Task SaveAsZip(FileSystemInfo fileDestination, IList<FileAndBookmarksStorage> files,
+            FileInfo zipFile)
+        {
+            CancellationTokenSource tokenSource = new CancellationTokenSource();
+            ProgressContainer container = dialogAssist.ShowProgress(tokenSource);
+
+            await SaveInternal(fileDestination, files, tokenSource, container);
+
+            container.Reporting.Report(new ProgressReport(0, ProgressPhase.Converting));
+
+            DirectoryInfo compressionDir;
+
+            if (fileDestination is DirectoryInfo dir)
+            {
+                compressionDir = dir;
+            }
+            else
+            {
+                compressionDir = (fileDestination as FileInfo).Directory;
+            }
+
+            await zipService.Compress(compressionDir, zipFile);
+
+            container.Reporting.Report(new ProgressReport(100, ProgressPhase.Finished));
+
+            await container.Show;
         }
 
         public async Task Save(FileSystemInfo destination, IList<FileAndBookmarksStorage> files)
+        {
+            CancellationTokenSource tokenSource = new CancellationTokenSource();
+            ProgressContainer container = dialogAssist.ShowProgress(tokenSource);
+
+            await SaveInternal(destination, files, tokenSource, container);
+
+            if (container.ProgressDialog.IsCanceled == false)
+                container.Reporting.Report(new ProgressReport(100, ProgressPhase.Finished));
+
+            await container.Show;
+        }
+
+        private async Task SaveInternal(FileSystemInfo destination, IList<FileAndBookmarksStorage> files,
+            CancellationTokenSource tokenSource, ProgressContainer container)
         {
             List<FileAndExtractables> products = new List<FileAndExtractables>();
 
@@ -87,9 +135,7 @@ namespace Opus.Core.Executors
 
             if (canceled) return;
 
-            CancellationTokenSource tokenSource = new CancellationTokenSource();
             CancellationToken token = tokenSource.Token;
-            ProgressContainer container = dialogAssist.ShowProgress(tokenSource);
 
             options.Progress = container.Reporting;
             options.Cancellation = token;
@@ -115,9 +161,7 @@ namespace Opus.Core.Executors
 
             logbook.Write("Extraction options: {@Options}", LogLevel.Debug, customContent: options);
 
-            Task extract = extractionService.Extract(options);
-
-            await Task.WhenAll(extract, container.Show);
+            await extractionService.Extract(options);
         }
 
         private async Task<IList<FileAndBookmarkWrapper>> OrderBookmarks(IList<FileAndBookmarksStorage> files,

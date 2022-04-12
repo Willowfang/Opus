@@ -11,7 +11,8 @@ namespace Opus.Services.Input
     {
         PDF,
         Word,
-        Profile
+        Profile,
+        Zip
     }
 
     /// <summary>

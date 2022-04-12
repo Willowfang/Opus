@@ -131,6 +131,10 @@ namespace Opus.Services.Implementation.Input
                     filters.Add(FilterString(Resources.Files.FileTypeNames.Profile,
                         Resources.Files.FileExtensions.Profile));
                 }
+                else if (fileType == FileType.Zip)
+                {
+                    filters.Add(FilterString(Resources.Files.FileTypeNames.Zip, Resources.Files.FileExtensions.Zip));
+                }
             }
             return string.Join("|", filters);
         }
