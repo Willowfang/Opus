@@ -7,6 +7,8 @@ using System;
 using Opus.Services.Implementation.Logging;
 using CX.LoggingLib;
 using LoggingLib.Defaults;
+using System.Collections.Generic;
+using CX.TaskManagerLib;
 
 namespace Opus.Services.Implementation.Configuration
 {
@@ -186,7 +188,7 @@ namespace Opus.Services.Implementation.Configuration
                 CompositionSearchSubDirectories = true,
                 ExtractionTitleAsk = true,
                 GroupByFiles = true,
-                WorkCopyFlattenRedactions = true
+                WorkCopyFlattenRedactions = true,
             };
         }
 

@@ -18,6 +18,7 @@ namespace Opus.Modules.Action
             navigator.Add<WorkCopyView>(RegionNames.MAINSECTION_THREE_ACTION, SchemeNames.WORKCOPY);
             navigator.Add<MergeView>(RegionNames.MAINSECTION_THREE_ACTION, SchemeNames.MERGE);
             navigator.Add<CompositionView>(RegionNames.MAINSECTION_THREE_ACTION, SchemeNames.COMPOSE);
+            navigator.Add<TaskManageView>(RegionNames.MAINSECTION_TWO_ACTION, SchemeNames.TASKS);
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

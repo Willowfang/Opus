@@ -30,6 +30,8 @@ using System;
 using System.Diagnostics;
 using CX.ZipLib;
 using CX.ZipLib.Framework;
+using CX.TaskManagerLib;
+using CX.TaskManagerLib.LiteDB;
 
 namespace Opus
 {
@@ -109,6 +111,7 @@ namespace Opus
             string configPath = Path.Combine(FilePaths.CONFIG_DIRECTORY, "Config" + FilePaths.CONFIG_EXTENSION);
             containerRegistry.RegisterSingleton<IConfiguration>(x => Configuration.Load(configPath, Container.Resolve<ILogbook>()));
             SetLanguage();
+            containerRegistry.RegisterSingleton<ITaskConnection, TaskConnection>();
 
             // Services for manipulating data
             containerRegistry.Register<IAnnotationService, AnnotationService>();
@@ -132,6 +135,7 @@ namespace Opus
                 "App" + FilePaths.CONFIG_EXTENSION));
             containerRegistry.RegisterInstance<IDataProvider>(provider);
             containerRegistry.RegisterSingleton<ICompositionOptions, CompositionOptions>();
+            containerRegistry.RegisterSingleton<ITaskManager, TaskManager>();
 
             containerRegistry.Register<IExtractionExecutor, ExtractionExecutor>();
             containerRegistry.Register<ISignatureExecutor, SignatureExecutor>();

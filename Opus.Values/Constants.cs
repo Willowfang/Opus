@@ -20,6 +20,9 @@ namespace Opus.Values
         public static readonly string TEST_LOCALUPDATEINFOLOC = @"C:\Users\Public\UpdateInfo.json";
         public static readonly string SETUPFILENAME = "Opus.msi";
         public const string UPDATEINFONAME = "UpdateInfo.json";
+
+        public static readonly string TASKMANAGEMENTDATABASEPATH = Path.Combine(CONFIG_DIRECTORY, 
+            "Tasks" + CONFIG_EXTENSION);
     }
 
     public static class RegionNames
@@ -44,5 +47,6 @@ namespace Opus.Values
         public const string WORKCOPY = "workcopy";
         public const string MERGE = "merge";
         public const string COMPOSE = "compose";
+        public const string TASKS = "tasks";
     }
 }

@@ -21,6 +21,9 @@
     <Reference Include="CodeX-PdfLib">
       <HintPath>..\..\..\CodeX\Libraries\PdfLib\bin\Debug\net6.0\CodeX-PdfLib.dll</HintPath>
     </Reference>
+    <Reference Include="CodeX-TaskManagerLib">
+      <HintPath>..\..\..\CodeX\Libraries\TaskManagerLib\bin\Debug\net6.0\CodeX-TaskManagerLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
