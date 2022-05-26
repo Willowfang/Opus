@@ -56,6 +56,8 @@ namespace Opus.Services.Implementation.StaticHelpers
 
         public static IEnumerable<FileAndBookmarkWrapper> GetRenamedAndIndexed(IEnumerable<ILeveledBookmark> bookmarks, IList<FileAndBookmarkWrapper> order, string titleTemplate, string filePath, ILogbook? logbook = null)
         {
+            int numberCount = bookmarks.Count().ToString().Length;
+
             IList<FileAndBookmarkWrapper> added = new List<FileAndBookmarkWrapper>();
             foreach (ILeveledBookmark bookmark in bookmarks)
             {
@@ -80,7 +82,16 @@ namespace Opus.Services.Implementation.StaticHelpers
                 }
                 if (title.Contains(numberReplace))
                 {
-                    title = title.Replace(numberReplace, (index + 1).ToString());
+                    string countString = (index + 1).ToString();
+                    string numberReplacementString = countString;
+                    int zeroCount = numberCount - countString.Length;
+                    if (zeroCount > 0)
+                    {
+                        numberReplacementString = string.Concat(Enumerable.Repeat("0", zeroCount)) +
+                            numberReplacementString;
+                    }
+
+                    title = title.Replace(numberReplace, numberReplacementString);
                 }
 
                 int identicalCount = added.Where(b => b.Bookmark.Title == title).Count();

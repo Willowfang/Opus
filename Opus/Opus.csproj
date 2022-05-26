@@ -136,6 +136,8 @@
 		<PostBuildEvent>cd "$(MSBuildProjectDirectory)"
 cd ..
 echo { "Version": "$(AssemblyVersion)", "Notes": [], "SetupFileDirectory": "$(SetupFileDir)" } | jq.exe . &gt; "UpdateInfo.json"</PostBuildEvent>
+		<SignAssembly>True</SignAssembly>
+		<AssemblyOriginatorKeyFile>C:\Users\jbjok\OneDrive - O365 Turun yliopisto\Koodaus\Signatures\opusKey.snk</AssemblyOriginatorKeyFile>
 	</PropertyGroup>	
 	
 </Project>
