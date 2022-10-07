@@ -3,5 +3,5 @@ using Prism.Events;
 
 namespace Opus.Events
 {
-    public class CompositionSegmentEvent : PubSubEvent<ICompositionSegment> { }
+    //public class CompositionSegmentEvent : PubSubEvent<ICompositionSegment> { }
 }

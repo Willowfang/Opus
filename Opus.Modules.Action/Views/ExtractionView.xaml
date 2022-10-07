@@ -77,29 +77,17 @@
             </Button>
         </Grid>
         <Grid Grid.Row="1">
-            <TextBlock Style="{DynamicResource MaterialDesignSubtitle1TextBlock}"
-                       Text="{x:Static resLabels:General.NoBookmarks}"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Top"
-                       Margin="30">
-                <TextBlock.Visibility>
-                    <MultiBinding Converter="{StaticResource ZeroAndTrue}">
-                        <Binding Path="FileBookmarks.Count"/>
-                        <Binding Path="IsFileSelected"/>
-                    </MultiBinding>
-                </TextBlock.Visibility>
-            </TextBlock>
             <ListView ItemsSource="{Binding FileBookmarks}"
                       Style="{StaticResource SelectionList}"
                       SelectedItem="{Binding SelectedBookmark}"
                       x:Name="BookmarksList"
                       ItemTemplate="{StaticResource ExtractList}">
-                <i:Interaction.Triggers>
-                    <i:EventTrigger EventName="SelectionChanged">
-                        <prism:InvokeCommandAction Command="{Binding SelectChildrenCommand}"/>
-                    </i:EventTrigger>
-                </i:Interaction.Triggers>
-            </ListView>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <prism:InvokeCommandAction Command="{Binding SelectChildrenCommand}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </ListView>
         </Grid>
 
         <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">

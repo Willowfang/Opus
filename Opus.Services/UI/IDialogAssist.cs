@@ -24,7 +24,7 @@ namespace Opus.Services.UI
         /// <param name="dialog">Dialog to show</param>
         public Task<IDialog> Show(IDialog dialog);
         /// <summary>
-        /// Show a progress dialog and return the associated task and dialog as wella as the associated IProgress
+        /// Show a progress dialog and return the associated task and dialog as well as the associated IProgress
         /// for reporting progress to the dialog.
         /// </summary>
         /// <param name="cancelSource">Cancellation source mainly for user cancellation interaction</param>

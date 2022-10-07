@@ -10,6 +10,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Menus.resx</DependentUpon>
     </Compile>
+    <Compile Update="Buttons\Extraction\Order.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Order.resx</DependentUpon>
+    </Compile>
     <Compile Update="Buttons\General.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -236,6 +241,10 @@
     <EmbeddedResource Update="Buttons\Composition\Menus.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Menus.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Buttons\Extraction\Order.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Order.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Buttons\General.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

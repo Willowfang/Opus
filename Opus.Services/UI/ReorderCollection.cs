@@ -47,13 +47,28 @@ namespace Opus.Services.UI
         }
     }
 
+    public class CollectionItemAddedEventArgs<T>
+    {
+        public T Item { get; }
+
+        public CollectionItemAddedEventArgs(T item)
+        {
+            Item = item;
+        }
+    }
+
     public class ReorderCollection<T> : ObservableCollection<T> where T : ILeveledItem
     {
         public delegate void CollectionReorderedEventHandler(object sender, CollectionReorderedEventArgs e);
+        public delegate void CollectionItemAddedEventHandler(object sender, CollectionItemAddedEventArgs<T> e);
         /// <summary>
         /// Occurs when the collection has been reordered.
         /// </summary>
         public event CollectionReorderedEventHandler CollectionReordered;
+        /// <summary>
+        /// Occurs when an item is added to the collection (using <see cref="Push(T)"/>).
+        /// </summary>
+        public event CollectionItemAddedEventHandler CollectionItemAdded;
 
         private bool isReordering;
         private T selectedItem;
@@ -100,6 +115,13 @@ namespace Opus.Services.UI
             CanReorder = true;
         }
 
+        public ReorderCollection<T> Push(T item)
+        {
+            Add(item);
+            CollectionItemAdded?.Invoke(this, new CollectionItemAddedEventArgs<T>(item));
+            return this;
+        }
+
         protected void SetProperty<TValue>(ref TValue field, TValue value, [CallerMemberName] string propertyName = null)
         {
             if (EqualityComparer<TValue>.Default.Equals(field, value)) return;
@@ -114,14 +136,13 @@ namespace Opus.Services.UI
                 return;
 
             int currentIndex = IndexOf(SelectedItem);
+
             // If item is topmost, do not move up. If item is second, but not on the first
             // level, do not move up (topmost item must be at level 1).
             if (currentIndex == 0 || currentIndex == 1 && SelectedItem.Level > 1)
                 return;
-            // If item is second and is on the first level, move to topmost.
-            //if (MoveIfIndexAndLevel(currentIndex, SelectedItem.Level, 1, 1, 0, true))
-            //    return;
 
+            // If item is second and is on the first level, move to topmost.
             int moveIndex = currentIndex;
             for (int i = currentIndex - 1; i >= 0; i--)
             {

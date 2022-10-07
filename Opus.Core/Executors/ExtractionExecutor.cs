@@ -178,6 +178,7 @@ namespace Opus.Core.Executors
                     orderDialog.Bookmarks.Add(new FileAndBookmarkWrapper(bookmark, file.FilePath));
                 }
             }
+            orderDialog.UpdateIndexes();
 
             if (showDialog)
             {

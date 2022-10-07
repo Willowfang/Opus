@@ -5,6 +5,7 @@
                     xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
                     xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
                     xmlns:resButtons="clr-namespace:Opus.Resources.Buttons;assembly=Opus.Resources"
+                    xmlns:resExtractButtons="clr-namespace:Opus.Resources.Buttons.Extraction;assembly=Opus.Resources"
                     xmlns:resDialog="clr-namespace:Opus.Resources.Labels.Dialogs;assembly=Opus.Resources"
                     xmlns:resLabels="clr-namespace:Opus.Resources.Labels;assembly=Opus.Resources"
                     xmlns:resValidation="clr-namespace:Opus.Resources.Validation;assembly=Opus.Resources"
@@ -254,15 +255,18 @@
                        VerticalAlignment="Center"
                        TextWrapping="Wrap"
                        TextAlignment="Center"
-                       Width="370"
+                       Width="440"
                        Style="{DynamicResource MaterialDesignCaptionTextBlock}"
                        FontStyle="Italic"
                        Text="{x:Static resDialog:ExtractionOrder.Instructions}"
                        Margin="10, 10, 10, 20"/>
             <ListView ItemsSource="{Binding Bookmarks}"
-                      Width="370"
-                      Height="350"
-                      Style="{StaticResource SelectionList}"
+                      Width="440"
+                      MinHeight="250"
+                      MaxHeight="380"
+                      Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
+                      ItemContainerStyle="{StaticResource OrderItem}"
+                      FocusVisualStyle="{x:Null}"
                       SelectedItem="{Binding Bookmarks.SelectedItem}"
                       Grid.Row="0"
                       SelectionMode="Single"
@@ -273,7 +277,13 @@
                     <KeyBinding Key="Down" Modifiers="Ctrl" Command="{Binding Bookmarks.MoveDown}"/>
                 </ListView.InputBindings>
             </ListView>
-            <StackPanel Margin="0, 0, 10, 0"
+            <Button Style="{StaticResource MaterialDesignOutlinedLightButton}"
+                    Content="{x:Static resExtractButtons:Order.AddExternal}"
+                    Command="{Binding AddExternal}"
+                    Margin="10, 20, 10, 0"/>
+            <Separator Style="{DynamicResource MaterialDesignSeparator}"
+                           Margin="10, 20, 10, 0"/>
+            <StackPanel Margin="0, 10, 10, 0"
                         Visibility="{Binding SingleFile, Converter={StaticResource BooleanToVisibilityConverter}}">
                 <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
                            VerticalAlignment="Center"
@@ -747,10 +757,10 @@
                          Opacity="0.3"
                          StrokeThickness="2"/>
                 <ProgressBar Style="{DynamicResource MaterialDesignCircularProgressBar}"
-                             Foreground="{DynamicResource SecondaryHueMidBrush}"
                              Width="60" Height="60"
                              Value="{Binding TotalPercent}"
                              IsIndeterminate="True"
+                             Foreground="{DynamicResource PrimaryHueLightBrush}"
                              VerticalAlignment="Center" HorizontalAlignment="Center"
                              x:Name="MainProgress">
                 </ProgressBar>

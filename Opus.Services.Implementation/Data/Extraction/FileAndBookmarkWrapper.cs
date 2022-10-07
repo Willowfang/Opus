@@ -1,17 +1,20 @@
 ﻿using CX.PdfLib.Services.Data;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Prism.Mvvm;
 
 namespace Opus.Services.Implementation.Data.Extraction
 {
-    public class FileAndBookmarkWrapper : ILeveledItem
+    public class FileAndBookmarkWrapper : BindableBase, ILeveledItem
     {
         public int Level { get; set; }
-        public int Index { get; set; }
+
+        private int index;
+        public int Index
+        {
+            get { return index; }
+            set { SetProperty(ref index, value); }
+        }
+
         public string FileName { get; }
         public string FilePath { get; }
         public ILeveledBookmark Bookmark { get; }

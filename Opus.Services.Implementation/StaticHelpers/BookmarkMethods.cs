@@ -56,11 +56,18 @@ namespace Opus.Services.Implementation.StaticHelpers
 
         public static IEnumerable<FileAndBookmarkWrapper> GetRenamedAndIndexed(IEnumerable<ILeveledBookmark> bookmarks, IList<FileAndBookmarkWrapper> order, string titleTemplate, string filePath, ILogbook? logbook = null)
         {
+            // The constant amount of numbers added in the name of every file (e.g. if more than 10 files: 01, 
+            // 02, 03 etc).
             int numberCount = bookmarks.Count().ToString().Length;
 
+            // The list to return
             IList<FileAndBookmarkWrapper> added = new List<FileAndBookmarkWrapper>();
+
             foreach (ILeveledBookmark bookmark in bookmarks)
             {
+                // Find the corresponding comparison bookmark from ordered bookmarks by comparing
+                // filepaths and contents of their respective bookmarks. The index of the comparison bookmark
+                // is used to rearrange actual bookmarks.
                 FileAndBookmarkWrapper? compare = order.FirstOrDefault(w => w.FilePath == filePath 
                 && w.Bookmark == bookmark);
                 int index = compare != null ? order.IndexOf(compare) : 0;
@@ -121,6 +128,11 @@ namespace Opus.Services.Implementation.StaticHelpers
             }
 
             return adjusted;
+        }
+
+        public static FileAndBookmarkWrapper GetPlaceHolderBookmarkWrapper(string title, string fileName, int index = 0)
+        {
+            return new FileAndBookmarkWrapper(new LeveledBookmark(0, title, 0, 0), fileName, index);
         }
     }
 }
