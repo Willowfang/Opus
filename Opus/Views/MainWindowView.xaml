@@ -9,7 +9,7 @@
         xmlns:resMain="clr-namespace:Opus.Resources.Labels.MainWindow;assembly=Opus.Resources"
         xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
-        Title="Opus" MinHeight="600" Height="800" MinWidth="570" Width="570"
+        Title="Opus" MinHeight="600" Height="800" MinWidth="570"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"

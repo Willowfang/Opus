@@ -36,6 +36,11 @@ namespace Opus.Values
         public const string MAINSECTION_THREE_FILE = "MainSectionFileRegion";
         public const string MAINSECTION_THREE_ACTION = "MainSectionActionRegion";
         public const string MAINSECTION_THREE_OPTIONS = "MainSectionOptionsRegion";
+
+        public const string MAINSECTION_FOUR_FILE = "MainSectionFourFile";
+        public const string MAINSECTION_FOUR_ACTION = "MainSectionFourAction";
+        public const string MAINSECTION_FOUR_OPTIONS = "MainSectionFourOptions";
+        public const string MAINSECTION_FOUR_SUPPORT = "MainSectionFourSupport";
     }
 
     public static class SchemeNames
