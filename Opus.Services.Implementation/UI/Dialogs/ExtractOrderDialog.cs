@@ -1,5 +1,6 @@
 ﻿using CX.LoggingLib;
 using CX.PdfLib.Services.Data;
+using GongSolutions.Wpf.DragDrop;
 using Opus.Services.Implementation.Data.Extraction;
 using Opus.Services.Implementation.StaticHelpers;
 using Opus.Services.UI;
@@ -10,6 +11,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Opus.Services.Implementation.UI.Dialogs
@@ -39,7 +41,14 @@ namespace Opus.Services.Implementation.UI.Dialogs
             GroupByFiles = groupByFiles;
             Bookmarks.CollectionReordered += (sender, args) => UpdateIndexes();
             Bookmarks.CollectionItemAdded += (sender, args) => UpdateIndexes();
+            Bookmarks.CollectionChanged += Bookmarks_CollectionChanged;
         }
+
+        private void Bookmarks_CollectionChanged(object? sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            UpdateIndexes();
+        }
+
 
         private void ExecuteAddExternal()
         {
