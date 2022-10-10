@@ -1,11 +1,14 @@
 ﻿using CX.PdfLib.Services.Data;
 using System.IO;
 using Prism.Mvvm;
+using System;
 
 namespace Opus.Services.Implementation.Data.Extraction
 {
     public class FileAndBookmarkWrapper : BindableBase, ILeveledItem
     {
+        public Guid Id { get; }
+
         public int Level { get; set; }
 
         private int index;
@@ -13,6 +16,13 @@ namespace Opus.Services.Implementation.Data.Extraction
         {
             get { return index; }
             set { SetProperty(ref index, value); }
+        }
+
+        private bool dropOpen;
+        public bool DropOpen
+        {
+            get { return dropOpen; }
+            set { SetProperty(ref dropOpen, value); }
         }
 
         public string FileName { get; }
@@ -26,6 +36,7 @@ namespace Opus.Services.Implementation.Data.Extraction
             FilePath = filePath;
             FileName = Path.GetFileNameWithoutExtension(filePath);
             Index = index;
+            Id = Guid.NewGuid();
         }
 
     }

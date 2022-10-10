@@ -10,4 +10,17 @@
     <ProjectReference Include="..\Opus.Resources\Opus.Resources.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Controls\OrderList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Controls\OrderList.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
 </Project>

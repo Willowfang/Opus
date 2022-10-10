@@ -10,7 +10,8 @@
                     xmlns:resLabels="clr-namespace:Opus.Resources.Labels;assembly=Opus.Resources"
                     xmlns:resValidation="clr-namespace:Opus.Resources.Validation;assembly=Opus.Resources"
                     xmlns:resToolTips="clr-namespace:Opus.Resources.ToolTips;assembly=Opus.Resources"
-                    xmlns:resCompositionToolTips="clr-namespace:Opus.Resources.ToolTips.Composition;assembly=Opus.Resources">
+                    xmlns:resCompositionToolTips="clr-namespace:Opus.Resources.ToolTips.Composition;assembly=Opus.Resources"
+                    xmlns:controls="clr-namespace:Opus.Styles.Controls;assembly=Opus.Styles">
     
     <!-- Contains datatemplates for various dialogs-->
 
@@ -260,23 +261,7 @@
                        FontStyle="Italic"
                        Text="{x:Static resDialog:ExtractionOrder.Instructions}"
                        Margin="10, 10, 10, 20"/>
-            <ListView ItemsSource="{Binding Bookmarks}"
-                      Width="440"
-                      MinHeight="250"
-                      MaxHeight="380"
-                      Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
-                      ItemContainerStyle="{StaticResource OrderItem}"
-                      FocusVisualStyle="{x:Null}"
-                      SelectedItem="{Binding Bookmarks.SelectedItem}"
-                      Grid.Row="0"
-                      SelectionMode="Single"
-                      x:Name="FilesList"
-                      ItemTemplate="{StaticResource ExtractionOrderList}">
-                <ListView.InputBindings>
-                    <KeyBinding Key="Up" Modifiers="Ctrl" Command="{Binding Bookmarks.MoveUp}"/>
-                    <KeyBinding Key="Down" Modifiers="Ctrl" Command="{Binding Bookmarks.MoveDown}"/>
-                </ListView.InputBindings>
-            </ListView>
+            <controls:OrderList/>
             <Button Style="{StaticResource MaterialDesignOutlinedLightButton}"
                     Content="{x:Static resExtractButtons:Order.AddExternal}"
                     Command="{Binding AddExternal}"
