@@ -187,9 +187,9 @@ namespace Opus
 
         private async void Update()
         {
-            bool initilized = await Container.Resolve<IUpdateExecutor>().InitializeUpdate();
+            bool initialized = await Container.Resolve<IUpdateExecutor>().InitializeUpdate();
 
-            if (initilized)
+            if (initialized)
             {
                 Current.Shutdown();
             }
