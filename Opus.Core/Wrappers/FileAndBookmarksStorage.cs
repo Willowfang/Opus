@@ -1,11 +1,7 @@
 ﻿using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Opus.Services.Implementation.Data.Extraction;
 
 namespace Opus.Core.Wrappers
 {
@@ -13,13 +9,13 @@ namespace Opus.Core.Wrappers
     {
         public string FilePath { get; }
         public string FileName { get; }
-        public ObservableCollection<BookmarkStorage> Bookmarks { get; set; }
+        public ObservableCollection<FileAndBookmarkWrapper> Bookmarks { get; set; }
 
         public FileAndBookmarksStorage(string filePath)
         {
             FilePath = filePath;
             FileName = Path.GetFileNameWithoutExtension(filePath);
-            Bookmarks = new ObservableCollection<BookmarkStorage>();
+            Bookmarks = new ObservableCollection<FileAndBookmarkWrapper>();
         }
     }
 }

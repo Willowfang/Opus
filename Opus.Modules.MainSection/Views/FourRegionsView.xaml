@@ -33,7 +33,7 @@
                 </materialDesign:Card>
             </Grid>
 
-            <materialDesign:Card Padding="32" Margin="16, 8, 16, 8" Opacity="1" Grid.Column="0"
+            <materialDesign:Card Padding="32, 24, 32, 24" Margin="16, 8, 16, 8" Opacity="1" Grid.Column="0"
                              prism:RegionManager.RegionName="{x:Static const:RegionNames.MAINSECTION_FOUR_ACTION}"
                              materialDesign:ShadowAssist.ShadowDepth="Depth3">
                 <materialDesign:Card.Background>
@@ -42,7 +42,7 @@
             </materialDesign:Card>
         </DockPanel>
 
-        <materialDesign:Card Padding="32" Margin="16, 8, 16, 8" Opacity="1" Grid.Column="1"
+        <materialDesign:Card Padding="32, 24, 32, 24" Margin="16, 8, 16, 8" Opacity="1" Grid.Column="1"
                              prism:RegionManager.RegionName="{x:Static const:RegionNames.MAINSECTION_FOUR_SUPPORT}"
                              materialDesign:ShadowAssist.ShadowDepth="Depth3">
             <materialDesign:Card.Background>

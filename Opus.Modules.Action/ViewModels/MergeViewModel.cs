@@ -90,6 +90,11 @@ namespace Opus.Modules.Action.ViewModels
 
             logbook.Write($"{this} unsubscribed from {nameof(FilesAddedEvent)}.", LogLevel.Debug);
         }
+        public void Reset()
+        {
+            Collection?.Clear();
+        }
+
         private void FilesAdded(string[] files)
         {
             foreach (var file in files)

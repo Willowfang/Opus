@@ -450,6 +450,11 @@
             Operations to perform when navigated from by <see cref="T:Opus.Services.UI.INavigationAssist"/>
             </summary>
         </member>
+        <member name="M:Opus.Services.UI.INavigationTarget.Reset">
+            <summary>
+            Operations to perform when a reset has been requested by the user.
+            </summary>
+        </member>
         <member name="E:Opus.Services.UI.ReorderCollection`1.CollectionReordered">
             <summary>
             Occurs when the collection has been reordered.
@@ -458,6 +463,11 @@
         <member name="E:Opus.Services.UI.ReorderCollection`1.CollectionItemAdded">
             <summary>
             Occurs when an item is added to the collection (using <see cref="M:Opus.Services.UI.ReorderCollection`1.Push(`0)"/>).
+            </summary>
+        </member>
+        <member name="E:Opus.Services.UI.ReorderCollection`1.CollectionSelectedItemChanged">
+            <summary>
+            Occures when currently selected item changes.
             </summary>
         </member>
     </members>

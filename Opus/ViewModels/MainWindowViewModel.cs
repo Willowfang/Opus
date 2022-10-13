@@ -111,7 +111,7 @@ namespace Opus.ViewModels
         #region LANGUAGE
         private IAsyncCommand<string> _languageCommand;
         public IAsyncCommand<string> LanguageCommand =>
-            _languageCommand ?? (_languageCommand = new AsyncCommand<string>(ExecuteLanguage));
+            _languageCommand ??= new AsyncCommand<string>(ExecuteLanguage);
         private async Task ExecuteLanguage(string language)
         {
             logbook.Write($"Change of language to {language} requested.", LogLevel.Information);
@@ -153,5 +153,16 @@ namespace Opus.ViewModels
             Application.Current.Shutdown();
         }
         #endregion NAVIGATION
+
+        #region OTHERS
+        private DelegateCommand resetCommand;
+        public DelegateCommand ResetCommand =>
+            resetCommand ?? (resetCommand = new DelegateCommand(ExecuteReset));
+
+        private void ExecuteReset()
+        {
+            eventAggregator.GetEvent<ActionResetEvent>().Publish();
+        }
+        #endregion
     }
 }

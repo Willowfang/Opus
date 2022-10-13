@@ -57,10 +57,17 @@ namespace Opus.Services.UI
         }
     }
 
+    public class CollectionSelectedItemChangedEventArgs<T> : CollectionItemAddedEventArgs<T>
+    {
+        public CollectionSelectedItemChangedEventArgs(T item) : base(item) { }
+    }
+
     public class ReorderCollection<T> : ObservableCollection<T> where T : ILeveledItem
     {
         public delegate void CollectionReorderedEventHandler(object sender, CollectionReorderedEventArgs e);
         public delegate void CollectionItemAddedEventHandler(object sender, CollectionItemAddedEventArgs<T> e);
+        public delegate void CollectionSelectedItemChangedEventHandler(object sender, CollectionSelectedItemChangedEventArgs<T> e);
+
         /// <summary>
         /// Occurs when the collection has been reordered.
         /// </summary>
@@ -69,6 +76,10 @@ namespace Opus.Services.UI
         /// Occurs when an item is added to the collection (using <see cref="Push(T)"/>).
         /// </summary>
         public event CollectionItemAddedEventHandler CollectionItemAdded;
+        /// <summary>
+        /// Occures when currently selected item changes.
+        /// </summary>
+        public event CollectionSelectedItemChangedEventHandler CollectionSelectedItemChanged;
 
         private bool isReordering;
         private T selectedItem;
@@ -88,7 +99,11 @@ namespace Opus.Services.UI
         public T SelectedItem
         {
             get => selectedItem;
-            set => SetProperty(ref selectedItem, value);
+            set
+            {
+                SetProperty(ref selectedItem, value);
+                CollectionSelectedItemChanged?.Invoke(this, new CollectionSelectedItemChangedEventArgs<T>(SelectedItem));
+            }
         }
 
         private ICommand moveUp;
@@ -120,6 +135,12 @@ namespace Opus.Services.UI
             Add(item);
             CollectionItemAdded?.Invoke(this, new CollectionItemAddedEventArgs<T>(item));
             return this;
+        }
+
+        public void RemoveSelected()
+        {
+            Remove(SelectedItem);
+            SelectedItem = default(T);
         }
 
         protected void SetProperty<TValue>(ref TValue field, TValue value, [CallerMemberName] string propertyName = null)

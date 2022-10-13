@@ -15,6 +15,7 @@ namespace Opus.Modules.Action
             var navigator = containerProvider.Resolve<INavigationAssist>();
 
             navigator.Add<ExtractionView>(RegionNames.MAINSECTION_FOUR_ACTION, SchemeNames.SPLIT);
+            navigator.Add<ExtractionOrderView>(RegionNames.MAINSECTION_FOUR_SUPPORT, SchemeNames.SPLIT);
             navigator.Add<WorkCopyView>(RegionNames.MAINSECTION_THREE_ACTION, SchemeNames.WORKCOPY);
             navigator.Add<MergeView>(RegionNames.MAINSECTION_THREE_ACTION, SchemeNames.MERGE);
             navigator.Add<CompositionView>(RegionNames.MAINSECTION_THREE_ACTION, SchemeNames.COMPOSE);

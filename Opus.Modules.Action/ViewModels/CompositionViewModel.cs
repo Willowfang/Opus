@@ -135,7 +135,8 @@ namespace Opus.Modules.Action.ViewModels
 
             logbook.Write($"{this} unsubscribed from {nameof(DirectorySelectedEvent)}.", LogLevel.Debug);
         }
-
+        public void Reset() { }
+        
         private async void DirectorySelected(string path)
         {
             await ExecuteComposition(path);

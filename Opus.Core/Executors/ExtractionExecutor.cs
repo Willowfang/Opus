@@ -109,7 +109,7 @@ namespace Opus.Core.Executors
 
             foreach (FileAndBookmarksStorage storage in files)
             {
-                IEnumerable<ILeveledBookmark> bookmarks = storage.Bookmarks.Where(x => x.IsSelected).Select(y => y.Value);
+                IEnumerable<ILeveledBookmark> bookmarks = storage.Bookmarks.Where(x => x.IsSelected).Select(y => y.Bookmark);
 
                 bookmarks = BookmarkMethods.GetParentsOnly(bookmarks);
 
@@ -171,7 +171,7 @@ namespace Opus.Core.Executors
                 singleFile, configuration.GroupByFiles);
             foreach (FileAndBookmarksStorage file in files)
             {
-                IEnumerable<ILeveledBookmark> bookmarks = file.Bookmarks.Where(x => x.IsSelected).Select(y => y.Value);
+                IEnumerable<ILeveledBookmark> bookmarks = file.Bookmarks.Where(x => x.IsSelected).Select(y => y.Bookmark);
                 bookmarks = BookmarkMethods.GetParentsOnly(bookmarks);
                 foreach (ILeveledBookmark bookmark in bookmarks)
                 {

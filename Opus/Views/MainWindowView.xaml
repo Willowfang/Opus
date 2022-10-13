@@ -5,9 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
         xmlns:const="clr-namespace:Opus.Values;assembly=Opus.Values"
-        xmlns:local="clr-namespace:Opus"
         xmlns:resMain="clr-namespace:Opus.Resources.Labels.MainWindow;assembly=Opus.Resources"
-        xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:resTooltips="clr-namespace:Opus.Resources.ToolTips;assembly=Opus.Resources"
         mc:Ignorable="d"
         Title="Opus" MinHeight="600" Height="800" MinWidth="570"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
@@ -143,50 +142,50 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
+                            <Button Style="{DynamicResource MaterialDesignIconButton}"
+                                    Grid.Column="0"
+                                    HorizontalAlignment="Left"
+                                    Command="{Binding ResetCommand}"
+                                    ToolTip="{x:Static resTooltips:Main.ResetButton}">
+                                <materialDesign:PackIcon
+                                    Kind="Restart"/>
+                            </Button>
                             <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
                                        Grid.Column="1"
                                        Style="{DynamicResource MaterialDesignHeadline5TextBlock}"
                                        Text="{Binding Title}"
                                        VerticalAlignment="Center"/>
+
                             <materialDesign:PopupBox Grid.Column="2" 
                                                      HorizontalAlignment="Right" 
                                                      VerticalAlignment="Center"
-                                                     StaysOpen="True">
-                                <StackPanel>
-                                    <Button Style="{DynamicResource HeaderMenuButton}"
-                                            Command="{Binding OpenManual}"
-                                            Content="{x:Static resMain:HelpMenu.UserManual}"/>
-                                    <Button Style="{DynamicResource HeaderMenuButton}"
-                                            Command="{Binding OpenLicenses}"
-                                            Content="{x:Static resMain:HelpMenu.Licences}"/>
-                                    <Button Style="{DynamicResource HeaderMenuButton}"
-                                            Command="{Binding OpenSourceCode}"
-                                            Content="{x:Static resMain:HelpMenu.SourceCode}"/>
-                                    <ToggleButton Style="{DynamicResource HeaderMenuToggleButton}"
-                                                  x:Name="LanguageButton">
-                                        <StackPanel>
-                                            <TextBlock Style="{DynamicResource MaterialDesignButtonTextBlock}"
-                                                       Text="{x:Static resMain:HelpMenu.Language}"
-                                                       VerticalAlignment="Center"
-                                                       HorizontalAlignment="Center"/>
-                                            <Popup IsOpen="{Binding IsChecked, ElementName=LanguageButton}"
-                                                   StaysOpen="False">
-                                                <ItemsControl ItemsSource="{Binding Languages}" x:Name="LanguageMenu"
-                                                              Background="{DynamicResource MaterialDesignDarkBackground}">
-                                                    <ItemsControl.ItemTemplate>
-                                                        <DataTemplate>
-                                                            <Button Style="{DynamicResource HeaderMenuButton}" 
-                                                                    Content="{Binding Name}"
-                                                                    Command="{Binding ElementName=LanguageMenu, 
-                                                                    Path=DataContext.LanguageCommand}"
-                                                                    CommandParameter="{Binding Code}"/>
-                                                        </DataTemplate>
-                                                    </ItemsControl.ItemTemplate>
-                                                </ItemsControl>
-                                            </Popup>
-                                        </StackPanel>
-                                    </ToggleButton>
-                                </StackPanel>
+                                                     StaysOpen="True"
+                                                     Padding="0">
+                                <Menu Background="#FF0F1316">
+                                        <Menu.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <VirtualizingStackPanel Orientation="Vertical"/>
+                                            </ItemsPanelTemplate>
+                                        </Menu.ItemsPanel>
+                                        <MenuItem Header="{x:Static resMain:HelpMenu.UserManual}"
+                                                  Command="{Binding OpenManual}"/>
+                                        <MenuItem Header="{x:Static resMain:HelpMenu.Licences}"
+                                                  Command="{Binding OpenLicenses}"/>
+                                        <MenuItem Header="{x:Static resMain:HelpMenu.SourceCode}"
+                                                  Command="{Binding OpenSourceCode}"/>
+                                        <MenuItem Header="{x:Static resMain:HelpMenu.Language}"
+                                                  ItemsSource="{Binding Languages}"
+                                                  DisplayMemberPath="Name"
+                                                  StaysOpenOnClick="False">
+                                            <MenuItem.ItemContainerStyle>
+                                                <Style TargetType="MenuItem">
+                                                    <Setter Property="StaysOpenOnClick" Value="False"/>
+                                                    <Setter Property="Command" Value="{Binding RelativeSource={RelativeSource AncestorType=MenuItem}, Path=DataContext.LanguageCommand}"/>
+                                                    <Setter Property="CommandParameter" Value="{Binding Code}"/>
+                                                </Style>
+                                            </MenuItem.ItemContainerStyle>
+                                        </MenuItem>
+                                    </Menu>
                             </materialDesign:PopupBox>
                         </Grid>
                     </materialDesign:Card>

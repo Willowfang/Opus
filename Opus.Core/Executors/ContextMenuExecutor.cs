@@ -7,6 +7,7 @@ using Opus.Services.Configuration;
 using Opus.Services.Data;
 using Opus.Services.Data.Composition;
 using Opus.Services.Extensions;
+using Opus.Services.Implementation.Data.Extraction;
 using Opus.Services.Implementation.Logging;
 using Opus.Services.Implementation.UI.Dialogs;
 using Opus.Services.Input;
@@ -156,7 +157,7 @@ namespace Opus.Core.Executors
             FileAndBookmarksStorage storage = new FileAndBookmarksStorage(filePath);
             foreach (ILeveledBookmark range in ranges)
             {
-                storage.Bookmarks.Add(new BookmarkStorage(range) { IsSelected = true });
+                storage.Bookmarks.Add(new FileAndBookmarkWrapper(range, filePath) { IsSelected = true });
             }
 
             logbook.Write($"Starting bookmark extraction.", LogLevel.Information);
