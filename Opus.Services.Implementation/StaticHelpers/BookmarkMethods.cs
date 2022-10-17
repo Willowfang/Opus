@@ -18,15 +18,19 @@ namespace Opus.Services.Implementation.StaticHelpers
 {
     public static class BookmarkMethods
     {
-        public static async Task<string> AskForTitle(IDialogAssist dialogAssist,
-            IConfiguration configuration)
+        public static async Task<string> AskForTitle(
+            IDialogAssist dialogAssist,
+            IConfiguration configuration
+        )
         {
             string title = configuration.ExtractionTitle;
 
             if (configuration.ExtractionTitleAsk)
             {
                 ExtractSettingsDialog dialog = new ExtractSettingsDialog(
-                    Resources.Labels.Dialogs.ExtractionOptions.AskDialogTitle, true)
+                    Resources.Labels.Dialogs.ExtractionOptions.AskDialogTitle,
+                    true
+                )
                 {
                     Title = configuration.ExtractionTitle
                 };
@@ -42,7 +46,9 @@ namespace Opus.Services.Implementation.StaticHelpers
             return title;
         }
 
-        public static IEnumerable<ILeveledBookmark> GetParentsOnly(IEnumerable<ILeveledBookmark> originals)
+        public static IEnumerable<ILeveledBookmark> GetParentsOnly(
+            IEnumerable<ILeveledBookmark> originals
+        )
         {
             List<ILeveledBookmark> parents = new List<ILeveledBookmark>();
             foreach (ILeveledBookmark original in originals)
@@ -54,48 +60,52 @@ namespace Opus.Services.Implementation.StaticHelpers
             return parents;
         }
 
-        public static IEnumerable<FileAndBookmarkWrapper> GetRenamedAndIndexed(IEnumerable<ILeveledBookmark> bookmarks, IList<FileAndBookmarkWrapper> order, string titleTemplate, string filePath, ILogbook? logbook = null)
+        public static IEnumerable<FileAndBookmarkWrapper> GetRenamed(
+            IList<FileAndBookmarkWrapper> order,
+            string titleTemplate,
+            ILogbook? logbook = null
+        )
         {
-            // The constant amount of numbers added in the name of every file (e.g. if more than 10 files: 01, 
+            // The constant amount of numbers added in the name of every file (e.g. if more than 10 files: 01,
             // 02, 03 etc).
-            int numberCount = bookmarks.Count().ToString().Length;
+            int numberCount = order.Last().Index.ToString().Length;
 
             // The list to return
             IList<FileAndBookmarkWrapper> added = new List<FileAndBookmarkWrapper>();
 
-            foreach (ILeveledBookmark bookmark in bookmarks)
+            foreach (FileAndBookmarkWrapper bookmark in order)
             {
-                // Find the corresponding comparison bookmark from ordered bookmarks by comparing
-                // filepaths and contents of their respective bookmarks. The index of the comparison bookmark
-                // is used to rearrange actual bookmarks.
-                FileAndBookmarkWrapper? compare = order.FirstOrDefault(w => w.FilePath == filePath 
-                && w.Bookmark == bookmark);
-                int index = compare != null ? order.IndexOf(compare) : 0;
+                if (bookmark.Bookmark.Pages.Count == 0)
+                    continue;
 
                 string bmReplace = Resources.Placeholders.FileNames.Bookmark;
                 string fileReplace = Resources.Placeholders.FileNames.File;
                 string numberReplace = Resources.Placeholders.FileNames.Number;
 
                 string title = titleTemplate;
-                title = title.ReplacePlaceholder(Placeholders.Bookmark, bookmark.Title);
+                title = title.ReplacePlaceholder(Placeholders.Bookmark, bookmark.Bookmark.Title);
 
                 if (title.Contains(bmReplace))
                 {
-                    title = title.Replace(bmReplace, bookmark.Title);
+                    title = title.Replace(bmReplace, bookmark.Bookmark.Title);
                 }
                 if (title.Contains(fileReplace))
                 {
-                    title = title.Replace(fileReplace, Path.GetFileNameWithoutExtension(filePath));
+                    title = title.Replace(
+                        fileReplace,
+                        Path.GetFileNameWithoutExtension(bookmark.FilePath)
+                    );
                 }
                 if (title.Contains(numberReplace))
                 {
-                    string countString = (index + 1).ToString();
+                    string countString = bookmark.Index.ToString();
                     string numberReplacementString = countString;
                     int zeroCount = numberCount - countString.Length;
                     if (zeroCount > 0)
                     {
-                        numberReplacementString = string.Concat(Enumerable.Repeat("0", zeroCount)) +
-                            numberReplacementString;
+                        numberReplacementString =
+                            string.Concat(Enumerable.Repeat("0", zeroCount))
+                            + numberReplacementString;
                     }
 
                     title = title.Replace(numberReplace, numberReplacementString);
@@ -108,29 +118,51 @@ namespace Opus.Services.Implementation.StaticHelpers
                     title = $"{title} {identicalCount + 1}";
                 }
 
-                ILeveledBookmark renamed = new LeveledBookmark(bookmark.Level, title, bookmark.Pages);
-                added.Add(new FileAndBookmarkWrapper(renamed, filePath, index));
+                ILeveledBookmark renamed = new LeveledBookmark(
+                    bookmark.Level,
+                    title,
+                    bookmark.Bookmark.Pages
+                );
+                added.Add(
+                    new FileAndBookmarkWrapper(
+                        renamed,
+                        bookmark.FilePath,
+                        bookmark.Index,
+                        bookmark.Id
+                    )
+                );
             }
 
             if (logbook != null)
-                logbook.Write($"{nameof(FileAndBookmarkWrapper)}s renamed according to {nameof(titleTemplate)} '{titleTemplate}' and indexed by {nameof(IEnumerable<ILeveledBookmark>)} {bookmarks}.", LogLevel.Debug);
+                logbook.Write(
+                    $"{nameof(FileAndBookmarkWrapper)}s renamed according to {nameof(titleTemplate)} '{titleTemplate}'.",
+                    LogLevel.Debug
+                );
 
             return added;
         }
 
-        public static IList<ILeveledBookmark> AdjustLevels(IEnumerable<ILeveledBookmark> bookmarks,
-            int adjustment)
+        public static IList<ILeveledBookmark> AdjustLevels(
+            IEnumerable<ILeveledBookmark> bookmarks,
+            int adjustment
+        )
         {
             IList<ILeveledBookmark> adjusted = new List<ILeveledBookmark>();
             foreach (var bookmark in bookmarks)
             {
-                adjusted.Add(new LeveledBookmark(bookmark.Level + adjustment, bookmark.Title, bookmark.Pages));
+                adjusted.Add(
+                    new LeveledBookmark(bookmark.Level + adjustment, bookmark.Title, bookmark.Pages)
+                );
             }
 
             return adjusted;
         }
 
-        public static FileAndBookmarkWrapper GetPlaceHolderBookmarkWrapper(string title, string fileName, int index = 0)
+        public static FileAndBookmarkWrapper GetPlaceHolderBookmarkWrapper(
+            string title,
+            string fileName,
+            int index = 0
+        )
         {
             return new FileAndBookmarkWrapper(new LeveledBookmark(0, title, 0, 0), fileName, index);
         }

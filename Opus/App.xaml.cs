@@ -25,9 +25,6 @@ using CX.LoggingLib;
 using LoggingLib.Defaults;
 using Opus.Services.Implementation.Logging;
 using Opus.Values;
-using System.Reflection;
-using System;
-using System.Diagnostics;
 using CX.ZipLib;
 using CX.ZipLib.Framework;
 
@@ -73,7 +70,8 @@ namespace Opus
 
             bool errorFlag = false;
 
-            if (Directory.Exists(FilePaths.PROFILE_DIRECTORY) == false) return;
+            if (Directory.Exists(FilePaths.PROFILE_DIRECTORY) == false)
+                return;
 
             foreach (string filePath in Directory.GetFiles(FilePaths.PROFILE_DIRECTORY))
             {
@@ -91,8 +89,10 @@ namespace Opus
 
             if (errorFlag)
             {
-                MessageBox.Show(Opus.Resources.Messages.StartUp.ProfileUpdateFailed,
-                        Opus.Resources.Labels.General.Error);
+                MessageBox.Show(
+                    Opus.Resources.Messages.StartUp.ProfileUpdateFailed,
+                    Opus.Resources.Labels.General.Error
+                );
             }
         }
 
@@ -106,8 +106,13 @@ namespace Opus
                 containerRegistry.RegisterSingleton<ILogbook>(x => EmptyLogbook.Create());
 
             // Configuration services
-            string configPath = Path.Combine(FilePaths.CONFIG_DIRECTORY, "Config" + FilePaths.CONFIG_EXTENSION);
-            containerRegistry.RegisterSingleton<IConfiguration>(x => Configuration.Load(configPath, Container.Resolve<ILogbook>()));
+            string configPath = Path.Combine(
+                FilePaths.CONFIG_DIRECTORY,
+                "Config" + FilePaths.CONFIG_EXTENSION
+            );
+            containerRegistry.RegisterSingleton<IConfiguration>(
+                x => Configuration.Load(configPath, Container.Resolve<ILogbook>())
+            );
             SetLanguage();
 
             // Services for manipulating data
@@ -123,13 +128,15 @@ namespace Opus
             // UI-related services
             containerRegistry.RegisterManySingleton<NavigationAssist>(
                 typeof(INavigationAssist),
-                typeof(INavigationTargetRegistry));
+                typeof(INavigationTargetRegistry)
+            );
             containerRegistry.Register<IPathSelection, PathSelectionWin>();
             containerRegistry.RegisterSingleton<IDialogAssist, DialogAssist>();
 
             // Data services
-            var provider = new DataProviderLiteDB(Path.Combine(FilePaths.CONFIG_DIRECTORY,
-                "App" + FilePaths.CONFIG_EXTENSION));
+            var provider = new DataProviderLiteDB(
+                Path.Combine(FilePaths.CONFIG_DIRECTORY, "App" + FilePaths.CONFIG_EXTENSION)
+            );
             containerRegistry.RegisterInstance<IDataProvider>(provider);
             containerRegistry.RegisterSingleton<ICompositionOptions, CompositionOptions>();
 
@@ -142,12 +149,13 @@ namespace Opus
 
             // Context Menu
             containerRegistry.Register<IContextMenu, ContextMenuExecutor>();
-            
+
             containerRegistry.RegisterSingleton<IUpdateExecutor, UpdateExecutor>();
 
             ILogbook logbook = Container.Resolve<ILogbook>();
             logbook.Write("Types registered.", LogLevel.Debug, callerName: "Application");
         }
+
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
             moduleCatalog.AddModule<Modules.MainSection.MainSectionModule>();
@@ -158,11 +166,14 @@ namespace Opus
             ILogbook logbook = Container.Resolve<ILogbook>();
             logbook.Write("Modules configured.", LogLevel.Debug, callerName: "Application");
         }
+
         protected override Window CreateShell()
         {
             updating = Container.Resolve<IUpdateExecutor>().CheckForUpdates();
 
-            return arguments == null ? Container.Resolve<MainWindowView>() : Container.Resolve<ContextMenuView>();
+            return arguments == null
+                ? Container.Resolve<MainWindowView>()
+                : Container.Resolve<ContextMenuView>();
         }
 
         protected override void OnInitialized()

@@ -12,14 +12,15 @@ namespace Opus.Modules.MainSection
         {
             var navigator = containerProvider.Resolve<INavigationAssist>();
 
-            navigator.Add<FourRegionsView>(RegionNames.SHELL_MAINSECTION, SchemeNames.SPLIT);
-            navigator.Add<ThreeRegionsView>(RegionNames.SHELL_MAINSECTION, SchemeNames.WORKCOPY,
-                SchemeNames.MERGE, SchemeNames.COMPOSE);
+            navigator.Add<FourRegionsView>(RegionNames.SHELL_MAINSECTION, SchemeNames.EXTRACT);
+            navigator.Add<ThreeRegionsView>(
+                RegionNames.SHELL_MAINSECTION,
+                SchemeNames.WORKCOPY,
+                SchemeNames.MERGE,
+                SchemeNames.COMPOSE
+            );
         }
 
-        public void RegisterTypes(IContainerRegistry containerRegistry)
-        {
-
-        }
+        public void RegisterTypes(IContainerRegistry containerRegistry) { }
     }
 }

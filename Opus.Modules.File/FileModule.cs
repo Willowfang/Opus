@@ -12,15 +12,18 @@ namespace Opus.Modules.File
         {
             var navigator = containerProvider.Resolve<INavigationAssist>();
 
-            navigator.Add<FileMultipleView>(RegionNames.MAINSECTION_FOUR_FILE, SchemeNames.SPLIT);
-            navigator.Add<FileMultipleView>(RegionNames.MAINSECTION_THREE_FILE, SchemeNames.WORKCOPY);
+            navigator.Add<FileMultipleView>(RegionNames.MAINSECTION_FOUR_FILE, SchemeNames.EXTRACT);
+            navigator.Add<FileMultipleView>(
+                RegionNames.MAINSECTION_THREE_FILE,
+                SchemeNames.WORKCOPY
+            );
             navigator.Add<FileMultipleView>(RegionNames.MAINSECTION_THREE_FILE, SchemeNames.MERGE);
-            navigator.Add<DirectoryNavigationView>(RegionNames.MAINSECTION_THREE_FILE, SchemeNames.COMPOSE);
+            navigator.Add<DirectoryNavigationView>(
+                RegionNames.MAINSECTION_THREE_FILE,
+                SchemeNames.COMPOSE
+            );
         }
 
-        public void RegisterTypes(IContainerRegistry containerRegistry)
-        {
-
-        }
+        public void RegisterTypes(IContainerRegistry containerRegistry) { }
     }
 }

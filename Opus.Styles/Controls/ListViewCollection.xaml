@@ -25,19 +25,17 @@
         <Setter Property="SelectionMode" Value="Multiple"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource SelectionItem}"/>
         <Style.Triggers>
-            <DataTrigger Binding="{Binding FadeInList}" Value="True">
-                <DataTrigger.EnterActions>
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <DoubleAnimation Storyboard.TargetProperty="Opacity"
-                                             From="0"
-                                             To="1"
-                                             Duration="0:0:0.4"
-                                             FillBehavior="Stop"/>
-                        </Storyboard>
-                    </BeginStoryboard>
-                </DataTrigger.EnterActions>
-            </DataTrigger>
+            <EventTrigger RoutedEvent="Binding.TargetUpdated">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         From="0"
+                                         To="1"
+                                         Duration="0:0:0.3"
+                                         FillBehavior="Stop"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
         </Style.Triggers>
     </Style>
 

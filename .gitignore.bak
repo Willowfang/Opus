@@ -359,6 +359,3 @@ Resources/
 
 # Pages
 /docs/
-
-# Sites directory, DocFX
-_site/

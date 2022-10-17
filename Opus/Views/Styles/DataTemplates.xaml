@@ -12,23 +12,32 @@
                     xmlns:resToolTips="clr-namespace:Opus.Resources.ToolTips;assembly=Opus.Resources"
                     xmlns:resCompositionToolTips="clr-namespace:Opus.Resources.ToolTips.Composition;assembly=Opus.Resources"
                     xmlns:controls="clr-namespace:Opus.Styles.Controls;assembly=Opus.Styles">
-    
+
     <!-- Contains datatemplates for various dialogs-->
 
-    <!--MESSAGE DIALOG-->
+    
+    <!--
+         MESSAGE DIALOG
+         Shows the user a given message and only has an OK-button for closing the dialog.
+    -->
     <DataTemplate DataType="{x:Type dialog:MessageDialog}">
         <StackPanel>
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
                        Text="{Binding DialogTitle}"/>
             <TextBlock Style="{DynamicResource DialogContentTextBlock}"
                        Text="{Binding Content}"/>
+            
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogOkButton}"/>
             </StackPanel>
         </StackPanel>
     </DataTemplate>
     
-    <!--UPDATE DIALOG-->
+    <!--
+        UPDATE DIALOG
+        Notifies the user of an impending update for the program. Has the options of
+        updating and closing the program or delaying the update.
+    -->
     <DataTemplate DataType="{x:Type dialog:UpdateDialog}">
         <StackPanel>
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
@@ -36,6 +45,11 @@
             <TextBlock Style="{DynamicResource DialogContentTextBlock}"
                        Text="{Binding UpdateMessage}"
                        Width="250"/>
+            
+            <!-- 
+                Update notes are delivered in a JSON-file with the update file and reside in the same
+                folder path. Notes are displayed here in the ItemsControl.
+            -->
             <ItemsControl ItemsSource="{Binding Notes}"
                           HorizontalAlignment="Center"
                           Width="200"
@@ -48,6 +62,10 @@
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
+            
+            <!--
+                Buttons for accepting the update or delaying it.
+            -->
             <TextBlock Style="{DynamicResource DialogContentTextBlock}"
                        Text="{Binding UpdateConfirmation}"/>
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
@@ -58,13 +76,18 @@
         </StackPanel>
     </DataTemplate>
 
-    <!-- CONFIRMATION DIALOG-->
+    <!-- 
+        CONFIRMATION DIALOG
+        A dialog similar to Message Dialog, but with options to either
+        accept of cancel.
+    -->
     <DataTemplate DataType="{x:Type dialog:ConfirmationDialog}">
         <StackPanel>
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
                        Text="{Binding DialogTitle}"/>
             <TextBlock Style="{DynamicResource DialogContentTextBlock}"
                        Text="{Binding Content}"/>
+            
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}"
                         Content="{x:Static resButtons:General.Confirm}"/>
@@ -73,17 +96,29 @@
         </StackPanel>
     </DataTemplate>
 
-    <!--FILE TITLE DIALOG-->
+    <!--
+        FILE TITLE DIALOG
+        A dialog prompting the user for a file name.
+    -->
     <DataTemplate DataType="{x:Type dialog:FileTitleDialog}">
         <StackPanel>
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
                        Text="{Binding DialogTitle}"/>
+            
+            <!--
+                Textbox for entering the filename. Validates input according to given rules and
+                enables save button only when input is validated.
+            -->
             <TextBox Style="{DynamicResource HintedValidationTextBox}"
                      Text="{Binding Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
                      FontSize="16"
                      Width="250"
                      x:Name="TitleText"
                      md:HintAssist.Hint="{x:Static resLabels:General.Name}"/>
+            
+            <!--
+                Buttons for saving with the given name or canceling the operation.
+            -->
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}"
                         IsEnabled="{Binding ElementName=TitleText, Path=(Validation.HasError), 
@@ -93,17 +128,29 @@
         </StackPanel>
     </DataTemplate>
 
-    <!--NEW BOOKMARK DIALOG-->
+    <!--
+        NEW BOOKMARK DIALOG
+        A dialog for creating a new bookmark for extraction.
+    -->
     <DataTemplate DataType="{x:Type dialog:BookmarkDialog}">
         <StackPanel>
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
                        Text="{Binding DialogTitle}"/>
+            
+            <!--
+                Textbox for the bookmark title. Cannot be empty and is validated.
+            -->
             <TextBox Style="{DynamicResource HintedTextBox}"
                      Text="{Binding Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
                      Width="250"
                      Name="TitleText"
                      md:ValidationAssist.Suppress="True"
                      md:HintAssist.Hint="{x:Static resLabels:General.Name}"/>
+            
+            <!--
+                Textboxes for entering start and end pages. Neither can be empty and must be bigger than zero. 
+                Start page must be smaller or equal than endpage. Both boxes are validated.
+            -->
             <StackPanel Style="{StaticResource NumberFieldStackPanel}">
                 <TextBox Style="{DynamicResource NumberTextBox}"
                          Text="{Binding StartPage, UpdateSourceTrigger=PropertyChanged, 
@@ -119,6 +166,11 @@
                          Name="EndPageText"
                          md:HintAssist.Hint="{x:Static resLabels:General.End}"/>
             </StackPanel>
+            
+            <!--
+                Buttons for saving and cancelling. Save button is enabled only
+                if all textboxes have been validated.
+            -->
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}">
                     <Button.IsEnabled>
@@ -134,11 +186,19 @@
         </StackPanel>
     </DataTemplate>
 
-    <!--EXTRACT SETTINGS DIALOG-->
+    <!--
+        EXTRACT SETTINGS DIALOG
+        Provides controls for changing settings applied to extracted bookmarks.
+    -->
     <DataTemplate DataType="{x:Type dialog:ExtractSettingsDialog}">
         <StackPanel>
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
                        Text="{Binding DialogTitle}"/>
+            
+            <!--
+                Textbox for entering file name template. Various placeholders can be user.
+                Cannot be empty and is validated.
+            -->
             <TextBox Style="{DynamicResource HintedTextBox}"
                      x:Name="TitleTextBox"
                      Text="{Binding Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
@@ -147,11 +207,19 @@
                      Width="300"
                      md:HintAssist.Hint="{Binding NameDescription}"
                      md:HintAssist.HelperText="{Binding NameHelper}"/>
+
             <Separator Style="{DynamicResource MaterialDesignSeparator}"
                        Margin="10, 20, 10, 20"
                        Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}"/>
+
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
                         Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}">
+                
+                <!--
+                    Switch for selecting whether name template is inquired every time an extraction
+                    is requested (vs. using the same template for all extractions). This option is only shown
+                    when this dialog is not displayed as part of an extraction process.
+                -->
                 <StackPanel Margin="0, 0, 10, 0">
                     <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
                                VerticalAlignment="Center"
@@ -166,6 +234,12 @@
                               Cursor="Hand"
                               ToolTip="{x:Static resToolTips:Extraction.SettingsAlwaysAsk}"/>
                 </StackPanel>
+
+                <!--
+                    Switch for selecting whether extracted files should be converted to pdf/a. 
+                    This option is only shown when this dialog is not displayed as part of an extraction process.
+                    Setting is disabled and an informative text is shown, if PDF Tools could not be located.
+                -->
                 <StackPanel>
                     <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
                                VerticalAlignment="Center"
@@ -191,6 +265,11 @@
             <Separator Style="{DynamicResource MaterialDesignSeparator}"
                        Margin="10, 20, 10, 20"
                        Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}"/>
+            
+            <!--
+                Switch for selecting whether the extracted files should be compressed into a zip-file.
+                This option is only shown when this dialog is not displayed as a part of an extraction process.
+            -->
             <StackPanel Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}">
                 <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
                            VerticalAlignment="Center"
@@ -206,6 +285,11 @@
                           ToolTip="{x:Static resToolTips:Extraction.SettingsCreateZip}"/>
             </StackPanel>
 
+            <!--
+                Options for selecting what to do with annotation contained in page ranges of the bookmarks
+                selected for extraction. Keep all, select which ones to remove or remove all.
+                This option is only shown when this dialog is not displayed as a part of an extraction process.
+            -->
             <StackPanel Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}"
                         Margin="0, 0, 0, 10">
                 <Separator Style="{DynamicResource MaterialDesignSeparator}"
@@ -237,6 +321,11 @@
                                  ToolTip="{x:Static resToolTips:Extraction.SettingsAnnotationsAll}"/>
                 </StackPanel>
             </StackPanel>
+            
+            <!--
+                Buttons for saving or cancelling. Cancel-button is hidden, if this dialog is shown as
+                a part of an extraction process.
+            -->
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}"
                         IsEnabled="{Binding ElementName=TitleTextBox, Path=(Validation.HasError),
@@ -247,7 +336,12 @@
         </StackPanel>
     </DataTemplate>
 
-    <!--EXTRACTION BOOKMARK ORDER DIALOG-->
+    <!--
+        EXTRACTION BOOKMARK ORDER DIALOG
+        Dialog for organizing bookmarks in sequence when extracting. NOTE! This dialog is not shown when extractable
+        bookmarks are selected in the full graphical user interface (where they are selected and reordered in the same
+        view).
+    -->
     <DataTemplate DataType="{x:Type dialog:ExtractOrderDialog}">
         <StackPanel Margin="10">
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
@@ -261,13 +355,28 @@
                        FontStyle="Italic"
                        Text="{x:Static resDialog:ExtractionOrder.Instructions}"
                        Margin="10, 10, 10, 20"/>
+            
+            <!--
+                List for reordering the bookmarks by dragging and dropping or by selecting a bookmark
+                and pressing CTRL + arrow keys.
+            -->
             <controls:OrderList/>
+            
+            <!--
+                Button for adding a placeholder for an external file (for numbering purposes).
+            -->
             <Button Style="{StaticResource MaterialDesignOutlinedLightButton}"
                     Content="{x:Static resExtractButtons:Order.AddExternal}"
                     Command="{Binding AddExternal}"
                     Margin="10, 20, 10, 0"/>
+            
             <Separator Style="{DynamicResource MaterialDesignSeparator}"
-                           Margin="10, 20, 10, 0"/>
+                       Margin="10, 20, 10, 0"/>
+            
+            <!--
+                Switch for selecting whether the bookmarks should be organized according to the files they
+                have been extracted from (when extracting to a single file).
+            -->
             <StackPanel Margin="0, 10, 10, 0"
                         Visibility="{Binding SingleFile, Converter={StaticResource BooleanToVisibilityConverter}}">
                 <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
@@ -283,6 +392,10 @@
                           Cursor="Hand"
                           ToolTip="{x:Static resToolTips:Extraction.BookmarkOrderDialogGroupByFiles}"/>
             </StackPanel>
+            
+            <!--
+                Buttons for saving and cancelling.
+            -->
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}"
                         Content="{x:Static resButtons:General.Confirm}"/>
@@ -291,7 +404,11 @@
         </StackPanel>
     </DataTemplate>
 
-    <!--EXTRACTION ANNOTATIONS DIALOG-->
+    <!--
+        EXTRACTION ANNOTATIONS DIALOG
+        A dialog prompting the user to select which annotations the user wishes to get removed
+        from extracted files (when "Select" has been chosen as the annotation removal method).
+    -->
     <DataTemplate DataType="{x:Type dialog:ExtractAnnotationsDialog}">
         <StackPanel>
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
@@ -305,6 +422,12 @@
                        FontStyle="Italic"
                        Text="{x:Static resDialog:ExtractionAnnotations.Instructions}"
                        Margin="10, 10, 10, 20"/>
+            
+            <!--
+                List all annotation creators from the pdfs to this ItemsControl. Creators are
+                searched directly from the pdfs. User can select any number of creators and
+                annotations by selected creators will be removed from products.
+            -->
             <ItemsControl ItemsSource="{Binding Creators}"
                           Width="200">
                 <ItemsControl.ItemTemplate>
@@ -317,6 +440,12 @@
                             <CheckBox Style="{DynamicResource MaterialDesignAccentCheckBox}"
                                       Grid.Column="0"
                                       IsChecked="{Binding IsChecked, Mode=TwoWay}"/>
+                            
+                            <!--
+                                For all other creators, show their name included in the pdf, but for
+                                the extractor himself, show "Own" (if the creator name matches Windows
+                                user name - as it does by default).
+                            -->
                             <TextBlock Grid.Column="1"
                                        Margin="5, 0, 0, 0"
                                        VerticalAlignment="Center"
@@ -329,6 +458,10 @@
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
+            
+            <!--
+                Buttons for saving and cancelling.
+            -->
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}"/>
                 <Button Style="{StaticResource DialogCancelButton}"/>
@@ -336,11 +469,19 @@
         </StackPanel>
     </DataTemplate>
 
-    <!--WORKCOPY SETTINGS DIALOG-->
+    <!--
+        WORKCOPY SETTINGS DIALOG
+        A dialog for choosing work copy creation settings. 
+    -->
     <DataTemplate DataType="{x:Type dialog:WorkCopySettingsDialog}">
         <StackPanel>
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
                        Text="{Binding DialogTitle}"/>
+            
+            <!--
+                Textbox for entering file name template. Most of the same placeholders may be used as in
+                extraction (with some exceptions, i.e., bookmark name). Cannot be empty and is validated.
+            -->
             <TextBox Style="{DynamicResource HintedValidationTextBox}"
                      Text="{Binding TitleTemplate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
                      ValidatesOnDataErrors=True}"
@@ -348,8 +489,14 @@
                      Name="TemplateText"
                      md:HintAssist.Hint="{x:Static resLabels:General.NameTemplate}"
                      md:HintAssist.HelperText="{x:Static resDialog:WorkCopyOptions.NameHelper}"/>
+            
             <Separator Style="{DynamicResource MaterialDesignSeparator}"
                        Margin="10, 20, 10, 20"/>
+            
+            <!--
+                Switch for choosing whether parts marked for redaction should be flattened (i.e.,
+                converted to red boxes) in the work copies.
+            -->
             <StackPanel Margin="0, 0, 0, 0">
                 <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
                            VerticalAlignment="Center"
@@ -364,6 +511,10 @@
                           Cursor="Hand"
                           ToolTip="{x:Static resToolTips:WorkCopy.SettingsRedaction}"/>
             </StackPanel>
+            
+            <!--
+                Buttons for saving and cancelling.
+            -->
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}"
                         IsEnabled="{Binding ElementName=TemplateText, Path=(Validation.HasError), 
@@ -373,11 +524,18 @@
         </StackPanel>
     </DataTemplate>
 
-    <!--MERGE SETTINGS DIALOG-->
+    <!--
+        MERGE SETTINGS DIALOG
+        A dialog for choosing settings for merging files.
+    -->
     <DataTemplate DataType="{x:Type dialog:MergeSettingsDialog}">
         <StackPanel>
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
                        Text="{Binding DialogTitle}"/>
+            
+            <!--
+                Switch for choosing whether to number the pages in the resulting document.
+            -->
             <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
                        VerticalAlignment="Center"
                        Style="{DynamicResource MaterialDesignCaptionTextBlock}"
@@ -388,6 +546,10 @@
                       VerticalAlignment="Center"
                       HorizontalAlignment="Center"
                       Cursor="Hand"/>
+            
+            <!--
+                Buttons for saving and cancelling.
+            -->
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}"/>
                 <Button Style="{StaticResource DialogCancelButton}"/>
@@ -395,11 +557,18 @@
         </StackPanel>
     </DataTemplate>
 
-    <!--COMPOSITION SETTINGS DIALOG-->
+    <!--
+        COMPOSITION SETTINGS DIALOG
+        A dialog for choosing composition settings.
+    -->
     <DataTemplate DataType="{x:Type dialog:CompositionSettingsDialog}">
         <StackPanel>
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
                        Text="{Binding DialogTitle}"/>
+            
+            <!--
+                Switch for choosing whether to also scan in subfolders or not.
+            -->
             <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
                        VerticalAlignment="Center"
                        Style="{DynamicResource MaterialDesignCaptionTextBlock}"
@@ -411,8 +580,15 @@
                       HorizontalAlignment="Center"
                       Cursor="Hand"
                       ToolTip="{x:Static resCompositionToolTips:Settings.Subdirectories}"/>
+            
             <Separator Style="{DynamicResource MaterialDesignSeparator}"
                        Margin="15"/>
+            
+            <!--
+                Switch for choosing whether to delete any converted files created during the process.
+                For example, Word documents are converted to pdf before they are merged into the resulting
+                document. These pdf-files will be preserved unless this option is set to true.
+            -->
             <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
                        VerticalAlignment="Center"
                        Style="{DynamicResource MaterialDesignCaptionTextBlock}"
@@ -424,6 +600,10 @@
                       HorizontalAlignment="Center"
                       Cursor="Hand"
                       ToolTip="{x:Static resCompositionToolTips:Settings.DeleteConverted}"/>
+            
+            <!--
+                Buttons for saving and cancelling.
+            -->
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}"/>
                 <Button Style="{StaticResource DialogCancelButton}"/>
@@ -431,11 +611,19 @@
         </StackPanel>
     </DataTemplate>
 
-    <!--COMPOSITION PROFILE DIALOG-->
+    <!--
+        COMPOSITION PROFILE DIALOG
+        A dialog for creating or modifying a composition profile.
+    -->
     <DataTemplate DataType="{x:Type dialog:CompositionProfileDialog}">
         <StackPanel>
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
                        Text="{Binding DialogTitle}"/>
+            
+            <!--
+                Textbox for entering profile name. Cannot be empty and cannot be same as another
+                existing profile. Is validated.
+            -->
             <TextBox Style="{DynamicResource HintedValidationTextBox}"
                      md:HintAssist.Hint="{x:Static resLabels:General.Name}"
                      Text="{Binding ProfileName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
@@ -443,8 +631,13 @@
                      Name="TitleText"
                      md:ValidationAssist.Suppress="{Binding SuppressError}"
                      Width="200"/>
+            
             <Separator Style="{DynamicResource MaterialDesignSeparator}"
                        Margin="10"/>
+            
+            <!--
+                Switch for choosing whether to add page numbers to the resulting document.
+            -->
             <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
                        VerticalAlignment="Center"
                        Style="{DynamicResource MaterialDesignCaptionTextBlock}"
@@ -455,8 +648,13 @@
                       VerticalAlignment="Center"
                       HorizontalAlignment="Center"
                       Cursor="Hand"/>
+            
             <Separator Style="{DynamicResource MaterialDesignSeparator}"
                        Margin="10"/>
+            
+            <!--
+                Buttons for saving and cancelling.
+            -->
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}"
                         IsEnabled="{Binding ElementName=TitleText, Path=(Validation.HasError), 
@@ -466,26 +664,46 @@
         </StackPanel>
     </DataTemplate>
     
-    <!--COMPOSITION FILESEGMENT DIALOG-->
+    <!--
+        COMPOSITION FILESEGMENT DIALOG
+        A dialog for creating or modifying a profile file segment. File segments are rules that
+        are used to scan for files and rename them in the product.
+    -->
     <DataTemplate DataType="{x:Type dialog:CompositionFileSegmentDialog}">
         <StackPanel>
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
                        Text="{Binding DialogTitle}"/>
+            
+            <!--
+                Name of the file segment. Cannot be empty and is validated.
+            -->
             <TextBox Style="{DynamicResource HintedValidationTextBox}"
                      md:HintAssist.Hint="{x:Static resLabels:General.Name}"
                      Text="{Binding SegmentName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
                      ValidatesOnDataErrors=True}"
                      Name="CompositionFileTitleText"
                      Width="200"/>
+            
+            <!--
+                Switch for choosing whether the final name in the product document should be obtained
+                from the file itself (rather than from a manually entered template).
+            -->
             <CheckBox Style="{DynamicResource MaterialDesignAccentCheckBox}"
                       Content="{x:Static resDialog:CompositionFileSegment.NameFromFileDescription}" 
                       FontSize="14"
                       IsChecked="{Binding NameFromFile}"
                       HorizontalAlignment="Center"
                       Margin="20, 0, 20, 10"/>
+            
             <Separator Style="{DynamicResource MaterialDesignSeparator}"
                        Margin="10"/>
+            
             <StackPanel Orientation="Horizontal">
+                
+                <!--
+                    Textboxes for entering the search (and ignore) criteria of filenames. Must be entered in a valid
+                    Regex form. They are validated.
+                -->
                 <StackPanel>
                     <TextBox Style="{DynamicResource HintedTextBox}"
                              md:HintAssist.Hint="{x:Static resLabels:General.SearchExpression}"
@@ -500,7 +718,13 @@
                              Name="CompositionFileIgnoreExpressionText"
                              Width="200"/>
                 </StackPanel>
+                
                 <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5" RadiusX="2" RadiusY="2"/>
+                
+                <!--
+                    Textboxes for entering the minimun and maximun amount of accepted files of the
+                    same file segment type. Zero means unlimited.
+                -->
                 <StackPanel>
                     <TextBox Style="{DynamicResource NumberTextBox}"
                              Text="{Binding MinCount, UpdateSourceTrigger=PropertyChanged}"
@@ -514,14 +738,25 @@
                              md:HintAssist.Hint="{x:Static resLabels:General.Maximum}"/>
                 </StackPanel>
             </StackPanel>
+            
             <Separator Style="{DynamicResource MaterialDesignSeparator}"
                        Margin="10, 10, 10, 0"/>
+            
+            <!--
+                Textbox for entering a sample name (e.g. "Account receipt 1"). This will be displayed
+                to the user when hovering over a file segment element. This example is not mandatory.
+            -->
             <TextBox Style="{DynamicResource HintedValidationTextBox}"
                      md:HintAssist.Hint="{x:Static resLabels:General.Example}"
                      Text="{Binding Example, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                      Width="200"/>
+            
             <Separator Style="{DynamicResource MaterialDesignSeparator}"
                        Margin="10"/>
+            
+            <!--
+                Buttons for saving and cancelling. Save is only possible if all validations have been approved.
+            -->
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}">
                     <Button.IsEnabled>
@@ -539,17 +774,30 @@
         </StackPanel>
     </DataTemplate>
 
-    <!--COMPOSITION TITLESEGMENT DIALOG-->
+    <!--
+        COMPOSITION TITLESEGMENT DIALOG
+        A dialog for creating and editing a title segment. Title segments are simply bookmarks that
+        will be inserted in the relevant position in the final product. There is no file that would
+        associate with a title.
+    -->
     <DataTemplate DataType="{x:Type dialog:CompositionTitleSegmentDialog}">
         <StackPanel>
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
                        Text="{Binding DialogTitle}"/>
+            
+            <!--
+                Name of the title segment. Cannot be empty and is validated.
+            -->
             <TextBox Style="{DynamicResource HintedValidationTextBox}"
                      md:HintAssist.Hint="{x:Static resLabels:General.Name}"
                      Text="{Binding SegmentName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
                      ValidatesOnDataErrors=True}"
                      Name="CompositionTitleNameText"
                      Width="200"/>
+            
+            <!--
+                Buttons for saving and cancelling.
+            -->
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}"
                         IsEnabled="{Binding ElementName=CompositionTitleNameText, Path=(Validation.HasError),
@@ -559,9 +807,16 @@
         </StackPanel>
     </DataTemplate>
     
-    <!--COMPOSITION PROFILE SELECTION DIALOG-->
+    <!--
+        COMPOSITION PROFILE SELECTION DIALOG
+        A dialog for selecting a composition profile. 
+    -->
     <DataTemplate DataType="{x:Type dialog:CompositionProfileSelectionDialog}">
         <StackPanel Margin="10">
+            
+            <!--
+                Organize profiles according to their editability and name.
+            -->
             <StackPanel.Resources>
                 <CollectionViewSource x:Key="ProfileSource"
                                       Source="{Binding Profiles}">
@@ -571,8 +826,13 @@
                     </CollectionViewSource.SortDescriptions>
                 </CollectionViewSource>
             </StackPanel.Resources>
+            
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
                        Text="{Binding DialogTitle}"/>
+            
+            <!--
+                Combobox for choosing the correct profile.
+            -->
             <ComboBox Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
                       Grid.Column="2"
                       md:HintAssist.Hint="{x:Static resLabels:General.Profile}"
@@ -597,6 +857,10 @@
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
+            
+            <!--
+                Buttons for saving and cancelling.
+            -->
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}"
                         Content="{x:Static resButtons:General.Confirm}"/>
@@ -605,7 +869,10 @@
         </StackPanel>
     </DataTemplate>
 
-    <!--COMPOSITION FILE COUNT DIALOG-->
+    <!--
+        COMPOSITION FILE COUNT DIALOG
+        A dialog prompting user to choose the correct files when there are 
+    -->
     <DataTemplate DataType="{x:Type dialog:CompositionFileCountDialog}">
         <StackPanel Margin="10">
             <TextBlock Style="{DynamicResource DialogTitleTextBlock}"

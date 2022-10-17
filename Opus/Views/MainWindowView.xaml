@@ -7,8 +7,8 @@
         xmlns:const="clr-namespace:Opus.Values;assembly=Opus.Values"
         xmlns:resMain="clr-namespace:Opus.Resources.Labels.MainWindow;assembly=Opus.Resources"
         xmlns:resTooltips="clr-namespace:Opus.Resources.ToolTips;assembly=Opus.Resources"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
-        Title="Opus" MinHeight="600" Height="800" MinWidth="570"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -19,7 +19,12 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         WindowStartupLocation="CenterScreen"
         x:Name="MainWindow"
-        Loaded="Window_Loaded">
+        Loaded="Window_Loaded"
+        Title="Opus" 
+        MinHeight="600" 
+        Height="800" 
+        MinWidth="1000" 
+        Width="1000">
     <Window.Background>
         <!--BACKGROUND IMAGE-->
         <ImageBrush ImageSource="/Opus;component/Images/OpusBackground.png"
@@ -105,7 +110,7 @@
 
                             <!--MAIN MENU BUTTONS-->
                             <RadioButton Style="{DynamicResource MainMenuButton}"
-                                         CommandParameter="{x:Static const:SchemeNames.SPLIT}"
+                                         CommandParameter="{x:Static const:SchemeNames.EXTRACT}"
                                          x:Name="SplitButton">
                                 <materialDesign:PackIcon Width="30" Height="30" 
                                                          Kind="FileDocumentMultiple"/>
@@ -168,11 +173,11 @@
                                             </ItemsPanelTemplate>
                                         </Menu.ItemsPanel>
                                         <MenuItem Header="{x:Static resMain:HelpMenu.UserManual}"
-                                                  Command="{Binding OpenManual}"/>
+                                                  Command="{Binding OpenManualCommand}"/>
                                         <MenuItem Header="{x:Static resMain:HelpMenu.Licences}"
-                                                  Command="{Binding OpenLicenses}"/>
+                                                  Command="{Binding OpenLicensesCommand}"/>
                                         <MenuItem Header="{x:Static resMain:HelpMenu.SourceCode}"
-                                                  Command="{Binding OpenSourceCode}"/>
+                                                  Command="{Binding OpenSourceCodeCommand}"/>
                                         <MenuItem Header="{x:Static resMain:HelpMenu.Language}"
                                                   ItemsSource="{Binding Languages}"
                                                   DisplayMemberPath="Name"

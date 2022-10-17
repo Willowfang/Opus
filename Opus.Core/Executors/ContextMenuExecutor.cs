@@ -37,18 +37,18 @@ namespace Opus.Core.Executors
         private static Mutex mutex = new Mutex(true, "{59FCB8B2-6919-44EF-A717-55DE4C95319E}");
 
         public ContextMenuExecutor(
-            IDialogAssist dialogAssist, 
+            IDialogAssist dialogAssist,
             IConfiguration configuration,
-            IPathSelection input, 
-            IComposer composer, 
+            IPathSelection input,
+            IComposer composer,
             ICompositionOptions compositionOptions,
-            IExtractionExecutor extractionExecutor, 
+            IExtractionExecutor extractionExecutor,
             IPdfAConvertService pdfAConverterService,
             ISignatureExecutor signatureExecutor,
             IBookmarkService bookmarkService,
             IAnnotationService annotationService,
-            ILogbook logbook)
-            : base(logbook)
+            ILogbook logbook
+        ) : base(logbook)
         {
             this.dialogAssist = dialogAssist;
             this.configuration = configuration;
@@ -82,8 +82,10 @@ namespace Opus.Core.Executors
         {
             if (configuration.ExtractionPdfADisabled == true)
             {
-                MessageDialog toolsDialog = new MessageDialog(Resources.Labels.General.Notification,
-                    Resources.Messages.ContextMenu.PdfADisabled);
+                MessageDialog toolsDialog = new MessageDialog(
+                    Resources.Labels.General.Notification,
+                    Resources.Messages.ContextMenu.PdfADisabled
+                );
                 await dialogAssist.Show(toolsDialog);
                 return;
             }
@@ -92,10 +94,13 @@ namespace Opus.Core.Executors
                 return;
 
             string filePath = arguments[1];
-            string destinationPath = input.SaveFile(Resources.UserInput.Descriptions.SelectSaveFile,
-                FileType.PDF);
+            string destinationPath = input.SaveFile(
+                Resources.UserInput.Descriptions.SelectSaveFile,
+                FileType.PDF
+            );
 
-            if (destinationPath == null || filePath == null) return;
+            if (destinationPath == null || filePath == null)
+                return;
 
             try
             {
@@ -107,8 +112,10 @@ namespace Opus.Core.Executors
             }
             catch (UnauthorizedAccessException)
             {
-                MessageDialog unauthorized = new MessageDialog(Resources.Labels.General.Error,
-                    Resources.Messages.General.ErrorFileInUse);
+                MessageDialog unauthorized = new MessageDialog(
+                    Resources.Labels.General.Error,
+                    Resources.Messages.General.ErrorFileInUse
+                );
                 await dialogAssist.Show(unauthorized);
                 return;
             }
@@ -119,13 +126,19 @@ namespace Opus.Core.Executors
 
             logbook.Write($"Starting conversion to pdf/a.", LogLevel.Information);
 
-            bool success = await pdfAConvertService.Convert(new FileInfo(destinationPath), 
-                new DirectoryInfo(Path.GetDirectoryName(destinationPath)), token);
+            bool success = await pdfAConvertService.Convert(
+                new FileInfo(destinationPath),
+                new DirectoryInfo(Path.GetDirectoryName(destinationPath)),
+                token
+            );
 
             if (success == false)
             {
                 string content = $"{Resources.Messages.Extraction.PdfAConversionError}.";
-                MessageDialog message = new MessageDialog(Resources.Labels.General.Notification, content);
+                MessageDialog message = new MessageDialog(
+                    Resources.Labels.General.Notification,
+                    content
+                );
                 await dialogAssist.Show(message);
                 tokenSource.Cancel();
                 return;
@@ -143,9 +156,12 @@ namespace Opus.Core.Executors
                 return;
 
             string filePath = arguments[1];
-            string fileDirectory = input.OpenDirectory(Resources.UserInput.Descriptions.SelectSaveFolder);
+            string fileDirectory = input.OpenDirectory(
+                Resources.UserInput.Descriptions.SelectSaveFolder
+            );
 
-            if (fileDirectory == null) return;
+            if (fileDirectory == null)
+                return;
 
             IList<ILeveledBookmark> ranges;
 
@@ -157,13 +173,17 @@ namespace Opus.Core.Executors
             FileAndBookmarksStorage storage = new FileAndBookmarksStorage(filePath);
             foreach (ILeveledBookmark range in ranges)
             {
-                storage.Bookmarks.Add(new FileAndBookmarkWrapper(range, filePath) { IsSelected = true });
+                storage.Bookmarks.Add(
+                    new FileAndBookmarkWrapper(range, filePath) { IsSelected = true }
+                );
             }
 
             logbook.Write($"Starting bookmark extraction.", LogLevel.Information);
 
-            await extractionExecutor.Save(new DirectoryInfo(fileDirectory), 
-                new List<FileAndBookmarksStorage> { storage });
+            await extractionExecutor.Save(
+                new DirectoryInfo(fileDirectory),
+                new List<FileAndBookmarkWrapper>(storage.Bookmarks)
+            );
 
             logbook.Write($"Bookmark extraction finished.", LogLevel.Information);
         }
@@ -221,7 +241,9 @@ namespace Opus.Core.Executors
 
             IList<ICompositionProfile> profiles = compositionOptions.GetProfiles();
             CompositionProfileSelectionDialog dialog = new CompositionProfileSelectionDialog(
-                Resources.Labels.Dialogs.CompositionProfileSelection.Title, profiles)
+                Resources.Labels.Dialogs.CompositionProfileSelection.Title,
+                profiles
+            )
             {
                 SelectedProfile = profiles.FirstOrDefault(x => x.Id == configuration.DefaultProfile)
             };
@@ -230,16 +252,25 @@ namespace Opus.Core.Executors
 
             if (dialog.IsCanceled)
             {
-                logbook.Write($"Cancellation was requested at {nameof(IDialog)} '{dialog.DialogTitle}'.", LogLevel.Information);
+                logbook.Write(
+                    $"Cancellation was requested at {nameof(IDialog)} '{dialog.DialogTitle}'.",
+                    LogLevel.Information
+                );
 
                 return;
             }
 
-            logbook.Write($"Starting composition with {nameof(ICompositionProfile)} '{dialog.SelectedProfile.ProfileName}'.",
-                LogLevel.Information);
+            logbook.Write(
+                $"Starting composition with {nameof(ICompositionProfile)} '{dialog.SelectedProfile.ProfileName}'.",
+                LogLevel.Information
+            );
 
-            await composer.Compose(directoryPath, dialog.SelectedProfile, configuration.CompositionDeleteConverted,
-                configuration.CompositionSearchSubDirectories);
+            await composer.Compose(
+                directoryPath,
+                dialog.SelectedProfile,
+                configuration.CompositionDeleteConverted,
+                configuration.CompositionSearchSubDirectories
+            );
 
             logbook.Write($"Composition finished.", LogLevel.Information);
         }
@@ -263,7 +294,9 @@ namespace Opus.Core.Executors
             return selected;
         }
 
-        private (Task dialog, IProgress<ProgressReport> progress) ShowProgress(CancellationTokenSource cancelSource)
+        private (Task dialog, IProgress<ProgressReport> progress) ShowProgress(
+            CancellationTokenSource cancelSource
+        )
         {
             ProgressDialog dialog = new ProgressDialog(null, cancelSource)
             {

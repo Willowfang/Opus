@@ -15,18 +15,6 @@
              prism:ViewModelLocator.AutoWireViewModel="True">
     <UserControl.Resources>
         <ResourceDictionary>
-            <Storyboard x:Key="FadeOutSelectedStoryboard">
-                <DoubleAnimation Duration="0:0:0.3"
-                                 Storyboard.TargetProperty="Opacity"
-                                 FillBehavior="Stop"
-                                 To="0"/>
-            </Storyboard>
-            <Storyboard x:Key="FadeInSelectedStoryboard">
-                <DoubleAnimation Duration="0:0:0.3"
-                                 Storyboard.TargetProperty="Opacity"
-                                 To="1"/>
-            </Storyboard>
-            
             <Style TargetType="{x:Type Button}" x:Key="ToolButton"
                    BasedOn="{StaticResource MaterialDesignIconButton}">
                 <Setter Property="Margin" Value="0, 16, 0, 0"/>
@@ -108,7 +96,7 @@
                        TextAlignment="Center"/>
         </StackPanel>
         <Grid Grid.Row="1">
-            <ListView ItemsSource="{Binding FileBookmarks}"
+            <ListView ItemsSource="{Binding FileBookmarks, NotifyOnTargetUpdated=True}"
                       Style="{StaticResource SelectionList}"
                       SelectedItem="{Binding SelectedBookmark}"
                       ItemContainerStyle="{StaticResource SelectVisibilityItem}"
@@ -126,7 +114,7 @@
                     Grid.Row="2"
                     HorizontalAlignment="Center">
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding IsFileSelected}"
+                    IsEnabled="{Binding SelectedFile, Converter={StaticResource NullToBool}}"
                     Command="{Binding AddCommand}"
                     ToolTip="{x:Static resTooltips:Extraction.AddButton}">
                 <materialDesign:PackIcon Kind="PlusBold"/>

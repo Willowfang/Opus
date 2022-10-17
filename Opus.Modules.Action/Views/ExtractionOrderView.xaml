@@ -43,7 +43,7 @@
         <Button Style="{StaticResource MaterialDesignOutlinedLightButton}"
                 Content="{x:Static resExtractButtons:Order.AddExternal}"
                 IsEnabled="{Binding CollectionHasActualBookmarks}"
-                Command="{Binding AddExternal}"
+                Command="{Binding AddExternalCommand}"
                 Margin="10, 20, 10, 0"
                 Grid.Row="2"/>
         <StackPanel Orientation="Horizontal" 
