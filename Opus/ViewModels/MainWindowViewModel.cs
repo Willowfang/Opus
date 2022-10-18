@@ -29,8 +29,12 @@ namespace Opus.ViewModels
         private readonly IEventAggregator eventAggregator;
 
         /// <summary>
-        /// NOTE! MainWindowView is bound to this service (by getting the active dialog from here)
+        /// Dialog services reference for showing various dialogs.
         /// </summary>
+        /// <remarks>
+        /// MainWindowView is bound to this object, hence its publicity. The view is
+        /// bound to the currently shown dialog.
+        /// </remarks>
         public IDialogAssist Dialog { get; set; }
         #endregion
 
@@ -57,10 +61,10 @@ namespace Opus.ViewModels
         /// ViewModel responsible for the main window. Handles navigation functions
         /// and program-wide responsibilities.
         /// </summary>
-        /// <param name="eventAggregator"></param>
-        /// <param name="config"></param>
-        /// <param name="dialogAssist"></param>
-        /// <param name="logbook"></param>
+        /// <param name="eventAggregator">Service for sending events between view models (and other entities).</param>
+        /// <param name="configuration">Program-wide configurations for paths, settings etc.</param>
+        /// <param name="dialogAssist">Service for showing various dialogs to the user.</param>
+        /// <param name="logbook">Logging services.</param>
         public MainWindowViewModel(
             IEventAggregator eventAggregator,
             IConfiguration configuration,
@@ -102,8 +106,12 @@ namespace Opus.ViewModels
 
         /// <summary>
         /// Execution method for user manual opening command, see <see cref="OpenManualCommand"/>
+        /// <para>
+        /// Opens the User manual as a separate process. The manual is an internet link, so most probably it will
+        /// be opened in the system default browser.
+        /// </para>
         /// </summary>
-        void ExecuteOpenManualCommand()
+        protected void ExecuteOpenManualCommand()
         {
             // Open link in system default browser
 
@@ -126,8 +134,12 @@ namespace Opus.ViewModels
 
         /// <summary>
         /// Execution method for open licences command, see <see cref="OpenLicensesCommand"/>
+        /// <para>
+        /// Opens the license file in a separate process. The file is a txt-file. Unless another program has
+        /// been defined for txt-files, it will be opened in Notepad.
+        /// </para>
         /// </summary>
-        void ExecuteOpenLicensesCommand()
+        protected void ExecuteOpenLicensesCommand()
         {
             // Open the included licenses file in the system default program
 
@@ -155,9 +167,12 @@ namespace Opus.ViewModels
             ?? (openSourceCodeCommand = new DelegateCommand(ExecuteOpenSourceCodeCommand));
 
         /// <summary>
-        /// Execution method for source code opening command, see <see cref="OpenSourceCodeCommand"/>
+        /// Execution method for source code opening command, see <see cref="OpenSourceCodeCommand"/>.
+        /// <para>
+        /// Source code is published to GitHub. This is, again, an internet link and will most likely be opened in the default browser.
+        /// </para>
         /// </summary>
-        void ExecuteOpenSourceCodeCommand()
+        protected void ExecuteOpenSourceCodeCommand()
         {
             // Open link in system default browser.
 
@@ -178,11 +193,17 @@ namespace Opus.ViewModels
             languageCommand ??= new AsyncCommand<string>(ExecuteLanguageCommand);
 
         /// <summary>
-        /// Execution method for UI language change command, see <see cref="LanguageCommand"/>
+        /// Execution method for UI language change command, see <see cref="LanguageCommand"/>.
+        /// <para>
+        /// Only changes language, if the selected language is not the same as the language already selected.
+        /// </para>
+        /// <para>
+        /// Saves the language configuration for persistence and notifies the user of the need for restart.
+        /// </para>
         /// </summary>
         /// <param name="language">New language choice as a two-letter code (e.g. "fi")</param>
-        /// <returns></returns>
-        private async Task ExecuteLanguageCommand(string language)
+        /// <returns>A void async task</returns>
+        protected async Task ExecuteLanguageCommand(string language)
         {
             logbook.Write($"Change of language to {language} requested.", LogLevel.Information);
 
@@ -214,10 +235,13 @@ namespace Opus.ViewModels
 
         /// <summary>
         /// Execution method for navigation command, see <see cref="NavigateCommand"/>.
+        /// <para>
+        /// Publishes a ViewChange event that is listened to by <see cref="INavigationAssist"/>.
+        /// </para>
         /// </summary>
         /// <param name="name">Name of the scheme to apply. Scheme names can be found at
         /// <see cref="SchemeNames"/>.</param>
-        void ExecuteNavigateCommand(string name)
+        protected void ExecuteNavigateCommand(string name)
         {
             logbook.Write($"Navigation requested for scheme {name}.", LogLevel.Information);
 
@@ -250,8 +274,11 @@ namespace Opus.ViewModels
 
         /// <summary>
         /// Execution method for exit command, see <see cref="ExitCommand"/>.
+        /// <para>
+        /// Shuts the program down by calling shutdown on <see cref="Application.Current"/>.
+        /// </para>
         /// </summary>
-        private void ExecuteExitCommand()
+        protected void ExecuteExitCommand()
         {
             Application.Current.Shutdown();
         }
@@ -265,9 +292,13 @@ namespace Opus.ViewModels
             resetCommand ?? (resetCommand = new DelegateCommand(ExecuteResetCommand));
 
         /// <summary>
-        /// Execution method for scheme resetting command, see <see cref="ResetCommand"/>.
+        /// Execution method for scheme resetting command, see <see cref="ResetCommand"/>
+        /// <para>
+        /// Publishes an <see cref="ActionResetEvent"/> that is subscribed to by viewmodels of currently viewed
+        /// views.
+        /// </para>
         /// </summary>
-        private void ExecuteResetCommand()
+        protected void ExecuteResetCommand()
         {
             // ViewModels of the current scheme have been subscribed to ActionResetEvent if they
             // implement INavigationTarget. Reset is handled by each ViewModel respectively with

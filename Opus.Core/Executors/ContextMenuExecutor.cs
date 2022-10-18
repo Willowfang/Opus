@@ -21,8 +21,13 @@ using System.Threading.Tasks;
 
 namespace Opus.Core.Executors
 {
+    /// <summary>
+    /// This class wraps together pdf-manipulation and other types of services to run them
+    /// when an action is requested in the context-menu environment.
+    /// </summary>
     public class ContextMenuExecutor : LoggingCapable<ContextMenuExecutor>, IContextMenu
     {
+        // Dependency injection services
         private readonly IDialogAssist dialogAssist;
         private readonly IConfiguration configuration;
         private readonly IPathSelection input;
@@ -36,6 +41,20 @@ namespace Opus.Core.Executors
 
         private static Mutex mutex = new Mutex(true, "{59FCB8B2-6919-44EF-A717-55DE4C95319E}");
 
+        /// <summary>
+        /// Create a new context menu action executor.
+        /// </summary>
+        /// <param name="dialogAssist">Service for showing and otherwise handling dialogs.</param>
+        /// <param name="configuration">Program-wide configurations.</param>
+        /// <param name="input">Service for taking user input for choosing a file or folder path.</param>
+        /// <param name="composer">Service for composing a new pdf-document.</param>
+        /// <param name="compositionOptions">Options for composition.</param>
+        /// <param name="extractionExecutor">Collection of smaller services for extracting bookmarks from a document.</param>
+        /// <param name="pdfAConverterService">Service for converting a pdf product to pdf/a-format.</param>
+        /// <param name="signatureExecutor">Service for removing digital signatures from documents.</param>
+        /// <param name="bookmarkService">Service for finding bookmarks in a pdf-document.</param>
+        /// <param name="annotationService">Service for finding and manipulating annotations in a pdf-document.</param>
+        /// <param name="logbook">Logging service.</param>
         public ContextMenuExecutor(
             IDialogAssist dialogAssist,
             IConfiguration configuration,
@@ -50,6 +69,7 @@ namespace Opus.Core.Executors
             ILogbook logbook
         ) : base(logbook)
         {
+            // Assign DI services
             this.dialogAssist = dialogAssist;
             this.configuration = configuration;
             this.input = input;
@@ -62,10 +82,18 @@ namespace Opus.Core.Executors
             this.annotationService = annotationService;
         }
 
+        /// <summary>
+        /// Run the requested action.
+        /// </summary>
+        /// <param name="arguments">Arguments containing info on the requested
+        /// action and other required info.</param>
+        /// <returns>An awaitable task.</returns>
         public async Task Run(string[] arguments)
         {
             string operation = arguments[0];
 
+            // Start the correct operation based on the first argument.
+            // If the first arg is not a known action, then just return.
             if (operation == Resources.ContextMenu.Arguments.ExtractFile)
                 await ExtractFile(arguments);
             else if (operation == Resources.ContextMenu.Arguments.WorkingCopy)
@@ -78,8 +106,16 @@ namespace Opus.Core.Executors
                 return;
         }
 
-        private async Task ConvertToPdfA(string[] arguments)
+        /// <summary>
+        /// Convert the given pdf-document to pdf/a.
+        /// </summary>
+        /// <param name="arguments">Arguments containing info on the file.</param>
+        /// <returns>An awaitable task.</returns>
+        protected async Task ConvertToPdfA(string[] arguments)
         {
+            // If the system does not contain required software for
+            // pdf/a -conversion, inform the user with a dialog and return.
+
             if (configuration.ExtractionPdfADisabled == true)
             {
                 MessageDialog toolsDialog = new MessageDialog(
@@ -90,8 +126,13 @@ namespace Opus.Core.Executors
                 return;
             }
 
+            // If the arguments do not contain a path to a file, return, or if there
+            // are more than two arguments.
+
             if (arguments.Length != 2)
                 return;
+
+            // Ask the user for a save path.
 
             string filePath = arguments[1];
             string destinationPath = input.SaveFile(
@@ -101,6 +142,9 @@ namespace Opus.Core.Executors
 
             if (destinationPath == null || filePath == null)
                 return;
+
+            // Try to copy the original file to destination path. If there is an access error,
+            // inform the user and return.
 
             try
             {
@@ -120,6 +164,8 @@ namespace Opus.Core.Executors
                 return;
             }
 
+            // Start the conversion process on the copied file at the destination path.
+
             CancellationTokenSource tokenSource = new CancellationTokenSource();
             CancellationToken token = tokenSource.Token;
             var result = ShowProgress(tokenSource);
@@ -131,6 +177,8 @@ namespace Opus.Core.Executors
                 new DirectoryInfo(Path.GetDirectoryName(destinationPath)),
                 token
             );
+
+            // If conversion fails, show a dialog to inform the user and return.
 
             if (success == false)
             {
@@ -144,16 +192,27 @@ namespace Opus.Core.Executors
                 return;
             }
 
+            // If the conversion succeeds, show progress 100 percent and exit on user acknowledgement.
+
             logbook.Write($"Pdf/a -conversion completed succesfully.", LogLevel.Information);
 
             result.progress.Report(new ProgressReport(100, ProgressPhase.Finished));
             await result.dialog;
         }
 
-        private async Task ExtractFile(string[] arguments)
+        /// <summary>
+        /// Extract bookmarks from a pdf-file.
+        /// </summary>
+        /// <param name="arguments">Arguments passed into the application.</param>
+        /// <returns>An awaitable task.</returns>
+        protected async Task ExtractFile(string[] arguments)
         {
+            // If there is an incorrect number of arguments, return.
+
             if (arguments.Length < 2 || arguments.Length > 3)
                 return;
+
+            // Ask the user for the destination directory path.
 
             string filePath = arguments[1];
             string fileDirectory = input.OpenDirectory(
@@ -163,12 +222,17 @@ namespace Opus.Core.Executors
             if (fileDirectory == null)
                 return;
 
+            // Get relevant bookmarks. Either all of the bookmarks, or just the ones
+            // corresponding with the second argument.
+
             IList<ILeveledBookmark> ranges;
 
             if (arguments.Length == 2)
                 ranges = await GetBookmarks(filePath);
             else
                 ranges = await GetBookmarks(filePath, arguments[2]);
+
+            // Perform the extraction.
 
             FileAndBookmarksStorage storage = new FileAndBookmarksStorage(filePath);
             foreach (ILeveledBookmark range in ranges)
@@ -188,15 +252,26 @@ namespace Opus.Core.Executors
             logbook.Write($"Bookmark extraction finished.", LogLevel.Information);
         }
 
-        private async Task CreateWorkingCopy(string[] arguments)
+        /// <summary>
+        /// Create a work copy of the selected file.
+        /// </summary>
+        /// <param name="arguments">Arguments passed to the application.</param>
+        /// <returns>An awaitable task.</returns>
+        protected async Task CreateWorkingCopy(string[] arguments)
         {
+            // If there is an incorrect number of arguments, return.
+
             if (arguments.Length != 2)
                 return;
             if (string.IsNullOrEmpty(arguments[1]))
                 return;
 
+            // The destination directory is the same as source directory.
+
             string filePath = arguments[1];
             DirectoryInfo directory = new DirectoryInfo(Path.GetDirectoryName(filePath)!);
+
+            // Prepare for signature removal.
 
             CancellationTokenSource tokenSource = new CancellationTokenSource();
 
@@ -210,15 +285,21 @@ namespace Opus.Core.Executors
 
             IEnumerable<FileStorage> file = new List<FileStorage>() { new FileStorage(filePath) };
 
+            // Remove signature.
+
             logbook.Write($"Starting signature removal.", LogLevel.Information);
 
             IList<FileInfo> created = await signatureExecutor.Remove(file, directory, tokenSource);
+
+            // Flatten redactions.
 
             List<Task> tasks = new List<Task>();
             foreach (FileInfo redFile in created)
             {
                 tasks.Add(annotationService.FlattenRedactions(redFile.FullName));
             }
+
+            // When all is ready, inform the user.
 
             await Task.WhenAll(tasks);
 
@@ -230,14 +311,23 @@ namespace Opus.Core.Executors
             await showProgress;
         }
 
-        private async Task Compose(string[] arguments)
+        /// <summary>
+        /// Compose a document from a folder.
+        /// </summary>
+        /// <param name="arguments">Arguments passed to the application.</param>
+        /// <returns>An awaitable task.</returns>
+        protected async Task Compose(string[] arguments)
         {
+            // If there is an incorrect number of arguments, return.
+
             if (arguments.Length != 2)
                 return;
             if (string.IsNullOrEmpty(arguments[1]))
                 return;
 
             string directoryPath = arguments[1];
+
+            // Let user select the correct profile for the composition.
 
             IList<ICompositionProfile> profiles = compositionOptions.GetProfiles();
             CompositionProfileSelectionDialog dialog = new CompositionProfileSelectionDialog(
@@ -249,6 +339,8 @@ namespace Opus.Core.Executors
             };
 
             await dialogAssist.Show(dialog);
+
+            // If the user cancels, return.
 
             if (dialog.IsCanceled)
             {
@@ -265,6 +357,8 @@ namespace Opus.Core.Executors
                 LogLevel.Information
             );
 
+            // Compose the document.
+
             await composer.Compose(
                 directoryPath,
                 dialog.SelectedProfile,
@@ -275,11 +369,22 @@ namespace Opus.Core.Executors
             logbook.Write($"Composition finished.", LogLevel.Information);
         }
 
+        /// <summary>
+        /// Get all bookmarks of a document.
+        /// </summary>
+        /// <param name="filePath">Path of the document.</param>
+        /// <returns>Bookmarks contained in the document.</returns>
         private async Task<IList<ILeveledBookmark>> GetBookmarks(string filePath)
         {
             return await bookmarkService.FindBookmarks(filePath);
         }
 
+        /// <summary>
+        /// Get all bookmarks with a given prefix.
+        /// </summary>
+        /// <param name="filePath">Path of the document to get the bookmarks from.</param>
+        /// <param name="preFix">Prefix to search for.</param>
+        /// <returns>Found bookmarks.</returns>
         private async Task<IList<ILeveledBookmark>> GetBookmarks(string filePath, string preFix)
         {
             List<ILeveledBookmark> selected = new List<ILeveledBookmark>();
@@ -294,6 +399,11 @@ namespace Opus.Core.Executors
             return selected;
         }
 
+        /// <summary>
+        /// Show progress dialog to the user.
+        /// </summary>
+        /// <param name="cancelSource">Cancellation token source.</param>
+        /// <returns>Dialog shown and the progress container.</returns>
         private (Task dialog, IProgress<ProgressReport> progress) ShowProgress(
             CancellationTokenSource cancelSource
         )

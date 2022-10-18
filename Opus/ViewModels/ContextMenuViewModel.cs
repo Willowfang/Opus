@@ -22,6 +22,11 @@ namespace Opus.ViewModels
         /// </summary>
         public IContextMenu ContextMenu { get; }
 
+        /// <summary>
+        /// Create a new context menu for easier access to functionalities.
+        /// </summary>
+        /// <param name="dialog">Dialog services</param>
+        /// <param name="contextMenu">Context menu services</param>
         public ContextMenuViewModel(IDialogAssist dialog, IContextMenu contextMenu)
         {
             Dialog = dialog;

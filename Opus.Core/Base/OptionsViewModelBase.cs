@@ -8,7 +8,7 @@ namespace Opus.Core.Base
 {
     /// <summary>
     /// Abstract base class for ViewModels that represent options and settings for various actions. Contains
-    /// info on a dialog that will be opened, when options change is requested.
+    /// info on a dialog that will be opened when options change is requested.
     /// </summary>
     /// <typeparam name="DialogType">The type of the dialog to open.</typeparam>
     public abstract class OptionsViewModelBase<DialogType> : ViewModelBaseLogging<DialogType>
@@ -34,9 +34,21 @@ namespace Opus.Core.Base
         }
 
         private IAsyncCommand settingsCommand;
+
+        /// <summary>
+        /// Command for opening the settings dialog.
+        /// </summary>
         public IAsyncCommand SettingsCommand =>
             settingsCommand ??= new AsyncCommand(ExecuteSettingsCommand);
 
+        /// <summary>
+        /// Execution method for settings opening command.
+        /// <para>
+        /// Creates the dialog using <see cref="CreateDialog"/> and displays it to the user.
+        /// Saves the settings using <see cref="SaveSettings(DialogType)"/> if the dialog has not been canceled.
+        /// </para>
+        /// </summary>
+        /// <returns></returns>
         protected virtual async Task ExecuteSettingsCommand()
         {
             DialogType dialog = CreateDialog();
@@ -55,8 +67,18 @@ namespace Opus.Core.Base
             SaveSettings(dialog);
         }
 
+        /// <summary>
+        /// Dialog creation method. Must be overridden for each implementation of this
+        /// abstract class.
+        /// </summary>
+        /// <returns></returns>
         protected abstract DialogType CreateDialog();
 
+        /// <summary>
+        /// Method for saving the selected settings. Must be overridden for each implementation
+        /// of this abstract class.
+        /// </summary>
+        /// <param name="dialog">The type of the dialog used for asking the new settings from the user.</param>
         protected abstract void SaveSettings(DialogType dialog);
     }
 }

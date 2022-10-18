@@ -21,43 +21,46 @@ using System.Threading.Tasks;
 
 namespace Opus.Modules.Action.ViewModels
 {
-    public class CompositionViewModel : ViewModelBaseLogging<CompositionViewModel>, INavigationTarget
+    /// <summary>
+    /// View model for composition views. Handles actions dealing with document composition.
+    /// </summary>
+    public class CompositionViewModel
+        : ViewModelBaseLogging<CompositionViewModel>,
+            INavigationTarget
     {
-        /// <summary>
-        /// Common event handling service
-        /// </summary>
+        #region DI services
         private IEventAggregator aggregator;
-        /// <summary>
-        /// Service handling user input for file and directory paths
-        /// </summary>
         private IPathSelection input;
-        /// <summary>
-        /// Composition-specific configuration
-        /// </summary>
         private IConfiguration configuration;
-        /// <summary>
-        /// Common service for dialog control
-        /// </summary>
         private IDialogAssist dialogAssist;
         private ICompositionOptions options;
         private IComposer composer;
+        #endregion
 
+        #region Fields and properties
         /// <summary>
         /// All profiles stored in the database. Composition profiles
-        /// determine what files are to be added and in what order, as well as 
+        /// determine what files are to be added and in what order, as well as
         /// their corresponding info for adding bookmarks.
         /// </summary>
         public ObservableCollection<ICompositionProfile> Profiles { get; }
 
-        /// <summary>
-        /// The profile that is currently selected
-        /// </summary>
         private ICompositionProfile selectedProfile;
+
+        /// <summary>
+        /// The composition profile that is currently selected.
+        /// <para>
+        /// Composition profiles determine what files are searched for and how many are allowed (or required).
+        /// </para>
+        /// </summary>
         public ICompositionProfile SelectedProfile
         {
             get => selectedProfile;
             set
             {
+                // Set the return value and set the collection reordering event for
+                // the segments of the currently selected profile.
+
                 if (selectedProfile != null && selectedProfile.Segments != null)
                 {
                     selectedProfile.Segments.CollectionReordered -= CollectionReordered;
@@ -76,6 +79,13 @@ namespace Opus.Modules.Action.ViewModels
         }
 
         private bool addSegmentMenuOpen;
+
+        /// <summary>
+        /// Is the segment addition menu open?
+        /// <para>
+        /// Is bound to from the view.
+        /// </para>
+        /// </summary>
         public bool AddSegmentMenuOpen
         {
             get => addSegmentMenuOpen;
@@ -83,27 +93,55 @@ namespace Opus.Modules.Action.ViewModels
         }
 
         private bool addProfileMenuOpen;
+
+        /// <summary>
+        /// Is profile addition menu open?
+        /// <para>
+        /// Is bound to from the view.
+        /// </para>
+        /// </summary>
         public bool AddProfileMenuOpen
         {
             get => addProfileMenuOpen;
             set => SetProperty(ref addProfileMenuOpen, value);
         }
 
+        /// <summary>
+        /// Whether to show the contents of the profile.
+        /// <para>
+        /// Is bound to from the view.
+        /// </para>
+        /// </summary>
         public bool ProfileContentShow
         {
             get => true;
         }
+        #endregion
 
+        #region Constructor
+        /// <summary>
+        /// Create a new viewmodel for the composition view.
+        /// </summary>
+        /// <param name="aggregator">Common event handling service.</param>
+        /// <param name="input">Service for user filepath input.</param>
+        /// <param name="configuration">Program-wide configurations.</param>
+        /// <param name="navReg">Navigation registry service for registering this viewModel.</param>
+        /// <param name="dialogAssist">Service showing and otherwise handling dialogs.</param>
+        /// <param name="options">Composition options as their own instance.</param>
+        /// <param name="composer">Composition services.</param>
+        /// <param name="logbook">Logging service.</param>
         public CompositionViewModel(
             IEventAggregator aggregator,
-            IPathSelection input, 
-            IConfiguration configuration, 
+            IPathSelection input,
+            IConfiguration configuration,
             INavigationTargetRegistry navReg,
-            IDialogAssist dialogAssist, 
+            IDialogAssist dialogAssist,
             ICompositionOptions options,
-            IComposer composer, 
-            ILogbook logbook) : base(logbook)
+            IComposer composer,
+            ILogbook logbook
+        ) : base(logbook)
         {
+            // Assign DI services
             this.aggregator = aggregator;
             this.input = input;
             this.configuration = configuration;
@@ -111,70 +149,174 @@ namespace Opus.Modules.Action.ViewModels
             this.options = options;
             this.composer = composer;
 
-            IList<ICompositionProfile> profs = options.GetProfiles() ?? new List<ICompositionProfile>();
+            // Load composition profiles from options.
+            IList<ICompositionProfile> profs =
+                options.GetProfiles() ?? new List<ICompositionProfile>();
             Profiles = new ObservableCollection<ICompositionProfile>(profs);
             navReg.AddTarget(SchemeNames.COMPOSE, this);
 
             SelectedProfile = Profiles.FirstOrDefault(x => x.Id == configuration.DefaultProfile);
         }
+        #endregion
 
+        #region INavigationTarget implementation
         /// <summary>
-        /// When the view associated with this view model is active and showing, subscribe to receive
-        /// notifications of directory selection.
+        /// When the view associated with this view model is active and shown, subscribe to receive
+        /// notifications of directory selection. This token is stored to cancel said description.
         /// </summary>
         SubscriptionToken directorySelectedSubscription;
+
+        /// <summary>
+        /// Implementing <see cref="INavigationTarget"/>.
+        /// <para>
+        /// Actions to take when this viewmodel is navigated to.
+        /// </para>
+        /// </summary>
         public void OnArrival()
         {
-            directorySelectedSubscription = aggregator.GetEvent<DirectorySelectedEvent>().Subscribe(DirectorySelected);
+            // Subscribe to directory selection events (to start composing).
 
-            logbook.Write($"{this} subscribed to {nameof(DirectorySelectedEvent)}.", LogLevel.Debug);
+            directorySelectedSubscription = aggregator
+                .GetEvent<DirectorySelectedEvent>()
+                .Subscribe(DirectorySelected);
+
+            logbook.Write(
+                $"{this} subscribed to {nameof(DirectorySelectedEvent)}.",
+                LogLevel.Debug
+            );
         }
+
+        /// <summary>
+        /// Implementing <see cref="INavigationTarget"/>.
+        /// <para>
+        /// Actions to take when this viewmodel is navigated from.
+        /// </para>
+        /// </summary>
         public void WhenLeaving()
         {
-            aggregator.GetEvent<DirectorySelectedEvent>().Unsubscribe(directorySelectedSubscription);
+            // Unsubscribe from directory selection event.
 
-            logbook.Write($"{this} unsubscribed from {nameof(DirectorySelectedEvent)}.", LogLevel.Debug);
+            aggregator
+                .GetEvent<DirectorySelectedEvent>()
+                .Unsubscribe(directorySelectedSubscription);
+
+            logbook.Write(
+                $"{this} unsubscribed from {nameof(DirectorySelectedEvent)}.",
+                LogLevel.Debug
+            );
         }
+
+        /// <summary>
+        /// Implementing <see cref="INavigationTarget"/>.
+        /// <para>
+        /// Actions to take when this reset button is presseed.
+        /// </para>
+        /// <para>
+        /// Composition view model has no state that would be reset, when button is pressed. So do nothing.
+        /// </para>
+        /// </summary>
         public void Reset() { }
-        
-        private async void DirectorySelected(string path)
+
+        /// <summary>
+        /// Action to execute when a directory is selected.
+        /// <para>
+        /// Will immediately run composition.
+        /// </para>
+        /// </summary>
+        /// <param name="path">Path of the selected directory.</param>
+        protected async void DirectorySelected(string path)
         {
             await ExecuteComposition(path);
         }
+        #endregion
 
+        #region Event handlers
+        /// <summary>
+        /// Is performed when segments have been altered by the user.
+        /// <para>
+        /// Will save the profile.
+        /// </para>
+        /// </summary>
+        /// <param name="sender">Sending collection.</param>
+        /// <param name="e">Event arguments.</param>
         private void CollectionReordered(object sender, CollectionReorderedEventArgs e)
         {
             options.SaveProfile(SelectedProfile);
         }
+        #endregion
 
-        private DelegateCommand editable;
-        public DelegateCommand Editable =>
-            editable ??= new DelegateCommand(ExecuteEditable);
+        #region Commands
 
-        private void ExecuteEditable()
+        private DelegateCommand editableCommand;
+
+        /// <summary>
+        /// Command to change the editability of a profile.
+        /// </summary>
+        public DelegateCommand EditableCommand =>
+            editableCommand ??= new DelegateCommand(ExecuteEditable);
+
+        /// <summary>
+        /// Execution method for editability command, see <see cref="EditableCommand"/>.
+        /// <para>
+        /// Makes the profile (un)editable and saves it.
+        /// </para>
+        /// </summary>
+        protected void ExecuteEditable()
         {
             SelectedProfile.IsEditable = !SelectedProfile.IsEditable;
             options.SaveProfile(SelectedProfile);
         }
 
-        #region COMMANDS
+        private DelegateCommand openSegmentMenuCommand;
 
-        private DelegateCommand openSegmentMenu;
-        public DelegateCommand OpenSegmentMenu =>
-            openSegmentMenu ??= new DelegateCommand(() => AddSegmentMenuOpen = !AddSegmentMenuOpen);
+        /// <summary>
+        /// Command for opening the segment menu.
+        /// <para>
+        /// The relevant bool is reversed.
+        /// </para>
+        /// </summary>
+        public DelegateCommand OpenSegmentMenuCommand =>
+            openSegmentMenuCommand ??= new DelegateCommand(
+                () => AddSegmentMenuOpen = !AddSegmentMenuOpen
+            );
 
-        private DelegateCommand openProfileMenu;
-        public DelegateCommand OpenProfileMenu =>
-            openProfileMenu ??= new DelegateCommand(() => AddProfileMenuOpen = !AddSegmentMenuOpen);
+        private DelegateCommand openProfileMenuCommand;
 
-        private IAsyncCommand editProfile;
-        public IAsyncCommand EditProfile =>
-            editProfile ??= new AsyncCommand(ExecuteEditProfile);
-        private async Task ExecuteEditProfile()
+        /// <summary>
+        /// Command for opening the profile menu.
+        /// <para>
+        /// The relevant bool is reversed.
+        /// </para>
+        /// </summary>
+        public DelegateCommand OpenProfileMenuCommand =>
+            openProfileMenuCommand ??= new DelegateCommand(
+                () => AddProfileMenuOpen = !AddSegmentMenuOpen
+            );
+
+        private IAsyncCommand editProfileCommand;
+
+        /// <summary>
+        /// Command for editing the current profile.
+        /// </summary>
+        public IAsyncCommand EditProfileCommand =>
+            editProfileCommand ??= new AsyncCommand(ExecuteEditProfile);
+
+        /// <summary>
+        /// Execution method for profile editing command, see <see cref="EditProfileCommand"/>.
+        /// <para>
+        /// Open a dialog for editing the profile.
+        /// </para>
+        /// </summary>
+        /// <returns>An awaitable task.</returns>
+        protected async Task ExecuteEditProfile()
         {
+            // Create a dialog for editing the profile and show it.
+
             CompositionProfileDialog dialog = new CompositionProfileDialog(
-                Resources.Labels.Dialogs.CompositionProfile.EditTitle, SelectedProfile.ProfileName, 
-                Profiles.ToList())
+                Resources.Labels.Dialogs.CompositionProfile.EditTitle,
+                SelectedProfile.ProfileName,
+                Profiles.ToList()
+            )
             {
                 ProfileName = SelectedProfile.ProfileName,
                 AddPageNumbers = SelectedProfile.AddPageNumbers
@@ -182,65 +324,143 @@ namespace Opus.Modules.Action.ViewModels
 
             await dialogAssist.Show(dialog);
 
-            if (dialog.IsCanceled) return;
+            // If cancelled, just return.
+
+            if (dialog.IsCanceled)
+                return;
+
+            // Save the edited profile.
 
             SelectedProfile.AddPageNumbers = dialog.AddPageNumbers;
             SelectedProfile.ProfileName = dialog.ProfileName;
 
             options.SaveProfile(SelectedProfile);
 
-            logbook.Write($"{nameof(ICompositionProfile)} '{selectedProfile.ProfileName}' edited.", LogLevel.Information);
+            logbook.Write(
+                $"{nameof(ICompositionProfile)} '{selectedProfile.ProfileName}' edited.",
+                LogLevel.Information
+            );
         }
 
-        private IAsyncCommand addProfile;
-        public IAsyncCommand AddProfile =>
-            addProfile ??= new AsyncCommand(ExecuteAddProfile);
-        private async Task ExecuteAddProfile()
+        private IAsyncCommand addProfileCommand;
+
+        /// <summary>
+        /// Command for adding a new profile.
+        /// </summary>
+        public IAsyncCommand AddProfileCommand =>
+            addProfileCommand ??= new AsyncCommand(ExecuteAddProfile);
+
+        /// <summary>
+        /// Execution method for profile adding command, see <see cref="AddProfileCommand"/>.
+        /// <para>
+        /// Opens a dialog for entering info on the new profile.
+        /// </para>
+        /// </summary>
+        /// <returns>An awaitable task.</returns>
+        protected async Task ExecuteAddProfile()
         {
+            // Create a new dialog and show it to the user.
+
             CompositionProfileDialog dialog = new CompositionProfileDialog(
-                Resources.Labels.Dialogs.CompositionProfile.NewTitle, Profiles.ToList())
+                Resources.Labels.Dialogs.CompositionProfile.NewTitle,
+                Profiles.ToList()
+            )
             {
                 AddPageNumbers = true
             };
 
             await dialogAssist.Show(dialog);
 
-            if (dialog.IsCanceled) return;
+            // If canceled, just return.
 
-            ICompositionProfile profile = options.CreateProfile(dialog.ProfileName,
-                dialog.AddPageNumbers, true);
+            if (dialog.IsCanceled)
+                return;
+
+            // Create a new profile, save it to the database and immediately select it.
+
+            ICompositionProfile profile = options.CreateProfile(
+                dialog.ProfileName,
+                dialog.AddPageNumbers,
+                true
+            );
 
             SaveAddAndSelect(profile);
 
-            logbook.Write($"{nameof(ICompositionProfile)} '{profile.ProfileName}' added.", LogLevel.Information);
+            logbook.Write(
+                $"{nameof(ICompositionProfile)} '{profile.ProfileName}' added.",
+                LogLevel.Information
+            );
         }
 
-        private IAsyncCommand deleteProfile;
-        public IAsyncCommand DeleteProfile =>
-            deleteProfile ??= new AsyncCommand(ExecuteDeleteProfile);
-        private async Task ExecuteDeleteProfile()
+        private IAsyncCommand deleteProfileCommand;
+
+        /// <summary>
+        /// Command for deleting the selected profile.
+        /// </summary>
+        public IAsyncCommand DeleteProfileCommand =>
+            deleteProfileCommand ??= new AsyncCommand(ExecuteDeleteProfile);
+
+        /// <summary>
+        /// Execution method for profile deletion command, <see cref="DeleteProfileCommand"/>.
+        /// <para>
+        /// Confirms deletion from the user and deletes the profile, if confirmation was received.
+        /// </para>
+        /// </summary>
+        /// <returns>An awaitable task.</returns>
+        protected async Task ExecuteDeleteProfile()
         {
-            ConfirmationDialog dialog = new ConfirmationDialog(Resources.Labels.Dialogs.Confirmation.DeleteCompositionProfileTitle,
-                Resources.Messages.Composition.ProfileDeleteConfirmation);
+            // Create confirmation dialog and show it to the user.
+
+            ConfirmationDialog dialog = new ConfirmationDialog(
+                Resources.Labels.Dialogs.Confirmation.DeleteCompositionProfileTitle,
+                Resources.Messages.Composition.ProfileDeleteConfirmation
+            );
 
             await dialogAssist.Show(dialog);
 
-            if (dialog.IsCanceled) return;
+            // If cancelled, just return.
+
+            if (dialog.IsCanceled)
+                return;
+
+            // Delete selected profile from the database.
 
             options.DeleteProfile(SelectedProfile);
 
-            logbook.Write($"{nameof(ICompositionProfile)} '{SelectedProfile.ProfileName}' deleted.", LogLevel.Information);
+            logbook.Write(
+                $"{nameof(ICompositionProfile)} '{SelectedProfile.ProfileName}' deleted.",
+                LogLevel.Information
+            );
+
+            // Remove profile from the current list.
 
             Profiles.Remove(SelectedProfile);
         }
 
-        private IAsyncCommand copyProfile;
-        public IAsyncCommand CopyProfile =>
-            copyProfile ??= new AsyncCommand(ExecuteCopyProfile);
-        private async Task ExecuteCopyProfile()
+        private IAsyncCommand copyProfileCommand;
+
+        /// <summary>
+        /// Command for copying the current profile.
+        /// </summary>
+        public IAsyncCommand CopyProfileCommand =>
+            copyProfileCommand ??= new AsyncCommand(ExecuteCopyProfile);
+
+        /// <summary>
+        /// Execution method for profile copying command, see <see cref="CopyProfileCommand"/>.
+        /// <para>
+        /// Copies the profile as a new profile.
+        /// </para>
+        /// </summary>
+        /// <returns>An awaitable task.</returns>
+        protected async Task ExecuteCopyProfile()
         {
+            // Create a dialog for entering info on the copied profile (i.e. the name of the copied
+            // profile cannot be identical with the original one).
+
             CompositionProfileDialog dialog = new CompositionProfileDialog(
-                Resources.Labels.Dialogs.CompositionProfile.NewTitle, Profiles.ToList())
+                Resources.Labels.Dialogs.CompositionProfile.NewTitle,
+                Profiles.ToList()
+            )
             {
                 ProfileName = $"{SelectedProfile.ProfileName} ({Resources.Labels.General.Copy})",
                 AddPageNumbers = SelectedProfile.AddPageNumbers
@@ -250,26 +470,49 @@ namespace Opus.Modules.Action.ViewModels
 
             await dialogAssist.Show(dialog);
 
-            if (dialog.IsCanceled) return;
+            // If cancelled, just return.
 
-            ICompositionProfile profile = options.CreateProfile(dialog.ProfileName,
-                dialog.AddPageNumbers, true, SelectedProfile.Segments.ToList());
+            if (dialog.IsCanceled)
+                return;
+
+            // Create a new profile with copied (and modified) info.
+
+            ICompositionProfile profile = options.CreateProfile(
+                dialog.ProfileName,
+                dialog.AddPageNumbers,
+                true,
+                SelectedProfile.Segments.ToList()
+            );
 
             SaveAddAndSelect(profile);
 
-            logbook.Write($"{nameof(ICompositionProfile)} '{originalName}' copied to '{profile.ProfileName}'.",
-                LogLevel.Information);
+            logbook.Write(
+                $"{nameof(ICompositionProfile)} '{originalName}' copied to '{profile.ProfileName}'.",
+                LogLevel.Information
+            );
         }
 
-        private IAsyncCommand importProfile;
-        public IAsyncCommand ImportProfile =>
-            importProfile ??= new AsyncCommand(ExecuteImportProfile);
-        private async Task ExecuteImportProfile()
-        {
-            string filePath = input.OpenFile(Resources.UserInput.Descriptions.SelectOpenFile,
-                FileType.Profile);
+        private IAsyncCommand importProfileCommand;
 
-            if (filePath is null) return;
+        /// <summary>
+        /// Command for importing a profile from file.
+        /// </summary>
+        public IAsyncCommand ImportProfileCommand =>
+            importProfileCommand ??= new AsyncCommand(ExecuteImportProfile);
+
+        /// <summary>
+        /// Execution method for import profile command.
+        /// </summary>
+        /// <returns>An awaitable task.</returns>
+        protected async Task ExecuteImportProfile()
+        {
+            string filePath = input.OpenFile(
+                Resources.UserInput.Descriptions.SelectOpenFile,
+                FileType.Profile
+            );
+
+            if (filePath is null)
+                return;
 
             ICompositionProfile profile;
 
@@ -282,16 +525,22 @@ namespace Opus.Modules.Action.ViewModels
             }
             catch (ArgumentException ex) when (ex.Message == filePath)
             {
-                MessageDialog messageDialog = new MessageDialog(Resources.Labels.General.Error,
-                    string.Format(Resources.Messages.Composition.ProfileWrongExtension, 
-                    Resources.Files.FileExtensions.Profile));
+                MessageDialog messageDialog = new MessageDialog(
+                    Resources.Labels.General.Error,
+                    string.Format(
+                        Resources.Messages.Composition.ProfileWrongExtension,
+                        Resources.Files.FileExtensions.Profile
+                    )
+                );
                 await dialogAssist.Show(messageDialog);
                 return;
             }
             catch (Exception)
             {
-                MessageDialog messageDialog = new MessageDialog(Resources.Labels.General.Error,
-                    Resources.Messages.Composition.ProfileImportFailed);
+                MessageDialog messageDialog = new MessageDialog(
+                    Resources.Labels.General.Error,
+                    Resources.Messages.Composition.ProfileImportFailed
+                );
                 await dialogAssist.Show(messageDialog);
                 return;
             }
@@ -300,19 +549,23 @@ namespace Opus.Modules.Action.ViewModels
             {
                 ConfirmationDialog confirmationDialog = new ConfirmationDialog(
                     Resources.Labels.Dialogs.Confirmation.CompositionImportProfileExists,
-                    Resources.Messages.Composition.ProfileImportExists);
+                    Resources.Messages.Composition.ProfileImportExists
+                );
                 await dialogAssist.Show(confirmationDialog);
 
                 if (confirmationDialog.IsCanceled)
                 {
-                    logbook.Write($"Cancellation requested at {nameof(IDialog)} '{confirmationDialog.DialogTitle}'.",
-                        LogLevel.Information);
+                    logbook.Write(
+                        $"Cancellation requested at {nameof(IDialog)} '{confirmationDialog.DialogTitle}'.",
+                        LogLevel.Information
+                    );
                     return;
                 }
 
                 CompositionProfileDialog profileDialog = new CompositionProfileDialog(
                     Resources.Labels.Dialogs.CompositionProfile.ImportTitle,
-                    Profiles.ToList())
+                    Profiles.ToList()
+                )
                 {
                     AddPageNumbers = profile.AddPageNumbers
                 };
@@ -321,8 +574,10 @@ namespace Opus.Modules.Action.ViewModels
 
                 if (profileDialog.IsCanceled)
                 {
-                    logbook.Write($"Cancellation requested at {nameof(IDialog)} '{profileDialog.DialogTitle}'.",
-                        LogLevel.Information);
+                    logbook.Write(
+                        $"Cancellation requested at {nameof(IDialog)} '{profileDialog.DialogTitle}'.",
+                        LogLevel.Information
+                    );
                     return;
                 }
 
@@ -332,11 +587,15 @@ namespace Opus.Modules.Action.ViewModels
 
             SaveAddAndSelect(profile);
 
-            logbook.Write($"{nameof(ICompositionProfile)} '{profile.ProfileName}' imported from {filePath}.",
-                LogLevel.Information);
+            logbook.Write(
+                $"{nameof(ICompositionProfile)} '{profile.ProfileName}' imported from {filePath}.",
+                LogLevel.Information
+            );
 
-            MessageDialog successDialog = new MessageDialog(Resources.Labels.General.Notification,
-                Resources.Messages.Composition.ProfileImportSuccess);
+            MessageDialog successDialog = new MessageDialog(
+                Resources.Labels.General.Notification,
+                Resources.Messages.Composition.ProfileImportSuccess
+            );
             await dialogAssist.Show(successDialog);
             return;
         }
@@ -344,20 +603,27 @@ namespace Opus.Modules.Action.ViewModels
         private IAsyncCommand exportProfile;
         public IAsyncCommand ExportProfile =>
             exportProfile ??= new AsyncCommand(ExecuteExportProfile);
+
         private async Task ExecuteExportProfile()
         {
-            string filePath = input.SaveFile(Resources.UserInput.Descriptions.SelectSaveFile,
-                FileType.Profile, SelectedProfile.ProfileName + Resources.Files.FileExtensions.Profile);
+            string filePath = input.SaveFile(
+                Resources.UserInput.Descriptions.SelectSaveFile,
+                FileType.Profile,
+                SelectedProfile.ProfileName + Resources.Files.FileExtensions.Profile
+            );
 
-            if (filePath is null) return;
+            if (filePath is null)
+                return;
 
             try
             {
                 bool success = options.ExportProfile(SelectedProfile, filePath);
                 if (success == false)
                 {
-                    MessageDialog messageDialog = new MessageDialog(Resources.Labels.General.Error,
-                        Resources.Messages.Composition.ProfileExportFailed);
+                    MessageDialog messageDialog = new MessageDialog(
+                        Resources.Labels.General.Error,
+                        Resources.Messages.Composition.ProfileExportFailed
+                    );
 
                     await dialogAssist.Show(messageDialog);
                     return;
@@ -365,18 +631,26 @@ namespace Opus.Modules.Action.ViewModels
             }
             catch (ArgumentException)
             {
-                MessageDialog messageDialog = new MessageDialog(Resources.Labels.General.Error,
-                    string.Format(Resources.Messages.Composition.ProfileWrongExtension,
-                    Resources.Files.FileExtensions.Profile));
+                MessageDialog messageDialog = new MessageDialog(
+                    Resources.Labels.General.Error,
+                    string.Format(
+                        Resources.Messages.Composition.ProfileWrongExtension,
+                        Resources.Files.FileExtensions.Profile
+                    )
+                );
                 await dialogAssist.Show(messageDialog);
                 return;
             }
 
-            logbook.Write($"{nameof(ICompositionProfile)} '{SelectedProfile.ProfileName}' exported to {filePath}.",
-                LogLevel.Information);
+            logbook.Write(
+                $"{nameof(ICompositionProfile)} '{SelectedProfile.ProfileName}' exported to {filePath}.",
+                LogLevel.Information
+            );
 
-            MessageDialog successDialog = new MessageDialog(Resources.Labels.General.Notification,
-                Resources.Messages.Composition.ProfileExportSuccess);
+            MessageDialog successDialog = new MessageDialog(
+                Resources.Labels.General.Notification,
+                Resources.Messages.Composition.ProfileExportSuccess
+            );
             await dialogAssist.Show(successDialog);
             return;
         }
@@ -384,14 +658,17 @@ namespace Opus.Modules.Action.ViewModels
         private IAsyncCommand addFileSegment;
         public IAsyncCommand AddFileSegment =>
             addFileSegment ??= new AsyncCommand(ExecuteAddFileSegment);
+
         private async Task ExecuteAddFileSegment()
         {
             CompositionFileSegmentDialog dialog = new CompositionFileSegmentDialog(
-                Resources.Labels.Dialogs.CompositionFileSegment.NewTitle);
+                Resources.Labels.Dialogs.CompositionFileSegment.NewTitle
+            );
 
             await dialogAssist.Show(dialog);
 
-            if (dialog.IsCanceled) return;
+            if (dialog.IsCanceled)
+                return;
 
             ICompositionFile segment = options.CreateFileSegment(dialog.SegmentName);
             segment.NameFromFile = dialog.NameFromFile;
@@ -407,18 +684,22 @@ namespace Opus.Modules.Action.ViewModels
             SelectedProfile.Segments.Add(segment);
             options.SaveProfile(SelectedProfile);
 
-            logbook.Write($"{nameof(ICompositionFile)} '{segment.DisplayName}' added to {nameof(ICompositionProfile)} '{SelectedProfile.ProfileName}'.", LogLevel.Information);
+            logbook.Write(
+                $"{nameof(ICompositionFile)} '{segment.DisplayName}' added to {nameof(ICompositionProfile)} '{SelectedProfile.ProfileName}'.",
+                LogLevel.Information
+            );
         }
 
         private IAsyncCommand editSegment;
-        public IAsyncCommand EditSegment =>
-            editSegment ??= new AsyncCommand(ExecuteEditSegment);
+        public IAsyncCommand EditSegment => editSegment ??= new AsyncCommand(ExecuteEditSegment);
+
         private async Task ExecuteEditSegment()
         {
             if (SelectedProfile.Segments.SelectedItem is ICompositionFile fileSegment)
             {
                 CompositionFileSegmentDialog dialog = new CompositionFileSegmentDialog(
-                Resources.Labels.Dialogs.CompositionFileSegment.EditTitle);
+                    Resources.Labels.Dialogs.CompositionFileSegment.EditTitle
+                );
 
                 dialog.SegmentName = fileSegment.SegmentName;
                 dialog.NameFromFile = fileSegment.NameFromFile;
@@ -432,7 +713,10 @@ namespace Opus.Modules.Action.ViewModels
 
                 if (dialog.IsCanceled)
                 {
-                    logbook.Write($"Cancellation requested at {nameof(IDialog)} '{dialog.DialogTitle}'.", LogLevel.Information);
+                    logbook.Write(
+                        $"Cancellation requested at {nameof(IDialog)} '{dialog.DialogTitle}'.",
+                        LogLevel.Information
+                    );
                     return;
                 }
 
@@ -449,15 +733,19 @@ namespace Opus.Modules.Action.ViewModels
             else if (SelectedProfile.Segments.SelectedItem is ICompositionTitle titleSegment)
             {
                 CompositionTitleSegmentDialog dialog = new CompositionTitleSegmentDialog(
-                    Resources.Labels.Dialogs.CompositionFileSegment.EditTitle);
-                
+                    Resources.Labels.Dialogs.CompositionFileSegment.EditTitle
+                );
+
                 dialog.SegmentName = titleSegment.SegmentName;
 
                 await dialogAssist.Show(dialog);
 
                 if (dialog.IsCanceled)
                 {
-                    logbook.Write($"Cancellation requested at {nameof(IDialog)} '{dialog.DialogTitle}'.", LogLevel.Information);
+                    logbook.Write(
+                        $"Cancellation requested at {nameof(IDialog)} '{dialog.DialogTitle}'.",
+                        LogLevel.Information
+                    );
                     return;
                 }
 
@@ -466,22 +754,30 @@ namespace Opus.Modules.Action.ViewModels
                 options.SaveProfile(SelectedProfile);
             }
 
-            logbook.Write($"{nameof(ICompositionSegment)} '{SelectedProfile.Segments.SelectedItem.DisplayName}' edited.", LogLevel.Information);
+            logbook.Write(
+                $"{nameof(ICompositionSegment)} '{SelectedProfile.Segments.SelectedItem.DisplayName}' edited.",
+                LogLevel.Information
+            );
         }
 
         private IAsyncCommand addTitleSegment;
         public IAsyncCommand AddTitleSegment =>
             addTitleSegment ??= new AsyncCommand(ExecuteAddTitleSegment);
+
         private async Task ExecuteAddTitleSegment()
         {
             CompositionTitleSegmentDialog dialog = new CompositionTitleSegmentDialog(
-                Resources.Labels.Dialogs.CompositionFileSegment.NewTitle);
+                Resources.Labels.Dialogs.CompositionFileSegment.NewTitle
+            );
 
             await dialogAssist.Show(dialog);
 
             if (dialog.IsCanceled)
             {
-                logbook.Write($"Cancellation requested at {nameof(IDialog)} '{dialog.DialogTitle}'.", LogLevel.Information);
+                logbook.Write(
+                    $"Cancellation requested at {nameof(IDialog)} '{dialog.DialogTitle}'.",
+                    LogLevel.Information
+                );
                 return;
             }
 
@@ -489,22 +785,31 @@ namespace Opus.Modules.Action.ViewModels
             SelectedProfile.Segments.Add(segment);
             options.SaveProfile(SelectedProfile);
 
-            logbook.Write($"{nameof(ICompositionTitle)} '{segment.DisplayName}' added to {nameof(ICompositionProfile)} '{SelectedProfile.ProfileName}'", LogLevel.Information);
+            logbook.Write(
+                $"{nameof(ICompositionTitle)} '{segment.DisplayName}' added to {nameof(ICompositionProfile)} '{SelectedProfile.ProfileName}'",
+                LogLevel.Information
+            );
         }
 
         private IAsyncCommand deleteSegment;
         public IAsyncCommand DeleteSegment =>
             deleteSegment ??= new AsyncCommand(ExecuteDeleteSegment);
+
         private async Task ExecuteDeleteSegment()
         {
-            ConfirmationDialog dialog = new ConfirmationDialog(Resources.Labels.Dialogs.Confirmation.DeleteCompositionSegmentTitle,
-                Resources.Messages.Composition.SegmentDeleteConfirmation);
+            ConfirmationDialog dialog = new ConfirmationDialog(
+                Resources.Labels.Dialogs.Confirmation.DeleteCompositionSegmentTitle,
+                Resources.Messages.Composition.SegmentDeleteConfirmation
+            );
 
             await dialogAssist.Show(dialog);
 
             if (dialog.IsCanceled)
             {
-                logbook.Write($"Cancellation requested at {nameof(IDialog)} '{dialog.DialogTitle}'.", LogLevel.Information);
+                logbook.Write(
+                    $"Cancellation requested at {nameof(IDialog)} '{dialog.DialogTitle}'.",
+                    LogLevel.Information
+                );
                 return;
             }
 
@@ -513,15 +818,22 @@ namespace Opus.Modules.Action.ViewModels
             SelectedProfile.Segments.Remove(SelectedProfile.Segments.SelectedItem);
             options.SaveProfile(SelectedProfile);
 
-            logbook.Write($"{nameof(ICompositionSegment)} '{selectedName}' deleted from {nameof(ICompositionProfile)} '{SelectedProfile.ProfileName}'", LogLevel.Information);
+            logbook.Write(
+                $"{nameof(ICompositionSegment)} '{selectedName}' deleted from {nameof(ICompositionProfile)} '{SelectedProfile.ProfileName}'",
+                LogLevel.Information
+            );
         }
 
         private async Task ExecuteComposition(string directory)
         {
             logbook.Write($"Starting composition.", LogLevel.Information);
 
-            await composer.Compose(directory, SelectedProfile, configuration.CompositionDeleteConverted,
-                configuration.CompositionSearchSubDirectories);
+            await composer.Compose(
+                directory,
+                SelectedProfile,
+                configuration.CompositionDeleteConverted,
+                configuration.CompositionSearchSubDirectories
+            );
 
             logbook.Write($"Composition finished.", LogLevel.Information);
         }

@@ -871,7 +871,8 @@
 
     <!--
         COMPOSITION FILE COUNT DIALOG
-        A dialog prompting user to choose the correct files when there are 
+        A dialog prompting user to choose the correct files when there are extra files with
+        the selection rule in question or no file with matching (required) criteria is found.
     -->
     <DataTemplate DataType="{x:Type dialog:CompositionFileCountDialog}">
         <StackPanel Margin="10">
@@ -883,10 +884,18 @@
                        TextWrapping="Wrap"
                        Text="{Binding DialogTextContent}"
                        Margin="15, 15, 15, 0"/>
+            
+            <!--
+                No file matching the criteria was found.
+                One file is missing.
+            -->
             <StackPanel Orientation="Horizontal"
                         Margin="15"
                         HorizontalAlignment="Center"
                         Visibility="{Binding SingleSelection, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <!--
+                    Button for previewing a file. Shows the path and name of the selected file.
+                -->
                 <Button Style="{DynamicResource MaterialDesignPaperSecondaryButton}"
                         Margin="0, 0, 15, 0"
                         Width="230"
@@ -899,11 +908,19 @@
                                Text="{Binding Files[0].FileName}"
                                TextTrimming="CharacterEllipsis"/>
                 </Button>
+                
+                <!--
+                    Button for browsing for the correct file.
+                -->
                 <Button Style="{DynamicResource MaterialDesignIconButton}"
                         Command="{Binding AddFile}">
                     <md:PackIcon Kind="Folder" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                 </Button>
             </StackPanel>
+            
+            <!--
+                Multiple files were not found or more than the allowed number of files were found.
+            -->
             <Grid Margin="15, 15, 15, 0"
                   Visibility="{Binding SingleSelection, Converter={StaticResource BooleanToOppositeVisibility}}">
                 <Grid.ColumnDefinitions>
@@ -916,6 +933,11 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
+                
+                <!--
+                    Show info on the amount of found files (how many were found,
+                    what are the max and min values, etc.).
+                -->
                 <StackPanel Grid.Column="0"
                             Grid.Row="0"
                             Grid.ColumnSpan="2"
@@ -936,8 +958,13 @@
                         </TextBlock>
                     </StackPanel>
                 </StackPanel>
+                
                 <Separator Margin="15" Grid.Row="1" Grid.Column="0"
                            Grid.ColumnSpan="2" Style="{DynamicResource MaterialDesignSeparator}"/>
+                
+                <!--
+                    A listview showing the files that were found. Allows selecting files.
+                -->
                 <ListView ItemsSource="{Binding Files}"
                           Grid.Column="0"
                           Grid.Row="2"
@@ -973,6 +1000,10 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                
+                <!--
+                    Button for adding files to the list and removing them from the list.
+                -->
                 <StackPanel VerticalAlignment="Center"
                             Grid.Column="1"
                             Grid.Row="2">
@@ -987,8 +1018,13 @@
                         <md:PackIcon Kind="MinusThick"/>
                     </Button>
                 </StackPanel>
+                
                 <Separator Margin="15" Grid.Row="3" Grid.Column="0"
                            Grid.ColumnSpan="2" Style="{DynamicResource MaterialDesignSeparator}"/>
+                
+                <!--
+                    Buttons for saving and cancelling.
+                -->
             </Grid>
             <StackPanel Style="{StaticResource DialogButtonStackPanel}">
                 <Button Style="{StaticResource DialogSaveButton}"/>
@@ -997,9 +1033,17 @@
         </StackPanel>
     </DataTemplate>
 
-    <!--PROGRESS DIALOG-->
+    <!--
+        PROGRESS DIALOG
+        Dialog for showing the user how the task is progressing. 
+    -->
     <DataTemplate DataType="{x:Type dialog:ProgressDialog}">
-        <StackPanel>
+        <StackPanel> 
+            
+            <!--
+                Show an empty ellipse and a progress bar inside of it. Show percentage
+                text only if progress is not 0 (indeterminate).
+            -->
             <Grid Width="60" Height="60"
                   Margin="32, 32, 32, 10">
                 <Ellipse Width="60"
@@ -1033,6 +1077,10 @@
                         </Style>
                     </TextBlock.Style>
                 </TextBlock>
+                
+                <!--
+                    Show vector logo inside the progress ellipse if progress is 100 percent.
+                -->
                 <ContentControl Content="{StaticResource LogoIconVector}" HorizontalAlignment="Center"
                                 Name="Logo">
                     <ContentControl.Style>
@@ -1083,6 +1131,10 @@
                     </ContentControl.Triggers>
                 </ContentControl>
             </Grid>
+            
+            <!--
+                Show the phase of task progression (e.g. "Loading files", "Copying...", etc.).
+            -->
             <Grid Height="50">
                 <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}"
                            HorizontalAlignment="Center"
@@ -1094,6 +1146,10 @@
                            FontSize="16"
                            Text="{Binding Phase}"/>
             </Grid>
+            
+            <!--
+                Show progress of current subphase, if applicable.
+            -->
             <ProgressBar Style="{DynamicResource MaterialDesignLinearProgressBar}"
                          Foreground="{DynamicResource SecondaryHueMidBrush}"
                          Background="{DynamicResource MaterialDesignShadowBrush}"
@@ -1106,6 +1162,10 @@
                          HorizontalAlignment="Center"
                          Visibility="{Binding Part, Converter={StaticResource NullableToVisibilityConverter}}"
                          Margin="32, 0, 32, 0"/>
+            
+            <!--
+                Show name of the current subphase, if applicable.
+            -->
             <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}"
                        HorizontalAlignment="Center"
                        Width="180"
@@ -1114,6 +1174,10 @@
                        FontSize="10"
                        Text="{Binding Part}"
                        Visibility="{Binding Part, Converter={StaticResource NullableToVisibilityConverter}}"/>
+            
+            <!--
+                Cancel / close button, depending on the phase of the progress.
+            -->
             <Button Command="{Binding Close}">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}" BasedOn="{StaticResource DialogButton}">

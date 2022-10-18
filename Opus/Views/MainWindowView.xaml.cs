@@ -17,22 +17,38 @@ using System.Windows.Shapes;
 namespace Opus.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Main window code behing. The viewModel associated with main window view is
+    /// <see cref="Opus.ViewModels.MainWindowViewModel"/>. This partial class only contains
+    /// members and event listeners that are directly related to UI, in accordance with MVVM.
     /// </summary>
     public partial class MainWindowView : Window
     {
+        /// <summary>
+        /// Create a new main window.
+        /// </summary>
         public MainWindowView()
         {
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// When the window is loaded, select Extraction as the default view and mark
+        /// it's button selected.
+        /// </summary>
+        /// <param name="sender">The sending object (current window).</param>
+        /// <param name="e">Event arguments.</param>
+        protected void Window_Loaded(object sender, RoutedEventArgs e)
         {
             SplitButton.IsChecked = true;
             SplitButton.Command.Execute(SchemeNames.EXTRACT);
         }
 
-        private void TopBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        /// <summary>
+        /// The window can be moved by dragging the top bar.
+        /// </summary>
+        /// <param name="sender">Sending bar.</param>
+        /// <param name="e">Event arguments.</param>
+        protected void TopBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
         }
@@ -49,7 +65,5 @@ namespace Opus.Views
             else
                 WindowState = WindowState.Normal;
         }
-
-        private void MainWindow_Closing() { }
     }
 }

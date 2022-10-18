@@ -2,7 +2,11 @@
 
 namespace Opus.Events
 {
-    public class ViewChangeEvent : PubSubEvent<string>
-    {
-    }
+    /// <summary>
+    /// An event notifying of the change of the view scheme.
+    /// <para>
+    /// Has the name of the name scheme as payload.
+    /// </para>
+    /// </summary>
+    public class ViewChangeEvent : PubSubEvent<string> { }
 }

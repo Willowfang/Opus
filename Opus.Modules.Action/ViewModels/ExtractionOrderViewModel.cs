@@ -29,7 +29,7 @@ namespace Opus.Modules.Action.ViewModels
     /// Communicates (via events) with <see cref="ExtractionViewModel"/>.
     /// </summary>
     public class ExtractionOrderViewModel
-        : ViewModelBaseLogging<ExtractionViewModel>,
+        : ViewModelBaseLogging<ExtractionOrderViewModel>,
             INavigationTarget
     {
         #region DI services

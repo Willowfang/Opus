@@ -16,13 +16,13 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="CodeX-LoggingLib">
-      <HintPath>..\..\..\CodeX\Libraries\LoggingLib\bin\Debug\net6.0\CodeX-LoggingLib.dll</HintPath>
+      <HintPath>..\..\CodeX\Libraries\LoggingLib\bin\Debug\net6.0\CodeX-LoggingLib.dll</HintPath>
     </Reference>
     <Reference Include="CodeX-PdfLib">
-      <HintPath>..\..\..\CodeX\Libraries\PdfLib\bin\Debug\net6.0\CodeX-PdfLib.dll</HintPath>
+      <HintPath>..\..\CodeX\Libraries\PdfLib\bin\Debug\net6.0\CodeX-PdfLib.dll</HintPath>
     </Reference>
     <Reference Include="CodeX-PdfLib-iText7">
-      <HintPath>..\..\..\CodeX\Libraries\PdfLib.iText7\bin\Debug\net6.0\CodeX-PdfLib-iText7.dll</HintPath>
+      <HintPath>..\..\CodeX\Libraries\PdfLib.iText7\bin\Debug\net6.0\CodeX-PdfLib-iText7.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
