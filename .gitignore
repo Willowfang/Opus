@@ -357,8 +357,3 @@ Resources/
 # Opus profiles
 *.opusprofile
 
-# Pages
-/docs/
-
-# Sites directory, DocFX
-_site/

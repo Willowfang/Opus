@@ -39,7 +39,7 @@
     },
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
-    "template": ["default", "templates/singulinkfx"],
+    "template": ["default", "templates/darkfx"],
     "postProcessors": [],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,

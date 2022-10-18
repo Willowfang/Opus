@@ -1,0 +1,599 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CompositionFileCountDialog
+   | Opus Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CompositionFileCountDialog
+   | Opus Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Opus Docs">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog">
+  
+  
+  <h1 id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog" class="text-break">Class CompositionFileCountDialog
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Prism.Mvvm.BindableBase</span></div>
+    <div class="level2"><a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html">DialogBase</a></div>
+    <div class="level3"><span class="xref">CompositionFileCountDialog</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+    <div><a class="xref" href="Opus.Services.UI.IDialog.html">IDialog</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_DialogTitle">DialogBase.DialogTitle</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_IsCanceled">DialogBase.IsCanceled</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_DialogClosed">DialogBase.DialogClosed</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_SaveCommand">DialogBase.SaveCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_Save">DialogBase.Save</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_CloseCommand">DialogBase.CloseCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_Close">DialogBase.Close</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_ExecuteSave">DialogBase.ExecuteSave()</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_ExecuteClose">DialogBase.ExecuteClose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_CloseCanExecute">DialogBase.CloseCanExecute()</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_CloseOnError">DialogBase.CloseOnError()</a>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.Action, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.RaisePropertyChanged(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Opus.Services.Implementation.UI.Dialogs.html">Opus.Services.Implementation.UI.Dialogs</a></h6>
+  <h6><strong>Assembly</strong>: Opus.Services.Implementation.dll</h6>
+  <h5 id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CompositionFileCountDialog : DialogBase, INotifyPropertyChanged, IDialog</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog__ctor_System_Collections_Generic_IList_Opus_Services_Data_Composition_IFileEvaluationResult__Opus_Services_Data_Composition_ICompositionFile_Opus_Services_Input_IPathSelection_System_String_.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.%23ctor(System.Collections.Generic.IList%7BOpus.Services.Data.Composition.IFileEvaluationResult%7D%2COpus.Services.Data.Composition.ICompositionFile%2COpus.Services.Input.IPathSelection%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/CompositionFileCountDialog.cs/#L41">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog__ctor_" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.#ctor*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog__ctor_System_Collections_Generic_IList_Opus_Services_Data_Composition_IFileEvaluationResult__Opus_Services_Data_Composition_ICompositionFile_Opus_Services_Input_IPathSelection_System_String_" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.#ctor(System.Collections.Generic.IList{Opus.Services.Data.Composition.IFileEvaluationResult},Opus.Services.Data.Composition.ICompositionFile,Opus.Services.Input.IPathSelection,System.String)">CompositionFileCountDialog(IList&lt;IFileEvaluationResult&gt;, ICompositionFile, IPathSelection, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompositionFileCountDialog(IList&lt;IFileEvaluationResult&gt; files, ICompositionFile fileSegment, IPathSelection input, string dialogTitle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Opus.Services.Data.Composition.IFileEvaluationResult.html">IFileEvaluationResult</a>&gt;</td>
+        <td><span class="parametername">files</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Services.Data.Composition.ICompositionFile.html">ICompositionFile</a></td>
+        <td><span class="parametername">fileSegment</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Services.Input.IPathSelection.html">IPathSelection</a></td>
+        <td><span class="parametername">input</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dialogTitle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_AddFile.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.AddFile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/CompositionFileCountDialog.cs/#L30">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_AddFile_" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.AddFile*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_AddFile" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.AddFile">AddFile</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateCommand AddFile { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Commands.DelegateCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_AddFiles.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.AddFiles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/CompositionFileCountDialog.cs/#L29">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_AddFiles_" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.AddFiles*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_AddFiles" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.AddFiles">AddFiles</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateCommand AddFiles { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Commands.DelegateCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_DialogTextContent.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.DialogTextContent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/CompositionFileCountDialog.cs/#L34">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_DialogTextContent_" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.DialogTextContent*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_DialogTextContent" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.DialogTextContent">DialogTextContent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DialogTextContent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_Files.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.Files%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/CompositionFileCountDialog.cs/#L17">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_Files_" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.Files*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_Files" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.Files">Files</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObservableCollection&lt;EvaluationWrapper&gt; Files { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.ObservableCollection</span>&lt;<a class="xref" href="Opus.Services.Implementation.Data.Composition.EvaluationWrapper.html">EvaluationWrapper</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_RemoveFiles.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.RemoveFiles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/CompositionFileCountDialog.cs/#L31">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_RemoveFiles_" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.RemoveFiles*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_RemoveFiles" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.RemoveFiles">RemoveFiles</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateCommand RemoveFiles { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Commands.DelegateCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_Results.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.Results%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/CompositionFileCountDialog.cs/#L36">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_Results_" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.Results*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_Results" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.Results">Results</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;IFileEvaluationResult&gt; Results { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Opus.Services.Data.Composition.IFileEvaluationResult.html">IFileEvaluationResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_Segment.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.Segment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/CompositionFileCountDialog.cs/#L18">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_Segment_" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.Segment*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_Segment" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.Segment">Segment</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICompositionFile Segment { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.Services.Data.Composition.ICompositionFile.html">ICompositionFile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_SelectedFile.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.SelectedFile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/CompositionFileCountDialog.cs/#L23">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_SelectedFile_" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.SelectedFile*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_SelectedFile" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.SelectedFile">SelectedFile</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EvaluationWrapper SelectedFile { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.Services.Implementation.Data.Composition.EvaluationWrapper.html">EvaluationWrapper</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_SingleSelection.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.SingleSelection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/CompositionFileCountDialog.cs/#L33">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_SingleSelection_" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.SingleSelection*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_SingleSelection" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.SingleSelection">SingleSelection</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SingleSelection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_SaveCanExecute.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.SaveCanExecute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/CompositionFileCountDialog.cs/#L105">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_SaveCanExecute_" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.SaveCanExecute*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog_SaveCanExecute" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.SaveCanExecute">SaveCanExecute()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool SaveCanExecute()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_SaveCanExecute">DialogBase.SaveCanExecute()</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+  <div>
+      <a class="xref" href="Opus.Services.UI.IDialog.html">IDialog</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_CompositionFileCountDialog.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/CompositionFileCountDialog.cs/#L15" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              
+              <span>Generated by <strong>DocFX</strong></span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

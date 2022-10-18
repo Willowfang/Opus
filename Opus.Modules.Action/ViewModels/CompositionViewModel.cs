@@ -501,11 +501,16 @@ namespace Opus.Modules.Action.ViewModels
             importProfileCommand ??= new AsyncCommand(ExecuteImportProfile);
 
         /// <summary>
-        /// Execution method for import profile command.
+        /// Execution method for import profile command, see <see cref="ImportProfileCommand"/>.
+        /// <para>
+        /// Opens the importable profile file, reads it, imports the profile if possible and closes the file.muistio
+        /// </para>
         /// </summary>
         /// <returns>An awaitable task.</returns>
         protected async Task ExecuteImportProfile()
         {
+            // Ask the user for filepath to the profile to import.
+
             string filePath = input.OpenFile(
                 Resources.UserInput.Descriptions.SelectOpenFile,
                 FileType.Profile
@@ -516,7 +521,8 @@ namespace Opus.Modules.Action.ViewModels
 
             ICompositionProfile profile;
 
-            // Error logging at options.ImportProfile
+            // Import the profile or show error message, if there is an exception.
+
             try
             {
                 profile = options.ImportProfile(filePath);
@@ -544,6 +550,9 @@ namespace Opus.Modules.Action.ViewModels
                 await dialogAssist.Show(messageDialog);
                 return;
             }
+
+            // If a profile with the same name already exists, confirm whether that profile
+            // should be overwritten (or the new profile renamed).
 
             if (Profiles.Any(x => x.ProfileName == profile.ProfileName))
             {
@@ -585,6 +594,8 @@ namespace Opus.Modules.Action.ViewModels
                 profile.AddPageNumbers = profileDialog.AddPageNumbers;
             }
 
+            // Save the profile and select it.
+
             SaveAddAndSelect(profile);
 
             logbook.Write(
@@ -600,11 +611,22 @@ namespace Opus.Modules.Action.ViewModels
             return;
         }
 
-        private IAsyncCommand exportProfile;
-        public IAsyncCommand ExportProfile =>
-            exportProfile ??= new AsyncCommand(ExecuteExportProfile);
+        private IAsyncCommand exportProfileCommand;
 
-        private async Task ExecuteExportProfile()
+        /// <summary>
+        /// A command to export the selected profile.
+        /// </summary>
+        public IAsyncCommand ExportProfileCommand =>
+            exportProfileCommand ??= new AsyncCommand(ExecuteExportProfile);
+
+        /// <summary>
+        /// Execution method for profile export command.
+        /// <para>
+        /// Exports the current profile as .opusprofile -file.
+        /// </para>
+        /// </summary>
+        /// <returns>An awaitable task.</returns>
+        protected async Task ExecuteExportProfile()
         {
             string filePath = input.SaveFile(
                 Resources.UserInput.Descriptions.SelectSaveFile,

@@ -1,0 +1,794 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MainWindowViewModel
+   | Opus Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MainWindowViewModel
+   | Opus Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Opus Docs">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Opus.ViewModels.MainWindowViewModel">
+  
+  
+  <h1 id="Opus_ViewModels_MainWindowViewModel" data-uid="Opus.ViewModels.MainWindowViewModel" class="text-break">Class MainWindowViewModel
+  </h1>
+  <div class="markdown level0 summary"><p>Main window ViewModel. Main Window contains regions for displaying content and handles general,
+program-wide functions.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Prism.Mvvm.BindableBase</span></div>
+    <div class="level2"><a class="xref" href="Opus.Services.Implementation.Logging.LoggingCapable-1.html">LoggingCapable</a>&lt;<a class="xref" href="Opus.ViewModels.MainWindowViewModel.html">MainWindowViewModel</a>&gt;</div>
+    <div class="level3"><a class="xref" href="Opus.Core.Base.ViewModelBaseLogging-1.html">ViewModelBaseLogging</a>&lt;<a class="xref" href="Opus.ViewModels.MainWindowViewModel.html">MainWindowViewModel</a>&gt;</div>
+    <div class="level4"><span class="xref">MainWindowViewModel</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+    <div><span class="xref">Prism.Regions.INavigationAware</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Opus.Core.Base.ViewModelBaseLogging-1.html#Opus_Core_Base_ViewModelBaseLogging_1_IsNavigationTarget_Prism_Regions_NavigationContext_">ViewModelBaseLogging&lt;MainWindowViewModel&gt;.IsNavigationTarget(NavigationContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Core.Base.ViewModelBaseLogging-1.html#Opus_Core_Base_ViewModelBaseLogging_1_OnNavigatedFrom_Prism_Regions_NavigationContext_">ViewModelBaseLogging&lt;MainWindowViewModel&gt;.OnNavigatedFrom(NavigationContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Core.Base.ViewModelBaseLogging-1.html#Opus_Core_Base_ViewModelBaseLogging_1_OnNavigatedTo_Prism_Regions_NavigationContext_">ViewModelBaseLogging&lt;MainWindowViewModel&gt;.OnNavigatedTo(NavigationContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.Logging.LoggingCapable-1.html#Opus_Services_Implementation_Logging_LoggingCapable_1_logbook">LoggingCapable&lt;MainWindowViewModel&gt;.logbook</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.Logging.LoggingCapable-1.html#Opus_Services_Implementation_Logging_LoggingCapable_1_ChangeLogbook_CX_LoggingLib_ILogbook_">LoggingCapable&lt;MainWindowViewModel&gt;.ChangeLogbook(ILogbook)</a>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.Action, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.RaisePropertyChanged(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Opus.ViewModels.html">Opus.ViewModels</a></h6>
+  <h6><strong>Assembly</strong>: Opus.dll</h6>
+  <h5 id="Opus_ViewModels_MainWindowViewModel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MainWindowViewModel : ViewModelBaseLogging&lt;MainWindowViewModel&gt;, INotifyPropertyChanged, INavigationAware</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel__ctor_Prism_Events_IEventAggregator_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_IDialogAssist_CX_LoggingLib_ILogbook_.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel.%23ctor(Prism.Events.IEventAggregator%2COpus.Services.Configuration.IConfiguration%2COpus.Services.UI.IDialogAssist%2CCX.LoggingLib.ILogbook)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L68">View Source</a>
+  </span>
+  <a id="Opus_ViewModels_MainWindowViewModel__ctor_" data-uid="Opus.ViewModels.MainWindowViewModel.#ctor*"></a>
+  <h4 id="Opus_ViewModels_MainWindowViewModel__ctor_Prism_Events_IEventAggregator_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_IDialogAssist_CX_LoggingLib_ILogbook_" data-uid="Opus.ViewModels.MainWindowViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,CX.LoggingLib.ILogbook)">MainWindowViewModel(IEventAggregator, IConfiguration, IDialogAssist, ILogbook)</h4>
+  <div class="markdown level1 summary"><p>ViewModel responsible for the main window. Handles navigation functions
+and program-wide responsibilities.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MainWindowViewModel(IEventAggregator eventAggregator, IConfiguration configuration, IDialogAssist dialogAssist, ILogbook logbook)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Events.IEventAggregator</span></td>
+        <td><span class="parametername">eventAggregator</span></td>
+        <td><p>Service for sending events between view models (and other entities).</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Services.Configuration.IConfiguration.html">IConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>Program-wide configurations for paths, settings etc.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Services.UI.IDialogAssist.html">IDialogAssist</a></td>
+        <td><span class="parametername">dialogAssist</span></td>
+        <td><p>Service for showing various dialogs to the user.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CX.LoggingLib.ILogbook</span></td>
+        <td><span class="parametername">logbook</span></td>
+        <td><p>Logging services.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel_Dialog.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel.Dialog%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L38">View Source</a>
+  </span>
+  <a id="Opus_ViewModels_MainWindowViewModel_Dialog_" data-uid="Opus.ViewModels.MainWindowViewModel.Dialog*"></a>
+  <h4 id="Opus_ViewModels_MainWindowViewModel_Dialog" data-uid="Opus.ViewModels.MainWindowViewModel.Dialog">Dialog</h4>
+  <div class="markdown level1 summary"><p>Dialog services reference for showing various dialogs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDialogAssist Dialog { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.Services.UI.IDialogAssist.html">IDialogAssist</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Opus_ViewModels_MainWindowViewModel_Dialog_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>MainWindowView is bound to this object, hence its publicity. The view is
+bound to the currently shown dialog.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel_ExitCommand.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel.ExitCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L272">View Source</a>
+  </span>
+  <a id="Opus_ViewModels_MainWindowViewModel_ExitCommand_" data-uid="Opus.ViewModels.MainWindowViewModel.ExitCommand*"></a>
+  <h4 id="Opus_ViewModels_MainWindowViewModel_ExitCommand" data-uid="Opus.ViewModels.MainWindowViewModel.ExitCommand">ExitCommand</h4>
+  <div class="markdown level1 summary"><p>Command for exiting the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateCommand ExitCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Commands.DelegateCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel_LanguageCommand.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel.LanguageCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L192">View Source</a>
+  </span>
+  <a id="Opus_ViewModels_MainWindowViewModel_LanguageCommand_" data-uid="Opus.ViewModels.MainWindowViewModel.LanguageCommand*"></a>
+  <h4 id="Opus_ViewModels_MainWindowViewModel_LanguageCommand" data-uid="Opus.ViewModels.MainWindowViewModel.LanguageCommand">LanguageCommand</h4>
+  <div class="markdown level1 summary"><p>Command for changing UI language.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncCommand&lt;string&gt; LanguageCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AsyncAwaitBestPractices.MVVM.IAsyncCommand</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel_Languages.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel.Languages%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L56">View Source</a>
+  </span>
+  <a id="Opus_ViewModels_MainWindowViewModel_Languages_" data-uid="Opus.ViewModels.MainWindowViewModel.Languages*"></a>
+  <h4 id="Opus_ViewModels_MainWindowViewModel_Languages" data-uid="Opus.ViewModels.MainWindowViewModel.Languages">Languages</h4>
+  <div class="markdown level1 summary"><p>A collection of known languages for UI language selection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObservableCollection&lt;LanguageOption&gt; Languages { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.ObservableCollection</span>&lt;<a class="xref" href="Opus.Core.Wrappers.LanguageOption.html">LanguageOption</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel_NavigateCommand.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel.NavigateCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L232">View Source</a>
+  </span>
+  <a id="Opus_ViewModels_MainWindowViewModel_NavigateCommand_" data-uid="Opus.ViewModels.MainWindowViewModel.NavigateCommand*"></a>
+  <h4 id="Opus_ViewModels_MainWindowViewModel_NavigateCommand" data-uid="Opus.ViewModels.MainWindowViewModel.NavigateCommand">NavigateCommand</h4>
+  <div class="markdown level1 summary"><p>Command for navigating regions to different views based on a scheme name (e.g. &quot;extract&quot;).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateCommand&lt;string&gt; NavigateCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Commands.DelegateCommand</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel_OpenLicensesCommand.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel.OpenLicensesCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L131">View Source</a>
+  </span>
+  <a id="Opus_ViewModels_MainWindowViewModel_OpenLicensesCommand_" data-uid="Opus.ViewModels.MainWindowViewModel.OpenLicensesCommand*"></a>
+  <h4 id="Opus_ViewModels_MainWindowViewModel_OpenLicensesCommand" data-uid="Opus.ViewModels.MainWindowViewModel.OpenLicensesCommand">OpenLicensesCommand</h4>
+  <div class="markdown level1 summary"><p>Command for opening the licenses for viewing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateCommand OpenLicensesCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Commands.DelegateCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel_OpenManualCommand.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel.OpenManualCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L103">View Source</a>
+  </span>
+  <a id="Opus_ViewModels_MainWindowViewModel_OpenManualCommand_" data-uid="Opus.ViewModels.MainWindowViewModel.OpenManualCommand*"></a>
+  <h4 id="Opus_ViewModels_MainWindowViewModel_OpenManualCommand" data-uid="Opus.ViewModels.MainWindowViewModel.OpenManualCommand">OpenManualCommand</h4>
+  <div class="markdown level1 summary"><p>Command for opening the user manual.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateCommand OpenManualCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Commands.DelegateCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel_OpenSourceCodeCommand.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel.OpenSourceCodeCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L165">View Source</a>
+  </span>
+  <a id="Opus_ViewModels_MainWindowViewModel_OpenSourceCodeCommand_" data-uid="Opus.ViewModels.MainWindowViewModel.OpenSourceCodeCommand*"></a>
+  <h4 id="Opus_ViewModels_MainWindowViewModel_OpenSourceCodeCommand" data-uid="Opus.ViewModels.MainWindowViewModel.OpenSourceCodeCommand">OpenSourceCodeCommand</h4>
+  <div class="markdown level1 summary"><p>Command for opening the source code browser.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateCommand OpenSourceCodeCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Commands.DelegateCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel_ResetCommand.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel.ResetCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L291">View Source</a>
+  </span>
+  <a id="Opus_ViewModels_MainWindowViewModel_ResetCommand_" data-uid="Opus.ViewModels.MainWindowViewModel.ResetCommand*"></a>
+  <h4 id="Opus_ViewModels_MainWindowViewModel_ResetCommand" data-uid="Opus.ViewModels.MainWindowViewModel.ResetCommand">ResetCommand</h4>
+  <div class="markdown level1 summary"><p>Command for resetting current scheme to defaults.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateCommand ResetCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Commands.DelegateCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel_Title.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel.Title%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L47">View Source</a>
+  </span>
+  <a id="Opus_ViewModels_MainWindowViewModel_Title_" data-uid="Opus.ViewModels.MainWindowViewModel.Title*"></a>
+  <h4 id="Opus_ViewModels_MainWindowViewModel_Title" data-uid="Opus.ViewModels.MainWindowViewModel.Title">Title</h4>
+  <div class="markdown level1 summary"><p>Header title content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Title { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel_ExecuteExitCommand.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel.ExecuteExitCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L281">View Source</a>
+  </span>
+  <a id="Opus_ViewModels_MainWindowViewModel_ExecuteExitCommand_" data-uid="Opus.ViewModels.MainWindowViewModel.ExecuteExitCommand*"></a>
+  <h4 id="Opus_ViewModels_MainWindowViewModel_ExecuteExitCommand" data-uid="Opus.ViewModels.MainWindowViewModel.ExecuteExitCommand">ExecuteExitCommand()</h4>
+  <div class="markdown level1 summary"><p>Execution method for exit command, see <a class="xref" href="Opus.ViewModels.MainWindowViewModel.html#Opus_ViewModels_MainWindowViewModel_ExitCommand">ExitCommand</a>.</p>
+<p>
+Shuts the program down by calling shutdown on <span class="xref">System.Windows.Application.Current</span>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteExitCommand()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel_ExecuteLanguageCommand_System_String_.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel.ExecuteLanguageCommand(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L206">View Source</a>
+  </span>
+  <a id="Opus_ViewModels_MainWindowViewModel_ExecuteLanguageCommand_" data-uid="Opus.ViewModels.MainWindowViewModel.ExecuteLanguageCommand*"></a>
+  <h4 id="Opus_ViewModels_MainWindowViewModel_ExecuteLanguageCommand_System_String_" data-uid="Opus.ViewModels.MainWindowViewModel.ExecuteLanguageCommand(System.String)">ExecuteLanguageCommand(String)</h4>
+  <div class="markdown level1 summary"><p>Execution method for UI language change command, see <a class="xref" href="Opus.ViewModels.MainWindowViewModel.html#Opus_ViewModels_MainWindowViewModel_LanguageCommand">LanguageCommand</a>.</p>
+<p>
+Only changes language, if the selected language is not the same as the language already selected.
+</p>
+<p>
+Saves the language configuration for persistence and notifies the user of the need for restart.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async Task ExecuteLanguageCommand(string language)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">language</span></td>
+        <td><p>New language choice as a two-letter code (e.g. &quot;fi&quot;)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A void async task</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel_ExecuteNavigateCommand_System_String_.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel.ExecuteNavigateCommand(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L244">View Source</a>
+  </span>
+  <a id="Opus_ViewModels_MainWindowViewModel_ExecuteNavigateCommand_" data-uid="Opus.ViewModels.MainWindowViewModel.ExecuteNavigateCommand*"></a>
+  <h4 id="Opus_ViewModels_MainWindowViewModel_ExecuteNavigateCommand_System_String_" data-uid="Opus.ViewModels.MainWindowViewModel.ExecuteNavigateCommand(System.String)">ExecuteNavigateCommand(String)</h4>
+  <div class="markdown level1 summary"><p>Execution method for navigation command, see <a class="xref" href="Opus.ViewModels.MainWindowViewModel.html#Opus_ViewModels_MainWindowViewModel_NavigateCommand">NavigateCommand</a>.</p>
+<p>
+Publishes a ViewChange event that is listened to by <a class="xref" href="Opus.Services.UI.INavigationAssist.html">INavigationAssist</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteNavigateCommand(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name of the scheme to apply. Scheme names can be found at
+<a class="xref" href="Opus.Values.SchemeNames.html">SchemeNames</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel_ExecuteOpenLicensesCommand.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel.ExecuteOpenLicensesCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L142">View Source</a>
+  </span>
+  <a id="Opus_ViewModels_MainWindowViewModel_ExecuteOpenLicensesCommand_" data-uid="Opus.ViewModels.MainWindowViewModel.ExecuteOpenLicensesCommand*"></a>
+  <h4 id="Opus_ViewModels_MainWindowViewModel_ExecuteOpenLicensesCommand" data-uid="Opus.ViewModels.MainWindowViewModel.ExecuteOpenLicensesCommand">ExecuteOpenLicensesCommand()</h4>
+  <div class="markdown level1 summary"><p>Execution method for open licences command, see <a class="xref" href="Opus.ViewModels.MainWindowViewModel.html#Opus_ViewModels_MainWindowViewModel_OpenLicensesCommand">OpenLicensesCommand</a></p>
+<p>
+Opens the license file in a separate process. The file is a txt-file. Unless another program has
+been defined for txt-files, it will be opened in Notepad.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteOpenLicensesCommand()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel_ExecuteOpenManualCommand.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel.ExecuteOpenManualCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L114">View Source</a>
+  </span>
+  <a id="Opus_ViewModels_MainWindowViewModel_ExecuteOpenManualCommand_" data-uid="Opus.ViewModels.MainWindowViewModel.ExecuteOpenManualCommand*"></a>
+  <h4 id="Opus_ViewModels_MainWindowViewModel_ExecuteOpenManualCommand" data-uid="Opus.ViewModels.MainWindowViewModel.ExecuteOpenManualCommand">ExecuteOpenManualCommand()</h4>
+  <div class="markdown level1 summary"><p>Execution method for user manual opening command, see <a class="xref" href="Opus.ViewModels.MainWindowViewModel.html#Opus_ViewModels_MainWindowViewModel_OpenManualCommand">OpenManualCommand</a></p>
+<p>
+Opens the User manual as a separate process. The manual is an internet link, so most probably it will
+be opened in the system default browser.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteOpenManualCommand()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel_ExecuteOpenSourceCodeCommand.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel.ExecuteOpenSourceCodeCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L175">View Source</a>
+  </span>
+  <a id="Opus_ViewModels_MainWindowViewModel_ExecuteOpenSourceCodeCommand_" data-uid="Opus.ViewModels.MainWindowViewModel.ExecuteOpenSourceCodeCommand*"></a>
+  <h4 id="Opus_ViewModels_MainWindowViewModel_ExecuteOpenSourceCodeCommand" data-uid="Opus.ViewModels.MainWindowViewModel.ExecuteOpenSourceCodeCommand">ExecuteOpenSourceCodeCommand()</h4>
+  <div class="markdown level1 summary"><p>Execution method for source code opening command, see <a class="xref" href="Opus.ViewModels.MainWindowViewModel.html#Opus_ViewModels_MainWindowViewModel_OpenSourceCodeCommand">OpenSourceCodeCommand</a>.</p>
+<p>
+Source code is published to GitHub. This is, again, an internet link and will most likely be opened in the default browser.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteOpenSourceCodeCommand()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel_ExecuteResetCommand.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel.ExecuteResetCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L301">View Source</a>
+  </span>
+  <a id="Opus_ViewModels_MainWindowViewModel_ExecuteResetCommand_" data-uid="Opus.ViewModels.MainWindowViewModel.ExecuteResetCommand*"></a>
+  <h4 id="Opus_ViewModels_MainWindowViewModel_ExecuteResetCommand" data-uid="Opus.ViewModels.MainWindowViewModel.ExecuteResetCommand">ExecuteResetCommand()</h4>
+  <div class="markdown level1 summary"><p>Execution method for scheme resetting command, see <a class="xref" href="Opus.ViewModels.MainWindowViewModel.html#Opus_ViewModels_MainWindowViewModel_ResetCommand">ResetCommand</a></p>
+<p>
+Publishes an <a class="xref" href="Opus.Events.ActionResetEvent.html">ActionResetEvent</a> that is subscribed to by viewmodels of currently viewed
+views.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteResetCommand()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+  <div>
+      <span class="xref">Prism.Regions.INavigationAware</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_ViewModels_MainWindowViewModel.md&amp;value=---%0Auid%3A%20Opus.ViewModels.MainWindowViewModel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/ViewModels/MainWindowViewModel.cs/#L25" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              
+              <span>Generated by <strong>DocFX</strong></span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

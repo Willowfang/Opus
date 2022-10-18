@@ -1,0 +1,580 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DialogBase
+   | Opus Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DialogBase
+   | Opus Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Opus Docs">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Opus.Services.Implementation.UI.DialogBase">
+  
+  
+  <h1 id="Opus_Services_Implementation_UI_DialogBase" data-uid="Opus.Services.Implementation.UI.DialogBase" class="text-break">Class DialogBase
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Prism.Mvvm.BindableBase</span></div>
+    <div class="level2"><span class="xref">DialogBase</span></div>
+      <div class="level3"><a class="xref" href="Opus.Services.Implementation.UI.Dialogs.BookmarkDialog.html">BookmarkDialog</a></div>
+      <div class="level3"><a class="xref" href="Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.html">CompositionFileCountDialog</a></div>
+      <div class="level3"><a class="xref" href="Opus.Services.Implementation.UI.Dialogs.CompositionFileSegmentDialog.html">CompositionFileSegmentDialog</a></div>
+      <div class="level3"><a class="xref" href="Opus.Services.Implementation.UI.Dialogs.CompositionProfileDialog.html">CompositionProfileDialog</a></div>
+      <div class="level3"><a class="xref" href="Opus.Services.Implementation.UI.Dialogs.CompositionProfileSelectionDialog.html">CompositionProfileSelectionDialog</a></div>
+      <div class="level3"><a class="xref" href="Opus.Services.Implementation.UI.Dialogs.CompositionSettingsDialog.html">CompositionSettingsDialog</a></div>
+      <div class="level3"><a class="xref" href="Opus.Services.Implementation.UI.Dialogs.CompositionTitleSegmentDialog.html">CompositionTitleSegmentDialog</a></div>
+      <div class="level3"><a class="xref" href="Opus.Services.Implementation.UI.Dialogs.ConfirmationDialog.html">ConfirmationDialog</a></div>
+      <div class="level3"><a class="xref" href="Opus.Services.Implementation.UI.Dialogs.ExtractAnnotationsDialog.html">ExtractAnnotationsDialog</a></div>
+      <div class="level3"><a class="xref" href="Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.html">ExtractOrderDialog</a></div>
+      <div class="level3"><a class="xref" href="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.html">ExtractSettingsDialog</a></div>
+      <div class="level3"><a class="xref" href="Opus.Services.Implementation.UI.Dialogs.FileTitleDialog.html">FileTitleDialog</a></div>
+      <div class="level3"><a class="xref" href="Opus.Services.Implementation.UI.Dialogs.MergeSettingsDialog.html">MergeSettingsDialog</a></div>
+      <div class="level3"><a class="xref" href="Opus.Services.Implementation.UI.Dialogs.MessageDialog.html">MessageDialog</a></div>
+      <div class="level3"><a class="xref" href="Opus.Services.Implementation.UI.Dialogs.ProgressDialog.html">ProgressDialog</a></div>
+      <div class="level3"><a class="xref" href="Opus.Services.Implementation.UI.Dialogs.UpdateDialog.html">UpdateDialog</a></div>
+      <div class="level3"><a class="xref" href="Opus.Services.Implementation.UI.Dialogs.WorkCopySettingsDialog.html">WorkCopySettingsDialog</a></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+    <div><a class="xref" href="Opus.Services.UI.IDialog.html">IDialog</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.Action, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.RaisePropertyChanged(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Opus.Services.Implementation.UI.html">Opus.Services.Implementation.UI</a></h6>
+  <h6><strong>Assembly</strong>: Opus.Services.Implementation.dll</h6>
+  <h5 id="Opus_Services_Implementation_UI_DialogBase_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class DialogBase : BindableBase, INotifyPropertyChanged, IDialog</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_DialogBase__ctor_System_String_.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.DialogBase.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/DialogBase.cs/#L28">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_DialogBase__ctor_" data-uid="Opus.Services.Implementation.UI.DialogBase.#ctor*"></a>
+  <h4 id="Opus_Services_Implementation_UI_DialogBase__ctor_System_String_" data-uid="Opus.Services.Implementation.UI.DialogBase.#ctor(System.String)">DialogBase(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DialogBase(string dialogTitle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dialogTitle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_DialogBase_CloseCommand.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.DialogBase.CloseCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/DialogBase.cs/#L25">View Source</a>
+  </span>
+  <h4 id="Opus_Services_Implementation_UI_DialogBase_CloseCommand" data-uid="Opus.Services.Implementation.UI.DialogBase.CloseCommand">CloseCommand</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DelegateCommand CloseCommand</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Commands.DelegateCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_DialogBase_SaveCommand.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.DialogBase.SaveCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/DialogBase.cs/#L23">View Source</a>
+  </span>
+  <h4 id="Opus_Services_Implementation_UI_DialogBase_SaveCommand" data-uid="Opus.Services.Implementation.UI.DialogBase.SaveCommand">SaveCommand</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DelegateCommand SaveCommand</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Commands.DelegateCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_DialogBase_Close.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.DialogBase.Close%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/DialogBase.cs/#L26">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_DialogBase_Close_" data-uid="Opus.Services.Implementation.UI.DialogBase.Close*"></a>
+  <h4 id="Opus_Services_Implementation_UI_DialogBase_Close" data-uid="Opus.Services.Implementation.UI.DialogBase.Close">Close</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICommand Close { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Input.ICommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_DialogBase_DialogClosed.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.DialogBase.DialogClosed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/DialogBase.cs/#L21">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_DialogBase_DialogClosed_" data-uid="Opus.Services.Implementation.UI.DialogBase.DialogClosed*"></a>
+  <h4 id="Opus_Services_Implementation_UI_DialogBase_DialogClosed" data-uid="Opus.Services.Implementation.UI.DialogBase.DialogClosed">DialogClosed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TaskCompletionSource DialogClosed { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.TaskCompletionSource</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_DialogBase_DialogTitle.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.DialogBase.DialogTitle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/DialogBase.cs/#L13">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_DialogBase_DialogTitle_" data-uid="Opus.Services.Implementation.UI.DialogBase.DialogTitle*"></a>
+  <h4 id="Opus_Services_Implementation_UI_DialogBase_DialogTitle" data-uid="Opus.Services.Implementation.UI.DialogBase.DialogTitle">DialogTitle</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DialogTitle { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_DialogBase_IsCanceled.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.DialogBase.IsCanceled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/DialogBase.cs/#L16">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_DialogBase_IsCanceled_" data-uid="Opus.Services.Implementation.UI.DialogBase.IsCanceled*"></a>
+  <h4 id="Opus_Services_Implementation_UI_DialogBase_IsCanceled" data-uid="Opus.Services.Implementation.UI.DialogBase.IsCanceled">IsCanceled</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCanceled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_DialogBase_Save.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.DialogBase.Save%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/DialogBase.cs/#L24">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_DialogBase_Save_" data-uid="Opus.Services.Implementation.UI.DialogBase.Save*"></a>
+  <h4 id="Opus_Services_Implementation_UI_DialogBase_Save" data-uid="Opus.Services.Implementation.UI.DialogBase.Save">Save</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICommand Save { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Input.ICommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_DialogBase_CloseCanExecute.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.DialogBase.CloseCanExecute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/DialogBase.cs/#L48">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_DialogBase_CloseCanExecute_" data-uid="Opus.Services.Implementation.UI.DialogBase.CloseCanExecute*"></a>
+  <h4 id="Opus_Services_Implementation_UI_DialogBase_CloseCanExecute" data-uid="Opus.Services.Implementation.UI.DialogBase.CloseCanExecute">CloseCanExecute()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool CloseCanExecute()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_DialogBase_CloseOnError.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.DialogBase.CloseOnError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/DialogBase.cs/#L53">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_DialogBase_CloseOnError_" data-uid="Opus.Services.Implementation.UI.DialogBase.CloseOnError*"></a>
+  <h4 id="Opus_Services_Implementation_UI_DialogBase_CloseOnError" data-uid="Opus.Services.Implementation.UI.DialogBase.CloseOnError">CloseOnError()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void CloseOnError()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_DialogBase_ExecuteClose.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.DialogBase.ExecuteClose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/DialogBase.cs/#L43">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_DialogBase_ExecuteClose_" data-uid="Opus.Services.Implementation.UI.DialogBase.ExecuteClose*"></a>
+  <h4 id="Opus_Services_Implementation_UI_DialogBase_ExecuteClose" data-uid="Opus.Services.Implementation.UI.DialogBase.ExecuteClose">ExecuteClose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ExecuteClose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_DialogBase_ExecuteSave.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.DialogBase.ExecuteSave%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/DialogBase.cs/#L35">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_DialogBase_ExecuteSave_" data-uid="Opus.Services.Implementation.UI.DialogBase.ExecuteSave*"></a>
+  <h4 id="Opus_Services_Implementation_UI_DialogBase_ExecuteSave" data-uid="Opus.Services.Implementation.UI.DialogBase.ExecuteSave">ExecuteSave()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ExecuteSave()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_DialogBase_SaveCanExecute.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.DialogBase.SaveCanExecute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/DialogBase.cs/#L39">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_DialogBase_SaveCanExecute_" data-uid="Opus.Services.Implementation.UI.DialogBase.SaveCanExecute*"></a>
+  <h4 id="Opus_Services_Implementation_UI_DialogBase_SaveCanExecute" data-uid="Opus.Services.Implementation.UI.DialogBase.SaveCanExecute">SaveCanExecute()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool SaveCanExecute()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+  <div>
+      <a class="xref" href="Opus.Services.UI.IDialog.html">IDialog</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_DialogBase.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.DialogBase%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/DialogBase.cs/#L11" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              
+              <span>Generated by <strong>DocFX</strong></span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
