@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <Reference Include="CodeX-PdfLib">
-      <HintPath>..\..\..\CodeX\Libraries\PdfLib\bin\Debug\net6.0\CodeX-PdfLib.dll</HintPath>
+      <HintPath>..\..\CodeX\Libraries\PdfLib\bin\Debug\net6.0\CodeX-PdfLib.dll</HintPath>
     </Reference>
   </ItemGroup>
 

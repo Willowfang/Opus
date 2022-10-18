@@ -14,15 +14,19 @@ namespace Opus.Modules.Action
         {
             var navigator = containerProvider.Resolve<INavigationAssist>();
 
-            navigator.Add<ExtractionView>(RegionNames.MAINSECTION_THREE_ACTION, SchemeNames.SPLIT);
+            navigator.Add<ExtractionView>(RegionNames.MAINSECTION_FOUR_ACTION, SchemeNames.EXTRACT);
+            navigator.Add<ExtractionOrderView>(
+                RegionNames.MAINSECTION_FOUR_SUPPORT,
+                SchemeNames.EXTRACT
+            );
             navigator.Add<WorkCopyView>(RegionNames.MAINSECTION_THREE_ACTION, SchemeNames.WORKCOPY);
             navigator.Add<MergeView>(RegionNames.MAINSECTION_THREE_ACTION, SchemeNames.MERGE);
-            navigator.Add<CompositionView>(RegionNames.MAINSECTION_THREE_ACTION, SchemeNames.COMPOSE);
+            navigator.Add<CompositionView>(
+                RegionNames.MAINSECTION_THREE_ACTION,
+                SchemeNames.COMPOSE
+            );
         }
 
-        public void RegisterTypes(IContainerRegistry containerRegistry)
-        {
-            
-        }
+        public void RegisterTypes(IContainerRegistry containerRegistry) { }
     }
 }

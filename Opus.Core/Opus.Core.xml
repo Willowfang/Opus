@@ -4,6 +4,22 @@
         <name>Opus.Core</name>
     </assembly>
     <members>
+        <member name="T:Opus.Core.Executors.IExtractionExecutor">
+            <summary>
+            Service for extracting bookmarks from files.
+            <para>Has methods for saving into one or more pdfs or as a zip-file.</para>
+            <para>Default implementation is included in the same namespace.</para>
+            </summary>
+        </member>
+        <member name="M:Opus.Core.Executors.IExtractionExecutor.Save(System.IO.FileSystemInfo,System.Collections.Generic.IList{Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper})">
+            <summary>
+            Save selected bookmarks into one or more files.
+            </summary>
+            <param name="destination">Destination as a file or folder path (depending on
+            whether bookmarks are saved in a single or multiple files).</param>
+            <param name="files"></param>
+            <returns></returns>
+        </member>
         <member name="T:Opus.Core.Wrappers.BookmarkStorage">
             <summary>
             Storage class for displaying and selecting bookmarks

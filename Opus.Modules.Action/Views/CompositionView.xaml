@@ -47,7 +47,7 @@
             <StackPanel Orientation="Horizontal" 
                         Grid.Column="0">
                 <Button Style="{StaticResource ToolButton}"
-                        Command="{Binding OpenProfileMenu}"
+                        Command="{Binding OpenProfileMenuCommand}"
                         Margin="0">
                     <materialDesign:PopupBox PlacementMode="TopAndAlignCentres" StaysOpen="False"
                                              IsPopupOpen="{Binding AddProfileMenuOpen}"
@@ -57,13 +57,13 @@
                         </materialDesign:PopupBox.ToggleContent>
                         <StackPanel>
                             <Button Style="{StaticResource DialogButton}"
-                                    Content="{x:Static resButtons:Menus.NewProfile}" Command="{Binding AddProfile}"/>
+                                    Content="{x:Static resButtons:Menus.NewProfile}" Command="{Binding AddProfileCommand}"/>
                             <Button Style="{StaticResource DialogButton}"
-                                    Content="{x:Static resButtons:Menus.CopyProfile}" Command="{Binding CopyProfile}"/>
+                                    Content="{x:Static resButtons:Menus.CopyProfile}" Command="{Binding CopyProfileCommand}"/>
                             <Button Style="{StaticResource DialogButton}"
-                                    Content="{x:Static resButtons:Menus.ImportProfile}" Command="{Binding ImportProfile}"/>
+                                    Content="{x:Static resButtons:Menus.ImportProfile}" Command="{Binding ImportProfileCommand}"/>
                             <Button Style="{StaticResource DialogButton}"
-                                    Content="{x:Static resButtons:Menus.ExportProfile}" Command="{Binding ExportProfile}"/>
+                                    Content="{x:Static resButtons:Menus.ExportProfile}" Command="{Binding ExportProfileCommand}"/>
                         </StackPanel>
                     </materialDesign:PopupBox>
                 </Button>
@@ -95,14 +95,14 @@
             <Rectangle Grid.Column="3" Width="2" Fill="LightGray" Opacity="0.5" Margin="5" RadiusX="2" RadiusY="2"/>
             <StackPanel Orientation="Horizontal" Grid.Column="4">
                 <Button Style="{StaticResource ToolButton}"
-                        Command="{Binding EditProfile}"
+                        Command="{Binding EditProfileCommand}"
                         IsEnabled="{Binding SelectedProfile.IsEditable}"
                         Margin="0"
                         ToolTip="{x:Static resToolTips:Buttons.ProfileEditButton}">
                     <materialDesign:PackIcon Kind="Pencil"/>
                 </Button>
                 <Button Style="{StaticResource ToolButton}"
-                        Command="{Binding DeleteProfile}"
+                        Command="{Binding DeleteProfileCommand}"
                         IsEnabled="{Binding SelectedProfile.IsEditable}"
                         Margin="0"
                         ToolTip="{x:Static resToolTips:Buttons.DeleteProfileButton}">
@@ -162,7 +162,7 @@
                 </Button>
                 <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
                 <Button Style="{StaticResource ToolButton}" x:Name="AddSegmentButton"
-                        Command="{Binding OpenSegmentMenu}">
+                        Command="{Binding OpenSegmentMenuCommand}">
                     <materialDesign:PopupBox PlacementMode="TopAndAlignCentres" StaysOpen="False"
                                              IsPopupOpen="{Binding AddSegmentMenuOpen}"
                                              ToolTip="{x:Static resToolTips:Buttons.SegmentPopup}">

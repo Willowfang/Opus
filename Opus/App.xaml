@@ -7,10 +7,19 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <!--
+                    MATERIAL DESIGN IN XAML RESOURCES
+                    Load these resources for use throughout the application.
+                -->
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Cyan.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Amber.xaml" />
                 <materialDesign:CustomColorTheme BaseTheme="Dark" PrimaryColor="Cyan"  SecondaryColor="#84329B" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                
+                <!--
+                    CUSTOM IMAGES, CONVERTERS AND CONTROLS
+                    Load own resources for application-wide usage.
+                -->
                 <ResourceDictionary Source="/Images/Vectors.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Converters/ConvertersCollection.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Controls/ButtonsCollection.xaml"/>
@@ -23,6 +32,11 @@
                 <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Controls/CheckBoxCollection.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Controls/ToolTipsCollection.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            
+            <!--
+                COLORS
+                Set application colors.
+            -->
             <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="{StaticResource Primary500}"/>
             <SolidColorBrush x:Key="SecondaryHueLightBrush" Color="#b661cc"/>
             <SolidColorBrush x:Key="SecondaryHueMidBrush" Color="#9d5baf"/>

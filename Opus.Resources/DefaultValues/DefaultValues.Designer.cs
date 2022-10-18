@@ -61,6 +61,15 @@ namespace Opus.Resources.DefaultValues {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to [tiedosto]_muokattava.
+        /// </summary>
+        public static string UnsignedSuffix {
+            get {
+                return ResourceManager.GetString("UnsignedSuffix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to [tiedosto]_työkappale.
         /// </summary>
         public static string UnsignedTemplate {

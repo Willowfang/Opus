@@ -18,5 +18,6 @@
     <c:BooleanToInt x:Key="BooleanToInt"/>
     <c:UserNameReplace x:Key="UserNameReplacement"/>
     <c:UserNameToFontWeight x:Key="UserNameToFontWeight"/>
+    <c:ZeroToOppositeVisibility x:Key="ZeroToOppositeVisibility"/>
 
 </ResourceDictionary>

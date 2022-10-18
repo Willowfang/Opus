@@ -7,7 +7,11 @@ using System.Threading.Tasks;
 
 namespace Opus.Events
 {
-    public class DirectorySelectedEvent : PubSubEvent<string>
-    {
-    }
+    /// <summary>
+    /// An event signifying that the user has selected a directory path.
+    /// <para>
+    /// The selected path is sent as the payload.
+    /// </para>
+    /// </summary>
+    public class DirectorySelectedEvent : PubSubEvent<string> { }
 }

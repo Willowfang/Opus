@@ -4,9 +4,7 @@ using CX.PdfLib.Services;
 using CX.PdfLib.Services.Data;
 using CX.ZipLib;
 using Opus.Core.Wrappers;
-using Opus.ExtensionMethods;
 using Opus.Services.Configuration;
-using Opus.Services.Extensions;
 using Opus.Services.Implementation.Data.Extraction;
 using Opus.Services.Implementation.Logging;
 using Opus.Services.Implementation.StaticHelpers;
@@ -21,29 +19,73 @@ using System.Threading.Tasks;
 
 namespace Opus.Core.Executors
 {
+    /// <summary>
+    /// Service for extracting bookmarks from files.
+    /// <para>Has methods for saving into one or more pdfs or as a zip-file.</para>
+    /// <para>Default implementation is included in the same namespace.</para>
+    /// </summary>
     public interface IExtractionExecutor
     {
-        public Task Save(FileSystemInfo destination, IList<FileAndBookmarksStorage> files);
-        public Task SaveAsZip(FileSystemInfo fileDestination, IList<FileAndBookmarksStorage> files,
-            FileInfo zipFile);
+        /// <summary>
+        /// Save selected bookmarks into one or more files.
+        /// </summary>
+        /// <param name="destination">Destination as a file or folder path (depending on
+        /// whether bookmarks are saved in a single or multiple files).</param>
+        /// <param name="files"></param>
+        /// <returns>An awaitable task.</returns>
+        public Task Save(FileSystemInfo destination, IList<FileAndBookmarkWrapper> files);
+
+        /// <summary>
+        /// Save selected bookmarks and compress them into a zip-file.
+        /// </summary>
+        /// <param name="fileDestination">Destination for the files to compress.</param>
+        /// <param name="files">Bookmarks to extract.</param>
+        /// <param name="zipFile">Location of the final zip-file.</param>
+        /// <returns>An awaitable task.</returns>
+        public Task SaveAsZip(
+            FileSystemInfo fileDestination,
+            IList<FileAndBookmarkWrapper> files,
+            FileInfo zipFile
+        );
     }
+
+    /// <summary>
+    /// <see cref="IExtractionExecutor"/> default implementation.
+    /// <para>
+    /// Has logging capability.
+    /// </para>
+    /// </summary>
     public class ExtractionExecutor : LoggingCapable<ExtractionExecutor>, IExtractionExecutor
     {
+        // DI services
         private readonly IConfiguration configuration;
         private readonly IDialogAssist dialogAssist;
         private readonly IExtractionService extractionService;
         private readonly IAnnotationService annotationService;
         private readonly IZipService zipService;
+
+        // Cancellation state
         private bool canceled;
 
+        /// <summary>
+        /// Create an extraction executor.
+        /// </summary>
+        /// <param name="configuration">Program-wide configurations.</param>
+        /// <param name="dialogAssist">Service for showing and otherwise handling dialogs.</param>
+        /// <param name="extractionService">Service containing smaller services for extracting bookmarks.</param>
+        /// <param name="annotationService">Service for dealing with pdf annotations.</param>
+        /// <param name="zipService">Service for compressing files into a zip-file.</param>
+        /// <param name="logbook">Logging service.</param>
         public ExtractionExecutor(
-            IConfiguration configuration, 
-            IDialogAssist dialogAssist, 
+            IConfiguration configuration,
+            IDialogAssist dialogAssist,
             IExtractionService extractionService,
             IAnnotationService annotationService,
             IZipService zipService,
-            ILogbook logbook) : base(logbook)
+            ILogbook logbook
+        ) : base(logbook)
         {
+            // Assign DI services
             this.configuration = configuration;
             this.dialogAssist = dialogAssist;
             this.extractionService = extractionService;
@@ -51,15 +93,32 @@ namespace Opus.Core.Executors
             this.zipService = zipService;
         }
 
-        public async Task SaveAsZip(FileSystemInfo fileDestination, IList<FileAndBookmarksStorage> files,
-            FileInfo zipFile)
+        /// <summary>
+        /// Extract bookmarks and compress them into a zip-file.
+        /// <para>
+        /// Implements <see cref="IExtractionExecutor.SaveAsZip(FileSystemInfo, IList{FileAndBookmarkWrapper}, FileInfo)"/>.
+        /// </para>
+        /// </summary>
+        /// <param name="fileDestination">Destination path for the extracted bookmarks.</param>
+        /// <param name="files">Bookmarks to extract.</param>
+        /// <param name="zipFile">Filepath of the zip to compress into.</param>
+        /// <returns>An awaitable task.</returns>
+        public async Task SaveAsZip(
+            FileSystemInfo fileDestination,
+            IList<FileAndBookmarkWrapper> files,
+            FileInfo zipFile
+        )
         {
+            // Save the bookmarks as files in the given directory.
+
             CancellationTokenSource tokenSource = new CancellationTokenSource();
             ProgressContainer container = dialogAssist.ShowProgress(tokenSource);
 
             await SaveInternal(fileDestination, files, tokenSource, container);
 
             container.Reporting.Report(new ProgressReport(0, ProgressPhase.Converting));
+
+            // Compress the files into a zip-file.
 
             DirectoryInfo compressionDir;
 
@@ -79,12 +138,25 @@ namespace Opus.Core.Executors
             await container.Show;
         }
 
-        public async Task Save(FileSystemInfo destination, IList<FileAndBookmarksStorage> files)
+        /// <summary>
+        /// Extract bookmarks into one or more files.
+        /// <para>
+        /// Implements <see cref="IExtractionExecutor.Save(FileSystemInfo, IList{FileAndBookmarkWrapper})"/>.
+        /// </para>
+        /// </summary>
+        /// <param name="destination">Destination file or folder.</param>
+        /// <param name="files">Boomarks to extract.</param>
+        /// <returns></returns>
+        public async Task Save(FileSystemInfo destination, IList<FileAndBookmarkWrapper> files)
         {
+            // Extract bookmarks.
+
             CancellationTokenSource tokenSource = new CancellationTokenSource();
             ProgressContainer container = dialogAssist.ShowProgress(tokenSource);
 
             await SaveInternal(destination, files, tokenSource, container);
+
+            // Show progress dialog until cancelled or user closes after success.
 
             if (container.ProgressDialog.IsCanceled == false)
                 container.Reporting.Report(new ProgressReport(100, ProgressPhase.Finished));
@@ -92,54 +164,86 @@ namespace Opus.Core.Executors
             await container.Show;
         }
 
-        private async Task SaveInternal(FileSystemInfo destination, IList<FileAndBookmarksStorage> files,
-            CancellationTokenSource tokenSource, ProgressContainer container)
+        /// <summary>
+        /// Common saving functionality.
+        /// </summary>
+        /// <param name="destination">Destination of the bookmarks.</param>
+        /// <param name="files">Bookmarks to extract.</param>
+        /// <param name="tokenSource">Cancellation token.</param>
+        /// <param name="container">Container for displaying progress.</param>
+        /// <returns>An awaitable task.</returns>
+        private async Task SaveInternal(
+            FileSystemInfo destination,
+            IList<FileAndBookmarkWrapper> files,
+            CancellationTokenSource tokenSource,
+            ProgressContainer container
+        )
         {
+            // If asking for title has been chosen, ask the user for title template. Otherwise,
+            // use the given template.
+
             List<FileAndExtractables> products = new List<FileAndExtractables>();
 
             string title = await BookmarkMethods.AskForTitle(dialogAssist, configuration);
 
-            bool destinationIsFileOrNumbered = destination is FileInfo ||
-                title.Contains(Resources.Placeholders.FileNames.Number);
+            bool destinationIsFileOrNumbered =
+                destination is FileInfo || title.Contains(Resources.Placeholders.FileNames.Number);
 
-            IList<FileAndBookmarkWrapper> orderedBookmarks = await OrderBookmarks(files, destinationIsFileOrNumbered,
-                destination is FileInfo);
+            // Return bookmarks renamed according to the template.
 
-            if (orderedBookmarks == null) return;
+            IEnumerable<FileAndBookmarkWrapper> renamed = BookmarkMethods.GetRenamed(
+                files,
+                title,
+                logbook.BaseLogbook
+            );
 
-            foreach (FileAndBookmarksStorage storage in files)
+            // Group bookmarks by files and extract them per file.
+
+            var query = renamed.GroupBy(b => b.FilePath);
+
+            foreach (var result in query)
             {
-                IEnumerable<ILeveledBookmark> bookmarks = storage.Bookmarks.Where(x => x.IsSelected).Select(y => y.Value);
-
-                bookmarks = BookmarkMethods.GetParentsOnly(bookmarks);
-
-                IEnumerable<FileAndBookmarkWrapper> renamedIndexed = BookmarkMethods.GetRenamedAndIndexed(bookmarks, orderedBookmarks, title, storage.FilePath);
-
                 if (configuration.GroupByFiles == false)
                 {
-                    renamedIndexed = renamedIndexed.OrderBy(w => w.Index);
-                    foreach (FileAndBookmarkWrapper wrap in renamedIndexed)
+                    IOrderedEnumerable<FileAndBookmarkWrapper> ordered = result.OrderBy(
+                        w => w.Index
+                    );
+                    foreach (var item in ordered)
                     {
-                        products.Add(new FileAndExtractables(storage.FilePath, new List<ILeveledBookmark>() { wrap.Bookmark }));
+                        products.Add(
+                            new FileAndExtractables(
+                                result.Key,
+                                new List<ILeveledBookmark>() { item.Bookmark }
+                            )
+                        );
                     }
                 }
                 else
                 {
-                    products.Add(new FileAndExtractables(storage.FilePath, renamedIndexed.Select(w => w.Bookmark)));
+                    products.Add(
+                        new FileAndExtractables(result.Key, result.Select(w => w.Bookmark))
+                    );
                 }
             }
 
             ExtractionOptions options = new ExtractionOptions(products, destination);
 
+            // If some annotation have been chosen as removables, either ask the user about them
+            // or set those annotations as items to remove.
+
             await SelectAnnotations(options, files);
 
-            if (canceled) return;
+            if (canceled)
+                return;
 
             CancellationToken token = tokenSource.Token;
 
             options.Progress = container.Reporting;
             options.Cancellation = token;
             options.PdfA = configuration.ExtractionConvertPdfA;
+
+            // If pdf/a -conversion has been chosen, display error messages for the
+            // conversions that have failed.
 
             List<string> failedConversions = new List<string>();
             options.PdfAConversionFinished += async (s, e) =>
@@ -148,30 +252,53 @@ namespace Opus.Core.Executors
                 {
                     tokenSource.Cancel();
                     string content = $"{Resources.Messages.Extraction.PdfAConversionError}.";
-                    MessageDialog message = new MessageDialog(Resources.Labels.General.Notification, content);
+                    MessageDialog message = new MessageDialog(
+                        Resources.Labels.General.Notification,
+                        content
+                    );
                     await dialogAssist.Show(message);
                 }
             };
 
             if (token.IsCancellationRequested)
             {
-                logbook.Write($"Extraction was cancelled with token {token.GetHashCode()}.", LogLevel.Debug);
+                logbook.Write(
+                    $"Extraction was cancelled with token {token.GetHashCode()}.",
+                    LogLevel.Debug
+                );
                 return;
             }
+
+            // Extract the bookmarks
 
             logbook.Write("Extraction options: {@Options}", LogLevel.Debug, customContent: options);
 
             await extractionService.Extract(options);
         }
 
-        private async Task<IList<FileAndBookmarkWrapper>> OrderBookmarks(IList<FileAndBookmarksStorage> files,
-            bool showDialog, bool singleFile)
+        /// <summary>
+        /// DEPRECATED. Set bookmark order in a dialog.
+        /// </summary>
+        /// <param name="files"></param>
+        /// <param name="showDialog"></param>
+        /// <param name="singleFile"></param>
+        /// <returns></returns>
+        private async Task<IList<FileAndBookmarkWrapper>> BookmarkOrderDialog(
+            IList<FileAndBookmarksStorage> files,
+            bool showDialog,
+            bool singleFile
+        )
         {
-            ExtractOrderDialog orderDialog = new ExtractOrderDialog(Resources.Labels.Dialogs.ExtractionOrder.Title,
-                singleFile, configuration.GroupByFiles);
+            ExtractOrderDialog orderDialog = new ExtractOrderDialog(
+                Resources.Labels.Dialogs.ExtractionOrder.Title,
+                singleFile,
+                configuration.GroupByFiles
+            );
             foreach (FileAndBookmarksStorage file in files)
             {
-                IEnumerable<ILeveledBookmark> bookmarks = file.Bookmarks.Where(x => x.IsSelected).Select(y => y.Value);
+                IEnumerable<ILeveledBookmark> bookmarks = file.Bookmarks
+                    .Where(x => x.IsSelected)
+                    .Select(y => y.Bookmark);
                 bookmarks = BookmarkMethods.GetParentsOnly(bookmarks);
                 foreach (ILeveledBookmark bookmark in bookmarks)
                 {
@@ -185,7 +312,10 @@ namespace Opus.Core.Executors
                 await dialogAssist.Show(orderDialog);
                 if (orderDialog.IsCanceled)
                 {
-                    logbook.Write($"Cancellation in {nameof(IDialog)} '{orderDialog.DialogTitle}'.", LogLevel.Information);
+                    logbook.Write(
+                        $"Cancellation in {nameof(IDialog)} '{orderDialog.DialogTitle}'.",
+                        LogLevel.Information
+                    );
                     return null;
                 }
                 configuration.GroupByFiles = orderDialog.GroupByFiles;
@@ -194,17 +324,28 @@ namespace Opus.Core.Executors
             return orderDialog.Bookmarks.ToList();
         }
 
-        private async Task SelectAnnotations(ExtractionOptions options, IList<FileAndBookmarksStorage> files)
+        /// <summary>
+        /// Select annotations to remove.
+        /// </summary>
+        /// <param name="options">Extraction options to apply.</param>
+        /// <param name="files">Bookmarks.</param>
+        /// <returns>An awaitable task.</returns>
+        private async Task SelectAnnotations(
+            ExtractionOptions options,
+            IList<FileAndBookmarkWrapper> files
+        )
         {
             options.Annotations = (AnnotationOption)configuration.Annotations;
 
-            if (options.Annotations == AnnotationOption.Keep ||
-                options.Annotations == AnnotationOption.RemoveAll)
+            if (
+                options.Annotations == AnnotationOption.Keep
+                || options.Annotations == AnnotationOption.RemoveAll
+            )
                 return;
 
             HashSet<string> allTitlesSet = new HashSet<string>();
 
-            foreach (FileAndBookmarksStorage file in files)
+            foreach (FileAndBookmarkWrapper file in files)
             {
                 if (string.IsNullOrWhiteSpace(file.FilePath))
                     continue;
@@ -226,7 +367,9 @@ namespace Opus.Core.Executors
             }
 
             ExtractAnnotationsDialog annotDialog = new ExtractAnnotationsDialog(
-                Resources.Labels.Dialogs.ExtractionAnnotations.Title, allTitlesList);
+                Resources.Labels.Dialogs.ExtractionAnnotations.Title,
+                allTitlesList
+            );
 
             await dialogAssist.Show(annotDialog);
 

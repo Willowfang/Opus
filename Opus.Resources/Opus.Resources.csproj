@@ -40,6 +40,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>FileTypeNames.resx</DependentUpon>
     </Compile>
+    <Compile Update="HelperTexts\Extraction.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Extraction.resx</DependentUpon>
+    </Compile>
     <Compile Update="Hyperlinks\Hyperlinks.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -114,6 +119,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>WorkCopyOptions.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Labels\Extraction\Titles.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Titles.resx</DependentUpon>
     </Compile>
     <Compile Update="Labels\General.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -205,6 +215,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Extraction.resx</DependentUpon>
     </Compile>
+    <Compile Update="ToolTips\Main.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Main.resx</DependentUpon>
+    </Compile>
     <Compile Update="ToolTips\Merge.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -266,6 +281,10 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>FileTypeNames.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="HelperTexts\Extraction.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Extraction.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Hyperlinks\Hyperlinks.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Hyperlinks.Designer.cs</LastGenOutput>
@@ -325,6 +344,10 @@
     <EmbeddedResource Update="Labels\Dialogs\WorkCopyOptions.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>WorkCopyOptions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Labels\Extraction\Titles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Titles.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Labels\General.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -400,6 +423,10 @@
     <EmbeddedResource Update="ToolTips\Extraction.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Extraction.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ToolTips\Main.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Main.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="ToolTips\Merge.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

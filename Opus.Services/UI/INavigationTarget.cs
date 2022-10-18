@@ -19,5 +19,9 @@ namespace Opus.Services.UI
         /// Operations to perform when navigated from by <see cref="INavigationAssist"/>
         /// </summary>
         public void WhenLeaving();
+        /// <summary>
+        /// Operations to perform when a reset has been requested by the user.
+        /// </summary>
+        public void Reset();
     }
 }

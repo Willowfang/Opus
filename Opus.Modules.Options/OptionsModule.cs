@@ -12,13 +12,24 @@ namespace Opus.Modules.Options
         {
             var navigation = containerProvider.Resolve<INavigationAssist>();
 
-            navigation.Add<ExtractOptionsView>(RegionNames.MAINSECTION_THREE_OPTIONS, SchemeNames.SPLIT);
-            navigation.Add<WorkCopyOptionsView>(RegionNames.MAINSECTION_THREE_OPTIONS, SchemeNames.WORKCOPY);
-            navigation.Add<MergeOptionsView>(RegionNames.MAINSECTION_THREE_OPTIONS, SchemeNames.MERGE);
-            navigation.Add<ComposeOptionsView>(RegionNames.MAINSECTION_THREE_OPTIONS, SchemeNames.COMPOSE);
+            navigation.Add<ExtractOptionsView>(
+                RegionNames.MAINSECTION_FOUR_OPTIONS,
+                SchemeNames.EXTRACT
+            );
+            navigation.Add<WorkCopyOptionsView>(
+                RegionNames.MAINSECTION_THREE_OPTIONS,
+                SchemeNames.WORKCOPY
+            );
+            navigation.Add<MergeOptionsView>(
+                RegionNames.MAINSECTION_THREE_OPTIONS,
+                SchemeNames.MERGE
+            );
+            navigation.Add<ComposeOptionsView>(
+                RegionNames.MAINSECTION_THREE_OPTIONS,
+                SchemeNames.COMPOSE
+            );
         }
 
-        public void RegisterTypes(IContainerRegistry containerRegistry)
-        { }
+        public void RegisterTypes(IContainerRegistry containerRegistry) { }
     }
 }

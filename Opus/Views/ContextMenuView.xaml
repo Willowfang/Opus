@@ -17,6 +17,10 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
+    
+    <!--
+        Content control for displaying various dialogs related to current context menu action.
+    -->
     <materialDesign:DialogHost IsOpen="True" DialogContent="{Binding Dialog.Active}"
                                HorizontalAlignment="Center" HorizontalContentAlignment="Center"
                                VerticalAlignment="Center" VerticalContentAlignment="Center">

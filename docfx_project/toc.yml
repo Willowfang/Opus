@@ -1,0 +1,5 @@
+- name: Käyttöohje
+  href: articles/
+- name: Tekninen käyttöohje
+  href: api/
+  homepage: api/index.md

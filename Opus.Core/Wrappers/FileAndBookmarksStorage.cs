@@ -1,25 +1,39 @@
 ﻿using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Opus.Services.Implementation.Data.Extraction;
 
 namespace Opus.Core.Wrappers
 {
+    /// <summary>
+    /// A class for storing information on bookmarks and a related file.
+    /// </summary>
     public class FileAndBookmarksStorage : BindableBase
     {
+        /// <summary>
+        /// Path to the file containing the bookmarks.
+        /// </summary>
         public string FilePath { get; }
-        public string FileName { get; }
-        public ObservableCollection<BookmarkStorage> Bookmarks { get; set; }
 
+        /// <summary>
+        /// Name of the file.
+        /// </summary>
+        public string FileName { get; }
+
+        /// <summary>
+        /// Bookmarks in the file.
+        /// </summary>
+        public ObservableCollection<FileAndBookmarkWrapper> Bookmarks { get; set; }
+
+        /// <summary>
+        /// Create a new storage class for bookmarks and their containing file.
+        /// </summary>
+        /// <param name="filePath"></param>
         public FileAndBookmarksStorage(string filePath)
         {
             FilePath = filePath;
             FileName = Path.GetFileNameWithoutExtension(filePath);
-            Bookmarks = new ObservableCollection<BookmarkStorage>();
+            Bookmarks = new ObservableCollection<FileAndBookmarkWrapper>();
         }
     }
 }

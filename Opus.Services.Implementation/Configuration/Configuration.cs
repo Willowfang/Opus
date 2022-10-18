@@ -7,12 +7,15 @@ using System;
 using Opus.Services.Implementation.Logging;
 using CX.LoggingLib;
 using LoggingLib.Defaults;
+using System.Collections.Generic;
+using System.Security.Cryptography.Xml;
 
 namespace Opus.Services.Implementation.Configuration
 {
     public class Configuration : BindableBase, IConfiguration
     {
-        private const string pdfToolsLocation = @"C:\Program Files\Tracker Software\PDF Tools\PDFXTools.exe";
+        private const string pdfToolsLocation =
+            @"C:\Program Files\Tracker Software\PDF Tools\PDFXTools.exe";
 
         public string? ConfigurationFile { get; set; }
 
@@ -130,14 +133,20 @@ namespace Opus.Services.Implementation.Configuration
                 {
                     json = File.ReadAllText(configFile);
                 }
-                catch (Exception e) 
-                    when (e is ArgumentException || 
-                          e is PathTooLongException ||
-                          e is IOException ||
-                          e is UnauthorizedAccessException ||
-                          e is System.Security.SecurityException)
+                catch (Exception e)
+                    when (e is ArgumentException
+                        || e is PathTooLongException
+                        || e is IOException
+                        || e is UnauthorizedAccessException
+                        || e is System.Security.SecurityException
+                    )
                 {
-                    logbook.Write($"Configuration file load failed.", LogLevel.Error, e, nameof(Configuration));
+                    logbook.Write(
+                        $"Configuration file load failed.",
+                        LogLevel.Error,
+                        e,
+                        nameof(Configuration)
+                    );
                     throw;
                 }
 
@@ -149,16 +158,26 @@ namespace Opus.Services.Implementation.Configuration
                 }
                 catch (ArgumentNullException e)
                 {
-                    logbook.Write($"Configuration file deserialization failed.", LogLevel.Error, e, nameof(Configuration));
+                    logbook.Write(
+                        $"Configuration file deserialization failed.",
+                        LogLevel.Error,
+                        e,
+                        nameof(Configuration)
+                    );
                     throw;
                 }
                 catch (JsonException e)
                 {
-                    logbook.Write($"Configuration file deserialization failed. Corrupted or incompatible JSON-file. Creating new configuration.", LogLevel.Error, e, nameof(Configuration));
+                    logbook.Write(
+                        $"Configuration file deserialization failed. Corrupted or incompatible JSON-file. Creating new configuration.",
+                        LogLevel.Error,
+                        e,
+                        nameof(Configuration)
+                    );
 
                     config = CreateNew(configFile);
                 }
-                
+
                 configuration = config ?? CreateNew(configFile);
             }
             else

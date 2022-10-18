@@ -15,6 +15,7 @@ namespace Opus.Services.Implementation.UI
         {
             public string SchemeName { get; }
             public INavigationTarget Target { get; }
+            public SubscriptionToken? ResetEventToken { get; set; }
 
             public SchemeTarget(string schemeName, INavigationTarget target)
             {
@@ -81,8 +82,16 @@ namespace Opus.Services.Implementation.UI
 
             Schemes.FindAll(scheme => scheme.SchemeName == schemeName).ForEach(x =>
                 Manager.RequestNavigate(x.RegionName, x.ViewName));
-            Targets.FindAll(target => target.SchemeName == schemeName).ForEach(x => x.Target.OnArrival());
-            Targets.FindAll(target => target.SchemeName == CurrentScheme).ForEach(x => x.Target.WhenLeaving());
+            Targets.FindAll(target => target.SchemeName == schemeName).ForEach(x =>
+            {
+                x.ResetEventToken = Aggregator.GetEvent<ActionResetEvent>().Subscribe(x.Target.Reset);
+                x.Target.OnArrival();
+            });
+            Targets.FindAll(target => target.SchemeName == CurrentScheme).ForEach(x =>
+            {
+                Aggregator.GetEvent<ActionResetEvent>().Unsubscribe(x.ResetEventToken);
+                x.Target.WhenLeaving();
+            });
 
             CurrentScheme = schemeName;
 
