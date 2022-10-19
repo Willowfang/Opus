@@ -13,11 +13,30 @@ using CX.LoggingLib;
 
 namespace Opus.Modules.Options.ViewModels
 {
+    /// <summary>
+    /// Viewmodel for handling extraction options.
+    /// </summary>
     public class ExtractOptionsViewModel : OptionsViewModelBase<ExtractSettingsDialog>
     {
-        public ExtractOptionsViewModel(IDialogAssist dialogAssist, IConfiguration configuration, ILogbook logbook)
-            : base(dialogAssist, configuration, logbook) { }
+        #region Constructor
+        /// <summary>
+        /// Create a new viewmodel for handling extraction options modifications.
+        /// </summary>
+        /// <param name="dialogAssist">Service for showing and otherwise handling dialogs.</param>
+        /// <param name="configuration">Program-wide settings.</param>
+        /// <param name="logbook">Logging service.</param>
+        public ExtractOptionsViewModel(
+            IDialogAssist dialogAssist,
+            IConfiguration configuration,
+            ILogbook logbook
+        ) : base(dialogAssist, configuration, logbook) { }
+        #endregion
 
+        #region Overrides
+        /// <summary>
+        /// Create a dialog for modifying options.
+        /// </summary>
+        /// <returns>The created dialog.</returns>
         protected override ExtractSettingsDialog CreateDialog()
         {
             return new ExtractSettingsDialog(Resources.Labels.General.Settings)
@@ -31,6 +50,11 @@ namespace Opus.Modules.Options.ViewModels
             };
         }
 
+        /// <summary>
+        /// Save modified options.
+        /// </summary>
+        /// <inheritdoc/>
+        /// <param name="dialog"></param>
         protected override void SaveSettings(ExtractSettingsDialog dialog)
         {
             configuration.ExtractionTitle = dialog.Title;
@@ -39,5 +63,6 @@ namespace Opus.Modules.Options.ViewModels
             configuration.Annotations = dialog.Annotations;
             configuration.ExtractionCreateZip = dialog.CreateZip;
         }
+        #endregion
     }
 }

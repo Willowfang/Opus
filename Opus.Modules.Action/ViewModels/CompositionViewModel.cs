@@ -628,6 +628,8 @@ namespace Opus.Modules.Action.ViewModels
         /// <returns>An awaitable task.</returns>
         protected async Task ExecuteExportProfile()
         {
+            // Ask the user for exported profile file path.
+
             string filePath = input.SaveFile(
                 Resources.UserInput.Descriptions.SelectSaveFile,
                 FileType.Profile,
@@ -636,6 +638,9 @@ namespace Opus.Modules.Action.ViewModels
 
             if (filePath is null)
                 return;
+
+            // Export the profile or display an error message, if the profile could not
+            // be exported.
 
             try
             {
@@ -669,6 +674,8 @@ namespace Opus.Modules.Action.ViewModels
                 LogLevel.Information
             );
 
+            // Show a success message, if export was successful.
+
             MessageDialog successDialog = new MessageDialog(
                 Resources.Labels.General.Notification,
                 Resources.Messages.Composition.ProfileExportSuccess
@@ -677,12 +684,25 @@ namespace Opus.Modules.Action.ViewModels
             return;
         }
 
-        private IAsyncCommand addFileSegment;
-        public IAsyncCommand AddFileSegment =>
-            addFileSegment ??= new AsyncCommand(ExecuteAddFileSegment);
+        private IAsyncCommand addFileSegmentCommand;
 
-        private async Task ExecuteAddFileSegment()
+        /// <summary>
+        /// Command for adding a new file segment for the profile.
+        /// </summary>
+        public IAsyncCommand AddFileSegmentCommand =>
+            addFileSegmentCommand ??= new AsyncCommand(ExecuteAddFileSegment);
+
+        /// <summary>
+        /// Execution method for file segment addition command, see <see cref="AddFileSegmentCommand"/>.
+        /// <para>
+        /// Adds the file segment into the profile.
+        /// </para>
+        /// </summary>
+        /// <returns></returns>
+        protected async Task ExecuteAddFileSegment()
         {
+            // Ask the user for segment specification.
+
             CompositionFileSegmentDialog dialog = new CompositionFileSegmentDialog(
                 Resources.Labels.Dialogs.CompositionFileSegment.NewTitle
             );
@@ -691,6 +711,8 @@ namespace Opus.Modules.Action.ViewModels
 
             if (dialog.IsCanceled)
                 return;
+
+            // Create a new segment and insert it into the profile.
 
             ICompositionFile segment = options.CreateFileSegment(dialog.SegmentName);
             segment.NameFromFile = dialog.NameFromFile;
@@ -712,10 +734,22 @@ namespace Opus.Modules.Action.ViewModels
             );
         }
 
-        private IAsyncCommand editSegment;
-        public IAsyncCommand EditSegment => editSegment ??= new AsyncCommand(ExecuteEditSegment);
+        private IAsyncCommand editSegmentCommand;
 
-        private async Task ExecuteEditSegment()
+        /// <summary>
+        /// Command for editing a profile segment.
+        /// </summary>
+        public IAsyncCommand EditSegmentCommand =>
+            editSegmentCommand ??= new AsyncCommand(ExecuteEditSegment);
+
+        /// <summary>
+        /// Execution method for profile segment edit command, see <see cref="EditSegmentCommand"/>.
+        /// <para>
+        /// Asks for values to edit and modifies the segment accordingly.
+        /// </para>
+        /// </summary>
+        /// <returns></returns>
+        protected async Task ExecuteEditSegment()
         {
             if (SelectedProfile.Segments.SelectedItem is ICompositionFile fileSegment)
             {
@@ -782,11 +816,22 @@ namespace Opus.Modules.Action.ViewModels
             );
         }
 
-        private IAsyncCommand addTitleSegment;
-        public IAsyncCommand AddTitleSegment =>
-            addTitleSegment ??= new AsyncCommand(ExecuteAddTitleSegment);
+        private IAsyncCommand addTitleSegmentCommand;
 
-        private async Task ExecuteAddTitleSegment()
+        /// <summary>
+        /// Command for addin a title segment (vs. file segment).
+        /// </summary>
+        public IAsyncCommand AddTitleSegmentCommand =>
+            addTitleSegmentCommand ??= new AsyncCommand(ExecuteAddTitleSegment);
+
+        /// <summary>
+        /// Execution method for title segment addition command, see <see cref="AddTitleSegmentCommand"/>.
+        /// <para>
+        /// Adds a new title segment into the profile.
+        /// </para>
+        /// </summary>
+        /// <returns>An awaitable task.</returns>
+        protected async Task ExecuteAddTitleSegment()
         {
             CompositionTitleSegmentDialog dialog = new CompositionTitleSegmentDialog(
                 Resources.Labels.Dialogs.CompositionFileSegment.NewTitle
@@ -813,11 +858,22 @@ namespace Opus.Modules.Action.ViewModels
             );
         }
 
-        private IAsyncCommand deleteSegment;
-        public IAsyncCommand DeleteSegment =>
-            deleteSegment ??= new AsyncCommand(ExecuteDeleteSegment);
+        private IAsyncCommand deleteSegmentCommand;
 
-        private async Task ExecuteDeleteSegment()
+        /// <summary>
+        /// Command for deleting a segment from a profile.
+        /// </summary>
+        public IAsyncCommand DeleteSegmentCommand =>
+            deleteSegmentCommand ??= new AsyncCommand(ExecuteDeleteSegment);
+
+        /// <summary>
+        /// Execution method for segment deletion command, see <see cref="DeleteSegmentCommand"/>.
+        /// <para>
+        /// Delete a segment from a profile.
+        /// </para>
+        /// </summary>
+        /// <returns></returns>
+        protected async Task ExecuteDeleteSegment()
         {
             ConfirmationDialog dialog = new ConfirmationDialog(
                 Resources.Labels.Dialogs.Confirmation.DeleteCompositionSegmentTitle,
@@ -845,8 +901,15 @@ namespace Opus.Modules.Action.ViewModels
                 LogLevel.Information
             );
         }
+        #endregion
 
-        private async Task ExecuteComposition(string directory)
+        #region Methods
+        /// <summary>
+        /// Execute the actual composition function using related services.
+        /// </summary>
+        /// <param name="directory">The directory to compose.</param>
+        /// <returns>An awaitable task.</returns>
+        protected async Task ExecuteComposition(string directory)
         {
             logbook.Write($"Starting composition.", LogLevel.Information);
 
@@ -860,13 +923,16 @@ namespace Opus.Modules.Action.ViewModels
             logbook.Write($"Composition finished.", LogLevel.Information);
         }
 
-        #endregion
-
+        /// <summary>
+        /// Save the profile into the database and immediately select it.
+        /// </summary>
+        /// <param name="profile">Profile to save.</param>
         private void SaveAddAndSelect(ICompositionProfile profile)
         {
             options.SaveProfile(profile);
             Profiles.Add(profile);
             SelectedProfile = profile;
         }
+        #endregion
     }
 }

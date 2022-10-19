@@ -4,6 +4,10 @@
                     xmlns:data="clr-namespace:Opus.Services.Implementation.Data.Composition;assembly=Opus.Services.Implementation"
                     xmlns:resTooltips="clr-namespace:Opus.Resources.ToolTips.Composition;assembly=Opus.Resources">
 
+    <!--
+        SEGMENT LIST GRID
+        Grid for holding profile segments list.
+    -->
     <Style TargetType="{x:Type Grid}" x:Key="SegmentListGrid">
         <Setter Property="ToolTipService.HorizontalOffset" Value="20"/>
         <Setter Property="ToolTipService.ShowOnDisabled" Value="True"/>
@@ -12,10 +16,17 @@
         <Setter Property="ToolTip.StaysOpen" Value="True"/>
     </Style>
     
-    <!--COMPOSITION FILE TEMPLATE-->
+    <!--
+        COMPOSITION FILE TEMPLATE
+        Datatemplate for showing composition file information.
+    -->
     <DataTemplate DataType="{x:Type data:CompositionFile}">
         <Grid Style="{StaticResource SegmentListGrid}"
               ToolTipService.PlacementTarget="{Binding ElementName=DisplayNameBox}">
+            
+            <!--
+                Show tooltip on hover with all the relevant information.
+            -->
             <Grid.ToolTip>
                 <StackPanel>
                     <TextBlock FontWeight="ExtraBold" Text="{Binding SegmentName}"
@@ -54,6 +65,10 @@
                     </StackPanel>
                 </StackPanel>
             </Grid.ToolTip>
+            
+            <!--
+                Show the name indented according to the level of the entry.
+            -->
             <TextBlock x:Name="DisplayNameBox"
                        TextTrimming="CharacterEllipsis"
                        Margin="{Binding Level, Converter={StaticResource LevelToMargin}}"
@@ -62,9 +77,16 @@
         </Grid>
     </DataTemplate>
 
-    <!--COMPOSITION TITLE TEMPLATE-->
+    <!--
+        COMPOSITION TITLE TEMPLATE
+        Datatemplate for showing composition title info.
+    -->
     <DataTemplate DataType="{x:Type data:CompositionTitle}">
         <Grid Style="{StaticResource SegmentListGrid}">
+            
+            <!--
+                Show segment title as tooltip on hover.
+            -->
             <Grid.ToolTip>
                 <StackPanel>
                     <TextBlock FontWeight="ExtraBold" Text="{Binding SegmentName}"
@@ -75,6 +97,10 @@
                     </StackPanel>
                 </StackPanel>
             </Grid.ToolTip>
+            
+            <!--
+                Show name indented according to entry level.
+            -->
             <TextBlock TextTrimming="CharacterEllipsis"
                        Margin="{Binding Level, Converter={StaticResource LevelToMargin}}"
                        Text="{Binding DisplayName}"

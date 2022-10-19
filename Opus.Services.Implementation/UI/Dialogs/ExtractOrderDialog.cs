@@ -1,28 +1,35 @@
-﻿using CX.LoggingLib;
-using CX.PdfLib.Services.Data;
-using GongSolutions.Wpf.DragDrop;
-using Opus.Services.Implementation.Data.Extraction;
+﻿using Opus.Services.Implementation.Data.Extraction;
 using Opus.Services.Implementation.StaticHelpers;
 using Opus.Services.UI;
 using Prism.Commands;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Input;
 
 namespace Opus.Services.Implementation.UI.Dialogs
 {
+    /// <summary>
+    /// A dialog for rearranging the bookmarks to extract (for correct numbering).
+    /// <para>
+    /// This dialog is only used in context menu actions. In GUI the rearranging happens within the same
+    /// view as the selection.
+    /// </para>
+    /// </summary>
     public class ExtractOrderDialog : DialogBase, IDialog
     {
+        /// <summary>
+        /// Bookmarks to arrange.
+        /// </summary>
         public ReorderCollection<FileAndBookmarkWrapper> Bookmarks { get; }
 
+        /// <summary>
+        /// If true, produce a single file.
+        /// </summary>
         public bool SingleFile { get; }
 
         private bool groupByFiles;
+
+        /// <summary>
+        /// If producing a single file and this is true, bookmarks will be grouped within that file according
+        /// to their original source files.
+        /// </summary>
         public bool GroupByFiles
         {
             get => groupByFiles;
@@ -30,10 +37,20 @@ namespace Opus.Services.Implementation.UI.Dialogs
         }
 
         private DelegateCommand? addExternal;
-        public DelegateCommand AddExternal => addExternal ??= new DelegateCommand(ExecuteAddExternal);
 
-        public ExtractOrderDialog(string title, bool singleFile, bool groupByFiles)
-            : base(title)
+        /// <summary>
+        /// Command for adding a marker for an external file (for numbering purposes).
+        /// </summary>
+        public DelegateCommand AddExternal =>
+            addExternal ??= new DelegateCommand(ExecuteAddExternal);
+
+        /// <summary>
+        /// Create a new dialog for selecting extraction order.
+        /// </summary>
+        /// <param name="title">Title for the dialog.</param>
+        /// <param name="singleFile">Produce a single file.</param>
+        /// <param name="groupByFiles">If true, group bookmarks by their source within the file.</param>
+        public ExtractOrderDialog(string title, bool singleFile, bool groupByFiles) : base(title)
         {
             Bookmarks = new ReorderCollection<FileAndBookmarkWrapper>();
             Bookmarks.CanReorder = true;
@@ -44,17 +61,28 @@ namespace Opus.Services.Implementation.UI.Dialogs
             Bookmarks.CollectionChanged += Bookmarks_CollectionChanged;
         }
 
-        private void Bookmarks_CollectionChanged(object? sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        private void Bookmarks_CollectionChanged(
+            object? sender,
+            System.Collections.Specialized.NotifyCollectionChangedEventArgs e
+        )
         {
             UpdateIndexes();
         }
 
-
         private void ExecuteAddExternal()
         {
-            Bookmarks.Add(BookmarkMethods.GetPlaceHolderBookmarkWrapper(Resources.Labels.Dialogs.ExtractionOrder.ExternalFile, Resources.Labels.Dialogs.ExtractionOrder.ExternalFile, Bookmarks.Count + 1));
+            Bookmarks.Add(
+                BookmarkMethods.GetPlaceHolderBookmarkWrapper(
+                    Resources.Labels.Dialogs.ExtractionOrder.ExternalFile,
+                    Resources.Labels.Dialogs.ExtractionOrder.ExternalFile,
+                    Bookmarks.Count + 1
+                )
+            );
         }
 
+        /// <summary>
+        /// Update all the indexes of all bookmark wrappers (to correspond to their index in the collection).
+        /// </summary>
         public void UpdateIndexes()
         {
             for (int i = 0; i < Bookmarks.Count; i++)

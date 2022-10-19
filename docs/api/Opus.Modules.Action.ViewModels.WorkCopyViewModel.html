@@ -36,7 +36,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="Opus Docs">
+                <img id="logo" class="svg" src="../images/logo38pt.png" alt="Opus Docs">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -72,7 +72,8 @@
   
   <h1 id="Opus_Modules_Action_ViewModels_WorkCopyViewModel" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel" class="text-break">Class WorkCopyViewModel
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>ViewModel for creating work copies of pdf-files.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -155,11 +156,12 @@
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_WorkCopyViewModel__ctor_Prism_Events_IEventAggregator_Opus_Core_Executors_ISignatureExecutor_Opus_Services_Input_IPathSelection_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_INavigationTargetRegistry_Opus_Services_UI_IDialogAssist_CX_PdfLib_Services_IAnnotationService_CX_LoggingLib_ILogbook_.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.WorkCopyViewModel.%23ctor(Prism.Events.IEventAggregator%2COpus.Core.Executors.ISignatureExecutor%2COpus.Services.Input.IPathSelection%2COpus.Services.Configuration.IConfiguration%2COpus.Services.UI.INavigationTargetRegistry%2COpus.Services.UI.IDialogAssist%2CCX.PdfLib.Services.IAnnotationService%2CCX.LoggingLib.ILogbook)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L51">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L69">View Source</a>
   </span>
   <a id="Opus_Modules_Action_ViewModels_WorkCopyViewModel__ctor_" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.#ctor*"></a>
   <h4 id="Opus_Modules_Action_ViewModels_WorkCopyViewModel__ctor_Prism_Events_IEventAggregator_Opus_Core_Executors_ISignatureExecutor_Opus_Services_Input_IPathSelection_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_INavigationTargetRegistry_Opus_Services_UI_IDialogAssist_CX_PdfLib_Services_IAnnotationService_CX_LoggingLib_ILogbook_" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Core.Executors.ISignatureExecutor,Opus.Services.Input.IPathSelection,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.INavigationTargetRegistry,Opus.Services.UI.IDialogAssist,CX.PdfLib.Services.IAnnotationService,CX.LoggingLib.ILogbook)">WorkCopyViewModel(IEventAggregator, ISignatureExecutor, IPathSelection, IConfiguration, INavigationTargetRegistry, IDialogAssist, IAnnotationService, ILogbook)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Create a new viewModel for handling work copy creation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -178,42 +180,50 @@
       <tr>
         <td><span class="xref">Prism.Events.IEventAggregator</span></td>
         <td><span class="parametername">eventAggregator</span></td>
-        <td></td>
+        <td><p>Service for publishing and receiving events between viewModels.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Opus.Core.Executors.ISignatureExecutor.html">ISignatureExecutor</a></td>
         <td><span class="parametername">executor</span></td>
-        <td></td>
+        <td><p>Service for executing work copy creation.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Opus.Services.Input.IPathSelection.html">IPathSelection</a></td>
         <td><span class="parametername">input</span></td>
-        <td></td>
+        <td><p>Service for getting path information as user input.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Opus.Services.Configuration.IConfiguration.html">IConfiguration</a></td>
         <td><span class="parametername">configuration</span></td>
-        <td></td>
+        <td><p>Program-wide configurations.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Opus.Services.UI.INavigationTargetRegistry.html">INavigationTargetRegistry</a></td>
         <td><span class="parametername">navRegistry</span></td>
-        <td></td>
+        <td><p>Navigation registry for viewModels.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Opus.Services.UI.IDialogAssist.html">IDialogAssist</a></td>
         <td><span class="parametername">dialogAssist</span></td>
-        <td></td>
+        <td><p>Service for showing and otherwise handling dialogs.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CX.PdfLib.Services.IAnnotationService</span></td>
         <td><span class="parametername">annotationService</span></td>
-        <td></td>
+        <td><p>Service for manipulating pdf annotations.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CX.LoggingLib.ILogbook</span></td>
         <td><span class="parametername">logbook</span></td>
-        <td></td>
+        <td><p>Logging services.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -224,11 +234,12 @@
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_WorkCopyViewModel_ClearCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.WorkCopyViewModel.ClearCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L109">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L172">View Source</a>
   </span>
   <a id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_ClearCommand_" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.ClearCommand*"></a>
   <h4 id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_ClearCommand" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.ClearCommand">ClearCommand</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Command for clearing the whole list.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -254,11 +265,12 @@
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_WorkCopyViewModel_CreateWorkCopyCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.WorkCopyViewModel.CreateWorkCopyCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L118">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L191">View Source</a>
   </span>
   <a id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_CreateWorkCopyCommand_" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.CreateWorkCopyCommand*"></a>
   <h4 id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_CreateWorkCopyCommand" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.CreateWorkCopyCommand">CreateWorkCopyCommand</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Command for creating work copies.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -284,11 +296,12 @@
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_WorkCopyViewModel_DeleteCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.WorkCopyViewModel.DeleteCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L100">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L153">View Source</a>
   </span>
   <a id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_DeleteCommand_" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.DeleteCommand*"></a>
   <h4 id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_DeleteCommand" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.DeleteCommand">DeleteCommand</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Command for deleting a file entry from the list.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -314,11 +327,12 @@
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_WorkCopyViewModel_OriginalFiles.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.WorkCopyViewModel.OriginalFiles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L42">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L43">View Source</a>
   </span>
   <a id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_OriginalFiles_" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.OriginalFiles*"></a>
   <h4 id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_OriginalFiles" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.OriginalFiles">OriginalFiles</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Collection for files that will have their signatures removed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -344,11 +358,12 @@
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_WorkCopyViewModel_SelectedFile.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.WorkCopyViewModel.SelectedFile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L45">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L50">View Source</a>
   </span>
   <a id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_SelectedFile_" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.SelectedFile*"></a>
   <h4 id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_SelectedFile" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.SelectedFile">SelectedFile</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The file that is currently selected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -373,14 +388,87 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_WorkCopyViewModel_ExecuteClearCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteClearCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L181">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_ExecuteClearCommand_" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteClearCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_ExecuteClearCommand" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteClearCommand">ExecuteClearCommand()</h4>
+  <div class="markdown level1 summary"><p>Execution method for clear command, see <a class="xref" href="Opus.Modules.Action.ViewModels.WorkCopyViewModel.html#Opus_Modules_Action_ViewModels_WorkCopyViewModel_ClearCommand">ClearCommand</a>.</p>
+<p>
+Clear the whole list of file entries.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteClearCommand()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_WorkCopyViewModel_ExecuteCreateWorkCopy.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteCreateWorkCopy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L202">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_ExecuteCreateWorkCopy_" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteCreateWorkCopy*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_ExecuteCreateWorkCopy" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteCreateWorkCopy">ExecuteCreateWorkCopy()</h4>
+  <div class="markdown level1 summary"><p>Execution method for work copy creation command, see <a class="xref" href="Opus.Modules.Action.ViewModels.WorkCopyViewModel.html#Opus_Modules_Action_ViewModels_WorkCopyViewModel_CreateWorkCopyCommand">CreateWorkCopyCommand</a>.</p>
+<p>
+Executes the actual action.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async Task ExecuteCreateWorkCopy()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_WorkCopyViewModel_ExecuteDeleteCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteDeleteCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L162">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_ExecuteDeleteCommand_" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteDeleteCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_ExecuteDeleteCommand" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteDeleteCommand">ExecuteDeleteCommand()</h4>
+  <div class="markdown level1 summary"><p>Execution method for delete command, see <a class="xref" href="Opus.Modules.Action.ViewModels.WorkCopyViewModel.html#Opus_Modules_Action_ViewModels_WorkCopyViewModel_DeleteCommand">DeleteCommand</a>.</p>
+<p>
+Remove an entry from the list.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteDeleteCommand()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_WorkCopyViewModel_OnArrival.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.WorkCopyViewModel.OnArrival%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L72">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L109">View Source</a>
   </span>
   <a id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_OnArrival_" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.OnArrival*"></a>
   <h4 id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_OnArrival" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.OnArrival">OnArrival()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Implementing <a class="xref" href="Opus.Services.UI.INavigationTarget.html">INavigationTarget</a>. Subscribe to events.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -391,11 +479,12 @@
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_WorkCopyViewModel_Reset.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.WorkCopyViewModel.Reset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L84">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L131">View Source</a>
   </span>
   <a id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_Reset_" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.Reset*"></a>
   <h4 id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_Reset" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.Reset">Reset()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When reset is requested by the user, clear files list and deselect any files.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -406,11 +495,12 @@
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_WorkCopyViewModel_WhenLeaving.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.WorkCopyViewModel.WhenLeaving%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L78">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L121">View Source</a>
   </span>
   <a id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_WhenLeaving_" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.WhenLeaving*"></a>
   <h4 id="Opus_Modules_Action_ViewModels_WorkCopyViewModel_WhenLeaving" data-uid="Opus.Modules.Action.ViewModels.WorkCopyViewModel.WhenLeaving">WhenLeaving()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Implementing <a class="xref" href="Opus.Services.UI.INavigationTarget.html">INavigationTarget</a>. Unsubscribe from events.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -437,7 +527,7 @@
                     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_WorkCopyViewModel.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.WorkCopyViewModel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L27" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/WorkCopyViewModel.cs/#L28" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

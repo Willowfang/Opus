@@ -14,10 +14,13 @@ using System.Windows.Shapes;
 namespace Opus.Modules.Action.Views
 {
     /// <summary>
-    /// Interaction logic for SignatureRemovalView.xaml
+    /// Work copy view code-behind.
     /// </summary>
     public partial class WorkCopyView : UserControl
     {
+        /// <summary>
+        /// Create work copy view.
+        /// </summary>
         public WorkCopyView()
         {
             InitializeComponent();

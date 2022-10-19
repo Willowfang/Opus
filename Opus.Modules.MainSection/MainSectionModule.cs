@@ -6,8 +6,15 @@ using Opus.Services.UI;
 
 namespace Opus.Modules.MainSection
 {
+    /// <summary>
+    /// A module for displaying different regions in the main window.
+    /// </summary>
     public class MainSectionModule : IModule
     {
+        /// <summary>
+        /// Register correct reginos with correct schemes.
+        /// </summary>
+        /// <param name="containerProvider">Container provider.</param>
         public void OnInitialized(IContainerProvider containerProvider)
         {
             var navigator = containerProvider.Resolve<INavigationAssist>();
@@ -21,6 +28,10 @@ namespace Opus.Modules.MainSection
             );
         }
 
+        /// <summary>
+        /// No types to register here.
+        /// </summary>
+        /// <param name="containerRegistry">Container registry.</param>
         public void RegisterTypes(IContainerRegistry containerRegistry) { }
     }
 }

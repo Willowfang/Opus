@@ -3,10 +3,13 @@
 namespace Opus.Modules.Options.Views
 {
     /// <summary>
-    /// Interaction logic for MergeOptionsView
+    /// Merge options view code-behind.
     /// </summary>
     public partial class MergeOptionsView : UserControl
     {
+        /// <summary>
+        /// Create merge options view.
+        /// </summary>
         public MergeOptionsView()
         {
             InitializeComponent();

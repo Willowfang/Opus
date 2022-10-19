@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opus.Values", "Opus.Values\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opus.ExtensionMethods", "Opus.ExtensionMethods\Opus.ExtensionMethods.csproj", "{E6662D88-7B78-485C-9907-8E6FAEFCF1A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opus.UpdateInfoCreator", "Opus.UpdateInfoCreator\Opus.UpdateInfoCreator.csproj", "{BBC8BF41-E9FE-449D-A31B-BBD6EB086916}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opus.UpdateInfoCreator", "Opus.UpdateInfoCreator\Opus.UpdateInfoCreator.csproj", "{BBC8BF41-E9FE-449D-A31B-BBD6EB086916}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

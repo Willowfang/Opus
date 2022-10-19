@@ -90,11 +90,13 @@ namespace Opus.Modules.Action.ViewModels
         /// ViewModel for extraction bookmark ordering.
         /// </summary>
         /// <remarks>Parameters are received through dependency injection</remarks>
-        /// <param name="eventAggregator"></param>
-        /// <param name="dialogAssist"></param>
-        /// <param name="navregistry"></param>
-        /// <param name="executor"></param>
-        /// <param name="logbook"></param>
+        /// <param name="eventAggregator">Service for publishing and receiving events between viewModels.</param>
+        /// <param name="dialogAssist">Service for showing and otherwise handling dialogs.</param>
+        /// <param name="navregistry">Navigation registry for viewModels.</param>
+        /// <param name="executor">Service for performing the actual extraction.</param>
+        /// <param name="configuration">Program-wide configurations.</param>
+        /// <param name="pathSelection">Service for user file or folder pathselection.</param>
+        /// <param name="logbook">Logging service.</param>
         public ExtractionOrderViewModel(
             IEventAggregator eventAggregator,
             IDialogAssist dialogAssist,
@@ -277,9 +279,9 @@ namespace Opus.Modules.Action.ViewModels
             addExternalCommand ??= new DelegateCommand(ExecuteAddExternalCommand);
 
         /// <summary>
-        /// External addition execution method, see: <see cref="AddExternalCommand"/>.
+        /// External addition execution method, see <see cref="AddExternalCommand"/>.
         /// </summary>
-        private void ExecuteAddExternalCommand()
+        protected void ExecuteAddExternalCommand()
         {
             // Insert an empty placeholder bookmark at the end of the collection
             Bookmarks.Add(
@@ -302,7 +304,7 @@ namespace Opus.Modules.Action.ViewModels
         /// Execution method for edition command, see <see cref="EditCommand"/>
         /// </summary>
         /// <returns></returns>
-        private async Task ExecuteEditCommand()
+        protected async Task ExecuteEditCommand()
         {
             if (Bookmarks.SelectedItem == null)
             {
@@ -367,7 +369,7 @@ namespace Opus.Modules.Action.ViewModels
         /// <summary>
         /// Execution method for deletion command, see <see cref="DeleteCommand"/>
         /// </summary>
-        void ExecuteDeleteCommand()
+        protected void ExecuteDeleteCommand()
         {
             // Publish a bookmark deletion event with relevant info (Guid of the bookmark). Will
             // be picked up at Extraction ViewModel, where a bookmark with the same Guid will be made visible.
@@ -398,7 +400,7 @@ namespace Opus.Modules.Action.ViewModels
         /// Execution method for saving into single file command, see <see cref="saveFileCommand"/>
         /// </summary>
         /// <returns></returns>
-        private async Task ExecuteSaveFileCommand()
+        protected async Task ExecuteSaveFileCommand()
         {
             // Saving into a zip-file requested
 
@@ -442,7 +444,7 @@ namespace Opus.Modules.Action.ViewModels
         /// Execution method for separate saving command, see <see cref="SaveSeparateCommand"/>
         /// </summary>
         /// <returns></returns>
-        private async Task ExecuteSaveSeparateCommand()
+        protected async Task ExecuteSaveSeparateCommand()
         {
             // Saving into a zip-file requested.
 

@@ -7,7 +7,6 @@
              xmlns:resLabels="clr-namespace:Opus.Resources.Labels;assembly=Opus.Resources"
              xmlns:resTooltips="clr-namespace:Opus.Resources.ToolTips;assembly=Opus.Resources"
              xmlns:resHelpers="clr-namespace:Opus.Resources.HelperTexts;assembly=Opus.Resources"
-             xmlns:controls="clr-namespace:Opus.Styles.Controls;assembly=Opus.Styles"
              xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="500"

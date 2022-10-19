@@ -6,8 +6,15 @@ using Prism.Modularity;
 
 namespace Opus.Modules.Options
 {
+    /// <summary>
+    /// Register module for options region.
+    /// </summary>
     public class OptionsModule : IModule
     {
+        /// <summary>
+        /// Assign correct schemes to correct views.
+        /// </summary>
+        /// <param name="containerProvider">Container provider</param>
         public void OnInitialized(IContainerProvider containerProvider)
         {
             var navigation = containerProvider.Resolve<INavigationAssist>();
@@ -30,6 +37,10 @@ namespace Opus.Modules.Options
             );
         }
 
+        /// <summary>
+        /// No types to register here.
+        /// </summary>
+        /// <param name="containerRegistry"></param>
         public void RegisterTypes(IContainerRegistry containerRegistry) { }
     }
 }

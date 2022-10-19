@@ -3,10 +3,13 @@
 namespace Opus.Modules.Options.Views
 {
     /// <summary>
-    /// Interaction logic for ComposeOptionsView
+    /// Compose options view code-behind.
     /// </summary>
     public partial class ComposeOptionsView : UserControl
     {
+        /// <summary>
+        /// Create compose options view.
+        /// </summary>
         public ComposeOptionsView()
         {
             InitializeComponent();

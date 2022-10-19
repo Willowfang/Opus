@@ -8,8 +8,16 @@ using Opus.Core.Wrappers;
 
 namespace Opus.Modules.Action
 {
+    /// <summary>
+    /// Module for the action (and supporting action) section. Initialize module here and register
+    /// correct types.
+    /// </summary>
     public class ActionModule : IModule
     {
+        /// <summary>
+        /// Register correct schemes for this module.
+        /// </summary>
+        /// <param name="containerProvider">Containerprovider for the app.</param>
         public void OnInitialized(IContainerProvider containerProvider)
         {
             var navigator = containerProvider.Resolve<INavigationAssist>();
@@ -27,6 +35,10 @@ namespace Opus.Modules.Action
             );
         }
 
+        /// <summary>
+        /// No types to register here.
+        /// </summary>
+        /// <param name="containerRegistry">Registry for types.</param>
         public void RegisterTypes(IContainerRegistry containerRegistry) { }
     }
 }

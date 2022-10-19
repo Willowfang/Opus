@@ -17,10 +17,13 @@ using System.Windows.Shapes;
 namespace Opus.Modules.Options.Views
 {
     /// <summary>
-    /// Interaction logic for ViewA.xaml
+    /// Extract options view code-behind.
     /// </summary>
     public partial class ExtractOptionsView : UserControl
     {
+        /// <summary>
+        /// Create extract options view.
+        /// </summary>
         public ExtractOptionsView()
         {
             InitializeComponent();

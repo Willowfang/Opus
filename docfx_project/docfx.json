@@ -35,7 +35,8 @@
     "dest": "../docs",
     "globalMetadata": {
       "_appTitle": "Opus Docs",
-      "_appName": "Opus Docs"
+      "_appName": "Opus Docs",
+      "_appLogoPath": "images/logo38pt.png"
     },
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],

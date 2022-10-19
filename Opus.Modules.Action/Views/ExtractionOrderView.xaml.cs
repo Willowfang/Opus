@@ -3,10 +3,13 @@
 namespace Opus.Modules.Action.Views
 {
     /// <summary>
-    /// Interaction logic for ExtractionOrderView
+    /// Extraction order view code-behind.
     /// </summary>
     public partial class ExtractionOrderView : UserControl
     {
+        /// <summary>
+        /// Create extraction order view.
+        /// </summary>
         public ExtractionOrderView()
         {
             InitializeComponent();

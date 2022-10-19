@@ -4,10 +4,13 @@ using System.Windows.Input;
 namespace Opus.Modules.Action.Views
 {
     /// <summary>
-    /// Interaction logic for MergeView
+    /// Merge view code-behind.
     /// </summary>
     public partial class MergeView : UserControl
     {
+        /// <summary>
+        /// Create merge view.
+        /// </summary>
         public MergeView()
         {
             InitializeComponent();

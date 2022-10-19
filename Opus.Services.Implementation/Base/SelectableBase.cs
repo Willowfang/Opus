@@ -8,9 +8,19 @@ using System.Threading.Tasks;
 
 namespace Opus.Services.Implementation.Base
 {
-    public abstract class SelectableBase : BindableBase
+    /// <summary>
+    /// A base class for selectable items. Provides notifications.
+    /// </summary>
+    public abstract class SelectableBase : BindableBase, ISelectable
     {
         private bool isSelected;
+
+        /// <summary>
+        /// If true, the item is selected.
+        /// <para>
+        /// Provides notifications.
+        /// </para>
+        /// </summary>
         public bool IsSelected
         {
             get => isSelected;

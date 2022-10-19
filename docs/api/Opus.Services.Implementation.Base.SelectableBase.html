@@ -36,7 +36,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="Opus Docs">
+                <img id="logo" class="svg" src="../images/logo38pt.png" alt="Opus Docs">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -72,7 +72,8 @@
   
   <h1 id="Opus_Services_Implementation_Base_SelectableBase" data-uid="Opus.Services.Implementation.Base.SelectableBase" class="text-break">Class SelectableBase
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A base class for selectable items. Provides notifications.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -85,6 +86,7 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+    <div><a class="xref" href="Opus.Services.Base.ISelectable.html">ISelectable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -129,7 +131,7 @@
   <h6><strong>Assembly</strong>: Opus.Services.Implementation.dll</h6>
   <h5 id="Opus_Services_Implementation_Base_SelectableBase_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SelectableBase : BindableBase, INotifyPropertyChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SelectableBase : BindableBase, INotifyPropertyChanged, ISelectable</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -138,11 +140,15 @@
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Base_SelectableBase_IsSelected.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Base.SelectableBase.IsSelected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Base/SelectableBase.cs/#L14">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Base/SelectableBase.cs/#L24">View Source</a>
   </span>
   <a id="Opus_Services_Implementation_Base_SelectableBase_IsSelected_" data-uid="Opus.Services.Implementation.Base.SelectableBase.IsSelected*"></a>
   <h4 id="Opus_Services_Implementation_Base_SelectableBase_IsSelected" data-uid="Opus.Services.Implementation.Base.SelectableBase.IsSelected">IsSelected</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If true, the item is selected.</p>
+<p>
+Provides notifications.
+</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -167,6 +173,9 @@
   <div>
       <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
   </div>
+  <div>
+      <a class="xref" href="Opus.Services.Base.ISelectable.html">ISelectable</a>
+  </div>
 </article>
           </div>
           
@@ -178,7 +187,7 @@
                     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Base_SelectableBase.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Base.SelectableBase%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Base/SelectableBase.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Base/SelectableBase.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -3,10 +3,13 @@
 namespace Opus.Modules.MainSection.Views
 {
     /// <summary>
-    /// Interaction logic for ThreeRegionsView
+    /// Three regions view code-behind.
     /// </summary>
     public partial class ThreeRegionsView : UserControl
     {
+        /// <summary>
+        /// Create three regions view.
+        /// </summary>
         public ThreeRegionsView()
         {
             InitializeComponent();

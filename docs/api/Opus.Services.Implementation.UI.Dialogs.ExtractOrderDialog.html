@@ -36,7 +36,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="Opus Docs">
+                <img id="logo" class="svg" src="../images/logo38pt.png" alt="Opus Docs">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -72,7 +72,12 @@
   
   <h1 id="Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog" class="text-break">Class ExtractOrderDialog
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A dialog for rearranging the bookmarks to extract (for correct numbering).</p>
+<p>
+This dialog is only used in context menu actions. In GUI the rearranging happens within the same
+view as the selection.
+</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -174,11 +179,12 @@
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog__ctor_System_String_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.%23ctor(System.String%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractOrderDialog.cs/#L35">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractOrderDialog.cs/#L53">View Source</a>
   </span>
   <a id="Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog__ctor_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.#ctor*"></a>
   <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog__ctor_System_String_System_Boolean_System_Boolean_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.#ctor(System.String,System.Boolean,System.Boolean)">ExtractOrderDialog(String, Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Create a new dialog for selecting extraction order.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -197,17 +203,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">title</span></td>
-        <td></td>
+        <td><p>Title for the dialog.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">singleFile</span></td>
-        <td></td>
+        <td><p>Produce a single file.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">groupByFiles</span></td>
-        <td></td>
+        <td><p>If true, group bookmarks by their source within the file.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -218,11 +227,12 @@
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog_AddExternal.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.AddExternal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractOrderDialog.cs/#L33">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractOrderDialog.cs/#L44">View Source</a>
   </span>
   <a id="Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog_AddExternal_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.AddExternal*"></a>
   <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog_AddExternal" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.AddExternal">AddExternal</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Command for adding a marker for an external file (for numbering purposes).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -248,11 +258,12 @@
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog_Bookmarks.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.Bookmarks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractOrderDialog.cs/#L21">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractOrderDialog.cs/#L20">View Source</a>
   </span>
   <a id="Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog_Bookmarks_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.Bookmarks*"></a>
   <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog_Bookmarks" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.Bookmarks">Bookmarks</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Bookmarks to arrange.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -278,11 +289,13 @@
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog_GroupByFiles.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.GroupByFiles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractOrderDialog.cs/#L26">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractOrderDialog.cs/#L33">View Source</a>
   </span>
   <a id="Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog_GroupByFiles_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.GroupByFiles*"></a>
   <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog_GroupByFiles" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.GroupByFiles">GroupByFiles</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If producing a single file and this is true, bookmarks will be grouped within that file according
+to their original source files.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -308,11 +321,12 @@
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog_SingleFile.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.SingleFile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractOrderDialog.cs/#L23">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractOrderDialog.cs/#L25">View Source</a>
   </span>
   <a id="Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog_SingleFile_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.SingleFile*"></a>
   <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog_SingleFile" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.SingleFile">SingleFile</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If true, produce a single file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -340,11 +354,12 @@
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog_UpdateIndexes.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.UpdateIndexes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractOrderDialog.cs/#L58">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractOrderDialog.cs/#L86">View Source</a>
   </span>
   <a id="Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog_UpdateIndexes_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.UpdateIndexes*"></a>
   <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog_UpdateIndexes" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.UpdateIndexes">UpdateIndexes()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Update all the indexes of all bookmark wrappers (to correspond to their index in the collection).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -368,7 +383,7 @@
                     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractOrderDialog.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractOrderDialog.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractOrderDialog.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

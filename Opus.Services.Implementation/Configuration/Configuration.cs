@@ -12,14 +12,27 @@ using System.Security.Cryptography.Xml;
 
 namespace Opus.Services.Implementation.Configuration
 {
+    /// <summary>
+    /// Configuration implementation for <see cref="IConfiguration"/> service.
+    /// </summary>
     public class Configuration : BindableBase, IConfiguration
     {
+        /// <summary>
+        /// Location of pdf-tools installation (for pdf/a conversion).
+        /// </summary>
         private const string pdfToolsLocation =
             @"C:\Program Files\Tracker Software\PDF Tools\PDFXTools.exe";
 
+        /// <summary>
+        /// Configuration file location as path.
+        /// </summary>
         public string? ConfigurationFile { get; set; }
 
         private string? languageCode;
+
+        /// <summary>
+        /// Current language code (two letters, e.g. "fi").
+        /// </summary>
         public string? LanguageCode
         {
             get => languageCode;
@@ -27,6 +40,10 @@ namespace Opus.Services.Implementation.Configuration
         }
 
         private string? extractionTitle;
+
+        /// <summary>
+        /// Title template for extracted bookmarks.
+        /// </summary>
         public string? ExtractionTitle
         {
             get => extractionTitle;
@@ -34,6 +51,10 @@ namespace Opus.Services.Implementation.Configuration
         }
 
         private bool extractionTitleAsk;
+
+        /// <summary>
+        /// If true, always ask for the template.
+        /// </summary>
         public bool ExtractionTitleAsk
         {
             get => extractionTitleAsk;
@@ -41,6 +62,10 @@ namespace Opus.Services.Implementation.Configuration
         }
 
         private bool extractionConvertPdfA;
+
+        /// <summary>
+        /// If true, convert extracted files to pdf/a.
+        /// </summary>
         public bool ExtractionConvertPdfA
         {
             get => extractionConvertPdfA;
@@ -48,6 +73,10 @@ namespace Opus.Services.Implementation.Configuration
         }
 
         private bool extractionPdfADisabled;
+
+        /// <summary>
+        /// If true, pdf/a-conversion is not allowed.
+        /// </summary>
         public bool ExtractionPdfADisabled
         {
             get => extractionPdfADisabled;
@@ -55,6 +84,10 @@ namespace Opus.Services.Implementation.Configuration
         }
 
         private bool extractionCreateZip;
+
+        /// <summary>
+        /// Compress extracted bookmarks into a zip-file.
+        /// </summary>
         public bool ExtractionCreateZip
         {
             get => extractionCreateZip;
@@ -62,6 +95,10 @@ namespace Opus.Services.Implementation.Configuration
         }
 
         private int annotations;
+
+        /// <summary>
+        /// Option for dealing with annotations.
+        /// </summary>
         public int Annotations
         {
             get => annotations;
@@ -69,6 +106,10 @@ namespace Opus.Services.Implementation.Configuration
         }
 
         private bool groupByFiles;
+
+        /// <summary>
+        /// If true, group bookmarks by file when extracting into a single file.
+        /// </summary>
         public bool GroupByFiles
         {
             get => groupByFiles;
@@ -76,6 +117,10 @@ namespace Opus.Services.Implementation.Configuration
         }
 
         private string? unsignedTitleTemplate;
+
+        /// <summary>
+        /// Template for work copy file names.
+        /// </summary>
         public string? UnsignedTitleTemplate
         {
             get => unsignedTitleTemplate;
@@ -83,6 +128,10 @@ namespace Opus.Services.Implementation.Configuration
         }
 
         private bool workCopyFlattenRedactions;
+
+        /// <summary>
+        /// If true, flatten redactions (make them red rectangles) when creating work copies.
+        /// </summary>
         public bool WorkCopyFlattenRedactions
         {
             get => workCopyFlattenRedactions;
@@ -90,6 +139,10 @@ namespace Opus.Services.Implementation.Configuration
         }
 
         private bool mergeAddPageNumbers;
+
+        /// <summary>
+        /// If true, add page numbers when merging documents.
+        /// </summary>
         public bool MergeAddPageNumbers
         {
             get => mergeAddPageNumbers;
@@ -97,6 +150,10 @@ namespace Opus.Services.Implementation.Configuration
         }
 
         private bool compositionSearchSubDirectories;
+
+        /// <summary>
+        /// If true, include subdirectories in the search when looking for matching files.
+        /// </summary>
         public bool CompositionSearchSubDirectories
         {
             get => compositionSearchSubDirectories;
@@ -104,6 +161,10 @@ namespace Opus.Services.Implementation.Configuration
         }
 
         private bool compositionDeleteConverted;
+
+        /// <summary>
+        /// If true, delete converted files after composition is done.
+        /// </summary>
         public bool CompositionDeleteConverted
         {
             get => compositionDeleteConverted;
@@ -111,14 +172,27 @@ namespace Opus.Services.Implementation.Configuration
         }
 
         private Guid defaultProfile;
+
+        /// <summary>
+        /// Default composition profile.
+        /// </summary>
         public Guid DefaultProfile
         {
             get => defaultProfile;
             set => SetProperty(ref defaultProfile, value, SaveConfiguration);
         }
 
+        /// <summary>
+        /// Create new configuration instance.
+        /// </summary>
         public Configuration() { }
 
+        /// <summary>
+        /// Load configuration from a JSON file.
+        /// </summary>
+        /// <param name="configFile">Path of the file to load.</param>
+        /// <param name="logbook">Logging service.</param>
+        /// <returns>Configuration service.</returns>
         public static IConfiguration Load(string configFile, ILogbook? logbook = null)
         {
             if (logbook == null)
@@ -194,7 +268,12 @@ namespace Opus.Services.Implementation.Configuration
             return configuration;
         }
 
-        private static Configuration CreateNew(string configFile)
+        /// <summary>
+        /// Create new configuration instance.
+        /// </summary>
+        /// <param name="configFile">Location to save config at.</param>
+        /// <returns>Configuration instance.</returns>
+        protected static Configuration CreateNew(string configFile)
         {
             return new Configuration()
             {
@@ -209,6 +288,9 @@ namespace Opus.Services.Implementation.Configuration
             };
         }
 
+        /// <summary>
+        /// Save configuration to a file (as JSON).
+        /// </summary>
         private void SaveConfiguration()
         {
             if (!string.IsNullOrEmpty(ConfigurationFile))

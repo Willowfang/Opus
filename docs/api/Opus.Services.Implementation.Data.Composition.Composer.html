@@ -36,7 +36,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="Opus Docs">
+                <img id="logo" class="svg" src="../images/logo38pt.png" alt="Opus Docs">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -72,7 +72,8 @@
   
   <h1 id="Opus_Services_Implementation_Data_Composition_Composer" data-uid="Opus.Services.Implementation.Data.Composition.Composer" class="text-break">Class Composer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Default implementation for <a class="xref" href="Opus.Services.Data.IComposer.html">IComposer</a> service.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -120,11 +121,12 @@
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Data_Composition_Composer__ctor_Opus_Services_UI_IDialogAssist_Opus_Services_Input_IPathSelection_CX_PdfLib_Services_IMergingService_CX_LoggingLib_ILogbook_.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Data.Composition.Composer.%23ctor(Opus.Services.UI.IDialogAssist%2COpus.Services.Input.IPathSelection%2CCX.PdfLib.Services.IMergingService%2CCX.LoggingLib.ILogbook)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Data/Composition/Composer.cs/#L27">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Data/Composition/Composer.cs/#L40">View Source</a>
   </span>
   <a id="Opus_Services_Implementation_Data_Composition_Composer__ctor_" data-uid="Opus.Services.Implementation.Data.Composition.Composer.#ctor*"></a>
   <h4 id="Opus_Services_Implementation_Data_Composition_Composer__ctor_Opus_Services_UI_IDialogAssist_Opus_Services_Input_IPathSelection_CX_PdfLib_Services_IMergingService_CX_LoggingLib_ILogbook_" data-uid="Opus.Services.Implementation.Data.Composition.Composer.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Input.IPathSelection,CX.PdfLib.Services.IMergingService,CX.LoggingLib.ILogbook)">Composer(IDialogAssist, IPathSelection, IMergingService, ILogbook)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Create a new Composer service implementation instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -143,22 +145,26 @@
       <tr>
         <td><a class="xref" href="Opus.Services.UI.IDialogAssist.html">IDialogAssist</a></td>
         <td><span class="parametername">dialogAssist</span></td>
-        <td></td>
+        <td><p>Service for showing and otherwise handling dialogs.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Opus.Services.Input.IPathSelection.html">IPathSelection</a></td>
         <td><span class="parametername">input</span></td>
-        <td></td>
+        <td><p>Service for acquiring user path input.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CX.PdfLib.Services.IMergingService</span></td>
         <td><span class="parametername">mergingService</span></td>
-        <td></td>
+        <td><p>Service for dealing with merging files.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CX.LoggingLib.ILogbook</span></td>
         <td><span class="parametername">logbook</span></td>
-        <td></td>
+        <td><p>Logging service.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -169,11 +175,12 @@
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Data_Composition_Composer_Compose_System_String_Opus_Services_Data_Composition_ICompositionProfile_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Data.Composition.Composer.Compose(System.String%2COpus.Services.Data.Composition.ICompositionProfile%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Data/Composition/Composer.cs/#L39">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Data/Composition/Composer.cs/#L65">View Source</a>
   </span>
   <a id="Opus_Services_Implementation_Data_Composition_Composer_Compose_" data-uid="Opus.Services.Implementation.Data.Composition.Composer.Compose*"></a>
   <h4 id="Opus_Services_Implementation_Data_Composition_Composer_Compose_System_String_Opus_Services_Data_Composition_ICompositionProfile_System_Boolean_System_Boolean_" data-uid="Opus.Services.Implementation.Data.Composition.Composer.Compose(System.String,Opus.Services.Data.Composition.ICompositionProfile,System.Boolean,System.Boolean)">Compose(String, ICompositionProfile, Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Compose the document from a directory of files.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -192,22 +199,26 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">directory</span></td>
-        <td></td>
+        <td><p>Directory to search the files in.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Opus.Services.Data.Composition.ICompositionProfile.html">ICompositionProfile</a></td>
         <td><span class="parametername">compositionProfile</span></td>
-        <td></td>
+        <td><p>Profile on which the composition is based.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">deleteConverted</span></td>
-        <td></td>
+        <td><p>If true, delete converted files after composition has finished.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">searchSubDirectories</span></td>
-        <td></td>
+        <td><p>If true, search subdirectories for files matching search criteria.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -222,7 +233,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span></td>
-        <td></td>
+        <td><p>An awaitable task.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -241,7 +253,7 @@
                     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Data_Composition_Composer.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Data.Composition.Composer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Data/Composition/Composer.cs/#L20" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Data/Composition/Composer.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

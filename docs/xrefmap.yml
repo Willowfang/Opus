@@ -1358,19 +1358,19 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.CompositionViewModel
   nameWithType: CompositionViewModel.CompositionViewModel
-- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.AddFileSegment
-  name: AddFileSegment
-  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_AddFileSegment
-  commentId: P:Opus.Modules.Action.ViewModels.CompositionViewModel.AddFileSegment
-  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.AddFileSegment
-  nameWithType: CompositionViewModel.AddFileSegment
-- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.AddFileSegment*
-  name: AddFileSegment
-  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_AddFileSegment_
-  commentId: Overload:Opus.Modules.Action.ViewModels.CompositionViewModel.AddFileSegment
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.AddFileSegmentCommand
+  name: AddFileSegmentCommand
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_AddFileSegmentCommand
+  commentId: P:Opus.Modules.Action.ViewModels.CompositionViewModel.AddFileSegmentCommand
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.AddFileSegmentCommand
+  nameWithType: CompositionViewModel.AddFileSegmentCommand
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.AddFileSegmentCommand*
+  name: AddFileSegmentCommand
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_AddFileSegmentCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.CompositionViewModel.AddFileSegmentCommand
   isSpec: "True"
-  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.AddFileSegment
-  nameWithType: CompositionViewModel.AddFileSegment
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.AddFileSegmentCommand
+  nameWithType: CompositionViewModel.AddFileSegmentCommand
 - uid: Opus.Modules.Action.ViewModels.CompositionViewModel.AddProfileCommand
   name: AddProfileCommand
   href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_AddProfileCommand
@@ -1410,19 +1410,19 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.AddSegmentMenuOpen
   nameWithType: CompositionViewModel.AddSegmentMenuOpen
-- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.AddTitleSegment
-  name: AddTitleSegment
-  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_AddTitleSegment
-  commentId: P:Opus.Modules.Action.ViewModels.CompositionViewModel.AddTitleSegment
-  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.AddTitleSegment
-  nameWithType: CompositionViewModel.AddTitleSegment
-- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.AddTitleSegment*
-  name: AddTitleSegment
-  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_AddTitleSegment_
-  commentId: Overload:Opus.Modules.Action.ViewModels.CompositionViewModel.AddTitleSegment
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.AddTitleSegmentCommand
+  name: AddTitleSegmentCommand
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_AddTitleSegmentCommand
+  commentId: P:Opus.Modules.Action.ViewModels.CompositionViewModel.AddTitleSegmentCommand
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.AddTitleSegmentCommand
+  nameWithType: CompositionViewModel.AddTitleSegmentCommand
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.AddTitleSegmentCommand*
+  name: AddTitleSegmentCommand
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_AddTitleSegmentCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.CompositionViewModel.AddTitleSegmentCommand
   isSpec: "True"
-  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.AddTitleSegment
-  nameWithType: CompositionViewModel.AddTitleSegment
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.AddTitleSegmentCommand
+  nameWithType: CompositionViewModel.AddTitleSegmentCommand
 - uid: Opus.Modules.Action.ViewModels.CompositionViewModel.CopyProfileCommand
   name: CopyProfileCommand
   href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_CopyProfileCommand
@@ -1449,19 +1449,19 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteProfileCommand
   nameWithType: CompositionViewModel.DeleteProfileCommand
-- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteSegment
-  name: DeleteSegment
-  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_DeleteSegment
-  commentId: P:Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteSegment
-  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteSegment
-  nameWithType: CompositionViewModel.DeleteSegment
-- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteSegment*
-  name: DeleteSegment
-  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_DeleteSegment_
-  commentId: Overload:Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteSegment
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteSegmentCommand
+  name: DeleteSegmentCommand
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_DeleteSegmentCommand
+  commentId: P:Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteSegmentCommand
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteSegmentCommand
+  nameWithType: CompositionViewModel.DeleteSegmentCommand
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteSegmentCommand*
+  name: DeleteSegmentCommand
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_DeleteSegmentCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteSegmentCommand
   isSpec: "True"
-  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteSegment
-  nameWithType: CompositionViewModel.DeleteSegment
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteSegmentCommand
+  nameWithType: CompositionViewModel.DeleteSegmentCommand
 - uid: Opus.Modules.Action.ViewModels.CompositionViewModel.DirectorySelected(System.String)
   name: DirectorySelected(String)
   href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_DirectorySelected_System_String_
@@ -1501,19 +1501,32 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.EditProfileCommand
   nameWithType: CompositionViewModel.EditProfileCommand
-- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.EditSegment
-  name: EditSegment
-  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_EditSegment
-  commentId: P:Opus.Modules.Action.ViewModels.CompositionViewModel.EditSegment
-  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.EditSegment
-  nameWithType: CompositionViewModel.EditSegment
-- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.EditSegment*
-  name: EditSegment
-  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_EditSegment_
-  commentId: Overload:Opus.Modules.Action.ViewModels.CompositionViewModel.EditSegment
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.EditSegmentCommand
+  name: EditSegmentCommand
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_EditSegmentCommand
+  commentId: P:Opus.Modules.Action.ViewModels.CompositionViewModel.EditSegmentCommand
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.EditSegmentCommand
+  nameWithType: CompositionViewModel.EditSegmentCommand
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.EditSegmentCommand*
+  name: EditSegmentCommand
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_EditSegmentCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.CompositionViewModel.EditSegmentCommand
   isSpec: "True"
-  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.EditSegment
-  nameWithType: CompositionViewModel.EditSegment
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.EditSegmentCommand
+  nameWithType: CompositionViewModel.EditSegmentCommand
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddFileSegment
+  name: ExecuteAddFileSegment()
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteAddFileSegment
+  commentId: M:Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddFileSegment
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddFileSegment()
+  nameWithType: CompositionViewModel.ExecuteAddFileSegment()
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddFileSegment*
+  name: ExecuteAddFileSegment
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteAddFileSegment_
+  commentId: Overload:Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddFileSegment
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddFileSegment
+  nameWithType: CompositionViewModel.ExecuteAddFileSegment
 - uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddProfile
   name: ExecuteAddProfile()
   href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteAddProfile
@@ -1527,6 +1540,32 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddProfile
   nameWithType: CompositionViewModel.ExecuteAddProfile
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddTitleSegment
+  name: ExecuteAddTitleSegment()
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteAddTitleSegment
+  commentId: M:Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddTitleSegment
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddTitleSegment()
+  nameWithType: CompositionViewModel.ExecuteAddTitleSegment()
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddTitleSegment*
+  name: ExecuteAddTitleSegment
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteAddTitleSegment_
+  commentId: Overload:Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddTitleSegment
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddTitleSegment
+  nameWithType: CompositionViewModel.ExecuteAddTitleSegment
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteComposition(System.String)
+  name: ExecuteComposition(String)
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteComposition_System_String_
+  commentId: M:Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteComposition(System.String)
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteComposition(System.String)
+  nameWithType: CompositionViewModel.ExecuteComposition(String)
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteComposition*
+  name: ExecuteComposition
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteComposition_
+  commentId: Overload:Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteComposition
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteComposition
+  nameWithType: CompositionViewModel.ExecuteComposition
 - uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteCopyProfile
   name: ExecuteCopyProfile()
   href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteCopyProfile
@@ -1553,6 +1592,19 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteDeleteProfile
   nameWithType: CompositionViewModel.ExecuteDeleteProfile
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteDeleteSegment
+  name: ExecuteDeleteSegment()
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteDeleteSegment
+  commentId: M:Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteDeleteSegment
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteDeleteSegment()
+  nameWithType: CompositionViewModel.ExecuteDeleteSegment()
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteDeleteSegment*
+  name: ExecuteDeleteSegment
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteDeleteSegment_
+  commentId: Overload:Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteDeleteSegment
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteDeleteSegment
+  nameWithType: CompositionViewModel.ExecuteDeleteSegment
 - uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteEditable
   name: ExecuteEditable()
   href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteEditable
@@ -1579,6 +1631,32 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteEditProfile
   nameWithType: CompositionViewModel.ExecuteEditProfile
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteEditSegment
+  name: ExecuteEditSegment()
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteEditSegment
+  commentId: M:Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteEditSegment
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteEditSegment()
+  nameWithType: CompositionViewModel.ExecuteEditSegment()
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteEditSegment*
+  name: ExecuteEditSegment
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteEditSegment_
+  commentId: Overload:Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteEditSegment
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteEditSegment
+  nameWithType: CompositionViewModel.ExecuteEditSegment
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteExportProfile
+  name: ExecuteExportProfile()
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteExportProfile
+  commentId: M:Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteExportProfile
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteExportProfile()
+  nameWithType: CompositionViewModel.ExecuteExportProfile()
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteExportProfile*
+  name: ExecuteExportProfile
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteExportProfile_
+  commentId: Overload:Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteExportProfile
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteExportProfile
+  nameWithType: CompositionViewModel.ExecuteExportProfile
 - uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteImportProfile
   name: ExecuteImportProfile()
   href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteImportProfile
@@ -1592,19 +1670,19 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteImportProfile
   nameWithType: CompositionViewModel.ExecuteImportProfile
-- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExportProfile
-  name: ExportProfile
-  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExportProfile
-  commentId: P:Opus.Modules.Action.ViewModels.CompositionViewModel.ExportProfile
-  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExportProfile
-  nameWithType: CompositionViewModel.ExportProfile
-- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExportProfile*
-  name: ExportProfile
-  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExportProfile_
-  commentId: Overload:Opus.Modules.Action.ViewModels.CompositionViewModel.ExportProfile
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExportProfileCommand
+  name: ExportProfileCommand
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExportProfileCommand
+  commentId: P:Opus.Modules.Action.ViewModels.CompositionViewModel.ExportProfileCommand
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExportProfileCommand
+  nameWithType: CompositionViewModel.ExportProfileCommand
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ExportProfileCommand*
+  name: ExportProfileCommand
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ExportProfileCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.CompositionViewModel.ExportProfileCommand
   isSpec: "True"
-  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExportProfile
-  nameWithType: CompositionViewModel.ExportProfile
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.ExportProfileCommand
+  nameWithType: CompositionViewModel.ExportProfileCommand
 - uid: Opus.Modules.Action.ViewModels.CompositionViewModel.ImportProfileCommand
   name: ImportProfileCommand
   href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ImportProfileCommand
@@ -1806,6 +1884,71 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.EditCommand
   nameWithType: ExtractionOrderViewModel.EditCommand
+- uid: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteAddExternalCommand
+  name: ExecuteAddExternalCommand()
+  href: api/Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.html#Opus_Modules_Action_ViewModels_ExtractionOrderViewModel_ExecuteAddExternalCommand
+  commentId: M:Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteAddExternalCommand
+  fullName: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteAddExternalCommand()
+  nameWithType: ExtractionOrderViewModel.ExecuteAddExternalCommand()
+- uid: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteAddExternalCommand*
+  name: ExecuteAddExternalCommand
+  href: api/Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.html#Opus_Modules_Action_ViewModels_ExtractionOrderViewModel_ExecuteAddExternalCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteAddExternalCommand
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteAddExternalCommand
+  nameWithType: ExtractionOrderViewModel.ExecuteAddExternalCommand
+- uid: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteDeleteCommand
+  name: ExecuteDeleteCommand()
+  href: api/Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.html#Opus_Modules_Action_ViewModels_ExtractionOrderViewModel_ExecuteDeleteCommand
+  commentId: M:Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteDeleteCommand
+  fullName: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteDeleteCommand()
+  nameWithType: ExtractionOrderViewModel.ExecuteDeleteCommand()
+- uid: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteDeleteCommand*
+  name: ExecuteDeleteCommand
+  href: api/Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.html#Opus_Modules_Action_ViewModels_ExtractionOrderViewModel_ExecuteDeleteCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteDeleteCommand
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteDeleteCommand
+  nameWithType: ExtractionOrderViewModel.ExecuteDeleteCommand
+- uid: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteEditCommand
+  name: ExecuteEditCommand()
+  href: api/Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.html#Opus_Modules_Action_ViewModels_ExtractionOrderViewModel_ExecuteEditCommand
+  commentId: M:Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteEditCommand
+  fullName: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteEditCommand()
+  nameWithType: ExtractionOrderViewModel.ExecuteEditCommand()
+- uid: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteEditCommand*
+  name: ExecuteEditCommand
+  href: api/Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.html#Opus_Modules_Action_ViewModels_ExtractionOrderViewModel_ExecuteEditCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteEditCommand
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteEditCommand
+  nameWithType: ExtractionOrderViewModel.ExecuteEditCommand
+- uid: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteSaveFileCommand
+  name: ExecuteSaveFileCommand()
+  href: api/Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.html#Opus_Modules_Action_ViewModels_ExtractionOrderViewModel_ExecuteSaveFileCommand
+  commentId: M:Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteSaveFileCommand
+  fullName: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteSaveFileCommand()
+  nameWithType: ExtractionOrderViewModel.ExecuteSaveFileCommand()
+- uid: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteSaveFileCommand*
+  name: ExecuteSaveFileCommand
+  href: api/Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.html#Opus_Modules_Action_ViewModels_ExtractionOrderViewModel_ExecuteSaveFileCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteSaveFileCommand
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteSaveFileCommand
+  nameWithType: ExtractionOrderViewModel.ExecuteSaveFileCommand
+- uid: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteSaveSeparateCommand
+  name: ExecuteSaveSeparateCommand()
+  href: api/Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.html#Opus_Modules_Action_ViewModels_ExtractionOrderViewModel_ExecuteSaveSeparateCommand
+  commentId: M:Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteSaveSeparateCommand
+  fullName: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteSaveSeparateCommand()
+  nameWithType: ExtractionOrderViewModel.ExecuteSaveSeparateCommand()
+- uid: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteSaveSeparateCommand*
+  name: ExecuteSaveSeparateCommand
+  href: api/Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.html#Opus_Modules_Action_ViewModels_ExtractionOrderViewModel_ExecuteSaveSeparateCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteSaveSeparateCommand
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExecuteSaveSeparateCommand
+  nameWithType: ExtractionOrderViewModel.ExecuteSaveSeparateCommand
 - uid: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.IsSelectedActualBookmark
   name: IsSelectedActualBookmark
   href: api/Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.html#Opus_Modules_Action_ViewModels_ExtractionOrderViewModel_IsSelectedActualBookmark
@@ -1929,6 +2072,19 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.AddCommand
   nameWithType: ExtractionViewModel.AddCommand
+- uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.BookmarkAdded(Opus.Events.Data.BookmarkInfo)
+  name: BookmarkAdded(BookmarkInfo)
+  href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_BookmarkAdded_Opus_Events_Data_BookmarkInfo_
+  commentId: M:Opus.Modules.Action.ViewModels.ExtractionViewModel.BookmarkAdded(Opus.Events.Data.BookmarkInfo)
+  fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.BookmarkAdded(Opus.Events.Data.BookmarkInfo)
+  nameWithType: ExtractionViewModel.BookmarkAdded(BookmarkInfo)
+- uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.BookmarkAdded*
+  name: BookmarkAdded
+  href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_BookmarkAdded_
+  commentId: Overload:Opus.Modules.Action.ViewModels.ExtractionViewModel.BookmarkAdded
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.BookmarkAdded
+  nameWithType: ExtractionViewModel.BookmarkAdded
 - uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.DeleteFileCommand
   name: DeleteFileCommand
   href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_DeleteFileCommand
@@ -1942,6 +2098,90 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.DeleteFileCommand
   nameWithType: ExtractionViewModel.DeleteFileCommand
+- uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectChildrenRecursively(Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper,System.Collections.ObjectModel.ObservableCollection{Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper})
+  name: DeSelectChildrenRecursively(FileAndBookmarkWrapper, ObservableCollection<FileAndBookmarkWrapper>)
+  href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_DeSelectChildrenRecursively_Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper_System_Collections_ObjectModel_ObservableCollection_Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper__
+  commentId: M:Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectChildrenRecursively(Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper,System.Collections.ObjectModel.ObservableCollection{Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper})
+  name.vb: DeSelectChildrenRecursively(FileAndBookmarkWrapper, ObservableCollection(Of FileAndBookmarkWrapper))
+  fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectChildrenRecursively(Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper, System.Collections.ObjectModel.ObservableCollection<Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper>)
+  fullName.vb: Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectChildrenRecursively(Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper, System.Collections.ObjectModel.ObservableCollection(Of Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper))
+  nameWithType: ExtractionViewModel.DeSelectChildrenRecursively(FileAndBookmarkWrapper, ObservableCollection<FileAndBookmarkWrapper>)
+  nameWithType.vb: ExtractionViewModel.DeSelectChildrenRecursively(FileAndBookmarkWrapper, ObservableCollection(Of FileAndBookmarkWrapper))
+- uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectChildrenRecursively*
+  name: DeSelectChildrenRecursively
+  href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_DeSelectChildrenRecursively_
+  commentId: Overload:Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectChildrenRecursively
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectChildrenRecursively
+  nameWithType: ExtractionViewModel.DeSelectChildrenRecursively
+- uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectParent(Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper,System.Collections.ObjectModel.ObservableCollection{Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper})
+  name: DeSelectParent(FileAndBookmarkWrapper, ObservableCollection<FileAndBookmarkWrapper>)
+  href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_DeSelectParent_Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper_System_Collections_ObjectModel_ObservableCollection_Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper__
+  commentId: M:Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectParent(Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper,System.Collections.ObjectModel.ObservableCollection{Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper})
+  name.vb: DeSelectParent(FileAndBookmarkWrapper, ObservableCollection(Of FileAndBookmarkWrapper))
+  fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectParent(Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper, System.Collections.ObjectModel.ObservableCollection<Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper>)
+  fullName.vb: Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectParent(Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper, System.Collections.ObjectModel.ObservableCollection(Of Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper))
+  nameWithType: ExtractionViewModel.DeSelectParent(FileAndBookmarkWrapper, ObservableCollection<FileAndBookmarkWrapper>)
+  nameWithType.vb: ExtractionViewModel.DeSelectParent(FileAndBookmarkWrapper, ObservableCollection(Of FileAndBookmarkWrapper))
+- uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectParent*
+  name: DeSelectParent
+  href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_DeSelectParent_
+  commentId: Overload:Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectParent
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectParent
+  nameWithType: ExtractionViewModel.DeSelectParent
+- uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteAddCommand
+  name: ExecuteAddCommand()
+  href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteAddCommand
+  commentId: M:Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteAddCommand
+  fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteAddCommand()
+  nameWithType: ExtractionViewModel.ExecuteAddCommand()
+- uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteAddCommand*
+  name: ExecuteAddCommand
+  href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteAddCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteAddCommand
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteAddCommand
+  nameWithType: ExtractionViewModel.ExecuteAddCommand
+- uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteDeleteFileCommand
+  name: ExecuteDeleteFileCommand()
+  href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteDeleteFileCommand
+  commentId: M:Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteDeleteFileCommand
+  fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteDeleteFileCommand()
+  nameWithType: ExtractionViewModel.ExecuteDeleteFileCommand()
+- uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteDeleteFileCommand*
+  name: ExecuteDeleteFileCommand
+  href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteDeleteFileCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteDeleteFileCommand
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteDeleteFileCommand
+  nameWithType: ExtractionViewModel.ExecuteDeleteFileCommand
+- uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteSelectionCommand(System.Windows.Controls.SelectionChangedEventArgs)
+  name: ExecuteSelectionCommand(SelectionChangedEventArgs)
+  href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteSelectionCommand_System_Windows_Controls_SelectionChangedEventArgs_
+  commentId: M:Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteSelectionCommand(System.Windows.Controls.SelectionChangedEventArgs)
+  fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteSelectionCommand(System.Windows.Controls.SelectionChangedEventArgs)
+  nameWithType: ExtractionViewModel.ExecuteSelectionCommand(SelectionChangedEventArgs)
+- uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteSelectionCommand*
+  name: ExecuteSelectionCommand
+  href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteSelectionCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteSelectionCommand
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteSelectionCommand
+  nameWithType: ExtractionViewModel.ExecuteSelectionCommand
+- uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteViewFileCommand
+  name: ExecuteViewFileCommand()
+  href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteViewFileCommand
+  commentId: M:Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteViewFileCommand
+  fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteViewFileCommand()
+  nameWithType: ExtractionViewModel.ExecuteViewFileCommand()
+- uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteViewFileCommand*
+  name: ExecuteViewFileCommand
+  href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteViewFileCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteViewFileCommand
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteViewFileCommand
+  nameWithType: ExtractionViewModel.ExecuteViewFileCommand
 - uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.FileBookmarks
   name: FileBookmarks
   href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_FileBookmarks
@@ -1994,6 +2234,19 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.Reset
   nameWithType: ExtractionViewModel.Reset
+- uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectChildrenRecursively(Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper)
+  name: SelectChildrenRecursively(FileAndBookmarkWrapper)
+  href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_SelectChildrenRecursively_Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper_
+  commentId: M:Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectChildrenRecursively(Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper)
+  fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectChildrenRecursively(Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper)
+  nameWithType: ExtractionViewModel.SelectChildrenRecursively(FileAndBookmarkWrapper)
+- uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectChildrenRecursively*
+  name: SelectChildrenRecursively
+  href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_SelectChildrenRecursively_
+  commentId: Overload:Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectChildrenRecursively
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectChildrenRecursively
+  nameWithType: ExtractionViewModel.SelectChildrenRecursively
 - uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectedBookmark
   name: SelectedBookmark
   href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_SelectedBookmark
@@ -2130,6 +2383,71 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.Action.ViewModels.MergeViewModel.EditCommand
   nameWithType: MergeViewModel.EditCommand
+- uid: Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteClearCommand
+  name: ExecuteClearCommand()
+  href: api/Opus.Modules.Action.ViewModels.MergeViewModel.html#Opus_Modules_Action_ViewModels_MergeViewModel_ExecuteClearCommand
+  commentId: M:Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteClearCommand
+  fullName: Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteClearCommand()
+  nameWithType: MergeViewModel.ExecuteClearCommand()
+- uid: Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteClearCommand*
+  name: ExecuteClearCommand
+  href: api/Opus.Modules.Action.ViewModels.MergeViewModel.html#Opus_Modules_Action_ViewModels_MergeViewModel_ExecuteClearCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteClearCommand
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteClearCommand
+  nameWithType: MergeViewModel.ExecuteClearCommand
+- uid: Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteDeleteCommand
+  name: ExecuteDeleteCommand()
+  href: api/Opus.Modules.Action.ViewModels.MergeViewModel.html#Opus_Modules_Action_ViewModels_MergeViewModel_ExecuteDeleteCommand
+  commentId: M:Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteDeleteCommand
+  fullName: Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteDeleteCommand()
+  nameWithType: MergeViewModel.ExecuteDeleteCommand()
+- uid: Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteDeleteCommand*
+  name: ExecuteDeleteCommand
+  href: api/Opus.Modules.Action.ViewModels.MergeViewModel.html#Opus_Modules_Action_ViewModels_MergeViewModel_ExecuteDeleteCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteDeleteCommand
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteDeleteCommand
+  nameWithType: MergeViewModel.ExecuteDeleteCommand
+- uid: Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteEditCommand
+  name: ExecuteEditCommand()
+  href: api/Opus.Modules.Action.ViewModels.MergeViewModel.html#Opus_Modules_Action_ViewModels_MergeViewModel_ExecuteEditCommand
+  commentId: M:Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteEditCommand
+  fullName: Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteEditCommand()
+  nameWithType: MergeViewModel.ExecuteEditCommand()
+- uid: Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteEditCommand*
+  name: ExecuteEditCommand
+  href: api/Opus.Modules.Action.ViewModels.MergeViewModel.html#Opus_Modules_Action_ViewModels_MergeViewModel_ExecuteEditCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteEditCommand
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteEditCommand
+  nameWithType: MergeViewModel.ExecuteEditCommand
+- uid: Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteMergeCommand
+  name: ExecuteMergeCommand()
+  href: api/Opus.Modules.Action.ViewModels.MergeViewModel.html#Opus_Modules_Action_ViewModels_MergeViewModel_ExecuteMergeCommand
+  commentId: M:Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteMergeCommand
+  fullName: Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteMergeCommand()
+  nameWithType: MergeViewModel.ExecuteMergeCommand()
+- uid: Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteMergeCommand*
+  name: ExecuteMergeCommand
+  href: api/Opus.Modules.Action.ViewModels.MergeViewModel.html#Opus_Modules_Action_ViewModels_MergeViewModel_ExecuteMergeCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteMergeCommand
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.MergeViewModel.ExecuteMergeCommand
+  nameWithType: MergeViewModel.ExecuteMergeCommand
+- uid: Opus.Modules.Action.ViewModels.MergeViewModel.GetMergeInputs
+  name: GetMergeInputs()
+  href: api/Opus.Modules.Action.ViewModels.MergeViewModel.html#Opus_Modules_Action_ViewModels_MergeViewModel_GetMergeInputs
+  commentId: M:Opus.Modules.Action.ViewModels.MergeViewModel.GetMergeInputs
+  fullName: Opus.Modules.Action.ViewModels.MergeViewModel.GetMergeInputs()
+  nameWithType: MergeViewModel.GetMergeInputs()
+- uid: Opus.Modules.Action.ViewModels.MergeViewModel.GetMergeInputs*
+  name: GetMergeInputs
+  href: api/Opus.Modules.Action.ViewModels.MergeViewModel.html#Opus_Modules_Action_ViewModels_MergeViewModel_GetMergeInputs_
+  commentId: Overload:Opus.Modules.Action.ViewModels.MergeViewModel.GetMergeInputs
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.MergeViewModel.GetMergeInputs
+  nameWithType: MergeViewModel.GetMergeInputs
 - uid: Opus.Modules.Action.ViewModels.MergeViewModel.MergeCommand
   name: MergeCommand
   href: api/Opus.Modules.Action.ViewModels.MergeViewModel.html#Opus_Modules_Action_ViewModels_MergeViewModel_MergeCommand
@@ -2240,6 +2558,45 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.Action.ViewModels.WorkCopyViewModel.DeleteCommand
   nameWithType: WorkCopyViewModel.DeleteCommand
+- uid: Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteClearCommand
+  name: ExecuteClearCommand()
+  href: api/Opus.Modules.Action.ViewModels.WorkCopyViewModel.html#Opus_Modules_Action_ViewModels_WorkCopyViewModel_ExecuteClearCommand
+  commentId: M:Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteClearCommand
+  fullName: Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteClearCommand()
+  nameWithType: WorkCopyViewModel.ExecuteClearCommand()
+- uid: Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteClearCommand*
+  name: ExecuteClearCommand
+  href: api/Opus.Modules.Action.ViewModels.WorkCopyViewModel.html#Opus_Modules_Action_ViewModels_WorkCopyViewModel_ExecuteClearCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteClearCommand
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteClearCommand
+  nameWithType: WorkCopyViewModel.ExecuteClearCommand
+- uid: Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteCreateWorkCopy
+  name: ExecuteCreateWorkCopy()
+  href: api/Opus.Modules.Action.ViewModels.WorkCopyViewModel.html#Opus_Modules_Action_ViewModels_WorkCopyViewModel_ExecuteCreateWorkCopy
+  commentId: M:Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteCreateWorkCopy
+  fullName: Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteCreateWorkCopy()
+  nameWithType: WorkCopyViewModel.ExecuteCreateWorkCopy()
+- uid: Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteCreateWorkCopy*
+  name: ExecuteCreateWorkCopy
+  href: api/Opus.Modules.Action.ViewModels.WorkCopyViewModel.html#Opus_Modules_Action_ViewModels_WorkCopyViewModel_ExecuteCreateWorkCopy_
+  commentId: Overload:Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteCreateWorkCopy
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteCreateWorkCopy
+  nameWithType: WorkCopyViewModel.ExecuteCreateWorkCopy
+- uid: Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteDeleteCommand
+  name: ExecuteDeleteCommand()
+  href: api/Opus.Modules.Action.ViewModels.WorkCopyViewModel.html#Opus_Modules_Action_ViewModels_WorkCopyViewModel_ExecuteDeleteCommand
+  commentId: M:Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteDeleteCommand
+  fullName: Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteDeleteCommand()
+  nameWithType: WorkCopyViewModel.ExecuteDeleteCommand()
+- uid: Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteDeleteCommand*
+  name: ExecuteDeleteCommand
+  href: api/Opus.Modules.Action.ViewModels.WorkCopyViewModel.html#Opus_Modules_Action_ViewModels_WorkCopyViewModel_ExecuteDeleteCommand_
+  commentId: Overload:Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteDeleteCommand
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.WorkCopyViewModel.ExecuteDeleteCommand
+  nameWithType: WorkCopyViewModel.ExecuteDeleteCommand
 - uid: Opus.Modules.Action.ViewModels.WorkCopyViewModel.OnArrival
   name: OnArrival()
   href: api/Opus.Modules.Action.ViewModels.WorkCopyViewModel.html#Opus_Modules_Action_ViewModels_WorkCopyViewModel_OnArrival
@@ -2724,19 +3081,32 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.DirectoryName
   nameWithType: DirectoryNavigationViewModel.DirectoryName
-- uid: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenDirectory
-  name: OpenDirectory
-  href: api/Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.html#Opus_Modules_File_ViewModels_DirectoryNavigationViewModel_OpenDirectory
-  commentId: P:Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenDirectory
-  fullName: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenDirectory
-  nameWithType: DirectoryNavigationViewModel.OpenDirectory
-- uid: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenDirectory*
-  name: OpenDirectory
-  href: api/Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.html#Opus_Modules_File_ViewModels_DirectoryNavigationViewModel_OpenDirectory_
-  commentId: Overload:Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenDirectory
+- uid: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.ExecuteOpenDirectory
+  name: ExecuteOpenDirectory()
+  href: api/Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.html#Opus_Modules_File_ViewModels_DirectoryNavigationViewModel_ExecuteOpenDirectory
+  commentId: M:Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.ExecuteOpenDirectory
+  fullName: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.ExecuteOpenDirectory()
+  nameWithType: DirectoryNavigationViewModel.ExecuteOpenDirectory()
+- uid: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.ExecuteOpenDirectory*
+  name: ExecuteOpenDirectory
+  href: api/Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.html#Opus_Modules_File_ViewModels_DirectoryNavigationViewModel_ExecuteOpenDirectory_
+  commentId: Overload:Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.ExecuteOpenDirectory
   isSpec: "True"
-  fullName: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenDirectory
-  nameWithType: DirectoryNavigationViewModel.OpenDirectory
+  fullName: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.ExecuteOpenDirectory
+  nameWithType: DirectoryNavigationViewModel.ExecuteOpenDirectory
+- uid: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenDirectoryCommand
+  name: OpenDirectoryCommand
+  href: api/Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.html#Opus_Modules_File_ViewModels_DirectoryNavigationViewModel_OpenDirectoryCommand
+  commentId: P:Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenDirectoryCommand
+  fullName: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenDirectoryCommand
+  nameWithType: DirectoryNavigationViewModel.OpenDirectoryCommand
+- uid: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenDirectoryCommand*
+  name: OpenDirectoryCommand
+  href: api/Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.html#Opus_Modules_File_ViewModels_DirectoryNavigationViewModel_OpenDirectoryCommand_
+  commentId: Overload:Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenDirectoryCommand
+  isSpec: "True"
+  fullName: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenDirectoryCommand
+  nameWithType: DirectoryNavigationViewModel.OpenDirectoryCommand
 - uid: Opus.Modules.File.ViewModels.FileMultipleViewModel
   name: FileMultipleViewModel
   href: api/Opus.Modules.File.ViewModels.FileMultipleViewModel.html
@@ -2756,19 +3126,32 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.File.ViewModels.FileMultipleViewModel.FileMultipleViewModel
   nameWithType: FileMultipleViewModel.FileMultipleViewModel
-- uid: Opus.Modules.File.ViewModels.FileMultipleViewModel.AddFiles
-  name: AddFiles
-  href: api/Opus.Modules.File.ViewModels.FileMultipleViewModel.html#Opus_Modules_File_ViewModels_FileMultipleViewModel_AddFiles
-  commentId: P:Opus.Modules.File.ViewModels.FileMultipleViewModel.AddFiles
-  fullName: Opus.Modules.File.ViewModels.FileMultipleViewModel.AddFiles
-  nameWithType: FileMultipleViewModel.AddFiles
-- uid: Opus.Modules.File.ViewModels.FileMultipleViewModel.AddFiles*
-  name: AddFiles
-  href: api/Opus.Modules.File.ViewModels.FileMultipleViewModel.html#Opus_Modules_File_ViewModels_FileMultipleViewModel_AddFiles_
-  commentId: Overload:Opus.Modules.File.ViewModels.FileMultipleViewModel.AddFiles
+- uid: Opus.Modules.File.ViewModels.FileMultipleViewModel.AddFilesCommand
+  name: AddFilesCommand
+  href: api/Opus.Modules.File.ViewModels.FileMultipleViewModel.html#Opus_Modules_File_ViewModels_FileMultipleViewModel_AddFilesCommand
+  commentId: P:Opus.Modules.File.ViewModels.FileMultipleViewModel.AddFilesCommand
+  fullName: Opus.Modules.File.ViewModels.FileMultipleViewModel.AddFilesCommand
+  nameWithType: FileMultipleViewModel.AddFilesCommand
+- uid: Opus.Modules.File.ViewModels.FileMultipleViewModel.AddFilesCommand*
+  name: AddFilesCommand
+  href: api/Opus.Modules.File.ViewModels.FileMultipleViewModel.html#Opus_Modules_File_ViewModels_FileMultipleViewModel_AddFilesCommand_
+  commentId: Overload:Opus.Modules.File.ViewModels.FileMultipleViewModel.AddFilesCommand
   isSpec: "True"
-  fullName: Opus.Modules.File.ViewModels.FileMultipleViewModel.AddFiles
-  nameWithType: FileMultipleViewModel.AddFiles
+  fullName: Opus.Modules.File.ViewModels.FileMultipleViewModel.AddFilesCommand
+  nameWithType: FileMultipleViewModel.AddFilesCommand
+- uid: Opus.Modules.File.ViewModels.FileMultipleViewModel.ExecuteAddFiles
+  name: ExecuteAddFiles()
+  href: api/Opus.Modules.File.ViewModels.FileMultipleViewModel.html#Opus_Modules_File_ViewModels_FileMultipleViewModel_ExecuteAddFiles
+  commentId: M:Opus.Modules.File.ViewModels.FileMultipleViewModel.ExecuteAddFiles
+  fullName: Opus.Modules.File.ViewModels.FileMultipleViewModel.ExecuteAddFiles()
+  nameWithType: FileMultipleViewModel.ExecuteAddFiles()
+- uid: Opus.Modules.File.ViewModels.FileMultipleViewModel.ExecuteAddFiles*
+  name: ExecuteAddFiles
+  href: api/Opus.Modules.File.ViewModels.FileMultipleViewModel.html#Opus_Modules_File_ViewModels_FileMultipleViewModel_ExecuteAddFiles_
+  commentId: Overload:Opus.Modules.File.ViewModels.FileMultipleViewModel.ExecuteAddFiles
+  isSpec: "True"
+  fullName: Opus.Modules.File.ViewModels.FileMultipleViewModel.ExecuteAddFiles
+  nameWithType: FileMultipleViewModel.ExecuteAddFiles
 - uid: Opus.Modules.File.ViewModels.FileNavigationViewModel
   name: FileNavigationViewModel
   href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html
@@ -2788,6 +3171,19 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel.FileNavigationViewModel
   nameWithType: FileNavigationViewModel.FileNavigationViewModel
+- uid: Opus.Modules.File.ViewModels.FileNavigationViewModel.ExecuteOpenFile
+  name: ExecuteOpenFile()
+  href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html#Opus_Modules_File_ViewModels_FileNavigationViewModel_ExecuteOpenFile
+  commentId: M:Opus.Modules.File.ViewModels.FileNavigationViewModel.ExecuteOpenFile
+  fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel.ExecuteOpenFile()
+  nameWithType: FileNavigationViewModel.ExecuteOpenFile()
+- uid: Opus.Modules.File.ViewModels.FileNavigationViewModel.ExecuteOpenFile*
+  name: ExecuteOpenFile
+  href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html#Opus_Modules_File_ViewModels_FileNavigationViewModel_ExecuteOpenFile_
+  commentId: Overload:Opus.Modules.File.ViewModels.FileNavigationViewModel.ExecuteOpenFile
+  isSpec: "True"
+  fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel.ExecuteOpenFile
+  nameWithType: FileNavigationViewModel.ExecuteOpenFile
 - uid: Opus.Modules.File.ViewModels.FileNavigationViewModel.FileName
   name: FileName
   href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html#Opus_Modules_File_ViewModels_FileNavigationViewModel_FileName
@@ -2801,19 +3197,19 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel.FileName
   nameWithType: FileNavigationViewModel.FileName
-- uid: Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFile
-  name: OpenFile
-  href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html#Opus_Modules_File_ViewModels_FileNavigationViewModel_OpenFile
-  commentId: P:Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFile
-  fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFile
-  nameWithType: FileNavigationViewModel.OpenFile
-- uid: Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFile*
-  name: OpenFile
-  href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html#Opus_Modules_File_ViewModels_FileNavigationViewModel_OpenFile_
-  commentId: Overload:Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFile
+- uid: Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFileCommand
+  name: OpenFileCommand
+  href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html#Opus_Modules_File_ViewModels_FileNavigationViewModel_OpenFileCommand
+  commentId: P:Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFileCommand
+  fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFileCommand
+  nameWithType: FileNavigationViewModel.OpenFileCommand
+- uid: Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFileCommand*
+  name: OpenFileCommand
+  href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html#Opus_Modules_File_ViewModels_FileNavigationViewModel_OpenFileCommand_
+  commentId: Overload:Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFileCommand
   isSpec: "True"
-  fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFile
-  nameWithType: FileNavigationViewModel.OpenFile
+  fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFileCommand
+  nameWithType: FileNavigationViewModel.OpenFileCommand
 - uid: Opus.Modules.File.Views
   name: Opus.Modules.File.Views
   href: api/Opus.Modules.File.Views.html
@@ -8831,6 +9227,19 @@ references:
   isSpec: "True"
   fullName: Opus.Services.Implementation.Configuration.Configuration.ConfigurationFile
   nameWithType: Configuration.ConfigurationFile
+- uid: Opus.Services.Implementation.Configuration.Configuration.CreateNew(System.String)
+  name: CreateNew(String)
+  href: api/Opus.Services.Implementation.Configuration.Configuration.html#Opus_Services_Implementation_Configuration_Configuration_CreateNew_System_String_
+  commentId: M:Opus.Services.Implementation.Configuration.Configuration.CreateNew(System.String)
+  fullName: Opus.Services.Implementation.Configuration.Configuration.CreateNew(System.String)
+  nameWithType: Configuration.CreateNew(String)
+- uid: Opus.Services.Implementation.Configuration.Configuration.CreateNew*
+  name: CreateNew
+  href: api/Opus.Services.Implementation.Configuration.Configuration.html#Opus_Services_Implementation_Configuration_Configuration_CreateNew_
+  commentId: Overload:Opus.Services.Implementation.Configuration.Configuration.CreateNew
+  isSpec: "True"
+  fullName: Opus.Services.Implementation.Configuration.Configuration.CreateNew
+  nameWithType: Configuration.CreateNew
 - uid: Opus.Services.Implementation.Configuration.Configuration.DefaultProfile
   name: DefaultProfile
   href: api/Opus.Services.Implementation.Configuration.Configuration.html#Opus_Services_Implementation_Configuration_Configuration_DefaultProfile
@@ -13075,6 +13484,74 @@ references:
   fullName.vb: Opus.Services.UI.ReorderCollection(Of T).CollectionSelectedItemChangedEventHandler
   nameWithType: ReorderCollection<T>.CollectionSelectedItemChangedEventHandler
   nameWithType.vb: ReorderCollection(Of T).CollectionSelectedItemChangedEventHandler
+- uid: Opus.Services.UI.ReorderCollection`1.ExecuteMoveDown
+  name: ExecuteMoveDown()
+  href: api/Opus.Services.UI.ReorderCollection-1.html#Opus_Services_UI_ReorderCollection_1_ExecuteMoveDown
+  commentId: M:Opus.Services.UI.ReorderCollection`1.ExecuteMoveDown
+  fullName: Opus.Services.UI.ReorderCollection<T>.ExecuteMoveDown()
+  fullName.vb: Opus.Services.UI.ReorderCollection(Of T).ExecuteMoveDown()
+  nameWithType: ReorderCollection<T>.ExecuteMoveDown()
+  nameWithType.vb: ReorderCollection(Of T).ExecuteMoveDown()
+- uid: Opus.Services.UI.ReorderCollection`1.ExecuteMoveDown*
+  name: ExecuteMoveDown
+  href: api/Opus.Services.UI.ReorderCollection-1.html#Opus_Services_UI_ReorderCollection_1_ExecuteMoveDown_
+  commentId: Overload:Opus.Services.UI.ReorderCollection`1.ExecuteMoveDown
+  isSpec: "True"
+  fullName: Opus.Services.UI.ReorderCollection<T>.ExecuteMoveDown
+  fullName.vb: Opus.Services.UI.ReorderCollection(Of T).ExecuteMoveDown
+  nameWithType: ReorderCollection<T>.ExecuteMoveDown
+  nameWithType.vb: ReorderCollection(Of T).ExecuteMoveDown
+- uid: Opus.Services.UI.ReorderCollection`1.ExecuteMoveLeft
+  name: ExecuteMoveLeft()
+  href: api/Opus.Services.UI.ReorderCollection-1.html#Opus_Services_UI_ReorderCollection_1_ExecuteMoveLeft
+  commentId: M:Opus.Services.UI.ReorderCollection`1.ExecuteMoveLeft
+  fullName: Opus.Services.UI.ReorderCollection<T>.ExecuteMoveLeft()
+  fullName.vb: Opus.Services.UI.ReorderCollection(Of T).ExecuteMoveLeft()
+  nameWithType: ReorderCollection<T>.ExecuteMoveLeft()
+  nameWithType.vb: ReorderCollection(Of T).ExecuteMoveLeft()
+- uid: Opus.Services.UI.ReorderCollection`1.ExecuteMoveLeft*
+  name: ExecuteMoveLeft
+  href: api/Opus.Services.UI.ReorderCollection-1.html#Opus_Services_UI_ReorderCollection_1_ExecuteMoveLeft_
+  commentId: Overload:Opus.Services.UI.ReorderCollection`1.ExecuteMoveLeft
+  isSpec: "True"
+  fullName: Opus.Services.UI.ReorderCollection<T>.ExecuteMoveLeft
+  fullName.vb: Opus.Services.UI.ReorderCollection(Of T).ExecuteMoveLeft
+  nameWithType: ReorderCollection<T>.ExecuteMoveLeft
+  nameWithType.vb: ReorderCollection(Of T).ExecuteMoveLeft
+- uid: Opus.Services.UI.ReorderCollection`1.ExecuteMoveRight
+  name: ExecuteMoveRight()
+  href: api/Opus.Services.UI.ReorderCollection-1.html#Opus_Services_UI_ReorderCollection_1_ExecuteMoveRight
+  commentId: M:Opus.Services.UI.ReorderCollection`1.ExecuteMoveRight
+  fullName: Opus.Services.UI.ReorderCollection<T>.ExecuteMoveRight()
+  fullName.vb: Opus.Services.UI.ReorderCollection(Of T).ExecuteMoveRight()
+  nameWithType: ReorderCollection<T>.ExecuteMoveRight()
+  nameWithType.vb: ReorderCollection(Of T).ExecuteMoveRight()
+- uid: Opus.Services.UI.ReorderCollection`1.ExecuteMoveRight*
+  name: ExecuteMoveRight
+  href: api/Opus.Services.UI.ReorderCollection-1.html#Opus_Services_UI_ReorderCollection_1_ExecuteMoveRight_
+  commentId: Overload:Opus.Services.UI.ReorderCollection`1.ExecuteMoveRight
+  isSpec: "True"
+  fullName: Opus.Services.UI.ReorderCollection<T>.ExecuteMoveRight
+  fullName.vb: Opus.Services.UI.ReorderCollection(Of T).ExecuteMoveRight
+  nameWithType: ReorderCollection<T>.ExecuteMoveRight
+  nameWithType.vb: ReorderCollection(Of T).ExecuteMoveRight
+- uid: Opus.Services.UI.ReorderCollection`1.ExecuteMoveUp
+  name: ExecuteMoveUp()
+  href: api/Opus.Services.UI.ReorderCollection-1.html#Opus_Services_UI_ReorderCollection_1_ExecuteMoveUp
+  commentId: M:Opus.Services.UI.ReorderCollection`1.ExecuteMoveUp
+  fullName: Opus.Services.UI.ReorderCollection<T>.ExecuteMoveUp()
+  fullName.vb: Opus.Services.UI.ReorderCollection(Of T).ExecuteMoveUp()
+  nameWithType: ReorderCollection<T>.ExecuteMoveUp()
+  nameWithType.vb: ReorderCollection(Of T).ExecuteMoveUp()
+- uid: Opus.Services.UI.ReorderCollection`1.ExecuteMoveUp*
+  name: ExecuteMoveUp
+  href: api/Opus.Services.UI.ReorderCollection-1.html#Opus_Services_UI_ReorderCollection_1_ExecuteMoveUp_
+  commentId: Overload:Opus.Services.UI.ReorderCollection`1.ExecuteMoveUp
+  isSpec: "True"
+  fullName: Opus.Services.UI.ReorderCollection<T>.ExecuteMoveUp
+  fullName.vb: Opus.Services.UI.ReorderCollection(Of T).ExecuteMoveUp
+  nameWithType: ReorderCollection<T>.ExecuteMoveUp
+  nameWithType.vb: ReorderCollection(Of T).ExecuteMoveUp
 - uid: Opus.Services.UI.ReorderCollection`1.IsReordering
   name: IsReordering
   href: api/Opus.Services.UI.ReorderCollection-1.html#Opus_Services_UI_ReorderCollection_1_IsReordering

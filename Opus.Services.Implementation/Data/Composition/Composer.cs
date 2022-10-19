@@ -17,75 +17,112 @@ using CX.LoggingLib;
 
 namespace Opus.Services.Implementation.Data.Composition
 {
+    /// <summary>
+    /// Default implementation for <see cref="IComposer"/> service.
+    /// </summary>
     public class Composer : IComposer
     {
+        #region DI services
         private IDialogAssist dialogAssist;
         private IPathSelection input;
         private ILogbook logbook;
         private IMergingService mergingService;
+        #endregion
 
+        #region Constructor
+        /// <summary>
+        /// Create a new Composer service implementation instance.
+        /// </summary>
+        /// <param name="dialogAssist">Service for showing and otherwise handling dialogs.</param>
+        /// <param name="input">Service for acquiring user path input.</param>
+        /// <param name="mergingService">Service for dealing with merging files.</param>
+        /// <param name="logbook">Logging service.</param>
         public Composer(
-            IDialogAssist dialogAssist, 
+            IDialogAssist dialogAssist,
             IPathSelection input,
             IMergingService mergingService,
-            ILogbook logbook)
+            ILogbook logbook
+        )
         {
+            // Assign DI services
+
             this.dialogAssist = dialogAssist;
             this.input = input;
             this.logbook = logbook;
             this.mergingService = mergingService;
         }
+        #endregion
 
-        public async Task Compose(string directory, ICompositionProfile compositionProfile,
-            bool deleteConverted, bool searchSubDirectories)
+        #region Methods
+        /// <summary>
+        /// Compose the document from a directory of files.
+        /// </summary>
+        /// <param name="directory">Directory to search the files in.</param>
+        /// <param name="compositionProfile">Profile on which the composition is based.</param>
+        /// <param name="deleteConverted">If true, delete converted files after composition has finished.</param>
+        /// <param name="searchSubDirectories">If true, search subdirectories for files matching search criteria.</param>
+        /// <returns>An awaitable task.</returns>
+        public async Task Compose(
+            string directory,
+            ICompositionProfile compositionProfile,
+            bool deleteConverted,
+            bool searchSubDirectories
+        )
         {
-            await new ComposerWorker(dialogAssist, input, mergingService, logbook)
-                .Compose(directory, compositionProfile, deleteConverted, searchSubDirectories);
+            // Create a worker instance to deal with composing the document.
+
+            await new ComposerWorker(dialogAssist, input, mergingService, logbook).Compose(
+                directory,
+                compositionProfile,
+                deleteConverted,
+                searchSubDirectories
+            );
         }
+        #endregion
     }
 
+    /// <summary>
+    /// Worker class for handling compositions.
+    /// </summary>
     internal class ComposerWorker : LoggingEnabled<ComposerWorker>
     {
-        /// <summary>
-        /// Service for showing dialogs
-        /// </summary>
+        #region DI Services
         private IDialogAssist dialogAssist;
-        /// <summary>
-        /// Service for getting user input
-        /// </summary>
         private IPathSelection input;
         private IMergingService mergingService;
-        /// <summary>
-        /// Dialog model for showing progress
-        /// </summary>
+        #endregion
+
+        #region Fields and properties
         private ProgressDialog progressDialog;
-        /// <summary>
-        /// Progress reporting for total progress of composition
-        /// </summary>
         private IProgress<int>? totalProgress;
-        /// <summary>
-        /// Progress reporting for the current part being processed
-        /// </summary>
         private IProgress<int>? partProgress;
 
         private CancellationTokenSource cancelSource;
         private CancellationToken cancelToken;
+        #endregion
 
+        #region Constructor
         /// <summary>
-        /// Create an implementation instance for <see cref="IComposerDefunct"/>
+        /// Create a worker to handle composition for <see cref="Composer"/>.
         /// </summary>
-        /// <param name="dialogAssist">Service for showing <see cref="IDialog"/> instances</param>
-        /// <param name="input">Service for retrieving user input</param>
-        /// <param name="manipulator">Service for manipulating pdf files</param>
+        /// <param name="dialogAssist">Service for showing and otherwise handling dialogs.</param>
+        /// <param name="input">Service for getting path input from user.</param>
+        /// <param name="mergingService">Service for merging files into one document.</param>
+        /// <param name="logbook">Logging services.</param>
         public ComposerWorker(
-            IDialogAssist dialogAssist, 
+            IDialogAssist dialogAssist,
             IPathSelection input,
             IMergingService mergingService,
-            ILogbook logbook) : base(logbook)
+            ILogbook logbook
+        ) : base(logbook)
         {
+            // Assign DI services
             this.dialogAssist = dialogAssist;
             this.input = input;
             this.mergingService = mergingService;
+
+            // Create tokens for process cancellation
+
             cancelSource = new CancellationTokenSource();
             cancelToken = cancelSource.Token;
 
@@ -97,19 +134,31 @@ namespace Opus.Services.Implementation.Data.Composition
                 Phase = Resources.Operations.PhaseNames.EvaluatingFiles
             };
         }
+        #endregion
 
+        #region Methods
         /// <summary>
-        /// Interface implementation for composing a pdf file from separate files
+        /// Compose files contained in a directory (and possibly subdirectories) into a new
+        /// document according to rules laid out in given profile.
         /// </summary>
-        /// <param name="directory">Directory (and subdirectories) to search files from</param>
-        /// <param name="compositionProfile">Profile containing the <see cref="ICompositionSegment"/>s to do
-        /// the composition by</param>
-        /// <returns></returns>
-        public async Task Compose(string directory, ICompositionProfile compositionProfile,
-            bool deleteConverted, bool searchSubDirectories)
+        /// <param name="directory">Directory to search files in.</param>
+        /// <param name="compositionProfile">Profile to compose the document by.</param>
+        /// <param name="deleteConverted">If true, delete converted files when done.</param>
+        /// <param name="searchSubDirectories">If true, also search subdirectories within <paramref name="directory"/>.</param>
+        /// <returns>An awaitable task.</returns>
+        public async Task Compose(
+            string directory,
+            ICompositionProfile compositionProfile,
+            bool deleteConverted,
+            bool searchSubDirectories
+        )
         {
+            // Cancellation token and source for cancelling and monitoring cancellation status.
+
             cancelSource = new CancellationTokenSource();
             cancelToken = cancelSource.Token;
+
+            // Create a dialog with information on current progress status.
 
             progressDialog = new ProgressDialog(string.Empty, cancelSource)
             {
@@ -119,10 +168,20 @@ namespace Opus.Services.Implementation.Data.Composition
             };
 
             // Show progress to the user
+
             Task progress = dialogAssist.Show(progressDialog);
 
             // Start composing
-            Task compose = ComposeInternal(directory, compositionProfile, deleteConverted, searchSubDirectories);
+
+            Task compose = ComposeInternal(
+                directory,
+                compositionProfile,
+                deleteConverted,
+                searchSubDirectories
+            );
+
+            // Proceed when composing has finished and user has acknowledged this.
+            // If an exception is thrown, show an error message instead.
 
             try
             {
@@ -130,37 +189,70 @@ namespace Opus.Services.Implementation.Data.Composition
             }
             catch (ArgumentNullException e) when (e.Message == nameof(directory))
             {
-                MessageDialog dialog = new MessageDialog(Resources.Labels.General.Error, Resources.Messages.Composition.PathNull);
+                MessageDialog dialog = new MessageDialog(
+                    Resources.Labels.General.Error,
+                    Resources.Messages.Composition.PathNull
+                );
                 await dialogAssist.Show(dialog);
 
-                logbook.Write($"Internal composition method threw an exception.", LogLevel.Error, e);
+                logbook.Write(
+                    $"Internal composition method threw an exception.",
+                    LogLevel.Error,
+                    e
+                );
 
                 return;
             }
             catch (ArgumentNullException e) when (e.Message == nameof(compositionProfile))
             {
-                MessageDialog dialog = new MessageDialog(Resources.Labels.General.Error,
-                    Resources.Messages.Composition.ProfileNotExists);
+                MessageDialog dialog = new MessageDialog(
+                    Resources.Labels.General.Error,
+                    Resources.Messages.Composition.ProfileNotExists
+                );
                 await dialogAssist.Show(dialog);
 
-                logbook.Write($"Internal composition method threw an exception.", LogLevel.Error, e);
+                logbook.Write(
+                    $"Internal composition method threw an exception.",
+                    LogLevel.Error,
+                    e
+                );
 
                 return;
             }
             catch (DirectoryNotFoundException e)
             {
-                MessageDialog dialog = new MessageDialog(Resources.Labels.General.Error,
-                    Resources.Messages.Composition.PathNotExists);
+                MessageDialog dialog = new MessageDialog(
+                    Resources.Labels.General.Error,
+                    Resources.Messages.Composition.PathNotExists
+                );
                 await dialogAssist.Show(dialog);
 
-                logbook.Write($"Internal composition method threw an exception.", LogLevel.Error, e);
+                logbook.Write(
+                    $"Internal composition method threw an exception.",
+                    LogLevel.Error,
+                    e
+                );
 
                 return;
             }
         }
 
-        private async Task ComposeInternal(string directory, ICompositionProfile compositionProfile,
-            bool deleteConverted, bool searchSubDirectories)
+        /// <summary>
+        /// Internal composing method for handling composition.
+        /// </summary>
+        /// <param name="directory">Directory to look the files in.</param>
+        /// <param name="compositionProfile">Profile to compose the document by.</param>
+        /// <param name="deleteConverted">If true, delete converted files when done.</param>
+        /// <param name="searchSubDirectories">If true, search for subdirectories inside <paramref name="directory"/>.</param>
+        /// <returns>An awaitable task.</returns>
+        /// <exception cref="ArgumentNullException">Thrown, if the given directory or profile is null.</exception>
+        /// <exception cref="DirectoryNotFoundException">Thrown, if no directory with given path is found.</exception>
+        protected async Task ComposeInternal(
+            string directory,
+            ICompositionProfile compositionProfile,
+            bool deleteConverted,
+            bool searchSubDirectories
+        )
         {
             if (directory == null)
                 throw new ArgumentNullException(nameof(directory));
@@ -169,13 +261,23 @@ namespace Opus.Services.Implementation.Data.Composition
             if (compositionProfile == null)
                 throw new ArgumentNullException(nameof(compositionProfile));
 
-            SearchOption subDirs = searchSubDirectories == true ? 
-                SearchOption.AllDirectories : SearchOption.TopDirectoryOnly;
+            // Determine search criteria and do the search.
 
-            IEnumerable<string> files = Directory.GetFiles(directory, "*.*", subDirs)
-                .Where(x => x.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase) ||
-                x.EndsWith(".docx", StringComparison.OrdinalIgnoreCase) ||
-                x.EndsWith(".doc", StringComparison.OrdinalIgnoreCase));
+            SearchOption subDirs =
+                searchSubDirectories == true
+                    ? SearchOption.AllDirectories
+                    : SearchOption.TopDirectoryOnly;
+
+            IEnumerable<string> files = Directory
+                .GetFiles(directory, "*.*", subDirs)
+                .Where(
+                    x =>
+                        x.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase)
+                        || x.EndsWith(".docx", StringComparison.OrdinalIgnoreCase)
+                        || x.EndsWith(".doc", StringComparison.OrdinalIgnoreCase)
+                );
+
+            // Update progress info.
 
             int totalAmount = 100;
             foreach (ICompositionSegment cs in compositionProfile.Segments)
@@ -197,6 +299,8 @@ namespace Opus.Services.Implementation.Data.Composition
                 progressDialog.TotalPercent = currentTotal * 100 / totalAmount;
             });
 
+            // Add inputs in the collection for merging.
+
             List<IMergeInput> inputs = new List<IMergeInput>();
             foreach (ICompositionSegment segment in compositionProfile.Segments)
             {
@@ -206,20 +310,35 @@ namespace Opus.Services.Implementation.Data.Composition
                 inputs.AddRange(segmentInput);
             }
 
+            // Remove titles that have no children.
+
             RemoveEmptyTitles(inputs);
 
             if (cancelToken.IsCancellationRequested)
             {
-                logbook.Write($"Cancellation requested at token '{cancelToken.GetHashCode()}'.", LogLevel.Debug);
+                logbook.Write(
+                    $"Cancellation requested at token '{cancelToken.GetHashCode()}'.",
+                    LogLevel.Debug
+                );
                 return;
             }
 
-            await ExecuteComposition(directory, inputs, compositionProfile.AddPageNumbers,
-                deleteConverted, cancelToken);
+            // Compose the document.
+
+            await ExecuteComposition(
+                directory,
+                inputs,
+                compositionProfile.AddPageNumbers,
+                deleteConverted,
+                cancelToken
+            );
 
             if (cancelToken.IsCancellationRequested)
             {
-                logbook.Write($"Cancellation requested at token '{cancelToken.GetHashCode()}'.", LogLevel.Debug);
+                logbook.Write(
+                    $"Cancellation requested at token '{cancelToken.GetHashCode()}'.",
+                    LogLevel.Debug
+                );
                 return;
             }
 
@@ -227,7 +346,16 @@ namespace Opus.Services.Implementation.Data.Composition
             progressDialog.Part = null;
         }
 
-        private async Task<List<IMergeInput>> EvaluateSegment(ICompositionSegment segment, IEnumerable<string> files)
+        /// <summary>
+        /// Determine the type of the segment and evaluate accordingly (see any files match the search criteria).
+        /// </summary>
+        /// <param name="segment">Segment against which to evaluate the files.</param>
+        /// <param name="files">Files to evaluate against the segment rules.</param>
+        /// <returns></returns>
+        private async Task<List<IMergeInput>> EvaluateSegment(
+            ICompositionSegment segment,
+            IEnumerable<string> files
+        )
         {
             if (segment is ICompositionFile fileSegment)
             {
@@ -236,7 +364,10 @@ namespace Opus.Services.Implementation.Data.Composition
             else if (segment is ICompositionTitle titleSegment)
             {
                 totalProgress?.Report(1);
-                return new List<IMergeInput>() { new MergeInput(null, titleSegment.SegmentName, titleSegment.Level) };
+                return new List<IMergeInput>()
+                {
+                    new MergeInput(null, titleSegment.SegmentName, titleSegment.Level)
+                };
             }
             else
             {
@@ -244,8 +375,19 @@ namespace Opus.Services.Implementation.Data.Composition
             }
         }
 
-        private async Task<List<IMergeInput>> EvaluateFileSegment(ICompositionFile fileSegment, IEnumerable<string> files)
+        /// <summary>
+        /// Evaluate files against a file segment and see if any of them fulfill the criteria.
+        /// </summary>
+        /// <param name="fileSegment">Segment to compare against.</param>
+        /// <param name="files">Files to use in the comparison.</param>
+        /// <returns></returns>
+        private async Task<List<IMergeInput>> EvaluateFileSegment(
+            ICompositionFile fileSegment,
+            IEnumerable<string> files
+        )
         {
+            // Display progress.
+
             int currentPartTotal = 0;
             progressDialog.PartPercent = 0;
             progressDialog.Part = fileSegment.SegmentName;
@@ -255,6 +397,8 @@ namespace Opus.Services.Implementation.Data.Composition
                 currentPartTotal += addition;
                 progressDialog.PartPercent = currentPartTotal * 100 / files.Count();
             });
+
+            // Get results for each file and store results in a list.
 
             List<IFileEvaluationResult> evaluationResults = new List<IFileEvaluationResult>();
             foreach (string file in files)
@@ -269,6 +413,9 @@ namespace Opus.Services.Implementation.Data.Composition
                 totalProgress?.Report(1);
             }
 
+            // Check for the correct amounts of matching files and
+            // ask to choose correct files if appropriate.
+
             if (fileSegment.MaxCount == 0)
             {
                 if (evaluationResults.Count >= fileSegment.MinCount)
@@ -282,7 +429,10 @@ namespace Opus.Services.Implementation.Data.Composition
             }
             else
             {
-                if (evaluationResults.Count >= fileSegment.MinCount && evaluationResults.Count <= fileSegment.MaxCount)
+                if (
+                    evaluationResults.Count >= fileSegment.MinCount
+                    && evaluationResults.Count <= fileSegment.MaxCount
+                )
                 {
                     return AddFileMerges(evaluationResults, fileSegment);
                 }
@@ -293,23 +443,48 @@ namespace Opus.Services.Implementation.Data.Composition
             }
         }
 
-        private List<IMergeInput> AddFileMerges(IList<IFileEvaluationResult> results, ICompositionFile fileSegment)
+        /// <summary>
+        /// Add file to merge inputs with the correct name.
+        /// </summary>
+        /// <param name="results">List containing all evaluation results.</param>
+        /// <param name="fileSegment">Segment to which this merge applies.</param>
+        /// <returns>List of all inputs with regards to segment.</returns>
+        private List<IMergeInput> AddFileMerges(
+            IList<IFileEvaluationResult> results,
+            ICompositionFile fileSegment
+        )
         {
             progressDialog.PartPercent = 0;
             List<IMergeInput> mergeInputs = new List<IMergeInput>();
             foreach (IFileEvaluationResult result in results)
             {
-                string name = fileSegment.NameFromFile == true ? result.Name : fileSegment.SegmentName;
+                string name =
+                    fileSegment.NameFromFile == true ? result.Name : fileSegment.SegmentName;
                 mergeInputs.Add(new MergeInput(result.FilePath, name, fileSegment.Level));
             }
 
             return mergeInputs;
         }
 
-        private async Task<List<IMergeInput>> AskForCorrectFiles(IList<IFileEvaluationResult> results, ICompositionFile fileSegment)
+        /// <summary>
+        /// If an incorrect amount of matching files are found, ask the user to provide more files
+        /// or remove some files from the list.
+        /// </summary>
+        /// <param name="results">Evaluation results for this segment.</param>
+        /// <param name="fileSegment">Segment the results were evaluated against.</param>
+        /// <returns>An awaitable task. The task return a list of merge inputs after choices have been made.</returns>
+        private async Task<List<IMergeInput>> AskForCorrectFiles(
+            IList<IFileEvaluationResult> results,
+            ICompositionFile fileSegment
+        )
         {
             progressDialog.PartPercent = 0;
-            CompositionFileCountDialog countDialog = new CompositionFileCountDialog(results, fileSegment, input, Resources.Labels.Dialogs.CompositionFileCount.SearchResult);
+            CompositionFileCountDialog countDialog = new CompositionFileCountDialog(
+                results,
+                fileSegment,
+                input,
+                Resources.Labels.Dialogs.CompositionFileCount.SearchResult
+            );
             await dialogAssist.Show(countDialog);
             if (countDialog.IsCanceled)
             {
@@ -319,6 +494,10 @@ namespace Opus.Services.Implementation.Data.Composition
             return AddFileMerges(countDialog.Results, fileSegment);
         }
 
+        /// <summary>
+        /// Remove titles without children from the merge inputs list.
+        /// </summary>
+        /// <param name="inputs">Inputs to check.</param>
         private void RemoveEmptyTitles(List<IMergeInput> inputs)
         {
             progressDialog.PartPercent = 0;
@@ -353,8 +532,22 @@ namespace Opus.Services.Implementation.Data.Composition
             }
         }
 
-        private async Task ExecuteComposition(string directory, List<IMergeInput> inputs, bool addPageNumbers, 
-            bool deleteConverted, CancellationToken token)
+        /// <summary>
+        /// Execute the actual composition.
+        /// </summary>
+        /// <param name="directory">Directory from which files were looked from.</param>
+        /// <param name="inputs">Merge inputs for segments.</param>
+        /// <param name="addPageNumbers">If true, add page numbers to product pages.</param>
+        /// <param name="deleteConverted">If true, delete converted files when done.</param>
+        /// <param name="token">Token for process cancellation info.</param>
+        /// <returns>An awaitable task.</returns>
+        private async Task ExecuteComposition(
+            string directory,
+            List<IMergeInput> inputs,
+            bool addPageNumbers,
+            bool deleteConverted,
+            CancellationToken token
+        )
         {
             progressDialog.PartPercent = 0;
             progressDialog.Part = Resources.Operations.PhaseNames.ChoosingDestination;
@@ -370,8 +563,14 @@ namespace Opus.Services.Implementation.Data.Composition
                 alreadyReportedPercent = progress.Percentage;
             });
 
-            string filePath = await Task.Run(() => input.SaveFile(Resources.UserInput.Descriptions.SelectSaveFile,
-                FileType.PDF, new DirectoryInfo(directory).Name + ".pdf"));
+            string filePath = await Task.Run(
+                () =>
+                    input.SaveFile(
+                        Resources.UserInput.Descriptions.SelectSaveFile,
+                        FileType.PDF,
+                        new DirectoryInfo(directory).Name + ".pdf"
+                    )
+            );
 
             if (string.IsNullOrEmpty(filePath))
             {
@@ -381,9 +580,16 @@ namespace Opus.Services.Implementation.Data.Composition
 
             FileInfo output = new FileInfo(filePath);
 
-            bool convertWord = inputs.Where(f => string.IsNullOrEmpty(f.FilePath) == false).Any(i => Path.GetExtension(i.FilePath).ToLower().Contains(".doc"));
+            bool convertWord = inputs
+                .Where(f => string.IsNullOrEmpty(f.FilePath) == false)
+                .Any(i => Path.GetExtension(i.FilePath).ToLower().Contains(".doc"));
 
-            MergingOptions options = new MergingOptions(inputs, output, addPageNumbers, convertWord);
+            MergingOptions options = new MergingOptions(
+                inputs,
+                output,
+                addPageNumbers,
+                convertWord
+            );
             options.Cancellation = token;
             options.Progress = mergeProgress;
 
@@ -419,5 +625,6 @@ namespace Opus.Services.Implementation.Data.Composition
                 }
             }
         }
+        #endregion
     }
 }

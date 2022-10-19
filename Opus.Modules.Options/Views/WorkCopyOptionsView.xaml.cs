@@ -14,10 +14,13 @@ using System.Windows.Shapes;
 namespace Opus.Modules.Options.Views
 {
     /// <summary>
-    /// Interaction logic for IdentifierView.xaml
+    /// Work copy options code-behind.
     /// </summary>
     public partial class WorkCopyOptionsView : UserControl
     {
+        /// <summary>
+        /// Create work copy options view.
+        /// </summary>
         public WorkCopyOptionsView()
         {
             InitializeComponent();

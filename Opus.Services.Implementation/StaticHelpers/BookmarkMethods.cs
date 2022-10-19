@@ -3,10 +3,8 @@ using CX.PdfLib.Services.Data;
 using Opus.Services.Configuration;
 using Opus.Services.Implementation.UI.Dialogs;
 using Opus.Services.UI;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using CX.PdfLib.Extensions;
 using Opus.Services.Implementation.Data.Extraction;
@@ -16,8 +14,17 @@ using Opus.ExtensionMethods;
 
 namespace Opus.Services.Implementation.StaticHelpers
 {
+    /// <summary>
+    /// Helper methods for bookmark manipulations.
+    /// </summary>
     public static class BookmarkMethods
     {
+        /// <summary>
+        /// Ask the user for a name template.
+        /// </summary>
+        /// <param name="dialogAssist">Service for showing dialogs.</param>
+        /// <param name="configuration">Program-wide configurations.</param>
+        /// <returns>An awaitable task. The task returns the given name template.</returns>
         public static async Task<string> AskForTitle(
             IDialogAssist dialogAssist,
             IConfiguration configuration
@@ -46,6 +53,11 @@ namespace Opus.Services.Implementation.StaticHelpers
             return title;
         }
 
+        /// <summary>
+        /// Return only bookmarks that are parents of another bookmark.
+        /// </summary>
+        /// <param name="originals">Bookmarks to search the parents from.</param>
+        /// <returns>Found parents, if any.</returns>
         public static IEnumerable<ILeveledBookmark> GetParentsOnly(
             IEnumerable<ILeveledBookmark> originals
         )
@@ -60,6 +72,13 @@ namespace Opus.Services.Implementation.StaticHelpers
             return parents;
         }
 
+        /// <summary>
+        /// Return bookmarks that have been renamed according to the template.
+        /// </summary>
+        /// <param name="order">Bookmark wrappers to modify.</param>
+        /// <param name="titleTemplate">Template to apply.</param>
+        /// <param name="logbook">Logging service.</param>
+        /// <returns>Renamed wrappers.</returns>
         public static IEnumerable<FileAndBookmarkWrapper> GetRenamed(
             IList<FileAndBookmarkWrapper> order,
             string titleTemplate,
@@ -142,6 +161,12 @@ namespace Opus.Services.Implementation.StaticHelpers
             return added;
         }
 
+        /// <summary>
+        /// Adjust all levels of bookmarks in a list.
+        /// </summary>
+        /// <param name="bookmarks">Bookmarks to adjust levels for.</param>
+        /// <param name="adjustment">Amount to adjust.</param>
+        /// <returns></returns>
         public static IList<ILeveledBookmark> AdjustLevels(
             IEnumerable<ILeveledBookmark> bookmarks,
             int adjustment
@@ -158,6 +183,13 @@ namespace Opus.Services.Implementation.StaticHelpers
             return adjusted;
         }
 
+        /// <summary>
+        /// Return an empty wrapper.
+        /// </summary>
+        /// <param name="title">Name of the wrapper.</param>
+        /// <param name="fileName">String to use as filename.</param>
+        /// <param name="index">Index in the sequence of bookmarks.</param>
+        /// <returns>Empty wrapper.</returns>
         public static FileAndBookmarkWrapper GetPlaceHolderBookmarkWrapper(
             string title,
             string fileName,

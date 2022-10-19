@@ -6,8 +6,15 @@ using Opus.Services.UI;
 
 namespace Opus.Modules.File
 {
+    /// <summary>
+    /// Module for file selection region and its views.
+    /// </summary>
     public class FileModule : IModule
     {
+        /// <summary>
+        /// Register correct views for right schemes.
+        /// </summary>
+        /// <param name="containerProvider">Container provider.</param>
         public void OnInitialized(IContainerProvider containerProvider)
         {
             var navigator = containerProvider.Resolve<INavigationAssist>();
@@ -24,6 +31,10 @@ namespace Opus.Modules.File
             );
         }
 
+        /// <summary>
+        /// No types to register here.
+        /// </summary>
+        /// <param name="containerRegistry"></param>
         public void RegisterTypes(IContainerRegistry containerRegistry) { }
     }
 }

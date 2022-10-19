@@ -3,7 +3,6 @@ using Prism.Events;
 using Prism.Commands;
 using System.Linq;
 using System.Collections.Generic;
-using System.IO;
 using System.Windows.Controls;
 using Opus.Core.Base;
 using CX.PdfLib.Services;
@@ -18,10 +17,8 @@ using Opus.Services.Input;
 using Opus.Events;
 using Opus.Services.UI;
 using Opus.Services.Implementation.UI.Dialogs;
-using Opus.Services.Extensions;
 using Opus.Core.Executors;
 using CX.LoggingLib;
-using CX.PdfLib.Extensions;
 using Opus.Services.Configuration;
 using Opus.Services.Implementation.Data.Extraction;
 using System;
@@ -99,14 +96,14 @@ namespace Opus.Modules.Action.ViewModels
         /// <summary>
         /// ViewModel for handling selection of extractable bookmarks in files.
         /// </summary>
-        /// <param name="eventAggregator"></param>
-        /// <param name="input"></param>
-        /// <param name="dialogAssist"></param>
-        /// <param name="navregistry"></param>
-        /// <param name="executor"></param>
-        /// <param name="bookmarkService"></param>
-        /// <param name="configuration"></param>
-        /// <param name="logbook"></param>
+        /// <param name="eventAggregator">Service for publishing and receiving events between viewModels.</param>
+        /// <param name="input">Service for getting a file or folderpath from a user.</param>
+        /// <param name="dialogAssist">Service for showing and otherwise handling dialogs.</param>
+        /// <param name="navregistry">Navigation registry for viewModels.</param>
+        /// <param name="executor">Service for performing bookmark extraction.</param>
+        /// <param name="bookmarkService">Service for retrieving and manipulating bookmarks.</param>
+        /// <param name="configuration">Program-wide configurations.</param>
+        /// <param name="logbook">Loggin service.</param>
         public ExtractionViewModel(
             IEventAggregator eventAggregator,
             IPathSelection input,
@@ -274,7 +271,7 @@ namespace Opus.Modules.Action.ViewModels
         /// Execution method for bookmark addition command, see <see cref="AddCommand"/>
         /// </summary>
         /// <returns></returns>
-        private async Task ExecuteAddCommand()
+        protected async Task ExecuteAddCommand()
         {
             // Create a dialog for user-provided options and show said dialog.
 
@@ -327,8 +324,8 @@ namespace Opus.Modules.Action.ViewModels
         /// <summary>
         /// Execution method for selection change command, see <see cref="SelectionCommand"/>
         /// </summary>
-        /// <param name="parameter"></param>
-        void ExecuteSelectionCommand(SelectionChangedEventArgs parameter)
+        /// <param name="parameter">Event arguments of changed selection.</param>
+        protected void ExecuteSelectionCommand(SelectionChangedEventArgs parameter)
         {
             if (parameter.AddedItems.Count > 0)
             {
@@ -365,7 +362,7 @@ namespace Opus.Modules.Action.ViewModels
         /// <summary>
         /// Execution method for file viewing command, see <see cref="ViewFileCommand"/>
         /// </summary>
-        void ExecuteViewFileCommand()
+        protected void ExecuteViewFileCommand()
         {
             if (SelectedFile != null)
             {
@@ -395,7 +392,7 @@ namespace Opus.Modules.Action.ViewModels
         /// <summary>
         /// Execution method for file deletion command, see <see cref="DeleteFileCommand"/>
         /// </summary>
-        void ExecuteDeleteFileCommand()
+        protected void ExecuteDeleteFileCommand()
         {
             if (SelectedFile != null)
             {
@@ -439,7 +436,7 @@ namespace Opus.Modules.Action.ViewModels
         /// </para>
         /// </summary>
         /// <param name="input">Info for the new bookmark</param>
-        private void BookmarkAdded(BookmarkInfo input)
+        protected void BookmarkAdded(BookmarkInfo input)
         {
             // Sort the bookmarks in order in a new list. Find the parent of the newly added bookmark,
             // if it has a parent.
@@ -512,7 +509,7 @@ namespace Opus.Modules.Action.ViewModels
         /// Select all children of a bookmark in a recursive manner.
         /// </summary>
         /// <param name="mark">Bookmark whose children should be selected</param>
-        private void SelectChildrenRecursively(FileAndBookmarkWrapper mark)
+        protected void SelectChildrenRecursively(FileAndBookmarkWrapper mark)
         {
             foreach (FileAndBookmarkWrapper child in mark.FindChildren(FileBookmarks))
             {
@@ -526,7 +523,7 @@ namespace Opus.Modules.Action.ViewModels
         /// </summary>
         /// <param name="mark">Bookmark whose children should be deselected</param>
         /// <param name="bookmarks">Bookmarks to look the children in</param>
-        private void DeSelectChildrenRecursively(
+        protected void DeSelectChildrenRecursively(
             FileAndBookmarkWrapper mark,
             ObservableCollection<FileAndBookmarkWrapper> bookmarks
         )
@@ -550,7 +547,7 @@ namespace Opus.Modules.Action.ViewModels
         /// </summary>
         /// <param name="mark">Bookmark whose parent should be deselected.</param>
         /// <param name="bookmarks">Bookmarks to look the parent in.</param>
-        private void DeSelectParent(
+        protected void DeSelectParent(
             FileAndBookmarkWrapper mark,
             ObservableCollection<FileAndBookmarkWrapper> bookmarks
         )
