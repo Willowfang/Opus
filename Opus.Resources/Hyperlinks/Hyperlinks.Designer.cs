@@ -70,7 +70,7 @@ namespace Opus.Resources.Hyperlinks {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://github.com/CodeX-fi/Opus.
+        ///   Looks up a localized string similar to https://github.com/Willowfang/Opus.
         /// </summary>
         public static string SourceCode {
             get {
@@ -79,7 +79,7 @@ namespace Opus.Resources.Hyperlinks {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://codex-fi.github.io/Opus/.
+        ///   Looks up a localized string similar to https://willowfang.github.io/Opus/.
         /// </summary>
         public static string UserManual {
             get {

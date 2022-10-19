@@ -5,10 +5,13 @@ using System.Windows.Input;
 namespace Opus.Styles.Controls
 {
     /// <summary>
-    /// Interaction logic for OrderList.xaml
+    /// List for reordering bookmarks.
     /// </summary>
     public partial class OrderList : UserControl
     {
+        /// <summary>
+        /// Create a new list.
+        /// </summary>
         public OrderList()
         {
             InitializeComponent();

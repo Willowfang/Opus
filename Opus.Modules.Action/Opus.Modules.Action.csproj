@@ -5,6 +5,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <AssemblyName>Opus.Modules.Actions</AssemblyName>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>C:\Users\jbjok\OneDrive\Desktop\Code\Signatures\opusKey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
@@ -16,13 +18,13 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="CodeX-LoggingLib">
-      <HintPath>..\..\CodeX\Libraries\LoggingLib\bin\Debug\net6.0\CodeX-LoggingLib.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\LoggingLib\bin\Debug\net6.0\CodeX-LoggingLib.dll</HintPath>
     </Reference>
     <Reference Include="CodeX-PdfLib">
-      <HintPath>..\..\CodeX\Libraries\PdfLib\bin\Debug\net6.0\CodeX-PdfLib.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\PdfLib\bin\Debug\net6.0\CodeX-PdfLib.dll</HintPath>
     </Reference>
     <Reference Include="CodeX-PdfLib-iText7">
-      <HintPath>..\..\CodeX\Libraries\PdfLib.iText7\bin\Debug\net6.0\CodeX-PdfLib-iText7.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\PdfLib.iText7\bin\Debug\net6.0\CodeX-PdfLib-iText7.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

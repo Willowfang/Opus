@@ -71,7 +71,7 @@ namespace Opus.Services.Implementation.UI.Dialogs
         /// </summary>
         /// <param name="dialogTitle">Title of the dialog.</param>
         /// <param name="cancellationSource">Source for cancellation.</param>
-        public ProgressDialog(string dialogTitle, CancellationTokenSource cancellationSource)
+        public ProgressDialog(string? dialogTitle, CancellationTokenSource cancellationSource)
             : base(dialogTitle)
         {
             this.cancellationSource = cancellationSource;

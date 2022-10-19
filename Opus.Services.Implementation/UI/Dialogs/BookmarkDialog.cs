@@ -50,9 +50,9 @@ namespace Opus.Services.Implementation.UI.Dialogs
         public BookmarkDialog(string dialogTitle) : base(dialogTitle) { }
 
         /// <summary>
-        /// Validation error, always return true.
+        /// Validation error, always return empty string.
         /// </summary>
-        public string? Error
+        public string Error
         {
             get => null;
         }

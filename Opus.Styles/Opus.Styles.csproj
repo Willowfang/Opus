@@ -3,11 +3,13 @@
   <PropertyGroup>
     <TargetFramework>net6.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>C:\Users\jbjok\OneDrive\Desktop\Code\Signatures\opusKey.snk</AssemblyOriginatorKeyFile>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Opus.Core\Opus.Core.csproj" />
-    <ProjectReference Include="..\Opus.Resources\Opus.Resources.csproj" />
   </ItemGroup>
 
   <ItemGroup>

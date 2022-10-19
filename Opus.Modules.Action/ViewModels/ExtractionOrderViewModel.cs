@@ -286,8 +286,8 @@ namespace Opus.Modules.Action.ViewModels
             // Insert an empty placeholder bookmark at the end of the collection
             Bookmarks.Add(
                 BookmarkMethods.GetPlaceHolderBookmarkWrapper(
-                    Resources.Labels.Dialogs.ExtractionOrder.ExternalFile,
-                    Resources.Labels.Dialogs.ExtractionOrder.ExternalFile,
+                    Resources.Labels.Dialogs.ExtractionOrder.ExternalFile.ToUpper(),
+                    Resources.Labels.Dialogs.ExtractionOrder.ExternalFile.ToUpper(),
                     Bookmarks.Count + 1
                 )
             );

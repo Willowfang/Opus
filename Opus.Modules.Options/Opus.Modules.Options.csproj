@@ -4,6 +4,8 @@
     <UseWPF>true</UseWPF>
     <AssemblyName>Opus.Modules.Options</AssemblyName>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>C:\Users\jbjok\OneDrive\Desktop\Code\Signatures\opusKey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
@@ -13,7 +15,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="CodeX-LoggingLib">
-      <HintPath>..\..\CodeX\Libraries\LoggingLib\bin\Debug\net6.0\CodeX-LoggingLib.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\LoggingLib\bin\Debug\net6.0\CodeX-LoggingLib.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

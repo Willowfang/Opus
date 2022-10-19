@@ -16,7 +16,7 @@ namespace Opus.Services.Implementation.UI
         /// <summary>
         /// Title of the dialog.
         /// </summary>
-        public string DialogTitle { get; protected set; }
+        public string? DialogTitle { get; protected set; }
 
         private bool isCanceled;
 
@@ -58,7 +58,7 @@ namespace Opus.Services.Implementation.UI
         /// Create a new base dialog instance.
         /// </summary>
         /// <param name="dialogTitle">Title for the dialog.</param>
-        public DialogBase(string dialogTitle)
+        public DialogBase(string? dialogTitle)
         {
             SaveCommand = new DelegateCommand(ExecuteSave, SaveCanExecute);
             CloseCommand = new DelegateCommand(ExecuteClose, CloseCanExecute);

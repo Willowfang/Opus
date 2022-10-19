@@ -7,8 +7,17 @@ namespace Opus.ExtensionMethods
     /// </summary>
     public enum Placeholders
     {
+        /// <summary>
+        /// Placeholder for bookmark name.
+        /// </summary>
         Bookmark,
+        /// <summary>
+        /// Placeholder for file name.
+        /// </summary>
         File,
+        /// <summary>
+        /// Placeholder for automated numbering.
+        /// </summary>
         Number
     }
 
