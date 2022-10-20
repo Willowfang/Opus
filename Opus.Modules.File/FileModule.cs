@@ -21,12 +21,12 @@ namespace Opus.Modules.File
 
             navigator.Add<FileMultipleView>(RegionNames.MAINSECTION_FOUR_FILE, SchemeNames.EXTRACT);
             navigator.Add<FileMultipleView>(
-                RegionNames.MAINSECTION_THREE_FILE,
+                RegionNames.MAINSECTION_FOUR_FILE,
                 SchemeNames.WORKCOPY
             );
-            navigator.Add<FileMultipleView>(RegionNames.MAINSECTION_THREE_FILE, SchemeNames.MERGE);
+            navigator.Add<FileMultipleView>(RegionNames.MAINSECTION_FOUR_FILE, SchemeNames.MERGE);
             navigator.Add<DirectoryNavigationView>(
-                RegionNames.MAINSECTION_THREE_FILE,
+                RegionNames.MAINSECTION_FOUR_FILE,
                 SchemeNames.COMPOSE
             );
         }

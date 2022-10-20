@@ -15,6 +15,8 @@ using System.Windows;
 using CX.LoggingLib;
 using Opus.Core.Wrappers;
 using System.Collections.ObjectModel;
+using System.Resources;
+using System.Collections;
 
 namespace Opus.ViewModels
 {

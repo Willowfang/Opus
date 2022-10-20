@@ -27,12 +27,19 @@ namespace Opus.Modules.Action
                 RegionNames.MAINSECTION_FOUR_SUPPORT,
                 SchemeNames.EXTRACT
             );
-            navigator.Add<WorkCopyView>(RegionNames.MAINSECTION_THREE_ACTION, SchemeNames.WORKCOPY);
-            navigator.Add<MergeView>(RegionNames.MAINSECTION_THREE_ACTION, SchemeNames.MERGE);
+            navigator.Add<WorkCopyView>(RegionNames.MAINSECTION_FOUR_ACTION, SchemeNames.WORKCOPY);
+
+            navigator.Add<MergeView>(RegionNames.MAINSECTION_FOUR_ACTION, SchemeNames.MERGE);
+
             navigator.Add<CompositionView>(
-                RegionNames.MAINSECTION_THREE_ACTION,
+                RegionNames.MAINSECTION_FOUR_ACTION,
                 SchemeNames.COMPOSE
             );
+
+            navigator.Add<InstructionsView>(RegionNames.MAINSECTION_FOUR_SUPPORT,
+                SchemeNames.WORKCOPY,
+                SchemeNames.MERGE,
+                SchemeNames.COMPOSE);
         }
 
         /// <summary>

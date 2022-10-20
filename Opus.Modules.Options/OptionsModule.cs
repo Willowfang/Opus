@@ -24,15 +24,15 @@ namespace Opus.Modules.Options
                 SchemeNames.EXTRACT
             );
             navigation.Add<WorkCopyOptionsView>(
-                RegionNames.MAINSECTION_THREE_OPTIONS,
+                RegionNames.MAINSECTION_FOUR_OPTIONS,
                 SchemeNames.WORKCOPY
             );
             navigation.Add<MergeOptionsView>(
-                RegionNames.MAINSECTION_THREE_OPTIONS,
+                RegionNames.MAINSECTION_FOUR_OPTIONS,
                 SchemeNames.MERGE
             );
             navigation.Add<ComposeOptionsView>(
-                RegionNames.MAINSECTION_THREE_OPTIONS,
+                RegionNames.MAINSECTION_FOUR_OPTIONS,
                 SchemeNames.COMPOSE
             );
         }

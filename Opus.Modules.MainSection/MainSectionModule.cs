@@ -19,13 +19,12 @@ namespace Opus.Modules.MainSection
         {
             var navigator = containerProvider.Resolve<INavigationAssist>();
 
-            navigator.Add<FourRegionsView>(RegionNames.SHELL_MAINSECTION, SchemeNames.EXTRACT);
-            navigator.Add<ThreeRegionsView>(
-                RegionNames.SHELL_MAINSECTION,
+            navigator.Add<FourRegionsView>(
+                RegionNames.SHELL_MAINSECTION, 
+                SchemeNames.EXTRACT,
                 SchemeNames.WORKCOPY,
                 SchemeNames.MERGE,
-                SchemeNames.COMPOSE
-            );
+                SchemeNames.COMPOSE);
         }
 
         /// <summary>

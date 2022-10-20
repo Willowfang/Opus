@@ -52,6 +52,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Hyperlinks.resx</DependentUpon>
     </Compile>
+    <Compile Update="Instructions\Compose.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Compose.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Instructions\Merge.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Merge.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Instructions\WorkCopy.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>WorkCopy.resx</DependentUpon>
+    </Compile>
     <Compile Update="Labels\Composition\Descriptions.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -290,6 +305,18 @@
     <EmbeddedResource Update="Hyperlinks\Hyperlinks.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Hyperlinks.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Instructions\Compose.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Compose.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Instructions\Merge.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Merge.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Instructions\WorkCopy.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WorkCopy.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Labels\Composition\Descriptions.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

@@ -185,6 +185,7 @@ namespace Opus
             );
             containerRegistry.Register<IPathSelection, PathSelectionWin>();
             containerRegistry.RegisterSingleton<IDialogAssist, DialogAssist>();
+            containerRegistry.RegisterSingleton<ISchemeInstructions, SchemeInstructions>();
 
             // Data services. This service saves data to a database. In this case, a NoSQL-database
             // called LiteDB. Database is currently basically only used to store file composition

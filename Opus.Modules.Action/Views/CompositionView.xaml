@@ -18,6 +18,10 @@
                    BasedOn="{StaticResource MaterialDesignIconButton}">
                 <Setter Property="Margin" Value="5, 16, 5, 0"/>
             </Style>
+            <Style TargetType="MenuItem" x:Key="ProfilePopupMenuItem"
+                   BasedOn="{StaticResource MaterialDesignMenuItem}">
+                <Setter Property="Foreground" Value="{DynamicResource SecondaryHueLightBrush}"/>
+            </Style>
             <CollectionViewSource x:Key="ProfileSource"
                                   Source="{Binding Profiles}">
                 <CollectionViewSource.SortDescriptions>
@@ -36,7 +40,9 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0"
+              HorizontalAlignment="Center"
+              Width="{Binding ElementName=SegmentsList, Path=ActualWidth}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -51,36 +57,43 @@
                         Margin="0">
                     <materialDesign:PopupBox PlacementMode="TopAndAlignCentres" StaysOpen="False"
                                              IsPopupOpen="{Binding AddProfileMenuOpen}"
-                                             ToolTip="{x:Static resToolTips:Buttons.ProfilePopup}">
+                                             ToolTip="{x:Static resToolTips:Buttons.ProfilePopup}"
+                                             Padding="0">
                         <materialDesign:PopupBox.ToggleContent>
                             <materialDesign:PackIcon Kind="NotePlus" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                         </materialDesign:PopupBox.ToggleContent>
-                        <StackPanel>
-                            <Button Style="{StaticResource DialogButton}"
-                                    Content="{x:Static resButtons:Menus.NewProfile}" Command="{Binding AddProfileCommand}"/>
-                            <Button Style="{StaticResource DialogButton}"
-                                    Content="{x:Static resButtons:Menus.CopyProfile}" Command="{Binding CopyProfileCommand}"/>
-                            <Button Style="{StaticResource DialogButton}"
-                                    Content="{x:Static resButtons:Menus.ImportProfile}" Command="{Binding ImportProfileCommand}"/>
-                            <Button Style="{StaticResource DialogButton}"
-                                    Content="{x:Static resButtons:Menus.ExportProfile}" Command="{Binding ExportProfileCommand}"/>
-                        </StackPanel>
+                        <Menu Background="#FF0F1316">
+                            <Menu.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel Orientation="Vertical"/>
+                                </ItemsPanelTemplate>
+                            </Menu.ItemsPanel>
+                            <MenuItem Header="{x:Static resButtons:Menus.NewProfile}"
+                                      Command="{Binding AddProfileCommand}"
+                                      Style="{StaticResource ProfilePopupMenuItem}"/>
+                            <MenuItem Header="{x:Static resButtons:Menus.CopyProfile}"
+                                      Command="{Binding CopyProfileCommand}"
+                                      Style="{StaticResource ProfilePopupMenuItem}"/>
+                            <MenuItem Header="{x:Static resButtons:Menus.ImportProfile}"
+                                      Command="{Binding ImportProfileCommand}"
+                                      Style="{StaticResource ProfilePopupMenuItem}"/>
+                            <MenuItem Header="{x:Static resButtons:Menus.ExportProfile}"
+                                      Command="{Binding ExportProfileCommand}"
+                                      Style="{StaticResource ProfilePopupMenuItem}"/>
+                        </Menu>
                     </materialDesign:PopupBox>
                 </Button>
             </StackPanel>
-            <Rectangle Grid.Column="1" Width="2" Fill="LightGray" Opacity="0.5" Margin="5" RadiusX="2" RadiusY="2"/>
             <ComboBox Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
                       Grid.Column="2"
                       materialDesign:HintAssist.Hint="{x:Static resLabels:General.Profile}"
                       materialDesign:HintAssist.FloatingOffset="0, -22"
                       materialDesign:HintAssist.FloatingScale="0.9"
-                      Width="200"
                       FontSize="16"
-                      Margin="0, 12, 0, 0"
+                      Margin="8, 0, 8, 10"
                       materialDesign:ComboBoxAssist.ShowSelectedItem="True"
                       SelectedItem="{Binding SelectedProfile, Mode=TwoWay}"
                       ItemsSource="{Binding Source={StaticResource ProfileSource}}"
-                      HorizontalAlignment="Center"
                       VerticalAlignment="Center"
                       VerticalContentAlignment="Bottom"
                       HorizontalContentAlignment="Left">
@@ -92,7 +105,6 @@
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
-            <Rectangle Grid.Column="3" Width="2" Fill="LightGray" Opacity="0.5" Margin="5" RadiusX="2" RadiusY="2"/>
             <StackPanel Orientation="Horizontal" Grid.Column="4">
                 <Button Style="{StaticResource ToolButton}"
                         Command="{Binding EditProfileCommand}"
