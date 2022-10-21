@@ -84,8 +84,9 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+    <div><span class="xref">ILeveledItem</span></div>
     <div><a class="xref" href="Opus.Services.Base.IIndexed.html">IIndexed</a></div>
-    <div><span class="xref">CX.PdfLib.Services.Data.ILeveledItem</span></div>
+    <div><span class="xref">ILeveledItem</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -124,19 +125,19 @@
   <h6><strong>Assembly</strong>: Opus.Services.Implementation.dll</h6>
   <h5 id="Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FileAndBookmarkWrapper : BindableBase, INotifyPropertyChanged, IIndexed, ILeveledItem</code></pre>
+    <pre><code class="lang-csharp hljs">public class FileAndBookmarkWrapper : BindableBase, INotifyPropertyChanged, IIndexed</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper__ctor_CX_PdfLib_Services_Data_ILeveledBookmark_System_String_System_Int32_System_Guid_.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.%23ctor(CX.PdfLib.Services.Data.ILeveledBookmark%2CSystem.String%2CSystem.Int32%2CSystem.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper__ctor_ILeveledBookmark_System_String_System_Int32_System_Guid_.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.%23ctor(ILeveledBookmark%2CSystem.String%2CSystem.Int32%2CSystem.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Data/Extraction/FileAndBookmarkWrapper.cs/#L81">View Source</a>
   </span>
   <a id="Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper__ctor_" data-uid="Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.#ctor*"></a>
-  <h4 id="Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper__ctor_CX_PdfLib_Services_Data_ILeveledBookmark_System_String_System_Int32_System_Guid_" data-uid="Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.#ctor(CX.PdfLib.Services.Data.ILeveledBookmark,System.String,System.Int32,System.Guid)">FileAndBookmarkWrapper(ILeveledBookmark, String, Int32, Guid)</h4>
+  <h4 id="Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper__ctor_ILeveledBookmark_System_String_System_Int32_System_Guid_" data-uid="Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.#ctor(ILeveledBookmark,System.String,System.Int32,System.Guid)">FileAndBookmarkWrapper(ILeveledBookmark, String, Int32, Guid)</h4>
   <div class="markdown level1 summary"><p>Create a new wrapper.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -155,7 +156,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">CX.PdfLib.Services.Data.ILeveledBookmark</span></td>
+        <td><span class="xref">ILeveledBookmark</span></td>
         <td><span class="parametername">bookmark</span></td>
         <td><p>Bookmark to include in this wrapper.</p>
 </td>
@@ -208,7 +209,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">CX.PdfLib.Services.Data.ILeveledBookmark</span></td>
+        <td><span class="xref">ILeveledBookmark</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -894,10 +895,13 @@
       <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
   </div>
   <div>
+      <span class="xref">ILeveledItem</span>
+  </div>
+  <div>
       <a class="xref" href="Opus.Services.Base.IIndexed.html">IIndexed</a>
   </div>
   <div>
-      <span class="xref">CX.PdfLib.Services.Data.ILeveledItem</span>
+      <span class="xref">ILeveledItem</span>
   </div>
 </article>
           </div>
@@ -907,10 +911,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Parannusehdotus</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Data/Extraction/FileAndBookmarkWrapper.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Data/Extraction/FileAndBookmarkWrapper.cs/#L14" class="contribution-link">Näytä lähdekoodi</a>
                   </li>
                 </ul>
               </div>
@@ -928,9 +932,9 @@
               </div>
           
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5>In This Article</h5>
+              <h5>Tässä osiossa</h5>
               <div></div>
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              <!-- <p><a class="back-to-top" href="#top">Takaisin ylös</a><p> -->
               </nav>
             </div>
           </div>
@@ -942,11 +946,11 @@
         <div class="footer">
           <div class="container">
             <span class="pull-right">
-              <a href="#top">Back to top</a>
+              <a href="#top">Takaisin ylös</a>
             </span>
             <div class="pull-left">
               
-              <span>Generated by <strong>DocFX</strong></span>
+              <span><strong>Opus</strong>: ohjeet</span>
             </div>
             <div class="toggle-mode pull-right visible-sm visible-xs">
               <div class="icon">

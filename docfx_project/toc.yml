@@ -1,5 +1,5 @@
 - name: Käyttöohje
   href: articles/
-- name: Tekninen käyttöohje
+- name: Tekninen dokumentaatio
   href: api/
   homepage: api/index.md

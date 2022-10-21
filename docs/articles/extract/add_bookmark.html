@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Kirjanmerkin lis&#228;&#228;minen | Opus Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Kirjanmerkin lis&#228;&#228;minen | Opus Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo38pt.png" alt="Opus Docs">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="kirjanmerkin-lisääminen">Kirjanmerkin lisääminen</h1>
+
+<hr>
+<h2 id="uuden-kirjanmerkin-painike">Uuden kirjanmerkin painike</h2>
+<details>
+    <summary>Uuden kirjanmerkin lisääminen</summary>
+<p><img src="../../images/extract_add_bookmark_button.png" alt="Uuden kirjanmerkin lisäämisen painike"></p>
+</details>
+<p>Uuden kirjanmerkin saat lisättyä asiakirjaan klikkaamalla kirjanmerkkilistauksen alapuolella olevaa +-painiketta.</p>
+<h2 id="uuden-kirjanmerkin-valinnat">Uuden kirjanmerkin valinnat</h2>
+<details>
+    <summary>Kirjanmerkin valinnat</summary>
+<p><img src="../../images/extract_add_bookmark_dialog.png" alt="Uuden kirjanmerkin lisäämisen ikkuna"></p>
+</details>
+<p>Uuden kirjanmerkin tiedot saat syötettyä avautuvaan ikkunaan. Kaikki kentät ovat pakollisia ja niiden sisältö on seuraava:</p>
+<h3 id="1-kirjanmerkin-nimi">1. Kirjanmerkin nimi</h3>
+<p>Tämä on nimi, joka näytetään kirjanmerkkilistauksessa ja joka lisätään eroteltaessa tiedoston (tai kirjanmerkin) nimeen, mikäli <a href="settings.html#1-nimen-rakenne">paikanvaraaja</a> [kirjanmerkki] on nimen mallissa käytössä.</p>
+<p>Kirjanmerkille on annettava jokin nimi - kenttä ei voi olla tyhjä.</p>
+<h3 id="2-alku">2. Alku</h3>
+<p>Tämä on kirjanmerkin aloitussivu. Aloitussivu on myös se sivu, jolla kirjanmerkki sijaitsee.</p>
+<p>Tämän arvon on oltava yli 0, eikä se saa olla suurempi, kuin loppusivu.</p>
+<h3 id="3-loppu">3. Loppu</h3>
+<p>Tämä on kirjanmerkin loppusivu, eli sen kattaman alueen viimeinen sivu. Pdf-tiedoston kirjanmerkkipuussa esiintyvä kirjanmerkki kattaa aina alueen, joka alkaa kyseisen kirjanmerkin alkusivusta ja päättyy seuraavan kirjanmerkin alkusivulle. Tässä syötettävä kirjanmerkki voi kuitenkin kattaa myös lyhyemmän tai pidemmän alueen.</p>
+<p><em>Esimerkki</em></p>
+<p>Asiakirjassa on kaksi kirjanmerkkiä ja ensimmäisen kirjanmerkin alle lisätään uusi kirjanmerkki seuraavasti:</p>
+<pre><code>Kirjanmerkki 1 (s. 1-10)
+   Kirjanmerkki 2 (s. 5-7) &lt;- Uusi kirjanmerkki
+Kirjanmerkki 3 (s. 11-15)
+</code></pre>
+<p>Avattaessa kyseinen tiedosto pdf-editorilla ja eroteltaessa sieltä kirjanmerkin 2 mukainen sivualue, tuloksena olisi tiedosto, joka sisältäisi sivut 5-10. Pdf-tiedostoon sisältyvät kirjanmerkit eivät sisällä tietoa niiden loppusivusta, vaan sen oletetaan aina olevan seuraavan kirjanmerkin alkusivua edeltävä sivu.</p>
+<p>Lisättäessä kirjanmerkki Opuksella ja eroteltaessa se sitä kautta, voidaan sivualue siis kuitenkin määrittää edeltävässä esimerkissä lyhyemmäksi. Opus tuottaisi tiedoston, joka sisältäisi vain sivut 5-7.</p>
+<p>Loppusivun arvon on oltava yli 0, eikä se saa olla pienempi, kuin alkusivu.</p>
+<h2 id="tallentaminen">Tallentaminen</h2>
+<p>Uuden kirjanmerkin saa tallennettua painamalla Tallenna-painiketta. Kirjanmerkki lisätään automaattisesti <a href="selected_bookmarks.html">valittujen kirjanmerkkien luetteloon</a>, josta sen voi halutessaan myös <a href="modifying_selected_bookmarks.html#kirjanmerkin-poistaminen">poistaa</a>.</p>
+<p>Kirjanmerkkiä ei lisätä alkuperäiseen tiedostoon, vaan sitä käytetään ainoastaan tässä yhteydessä.</p>
+<hr>
+<blockquote>
+<p>&quot;When life gives you lemons, don't make lemonade. Make life take the lemons back! Get mad! I don't want your damn lemons! What am I supposed to do with these?! Demand to see life's manager! Make life rue the day it thought it could give Cave Johnson lemons! Do you know who I am?! I'm the man who's gonna burn your house down! With the lemons! I'm gonna get my engineers to invent a combustible lemon that burns your house down!&quot; - Cave Johnson</p>
+</blockquote>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/docfx_project/articles/extract/add_bookmark.md/#L1" class="contribution-link">Parannusehdotus</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>Tässä osiossa</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Takaisin ylös</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Takaisin ylös</a>
+            </span>
+            <div class="pull-left">
+              
+              <span><strong>Opus</strong>: ohjeet</span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

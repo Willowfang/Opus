@@ -184,12 +184,12 @@ references:
   fullName.vb: Opus.Core.Base.OptionsViewModelBase(Of DialogType)
   nameWithType: OptionsViewModelBase<DialogType>
   nameWithType.vb: OptionsViewModelBase(Of DialogType)
-- uid: Opus.Core.Base.OptionsViewModelBase`1.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Configuration.IConfiguration,CX.LoggingLib.ILogbook)
+- uid: Opus.Core.Base.OptionsViewModelBase`1.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Configuration.IConfiguration,ILogbook)
   name: OptionsViewModelBase(IDialogAssist, IConfiguration, ILogbook)
-  href: api/Opus.Core.Base.OptionsViewModelBase-1.html#Opus_Core_Base_OptionsViewModelBase_1__ctor_Opus_Services_UI_IDialogAssist_Opus_Services_Configuration_IConfiguration_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Core.Base.OptionsViewModelBase`1.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Configuration.IConfiguration,CX.LoggingLib.ILogbook)
-  fullName: Opus.Core.Base.OptionsViewModelBase<DialogType>.OptionsViewModelBase(Opus.Services.UI.IDialogAssist, Opus.Services.Configuration.IConfiguration, CX.LoggingLib.ILogbook)
-  fullName.vb: Opus.Core.Base.OptionsViewModelBase(Of DialogType).OptionsViewModelBase(Opus.Services.UI.IDialogAssist, Opus.Services.Configuration.IConfiguration, CX.LoggingLib.ILogbook)
+  href: api/Opus.Core.Base.OptionsViewModelBase-1.html#Opus_Core_Base_OptionsViewModelBase_1__ctor_Opus_Services_UI_IDialogAssist_Opus_Services_Configuration_IConfiguration_ILogbook_
+  commentId: M:Opus.Core.Base.OptionsViewModelBase`1.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Configuration.IConfiguration,ILogbook)
+  fullName: Opus.Core.Base.OptionsViewModelBase<DialogType>.OptionsViewModelBase(Opus.Services.UI.IDialogAssist, Opus.Services.Configuration.IConfiguration, ILogbook)
+  fullName.vb: Opus.Core.Base.OptionsViewModelBase(Of DialogType).OptionsViewModelBase(Opus.Services.UI.IDialogAssist, Opus.Services.Configuration.IConfiguration, ILogbook)
   nameWithType: OptionsViewModelBase<DialogType>.OptionsViewModelBase(IDialogAssist, IConfiguration, ILogbook)
   nameWithType.vb: OptionsViewModelBase(Of DialogType).OptionsViewModelBase(IDialogAssist, IConfiguration, ILogbook)
 - uid: Opus.Core.Base.OptionsViewModelBase`1.#ctor*
@@ -339,12 +339,12 @@ references:
   fullName.vb: Opus.Core.Base.ViewModelBaseLogging(Of ViewModelType)
   nameWithType: ViewModelBaseLogging<ViewModelType>
   nameWithType.vb: ViewModelBaseLogging(Of ViewModelType)
-- uid: Opus.Core.Base.ViewModelBaseLogging`1.#ctor(CX.LoggingLib.ILogbook)
+- uid: Opus.Core.Base.ViewModelBaseLogging`1.#ctor(ILogbook)
   name: ViewModelBaseLogging(ILogbook)
-  href: api/Opus.Core.Base.ViewModelBaseLogging-1.html#Opus_Core_Base_ViewModelBaseLogging_1__ctor_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Core.Base.ViewModelBaseLogging`1.#ctor(CX.LoggingLib.ILogbook)
-  fullName: Opus.Core.Base.ViewModelBaseLogging<ViewModelType>.ViewModelBaseLogging(CX.LoggingLib.ILogbook)
-  fullName.vb: Opus.Core.Base.ViewModelBaseLogging(Of ViewModelType).ViewModelBaseLogging(CX.LoggingLib.ILogbook)
+  href: api/Opus.Core.Base.ViewModelBaseLogging-1.html#Opus_Core_Base_ViewModelBaseLogging_1__ctor_ILogbook_
+  commentId: M:Opus.Core.Base.ViewModelBaseLogging`1.#ctor(ILogbook)
+  fullName: Opus.Core.Base.ViewModelBaseLogging<ViewModelType>.ViewModelBaseLogging(ILogbook)
+  fullName.vb: Opus.Core.Base.ViewModelBaseLogging(Of ViewModelType).ViewModelBaseLogging(ILogbook)
   nameWithType: ViewModelBaseLogging<ViewModelType>.ViewModelBaseLogging(ILogbook)
   nameWithType.vb: ViewModelBaseLogging(Of ViewModelType).ViewModelBaseLogging(ILogbook)
 - uid: Opus.Core.Base.ViewModelBaseLogging`1.#ctor*
@@ -419,11 +419,11 @@ references:
   commentId: T:Opus.Core.Executors.ContextMenuExecutor
   fullName: Opus.Core.Executors.ContextMenuExecutor
   nameWithType: ContextMenuExecutor
-- uid: Opus.Core.Executors.ContextMenuExecutor.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Configuration.IConfiguration,Opus.Services.Input.IPathSelection,Opus.Services.Data.IComposer,Opus.Services.Data.Composition.ICompositionOptions,Opus.Core.Executors.IExtractionExecutor,CX.PdfLib.Services.IPdfAConvertService,Opus.Core.Executors.ISignatureExecutor,CX.PdfLib.Services.IBookmarkService,CX.PdfLib.Services.IAnnotationService,CX.LoggingLib.ILogbook)
+- uid: Opus.Core.Executors.ContextMenuExecutor.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Configuration.IConfiguration,Opus.Services.Input.IPathSelection,Opus.Services.Data.IComposer,Opus.Services.Data.Composition.ICompositionOptions,Opus.Core.Executors.IExtractionExecutor,IPdfAConvertService,Opus.Core.Executors.ISignatureExecutor,IBookmarkService,IAnnotationService,ILogbook)
   name: ContextMenuExecutor(IDialogAssist, IConfiguration, IPathSelection, IComposer, ICompositionOptions, IExtractionExecutor, IPdfAConvertService, ISignatureExecutor, IBookmarkService, IAnnotationService, ILogbook)
-  href: api/Opus.Core.Executors.ContextMenuExecutor.html#Opus_Core_Executors_ContextMenuExecutor__ctor_Opus_Services_UI_IDialogAssist_Opus_Services_Configuration_IConfiguration_Opus_Services_Input_IPathSelection_Opus_Services_Data_IComposer_Opus_Services_Data_Composition_ICompositionOptions_Opus_Core_Executors_IExtractionExecutor_CX_PdfLib_Services_IPdfAConvertService_Opus_Core_Executors_ISignatureExecutor_CX_PdfLib_Services_IBookmarkService_CX_PdfLib_Services_IAnnotationService_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Core.Executors.ContextMenuExecutor.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Configuration.IConfiguration,Opus.Services.Input.IPathSelection,Opus.Services.Data.IComposer,Opus.Services.Data.Composition.ICompositionOptions,Opus.Core.Executors.IExtractionExecutor,CX.PdfLib.Services.IPdfAConvertService,Opus.Core.Executors.ISignatureExecutor,CX.PdfLib.Services.IBookmarkService,CX.PdfLib.Services.IAnnotationService,CX.LoggingLib.ILogbook)
-  fullName: Opus.Core.Executors.ContextMenuExecutor.ContextMenuExecutor(Opus.Services.UI.IDialogAssist, Opus.Services.Configuration.IConfiguration, Opus.Services.Input.IPathSelection, Opus.Services.Data.IComposer, Opus.Services.Data.Composition.ICompositionOptions, Opus.Core.Executors.IExtractionExecutor, CX.PdfLib.Services.IPdfAConvertService, Opus.Core.Executors.ISignatureExecutor, CX.PdfLib.Services.IBookmarkService, CX.PdfLib.Services.IAnnotationService, CX.LoggingLib.ILogbook)
+  href: api/Opus.Core.Executors.ContextMenuExecutor.html#Opus_Core_Executors_ContextMenuExecutor__ctor_Opus_Services_UI_IDialogAssist_Opus_Services_Configuration_IConfiguration_Opus_Services_Input_IPathSelection_Opus_Services_Data_IComposer_Opus_Services_Data_Composition_ICompositionOptions_Opus_Core_Executors_IExtractionExecutor_IPdfAConvertService_Opus_Core_Executors_ISignatureExecutor_IBookmarkService_IAnnotationService_ILogbook_
+  commentId: M:Opus.Core.Executors.ContextMenuExecutor.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Configuration.IConfiguration,Opus.Services.Input.IPathSelection,Opus.Services.Data.IComposer,Opus.Services.Data.Composition.ICompositionOptions,Opus.Core.Executors.IExtractionExecutor,IPdfAConvertService,Opus.Core.Executors.ISignatureExecutor,IBookmarkService,IAnnotationService,ILogbook)
+  fullName: Opus.Core.Executors.ContextMenuExecutor.ContextMenuExecutor(Opus.Services.UI.IDialogAssist, Opus.Services.Configuration.IConfiguration, Opus.Services.Input.IPathSelection, Opus.Services.Data.IComposer, Opus.Services.Data.Composition.ICompositionOptions, Opus.Core.Executors.IExtractionExecutor, IPdfAConvertService, Opus.Core.Executors.ISignatureExecutor, IBookmarkService, IAnnotationService, ILogbook)
   nameWithType: ContextMenuExecutor.ContextMenuExecutor(IDialogAssist, IConfiguration, IPathSelection, IComposer, ICompositionOptions, IExtractionExecutor, IPdfAConvertService, ISignatureExecutor, IBookmarkService, IAnnotationService, ILogbook)
 - uid: Opus.Core.Executors.ContextMenuExecutor.#ctor*
   name: ContextMenuExecutor
@@ -518,11 +518,11 @@ references:
   commentId: T:Opus.Core.Executors.ExtractionExecutor
   fullName: Opus.Core.Executors.ExtractionExecutor
   nameWithType: ExtractionExecutor
-- uid: Opus.Core.Executors.ExtractionExecutor.#ctor(Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,CX.PdfLib.Services.IExtractionService,CX.PdfLib.Services.IAnnotationService,CX.ZipLib.IZipService,CX.LoggingLib.ILogbook)
+- uid: Opus.Core.Executors.ExtractionExecutor.#ctor(Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,IExtractionService,IAnnotationService,IZipService,ILogbook)
   name: ExtractionExecutor(IConfiguration, IDialogAssist, IExtractionService, IAnnotationService, IZipService, ILogbook)
-  href: api/Opus.Core.Executors.ExtractionExecutor.html#Opus_Core_Executors_ExtractionExecutor__ctor_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_IDialogAssist_CX_PdfLib_Services_IExtractionService_CX_PdfLib_Services_IAnnotationService_CX_ZipLib_IZipService_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Core.Executors.ExtractionExecutor.#ctor(Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,CX.PdfLib.Services.IExtractionService,CX.PdfLib.Services.IAnnotationService,CX.ZipLib.IZipService,CX.LoggingLib.ILogbook)
-  fullName: Opus.Core.Executors.ExtractionExecutor.ExtractionExecutor(Opus.Services.Configuration.IConfiguration, Opus.Services.UI.IDialogAssist, CX.PdfLib.Services.IExtractionService, CX.PdfLib.Services.IAnnotationService, CX.ZipLib.IZipService, CX.LoggingLib.ILogbook)
+  href: api/Opus.Core.Executors.ExtractionExecutor.html#Opus_Core_Executors_ExtractionExecutor__ctor_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_IDialogAssist_IExtractionService_IAnnotationService_IZipService_ILogbook_
+  commentId: M:Opus.Core.Executors.ExtractionExecutor.#ctor(Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,IExtractionService,IAnnotationService,IZipService,ILogbook)
+  fullName: Opus.Core.Executors.ExtractionExecutor.ExtractionExecutor(Opus.Services.Configuration.IConfiguration, Opus.Services.UI.IDialogAssist, IExtractionService, IAnnotationService, IZipService, ILogbook)
   nameWithType: ExtractionExecutor.ExtractionExecutor(IConfiguration, IDialogAssist, IExtractionService, IAnnotationService, IZipService, ILogbook)
 - uid: Opus.Core.Executors.ExtractionExecutor.#ctor*
   name: ExtractionExecutor
@@ -661,11 +661,11 @@ references:
   commentId: T:Opus.Core.Executors.SignatureExecutor
   fullName: Opus.Core.Executors.SignatureExecutor
   nameWithType: SignatureExecutor
-- uid: Opus.Core.Executors.SignatureExecutor.#ctor(Opus.Services.Configuration.IConfiguration,CX.PdfLib.Services.ISigningService,Opus.Services.UI.IDialogAssist,CX.LoggingLib.ILogbook)
+- uid: Opus.Core.Executors.SignatureExecutor.#ctor(Opus.Services.Configuration.IConfiguration,ISigningService,Opus.Services.UI.IDialogAssist,ILogbook)
   name: SignatureExecutor(IConfiguration, ISigningService, IDialogAssist, ILogbook)
-  href: api/Opus.Core.Executors.SignatureExecutor.html#Opus_Core_Executors_SignatureExecutor__ctor_Opus_Services_Configuration_IConfiguration_CX_PdfLib_Services_ISigningService_Opus_Services_UI_IDialogAssist_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Core.Executors.SignatureExecutor.#ctor(Opus.Services.Configuration.IConfiguration,CX.PdfLib.Services.ISigningService,Opus.Services.UI.IDialogAssist,CX.LoggingLib.ILogbook)
-  fullName: Opus.Core.Executors.SignatureExecutor.SignatureExecutor(Opus.Services.Configuration.IConfiguration, CX.PdfLib.Services.ISigningService, Opus.Services.UI.IDialogAssist, CX.LoggingLib.ILogbook)
+  href: api/Opus.Core.Executors.SignatureExecutor.html#Opus_Core_Executors_SignatureExecutor__ctor_Opus_Services_Configuration_IConfiguration_ISigningService_Opus_Services_UI_IDialogAssist_ILogbook_
+  commentId: M:Opus.Core.Executors.SignatureExecutor.#ctor(Opus.Services.Configuration.IConfiguration,ISigningService,Opus.Services.UI.IDialogAssist,ILogbook)
+  fullName: Opus.Core.Executors.SignatureExecutor.SignatureExecutor(Opus.Services.Configuration.IConfiguration, ISigningService, Opus.Services.UI.IDialogAssist, ILogbook)
   nameWithType: SignatureExecutor.SignatureExecutor(IConfiguration, ISigningService, IDialogAssist, ILogbook)
 - uid: Opus.Core.Executors.SignatureExecutor.#ctor*
   name: SignatureExecutor
@@ -792,11 +792,11 @@ references:
   commentId: T:Opus.Core.Wrappers.BookmarkStorage
   fullName: Opus.Core.Wrappers.BookmarkStorage
   nameWithType: BookmarkStorage
-- uid: Opus.Core.Wrappers.BookmarkStorage.#ctor(CX.PdfLib.Services.Data.ILeveledBookmark)
+- uid: Opus.Core.Wrappers.BookmarkStorage.#ctor(ILeveledBookmark)
   name: BookmarkStorage(ILeveledBookmark)
-  href: api/Opus.Core.Wrappers.BookmarkStorage.html#Opus_Core_Wrappers_BookmarkStorage__ctor_CX_PdfLib_Services_Data_ILeveledBookmark_
-  commentId: M:Opus.Core.Wrappers.BookmarkStorage.#ctor(CX.PdfLib.Services.Data.ILeveledBookmark)
-  fullName: Opus.Core.Wrappers.BookmarkStorage.BookmarkStorage(CX.PdfLib.Services.Data.ILeveledBookmark)
+  href: api/Opus.Core.Wrappers.BookmarkStorage.html#Opus_Core_Wrappers_BookmarkStorage__ctor_ILeveledBookmark_
+  commentId: M:Opus.Core.Wrappers.BookmarkStorage.#ctor(ILeveledBookmark)
+  fullName: Opus.Core.Wrappers.BookmarkStorage.BookmarkStorage(ILeveledBookmark)
   nameWithType: BookmarkStorage.BookmarkStorage(ILeveledBookmark)
 - uid: Opus.Core.Wrappers.BookmarkStorage.#ctor*
   name: BookmarkStorage
@@ -1345,11 +1345,11 @@ references:
   commentId: T:Opus.Modules.Action.ViewModels.CompositionViewModel
   fullName: Opus.Modules.Action.ViewModels.CompositionViewModel
   nameWithType: CompositionViewModel
-- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Input.IPathSelection,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.INavigationTargetRegistry,Opus.Services.UI.IDialogAssist,Opus.Services.Data.Composition.ICompositionOptions,Opus.Services.Data.IComposer,CX.LoggingLib.ILogbook)
+- uid: Opus.Modules.Action.ViewModels.CompositionViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Input.IPathSelection,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.INavigationTargetRegistry,Opus.Services.UI.IDialogAssist,Opus.Services.Data.Composition.ICompositionOptions,Opus.Services.Data.IComposer,ILogbook)
   name: CompositionViewModel(IEventAggregator, IPathSelection, IConfiguration, INavigationTargetRegistry, IDialogAssist, ICompositionOptions, IComposer, ILogbook)
-  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel__ctor_Prism_Events_IEventAggregator_Opus_Services_Input_IPathSelection_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_INavigationTargetRegistry_Opus_Services_UI_IDialogAssist_Opus_Services_Data_Composition_ICompositionOptions_Opus_Services_Data_IComposer_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Modules.Action.ViewModels.CompositionViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Input.IPathSelection,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.INavigationTargetRegistry,Opus.Services.UI.IDialogAssist,Opus.Services.Data.Composition.ICompositionOptions,Opus.Services.Data.IComposer,CX.LoggingLib.ILogbook)
-  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.CompositionViewModel(Prism.Events.IEventAggregator, Opus.Services.Input.IPathSelection, Opus.Services.Configuration.IConfiguration, Opus.Services.UI.INavigationTargetRegistry, Opus.Services.UI.IDialogAssist, Opus.Services.Data.Composition.ICompositionOptions, Opus.Services.Data.IComposer, CX.LoggingLib.ILogbook)
+  href: api/Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel__ctor_Prism_Events_IEventAggregator_Opus_Services_Input_IPathSelection_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_INavigationTargetRegistry_Opus_Services_UI_IDialogAssist_Opus_Services_Data_Composition_ICompositionOptions_Opus_Services_Data_IComposer_ILogbook_
+  commentId: M:Opus.Modules.Action.ViewModels.CompositionViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Input.IPathSelection,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.INavigationTargetRegistry,Opus.Services.UI.IDialogAssist,Opus.Services.Data.Composition.ICompositionOptions,Opus.Services.Data.IComposer,ILogbook)
+  fullName: Opus.Modules.Action.ViewModels.CompositionViewModel.CompositionViewModel(Prism.Events.IEventAggregator, Opus.Services.Input.IPathSelection, Opus.Services.Configuration.IConfiguration, Opus.Services.UI.INavigationTargetRegistry, Opus.Services.UI.IDialogAssist, Opus.Services.Data.Composition.ICompositionOptions, Opus.Services.Data.IComposer, ILogbook)
   nameWithType: CompositionViewModel.CompositionViewModel(IEventAggregator, IPathSelection, IConfiguration, INavigationTargetRegistry, IDialogAssist, ICompositionOptions, IComposer, ILogbook)
 - uid: Opus.Modules.Action.ViewModels.CompositionViewModel.#ctor*
   name: CompositionViewModel
@@ -1806,11 +1806,11 @@ references:
   commentId: T:Opus.Modules.Action.ViewModels.ExtractionOrderViewModel
   fullName: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel
   nameWithType: ExtractionOrderViewModel
-- uid: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.UI.IDialogAssist,Opus.Services.UI.INavigationTargetRegistry,Opus.Core.Executors.IExtractionExecutor,Opus.Services.Configuration.IConfiguration,Opus.Services.Input.IPathSelection,CX.LoggingLib.ILogbook)
+- uid: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.UI.IDialogAssist,Opus.Services.UI.INavigationTargetRegistry,Opus.Core.Executors.IExtractionExecutor,Opus.Services.Configuration.IConfiguration,Opus.Services.Input.IPathSelection,ILogbook)
   name: ExtractionOrderViewModel(IEventAggregator, IDialogAssist, INavigationTargetRegistry, IExtractionExecutor, IConfiguration, IPathSelection, ILogbook)
-  href: api/Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.html#Opus_Modules_Action_ViewModels_ExtractionOrderViewModel__ctor_Prism_Events_IEventAggregator_Opus_Services_UI_IDialogAssist_Opus_Services_UI_INavigationTargetRegistry_Opus_Core_Executors_IExtractionExecutor_Opus_Services_Configuration_IConfiguration_Opus_Services_Input_IPathSelection_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.UI.IDialogAssist,Opus.Services.UI.INavigationTargetRegistry,Opus.Core.Executors.IExtractionExecutor,Opus.Services.Configuration.IConfiguration,Opus.Services.Input.IPathSelection,CX.LoggingLib.ILogbook)
-  fullName: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExtractionOrderViewModel(Prism.Events.IEventAggregator, Opus.Services.UI.IDialogAssist, Opus.Services.UI.INavigationTargetRegistry, Opus.Core.Executors.IExtractionExecutor, Opus.Services.Configuration.IConfiguration, Opus.Services.Input.IPathSelection, CX.LoggingLib.ILogbook)
+  href: api/Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.html#Opus_Modules_Action_ViewModels_ExtractionOrderViewModel__ctor_Prism_Events_IEventAggregator_Opus_Services_UI_IDialogAssist_Opus_Services_UI_INavigationTargetRegistry_Opus_Core_Executors_IExtractionExecutor_Opus_Services_Configuration_IConfiguration_Opus_Services_Input_IPathSelection_ILogbook_
+  commentId: M:Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.UI.IDialogAssist,Opus.Services.UI.INavigationTargetRegistry,Opus.Core.Executors.IExtractionExecutor,Opus.Services.Configuration.IConfiguration,Opus.Services.Input.IPathSelection,ILogbook)
+  fullName: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.ExtractionOrderViewModel(Prism.Events.IEventAggregator, Opus.Services.UI.IDialogAssist, Opus.Services.UI.INavigationTargetRegistry, Opus.Core.Executors.IExtractionExecutor, Opus.Services.Configuration.IConfiguration, Opus.Services.Input.IPathSelection, ILogbook)
   nameWithType: ExtractionOrderViewModel.ExtractionOrderViewModel(IEventAggregator, IDialogAssist, INavigationTargetRegistry, IExtractionExecutor, IConfiguration, IPathSelection, ILogbook)
 - uid: Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.#ctor*
   name: ExtractionOrderViewModel
@@ -2046,11 +2046,11 @@ references:
   commentId: T:Opus.Modules.Action.ViewModels.ExtractionViewModel
   fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel
   nameWithType: ExtractionViewModel
-- uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Input.IPathSelection,Opus.Services.UI.IDialogAssist,Opus.Services.UI.INavigationTargetRegistry,Opus.Core.Executors.IExtractionExecutor,CX.PdfLib.Services.IBookmarkService,Opus.Services.Configuration.IConfiguration,CX.LoggingLib.ILogbook)
+- uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Input.IPathSelection,Opus.Services.UI.IDialogAssist,Opus.Services.UI.INavigationTargetRegistry,Opus.Core.Executors.IExtractionExecutor,IBookmarkService,Opus.Services.Configuration.IConfiguration,ILogbook)
   name: ExtractionViewModel(IEventAggregator, IPathSelection, IDialogAssist, INavigationTargetRegistry, IExtractionExecutor, IBookmarkService, IConfiguration, ILogbook)
-  href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel__ctor_Prism_Events_IEventAggregator_Opus_Services_Input_IPathSelection_Opus_Services_UI_IDialogAssist_Opus_Services_UI_INavigationTargetRegistry_Opus_Core_Executors_IExtractionExecutor_CX_PdfLib_Services_IBookmarkService_Opus_Services_Configuration_IConfiguration_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Modules.Action.ViewModels.ExtractionViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Input.IPathSelection,Opus.Services.UI.IDialogAssist,Opus.Services.UI.INavigationTargetRegistry,Opus.Core.Executors.IExtractionExecutor,CX.PdfLib.Services.IBookmarkService,Opus.Services.Configuration.IConfiguration,CX.LoggingLib.ILogbook)
-  fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.ExtractionViewModel(Prism.Events.IEventAggregator, Opus.Services.Input.IPathSelection, Opus.Services.UI.IDialogAssist, Opus.Services.UI.INavigationTargetRegistry, Opus.Core.Executors.IExtractionExecutor, CX.PdfLib.Services.IBookmarkService, Opus.Services.Configuration.IConfiguration, CX.LoggingLib.ILogbook)
+  href: api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel__ctor_Prism_Events_IEventAggregator_Opus_Services_Input_IPathSelection_Opus_Services_UI_IDialogAssist_Opus_Services_UI_INavigationTargetRegistry_Opus_Core_Executors_IExtractionExecutor_IBookmarkService_Opus_Services_Configuration_IConfiguration_ILogbook_
+  commentId: M:Opus.Modules.Action.ViewModels.ExtractionViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Input.IPathSelection,Opus.Services.UI.IDialogAssist,Opus.Services.UI.INavigationTargetRegistry,Opus.Core.Executors.IExtractionExecutor,IBookmarkService,Opus.Services.Configuration.IConfiguration,ILogbook)
+  fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.ExtractionViewModel(Prism.Events.IEventAggregator, Opus.Services.Input.IPathSelection, Opus.Services.UI.IDialogAssist, Opus.Services.UI.INavigationTargetRegistry, Opus.Core.Executors.IExtractionExecutor, IBookmarkService, Opus.Services.Configuration.IConfiguration, ILogbook)
   nameWithType: ExtractionViewModel.ExtractionViewModel(IEventAggregator, IPathSelection, IDialogAssist, INavigationTargetRegistry, IExtractionExecutor, IBookmarkService, IConfiguration, ILogbook)
 - uid: Opus.Modules.Action.ViewModels.ExtractionViewModel.#ctor*
   name: ExtractionViewModel
@@ -2312,17 +2312,62 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.Action.ViewModels.ExtractionViewModel.WhenLeaving
   nameWithType: ExtractionViewModel.WhenLeaving
+- uid: Opus.Modules.Action.ViewModels.InstructionsViewModel
+  name: InstructionsViewModel
+  href: api/Opus.Modules.Action.ViewModels.InstructionsViewModel.html
+  commentId: T:Opus.Modules.Action.ViewModels.InstructionsViewModel
+  fullName: Opus.Modules.Action.ViewModels.InstructionsViewModel
+  nameWithType: InstructionsViewModel
+- uid: Opus.Modules.Action.ViewModels.InstructionsViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.UI.ISchemeInstructions)
+  name: InstructionsViewModel(IEventAggregator, ISchemeInstructions)
+  href: api/Opus.Modules.Action.ViewModels.InstructionsViewModel.html#Opus_Modules_Action_ViewModels_InstructionsViewModel__ctor_Prism_Events_IEventAggregator_Opus_Services_UI_ISchemeInstructions_
+  commentId: M:Opus.Modules.Action.ViewModels.InstructionsViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.UI.ISchemeInstructions)
+  fullName: Opus.Modules.Action.ViewModels.InstructionsViewModel.InstructionsViewModel(Prism.Events.IEventAggregator, Opus.Services.UI.ISchemeInstructions)
+  nameWithType: InstructionsViewModel.InstructionsViewModel(IEventAggregator, ISchemeInstructions)
+- uid: Opus.Modules.Action.ViewModels.InstructionsViewModel.#ctor*
+  name: InstructionsViewModel
+  href: api/Opus.Modules.Action.ViewModels.InstructionsViewModel.html#Opus_Modules_Action_ViewModels_InstructionsViewModel__ctor_
+  commentId: Overload:Opus.Modules.Action.ViewModels.InstructionsViewModel.#ctor
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.InstructionsViewModel.InstructionsViewModel
+  nameWithType: InstructionsViewModel.InstructionsViewModel
+- uid: Opus.Modules.Action.ViewModels.InstructionsViewModel.Instructions
+  name: Instructions
+  href: api/Opus.Modules.Action.ViewModels.InstructionsViewModel.html#Opus_Modules_Action_ViewModels_InstructionsViewModel_Instructions
+  commentId: P:Opus.Modules.Action.ViewModels.InstructionsViewModel.Instructions
+  fullName: Opus.Modules.Action.ViewModels.InstructionsViewModel.Instructions
+  nameWithType: InstructionsViewModel.Instructions
+- uid: Opus.Modules.Action.ViewModels.InstructionsViewModel.Instructions*
+  name: Instructions
+  href: api/Opus.Modules.Action.ViewModels.InstructionsViewModel.html#Opus_Modules_Action_ViewModels_InstructionsViewModel_Instructions_
+  commentId: Overload:Opus.Modules.Action.ViewModels.InstructionsViewModel.Instructions
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.InstructionsViewModel.Instructions
+  nameWithType: InstructionsViewModel.Instructions
+- uid: Opus.Modules.Action.ViewModels.InstructionsViewModel.Title
+  name: Title
+  href: api/Opus.Modules.Action.ViewModels.InstructionsViewModel.html#Opus_Modules_Action_ViewModels_InstructionsViewModel_Title
+  commentId: P:Opus.Modules.Action.ViewModels.InstructionsViewModel.Title
+  fullName: Opus.Modules.Action.ViewModels.InstructionsViewModel.Title
+  nameWithType: InstructionsViewModel.Title
+- uid: Opus.Modules.Action.ViewModels.InstructionsViewModel.Title*
+  name: Title
+  href: api/Opus.Modules.Action.ViewModels.InstructionsViewModel.html#Opus_Modules_Action_ViewModels_InstructionsViewModel_Title_
+  commentId: Overload:Opus.Modules.Action.ViewModels.InstructionsViewModel.Title
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.InstructionsViewModel.Title
+  nameWithType: InstructionsViewModel.Title
 - uid: Opus.Modules.Action.ViewModels.MergeViewModel
   name: MergeViewModel
   href: api/Opus.Modules.Action.ViewModels.MergeViewModel.html
   commentId: T:Opus.Modules.Action.ViewModels.MergeViewModel
   fullName: Opus.Modules.Action.ViewModels.MergeViewModel
   nameWithType: MergeViewModel
-- uid: Opus.Modules.Action.ViewModels.MergeViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Input.IPathSelection,Opus.Services.UI.INavigationTargetRegistry,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,CX.PdfLib.Services.IMergingService,CX.LoggingLib.ILogbook)
+- uid: Opus.Modules.Action.ViewModels.MergeViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Input.IPathSelection,Opus.Services.UI.INavigationTargetRegistry,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,IMergingService,ILogbook)
   name: MergeViewModel(IEventAggregator, IPathSelection, INavigationTargetRegistry, IConfiguration, IDialogAssist, IMergingService, ILogbook)
-  href: api/Opus.Modules.Action.ViewModels.MergeViewModel.html#Opus_Modules_Action_ViewModels_MergeViewModel__ctor_Prism_Events_IEventAggregator_Opus_Services_Input_IPathSelection_Opus_Services_UI_INavigationTargetRegistry_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_IDialogAssist_CX_PdfLib_Services_IMergingService_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Modules.Action.ViewModels.MergeViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Input.IPathSelection,Opus.Services.UI.INavigationTargetRegistry,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,CX.PdfLib.Services.IMergingService,CX.LoggingLib.ILogbook)
-  fullName: Opus.Modules.Action.ViewModels.MergeViewModel.MergeViewModel(Prism.Events.IEventAggregator, Opus.Services.Input.IPathSelection, Opus.Services.UI.INavigationTargetRegistry, Opus.Services.Configuration.IConfiguration, Opus.Services.UI.IDialogAssist, CX.PdfLib.Services.IMergingService, CX.LoggingLib.ILogbook)
+  href: api/Opus.Modules.Action.ViewModels.MergeViewModel.html#Opus_Modules_Action_ViewModels_MergeViewModel__ctor_Prism_Events_IEventAggregator_Opus_Services_Input_IPathSelection_Opus_Services_UI_INavigationTargetRegistry_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_IDialogAssist_IMergingService_ILogbook_
+  commentId: M:Opus.Modules.Action.ViewModels.MergeViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Input.IPathSelection,Opus.Services.UI.INavigationTargetRegistry,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,IMergingService,ILogbook)
+  fullName: Opus.Modules.Action.ViewModels.MergeViewModel.MergeViewModel(Prism.Events.IEventAggregator, Opus.Services.Input.IPathSelection, Opus.Services.UI.INavigationTargetRegistry, Opus.Services.Configuration.IConfiguration, Opus.Services.UI.IDialogAssist, IMergingService, ILogbook)
   nameWithType: MergeViewModel.MergeViewModel(IEventAggregator, IPathSelection, INavigationTargetRegistry, IConfiguration, IDialogAssist, IMergingService, ILogbook)
 - uid: Opus.Modules.Action.ViewModels.MergeViewModel.#ctor*
   name: MergeViewModel
@@ -2506,11 +2551,11 @@ references:
   commentId: T:Opus.Modules.Action.ViewModels.WorkCopyViewModel
   fullName: Opus.Modules.Action.ViewModels.WorkCopyViewModel
   nameWithType: WorkCopyViewModel
-- uid: Opus.Modules.Action.ViewModels.WorkCopyViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Core.Executors.ISignatureExecutor,Opus.Services.Input.IPathSelection,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.INavigationTargetRegistry,Opus.Services.UI.IDialogAssist,CX.PdfLib.Services.IAnnotationService,CX.LoggingLib.ILogbook)
+- uid: Opus.Modules.Action.ViewModels.WorkCopyViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Core.Executors.ISignatureExecutor,Opus.Services.Input.IPathSelection,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.INavigationTargetRegistry,Opus.Services.UI.IDialogAssist,IAnnotationService,ILogbook)
   name: WorkCopyViewModel(IEventAggregator, ISignatureExecutor, IPathSelection, IConfiguration, INavigationTargetRegistry, IDialogAssist, IAnnotationService, ILogbook)
-  href: api/Opus.Modules.Action.ViewModels.WorkCopyViewModel.html#Opus_Modules_Action_ViewModels_WorkCopyViewModel__ctor_Prism_Events_IEventAggregator_Opus_Core_Executors_ISignatureExecutor_Opus_Services_Input_IPathSelection_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_INavigationTargetRegistry_Opus_Services_UI_IDialogAssist_CX_PdfLib_Services_IAnnotationService_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Modules.Action.ViewModels.WorkCopyViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Core.Executors.ISignatureExecutor,Opus.Services.Input.IPathSelection,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.INavigationTargetRegistry,Opus.Services.UI.IDialogAssist,CX.PdfLib.Services.IAnnotationService,CX.LoggingLib.ILogbook)
-  fullName: Opus.Modules.Action.ViewModels.WorkCopyViewModel.WorkCopyViewModel(Prism.Events.IEventAggregator, Opus.Core.Executors.ISignatureExecutor, Opus.Services.Input.IPathSelection, Opus.Services.Configuration.IConfiguration, Opus.Services.UI.INavigationTargetRegistry, Opus.Services.UI.IDialogAssist, CX.PdfLib.Services.IAnnotationService, CX.LoggingLib.ILogbook)
+  href: api/Opus.Modules.Action.ViewModels.WorkCopyViewModel.html#Opus_Modules_Action_ViewModels_WorkCopyViewModel__ctor_Prism_Events_IEventAggregator_Opus_Core_Executors_ISignatureExecutor_Opus_Services_Input_IPathSelection_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_INavigationTargetRegistry_Opus_Services_UI_IDialogAssist_IAnnotationService_ILogbook_
+  commentId: M:Opus.Modules.Action.ViewModels.WorkCopyViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Core.Executors.ISignatureExecutor,Opus.Services.Input.IPathSelection,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.INavigationTargetRegistry,Opus.Services.UI.IDialogAssist,IAnnotationService,ILogbook)
+  fullName: Opus.Modules.Action.ViewModels.WorkCopyViewModel.WorkCopyViewModel(Prism.Events.IEventAggregator, Opus.Core.Executors.ISignatureExecutor, Opus.Services.Input.IPathSelection, Opus.Services.Configuration.IConfiguration, Opus.Services.UI.INavigationTargetRegistry, Opus.Services.UI.IDialogAssist, IAnnotationService, ILogbook)
   nameWithType: WorkCopyViewModel.WorkCopyViewModel(IEventAggregator, ISignatureExecutor, IPathSelection, IConfiguration, INavigationTargetRegistry, IDialogAssist, IAnnotationService, ILogbook)
 - uid: Opus.Modules.Action.ViewModels.WorkCopyViewModel.#ctor*
   name: WorkCopyViewModel
@@ -2725,6 +2770,38 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.Action.Views.ExtractionView.ExtractionView
   nameWithType: ExtractionView.ExtractionView
+- uid: Opus.Modules.Action.Views.InstructionsView
+  name: InstructionsView
+  href: api/Opus.Modules.Action.Views.InstructionsView.html
+  commentId: T:Opus.Modules.Action.Views.InstructionsView
+  fullName: Opus.Modules.Action.Views.InstructionsView
+  nameWithType: InstructionsView
+- uid: Opus.Modules.Action.Views.InstructionsView.#ctor
+  name: InstructionsView()
+  href: api/Opus.Modules.Action.Views.InstructionsView.html#Opus_Modules_Action_Views_InstructionsView__ctor
+  commentId: M:Opus.Modules.Action.Views.InstructionsView.#ctor
+  fullName: Opus.Modules.Action.Views.InstructionsView.InstructionsView()
+  nameWithType: InstructionsView.InstructionsView()
+- uid: Opus.Modules.Action.Views.InstructionsView.#ctor*
+  name: InstructionsView
+  href: api/Opus.Modules.Action.Views.InstructionsView.html#Opus_Modules_Action_Views_InstructionsView__ctor_
+  commentId: Overload:Opus.Modules.Action.Views.InstructionsView.#ctor
+  isSpec: "True"
+  fullName: Opus.Modules.Action.Views.InstructionsView.InstructionsView
+  nameWithType: InstructionsView.InstructionsView
+- uid: Opus.Modules.Action.Views.InstructionsView.InitializeComponent
+  name: InitializeComponent()
+  href: api/Opus.Modules.Action.Views.InstructionsView.html#Opus_Modules_Action_Views_InstructionsView_InitializeComponent
+  commentId: M:Opus.Modules.Action.Views.InstructionsView.InitializeComponent
+  fullName: Opus.Modules.Action.Views.InstructionsView.InitializeComponent()
+  nameWithType: InstructionsView.InitializeComponent()
+- uid: Opus.Modules.Action.Views.InstructionsView.InitializeComponent*
+  name: InitializeComponent
+  href: api/Opus.Modules.Action.Views.InstructionsView.html#Opus_Modules_Action_Views_InstructionsView_InitializeComponent_
+  commentId: Overload:Opus.Modules.Action.Views.InstructionsView.InitializeComponent
+  isSpec: "True"
+  fullName: Opus.Modules.Action.Views.InstructionsView.InitializeComponent
+  nameWithType: InstructionsView.InitializeComponent
 - uid: Opus.Modules.Action.Views.MergeView
   name: MergeView
   href: api/Opus.Modules.Action.Views.MergeView.html
@@ -3577,11 +3654,11 @@ references:
   commentId: T:Opus.Modules.Options.ViewModels.ComposeOptionsViewModel
   fullName: Opus.Modules.Options.ViewModels.ComposeOptionsViewModel
   nameWithType: ComposeOptionsViewModel
-- uid: Opus.Modules.Options.ViewModels.ComposeOptionsViewModel.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Configuration.IConfiguration,CX.LoggingLib.ILogbook)
+- uid: Opus.Modules.Options.ViewModels.ComposeOptionsViewModel.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Configuration.IConfiguration,ILogbook)
   name: ComposeOptionsViewModel(IDialogAssist, IConfiguration, ILogbook)
-  href: api/Opus.Modules.Options.ViewModels.ComposeOptionsViewModel.html#Opus_Modules_Options_ViewModels_ComposeOptionsViewModel__ctor_Opus_Services_UI_IDialogAssist_Opus_Services_Configuration_IConfiguration_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Modules.Options.ViewModels.ComposeOptionsViewModel.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Configuration.IConfiguration,CX.LoggingLib.ILogbook)
-  fullName: Opus.Modules.Options.ViewModels.ComposeOptionsViewModel.ComposeOptionsViewModel(Opus.Services.UI.IDialogAssist, Opus.Services.Configuration.IConfiguration, CX.LoggingLib.ILogbook)
+  href: api/Opus.Modules.Options.ViewModels.ComposeOptionsViewModel.html#Opus_Modules_Options_ViewModels_ComposeOptionsViewModel__ctor_Opus_Services_UI_IDialogAssist_Opus_Services_Configuration_IConfiguration_ILogbook_
+  commentId: M:Opus.Modules.Options.ViewModels.ComposeOptionsViewModel.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Configuration.IConfiguration,ILogbook)
+  fullName: Opus.Modules.Options.ViewModels.ComposeOptionsViewModel.ComposeOptionsViewModel(Opus.Services.UI.IDialogAssist, Opus.Services.Configuration.IConfiguration, ILogbook)
   nameWithType: ComposeOptionsViewModel.ComposeOptionsViewModel(IDialogAssist, IConfiguration, ILogbook)
 - uid: Opus.Modules.Options.ViewModels.ComposeOptionsViewModel.#ctor*
   name: ComposeOptionsViewModel
@@ -3622,11 +3699,11 @@ references:
   commentId: T:Opus.Modules.Options.ViewModels.ExtractOptionsViewModel
   fullName: Opus.Modules.Options.ViewModels.ExtractOptionsViewModel
   nameWithType: ExtractOptionsViewModel
-- uid: Opus.Modules.Options.ViewModels.ExtractOptionsViewModel.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Configuration.IConfiguration,CX.LoggingLib.ILogbook)
+- uid: Opus.Modules.Options.ViewModels.ExtractOptionsViewModel.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Configuration.IConfiguration,ILogbook)
   name: ExtractOptionsViewModel(IDialogAssist, IConfiguration, ILogbook)
-  href: api/Opus.Modules.Options.ViewModels.ExtractOptionsViewModel.html#Opus_Modules_Options_ViewModels_ExtractOptionsViewModel__ctor_Opus_Services_UI_IDialogAssist_Opus_Services_Configuration_IConfiguration_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Modules.Options.ViewModels.ExtractOptionsViewModel.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Configuration.IConfiguration,CX.LoggingLib.ILogbook)
-  fullName: Opus.Modules.Options.ViewModels.ExtractOptionsViewModel.ExtractOptionsViewModel(Opus.Services.UI.IDialogAssist, Opus.Services.Configuration.IConfiguration, CX.LoggingLib.ILogbook)
+  href: api/Opus.Modules.Options.ViewModels.ExtractOptionsViewModel.html#Opus_Modules_Options_ViewModels_ExtractOptionsViewModel__ctor_Opus_Services_UI_IDialogAssist_Opus_Services_Configuration_IConfiguration_ILogbook_
+  commentId: M:Opus.Modules.Options.ViewModels.ExtractOptionsViewModel.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Configuration.IConfiguration,ILogbook)
+  fullName: Opus.Modules.Options.ViewModels.ExtractOptionsViewModel.ExtractOptionsViewModel(Opus.Services.UI.IDialogAssist, Opus.Services.Configuration.IConfiguration, ILogbook)
   nameWithType: ExtractOptionsViewModel.ExtractOptionsViewModel(IDialogAssist, IConfiguration, ILogbook)
 - uid: Opus.Modules.Options.ViewModels.ExtractOptionsViewModel.#ctor*
   name: ExtractOptionsViewModel
@@ -3667,11 +3744,11 @@ references:
   commentId: T:Opus.Modules.Options.ViewModels.MergeOptionsViewModel
   fullName: Opus.Modules.Options.ViewModels.MergeOptionsViewModel
   nameWithType: MergeOptionsViewModel
-- uid: Opus.Modules.Options.ViewModels.MergeOptionsViewModel.#ctor(Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,CX.LoggingLib.ILogbook)
+- uid: Opus.Modules.Options.ViewModels.MergeOptionsViewModel.#ctor(Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,ILogbook)
   name: MergeOptionsViewModel(IConfiguration, IDialogAssist, ILogbook)
-  href: api/Opus.Modules.Options.ViewModels.MergeOptionsViewModel.html#Opus_Modules_Options_ViewModels_MergeOptionsViewModel__ctor_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_IDialogAssist_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Modules.Options.ViewModels.MergeOptionsViewModel.#ctor(Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,CX.LoggingLib.ILogbook)
-  fullName: Opus.Modules.Options.ViewModels.MergeOptionsViewModel.MergeOptionsViewModel(Opus.Services.Configuration.IConfiguration, Opus.Services.UI.IDialogAssist, CX.LoggingLib.ILogbook)
+  href: api/Opus.Modules.Options.ViewModels.MergeOptionsViewModel.html#Opus_Modules_Options_ViewModels_MergeOptionsViewModel__ctor_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_IDialogAssist_ILogbook_
+  commentId: M:Opus.Modules.Options.ViewModels.MergeOptionsViewModel.#ctor(Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,ILogbook)
+  fullName: Opus.Modules.Options.ViewModels.MergeOptionsViewModel.MergeOptionsViewModel(Opus.Services.Configuration.IConfiguration, Opus.Services.UI.IDialogAssist, ILogbook)
   nameWithType: MergeOptionsViewModel.MergeOptionsViewModel(IConfiguration, IDialogAssist, ILogbook)
 - uid: Opus.Modules.Options.ViewModels.MergeOptionsViewModel.#ctor*
   name: MergeOptionsViewModel
@@ -3712,11 +3789,11 @@ references:
   commentId: T:Opus.Modules.Options.ViewModels.WorkCopyOptionsViewModel
   fullName: Opus.Modules.Options.ViewModels.WorkCopyOptionsViewModel
   nameWithType: WorkCopyOptionsViewModel
-- uid: Opus.Modules.Options.ViewModels.WorkCopyOptionsViewModel.#ctor(Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,CX.LoggingLib.ILogbook)
+- uid: Opus.Modules.Options.ViewModels.WorkCopyOptionsViewModel.#ctor(Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,ILogbook)
   name: WorkCopyOptionsViewModel(IConfiguration, IDialogAssist, ILogbook)
-  href: api/Opus.Modules.Options.ViewModels.WorkCopyOptionsViewModel.html#Opus_Modules_Options_ViewModels_WorkCopyOptionsViewModel__ctor_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_IDialogAssist_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Modules.Options.ViewModels.WorkCopyOptionsViewModel.#ctor(Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,CX.LoggingLib.ILogbook)
-  fullName: Opus.Modules.Options.ViewModels.WorkCopyOptionsViewModel.WorkCopyOptionsViewModel(Opus.Services.Configuration.IConfiguration, Opus.Services.UI.IDialogAssist, CX.LoggingLib.ILogbook)
+  href: api/Opus.Modules.Options.ViewModels.WorkCopyOptionsViewModel.html#Opus_Modules_Options_ViewModels_WorkCopyOptionsViewModel__ctor_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_IDialogAssist_ILogbook_
+  commentId: M:Opus.Modules.Options.ViewModels.WorkCopyOptionsViewModel.#ctor(Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,ILogbook)
+  fullName: Opus.Modules.Options.ViewModels.WorkCopyOptionsViewModel.WorkCopyOptionsViewModel(Opus.Services.Configuration.IConfiguration, Opus.Services.UI.IDialogAssist, ILogbook)
   nameWithType: WorkCopyOptionsViewModel.WorkCopyOptionsViewModel(IConfiguration, IDialogAssist, ILogbook)
 - uid: Opus.Modules.Options.ViewModels.WorkCopyOptionsViewModel.#ctor*
   name: WorkCopyOptionsViewModel
@@ -4728,6 +4805,186 @@ references:
   isSpec: "True"
   fullName: Opus.Resources.Hyperlinks.Hyperlinks.UserManual
   nameWithType: Hyperlinks.UserManual
+- uid: Opus.Resources.Instructions
+  name: Opus.Resources.Instructions
+  href: api/Opus.Resources.Instructions.html
+  commentId: N:Opus.Resources.Instructions
+  fullName: Opus.Resources.Instructions
+  nameWithType: Opus.Resources.Instructions
+- uid: Opus.Resources.Instructions.Compose
+  name: Compose
+  href: api/Opus.Resources.Instructions.Compose.html
+  commentId: T:Opus.Resources.Instructions.Compose
+  fullName: Opus.Resources.Instructions.Compose
+  nameWithType: Compose
+- uid: Opus.Resources.Instructions.Compose.Culture
+  name: Culture
+  href: api/Opus.Resources.Instructions.Compose.html#Opus_Resources_Instructions_Compose_Culture
+  commentId: P:Opus.Resources.Instructions.Compose.Culture
+  fullName: Opus.Resources.Instructions.Compose.Culture
+  nameWithType: Compose.Culture
+- uid: Opus.Resources.Instructions.Compose.Culture*
+  name: Culture
+  href: api/Opus.Resources.Instructions.Compose.html#Opus_Resources_Instructions_Compose_Culture_
+  commentId: Overload:Opus.Resources.Instructions.Compose.Culture
+  isSpec: "True"
+  fullName: Opus.Resources.Instructions.Compose.Culture
+  nameWithType: Compose.Culture
+- uid: Opus.Resources.Instructions.Compose.InstructionTitle
+  name: InstructionTitle
+  href: api/Opus.Resources.Instructions.Compose.html#Opus_Resources_Instructions_Compose_InstructionTitle
+  commentId: P:Opus.Resources.Instructions.Compose.InstructionTitle
+  fullName: Opus.Resources.Instructions.Compose.InstructionTitle
+  nameWithType: Compose.InstructionTitle
+- uid: Opus.Resources.Instructions.Compose.InstructionTitle*
+  name: InstructionTitle
+  href: api/Opus.Resources.Instructions.Compose.html#Opus_Resources_Instructions_Compose_InstructionTitle_
+  commentId: Overload:Opus.Resources.Instructions.Compose.InstructionTitle
+  isSpec: "True"
+  fullName: Opus.Resources.Instructions.Compose.InstructionTitle
+  nameWithType: Compose.InstructionTitle
+- uid: Opus.Resources.Instructions.Compose.ResourceManager
+  name: ResourceManager
+  href: api/Opus.Resources.Instructions.Compose.html#Opus_Resources_Instructions_Compose_ResourceManager
+  commentId: P:Opus.Resources.Instructions.Compose.ResourceManager
+  fullName: Opus.Resources.Instructions.Compose.ResourceManager
+  nameWithType: Compose.ResourceManager
+- uid: Opus.Resources.Instructions.Compose.ResourceManager*
+  name: ResourceManager
+  href: api/Opus.Resources.Instructions.Compose.html#Opus_Resources_Instructions_Compose_ResourceManager_
+  commentId: Overload:Opus.Resources.Instructions.Compose.ResourceManager
+  isSpec: "True"
+  fullName: Opus.Resources.Instructions.Compose.ResourceManager
+  nameWithType: Compose.ResourceManager
+- uid: Opus.Resources.Instructions.Compose.Steps
+  name: Steps
+  href: api/Opus.Resources.Instructions.Compose.html#Opus_Resources_Instructions_Compose_Steps
+  commentId: P:Opus.Resources.Instructions.Compose.Steps
+  fullName: Opus.Resources.Instructions.Compose.Steps
+  nameWithType: Compose.Steps
+- uid: Opus.Resources.Instructions.Compose.Steps*
+  name: Steps
+  href: api/Opus.Resources.Instructions.Compose.html#Opus_Resources_Instructions_Compose_Steps_
+  commentId: Overload:Opus.Resources.Instructions.Compose.Steps
+  isSpec: "True"
+  fullName: Opus.Resources.Instructions.Compose.Steps
+  nameWithType: Compose.Steps
+- uid: Opus.Resources.Instructions.Merge
+  name: Merge
+  href: api/Opus.Resources.Instructions.Merge.html
+  commentId: T:Opus.Resources.Instructions.Merge
+  fullName: Opus.Resources.Instructions.Merge
+  nameWithType: Merge
+- uid: Opus.Resources.Instructions.Merge.Culture
+  name: Culture
+  href: api/Opus.Resources.Instructions.Merge.html#Opus_Resources_Instructions_Merge_Culture
+  commentId: P:Opus.Resources.Instructions.Merge.Culture
+  fullName: Opus.Resources.Instructions.Merge.Culture
+  nameWithType: Merge.Culture
+- uid: Opus.Resources.Instructions.Merge.Culture*
+  name: Culture
+  href: api/Opus.Resources.Instructions.Merge.html#Opus_Resources_Instructions_Merge_Culture_
+  commentId: Overload:Opus.Resources.Instructions.Merge.Culture
+  isSpec: "True"
+  fullName: Opus.Resources.Instructions.Merge.Culture
+  nameWithType: Merge.Culture
+- uid: Opus.Resources.Instructions.Merge.InstructionTitle
+  name: InstructionTitle
+  href: api/Opus.Resources.Instructions.Merge.html#Opus_Resources_Instructions_Merge_InstructionTitle
+  commentId: P:Opus.Resources.Instructions.Merge.InstructionTitle
+  fullName: Opus.Resources.Instructions.Merge.InstructionTitle
+  nameWithType: Merge.InstructionTitle
+- uid: Opus.Resources.Instructions.Merge.InstructionTitle*
+  name: InstructionTitle
+  href: api/Opus.Resources.Instructions.Merge.html#Opus_Resources_Instructions_Merge_InstructionTitle_
+  commentId: Overload:Opus.Resources.Instructions.Merge.InstructionTitle
+  isSpec: "True"
+  fullName: Opus.Resources.Instructions.Merge.InstructionTitle
+  nameWithType: Merge.InstructionTitle
+- uid: Opus.Resources.Instructions.Merge.ResourceManager
+  name: ResourceManager
+  href: api/Opus.Resources.Instructions.Merge.html#Opus_Resources_Instructions_Merge_ResourceManager
+  commentId: P:Opus.Resources.Instructions.Merge.ResourceManager
+  fullName: Opus.Resources.Instructions.Merge.ResourceManager
+  nameWithType: Merge.ResourceManager
+- uid: Opus.Resources.Instructions.Merge.ResourceManager*
+  name: ResourceManager
+  href: api/Opus.Resources.Instructions.Merge.html#Opus_Resources_Instructions_Merge_ResourceManager_
+  commentId: Overload:Opus.Resources.Instructions.Merge.ResourceManager
+  isSpec: "True"
+  fullName: Opus.Resources.Instructions.Merge.ResourceManager
+  nameWithType: Merge.ResourceManager
+- uid: Opus.Resources.Instructions.Merge.Steps
+  name: Steps
+  href: api/Opus.Resources.Instructions.Merge.html#Opus_Resources_Instructions_Merge_Steps
+  commentId: P:Opus.Resources.Instructions.Merge.Steps
+  fullName: Opus.Resources.Instructions.Merge.Steps
+  nameWithType: Merge.Steps
+- uid: Opus.Resources.Instructions.Merge.Steps*
+  name: Steps
+  href: api/Opus.Resources.Instructions.Merge.html#Opus_Resources_Instructions_Merge_Steps_
+  commentId: Overload:Opus.Resources.Instructions.Merge.Steps
+  isSpec: "True"
+  fullName: Opus.Resources.Instructions.Merge.Steps
+  nameWithType: Merge.Steps
+- uid: Opus.Resources.Instructions.WorkCopy
+  name: WorkCopy
+  href: api/Opus.Resources.Instructions.WorkCopy.html
+  commentId: T:Opus.Resources.Instructions.WorkCopy
+  fullName: Opus.Resources.Instructions.WorkCopy
+  nameWithType: WorkCopy
+- uid: Opus.Resources.Instructions.WorkCopy.Culture
+  name: Culture
+  href: api/Opus.Resources.Instructions.WorkCopy.html#Opus_Resources_Instructions_WorkCopy_Culture
+  commentId: P:Opus.Resources.Instructions.WorkCopy.Culture
+  fullName: Opus.Resources.Instructions.WorkCopy.Culture
+  nameWithType: WorkCopy.Culture
+- uid: Opus.Resources.Instructions.WorkCopy.Culture*
+  name: Culture
+  href: api/Opus.Resources.Instructions.WorkCopy.html#Opus_Resources_Instructions_WorkCopy_Culture_
+  commentId: Overload:Opus.Resources.Instructions.WorkCopy.Culture
+  isSpec: "True"
+  fullName: Opus.Resources.Instructions.WorkCopy.Culture
+  nameWithType: WorkCopy.Culture
+- uid: Opus.Resources.Instructions.WorkCopy.InstructionTitle
+  name: InstructionTitle
+  href: api/Opus.Resources.Instructions.WorkCopy.html#Opus_Resources_Instructions_WorkCopy_InstructionTitle
+  commentId: P:Opus.Resources.Instructions.WorkCopy.InstructionTitle
+  fullName: Opus.Resources.Instructions.WorkCopy.InstructionTitle
+  nameWithType: WorkCopy.InstructionTitle
+- uid: Opus.Resources.Instructions.WorkCopy.InstructionTitle*
+  name: InstructionTitle
+  href: api/Opus.Resources.Instructions.WorkCopy.html#Opus_Resources_Instructions_WorkCopy_InstructionTitle_
+  commentId: Overload:Opus.Resources.Instructions.WorkCopy.InstructionTitle
+  isSpec: "True"
+  fullName: Opus.Resources.Instructions.WorkCopy.InstructionTitle
+  nameWithType: WorkCopy.InstructionTitle
+- uid: Opus.Resources.Instructions.WorkCopy.ResourceManager
+  name: ResourceManager
+  href: api/Opus.Resources.Instructions.WorkCopy.html#Opus_Resources_Instructions_WorkCopy_ResourceManager
+  commentId: P:Opus.Resources.Instructions.WorkCopy.ResourceManager
+  fullName: Opus.Resources.Instructions.WorkCopy.ResourceManager
+  nameWithType: WorkCopy.ResourceManager
+- uid: Opus.Resources.Instructions.WorkCopy.ResourceManager*
+  name: ResourceManager
+  href: api/Opus.Resources.Instructions.WorkCopy.html#Opus_Resources_Instructions_WorkCopy_ResourceManager_
+  commentId: Overload:Opus.Resources.Instructions.WorkCopy.ResourceManager
+  isSpec: "True"
+  fullName: Opus.Resources.Instructions.WorkCopy.ResourceManager
+  nameWithType: WorkCopy.ResourceManager
+- uid: Opus.Resources.Instructions.WorkCopy.Steps
+  name: Steps
+  href: api/Opus.Resources.Instructions.WorkCopy.html#Opus_Resources_Instructions_WorkCopy_Steps
+  commentId: P:Opus.Resources.Instructions.WorkCopy.Steps
+  fullName: Opus.Resources.Instructions.WorkCopy.Steps
+  nameWithType: WorkCopy.Steps
+- uid: Opus.Resources.Instructions.WorkCopy.Steps*
+  name: Steps
+  href: api/Opus.Resources.Instructions.WorkCopy.html#Opus_Resources_Instructions_WorkCopy_Steps_
+  commentId: Overload:Opus.Resources.Instructions.WorkCopy.Steps
+  isSpec: "True"
+  fullName: Opus.Resources.Instructions.WorkCopy.Steps
+  nameWithType: WorkCopy.Steps
 - uid: Opus.Resources.Labels
   name: Opus.Resources.Labels
   href: api/Opus.Resources.Labels.html
@@ -9021,11 +9278,11 @@ references:
   commentId: T:Opus.Services.Extensions.EnumerableExtensions
   fullName: Opus.Services.Extensions.EnumerableExtensions
   nameWithType: EnumerableExtensions
-- uid: Opus.Services.Extensions.EnumerableExtensions.GetResourceString(CX.PdfLib.Common.ProgressPhase)
+- uid: Opus.Services.Extensions.EnumerableExtensions.GetResourceString(ProgressPhase)
   name: GetResourceString(ProgressPhase)
-  href: api/Opus.Services.Extensions.EnumerableExtensions.html#Opus_Services_Extensions_EnumerableExtensions_GetResourceString_CX_PdfLib_Common_ProgressPhase_
-  commentId: M:Opus.Services.Extensions.EnumerableExtensions.GetResourceString(CX.PdfLib.Common.ProgressPhase)
-  fullName: Opus.Services.Extensions.EnumerableExtensions.GetResourceString(CX.PdfLib.Common.ProgressPhase)
+  href: api/Opus.Services.Extensions.EnumerableExtensions.html#Opus_Services_Extensions_EnumerableExtensions_GetResourceString_ProgressPhase_
+  commentId: M:Opus.Services.Extensions.EnumerableExtensions.GetResourceString(ProgressPhase)
+  fullName: Opus.Services.Extensions.EnumerableExtensions.GetResourceString(ProgressPhase)
   nameWithType: EnumerableExtensions.GetResourceString(ProgressPhase)
 - uid: Opus.Services.Extensions.EnumerableExtensions.GetResourceString*
   name: GetResourceString
@@ -9344,12 +9601,15 @@ references:
   isSpec: "True"
   fullName: Opus.Services.Implementation.Configuration.Configuration.LanguageCode
   nameWithType: Configuration.LanguageCode
-- uid: Opus.Services.Implementation.Configuration.Configuration.Load(System.String,CX.LoggingLib.ILogbook)
-  name: Load(String, ILogbook)
-  href: api/Opus.Services.Implementation.Configuration.Configuration.html#Opus_Services_Implementation_Configuration_Configuration_Load_System_String_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Services.Implementation.Configuration.Configuration.Load(System.String,CX.LoggingLib.ILogbook)
-  fullName: Opus.Services.Implementation.Configuration.Configuration.Load(System.String, CX.LoggingLib.ILogbook)
-  nameWithType: Configuration.Load(String, ILogbook)
+- uid: Opus.Services.Implementation.Configuration.Configuration.Load(System.String,System.Nullable{ILogbook})
+  name: Load(String, Nullable<ILogbook>)
+  href: api/Opus.Services.Implementation.Configuration.Configuration.html#Opus_Services_Implementation_Configuration_Configuration_Load_System_String_System_Nullable_ILogbook__
+  commentId: M:Opus.Services.Implementation.Configuration.Configuration.Load(System.String,System.Nullable{ILogbook})
+  name.vb: Load(String, Nullable(Of ILogbook))
+  fullName: Opus.Services.Implementation.Configuration.Configuration.Load(System.String, System.Nullable<ILogbook>)
+  fullName.vb: Opus.Services.Implementation.Configuration.Configuration.Load(System.String, System.Nullable(Of ILogbook))
+  nameWithType: Configuration.Load(String, Nullable<ILogbook>)
+  nameWithType.vb: Configuration.Load(String, Nullable(Of ILogbook))
 - uid: Opus.Services.Implementation.Configuration.Configuration.Load*
   name: Load
   href: api/Opus.Services.Implementation.Configuration.Configuration.html#Opus_Services_Implementation_Configuration_Configuration_Load_
@@ -9414,11 +9674,11 @@ references:
   commentId: T:Opus.Services.Implementation.Data.Composition.Composer
   fullName: Opus.Services.Implementation.Data.Composition.Composer
   nameWithType: Composer
-- uid: Opus.Services.Implementation.Data.Composition.Composer.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Input.IPathSelection,CX.PdfLib.Services.IMergingService,CX.LoggingLib.ILogbook)
+- uid: Opus.Services.Implementation.Data.Composition.Composer.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Input.IPathSelection,IMergingService,ILogbook)
   name: Composer(IDialogAssist, IPathSelection, IMergingService, ILogbook)
-  href: api/Opus.Services.Implementation.Data.Composition.Composer.html#Opus_Services_Implementation_Data_Composition_Composer__ctor_Opus_Services_UI_IDialogAssist_Opus_Services_Input_IPathSelection_CX_PdfLib_Services_IMergingService_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Services.Implementation.Data.Composition.Composer.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Input.IPathSelection,CX.PdfLib.Services.IMergingService,CX.LoggingLib.ILogbook)
-  fullName: Opus.Services.Implementation.Data.Composition.Composer.Composer(Opus.Services.UI.IDialogAssist, Opus.Services.Input.IPathSelection, CX.PdfLib.Services.IMergingService, CX.LoggingLib.ILogbook)
+  href: api/Opus.Services.Implementation.Data.Composition.Composer.html#Opus_Services_Implementation_Data_Composition_Composer__ctor_Opus_Services_UI_IDialogAssist_Opus_Services_Input_IPathSelection_IMergingService_ILogbook_
+  commentId: M:Opus.Services.Implementation.Data.Composition.Composer.#ctor(Opus.Services.UI.IDialogAssist,Opus.Services.Input.IPathSelection,IMergingService,ILogbook)
+  fullName: Opus.Services.Implementation.Data.Composition.Composer.Composer(Opus.Services.UI.IDialogAssist, Opus.Services.Input.IPathSelection, IMergingService, ILogbook)
   nameWithType: Composer.Composer(IDialogAssist, IPathSelection, IMergingService, ILogbook)
 - uid: Opus.Services.Implementation.Data.Composition.Composer.#ctor*
   name: Composer
@@ -9627,11 +9887,11 @@ references:
   commentId: T:Opus.Services.Implementation.Data.Composition.CompositionOptions
   fullName: Opus.Services.Implementation.Data.Composition.CompositionOptions
   nameWithType: CompositionOptions
-- uid: Opus.Services.Implementation.Data.Composition.CompositionOptions.#ctor(Opus.Services.Data.IDataProvider,CX.LoggingLib.ILogbook)
+- uid: Opus.Services.Implementation.Data.Composition.CompositionOptions.#ctor(Opus.Services.Data.IDataProvider,ILogbook)
   name: CompositionOptions(IDataProvider, ILogbook)
-  href: api/Opus.Services.Implementation.Data.Composition.CompositionOptions.html#Opus_Services_Implementation_Data_Composition_CompositionOptions__ctor_Opus_Services_Data_IDataProvider_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Services.Implementation.Data.Composition.CompositionOptions.#ctor(Opus.Services.Data.IDataProvider,CX.LoggingLib.ILogbook)
-  fullName: Opus.Services.Implementation.Data.Composition.CompositionOptions.CompositionOptions(Opus.Services.Data.IDataProvider, CX.LoggingLib.ILogbook)
+  href: api/Opus.Services.Implementation.Data.Composition.CompositionOptions.html#Opus_Services_Implementation_Data_Composition_CompositionOptions__ctor_Opus_Services_Data_IDataProvider_ILogbook_
+  commentId: M:Opus.Services.Implementation.Data.Composition.CompositionOptions.#ctor(Opus.Services.Data.IDataProvider,ILogbook)
+  fullName: Opus.Services.Implementation.Data.Composition.CompositionOptions.CompositionOptions(Opus.Services.Data.IDataProvider, ILogbook)
   nameWithType: CompositionOptions.CompositionOptions(IDataProvider, ILogbook)
 - uid: Opus.Services.Implementation.Data.Composition.CompositionOptions.#ctor*
   name: CompositionOptions
@@ -10308,11 +10568,11 @@ references:
   commentId: T:Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper
   fullName: Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper
   nameWithType: FileAndBookmarkWrapper
-- uid: Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.#ctor(CX.PdfLib.Services.Data.ILeveledBookmark,System.String,System.Int32,System.Guid)
+- uid: Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.#ctor(ILeveledBookmark,System.String,System.Int32,System.Guid)
   name: FileAndBookmarkWrapper(ILeveledBookmark, String, Int32, Guid)
-  href: api/Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.html#Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper__ctor_CX_PdfLib_Services_Data_ILeveledBookmark_System_String_System_Int32_System_Guid_
-  commentId: M:Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.#ctor(CX.PdfLib.Services.Data.ILeveledBookmark,System.String,System.Int32,System.Guid)
-  fullName: Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.FileAndBookmarkWrapper(CX.PdfLib.Services.Data.ILeveledBookmark, System.String, System.Int32, System.Guid)
+  href: api/Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.html#Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper__ctor_ILeveledBookmark_System_String_System_Int32_System_Guid_
+  commentId: M:Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.#ctor(ILeveledBookmark,System.String,System.Int32,System.Guid)
+  fullName: Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.FileAndBookmarkWrapper(ILeveledBookmark, System.String, System.Int32, System.Guid)
   nameWithType: FileAndBookmarkWrapper.FileAndBookmarkWrapper(ILeveledBookmark, String, Int32, Guid)
 - uid: Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.#ctor*
   name: FileAndBookmarkWrapper
@@ -10701,12 +10961,12 @@ references:
   fullName.vb: Opus.Services.Implementation.Logging.LoggingCapable(Of T)
   nameWithType: LoggingCapable<T>
   nameWithType.vb: LoggingCapable(Of T)
-- uid: Opus.Services.Implementation.Logging.LoggingCapable`1.#ctor(CX.LoggingLib.ILogbook)
+- uid: Opus.Services.Implementation.Logging.LoggingCapable`1.#ctor(ILogbook)
   name: LoggingCapable(ILogbook)
-  href: api/Opus.Services.Implementation.Logging.LoggingCapable-1.html#Opus_Services_Implementation_Logging_LoggingCapable_1__ctor_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Services.Implementation.Logging.LoggingCapable`1.#ctor(CX.LoggingLib.ILogbook)
-  fullName: Opus.Services.Implementation.Logging.LoggingCapable<T>.LoggingCapable(CX.LoggingLib.ILogbook)
-  fullName.vb: Opus.Services.Implementation.Logging.LoggingCapable(Of T).LoggingCapable(CX.LoggingLib.ILogbook)
+  href: api/Opus.Services.Implementation.Logging.LoggingCapable-1.html#Opus_Services_Implementation_Logging_LoggingCapable_1__ctor_ILogbook_
+  commentId: M:Opus.Services.Implementation.Logging.LoggingCapable`1.#ctor(ILogbook)
+  fullName: Opus.Services.Implementation.Logging.LoggingCapable<T>.LoggingCapable(ILogbook)
+  fullName.vb: Opus.Services.Implementation.Logging.LoggingCapable(Of T).LoggingCapable(ILogbook)
   nameWithType: LoggingCapable<T>.LoggingCapable(ILogbook)
   nameWithType.vb: LoggingCapable(Of T).LoggingCapable(ILogbook)
 - uid: Opus.Services.Implementation.Logging.LoggingCapable`1.#ctor*
@@ -10718,12 +10978,12 @@ references:
   fullName.vb: Opus.Services.Implementation.Logging.LoggingCapable(Of T).LoggingCapable
   nameWithType: LoggingCapable<T>.LoggingCapable
   nameWithType.vb: LoggingCapable(Of T).LoggingCapable
-- uid: Opus.Services.Implementation.Logging.LoggingCapable`1.ChangeLogbook(CX.LoggingLib.ILogbook)
+- uid: Opus.Services.Implementation.Logging.LoggingCapable`1.ChangeLogbook(ILogbook)
   name: ChangeLogbook(ILogbook)
-  href: api/Opus.Services.Implementation.Logging.LoggingCapable-1.html#Opus_Services_Implementation_Logging_LoggingCapable_1_ChangeLogbook_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Services.Implementation.Logging.LoggingCapable`1.ChangeLogbook(CX.LoggingLib.ILogbook)
-  fullName: Opus.Services.Implementation.Logging.LoggingCapable<T>.ChangeLogbook(CX.LoggingLib.ILogbook)
-  fullName.vb: Opus.Services.Implementation.Logging.LoggingCapable(Of T).ChangeLogbook(CX.LoggingLib.ILogbook)
+  href: api/Opus.Services.Implementation.Logging.LoggingCapable-1.html#Opus_Services_Implementation_Logging_LoggingCapable_1_ChangeLogbook_ILogbook_
+  commentId: M:Opus.Services.Implementation.Logging.LoggingCapable`1.ChangeLogbook(ILogbook)
+  fullName: Opus.Services.Implementation.Logging.LoggingCapable<T>.ChangeLogbook(ILogbook)
+  fullName.vb: Opus.Services.Implementation.Logging.LoggingCapable(Of T).ChangeLogbook(ILogbook)
   nameWithType: LoggingCapable<T>.ChangeLogbook(ILogbook)
   nameWithType.vb: LoggingCapable(Of T).ChangeLogbook(ILogbook)
 - uid: Opus.Services.Implementation.Logging.LoggingCapable`1.ChangeLogbook*
@@ -10775,13 +11035,13 @@ references:
   isSpec: "True"
   fullName: Opus.Services.Implementation.Logging.SeriLogbook.CloseAndFlush
   nameWithType: SeriLogbook.CloseAndFlush
-- uid: Opus.Services.Implementation.Logging.SeriLogbook.Write(System.String,CX.LoggingLib.LogLevel,System.Exception,System.String,System.String,System.Object[])
+- uid: Opus.Services.Implementation.Logging.SeriLogbook.Write(System.String,LogLevel,System.Exception,System.String,System.String,System.Object[])
   name: Write(String, LogLevel, Exception, String, String, Object[])
-  href: api/Opus.Services.Implementation.Logging.SeriLogbook.html#Opus_Services_Implementation_Logging_SeriLogbook_Write_System_String_CX_LoggingLib_LogLevel_System_Exception_System_String_System_String_System_Object___
-  commentId: M:Opus.Services.Implementation.Logging.SeriLogbook.Write(System.String,CX.LoggingLib.LogLevel,System.Exception,System.String,System.String,System.Object[])
+  href: api/Opus.Services.Implementation.Logging.SeriLogbook.html#Opus_Services_Implementation_Logging_SeriLogbook_Write_System_String_LogLevel_System_Exception_System_String_System_String_System_Object___
+  commentId: M:Opus.Services.Implementation.Logging.SeriLogbook.Write(System.String,LogLevel,System.Exception,System.String,System.String,System.Object[])
   name.vb: Write(String, LogLevel, Exception, String, String, Object())
-  fullName: Opus.Services.Implementation.Logging.SeriLogbook.Write(System.String, CX.LoggingLib.LogLevel, System.Exception, System.String, System.String, System.Object[])
-  fullName.vb: Opus.Services.Implementation.Logging.SeriLogbook.Write(System.String, CX.LoggingLib.LogLevel, System.Exception, System.String, System.String, System.Object())
+  fullName: Opus.Services.Implementation.Logging.SeriLogbook.Write(System.String, LogLevel, System.Exception, System.String, System.String, System.Object[])
+  fullName.vb: Opus.Services.Implementation.Logging.SeriLogbook.Write(System.String, LogLevel, System.Exception, System.String, System.String, System.Object())
   nameWithType: SeriLogbook.Write(String, LogLevel, Exception, String, String, Object[])
   nameWithType.vb: SeriLogbook.Write(String, LogLevel, Exception, String, String, Object())
 - uid: Opus.Services.Implementation.Logging.SeriLogbook.Write*
@@ -10803,13 +11063,13 @@ references:
   commentId: T:Opus.Services.Implementation.StaticHelpers.BookmarkMethods
   fullName: Opus.Services.Implementation.StaticHelpers.BookmarkMethods
   nameWithType: BookmarkMethods
-- uid: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.AdjustLevels(System.Collections.Generic.IEnumerable{CX.PdfLib.Services.Data.ILeveledBookmark},System.Int32)
+- uid: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.AdjustLevels(System.Collections.Generic.IEnumerable{ILeveledBookmark},System.Int32)
   name: AdjustLevels(IEnumerable<ILeveledBookmark>, Int32)
-  href: api/Opus.Services.Implementation.StaticHelpers.BookmarkMethods.html#Opus_Services_Implementation_StaticHelpers_BookmarkMethods_AdjustLevels_System_Collections_Generic_IEnumerable_CX_PdfLib_Services_Data_ILeveledBookmark__System_Int32_
-  commentId: M:Opus.Services.Implementation.StaticHelpers.BookmarkMethods.AdjustLevels(System.Collections.Generic.IEnumerable{CX.PdfLib.Services.Data.ILeveledBookmark},System.Int32)
+  href: api/Opus.Services.Implementation.StaticHelpers.BookmarkMethods.html#Opus_Services_Implementation_StaticHelpers_BookmarkMethods_AdjustLevels_System_Collections_Generic_IEnumerable_ILeveledBookmark__System_Int32_
+  commentId: M:Opus.Services.Implementation.StaticHelpers.BookmarkMethods.AdjustLevels(System.Collections.Generic.IEnumerable{ILeveledBookmark},System.Int32)
   name.vb: AdjustLevels(IEnumerable(Of ILeveledBookmark), Int32)
-  fullName: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.AdjustLevels(System.Collections.Generic.IEnumerable<CX.PdfLib.Services.Data.ILeveledBookmark>, System.Int32)
-  fullName.vb: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.AdjustLevels(System.Collections.Generic.IEnumerable(Of CX.PdfLib.Services.Data.ILeveledBookmark), System.Int32)
+  fullName: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.AdjustLevels(System.Collections.Generic.IEnumerable<ILeveledBookmark>, System.Int32)
+  fullName.vb: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.AdjustLevels(System.Collections.Generic.IEnumerable(Of ILeveledBookmark), System.Int32)
   nameWithType: BookmarkMethods.AdjustLevels(IEnumerable<ILeveledBookmark>, Int32)
   nameWithType.vb: BookmarkMethods.AdjustLevels(IEnumerable(Of ILeveledBookmark), Int32)
 - uid: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.AdjustLevels*
@@ -10832,13 +11092,13 @@ references:
   isSpec: "True"
   fullName: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.AskForTitle
   nameWithType: BookmarkMethods.AskForTitle
-- uid: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetParentsOnly(System.Collections.Generic.IEnumerable{CX.PdfLib.Services.Data.ILeveledBookmark})
+- uid: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetParentsOnly(System.Collections.Generic.IEnumerable{ILeveledBookmark})
   name: GetParentsOnly(IEnumerable<ILeveledBookmark>)
-  href: api/Opus.Services.Implementation.StaticHelpers.BookmarkMethods.html#Opus_Services_Implementation_StaticHelpers_BookmarkMethods_GetParentsOnly_System_Collections_Generic_IEnumerable_CX_PdfLib_Services_Data_ILeveledBookmark__
-  commentId: M:Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetParentsOnly(System.Collections.Generic.IEnumerable{CX.PdfLib.Services.Data.ILeveledBookmark})
+  href: api/Opus.Services.Implementation.StaticHelpers.BookmarkMethods.html#Opus_Services_Implementation_StaticHelpers_BookmarkMethods_GetParentsOnly_System_Collections_Generic_IEnumerable_ILeveledBookmark__
+  commentId: M:Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetParentsOnly(System.Collections.Generic.IEnumerable{ILeveledBookmark})
   name.vb: GetParentsOnly(IEnumerable(Of ILeveledBookmark))
-  fullName: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetParentsOnly(System.Collections.Generic.IEnumerable<CX.PdfLib.Services.Data.ILeveledBookmark>)
-  fullName.vb: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetParentsOnly(System.Collections.Generic.IEnumerable(Of CX.PdfLib.Services.Data.ILeveledBookmark))
+  fullName: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetParentsOnly(System.Collections.Generic.IEnumerable<ILeveledBookmark>)
+  fullName.vb: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetParentsOnly(System.Collections.Generic.IEnumerable(Of ILeveledBookmark))
   nameWithType: BookmarkMethods.GetParentsOnly(IEnumerable<ILeveledBookmark>)
   nameWithType.vb: BookmarkMethods.GetParentsOnly(IEnumerable(Of ILeveledBookmark))
 - uid: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetParentsOnly*
@@ -10861,15 +11121,15 @@ references:
   isSpec: "True"
   fullName: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetPlaceHolderBookmarkWrapper
   nameWithType: BookmarkMethods.GetPlaceHolderBookmarkWrapper
-- uid: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetRenamed(System.Collections.Generic.IList{Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper},System.String,CX.LoggingLib.ILogbook)
-  name: GetRenamed(IList<FileAndBookmarkWrapper>, String, ILogbook)
-  href: api/Opus.Services.Implementation.StaticHelpers.BookmarkMethods.html#Opus_Services_Implementation_StaticHelpers_BookmarkMethods_GetRenamed_System_Collections_Generic_IList_Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper__System_String_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetRenamed(System.Collections.Generic.IList{Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper},System.String,CX.LoggingLib.ILogbook)
-  name.vb: GetRenamed(IList(Of FileAndBookmarkWrapper), String, ILogbook)
-  fullName: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetRenamed(System.Collections.Generic.IList<Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper>, System.String, CX.LoggingLib.ILogbook)
-  fullName.vb: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetRenamed(System.Collections.Generic.IList(Of Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper), System.String, CX.LoggingLib.ILogbook)
-  nameWithType: BookmarkMethods.GetRenamed(IList<FileAndBookmarkWrapper>, String, ILogbook)
-  nameWithType.vb: BookmarkMethods.GetRenamed(IList(Of FileAndBookmarkWrapper), String, ILogbook)
+- uid: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetRenamed(System.Collections.Generic.IList{Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper},System.String,System.Nullable{ILogbook})
+  name: GetRenamed(IList<FileAndBookmarkWrapper>, String, Nullable<ILogbook>)
+  href: api/Opus.Services.Implementation.StaticHelpers.BookmarkMethods.html#Opus_Services_Implementation_StaticHelpers_BookmarkMethods_GetRenamed_System_Collections_Generic_IList_Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper__System_String_System_Nullable_ILogbook__
+  commentId: M:Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetRenamed(System.Collections.Generic.IList{Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper},System.String,System.Nullable{ILogbook})
+  name.vb: GetRenamed(IList(Of FileAndBookmarkWrapper), String, Nullable(Of ILogbook))
+  fullName: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetRenamed(System.Collections.Generic.IList<Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper>, System.String, System.Nullable<ILogbook>)
+  fullName.vb: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetRenamed(System.Collections.Generic.IList(Of Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper), System.String, System.Nullable(Of ILogbook))
+  nameWithType: BookmarkMethods.GetRenamed(IList<FileAndBookmarkWrapper>, String, Nullable<ILogbook>)
+  nameWithType.vb: BookmarkMethods.GetRenamed(IList(Of FileAndBookmarkWrapper), String, Nullable(Of ILogbook))
 - uid: Opus.Services.Implementation.StaticHelpers.BookmarkMethods.GetRenamed*
   name: GetRenamed
   href: api/Opus.Services.Implementation.StaticHelpers.BookmarkMethods.html#Opus_Services_Implementation_StaticHelpers_BookmarkMethods_GetRenamed_
@@ -10889,11 +11149,11 @@ references:
   commentId: T:Opus.Services.Implementation.UI.DialogAssist
   fullName: Opus.Services.Implementation.UI.DialogAssist
   nameWithType: DialogAssist
-- uid: Opus.Services.Implementation.UI.DialogAssist.#ctor(CX.LoggingLib.ILogbook)
+- uid: Opus.Services.Implementation.UI.DialogAssist.#ctor(ILogbook)
   name: DialogAssist(ILogbook)
-  href: api/Opus.Services.Implementation.UI.DialogAssist.html#Opus_Services_Implementation_UI_DialogAssist__ctor_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Services.Implementation.UI.DialogAssist.#ctor(CX.LoggingLib.ILogbook)
-  fullName: Opus.Services.Implementation.UI.DialogAssist.DialogAssist(CX.LoggingLib.ILogbook)
+  href: api/Opus.Services.Implementation.UI.DialogAssist.html#Opus_Services_Implementation_UI_DialogAssist__ctor_ILogbook_
+  commentId: M:Opus.Services.Implementation.UI.DialogAssist.#ctor(ILogbook)
+  fullName: Opus.Services.Implementation.UI.DialogAssist.DialogAssist(ILogbook)
   nameWithType: DialogAssist.DialogAssist(ILogbook)
 - uid: Opus.Services.Implementation.UI.DialogAssist.#ctor*
   name: DialogAssist
@@ -12045,6 +12305,19 @@ references:
   isSpec: "True"
   fullName: Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.Error
   nameWithType: ExtractSettingsDialog.Error
+- uid: Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.GroupByFiles
+  name: GroupByFiles
+  href: api/Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.html#Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_GroupByFiles
+  commentId: P:Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.GroupByFiles
+  fullName: Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.GroupByFiles
+  nameWithType: ExtractSettingsDialog.GroupByFiles
+- uid: Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.GroupByFiles*
+  name: GroupByFiles
+  href: api/Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.html#Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_GroupByFiles_
+  commentId: Overload:Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.GroupByFiles
+  isSpec: "True"
+  fullName: Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.GroupByFiles
+  nameWithType: ExtractSettingsDialog.GroupByFiles
 - uid: Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.IsAsking
   name: IsAsking
   href: api/Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.html#Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_IsAsking
@@ -12515,11 +12788,11 @@ references:
   commentId: T:Opus.Services.Implementation.UI.NavigationAssist
   fullName: Opus.Services.Implementation.UI.NavigationAssist
   nameWithType: NavigationAssist
-- uid: Opus.Services.Implementation.UI.NavigationAssist.#ctor(Prism.Events.IEventAggregator,Prism.Regions.IRegionManager,CX.LoggingLib.ILogbook)
+- uid: Opus.Services.Implementation.UI.NavigationAssist.#ctor(Prism.Events.IEventAggregator,Prism.Regions.IRegionManager,ILogbook)
   name: NavigationAssist(IEventAggregator, IRegionManager, ILogbook)
-  href: api/Opus.Services.Implementation.UI.NavigationAssist.html#Opus_Services_Implementation_UI_NavigationAssist__ctor_Prism_Events_IEventAggregator_Prism_Regions_IRegionManager_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.Services.Implementation.UI.NavigationAssist.#ctor(Prism.Events.IEventAggregator,Prism.Regions.IRegionManager,CX.LoggingLib.ILogbook)
-  fullName: Opus.Services.Implementation.UI.NavigationAssist.NavigationAssist(Prism.Events.IEventAggregator, Prism.Regions.IRegionManager, CX.LoggingLib.ILogbook)
+  href: api/Opus.Services.Implementation.UI.NavigationAssist.html#Opus_Services_Implementation_UI_NavigationAssist__ctor_Prism_Events_IEventAggregator_Prism_Regions_IRegionManager_ILogbook_
+  commentId: M:Opus.Services.Implementation.UI.NavigationAssist.#ctor(Prism.Events.IEventAggregator,Prism.Regions.IRegionManager,ILogbook)
+  fullName: Opus.Services.Implementation.UI.NavigationAssist.NavigationAssist(Prism.Events.IEventAggregator, Prism.Regions.IRegionManager, ILogbook)
   nameWithType: NavigationAssist.NavigationAssist(IEventAggregator, IRegionManager, ILogbook)
 - uid: Opus.Services.Implementation.UI.NavigationAssist.#ctor*
   name: NavigationAssist
@@ -12716,6 +12989,51 @@ references:
   commentId: F:Opus.Services.Implementation.UI.NavigationAssist.Targets
   fullName: Opus.Services.Implementation.UI.NavigationAssist.Targets
   nameWithType: NavigationAssist.Targets
+- uid: Opus.Services.Implementation.UI.SchemeInstructions
+  name: SchemeInstructions
+  href: api/Opus.Services.Implementation.UI.SchemeInstructions.html
+  commentId: T:Opus.Services.Implementation.UI.SchemeInstructions
+  fullName: Opus.Services.Implementation.UI.SchemeInstructions
+  nameWithType: SchemeInstructions
+- uid: Opus.Services.Implementation.UI.SchemeInstructions.Instructions
+  name: Instructions()
+  href: api/Opus.Services.Implementation.UI.SchemeInstructions.html#Opus_Services_Implementation_UI_SchemeInstructions_Instructions
+  commentId: M:Opus.Services.Implementation.UI.SchemeInstructions.Instructions
+  fullName: Opus.Services.Implementation.UI.SchemeInstructions.Instructions()
+  nameWithType: SchemeInstructions.Instructions()
+- uid: Opus.Services.Implementation.UI.SchemeInstructions.Instructions*
+  name: Instructions
+  href: api/Opus.Services.Implementation.UI.SchemeInstructions.html#Opus_Services_Implementation_UI_SchemeInstructions_Instructions_
+  commentId: Overload:Opus.Services.Implementation.UI.SchemeInstructions.Instructions
+  isSpec: "True"
+  fullName: Opus.Services.Implementation.UI.SchemeInstructions.Instructions
+  nameWithType: SchemeInstructions.Instructions
+- uid: Opus.Services.Implementation.UI.SchemeInstructions.SetScheme(System.String)
+  name: SetScheme(String)
+  href: api/Opus.Services.Implementation.UI.SchemeInstructions.html#Opus_Services_Implementation_UI_SchemeInstructions_SetScheme_System_String_
+  commentId: M:Opus.Services.Implementation.UI.SchemeInstructions.SetScheme(System.String)
+  fullName: Opus.Services.Implementation.UI.SchemeInstructions.SetScheme(System.String)
+  nameWithType: SchemeInstructions.SetScheme(String)
+- uid: Opus.Services.Implementation.UI.SchemeInstructions.SetScheme*
+  name: SetScheme
+  href: api/Opus.Services.Implementation.UI.SchemeInstructions.html#Opus_Services_Implementation_UI_SchemeInstructions_SetScheme_
+  commentId: Overload:Opus.Services.Implementation.UI.SchemeInstructions.SetScheme
+  isSpec: "True"
+  fullName: Opus.Services.Implementation.UI.SchemeInstructions.SetScheme
+  nameWithType: SchemeInstructions.SetScheme
+- uid: Opus.Services.Implementation.UI.SchemeInstructions.Title
+  name: Title()
+  href: api/Opus.Services.Implementation.UI.SchemeInstructions.html#Opus_Services_Implementation_UI_SchemeInstructions_Title
+  commentId: M:Opus.Services.Implementation.UI.SchemeInstructions.Title
+  fullName: Opus.Services.Implementation.UI.SchemeInstructions.Title()
+  nameWithType: SchemeInstructions.Title()
+- uid: Opus.Services.Implementation.UI.SchemeInstructions.Title*
+  name: Title
+  href: api/Opus.Services.Implementation.UI.SchemeInstructions.html#Opus_Services_Implementation_UI_SchemeInstructions_Title_
+  commentId: Overload:Opus.Services.Implementation.UI.SchemeInstructions.Title
+  isSpec: "True"
+  fullName: Opus.Services.Implementation.UI.SchemeInstructions.Title
+  nameWithType: SchemeInstructions.Title
 - uid: Opus.Services.Input
   name: Opus.Services.Input
   href: api/Opus.Services.Input.html
@@ -13260,6 +13578,96 @@ references:
   isSpec: "True"
   fullName: Opus.Services.UI.INavigationTargetRegistry.AddTarget
   nameWithType: INavigationTargetRegistry.AddTarget
+- uid: Opus.Services.UI.Instruction
+  name: Instruction
+  href: api/Opus.Services.UI.Instruction.html
+  commentId: T:Opus.Services.UI.Instruction
+  fullName: Opus.Services.UI.Instruction
+  nameWithType: Instruction
+- uid: Opus.Services.UI.Instruction.#ctor(System.String,System.String)
+  name: Instruction(String, String)
+  href: api/Opus.Services.UI.Instruction.html#Opus_Services_UI_Instruction__ctor_System_String_System_String_
+  commentId: M:Opus.Services.UI.Instruction.#ctor(System.String,System.String)
+  fullName: Opus.Services.UI.Instruction.Instruction(System.String, System.String)
+  nameWithType: Instruction.Instruction(String, String)
+- uid: Opus.Services.UI.Instruction.#ctor*
+  name: Instruction
+  href: api/Opus.Services.UI.Instruction.html#Opus_Services_UI_Instruction__ctor_
+  commentId: Overload:Opus.Services.UI.Instruction.#ctor
+  isSpec: "True"
+  fullName: Opus.Services.UI.Instruction.Instruction
+  nameWithType: Instruction.Instruction
+- uid: Opus.Services.UI.Instruction.Content
+  name: Content
+  href: api/Opus.Services.UI.Instruction.html#Opus_Services_UI_Instruction_Content
+  commentId: P:Opus.Services.UI.Instruction.Content
+  fullName: Opus.Services.UI.Instruction.Content
+  nameWithType: Instruction.Content
+- uid: Opus.Services.UI.Instruction.Content*
+  name: Content
+  href: api/Opus.Services.UI.Instruction.html#Opus_Services_UI_Instruction_Content_
+  commentId: Overload:Opus.Services.UI.Instruction.Content
+  isSpec: "True"
+  fullName: Opus.Services.UI.Instruction.Content
+  nameWithType: Instruction.Content
+- uid: Opus.Services.UI.Instruction.Serial
+  name: Serial
+  href: api/Opus.Services.UI.Instruction.html#Opus_Services_UI_Instruction_Serial
+  commentId: P:Opus.Services.UI.Instruction.Serial
+  fullName: Opus.Services.UI.Instruction.Serial
+  nameWithType: Instruction.Serial
+- uid: Opus.Services.UI.Instruction.Serial*
+  name: Serial
+  href: api/Opus.Services.UI.Instruction.html#Opus_Services_UI_Instruction_Serial_
+  commentId: Overload:Opus.Services.UI.Instruction.Serial
+  isSpec: "True"
+  fullName: Opus.Services.UI.Instruction.Serial
+  nameWithType: Instruction.Serial
+- uid: Opus.Services.UI.ISchemeInstructions
+  name: ISchemeInstructions
+  href: api/Opus.Services.UI.ISchemeInstructions.html
+  commentId: T:Opus.Services.UI.ISchemeInstructions
+  fullName: Opus.Services.UI.ISchemeInstructions
+  nameWithType: ISchemeInstructions
+- uid: Opus.Services.UI.ISchemeInstructions.Instructions
+  name: Instructions()
+  href: api/Opus.Services.UI.ISchemeInstructions.html#Opus_Services_UI_ISchemeInstructions_Instructions
+  commentId: M:Opus.Services.UI.ISchemeInstructions.Instructions
+  fullName: Opus.Services.UI.ISchemeInstructions.Instructions()
+  nameWithType: ISchemeInstructions.Instructions()
+- uid: Opus.Services.UI.ISchemeInstructions.Instructions*
+  name: Instructions
+  href: api/Opus.Services.UI.ISchemeInstructions.html#Opus_Services_UI_ISchemeInstructions_Instructions_
+  commentId: Overload:Opus.Services.UI.ISchemeInstructions.Instructions
+  isSpec: "True"
+  fullName: Opus.Services.UI.ISchemeInstructions.Instructions
+  nameWithType: ISchemeInstructions.Instructions
+- uid: Opus.Services.UI.ISchemeInstructions.SetScheme(System.String)
+  name: SetScheme(String)
+  href: api/Opus.Services.UI.ISchemeInstructions.html#Opus_Services_UI_ISchemeInstructions_SetScheme_System_String_
+  commentId: M:Opus.Services.UI.ISchemeInstructions.SetScheme(System.String)
+  fullName: Opus.Services.UI.ISchemeInstructions.SetScheme(System.String)
+  nameWithType: ISchemeInstructions.SetScheme(String)
+- uid: Opus.Services.UI.ISchemeInstructions.SetScheme*
+  name: SetScheme
+  href: api/Opus.Services.UI.ISchemeInstructions.html#Opus_Services_UI_ISchemeInstructions_SetScheme_
+  commentId: Overload:Opus.Services.UI.ISchemeInstructions.SetScheme
+  isSpec: "True"
+  fullName: Opus.Services.UI.ISchemeInstructions.SetScheme
+  nameWithType: ISchemeInstructions.SetScheme
+- uid: Opus.Services.UI.ISchemeInstructions.Title
+  name: Title()
+  href: api/Opus.Services.UI.ISchemeInstructions.html#Opus_Services_UI_ISchemeInstructions_Title
+  commentId: M:Opus.Services.UI.ISchemeInstructions.Title
+  fullName: Opus.Services.UI.ISchemeInstructions.Title()
+  nameWithType: ISchemeInstructions.Title()
+- uid: Opus.Services.UI.ISchemeInstructions.Title*
+  name: Title
+  href: api/Opus.Services.UI.ISchemeInstructions.html#Opus_Services_UI_ISchemeInstructions_Title_
+  commentId: Overload:Opus.Services.UI.ISchemeInstructions.Title
+  isSpec: "True"
+  fullName: Opus.Services.UI.ISchemeInstructions.Title
+  nameWithType: ISchemeInstructions.Title
 - uid: Opus.Services.UI.MoveCommand
   name: MoveCommand
   href: api/Opus.Services.UI.MoveCommand.html
@@ -13317,13 +13725,13 @@ references:
   commentId: T:Opus.Services.UI.ProgressContainer
   fullName: Opus.Services.UI.ProgressContainer
   nameWithType: ProgressContainer
-- uid: Opus.Services.UI.ProgressContainer.#ctor(System.Threading.Tasks.Task,Opus.Services.UI.IDialog,System.IProgress{CX.PdfLib.Common.ProgressReport})
+- uid: Opus.Services.UI.ProgressContainer.#ctor(System.Threading.Tasks.Task,Opus.Services.UI.IDialog,System.IProgress{ProgressReport})
   name: ProgressContainer(Task, IDialog, IProgress<ProgressReport>)
-  href: api/Opus.Services.UI.ProgressContainer.html#Opus_Services_UI_ProgressContainer__ctor_System_Threading_Tasks_Task_Opus_Services_UI_IDialog_System_IProgress_CX_PdfLib_Common_ProgressReport__
-  commentId: M:Opus.Services.UI.ProgressContainer.#ctor(System.Threading.Tasks.Task,Opus.Services.UI.IDialog,System.IProgress{CX.PdfLib.Common.ProgressReport})
+  href: api/Opus.Services.UI.ProgressContainer.html#Opus_Services_UI_ProgressContainer__ctor_System_Threading_Tasks_Task_Opus_Services_UI_IDialog_System_IProgress_ProgressReport__
+  commentId: M:Opus.Services.UI.ProgressContainer.#ctor(System.Threading.Tasks.Task,Opus.Services.UI.IDialog,System.IProgress{ProgressReport})
   name.vb: ProgressContainer(Task, IDialog, IProgress(Of ProgressReport))
-  fullName: Opus.Services.UI.ProgressContainer.ProgressContainer(System.Threading.Tasks.Task, Opus.Services.UI.IDialog, System.IProgress<CX.PdfLib.Common.ProgressReport>)
-  fullName.vb: Opus.Services.UI.ProgressContainer.ProgressContainer(System.Threading.Tasks.Task, Opus.Services.UI.IDialog, System.IProgress(Of CX.PdfLib.Common.ProgressReport))
+  fullName: Opus.Services.UI.ProgressContainer.ProgressContainer(System.Threading.Tasks.Task, Opus.Services.UI.IDialog, System.IProgress<ProgressReport>)
+  fullName.vb: Opus.Services.UI.ProgressContainer.ProgressContainer(System.Threading.Tasks.Task, Opus.Services.UI.IDialog, System.IProgress(Of ProgressReport))
   nameWithType: ProgressContainer.ProgressContainer(Task, IDialog, IProgress<ProgressReport>)
   nameWithType.vb: ProgressContainer.ProgressContainer(Task, IDialog, IProgress(Of ProgressReport))
 - uid: Opus.Services.UI.ProgressContainer.#ctor*
@@ -14606,11 +15014,11 @@ references:
   commentId: T:Opus.ViewModels.MainWindowViewModel
   fullName: Opus.ViewModels.MainWindowViewModel
   nameWithType: MainWindowViewModel
-- uid: Opus.ViewModels.MainWindowViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,CX.LoggingLib.ILogbook)
+- uid: Opus.ViewModels.MainWindowViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,ILogbook)
   name: MainWindowViewModel(IEventAggregator, IConfiguration, IDialogAssist, ILogbook)
-  href: api/Opus.ViewModels.MainWindowViewModel.html#Opus_ViewModels_MainWindowViewModel__ctor_Prism_Events_IEventAggregator_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_IDialogAssist_CX_LoggingLib_ILogbook_
-  commentId: M:Opus.ViewModels.MainWindowViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,CX.LoggingLib.ILogbook)
-  fullName: Opus.ViewModels.MainWindowViewModel.MainWindowViewModel(Prism.Events.IEventAggregator, Opus.Services.Configuration.IConfiguration, Opus.Services.UI.IDialogAssist, CX.LoggingLib.ILogbook)
+  href: api/Opus.ViewModels.MainWindowViewModel.html#Opus_ViewModels_MainWindowViewModel__ctor_Prism_Events_IEventAggregator_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_IDialogAssist_ILogbook_
+  commentId: M:Opus.ViewModels.MainWindowViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.IDialogAssist,ILogbook)
+  fullName: Opus.ViewModels.MainWindowViewModel.MainWindowViewModel(Prism.Events.IEventAggregator, Opus.Services.Configuration.IConfiguration, Opus.Services.UI.IDialogAssist, ILogbook)
   nameWithType: MainWindowViewModel.MainWindowViewModel(IEventAggregator, IConfiguration, IDialogAssist, ILogbook)
 - uid: Opus.ViewModels.MainWindowViewModel.#ctor*
   name: MainWindowViewModel

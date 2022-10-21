@@ -1,2 +1,28 @@
-- name: Introduction
+- name: Johdanto
   href: intro.md
+- name: Yleistä
+  href: general.md
+- name: Kirjanmerkkien erotteleminen
+  items:
+    - name: Asetukset
+      href: extract/settings.md
+    - name: Kirjanmerkkien valitseminen
+      items:
+        - name: Tiedostojen tuominen
+          href: extract/selecting_files.md
+        - name: Tiedostojen valinnat
+          href: extract/file_options.md
+        - name: Uuden kirjanmerkin lisääminen
+          href: extract/add_bookmark.md
+        - name: Valintojen tekeminen
+          href: extract/selecting_bookmarks.md
+    - name: Valitut kirjanmerkit
+      items:
+        - name: Luettelo
+          href: extract/selected_bookmarks.md
+        - name: Kirjanmerkkien järjesteleminen
+          href: extract/reordering_bookmarks.md
+        - name: Kirjanmerkkien muokkaaminen
+          href: extract/modifying_selected_bookmarks.md
+    - name: Tallentaminen
+      href: extract/saving.md

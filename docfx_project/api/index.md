@@ -1,2 +1,6 @@
-# PLACEHOLDER
-TODO: Add .NET projects to the *src* folder and run `docfx` to generate **REAL** *API Documentation*!
+# Tekninen dokumentaatio
+
+## Sisältö
+
+Tämä osio sisältää sovelluksen teknisen dokumentaation.
+Vasemmalla olevasta valikosta voit valita ohjelman osia tarkasteltavaksi.

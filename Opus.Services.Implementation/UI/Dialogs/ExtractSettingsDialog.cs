@@ -1,11 +1,5 @@
-﻿using CX.LoggingLib;
-using Opus.Services.UI;
-using System;
-using System.Collections.Generic;
+﻿using Opus.Services.UI;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Opus.Services.Implementation.UI.Dialogs
 {
@@ -74,6 +68,17 @@ namespace Opus.Services.Implementation.UI.Dialogs
         /// If true, pdf/a cannot be produced.
         /// </summary>
         public bool PdfADisabled { get; set; }
+
+        private bool groupByFiles;
+
+        /// <summary>
+        /// If true, bookmarks will be grouped by files when producing a single output file.
+        /// </summary>
+        public bool GroupByFiles
+        {
+            get => groupByFiles;
+            set => SetProperty(ref groupByFiles, value);
+        }
 
         private int annotations;
 

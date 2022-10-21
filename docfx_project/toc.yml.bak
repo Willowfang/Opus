@@ -1,5 +1,0 @@
-- name: Articles
-  href: articles/
-- name: References
-  href: api/
-  homepage: api/index.md

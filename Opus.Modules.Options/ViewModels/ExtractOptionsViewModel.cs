@@ -46,7 +46,8 @@ namespace Opus.Modules.Options.ViewModels
                 PdfA = configuration.ExtractionConvertPdfA,
                 PdfADisabled = configuration.ExtractionPdfADisabled,
                 Annotations = configuration.Annotations,
-                CreateZip = configuration.ExtractionCreateZip
+                CreateZip = configuration.ExtractionCreateZip,
+                GroupByFiles = configuration.GroupByFiles
             };
         }
 
@@ -62,6 +63,7 @@ namespace Opus.Modules.Options.ViewModels
             configuration.ExtractionConvertPdfA = dialog.PdfA;
             configuration.Annotations = dialog.Annotations;
             configuration.ExtractionCreateZip = dialog.CreateZip;
+            configuration.GroupByFiles = dialog.GroupByFiles;
         }
         #endregion
     }

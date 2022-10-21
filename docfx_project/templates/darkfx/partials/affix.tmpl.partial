@@ -7,12 +7,12 @@
       <ul class="nav">
         {{#docurl}}
         <li>
-          <a href="{{docurl}}" class="contribution-link">{{__global.improveThisDoc}}</a>
+          <a href="{{docurl}}" class="contribution-link">Parannusehdotus</a>
         </li>
         {{/docurl}}
         {{#sourceurl}}
         <li>
-          <a href="{{sourceurl}}" class="contribution-link">{{__global.viewSource}}</a>
+          <a href="{{sourceurl}}" class="contribution-link">Näytä lähdekoodi</a>
         </li>
         {{/sourceurl}}
       </ul>
@@ -32,9 +32,9 @@
     </div>
 
     <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-    <h5>{{__global.inThisArticle}}</h5>
+    <h5>Tässä osiossa</h5>
     <div></div>
-    <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+    <!-- <p><a class="back-to-top" href="#top">Takaisin ylös</a><p> -->
     </nav>
   </div>
 </div>
