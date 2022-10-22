@@ -26,3 +26,11 @@
           href: extract/modifying_selected_bookmarks.md
     - name: Tallentaminen
       href: extract/saving.md
+- name: Työkappaleiden luominen
+  items:
+    - name: Asetukset
+      href: workcopy/settings.md
+    - name: Tiedostojen valitseminen
+      href: workcopy/selecting_files.md
+    - name: Valintojen muokkaaminen
+      href: workcopy/editing_files.md

@@ -32,7 +32,7 @@ Tämä asetus määrittää sen, miten erottelun tuloksena syntyvät tiedostot n
 "tiedosto1.pdf", "tiedosto2.pdf", "tiedosto3.pdf", jne.
 ```
 
-Nimeämiskentässä voi käyttää seuraavia paikkamerkkejä:
+Nimeämiskentässä voi käyttää seuraavia paikanvaraajia:
 
 - \[kirjanmerkki\]
 - \[numero\]

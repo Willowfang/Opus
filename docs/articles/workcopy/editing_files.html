@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Erottelun asetukset | Opus Docs </title>
+    <title>Valintojen muokkaaminen | Opus Docs </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Erottelun asetukset | Opus Docs ">
+    <meta name="title" content="Valintojen muokkaaminen | Opus Docs ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -66,63 +66,24 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="erottelun-asetukset">Erottelun asetukset</h1>
+<h1 id="valintojen-muokkaaminen">Valintojen muokkaaminen</h1>
 
 <hr>
-<h2 id="asetusten-avaaminen">Asetusten avaaminen</h2>
+<h2 id="yksittäisen-tiedoston-poistaminen-listalta">Yksittäisen tiedoston poistaminen listalta</h2>
 <details>
-    <summary>Asetusten painike</summary>
-<p><img src="../../images/extract_settings_button.png" alt="Erottelun asetusten avauspainike"></p>
+    <summary>Tiedoston poistaminen</summary>
+<p><img src="../../images/workcopy_remove_file.png" alt="Tiedoston poistamisen painike"></p>
 </details>
-<p>Erottelua koskevat asetukset saat avattua klikkaamalla näkymän keskivaiheilla olevaa hammasratasta.</p>
-<h2 id="erottelun-asetukset-1">Erottelun asetukset</h2>
+<p>Saat poistettua tuomasi tiedoston käsiteltävien tiedostojen listalta klikkaamalla näkymän alaosassa olevaa roskakorin kuvaa. Tiedosto poistetaan ainoastaan listalta, alkuperäinen tiedosto ei katoa sen sijaintipaikasta mihinkään.</p>
+<h2 id="listan-tyhjentäminen">Listan tyhjentäminen</h2>
 <details>
-    <summary>Asetusikkuna</summary>
-<p><img src="../../images/extract_settings_dialog.png" alt="Erottelun asetusten ikkuna"></p>
+    <summary>Listan tyhjentäminen</summary>
+<p><img src="../../images/workcopy_clear_list.png" alt="Listan tyhjentämisen painike"></p>
 </details>
-<p>Erottelua koskien voit muokata seuraavia asetuksia:</p>
-<h3 id="1-nimen-rakenne">1. Nimen rakenne</h3>
-<p>Tämä asetus määrittää sen, miten erottelun tuloksena syntyvät tiedostot nimetään. Tähän kirjoitettu teksti annetaan tiedostojen (tai yhteen tiedostoon sisältyvien kirjanmerkkien) nimeksi. Mikäli kansioon tallennetaan samannimisiä tiedostoja, niiden perään lisätään järjestysluku.</p>
-<pre><code>&quot;tiedosto1.pdf&quot;, &quot;tiedosto2.pdf&quot;, &quot;tiedosto3.pdf&quot;, jne.
-</code></pre>
-<p>Nimeämiskentässä voi käyttää seuraavia paikanvaraajia:</p>
-<ul>
-<li>[kirjanmerkki]</li>
-<li>[numero]</li>
-<li>[tiedosto]</li>
-</ul>
-<p>Paikanvaraajista voi käyttää myös niiden englanninkielisiä vastineita (bookmark, number, file). Paikanvaraajat on kirjoitettava tekstiin hakasulkeiden sisään.</p>
-<p>Kun lopulliset tiedostot nimetään, paikanvaraajat korvataan niiden osoittamalla sisällöllä seuraavasti:</p>
-<ul>
-<li>kirjanmerkki -&gt; Kyseisen kirjanmerkin nimi.</li>
-<li>numero -&gt; Juokseva numerointi eroteltavien kirjanmerkkien järjestyksessä. Numeroon lisätään nollia niin, että numeroiden määrä on jokaisen nimen osalta sama (esim. 01, 02, 03 ... 11, 12, 13 ... nn).</li>
-<li>tiedosto -&gt; kyseessä olevan tiedoston nimi.</li>
-</ul>
-<p><em>Esimerkki</em></p>
-<p>Asetuksiin on nimeämisen malliksi kirjattu &quot;Asiakirja [numero], nimeltä [kirjanmerkki]&quot;.
-Erotetaan kolme kirjanmerkkiä samasta tiedostosta. Lopputuloksena ovat seuraavasti nimetyt tiedostot:</p>
-<pre><code>&quot;Asiakirja 1, nimeltä tiliote&quot;, &quot;Asiakirja 2, nimeltä laskut&quot; ja &quot;Asiakirja 3, nimeltä kuvat&quot;
-</code></pre>
-<h3 id="2-kysy-aina-erikseen">2. Kysy aina erikseen</h3>
-<p>Mikäli tämä asetus laitetaan päälle, kysytään nimen mallia jokaisen erottelun yhteydessä aina erikseen. Oletusarvoksi annetaan asetuksiin kirjattu nimen malli.</p>
-<h3 id="3-muunna-pdfa-muotoon">3. Muunna pdf/a-muotoon</h3>
-<p>Mikäli tämä asetus valitaan, muunnetaan lopputuloksena tuotettavat pdf-tiedostot arkistokelpoiseen pdf/a-muotoon.</p>
-<p><em>HUOM!</em> Tämän ominaisuuden käyttäminen vaatii PDF-Tools -ohjelmiston olemassaoloa oletusarvoisessa asennussijainnissa Program Files -kansiossa. Mikäli ohjelmistoa ei löydy, tätä asetusta ei voi laittaa päälle.</p>
-<h3 id="4-pakkaa-zip-tiedostoon">4. Pakkaa zip-tiedostoon</h3>
-<p>Mikäli tämä asetus laitetaan päälle, lopputuloksena tuotettavat pdf-tiedostot pakataan lopuksi zip-muotoiseen tiedostoon. Zip-tiedoston tallennussijaintia kysytään erikseen.</p>
-<h3 id="5-järjestä-tiedostojen-mukaan">5. Järjestä tiedostojen mukaan</h3>
-<p>Mikäli tämä asetus valitaan ja valitaan kirjanmerkit tallennettavaksi <em>yhteen tiedostoon</em>, luodaan tiedostoon yläkirjanmerkit niiden tiedostonimien mukaan, joista kirjanmerkit erotellaan. Tämän jälkeen kirjanmerkit ryhmitellään uudelleen nimettyinä kyseisten yläkirjanmerkkien alle.</p>
-<p><em>HUOM!</em> Tämä asetus ei koske erottelua erillisiin tiedostoihin.</p>
-<h3 id="6-merkinnät">6. Merkinnät</h3>
-<p>Tämä valinta määrittää sen, mitä pdf-tiedostoissa oleville merkinnöille (kommenteille) tehdään erotelluissa tiedostoissa. Valintamahdollisuuksia on kolme:</p>
-<ol>
-<li><em>Pidä kaikki</em>. Kaikki merkinnät säilytetään sellaisina, kuin ne ovat alkuperäisissä tiedostoissa.</li>
-<li><em>Poista valitut</em>. Sinulta kysytään erikseen, keiden tekijöiden kommentit lopputuotteista poistetaan.</li>
-<li><em>Poista kaikki</em>. Kaikki asiakirjoista löytyvät merkinnät poistetaan lopputuotteista.</li>
-</ol>
+<p>Saat tyhjennettyä koko käsiteltävien tiedostojen listan klikkaamalla näkymän alaosassa olevaa rastin kuvaa.</p>
 <hr>
 <blockquote>
-<p>&quot;Thank you, Mario! But our Princess is in another castle!&quot; - Toad</p>
+<p>&quot;...&quot; - Gordon Freeman</p>
 </blockquote>
 </article>
           </div>
@@ -132,7 +93,7 @@ Erotetaan kolme kirjanmerkkiä samasta tiedostosta. Lopputuloksena ovat seuraava
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Willowfang/Opus/blob/master/docfx_project/articles/extract/settings.md/#L1" class="contribution-link">Parannusehdotus</a>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/docfx_project/articles/workcopy/editing_files.md/#L1" class="contribution-link">Parannusehdotus</a>
                   </li>
                 </ul>
               </div>
