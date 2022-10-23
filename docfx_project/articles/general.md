@@ -15,7 +15,7 @@ Klikkaa aloitusvalikkoa työpöydän vasemmassa alalaidassa (ikkunan kuva). Etsi
 ## Päävalikko
 
 <details>
-    <summary>Päävalikko</summary>
+    <summary><span class="expand-stub"></span>Päävalikko</summary>
 
 ![Kuva päävalikosta](../images/main_menu.png)
 
@@ -30,7 +30,7 @@ Yläpalkista löydät seuraavat kolme erillistä osiota:
 ### 1. Aloita alusta -painike
 
 <details>
-    <summary>Aloita alusta</summary>
+    <summary><span class="expand-stub"></span>Aloita alusta</summary>
 
 ![Kuva aloita alusta painikkeesta](../images/top_bar_reset.png)
 
@@ -43,7 +43,7 @@ Jos olet esimerkiksi erottelemassa kirjanmerkkejä ja haluatkin aloittaa alusta 
 ### 2. Toiminnon otsake
 
 <details>
-    <summary>Otsake</summary>
+    <summary><span class="expand-stub"></span>Otsake</summary>
 
 ![Kuva otsakkeesta](../images/top_bar_heading.png)
 
@@ -54,7 +54,7 @@ Tämä otsake kertoo sen, mitä toimintoa olet kulloinkin käyttämässä.
 ### 3. Yleisten toimintojen valikko
 
 <details>
-    <summary>Yleiset toiminnot</summary>
+    <summary><span class="expand-stub"></span>Yleiset toiminnot</summary>
 
 ![Kuva yleisten toimintojen painikkeesta](../images/top_bar_menu.png)
 

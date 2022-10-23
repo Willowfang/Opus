@@ -5,7 +5,7 @@
 ## Merkkien järjestyksen vaihtaminen
 
 <details>
-    <summary>Merkkien järjestys</summary>
+    <summary><span class="expand-stub"></span>Merkkien järjestys</summary>
 
 ![Kirjanmerkkien järjestyksen muuttaminen](../../images/extract_rearrange_bookmarks.gif)
 
@@ -24,7 +24,7 @@ Toinen tapa on valita kirjanmerkki klikkaamalla sitä ja sen jälkeen painaa sam
 ## Ulkopuolisen tiedoston merkinnän lisääminen
 
 <details>
-    <summary>Ulkopuolinen tiedosto</summary>
+    <summary><span class="expand-stub"></span>Ulkopuolinen tiedosto</summary>
 
 ![Ulkopuolisen tiedoston lisäämisen prosessi](../../images/extract_add_external.gif)
 

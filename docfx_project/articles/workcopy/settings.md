@@ -5,7 +5,7 @@
 ## Asetusten avaaminen
 
 <details>
-    <summary>Asetusten painike</summary>
+    <summary><span class="expand-stub"></span>Asetusten painike</summary>
 
 ![Työkappaleiden asetusten avauspainike](../../images/workcopy_settings_button.png)
 
@@ -16,7 +16,7 @@ Työkappaleiden luontia koskevat asetukset saat avattua klikkaamalla näkymän k
 ## Työkappaleiden asetukset
 
 <details>
-    <summary>Asetusikkuna</summary>
+    <summary><span class="expand-stub"></span>Asetusikkuna</summary>
 
 ![Työkappaleiden asetusten ikkuna](../../images/workcopy_settings_dialog.png)
 

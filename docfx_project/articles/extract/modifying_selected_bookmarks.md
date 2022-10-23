@@ -5,7 +5,7 @@
 ## Kirjanmerkin muokkaamisen painike
 
 <details>
-    <summary>Valitun merkin muokkaaminen</summary>
+    <summary><span class="expand-stub"></span>Valitun merkin muokkaaminen</summary>
 
 ![Valitun kirjanmerkin muokkaamisen painike](../../images/extract_edit_selected_bookmark.png)
 
@@ -18,7 +18,7 @@ Valitun kirjanmerkin tietoja saat muokattua valitsemalla haluamasi kirjanmerkin 
 ## Tietojen muokkaamisen valinnat
 
 <details>
-    <summary>Tietojen muokkausikkuna</summary>
+    <summary><span class="expand-stub"></span>Tietojen muokkausikkuna</summary>
 
 ![Kirjanmerkin tietojen muokkaamisen ikkuna](../../images/extract_edit_selected_bookmark_dialog.png)
 
@@ -29,7 +29,7 @@ Valitun kirjanmerkin tietoja saat muokattua avautuvassa ikkunassa. Kaikki tiedot
 ## Kirjanmerkin poistaminen
 
 <details>
-    <summary>Kirjanmerkin poistamisen painike</summary>
+    <summary><span class="expand-stub"></span>Kirjanmerkin poistamisen painike</summary>
 
 ![Kirjanmerkin poistamisen painike](../../images/extract_delete_selected_bookmark.png)
 

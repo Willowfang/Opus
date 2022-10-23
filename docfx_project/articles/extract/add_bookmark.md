@@ -5,7 +5,7 @@
 ## Uuden kirjanmerkin painike
 
 <details>
-    <summary>Uuden kirjanmerkin lisääminen</summary>
+    <summary><span class="expand-stub"></span>Uuden kirjanmerkin lisääminen</summary>
 
 ![Uuden kirjanmerkin lisäämisen painike](../../images/extract_add_bookmark_button.png)
 
@@ -16,7 +16,7 @@ Uuden kirjanmerkin saat lisättyä asiakirjaan klikkaamalla kirjanmerkkilistauks
 ## Uuden kirjanmerkin valinnat
 
 <details>
-    <summary>Kirjanmerkin valinnat</summary>
+    <summary><span class="expand-stub"></span>Kirjanmerkin valinnat</summary>
 
 ![Uuden kirjanmerkin lisäämisen ikkuna](../../images/extract_add_bookmark_dialog.png)
 

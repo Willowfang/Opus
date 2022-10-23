@@ -10,6 +10,8 @@ body.dark-theme {
   --color-background-dark: #1e1e1e;
   --color-background-table-alt: #212123;
   --color-background-quote: #69696e;
+  --color-details-border: #212123;
+  --color-details-border-open: #343437;
 }
 
 body.light-theme {
@@ -20,6 +22,8 @@ body.light-theme {
   --color-background-subnav: #f5f5f5;
   --color-background-dark: #ddd;
   --color-background-table-alt: #f9f9f9;
+  --color-details-border: #4a4a4a;
+  --color-details-border-open: #69696e;
 }
 
 body {
@@ -74,41 +78,70 @@ article h4 {
 }
 
 details {
-  margin-bottom: 20px;
+  margin: 0 auto;
+  background: #282828;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0.1rem 1rem -0.5rem rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-details > summary {
+h1 + details,
+h2 + details,
+h3 + details,
+h4 + details {
+  margin-top: 0px;
+}
+
+summary {
   font-size: larger;
-  padding: 5px;
-  background-color: #212123;
+  display: block;
+  background: #333;
   color: #66afe9;
-  box-shadow: 0px 3px 5px #171717;
+  padding-left: 5.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
   cursor: pointer;
 }
 
+summary:before {
+  content: "";
+  border-width: 0.8rem;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff;
+  position: absolute;
+  top: 1.5rem;
+  left: 2.3rem;
+  transform: rotate(0);
+  transform-origin: 0.4rem 50%;
+  transition: 0.25s transform ease;
+}
+
+summary:hover {
+  opacity: 0.8;
+}
+
+details[open] > summary:before {
+  transform: rotate(90deg);
+}
+
+details[open] > summary {
+  margin-bottom: 0.5rem;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
 details > p {
-  padding: 5px;
-  background-color: #333337;
-  box-shadow: 0px 7px 10px #171717;
   text-align: center;
 }
 
-.level2 {
-  padding-inline-start: 5px;
-  color: #337ab7;
-}
-
-.level3 {
-  padding-inline-start: 10px;
-  color: #84329b;
-}
-
-.level4 {
-  padding-inline-start: 15px;
-}
-
-.level5 {
-  padding-inline-start: 20px;
+details > p > img {
+  text-align: center;
+  border-radius: 1%;
 }
 
 .navbar-brand > img {
@@ -170,11 +203,44 @@ details > p {
 }
 
 .svg {
-  height: 100%;
+  height: 90%;
+  margin-top: 3px;
+}
+
+.toc .level2 {
+  padding-inline-start: 5px;
+  color: #337ab7;
+}
+
+.toc .level3 {
+  padding-inline-start: 10px;
+  padding-top: 5px;
+  color: #84329b;
+}
+
+.toc .level4 {
+  padding-top: 5px;
+  padding-inline-start: 15px;
+}
+
+.level5 {
+  padding-inline-start: 20px;
 }
 
 .toc .level1 > li {
   font-weight: 400;
+}
+
+.toc .level2 > li {
+  padding-bottom: 3px;
+}
+
+.toc .level3 > li {
+  padding-bottom: 3px;
+}
+
+.toc .level4 > li {
+  padding-bottom: 3px;
 }
 
 .toc .nav > li > a {

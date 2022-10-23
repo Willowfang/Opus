@@ -3,7 +3,7 @@
 ---
 
 <details>
-    <summary>Tiedostojen valitseminen käsiteltäväksi</summary>
+    <summary><span class="expand-stub"></span>Tiedostojen valitseminen käsiteltäväksi</summary>
 
 ![Tiedostojen valitsemisen painike](../../images/extract_select_files.png)
 

@@ -5,7 +5,7 @@
 ## Asetusten avaaminen
 
 <details>
-    <summary>Asetusten painike</summary>
+    <summary><span class="expand-stub"></span>Asetusten painike</summary>
 
 ![Erottelun asetusten avauspainike](../../images/extract_settings_button.png)
 
@@ -16,7 +16,7 @@ Erottelua koskevat asetukset saat avattua klikkaamalla näkymän keskivaiheilla 
 ## Erottelun asetukset
 
 <details>
-    <summary>Asetusikkuna</summary>
+    <summary><span class="expand-stub"></span>Asetusikkuna</summary>
 
 ![Erottelun asetusten ikkuna](../../images/extract_settings_dialog.png)
 

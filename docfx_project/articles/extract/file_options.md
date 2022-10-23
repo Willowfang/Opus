@@ -5,7 +5,7 @@
 ## Käsiteltävän tiedoston valitseminen
 
 <details>
-    <summary>Tiedoston valinta</summary>
+    <summary><span class="expand-stub"></span>Tiedoston valinta</summary>
 
 ![Tiedoston valitsemisen valikko](../../images/extract_select_dropdown.png)
 
@@ -14,7 +14,7 @@
 Ohjelmaan avaamistasi tiedostoista saat valittua käsiteltävän tiedoston näkymän vasemman laidan alasvetovalikosta. Valitessasi käsiteltävän tiedoston, sen sisältämät kirjanmerkit listataan alasvetovalikon alapuolella olevaan listaan.
 
 <details>
-    <summary>Kirjanmerkkien listaus</summary>
+    <summary><span class="expand-stub"></span>Kirjanmerkkien listaus</summary>
 
 ![Kirjanmerkkien listauksen näkymä](../../images/extract_bookmarks_section.png)
 
@@ -23,7 +23,7 @@ Ohjelmaan avaamistasi tiedostoista saat valittua käsiteltävän tiedoston näky
 ## Tiedoston avaaminen tarkasteltavaksi
 
 <details>
-    <summary>Tarkasteltavaksi avaaminen</summary>
+    <summary><span class="expand-stub"></span>Tarkasteltavaksi avaaminen</summary>
 
 ![Tarkasteltavaksi avaamisen painike](../../images/extract_view_file.png)
 
@@ -34,7 +34,7 @@ Saat avattua käsiteltävän tiedoston tarkasteltavaksi järjestelmän oletussov
 ## Tiedoston poistaminen listalta
 
 <details>
-    <summary>Tiedoston poistaminen</summary>
+    <summary><span class="expand-stub"></span>Tiedoston poistaminen</summary>
 
 ![Tiedoston poistamisen painike](../../images/extract_remove_file.png)
 

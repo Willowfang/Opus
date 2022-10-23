@@ -3,7 +3,7 @@
 ---
 
 <details>
-    <summary>Valittujen luettelo</summary>
+    <summary><span class="expand-stub"></span>Valittujen luettelo</summary>
 
 ![Valittujen kirjanmerkkien luettelonäkymä](../../images/extract_selected_bookmarks.png)
 
@@ -16,7 +16,7 @@ Kustakin kirjanmerkistä on näkyvissä seuraavat tiedot:
 ### 1. Järjestysluku
 
 <details>
-    <summary>Kirjanmerkin järjestysluku</summary>
+    <summary><span class="expand-stub"></span>Kirjanmerkin järjestysluku</summary>
 
 ![Kirjanmerkin järjestysluvun sijainti](../../images/extract_selected_bookmark_serial.png)
 
@@ -29,7 +29,7 @@ Mikäli erottelun [nimen rakenteessa](settings.md#1-nimen-rakenne) on käytöss�
 ### 2. Nimi
 
 <details>
-    <summary>Kirjanmerkin nimi</summary>
+    <summary><span class="expand-stub"></span>Kirjanmerkin nimi</summary>
 
 ![Kirjanmerkin nimen sijainti](../../images/extract_selected_bookmark_name.png)
 
@@ -42,7 +42,7 @@ Mikäli erottelun [nimen rakenteessa](settings.md#1-nimen-rakenne) on käytöss�
 ### 3. Sivuväli
 
 <details>
-    <summary>Merkin sivuväli</summary>
+    <summary><span class="expand-stub"></span>Merkin sivuväli</summary>
 
 ![Kirjanmerkin sivuvälin sijainti](../../images/extract_selected_bookmark_pagerange.png)
 
@@ -53,7 +53,7 @@ Tämä kohta näyttää valitun kirjanmerkin alku- ja loppusivut, eli sen sivuv�
 ### 4. Tiedoston nimi
 
 <details>
-    <summary>Merkin tiedoston nimi</summary>
+    <summary><span class="expand-stub"></span>Merkin tiedoston nimi</summary>
 
 ![Kirjanmerkin tiedoston nimen sijainti](../../images/extract_selected_bookmark_filename.png)
 

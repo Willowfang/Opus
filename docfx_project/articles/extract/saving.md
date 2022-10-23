@@ -9,7 +9,7 @@ Valittujen kirjanmerkkien mukaiset, tiedostoista eroteltavat sivualueet voi tall
 ### 1. Tallentaminen samaan tiedostoon
 
 <details>
-    <summary>Sama tiedosto</summary>
+    <summary><span class="expand-stub"></span>Sama tiedosto</summary>
 
 ![Samaan tiedostoon tallentamisen painike](../../images/extract_save_one_file.png)
 
@@ -22,7 +22,7 @@ Lopputuote tallennetaan valitsemallasi nimellä valitsemaasi kansioon. Tiedosto 
 ### 2. Tallentaminen erillisiin tiedostoihin
 
 <details>
-    <summary>Erilliset tiedostot</summary>
+    <summary><span class="expand-stub"></span>Erilliset tiedostot</summary>
 
 ![Erillisiin tiedostoihin tallentamisen painike](../../images/extract_save_multiple_files.png)
 
@@ -45,7 +45,7 @@ Vastaa kysymyksiin, mikäli niitä esitetään.
 ## Ilmoitus valmistumisesta
 
 <details>
-    <summary>Erottelun valmistuminen</summary>
+    <summary><span class="expand-stub"></span>Erottelun valmistuminen</summary>
 
 ![Erottelun valmistumisen ikkuna](../../images/extract_extraction_finished.png)
 

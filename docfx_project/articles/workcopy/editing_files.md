@@ -5,7 +5,7 @@
 ## Yksittäisen tiedoston poistaminen listalta
 
 <details>
-    <summary>Tiedoston poistaminen</summary>
+    <summary><span class="expand-stub"></span>Tiedoston poistaminen</summary>
 
 ![Tiedoston poistamisen painike](../../images/workcopy_remove_file.png)
 
@@ -16,7 +16,7 @@ Saat poistettua tuomasi tiedoston käsiteltävien tiedostojen listalta klikkaama
 ## Listan tyhjentäminen
 
 <details>
-    <summary>Listan tyhjentäminen</summary>
+    <summary><span class="expand-stub"></span>Listan tyhjentäminen</summary>
 
 ![Listan tyhjentämisen painike](../../images/workcopy_clear_list.png)
 

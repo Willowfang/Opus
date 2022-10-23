@@ -3,7 +3,7 @@
 ---
 
 <details>
-    <summary>Kirjanmerkkien valinta</summary>
+    <summary><span class="expand-stub"></span>Kirjanmerkkien valinta</summary>
 
 ![Kirjanmerkkien valitsemisen vaiheet](../../images/extract_select_bookmarks.gif)
 
