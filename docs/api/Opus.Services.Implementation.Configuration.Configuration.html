@@ -1,0 +1,804 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Configuration
+   | Opus Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Configuration
+   | Opus Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo38pt.png" alt="Opus Docs">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Opus.Services.Implementation.Configuration.Configuration">
+  
+  
+  <h1 id="Opus_Services_Implementation_Configuration_Configuration" data-uid="Opus.Services.Implementation.Configuration.Configuration" class="text-break">Class Configuration
+  </h1>
+  <div class="markdown level0 summary"><p>Configuration implementation for <a class="xref" href="Opus.Services.Configuration.IConfiguration.html">IConfiguration</a> service.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Prism.Mvvm.BindableBase</span></div>
+    <div class="level2"><span class="xref">Configuration</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+    <div><a class="xref" href="Opus.Services.Configuration.IConfiguration.html">IConfiguration</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.Action, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.RaisePropertyChanged(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Opus.Services.Implementation.Configuration.html">Opus.Services.Implementation.Configuration</a></h6>
+  <h6><strong>Assembly</strong>: Opus.Services.Implementation.dll</h6>
+  <h5 id="Opus_Services_Implementation_Configuration_Configuration_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Configuration : BindableBase, INotifyPropertyChanged, IConfiguration</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration__ctor.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L188">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_Configuration_Configuration__ctor_" data-uid="Opus.Services.Implementation.Configuration.Configuration.#ctor*"></a>
+  <h4 id="Opus_Services_Implementation_Configuration_Configuration__ctor" data-uid="Opus.Services.Implementation.Configuration.Configuration.#ctor">Configuration()</h4>
+  <div class="markdown level1 summary"><p>Create new configuration instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Configuration()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration_Annotations.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration.Annotations%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L102">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_Configuration_Configuration_Annotations_" data-uid="Opus.Services.Implementation.Configuration.Configuration.Annotations*"></a>
+  <h4 id="Opus_Services_Implementation_Configuration_Configuration_Annotations" data-uid="Opus.Services.Implementation.Configuration.Configuration.Annotations">Annotations</h4>
+  <div class="markdown level1 summary"><p>Option for dealing with annotations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Annotations { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration_CompositionDeleteConverted.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration.CompositionDeleteConverted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L168">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_Configuration_Configuration_CompositionDeleteConverted_" data-uid="Opus.Services.Implementation.Configuration.Configuration.CompositionDeleteConverted*"></a>
+  <h4 id="Opus_Services_Implementation_Configuration_Configuration_CompositionDeleteConverted" data-uid="Opus.Services.Implementation.Configuration.Configuration.CompositionDeleteConverted">CompositionDeleteConverted</h4>
+  <div class="markdown level1 summary"><p>If true, delete converted files after composition is done.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CompositionDeleteConverted { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration_CompositionSearchSubDirectories.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration.CompositionSearchSubDirectories%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L157">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_Configuration_Configuration_CompositionSearchSubDirectories_" data-uid="Opus.Services.Implementation.Configuration.Configuration.CompositionSearchSubDirectories*"></a>
+  <h4 id="Opus_Services_Implementation_Configuration_Configuration_CompositionSearchSubDirectories" data-uid="Opus.Services.Implementation.Configuration.Configuration.CompositionSearchSubDirectories">CompositionSearchSubDirectories</h4>
+  <div class="markdown level1 summary"><p>If true, include subdirectories in the search when looking for matching files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CompositionSearchSubDirectories { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration_ConfigurationFile.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration.ConfigurationFile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L29">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_Configuration_Configuration_ConfigurationFile_" data-uid="Opus.Services.Implementation.Configuration.Configuration.ConfigurationFile*"></a>
+  <h4 id="Opus_Services_Implementation_Configuration_Configuration_ConfigurationFile" data-uid="Opus.Services.Implementation.Configuration.Configuration.ConfigurationFile">ConfigurationFile</h4>
+  <div class="markdown level1 summary"><p>Configuration file location as path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ConfigurationFile { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration_DefaultProfile.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration.DefaultProfile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L179">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_Configuration_Configuration_DefaultProfile_" data-uid="Opus.Services.Implementation.Configuration.Configuration.DefaultProfile*"></a>
+  <h4 id="Opus_Services_Implementation_Configuration_Configuration_DefaultProfile" data-uid="Opus.Services.Implementation.Configuration.Configuration.DefaultProfile">DefaultProfile</h4>
+  <div class="markdown level1 summary"><p>Default composition profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guid DefaultProfile { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Guid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration_ExtractionConvertPdfA.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration.ExtractionConvertPdfA%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L69">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_Configuration_Configuration_ExtractionConvertPdfA_" data-uid="Opus.Services.Implementation.Configuration.Configuration.ExtractionConvertPdfA*"></a>
+  <h4 id="Opus_Services_Implementation_Configuration_Configuration_ExtractionConvertPdfA" data-uid="Opus.Services.Implementation.Configuration.Configuration.ExtractionConvertPdfA">ExtractionConvertPdfA</h4>
+  <div class="markdown level1 summary"><p>If true, convert extracted files to pdf/a.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ExtractionConvertPdfA { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration_ExtractionCreateZip.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration.ExtractionCreateZip%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L91">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_Configuration_Configuration_ExtractionCreateZip_" data-uid="Opus.Services.Implementation.Configuration.Configuration.ExtractionCreateZip*"></a>
+  <h4 id="Opus_Services_Implementation_Configuration_Configuration_ExtractionCreateZip" data-uid="Opus.Services.Implementation.Configuration.Configuration.ExtractionCreateZip">ExtractionCreateZip</h4>
+  <div class="markdown level1 summary"><p>Compress extracted bookmarks into a zip-file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ExtractionCreateZip { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration_ExtractionPdfADisabled.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration.ExtractionPdfADisabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L80">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_Configuration_Configuration_ExtractionPdfADisabled_" data-uid="Opus.Services.Implementation.Configuration.Configuration.ExtractionPdfADisabled*"></a>
+  <h4 id="Opus_Services_Implementation_Configuration_Configuration_ExtractionPdfADisabled" data-uid="Opus.Services.Implementation.Configuration.Configuration.ExtractionPdfADisabled">ExtractionPdfADisabled</h4>
+  <div class="markdown level1 summary"><p>If true, pdf/a-conversion is not allowed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ExtractionPdfADisabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration_ExtractionTitle.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration.ExtractionTitle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L47">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_Configuration_Configuration_ExtractionTitle_" data-uid="Opus.Services.Implementation.Configuration.Configuration.ExtractionTitle*"></a>
+  <h4 id="Opus_Services_Implementation_Configuration_Configuration_ExtractionTitle" data-uid="Opus.Services.Implementation.Configuration.Configuration.ExtractionTitle">ExtractionTitle</h4>
+  <div class="markdown level1 summary"><p>Title template for extracted bookmarks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ExtractionTitle { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration_ExtractionTitleAsk.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration.ExtractionTitleAsk%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L58">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_Configuration_Configuration_ExtractionTitleAsk_" data-uid="Opus.Services.Implementation.Configuration.Configuration.ExtractionTitleAsk*"></a>
+  <h4 id="Opus_Services_Implementation_Configuration_Configuration_ExtractionTitleAsk" data-uid="Opus.Services.Implementation.Configuration.Configuration.ExtractionTitleAsk">ExtractionTitleAsk</h4>
+  <div class="markdown level1 summary"><p>If true, always ask for the template.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ExtractionTitleAsk { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration_GroupByFiles.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration.GroupByFiles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L113">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_Configuration_Configuration_GroupByFiles_" data-uid="Opus.Services.Implementation.Configuration.Configuration.GroupByFiles*"></a>
+  <h4 id="Opus_Services_Implementation_Configuration_Configuration_GroupByFiles" data-uid="Opus.Services.Implementation.Configuration.Configuration.GroupByFiles">GroupByFiles</h4>
+  <div class="markdown level1 summary"><p>If true, group bookmarks by file when extracting into a single file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GroupByFiles { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration_LanguageCode.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration.LanguageCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L36">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_Configuration_Configuration_LanguageCode_" data-uid="Opus.Services.Implementation.Configuration.Configuration.LanguageCode*"></a>
+  <h4 id="Opus_Services_Implementation_Configuration_Configuration_LanguageCode" data-uid="Opus.Services.Implementation.Configuration.Configuration.LanguageCode">LanguageCode</h4>
+  <div class="markdown level1 summary"><p>Current language code (two letters, e.g. &quot;fi&quot;).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LanguageCode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration_MergeAddPageNumbers.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration.MergeAddPageNumbers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L146">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_Configuration_Configuration_MergeAddPageNumbers_" data-uid="Opus.Services.Implementation.Configuration.Configuration.MergeAddPageNumbers*"></a>
+  <h4 id="Opus_Services_Implementation_Configuration_Configuration_MergeAddPageNumbers" data-uid="Opus.Services.Implementation.Configuration.Configuration.MergeAddPageNumbers">MergeAddPageNumbers</h4>
+  <div class="markdown level1 summary"><p>If true, add page numbers when merging documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool MergeAddPageNumbers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration_UnsignedTitleTemplate.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration.UnsignedTitleTemplate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L124">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_Configuration_Configuration_UnsignedTitleTemplate_" data-uid="Opus.Services.Implementation.Configuration.Configuration.UnsignedTitleTemplate*"></a>
+  <h4 id="Opus_Services_Implementation_Configuration_Configuration_UnsignedTitleTemplate" data-uid="Opus.Services.Implementation.Configuration.Configuration.UnsignedTitleTemplate">UnsignedTitleTemplate</h4>
+  <div class="markdown level1 summary"><p>Template for work copy file names.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string UnsignedTitleTemplate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration_WorkCopyFlattenRedactions.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration.WorkCopyFlattenRedactions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L135">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_Configuration_Configuration_WorkCopyFlattenRedactions_" data-uid="Opus.Services.Implementation.Configuration.Configuration.WorkCopyFlattenRedactions*"></a>
+  <h4 id="Opus_Services_Implementation_Configuration_Configuration_WorkCopyFlattenRedactions" data-uid="Opus.Services.Implementation.Configuration.Configuration.WorkCopyFlattenRedactions">WorkCopyFlattenRedactions</h4>
+  <div class="markdown level1 summary"><p>If true, flatten redactions (make them red rectangles) when creating work copies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool WorkCopyFlattenRedactions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration_CreateNew_System_String_.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration.CreateNew(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L276">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_Configuration_Configuration_CreateNew_" data-uid="Opus.Services.Implementation.Configuration.Configuration.CreateNew*"></a>
+  <h4 id="Opus_Services_Implementation_Configuration_Configuration_CreateNew_System_String_" data-uid="Opus.Services.Implementation.Configuration.Configuration.CreateNew(System.String)">CreateNew(String)</h4>
+  <div class="markdown level1 summary"><p>Create new configuration instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static Configuration CreateNew(string configFile)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">configFile</span></td>
+        <td><p>Location to save config at.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.Services.Implementation.Configuration.Configuration.html">Configuration</a></td>
+        <td><p>Configuration instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration_Load_System_String_System_Nullable_ILogbook__.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration.Load(System.String%2CSystem.Nullable%7BILogbook%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L196">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_Configuration_Configuration_Load_" data-uid="Opus.Services.Implementation.Configuration.Configuration.Load*"></a>
+  <h4 id="Opus_Services_Implementation_Configuration_Configuration_Load_System_String_System_Nullable_ILogbook__" data-uid="Opus.Services.Implementation.Configuration.Configuration.Load(System.String,System.Nullable{ILogbook})">Load(String, Nullable&lt;ILogbook&gt;)</h4>
+  <div class="markdown level1 summary"><p>Load configuration from a JSON file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IConfiguration Load(string configFile, ILogbook? logbook = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">configFile</span></td>
+        <td><p>Path of the file to load.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ILogbook</span>&gt;</td>
+        <td><span class="parametername">logbook</span></td>
+        <td><p>Logging service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.Services.Configuration.IConfiguration.html">IConfiguration</a></td>
+        <td><p>Configuration service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+  <div>
+      <a class="xref" href="Opus.Services.Configuration.IConfiguration.html">IConfiguration</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_Configuration_Configuration.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.Configuration.Configuration%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Parannusehdotus</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/Configuration/Configuration.cs/#L18" class="contribution-link">Näytä lähdekoodi</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>Tässä osiossa</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Takaisin ylös</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Takaisin ylös</a>
+            </span>
+            <div class="pull-left">
+              
+              <span><strong>Opus</strong>: ohjeet</span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

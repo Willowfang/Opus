@@ -1,0 +1,862 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ExtractionViewModel
+   | Opus Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ExtractionViewModel
+   | Opus Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo38pt.png" alt="Opus Docs">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel">
+  
+  
+  <h1 id="Opus_Modules_Action_ViewModels_ExtractionViewModel" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel" class="text-break">Class ExtractionViewModel
+  </h1>
+  <div class="markdown level0 summary"><p>ViewModel dealing with files and bookmarks up for extraction. Sends info and receives it from
+<a class="xref" href="Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.html">ExtractionOrderViewModel</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Prism.Mvvm.BindableBase</span></div>
+    <div class="level2"><a class="xref" href="Opus.Services.Implementation.Logging.LoggingCapable-1.html">LoggingCapable</a>&lt;<a class="xref" href="Opus.Modules.Action.ViewModels.ExtractionViewModel.html">ExtractionViewModel</a>&gt;</div>
+    <div class="level3"><a class="xref" href="Opus.Core.Base.ViewModelBaseLogging-1.html">ViewModelBaseLogging</a>&lt;<a class="xref" href="Opus.Modules.Action.ViewModels.ExtractionViewModel.html">ExtractionViewModel</a>&gt;</div>
+    <div class="level4"><span class="xref">ExtractionViewModel</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+    <div><span class="xref">Prism.Regions.INavigationAware</span></div>
+    <div><a class="xref" href="Opus.Services.UI.INavigationTarget.html">INavigationTarget</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Opus.Core.Base.ViewModelBaseLogging-1.html#Opus_Core_Base_ViewModelBaseLogging_1_IsNavigationTarget_Prism_Regions_NavigationContext_">ViewModelBaseLogging&lt;ExtractionViewModel&gt;.IsNavigationTarget(NavigationContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Core.Base.ViewModelBaseLogging-1.html#Opus_Core_Base_ViewModelBaseLogging_1_OnNavigatedFrom_Prism_Regions_NavigationContext_">ViewModelBaseLogging&lt;ExtractionViewModel&gt;.OnNavigatedFrom(NavigationContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Core.Base.ViewModelBaseLogging-1.html#Opus_Core_Base_ViewModelBaseLogging_1_OnNavigatedTo_Prism_Regions_NavigationContext_">ViewModelBaseLogging&lt;ExtractionViewModel&gt;.OnNavigatedTo(NavigationContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.Logging.LoggingCapable-1.html#Opus_Services_Implementation_Logging_LoggingCapable_1_logbook">LoggingCapable&lt;ExtractionViewModel&gt;.logbook</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.Logging.LoggingCapable-1.html#Opus_Services_Implementation_Logging_LoggingCapable_1_ChangeLogbook_ILogbook_">LoggingCapable&lt;ExtractionViewModel&gt;.ChangeLogbook(ILogbook)</a>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.Action, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.RaisePropertyChanged(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Opus.Modules.Action.ViewModels.html">Opus.Modules.Action.ViewModels</a></h6>
+  <h6><strong>Assembly</strong>: Opus.Modules.Actions.dll</h6>
+  <h5 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ExtractionViewModel : ViewModelBaseLogging&lt;ExtractionViewModel&gt;, INotifyPropertyChanged, INavigationAware, INavigationTarget</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel__ctor_Prism_Events_IEventAggregator_Opus_Services_Input_IPathSelection_Opus_Services_UI_IDialogAssist_Opus_Services_UI_INavigationTargetRegistry_Opus_Core_Executors_IExtractionExecutor_IBookmarkService_Opus_Services_Configuration_IConfiguration_ILogbook_.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.%23ctor(Prism.Events.IEventAggregator%2COpus.Services.Input.IPathSelection%2COpus.Services.UI.IDialogAssist%2COpus.Services.UI.INavigationTargetRegistry%2COpus.Core.Executors.IExtractionExecutor%2CIBookmarkService%2COpus.Services.Configuration.IConfiguration%2CILogbook)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L107">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel__ctor_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.#ctor*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel__ctor_Prism_Events_IEventAggregator_Opus_Services_Input_IPathSelection_Opus_Services_UI_IDialogAssist_Opus_Services_UI_INavigationTargetRegistry_Opus_Core_Executors_IExtractionExecutor_IBookmarkService_Opus_Services_Configuration_IConfiguration_ILogbook_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Input.IPathSelection,Opus.Services.UI.IDialogAssist,Opus.Services.UI.INavigationTargetRegistry,Opus.Core.Executors.IExtractionExecutor,IBookmarkService,Opus.Services.Configuration.IConfiguration,ILogbook)">ExtractionViewModel(IEventAggregator, IPathSelection, IDialogAssist, INavigationTargetRegistry, IExtractionExecutor, IBookmarkService, IConfiguration, ILogbook)</h4>
+  <div class="markdown level1 summary"><p>ViewModel for handling selection of extractable bookmarks in files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExtractionViewModel(IEventAggregator eventAggregator, IPathSelection input, IDialogAssist dialogAssist, INavigationTargetRegistry navregistry, IExtractionExecutor executor, IBookmarkService bookmarkService, IConfiguration configuration, ILogbook logbook)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Events.IEventAggregator</span></td>
+        <td><span class="parametername">eventAggregator</span></td>
+        <td><p>Service for publishing and receiving events between viewModels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Services.Input.IPathSelection.html">IPathSelection</a></td>
+        <td><span class="parametername">input</span></td>
+        <td><p>Service for getting a file or folderpath from a user.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Services.UI.IDialogAssist.html">IDialogAssist</a></td>
+        <td><span class="parametername">dialogAssist</span></td>
+        <td><p>Service for showing and otherwise handling dialogs.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Services.UI.INavigationTargetRegistry.html">INavigationTargetRegistry</a></td>
+        <td><span class="parametername">navregistry</span></td>
+        <td><p>Navigation registry for viewModels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Core.Executors.IExtractionExecutor.html">IExtractionExecutor</a></td>
+        <td><span class="parametername">executor</span></td>
+        <td><p>Service for performing bookmark extraction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IBookmarkService</span></td>
+        <td><span class="parametername">bookmarkService</span></td>
+        <td><p>Service for retrieving and manipulating bookmarks.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Services.Configuration.IConfiguration.html">IConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>Program-wide configurations.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ILogbook</span></td>
+        <td><span class="parametername">logbook</span></td>
+        <td><p>Loggin service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_AddCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.AddCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L267">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_AddCommand_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.AddCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_AddCommand" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.AddCommand">AddCommand</h4>
+  <div class="markdown level1 summary"><p>Command for adding new bookmarks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncCommand AddCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AsyncAwaitBestPractices.MVVM.IAsyncCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_DeleteFileCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.DeleteFileCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L388">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_DeleteFileCommand_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.DeleteFileCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_DeleteFileCommand" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.DeleteFileCommand">DeleteFileCommand</h4>
+  <div class="markdown level1 summary"><p>Command from deleting the file from the list</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateCommand DeleteFileCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Commands.DelegateCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_FileBookmarks.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.FileBookmarks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L69">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_FileBookmarks_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.FileBookmarks*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_FileBookmarks" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.FileBookmarks">FileBookmarks</h4>
+  <div class="markdown level1 summary"><p>The collection of bookmarks from the currently selected file (or null, if no file selected or no bookmarks).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObservableCollection&lt;FileAndBookmarkWrapper&gt; FileBookmarks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.ObservableCollection</span>&lt;<a class="xref" href="Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_Files.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.Files%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L50">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_Files_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.Files*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_Files" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.Files">Files</h4>
+  <div class="markdown level1 summary"><p>Collection for storing info on files, whose bookmarks can be selected and extracted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObservableCollection&lt;FileAndBookmarksStorage&gt; Files { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.ObservableCollection</span>&lt;<a class="xref" href="Opus.Core.Wrappers.FileAndBookmarksStorage.html">FileAndBookmarksStorage</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_SelectedBookmark.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectedBookmark%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L82">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_SelectedBookmark_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectedBookmark*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_SelectedBookmark" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectedBookmark">SelectedBookmark</h4>
+  <div class="markdown level1 summary"><p>The bookmark that has been last selected by user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileAndBookmarkWrapper SelectedBookmark { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_SelectedFile.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectedFile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L56">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_SelectedFile_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectedFile*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_SelectedFile" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectedFile">SelectedFile</h4>
+  <div class="markdown level1 summary"><p>The file that is being currently worked on. Notify properties on change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileAndBookmarksStorage SelectedFile { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.Core.Wrappers.FileAndBookmarksStorage.html">FileAndBookmarksStorage</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_SelectionCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectionCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L316">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_SelectionCommand_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectionCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_SelectionCommand" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectionCommand">SelectionCommand</h4>
+  <div class="markdown level1 summary"><p>Command for bookmark selection changes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateCommand&lt;SelectionChangedEventArgs&gt; SelectionCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Commands.DelegateCommand</span>&lt;<span class="xref">System.Windows.Controls.SelectionChangedEventArgs</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_ViewFileCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.ViewFileCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L359">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_ViewFileCommand_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.ViewFileCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_ViewFileCommand" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.ViewFileCommand">ViewFileCommand</h4>
+  <div class="markdown level1 summary"><p>Command for viewing the selected file in an external program.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateCommand ViewFileCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Commands.DelegateCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_BookmarkAdded_Opus_Events_Data_BookmarkInfo_.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.BookmarkAdded(Opus.Events.Data.BookmarkInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L439">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_BookmarkAdded_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.BookmarkAdded*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_BookmarkAdded_Opus_Events_Data_BookmarkInfo_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.BookmarkAdded(Opus.Events.Data.BookmarkInfo)">BookmarkAdded(BookmarkInfo)</h4>
+  <div class="markdown level1 summary"><p>Method for handling new user requested bookmarks.</p>
+<p>
+Bookmark will be added to the hierarchy of current documents bookmarks and immediately selected.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void BookmarkAdded(BookmarkInfo input)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.Events.Data.BookmarkInfo.html">BookmarkInfo</a></td>
+        <td><span class="parametername">input</span></td>
+        <td><p>Info for the new bookmark</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_DeSelectChildrenRecursively_Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper_System_Collections_ObjectModel_ObservableCollection_Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper__.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectChildrenRecursively(Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper%2CSystem.Collections.ObjectModel.ObservableCollection%7BOpus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L526">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_DeSelectChildrenRecursively_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectChildrenRecursively*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_DeSelectChildrenRecursively_Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper_System_Collections_ObjectModel_ObservableCollection_Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper__" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectChildrenRecursively(Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper,System.Collections.ObjectModel.ObservableCollection{Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper})">DeSelectChildrenRecursively(FileAndBookmarkWrapper, ObservableCollection&lt;FileAndBookmarkWrapper&gt;)</h4>
+  <div class="markdown level1 summary"><p>Deselect all children of a bookmark in a recursive manner.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void DeSelectChildrenRecursively(FileAndBookmarkWrapper mark, ObservableCollection&lt;FileAndBookmarkWrapper&gt; bookmarks)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a></td>
+        <td><span class="parametername">mark</span></td>
+        <td><p>Bookmark whose children should be deselected</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.ObservableCollection</span>&lt;<a class="xref" href="Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a>&gt;</td>
+        <td><span class="parametername">bookmarks</span></td>
+        <td><p>Bookmarks to look the children in</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_DeSelectParent_Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper_System_Collections_ObjectModel_ObservableCollection_Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper__.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectParent(Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper%2CSystem.Collections.ObjectModel.ObservableCollection%7BOpus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L550">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_DeSelectParent_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectParent*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_DeSelectParent_Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper_System_Collections_ObjectModel_ObservableCollection_Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper__" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.DeSelectParent(Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper,System.Collections.ObjectModel.ObservableCollection{Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper})">DeSelectParent(FileAndBookmarkWrapper, ObservableCollection&lt;FileAndBookmarkWrapper&gt;)</h4>
+  <div class="markdown level1 summary"><p>Deselect the parent of a bookmark.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void DeSelectParent(FileAndBookmarkWrapper mark, ObservableCollection&lt;FileAndBookmarkWrapper&gt; bookmarks)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a></td>
+        <td><span class="parametername">mark</span></td>
+        <td><p>Bookmark whose parent should be deselected.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.ObservableCollection</span>&lt;<a class="xref" href="Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a>&gt;</td>
+        <td><span class="parametername">bookmarks</span></td>
+        <td><p>Bookmarks to look the parent in.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteAddCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteAddCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L274">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteAddCommand_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteAddCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteAddCommand" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteAddCommand">ExecuteAddCommand()</h4>
+  <div class="markdown level1 summary"><p>Execution method for bookmark addition command, see <a class="xref" href="Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_AddCommand">AddCommand</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async Task ExecuteAddCommand()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteDeleteFileCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteDeleteFileCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L395">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteDeleteFileCommand_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteDeleteFileCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteDeleteFileCommand" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteDeleteFileCommand">ExecuteDeleteFileCommand()</h4>
+  <div class="markdown level1 summary"><p>Execution method for file deletion command, see <a class="xref" href="Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_DeleteFileCommand">DeleteFileCommand</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteDeleteFileCommand()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteSelectionCommand_System_Windows_Controls_SelectionChangedEventArgs_.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteSelectionCommand(System.Windows.Controls.SelectionChangedEventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L328">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteSelectionCommand_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteSelectionCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteSelectionCommand_System_Windows_Controls_SelectionChangedEventArgs_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteSelectionCommand(System.Windows.Controls.SelectionChangedEventArgs)">ExecuteSelectionCommand(SelectionChangedEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Execution method for selection change command, see <a class="xref" href="Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_SelectionCommand">SelectionCommand</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteSelectionCommand(SelectionChangedEventArgs parameter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Controls.SelectionChangedEventArgs</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>Event arguments of changed selection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteViewFileCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteViewFileCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L365">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteViewFileCommand_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteViewFileCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_ExecuteViewFileCommand" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.ExecuteViewFileCommand">ExecuteViewFileCommand()</h4>
+  <div class="markdown level1 summary"><p>Execution method for file viewing command, see <a class="xref" href="Opus.Modules.Action.ViewModels.ExtractionViewModel.html#Opus_Modules_Action_ViewModels_ExtractionViewModel_ViewFileCommand">ViewFileCommand</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteViewFileCommand()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_OnArrival.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.OnArrival%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L141">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_OnArrival_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.OnArrival*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_OnArrival" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.OnArrival">OnArrival()</h4>
+  <div class="markdown level1 summary"><p>See <a class="xref" href="Opus.Services.UI.INavigationTarget.html">INavigationTarget</a>, <a class="xref" href="Opus.Services.UI.INavigationTargetRegistry.html">INavigationTargetRegistry</a> and
+<a class="xref" href="Opus.Services.UI.INavigationAssist.html">INavigationAssist</a> for more information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnArrival()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_Reset.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.Reset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L186">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_Reset_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.Reset*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_Reset" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.Reset">Reset()</h4>
+  <div class="markdown level1 summary"><p>See <a class="xref" href="Opus.Services.UI.INavigationTarget.html">INavigationTarget</a>, <a class="xref" href="Opus.Services.UI.INavigationTargetRegistry.html">INavigationTargetRegistry</a> and
+<a class="xref" href="Opus.Services.UI.INavigationAssist.html">INavigationAssist</a> for more information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_SelectChildrenRecursively_Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper_.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectChildrenRecursively(Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L512">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_SelectChildrenRecursively_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectChildrenRecursively*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_SelectChildrenRecursively_Opus_Services_Implementation_Data_Extraction_FileAndBookmarkWrapper_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.SelectChildrenRecursively(Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper)">SelectChildrenRecursively(FileAndBookmarkWrapper)</h4>
+  <div class="markdown level1 summary"><p>Select all children of a bookmark in a recursive manner.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SelectChildrenRecursively(FileAndBookmarkWrapper mark)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a></td>
+        <td><span class="parametername">mark</span></td>
+        <td><p>Bookmark whose children should be selected</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel_WhenLeaving.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel.WhenLeaving%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L166">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_ExtractionViewModel_WhenLeaving_" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.WhenLeaving*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_ExtractionViewModel_WhenLeaving" data-uid="Opus.Modules.Action.ViewModels.ExtractionViewModel.WhenLeaving">WhenLeaving()</h4>
+  <div class="markdown level1 summary"><p>See <a class="xref" href="Opus.Services.UI.INavigationTarget.html">INavigationTarget</a>, <a class="xref" href="Opus.Services.UI.INavigationTargetRegistry.html">INavigationTargetRegistry</a> and
+<a class="xref" href="Opus.Services.UI.INavigationAssist.html">INavigationAssist</a> for more information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WhenLeaving()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+  <div>
+      <span class="xref">Prism.Regions.INavigationAware</span>
+  </div>
+  <div>
+      <a class="xref" href="Opus.Services.UI.INavigationTarget.html">INavigationTarget</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_ExtractionViewModel.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.ExtractionViewModel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Parannusehdotus</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/ExtractionViewModel.cs/#L32" class="contribution-link">Näytä lähdekoodi</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>Tässä osiossa</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Takaisin ylös</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Takaisin ylös</a>
+            </span>
+            <div class="pull-left">
+              
+              <span><strong>Opus</strong>: ohjeet</span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

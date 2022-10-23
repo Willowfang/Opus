@@ -1,0 +1,1405 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CompositionViewModel
+   | Opus Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CompositionViewModel
+   | Opus Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo38pt.png" alt="Opus Docs">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel">
+  
+  
+  <h1 id="Opus_Modules_Action_ViewModels_CompositionViewModel" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel" class="text-break">Class CompositionViewModel
+  </h1>
+  <div class="markdown level0 summary"><p>View model for composition views. Handles actions dealing with document composition.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Prism.Mvvm.BindableBase</span></div>
+    <div class="level2"><a class="xref" href="Opus.Services.Implementation.Logging.LoggingCapable-1.html">LoggingCapable</a>&lt;<a class="xref" href="Opus.Modules.Action.ViewModels.CompositionViewModel.html">CompositionViewModel</a>&gt;</div>
+    <div class="level3"><a class="xref" href="Opus.Core.Base.ViewModelBaseLogging-1.html">ViewModelBaseLogging</a>&lt;<a class="xref" href="Opus.Modules.Action.ViewModels.CompositionViewModel.html">CompositionViewModel</a>&gt;</div>
+    <div class="level4"><span class="xref">CompositionViewModel</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+    <div><span class="xref">Prism.Regions.INavigationAware</span></div>
+    <div><a class="xref" href="Opus.Services.UI.INavigationTarget.html">INavigationTarget</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Opus.Core.Base.ViewModelBaseLogging-1.html#Opus_Core_Base_ViewModelBaseLogging_1_IsNavigationTarget_Prism_Regions_NavigationContext_">ViewModelBaseLogging&lt;CompositionViewModel&gt;.IsNavigationTarget(NavigationContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Core.Base.ViewModelBaseLogging-1.html#Opus_Core_Base_ViewModelBaseLogging_1_OnNavigatedFrom_Prism_Regions_NavigationContext_">ViewModelBaseLogging&lt;CompositionViewModel&gt;.OnNavigatedFrom(NavigationContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Core.Base.ViewModelBaseLogging-1.html#Opus_Core_Base_ViewModelBaseLogging_1_OnNavigatedTo_Prism_Regions_NavigationContext_">ViewModelBaseLogging&lt;CompositionViewModel&gt;.OnNavigatedTo(NavigationContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.Logging.LoggingCapable-1.html#Opus_Services_Implementation_Logging_LoggingCapable_1_logbook">LoggingCapable&lt;CompositionViewModel&gt;.logbook</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.Logging.LoggingCapable-1.html#Opus_Services_Implementation_Logging_LoggingCapable_1_ChangeLogbook_ILogbook_">LoggingCapable&lt;CompositionViewModel&gt;.ChangeLogbook(ILogbook)</a>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.Action, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.RaisePropertyChanged(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Opus.Modules.Action.ViewModels.html">Opus.Modules.Action.ViewModels</a></h6>
+  <h6><strong>Assembly</strong>: Opus.Modules.Actions.dll</h6>
+  <h5 id="Opus_Modules_Action_ViewModels_CompositionViewModel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CompositionViewModel : ViewModelBaseLogging&lt;CompositionViewModel&gt;, INotifyPropertyChanged, INavigationAware, INavigationTarget</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel__ctor_Prism_Events_IEventAggregator_Opus_Services_Input_IPathSelection_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_INavigationTargetRegistry_Opus_Services_UI_IDialogAssist_Opus_Services_Data_Composition_ICompositionOptions_Opus_Services_Data_IComposer_ILogbook_.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.%23ctor(Prism.Events.IEventAggregator%2COpus.Services.Input.IPathSelection%2COpus.Services.Configuration.IConfiguration%2COpus.Services.UI.INavigationTargetRegistry%2COpus.Services.UI.IDialogAssist%2COpus.Services.Data.Composition.ICompositionOptions%2COpus.Services.Data.IComposer%2CILogbook)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L133">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel__ctor_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.#ctor*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel__ctor_Prism_Events_IEventAggregator_Opus_Services_Input_IPathSelection_Opus_Services_Configuration_IConfiguration_Opus_Services_UI_INavigationTargetRegistry_Opus_Services_UI_IDialogAssist_Opus_Services_Data_Composition_ICompositionOptions_Opus_Services_Data_IComposer_ILogbook_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Services.Input.IPathSelection,Opus.Services.Configuration.IConfiguration,Opus.Services.UI.INavigationTargetRegistry,Opus.Services.UI.IDialogAssist,Opus.Services.Data.Composition.ICompositionOptions,Opus.Services.Data.IComposer,ILogbook)">CompositionViewModel(IEventAggregator, IPathSelection, IConfiguration, INavigationTargetRegistry, IDialogAssist, ICompositionOptions, IComposer, ILogbook)</h4>
+  <div class="markdown level1 summary"><p>Create a new viewmodel for the composition view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompositionViewModel(IEventAggregator aggregator, IPathSelection input, IConfiguration configuration, INavigationTargetRegistry navReg, IDialogAssist dialogAssist, ICompositionOptions options, IComposer composer, ILogbook logbook)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Events.IEventAggregator</span></td>
+        <td><span class="parametername">aggregator</span></td>
+        <td><p>Common event handling service.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Services.Input.IPathSelection.html">IPathSelection</a></td>
+        <td><span class="parametername">input</span></td>
+        <td><p>Service for user filepath input.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Services.Configuration.IConfiguration.html">IConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>Program-wide configurations.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Services.UI.INavigationTargetRegistry.html">INavigationTargetRegistry</a></td>
+        <td><span class="parametername">navReg</span></td>
+        <td><p>Navigation registry service for registering this viewModel.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Services.UI.IDialogAssist.html">IDialogAssist</a></td>
+        <td><span class="parametername">dialogAssist</span></td>
+        <td><p>Service showing and otherwise handling dialogs.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Services.Data.Composition.ICompositionOptions.html">ICompositionOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Composition options as their own instance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Services.Data.IComposer.html">IComposer</a></td>
+        <td><span class="parametername">composer</span></td>
+        <td><p>Composition services.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ILogbook</span></td>
+        <td><span class="parametername">logbook</span></td>
+        <td><p>Logging service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_AddFileSegmentCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.AddFileSegmentCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L692">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_AddFileSegmentCommand_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.AddFileSegmentCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_AddFileSegmentCommand" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.AddFileSegmentCommand">AddFileSegmentCommand</h4>
+  <div class="markdown level1 summary"><p>Command for adding a new file segment for the profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncCommand AddFileSegmentCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AsyncAwaitBestPractices.MVVM.IAsyncCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_AddProfileCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.AddProfileCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L350">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_AddProfileCommand_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.AddProfileCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_AddProfileCommand" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.AddProfileCommand">AddProfileCommand</h4>
+  <div class="markdown level1 summary"><p>Command for adding a new profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncCommand AddProfileCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AsyncAwaitBestPractices.MVVM.IAsyncCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_AddProfileMenuOpen.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.AddProfileMenuOpen%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L103">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_AddProfileMenuOpen_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.AddProfileMenuOpen*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_AddProfileMenuOpen" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.AddProfileMenuOpen">AddProfileMenuOpen</h4>
+  <div class="markdown level1 summary"><p>Is profile addition menu open?</p>
+<p>
+Is bound to from the view.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AddProfileMenuOpen { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_AddSegmentMenuOpen.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.AddSegmentMenuOpen%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L89">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_AddSegmentMenuOpen_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.AddSegmentMenuOpen*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_AddSegmentMenuOpen" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.AddSegmentMenuOpen">AddSegmentMenuOpen</h4>
+  <div class="markdown level1 summary"><p>Is the segment addition menu open?</p>
+<p>
+Is bound to from the view.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AddSegmentMenuOpen { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_AddTitleSegmentCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.AddTitleSegmentCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L824">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_AddTitleSegmentCommand_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.AddTitleSegmentCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_AddTitleSegmentCommand" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.AddTitleSegmentCommand">AddTitleSegmentCommand</h4>
+  <div class="markdown level1 summary"><p>Command for addin a title segment (vs. file segment).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncCommand AddTitleSegmentCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AsyncAwaitBestPractices.MVVM.IAsyncCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_CopyProfileCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.CopyProfileCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L445">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_CopyProfileCommand_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.CopyProfileCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_CopyProfileCommand" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.CopyProfileCommand">CopyProfileCommand</h4>
+  <div class="markdown level1 summary"><p>Command for copying the current profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncCommand CopyProfileCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AsyncAwaitBestPractices.MVVM.IAsyncCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_DeleteProfileCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteProfileCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L400">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_DeleteProfileCommand_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteProfileCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_DeleteProfileCommand" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteProfileCommand">DeleteProfileCommand</h4>
+  <div class="markdown level1 summary"><p>Command for deleting the selected profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncCommand DeleteProfileCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AsyncAwaitBestPractices.MVVM.IAsyncCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_DeleteSegmentCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteSegmentCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L866">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_DeleteSegmentCommand_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteSegmentCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_DeleteSegmentCommand" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.DeleteSegmentCommand">DeleteSegmentCommand</h4>
+  <div class="markdown level1 summary"><p>Command for deleting a segment from a profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncCommand DeleteSegmentCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AsyncAwaitBestPractices.MVVM.IAsyncCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_EditableCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.EditableCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L255">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_EditableCommand_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.EditableCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_EditableCommand" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.EditableCommand">EditableCommand</h4>
+  <div class="markdown level1 summary"><p>Command to change the editability of a profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateCommand EditableCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Commands.DelegateCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_EditProfileCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.EditProfileCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L301">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_EditProfileCommand_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.EditProfileCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_EditProfileCommand" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.EditProfileCommand">EditProfileCommand</h4>
+  <div class="markdown level1 summary"><p>Command for editing the current profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncCommand EditProfileCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AsyncAwaitBestPractices.MVVM.IAsyncCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_EditSegmentCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.EditSegmentCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L742">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_EditSegmentCommand_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.EditSegmentCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_EditSegmentCommand" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.EditSegmentCommand">EditSegmentCommand</h4>
+  <div class="markdown level1 summary"><p>Command for editing a profile segment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncCommand EditSegmentCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AsyncAwaitBestPractices.MVVM.IAsyncCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_ExportProfileCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.ExportProfileCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L619">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExportProfileCommand_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExportProfileCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExportProfileCommand" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExportProfileCommand">ExportProfileCommand</h4>
+  <div class="markdown level1 summary"><p>A command to export the selected profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncCommand ExportProfileCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AsyncAwaitBestPractices.MVVM.IAsyncCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_ImportProfileCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.ImportProfileCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L500">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_ImportProfileCommand_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ImportProfileCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_ImportProfileCommand" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ImportProfileCommand">ImportProfileCommand</h4>
+  <div class="markdown level1 summary"><p>Command for importing a profile from file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncCommand ImportProfileCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AsyncAwaitBestPractices.MVVM.IAsyncCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_OpenProfileMenuCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.OpenProfileMenuCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L291">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_OpenProfileMenuCommand_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.OpenProfileMenuCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_OpenProfileMenuCommand" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.OpenProfileMenuCommand">OpenProfileMenuCommand</h4>
+  <div class="markdown level1 summary"><p>Command for opening the profile menu.</p>
+<p>
+The relevant bool is reversed.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateCommand OpenProfileMenuCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Commands.DelegateCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_OpenSegmentMenuCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.OpenSegmentMenuCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L278">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_OpenSegmentMenuCommand_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.OpenSegmentMenuCommand*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_OpenSegmentMenuCommand" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.OpenSegmentMenuCommand">OpenSegmentMenuCommand</h4>
+  <div class="markdown level1 summary"><p>Command for opening the segment menu.</p>
+<p>
+The relevant bool is reversed.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DelegateCommand OpenSegmentMenuCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Commands.DelegateCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_ProfileContentShow.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.ProfileContentShow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L115">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_ProfileContentShow_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ProfileContentShow*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_ProfileContentShow" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ProfileContentShow">ProfileContentShow</h4>
+  <div class="markdown level1 summary"><p>Whether to show the contents of the profile.</p>
+<p>
+Is bound to from the view.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ProfileContentShow { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_Profiles.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.Profiles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L46">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_Profiles_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.Profiles*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_Profiles" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.Profiles">Profiles</h4>
+  <div class="markdown level1 summary"><p>All profiles stored in the database. Composition profiles
+determine what files are to be added and in what order, as well as
+their corresponding info for adding bookmarks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObservableCollection&lt;ICompositionProfile&gt; Profiles { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.ObservableCollection</span>&lt;<a class="xref" href="Opus.Services.Data.Composition.ICompositionProfile.html">ICompositionProfile</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_SelectedProfile.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.SelectedProfile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L56">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_SelectedProfile_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.SelectedProfile*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_SelectedProfile" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.SelectedProfile">SelectedProfile</h4>
+  <div class="markdown level1 summary"><p>The composition profile that is currently selected.</p>
+<p>
+Composition profiles determine what files are searched for and how many are allowed (or required).
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICompositionProfile SelectedProfile { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.Services.Data.Composition.ICompositionProfile.html">ICompositionProfile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_DirectorySelected_System_String_.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.DirectorySelected(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L227">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_DirectorySelected_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.DirectorySelected*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_DirectorySelected_System_String_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.DirectorySelected(System.String)">DirectorySelected(String)</h4>
+  <div class="markdown level1 summary"><p>Action to execute when a directory is selected.</p>
+<p>
+Will immediately run composition.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async void DirectorySelected(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>Path of the selected directory.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteAddFileSegment.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddFileSegment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L702">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteAddFileSegment_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddFileSegment*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteAddFileSegment" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddFileSegment">ExecuteAddFileSegment()</h4>
+  <div class="markdown level1 summary"><p>Execution method for file segment addition command, see <a class="xref" href="Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_AddFileSegmentCommand">AddFileSegmentCommand</a>.</p>
+<p>
+Adds the file segment into the profile.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async Task ExecuteAddFileSegment()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteAddProfile.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddProfile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L360">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteAddProfile_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddProfile*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteAddProfile" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddProfile">ExecuteAddProfile()</h4>
+  <div class="markdown level1 summary"><p>Execution method for profile adding command, see <a class="xref" href="Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_AddProfileCommand">AddProfileCommand</a>.</p>
+<p>
+Opens a dialog for entering info on the new profile.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async Task ExecuteAddProfile()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>An awaitable task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteAddTitleSegment.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddTitleSegment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L834">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteAddTitleSegment_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddTitleSegment*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteAddTitleSegment" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteAddTitleSegment">ExecuteAddTitleSegment()</h4>
+  <div class="markdown level1 summary"><p>Execution method for title segment addition command, see <a class="xref" href="Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_AddTitleSegmentCommand">AddTitleSegmentCommand</a>.</p>
+<p>
+Adds a new title segment into the profile.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async Task ExecuteAddTitleSegment()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>An awaitable task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteComposition_System_String_.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteComposition(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L912">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteComposition_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteComposition*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteComposition_System_String_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteComposition(System.String)">ExecuteComposition(String)</h4>
+  <div class="markdown level1 summary"><p>Execute the actual composition function using related services.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async Task ExecuteComposition(string directory)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">directory</span></td>
+        <td><p>The directory to compose.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>An awaitable task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteCopyProfile.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteCopyProfile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L455">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteCopyProfile_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteCopyProfile*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteCopyProfile" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteCopyProfile">ExecuteCopyProfile()</h4>
+  <div class="markdown level1 summary"><p>Execution method for profile copying command, see <a class="xref" href="Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_CopyProfileCommand">CopyProfileCommand</a>.</p>
+<p>
+Copies the profile as a new profile.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async Task ExecuteCopyProfile()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>An awaitable task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteDeleteProfile.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteDeleteProfile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L410">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteDeleteProfile_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteDeleteProfile*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteDeleteProfile" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteDeleteProfile">ExecuteDeleteProfile()</h4>
+  <div class="markdown level1 summary"><p>Execution method for profile deletion command, <a class="xref" href="Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_DeleteProfileCommand">DeleteProfileCommand</a>.</p>
+<p>
+Confirms deletion from the user and deletes the profile, if confirmation was received.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async Task ExecuteDeleteProfile()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>An awaitable task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteDeleteSegment.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteDeleteSegment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L876">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteDeleteSegment_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteDeleteSegment*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteDeleteSegment" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteDeleteSegment">ExecuteDeleteSegment()</h4>
+  <div class="markdown level1 summary"><p>Execution method for segment deletion command, see <a class="xref" href="Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_DeleteSegmentCommand">DeleteSegmentCommand</a>.</p>
+<p>
+Delete a segment from a profile.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async Task ExecuteDeleteSegment()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteEditable.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteEditable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L264">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteEditable_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteEditable*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteEditable" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteEditable">ExecuteEditable()</h4>
+  <div class="markdown level1 summary"><p>Execution method for editability command, see <a class="xref" href="Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_EditableCommand">EditableCommand</a>.</p>
+<p>
+Makes the profile (un)editable and saves it.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteEditable()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteEditProfile.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteEditProfile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L311">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteEditProfile_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteEditProfile*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteEditProfile" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteEditProfile">ExecuteEditProfile()</h4>
+  <div class="markdown level1 summary"><p>Execution method for profile editing command, see <a class="xref" href="Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_EditProfileCommand">EditProfileCommand</a>.</p>
+<p>
+Open a dialog for editing the profile.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async Task ExecuteEditProfile()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>An awaitable task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteEditSegment.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteEditSegment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L752">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteEditSegment_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteEditSegment*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteEditSegment" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteEditSegment">ExecuteEditSegment()</h4>
+  <div class="markdown level1 summary"><p>Execution method for profile segment edit command, see <a class="xref" href="Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_EditSegmentCommand">EditSegmentCommand</a>.</p>
+<p>
+Asks for values to edit and modifies the segment accordingly.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async Task ExecuteEditSegment()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteExportProfile.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteExportProfile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L629">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteExportProfile_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteExportProfile*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteExportProfile" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteExportProfile">ExecuteExportProfile()</h4>
+  <div class="markdown level1 summary"><p>Execution method for profile export command.</p>
+<p>
+Exports the current profile as .opusprofile -file.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async Task ExecuteExportProfile()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>An awaitable task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteImportProfile.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteImportProfile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L510">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteImportProfile_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteImportProfile*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_ExecuteImportProfile" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.ExecuteImportProfile">ExecuteImportProfile()</h4>
+  <div class="markdown level1 summary"><p>Execution method for import profile command, see <a class="xref" href="Opus.Modules.Action.ViewModels.CompositionViewModel.html#Opus_Modules_Action_ViewModels_CompositionViewModel_ImportProfileCommand">ImportProfileCommand</a>.</p>
+<p>
+Opens the importable profile file, reads it, imports the profile if possible and closes the file.muistio
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async Task ExecuteImportProfile()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>An awaitable task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_OnArrival.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.OnArrival%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L175">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_OnArrival_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.OnArrival*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_OnArrival" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.OnArrival">OnArrival()</h4>
+  <div class="markdown level1 summary"><p>Implementing <a class="xref" href="Opus.Services.UI.INavigationTarget.html">INavigationTarget</a>.</p>
+<p>
+Actions to take when this viewmodel is navigated to.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnArrival()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_Reset.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.Reset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L218">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_Reset_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.Reset*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_Reset" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.Reset">Reset()</h4>
+  <div class="markdown level1 summary"><p>Implementing <a class="xref" href="Opus.Services.UI.INavigationTarget.html">INavigationTarget</a>.</p>
+<p>
+Actions to take when this reset button is presseed.
+</p>
+<p>
+Composition view model has no state that would be reset, when button is pressed. So do nothing.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel_WhenLeaving.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel.WhenLeaving%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L195">View Source</a>
+  </span>
+  <a id="Opus_Modules_Action_ViewModels_CompositionViewModel_WhenLeaving_" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.WhenLeaving*"></a>
+  <h4 id="Opus_Modules_Action_ViewModels_CompositionViewModel_WhenLeaving" data-uid="Opus.Modules.Action.ViewModels.CompositionViewModel.WhenLeaving">WhenLeaving()</h4>
+  <div class="markdown level1 summary"><p>Implementing <a class="xref" href="Opus.Services.UI.INavigationTarget.html">INavigationTarget</a>.</p>
+<p>
+Actions to take when this viewmodel is navigated from.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WhenLeaving()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+  <div>
+      <span class="xref">Prism.Regions.INavigationAware</span>
+  </div>
+  <div>
+      <a class="xref" href="Opus.Services.UI.INavigationTarget.html">INavigationTarget</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_Action_ViewModels_CompositionViewModel.md&amp;value=---%0Auid%3A%20Opus.Modules.Action.ViewModels.CompositionViewModel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Parannusehdotus</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.Action/ViewModels/CompositionViewModel.cs/#L27" class="contribution-link">Näytä lähdekoodi</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>Tässä osiossa</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Takaisin ylös</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Takaisin ylös</a>
+            </span>
+            <div class="pull-left">
+              
+              <span><strong>Opus</strong>: ohjeet</span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

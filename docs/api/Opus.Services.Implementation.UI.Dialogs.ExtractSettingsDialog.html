@@ -1,0 +1,705 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ExtractSettingsDialog
+   | Opus Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ExtractSettingsDialog
+   | Opus Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo38pt.png" alt="Opus Docs">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog">
+  
+  
+  <h1 id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog" class="text-break">Class ExtractSettingsDialog
+  </h1>
+  <div class="markdown level0 summary"><p>A dialog for choosing settings applied to extractions.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Prism.Mvvm.BindableBase</span></div>
+    <div class="level2"><a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html">DialogBase</a></div>
+    <div class="level3"><span class="xref">ExtractSettingsDialog</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+    <div><a class="xref" href="Opus.Services.UI.IDialog.html">IDialog</a></div>
+    <div><span class="xref">System.ComponentModel.IDataErrorInfo</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_DialogTitle">DialogBase.DialogTitle</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_IsCanceled">DialogBase.IsCanceled</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_DialogClosed">DialogBase.DialogClosed</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_SaveCommand">DialogBase.SaveCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_Save">DialogBase.Save</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_CloseCommand">DialogBase.CloseCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_Close">DialogBase.Close</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_ExecuteSave">DialogBase.ExecuteSave()</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_SaveCanExecute">DialogBase.SaveCanExecute()</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_ExecuteClose">DialogBase.ExecuteClose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_CloseCanExecute">DialogBase.CloseCanExecute()</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Services.Implementation.UI.DialogBase.html#Opus_Services_Implementation_UI_DialogBase_CloseOnError">DialogBase.CloseOnError()</a>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.Action, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.RaisePropertyChanged(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Opus.Services.Implementation.UI.Dialogs.html">Opus.Services.Implementation.UI.Dialogs</a></h6>
+  <h6><strong>Assembly</strong>: Opus.Services.Implementation.dll</h6>
+  <h5 id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ExtractSettingsDialog : DialogBase, INotifyPropertyChanged, IDialog, IDataErrorInfo</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog__ctor_System_String_System_Boolean_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.%23ctor(System.String%2CSystem.Boolean%2CSystem.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractSettingsDialog.cs/#L108">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog__ctor_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.#ctor*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog__ctor_System_String_System_Boolean_System_String_System_String_System_Boolean_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.#ctor(System.String,System.Boolean,System.String,System.String,System.Boolean)">ExtractSettingsDialog(String, Boolean, String, String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Create a new dialog for choosing extraction settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExtractSettingsDialog(string dialogTitle, bool isAsking = false, string nameDescription = null, string nameHelper = null, bool emptyNameValid = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dialogTitle</span></td>
+        <td><p>Title for the dialog.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isAsking</span></td>
+        <td><p>Whether the dialog is asking for the name template while processing files.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">nameDescription</span></td>
+        <td><p>Description for the name field.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">nameHelper</span></td>
+        <td><p>Helper text for the name field.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">emptyNameValid</span></td>
+        <td><p>If true, an empty name template is allowed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_AlwaysAsk.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.AlwaysAsk%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractSettingsDialog.cs/#L39">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_AlwaysAsk_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.AlwaysAsk*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_AlwaysAsk" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.AlwaysAsk">AlwaysAsk</h4>
+  <div class="markdown level1 summary"><p>If true, name template will be inquired every time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AlwaysAsk { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_Annotations.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.Annotations%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractSettingsDialog.cs/#L88">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_Annotations_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.Annotations*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_Annotations" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.Annotations">Annotations</h4>
+  <div class="markdown level1 summary"><p>What to do with annotations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Annotations { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_CreateZip.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.CreateZip%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractSettingsDialog.cs/#L61">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_CreateZip_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.CreateZip*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_CreateZip" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.CreateZip">CreateZip</h4>
+  <div class="markdown level1 summary"><p>If true, documents will be compressed into a zip-file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CreateZip { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_Error.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.Error%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractSettingsDialog.cs/#L126">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_Error_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.Error*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_Error" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.Error">Error</h4>
+  <div class="markdown level1 summary"><p>Validation error. Always returns null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Error { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_GroupByFiles.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.GroupByFiles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractSettingsDialog.cs/#L77">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_GroupByFiles_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.GroupByFiles*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_GroupByFiles" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.GroupByFiles">GroupByFiles</h4>
+  <div class="markdown level1 summary"><p>If true, bookmarks will be grouped by files when producing a single output file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GroupByFiles { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_IsAsking.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.IsAsking%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractSettingsDialog.cs/#L98">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_IsAsking_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.IsAsking*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_IsAsking" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.IsAsking">IsAsking</h4>
+  <div class="markdown level1 summary"><p>If true, the dialog is currently being used while processing files (as opposed to choosing the
+settings beforehand).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAsking { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_Item_System_String_.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.Item(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractSettingsDialog.cs/#L136">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_Item_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.Item*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_Item_System_String_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.Item(System.String)">Item[String]</h4>
+  <div class="markdown level1 summary"><p>Validation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string this[string propertyName] { get; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property to validate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_NameDescription.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.NameDescription%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractSettingsDialog.cs/#L27">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_NameDescription_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.NameDescription*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_NameDescription" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.NameDescription">NameDescription</h4>
+  <div class="markdown level1 summary"><p>Description for the name field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string NameDescription { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_NameHelper.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.NameHelper%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractSettingsDialog.cs/#L32">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_NameHelper_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.NameHelper*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_NameHelper" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.NameHelper">NameHelper</h4>
+  <div class="markdown level1 summary"><p>Helper text for the name field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string NameHelper { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_PdfA.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.PdfA%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractSettingsDialog.cs/#L50">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_PdfA_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.PdfA*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_PdfA" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.PdfA">PdfA</h4>
+  <div class="markdown level1 summary"><p>If true, documents will be converted to pdf/a.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PdfA { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_PdfADisabled.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.PdfADisabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractSettingsDialog.cs/#L70">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_PdfADisabled_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.PdfADisabled*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_PdfADisabled" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.PdfADisabled">PdfADisabled</h4>
+  <div class="markdown level1 summary"><p>If true, pdf/a cannot be produced.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PdfADisabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_Title.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.Title%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractSettingsDialog.cs/#L18">View Source</a>
+  </span>
+  <a id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_Title_" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.Title*"></a>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog_Title" data-uid="Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.Title">Title</h4>
+  <div class="markdown level1 summary"><p>Title of the dialog.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Title { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+  <div>
+      <a class="xref" href="Opus.Services.UI.IDialog.html">IDialog</a>
+  </div>
+  <div>
+      <span class="xref">System.ComponentModel.IDataErrorInfo</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_ExtractSettingsDialog.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Parannusehdotus</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/ExtractSettingsDialog.cs/#L9" class="contribution-link">Näytä lähdekoodi</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>Tässä osiossa</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Takaisin ylös</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Takaisin ylös</a>
+            </span>
+            <div class="pull-left">
+              
+              <span><strong>Opus</strong>: ohjeet</span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,706 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class App
+   | Opus Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class App
+   | Opus Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo38pt.png" alt="Opus Docs">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Opus.App">
+  
+  
+  <h1 id="Opus_App" data-uid="Opus.App" class="text-break">Class App
+  </h1>
+  <div class="markdown level0 summary"><p>Main application class and starting point for Opus.</p>
+<p>
+Contains application startup logic, defines modules,
+shell, DI service implementations and language. Checks
+for updates.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.Windows.Threading.DispatcherObject</span></div>
+    <div class="level2"><span class="xref">System.Windows.Application</span></div>
+    <div class="level3"><span class="xref">Prism.PrismApplicationBase</span></div>
+    <div class="level4"><span class="xref">Prism.Unity.PrismApplication</span></div>
+    <div class="level5"><span class="xref">App</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Windows.Markup.IQueryAmbient</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Prism.Unity.PrismApplication.CreateContainerExtension()</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Unity.PrismApplication.RegisterFrameworkExceptionTypes()</span>
+    </div>
+    <div>
+      <span class="xref">Prism.PrismApplicationBase.ConfigureViewModelLocator()</span>
+    </div>
+    <div>
+      <span class="xref">Prism.PrismApplicationBase.Initialize()</span>
+    </div>
+    <div>
+      <span class="xref">Prism.PrismApplicationBase.CreateModuleCatalog()</span>
+    </div>
+    <div>
+      <span class="xref">Prism.PrismApplicationBase.RegisterRequiredTypes(Prism.Ioc.IContainerRegistry)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.PrismApplicationBase.ConfigureDefaultRegionBehaviors(Prism.Regions.IRegionBehaviorFactory)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.PrismApplicationBase.ConfigureRegionAdapterMappings(Prism.Regions.RegionAdapterMappings)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.PrismApplicationBase.InitializeShell(System.Windows.Window)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.PrismApplicationBase.InitializeModules()</span>
+    </div>
+    <div>
+      <span class="xref">Prism.PrismApplicationBase.Container</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.FindResource(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.GetContentStream(System.Uri)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.GetCookie(System.Uri)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.GetRemoteStream(System.Uri)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.GetResourceStream(System.Uri)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.LoadComponent(System.Object, System.Uri)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.LoadComponent(System.Uri)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.OnActivated(System.EventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.OnDeactivated(System.EventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.OnFragmentNavigation(System.Windows.Navigation.FragmentNavigationEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.OnLoadCompleted(System.Windows.Navigation.NavigationEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.OnNavigated(System.Windows.Navigation.NavigationEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.OnNavigating(System.Windows.Navigation.NavigatingCancelEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.OnNavigationFailed(System.Windows.Navigation.NavigationFailedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.OnNavigationProgress(System.Windows.Navigation.NavigationProgressEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.OnNavigationStopped(System.Windows.Navigation.NavigationEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.OnSessionEnding(System.Windows.SessionEndingCancelEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.Run()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.Run(System.Windows.Window)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.SetCookie(System.Uri, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.Shutdown()</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.Shutdown(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.System.Windows.Markup.IQueryAmbient.IsAmbientPropertyAvailable(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.TryFindResource(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.Current</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.MainWindow</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.Properties</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.ResourceAssembly</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.Resources</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.ShutdownMode</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.StartupUri</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.Windows</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.Activated</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.Deactivated</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.DispatcherUnhandledException</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.Exit</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.FragmentNavigation</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.LoadCompleted</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.Navigated</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.Navigating</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.NavigationFailed</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.NavigationProgress</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.NavigationStopped</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.SessionEnding</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Application.Startup</span>
+    </div>
+    <div>
+      <span class="xref">System.Windows.Threading.DispatcherObject.Dispatcher</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Opus.html">Opus</a></h6>
+  <h6><strong>Assembly</strong>: Opus.dll</h6>
+  <h5 id="Opus_App_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class App : PrismApplication, IQueryAmbient</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_App_ConfigureModuleCatalog_Prism_Modularity_IModuleCatalog_.md&amp;value=---%0Auid%3A%20Opus.App.ConfigureModuleCatalog(Prism.Modularity.IModuleCatalog)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/App.xaml.cs/#L236">View Source</a>
+  </span>
+  <a id="Opus_App_ConfigureModuleCatalog_" data-uid="Opus.App.ConfigureModuleCatalog*"></a>
+  <h4 id="Opus_App_ConfigureModuleCatalog_Prism_Modularity_IModuleCatalog_" data-uid="Opus.App.ConfigureModuleCatalog(Prism.Modularity.IModuleCatalog)">ConfigureModuleCatalog(IModuleCatalog)</h4>
+  <div class="markdown level1 summary"><p>Register application modules for the catalog. This includes action modules, file selection, options and
+main section, which organizes all the other modules.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Modularity.IModuleCatalog</span></td>
+        <td><span class="parametername">moduleCatalog</span></td>
+        <td><p>The catalog to register the modules in.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Prism.PrismApplicationBase.ConfigureModuleCatalog(Prism.Modularity.IModuleCatalog)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_App_CreateShell.md&amp;value=---%0Auid%3A%20Opus.App.CreateShell%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/App.xaml.cs/#L251">View Source</a>
+  </span>
+  <a id="Opus_App_CreateShell_" data-uid="Opus.App.CreateShell*"></a>
+  <h4 id="Opus_App_CreateShell" data-uid="Opus.App.CreateShell">CreateShell()</h4>
+  <div class="markdown level1 summary"><p>Create the main shell window to hold the contents of the modules.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Window CreateShell()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Window</span></td>
+        <td><p>Returns the instance of the main shell window.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Prism.PrismApplicationBase.CreateShell()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_App_InitializeComponent.md&amp;value=---%0Auid%3A%20Opus.App.InitializeComponent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/obj/Release/net6.0-windows/App.g.cs/#L60">View Source</a>
+  </span>
+  <a id="Opus_App_InitializeComponent_" data-uid="Opus.App.InitializeComponent*"></a>
+  <h4 id="Opus_App_InitializeComponent" data-uid="Opus.App.InitializeComponent">InitializeComponent()</h4>
+  <div class="markdown level1 summary"><p>InitializeComponent</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitializeComponent()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_App_Main.md&amp;value=---%0Auid%3A%20Opus.App.Main%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/obj/Release/net6.0-windows/App.g.cs/#L79">View Source</a>
+  </span>
+  <a id="Opus_App_Main_" data-uid="Opus.App.Main*"></a>
+  <h4 id="Opus_App_Main" data-uid="Opus.App.Main">Main()</h4>
+  <div class="markdown level1 summary"><p>Application Entry Point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[STAThread]
+public static void Main()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_App_OnExit_System_Windows_ExitEventArgs_.md&amp;value=---%0Auid%3A%20Opus.App.OnExit(System.Windows.ExitEventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/App.xaml.cs/#L74">View Source</a>
+  </span>
+  <a id="Opus_App_OnExit_" data-uid="Opus.App.OnExit*"></a>
+  <h4 id="Opus_App_OnExit_System_Windows_ExitEventArgs_" data-uid="Opus.App.OnExit(System.Windows.ExitEventArgs)">OnExit(ExitEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Actions to do when closing the application.</p>
+<p>
+Logging service implementation will be flushed and closed before exiting the application (as per
+recommendations of <span class="xref">Serilog</span>). Normal <a class="xref" href="Opus.App.html#Opus_App_OnExit_System_Windows_ExitEventArgs_">OnExit(ExitEventArgs)</a> routines will be
+continued after this detour.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnExit(ExitEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.ExitEventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td><p>Application exit event arguments.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Windows.Application.OnExit(System.Windows.ExitEventArgs)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_App_OnInitialized.md&amp;value=---%0Auid%3A%20Opus.App.OnInitialized%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/App.xaml.cs/#L265">View Source</a>
+  </span>
+  <a id="Opus_App_OnInitialized_" data-uid="Opus.App.OnInitialized*"></a>
+  <h4 id="Opus_App_OnInitialized" data-uid="Opus.App.OnInitialized">OnInitialized()</h4>
+  <div class="markdown level1 summary"><p>Override of the default OnInitialized. Run the base method and after that,
+check for updates and update if necessary. Run in regular or Context menu -mode,
+depending on the environment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnInitialized()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Prism.PrismApplicationBase.OnInitialized()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_App_OnStartup_System_Windows_StartupEventArgs_.md&amp;value=---%0Auid%3A%20Opus.App.OnStartup(System.Windows.StartupEventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/App.xaml.cs/#L55">View Source</a>
+  </span>
+  <a id="Opus_App_OnStartup_" data-uid="Opus.App.OnStartup*"></a>
+  <h4 id="Opus_App_OnStartup_System_Windows_StartupEventArgs_" data-uid="Opus.App.OnStartup(System.Windows.StartupEventArgs)">OnStartup(StartupEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Functions to perform when starting the application.</p>
+<p>
+Store the given arguments for internal use (if any were given) and
+then proceed in regular startup order. <a class="xref" href="Opus.App.html#Opus_App_OnInitialized">OnInitialized()</a> has been overridden
+and will later be called. Several other startup-related methods have also been overridden.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnStartup(StartupEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.StartupEventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td><p>Arguments for program startup. Contains console startup arguments.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Prism.PrismApplicationBase.OnStartup(System.Windows.StartupEventArgs)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_App_RegisterTypes_Prism_Ioc_IContainerRegistry_.md&amp;value=---%0Auid%3A%20Opus.App.RegisterTypes(Prism.Ioc.IContainerRegistry)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/App.xaml.cs/#L139">View Source</a>
+  </span>
+  <a id="Opus_App_RegisterTypes_" data-uid="Opus.App.RegisterTypes*"></a>
+  <h4 id="Opus_App_RegisterTypes_Prism_Ioc_IContainerRegistry_" data-uid="Opus.App.RegisterTypes(Prism.Ioc.IContainerRegistry)">RegisterTypes(IContainerRegistry)</h4>
+  <div class="markdown level1 summary"><p>Register types in the DI container (Unity, through Prism abstraction).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void RegisterTypes(IContainerRegistry containerRegistry)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Prism.Ioc.IContainerRegistry</span></td>
+        <td><span class="parametername">containerRegistry</span></td>
+        <td><p>Registry to register the types in.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Prism.PrismApplicationBase.RegisterTypes(Prism.Ioc.IContainerRegistry)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_App_RunContext_Opus_ViewModels_ContextMenuViewModel_.md&amp;value=---%0Auid%3A%20Opus.App.RunContext(Opus.ViewModels.ContextMenuViewModel)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/App.xaml.cs/#L284">View Source</a>
+  </span>
+  <a id="Opus_App_RunContext_" data-uid="Opus.App.RunContext*"></a>
+  <h4 id="Opus_App_RunContext_Opus_ViewModels_ContextMenuViewModel_" data-uid="Opus.App.RunContext(Opus.ViewModels.ContextMenuViewModel)">RunContext(ContextMenuViewModel)</h4>
+  <div class="markdown level1 summary"><p>Run context menu action given with arguments.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async void RunContext(ContextMenuViewModel viewModel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.ViewModels.ContextMenuViewModel.html">ContextMenuViewModel</a></td>
+        <td><span class="parametername">viewModel</span></td>
+        <td><p>Instance of the context menu viewModel to run
+the action on.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_App_SetLanguage.md&amp;value=---%0Auid%3A%20Opus.App.SetLanguage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/App.xaml.cs/#L87">View Source</a>
+  </span>
+  <a id="Opus_App_SetLanguage_" data-uid="Opus.App.SetLanguage*"></a>
+  <h4 id="Opus_App_SetLanguage" data-uid="Opus.App.SetLanguage">SetLanguage()</h4>
+  <div class="markdown level1 summary"><p>Set application display language.</p>
+<p>
+Selected language code will be retrieved from application configuration. If no language code has been
+saved by the user, the code will correspond to the culture of the current thread.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SetLanguage()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_App_Update.md&amp;value=---%0Auid%3A%20Opus.App.Update%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/App.xaml.cs/#L293">View Source</a>
+  </span>
+  <a id="Opus_App_Update_" data-uid="Opus.App.Update*"></a>
+  <h4 id="Opus_App_Update" data-uid="Opus.App.Update">Update()</h4>
+  <div class="markdown level1 summary"><p>Update the program and restart it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async void Update()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_App_UpdateProfiles.md&amp;value=---%0Auid%3A%20Opus.App.UpdateProfiles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/App.xaml.cs/#L100">View Source</a>
+  </span>
+  <a id="Opus_App_UpdateProfiles_" data-uid="Opus.App.UpdateProfiles*"></a>
+  <h4 id="Opus_App_UpdateProfiles" data-uid="Opus.App.UpdateProfiles">UpdateProfiles()</h4>
+  <div class="markdown level1 summary"><p>Update profiles for composition of documents.</p>
+<p>If new profiles (added with updates or otherwise into the
+profile directory) are found, they are imported into the options. If a previous profile with the same
+exists, it will be overridden. The new profile file will be deleted after import.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void UpdateProfiles()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Windows.Markup.IQueryAmbient</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_App.md&amp;value=---%0Auid%3A%20Opus.App%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Parannusehdotus</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus/obj/Release/net6.0-windows/App.g.cs/#L53" class="contribution-link">Näytä lähdekoodi</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>Tässä osiossa</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Takaisin ylös</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Takaisin ylös</a>
+            </span>
+            <div class="pull-left">
+              
+              <span><strong>Opus</strong>: ohjeet</span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

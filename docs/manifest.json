@@ -1,0 +1,4210 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/jbjok/OneDrive - O365 Turun yliopisto/Koodaus/Willowfang/Opus/Opus/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.App.html",
+          "hash": "bqcxfa6ow+NRB396eXJDuyZhiqLGAjPT5N46oEmCH8E="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Core.Base.OptionsViewModelBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Core.Base.OptionsViewModelBase-1.html",
+          "hash": "bTRxx6NB7xDJp8vgn/pe6OlICM3RbQIkQJERaFy60uM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Core.Base.ViewModelBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Core.Base.ViewModelBase.html",
+          "hash": "+M+Uw5Gq08ojxfGlj27s0GS4ejRdciNSmCAhUY/Pbpk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Core.Base.ViewModelBaseLogging-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Core.Base.ViewModelBaseLogging-1.html",
+          "hash": "EOS3RsyywQ0NshZ4i6zVP83zRsSKVo19DZJfhpnCKzY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Core.Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Core.Base.html",
+          "hash": "KNjQKyC7F0DAsX0QE+mV/eivRF17KXX0naZPzb7i/Aw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Core.Executors.ContextMenuExecutor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Core.Executors.ContextMenuExecutor.html",
+          "hash": "M+boHUsrrly+/R+Pt6s6IbeT3RrItFgNSyoEEsL7hSE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Core.Executors.ExtractionExecutor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Core.Executors.ExtractionExecutor.html",
+          "hash": "Lz/jnpSgA7NPL2QbSekaMV5SGTYqVQ3iiXwYHOTe43I="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Core.Executors.IExtractionExecutor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Core.Executors.IExtractionExecutor.html",
+          "hash": "i3JvS7rIiuSQrjqqAA1JkarqfFV2RcDSLqwzoO+qtgc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Core.Executors.ISignatureExecutor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Core.Executors.ISignatureExecutor.html",
+          "hash": "XdtYC3fWgGGgi5RCdYgKC2GZk0Iwn42y4pKKvsHyrPk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Core.Executors.IUpdateExecutor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Core.Executors.IUpdateExecutor.html",
+          "hash": "96HEj4PaYUwhowz3sKukmEeJRPyfKGSrCkBG6N/tvzg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Core.Executors.SignatureExecutor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Core.Executors.SignatureExecutor.html",
+          "hash": "6dDOd0mFiDho3mu9RpyaJSgjajkK5ypqSdDxQ1ROEtc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Core.Executors.UpdateExecutor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Core.Executors.UpdateExecutor.html",
+          "hash": "zSl3A8kNyvI91fgJeVyF6B4rEw58ioRNi0grYe22z+Y="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Core.Executors.UpdateInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Core.Executors.UpdateInfo.html",
+          "hash": "HjlTlPdLhGyBVKiC6p+eGZwD0UBYXTth3WPO8Q9GIpk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Core.Executors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Core.Executors.html",
+          "hash": "06YxuRNjcUuxezkmD9ejnmE5OdqIHaklavbNgfc3aBs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Core.Wrappers.BookmarkStorage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Core.Wrappers.BookmarkStorage.html",
+          "hash": "+ageqDrAuY7s2JBVqi7KWB07jsGlhPo7dc2G/pJ+Psg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Core.Wrappers.FileAndBookmarksStorage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Core.Wrappers.FileAndBookmarksStorage.html",
+          "hash": "TtXEl4dreNEcrQTNO5ZKA6xUe8oamxnfMm/CYgxkXNw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Core.Wrappers.FileStorage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Core.Wrappers.FileStorage.html",
+          "hash": "3C1W1cCYbD3PGnXoEP+EvR136Z1rcT5VMmfA4qxa75Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Core.Wrappers.LanguageOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Core.Wrappers.LanguageOption.html",
+          "hash": "meZVpSw0tra94p3SPx8tdJr3aSMOqQzJPX4yJv8BRmU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Core.Wrappers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Core.Wrappers.html",
+          "hash": "2YhyqVPRdDqeD8C8DxvMgiTbwRgeM+A0WPQTKPZRUQA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Events.ActionResetEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Events.ActionResetEvent.html",
+          "hash": "01l5PvuTY/Lr4Ry7lL+l5XCGAglcv941H+FgsP+77Bo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Events.BookmarkDeselectedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Events.BookmarkDeselectedEvent.html",
+          "hash": "qHBOLkwpqvisxiZnFmQ9vs8okoAzBt2N43IYjaJgUVc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Events.BookmarkFileDeletedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Events.BookmarkFileDeletedEvent.html",
+          "hash": "9IvoA0CnIVYp9d6YcwKgiUvv8IB9FQVYf7b0zwV1uDA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Events.BookmarkSelectedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Events.BookmarkSelectedEvent.html",
+          "hash": "0fN9mVzUXWb44gjkDPI0UDL2feVwYqA4Mb2+Y4lYylU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Events.Data.BookmarkInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Events.Data.BookmarkInfo.html",
+          "hash": "YntkVUfIJyqxn7R1rBpZbZbCTmjdJs5jJHu3BidTFfc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Events.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Events.Data.html",
+          "hash": "MKojvwnoPaMb6DOE/GWwAk7OSedQhwqFXoscJ4qVUMs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Events.DirectorySelectedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Events.DirectorySelectedEvent.html",
+          "hash": "IHBAJ71CZj3GnKp0dhGqMwvNU4cNvDD6JM3e7L0vlq0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Events.FileSelectedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Events.FileSelectedEvent.html",
+          "hash": "EAC8/3gZPtGNVrlocLgOknBVZ7DJ5sWF0zb6/vYndPA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Events.FilesAddedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Events.FilesAddedEvent.html",
+          "hash": "yd+MAJ6E85vAMjat9YMHIA1/JQfmPZFZb0n1cpNx5CU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Events.ViewChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Events.ViewChangeEvent.html",
+          "hash": "Dh+mUWiNs/lX275s3tifS2ieg6xZ9P1od7PAJKYTZ7c="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Events.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Events.html",
+          "hash": "fIUkXsnte2zFUeG8bVIdCM+GYxK1HmXfmh0ANjA08aM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.ExtensionMethods.Placeholders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.ExtensionMethods.Placeholders.html",
+          "hash": "RfAHUuTdNeOjHAIvW897J7vkUb58blZElsaivj0HyJA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.ExtensionMethods.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.ExtensionMethods.StringExtensions.html",
+          "hash": "iwKR/RQYjQik+BMqUQzxTfZiz//JsD2js6kNe+QzUH0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.ExtensionMethods.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.ExtensionMethods.html",
+          "hash": "HlG8rCEmJpjjPkJ3tsHmNer3mx/WbpwndC2s1y60TEs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Action.ActionModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Action.ActionModule.html",
+          "hash": "hBvRRbzcxRk7T+eHg/1QNiC3X3wo+QwjTjeoxk+qxwA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Action.ViewModels.CompositionViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Action.ViewModels.CompositionViewModel.html",
+          "hash": "v4ErUdMCIFHMY0QayDwGfuqr1/c3qLfMYtGy8sMd7Qo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.html",
+          "hash": "Vzacq3WddFfcNYGbmNAbvj/1oi38OVG9iSVsEx2EAPY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Action.ViewModels.ExtractionViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Action.ViewModels.ExtractionViewModel.html",
+          "hash": "A1is7z3lqxX7ADo3N6LVWtR4jGZhqXUIdwSn0vPYsic="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Action.ViewModels.InstructionsViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Action.ViewModels.InstructionsViewModel.html",
+          "hash": "fOiAI1claUEEb3WOH8AFX+Z7VEQ9GzLUDReF8wyMpJg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Action.ViewModels.MergeViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Action.ViewModels.MergeViewModel.html",
+          "hash": "p+rT/Tth5FVAcvlVneMyg4BFRZxnQAd7LV17pSli0oU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Action.ViewModels.WorkCopyViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Action.ViewModels.WorkCopyViewModel.html",
+          "hash": "VN7AUII6GzDLvt+52mlvKkJsvRNn5vkigKXkkRDW+Kg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Action.ViewModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Action.ViewModels.html",
+          "hash": "ITLHj0MGVvJrw8Fqgd9Fn7n8IThMAVxvXv8katb/EaI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Action.Views.CompositionView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Action.Views.CompositionView.html",
+          "hash": "qE0C7xrE8hv2ROo8BQS8mgYrKOnl3UVFbts0sLq05eQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Action.Views.ExtractionOrderView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Action.Views.ExtractionOrderView.html",
+          "hash": "gbqRLesj/TfS9gaa8s+wGmM7EsjEj6OfcxOGN3UmDAU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Action.Views.ExtractionView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Action.Views.ExtractionView.html",
+          "hash": "hQ31biLTziBejpBUoGHkuWWcCdJGf8XjxUjztKF4Wp0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Action.Views.InstructionsView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Action.Views.InstructionsView.html",
+          "hash": "wBYKAq190RTHJvckECKKQg4y03ozhxQxZ+QMzkFSyhA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Action.Views.MergeView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Action.Views.MergeView.html",
+          "hash": "CXt71AXCevT0ap2AzY4b/+QsCYNbM7y574LG+VxkE5Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Action.Views.WorkCopyView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Action.Views.WorkCopyView.html",
+          "hash": "6ag/Bx6QVNdr/83vaNgdlb+YoGy23ALdDyIqSLD3ijk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Action.Views.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Action.Views.html",
+          "hash": "O2x3AOym40OjVv/jeCb5Dn2VkizL/vOmMjkk9tMnQt0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Action.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Action.html",
+          "hash": "DYeGAO6neYHPQQakpaGMQn9DiTrt+NdLZStYSt+/ejs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Dialog.DialogModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Dialog.DialogModule.html",
+          "hash": "RT71OYoju8y5IHYhe6dwvR3ipjpxeKoAdW8cQx3WLkk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Dialog.ViewModels.DialogContentViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Dialog.ViewModels.DialogContentViewModel.html",
+          "hash": "NUEj9vCpjB+CVZPBniD7ZiISnAMPIYlSQtGMDDwYSA4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Dialog.ViewModels.DialogMessageViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Dialog.ViewModels.DialogMessageViewModel.html",
+          "hash": "bf8CJSToqjHXWtnEm3PFtTO590lnmkkWHOtMACsvU3k="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Dialog.ViewModels.DialogProgressViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Dialog.ViewModels.DialogProgressViewModel.html",
+          "hash": "yluqs8d5LP3W7Isuby+uJjNSXWjI1xzWDHJvHo8vcxs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Dialog.ViewModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Dialog.ViewModels.html",
+          "hash": "MwG7wMmWmb/X2nTobz3Vklb1ljth5Mnw3ZwO3RLBr8U="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Dialog.Views.DialogContentView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Dialog.Views.DialogContentView.html",
+          "hash": "4LpST/0tEps9OhsbYz4CJrmpHob0wIsAShPa+M81LuY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Dialog.Views.DialogMessageView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Dialog.Views.DialogMessageView.html",
+          "hash": "tlNnslcj+5hMG/VXljmNdgdJUM5z0Mvy6LIkP2hcGRc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Dialog.Views.DialogProgressView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Dialog.Views.DialogProgressView.html",
+          "hash": "YYGGoJnmkJ14cwHVIc9TA193Uma2enBibu2yciG2pNM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Dialog.Views.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Dialog.Views.html",
+          "hash": "Cy2svWj89/dXQXBjQ2+u/LEFO/1Mla7n7xX4AggWy/A="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Dialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Dialog.html",
+          "hash": "v3GssWNAWUYtzIPCVFNeGJ9sdxsVaNgC3uLvAv86lZI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.File.FileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.File.FileModule.html",
+          "hash": "v6IuIhgsejCdnr4zt3APBj4bvwQoenoijtZaL9se3lw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.html",
+          "hash": "eRpjGhK+06w9gqMkTiNLhkxX1ceh3m5CJpWZVviQLiE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.File.ViewModels.FileMultipleViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.File.ViewModels.FileMultipleViewModel.html",
+          "hash": "8byCsasergK8v+otc6OaPbBMYR+8PlS/KuDaBOvs7f4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.File.ViewModels.FileNavigationViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html",
+          "hash": "Ky9KFVrd+P3LbRK/4w+K9ba3GI0pXtgt85ZmOIZoTdQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.File.ViewModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.File.ViewModels.html",
+          "hash": "ViEM8IfE76w9lic/PMxtXOER6VOyL9+WwGKuI2mhDCA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.File.Views.DirectoryNavigationView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.File.Views.DirectoryNavigationView.html",
+          "hash": "OYP+uLHeYmretdmB2y2qefdfQLPxm4Ent22pCGLGfQs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.File.Views.FileMultipleView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.File.Views.FileMultipleView.html",
+          "hash": "QQNxaUGzZBz7ehq31B93t46bcPJdgoGR/qn+RufjoZo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.File.Views.FileNavigationView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.File.Views.FileNavigationView.html",
+          "hash": "eS52VvWzGgzIMCaWcs4BTMCbibf1DhPDkLETIEhpmBA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.File.Views.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.File.Views.html",
+          "hash": "n8LADdcFJLTkweiQ9x94C9Kzq75/yC4pPHWUs08HSu0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.File.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.File.html",
+          "hash": "quVZnvRGXZ0ICjEu8mfQHzDZdnvcyu8YDcJEAlXsrCQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.MainSection.MainSectionModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.MainSection.MainSectionModule.html",
+          "hash": "1A3iv2vWTYiQP0lPtTZoIeBD/e3A6XUmHDnX9qHklH4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.MainSection.ViewModels.FourRegionsViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.MainSection.ViewModels.FourRegionsViewModel.html",
+          "hash": "0SK7fDHlp+cfbU+FHSF7x8XHm6kUy53ZKLdUEIvMxoE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.MainSection.ViewModels.SingleRegionViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.MainSection.ViewModels.SingleRegionViewModel.html",
+          "hash": "HBK73WjipxyPuGDK047QvcgDOsWzISnsTzO9f1yRIT8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.MainSection.ViewModels.ThreeRegionsViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.MainSection.ViewModels.ThreeRegionsViewModel.html",
+          "hash": "xJgusov0teyoq7Tolp0akWKK1wYo/UbzcHZHVyy0X+4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.MainSection.ViewModels.TwoRegionsViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.MainSection.ViewModels.TwoRegionsViewModel.html",
+          "hash": "R0ii48xZnnrLPO3VPujQvMNvEjkcR9Tf5DKzj9cN9Y8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.MainSection.ViewModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.MainSection.ViewModels.html",
+          "hash": "YgWxSyJ3YvgvHdSoMlHbs225DI/UapQBeh/ZlJW7zP8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.MainSection.Views.FourRegionsView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.MainSection.Views.FourRegionsView.html",
+          "hash": "uQMdsELB28MrcW2EWByREcj6bN1sNh2gO0S4F/SCBaE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.MainSection.Views.SingleRegionView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.MainSection.Views.SingleRegionView.html",
+          "hash": "fR1EF0tfHi/uA3EuiMYTtHUmeFzeplUeembFdWBHTmU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.MainSection.Views.ThreeRegionsView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.MainSection.Views.ThreeRegionsView.html",
+          "hash": "6Tl5qfnQA/2AQPVSMn5xnWWBCRYuTPoSmUm7Bvt3PGM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.MainSection.Views.TwoRegionsView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.MainSection.Views.TwoRegionsView.html",
+          "hash": "R0jfSNMlGw9VdiUvxvkkHXpfwUPQUKULl8wVjFohnoU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.MainSection.Views.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.MainSection.Views.html",
+          "hash": "cPUzCElIeYula1HVY2X2h7u/HZK7PEoEj+4dFuqW7oI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.MainSection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.MainSection.html",
+          "hash": "oAayKxY+egdmuKmDoBSlHlvWRXQo821YpRn7BKbb8UQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Options.OptionsModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Options.OptionsModule.html",
+          "hash": "4CvqtdZnUE/zsEwSy4yWTgh69/fDXmAraQyXjForujQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Options.ViewModels.ComposeOptionsViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Options.ViewModels.ComposeOptionsViewModel.html",
+          "hash": "uQd1SilgVKVh7WM8t7tgKjN+/L9eNQUKfxcUGPAR8ZY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Options.ViewModels.ExtractOptionsViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Options.ViewModels.ExtractOptionsViewModel.html",
+          "hash": "EZwx9rZv9WfxmqP621j0WVWYcew9ninABHuvqpCY8iM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Options.ViewModels.MergeOptionsViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Options.ViewModels.MergeOptionsViewModel.html",
+          "hash": "Odv5Yn5P5+38Nib9SUAG4KPD8f5l7nC7Ffzj277TnaU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Options.ViewModels.WorkCopyOptionsViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Options.ViewModels.WorkCopyOptionsViewModel.html",
+          "hash": "2u0/C8ge6Gm2tOUgDp3uHR2cGIZ8HM6sIyxRZ+hC6Sg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Options.ViewModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Options.ViewModels.html",
+          "hash": "Fn0A2AGWIrrYcZEz3lcbHMBb4mRwT1wLm5EBYm5MStY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Options.Views.ComposeOptionsView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Options.Views.ComposeOptionsView.html",
+          "hash": "v89YD8+p+Fg+44gXKYOhGBXtU548/np6vEnd9YzIewo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Options.Views.ExtractOptionsView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Options.Views.ExtractOptionsView.html",
+          "hash": "aPwtURYIkA1oTjwPvTabg4kUgOt0wdgucdS8511FXG8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Options.Views.MergeOptionsView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Options.Views.MergeOptionsView.html",
+          "hash": "Mk9GM8C62GYC5CcB/IColgmk6HdtFc9QMPVGf0t+dDQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Options.Views.WorkCopyOptionsView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Options.Views.WorkCopyOptionsView.html",
+          "hash": "+Fe5uCP4SvjNHLCrK0F+TTPi89q23C/RZxMfS242n+E="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Options.Views.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Options.Views.html",
+          "hash": "Q/d0ceDdgy1q9WRbJFXgYXoFEHy4Jv3DmYk7vgCNQuE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Modules.Options.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Modules.Options.html",
+          "hash": "6tfZuT2cudCQSzvuWSendtv8V7DxrBIrpntU9AQV84A="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Buttons.Composition.Menus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Buttons.Composition.Menus.html",
+          "hash": "DHJr4SAVu0xoMy9H9nza6rgkpLt0Tcj8uR+zN+qP+rw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Buttons.Composition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Buttons.Composition.html",
+          "hash": "PEzJHSdhBYYNxGpC1qDKj1lCplVHKhpXsDtvxy9OhOI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Buttons.Extraction.Order.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Buttons.Extraction.Order.html",
+          "hash": "mIZ4y23p+irDGwnexRfofBRn/a7Zg83axrAJA5AB604="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Buttons.Extraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Buttons.Extraction.html",
+          "hash": "b7aK1TE67KOC2pqMHw+OL0uk7H1V3Aq57wnWRns2HoQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Buttons.General.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Buttons.General.html",
+          "hash": "ruyLVuH/wzWvRFr3YIwlePH+P6DCiXrlfUK2whInPA0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Buttons.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Buttons.html",
+          "hash": "oGfh/zXZHbT/sdJKMKvLIdel5CxQIwr1bNWL2KiCcyo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.ContextMenu.Arguments.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.ContextMenu.Arguments.html",
+          "hash": "bFfTfbnfjdKnIEosRxDm0JnpXxZNnPtwDPvTTMADuJQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.ContextMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.ContextMenu.html",
+          "hash": "blWBF2+BUTqbIo7PMyTcTG0zXDs2Sv8Qxaw+WtaexqQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.DefaultValues.DefaultValues.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.DefaultValues.DefaultValues.html",
+          "hash": "MuMVzoOPp1n1irAe70Gokyx6Gd4lt9HIznTuQKJ1SnQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.DefaultValues.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.DefaultValues.html",
+          "hash": "m+bfeCU6SFAToDM1TE2B096xkpbl5OfMq7iEA+Qa2Yg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Files.FileExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Files.FileExtensions.html",
+          "hash": "Y93w2Q8uYSyFxtJxKx0KFgr/vExvfQJNZhUAD3MgXe4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Files.FileTypeNames.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Files.FileTypeNames.html",
+          "hash": "kbpI/bgTIdCkbxyhqExa/HiqRJyyKYfppOouon6XlO8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Files.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Files.html",
+          "hash": "QQZnzx1yGNBZyn5DQmd6KYo8tQZfgwfmq0rQPa2z6wQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.HelperTexts.Extraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.HelperTexts.Extraction.html",
+          "hash": "kRAhdRSaLbsDn2IK5ybN+XG6jV1laIISVSpHCiaZUxM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.HelperTexts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.HelperTexts.html",
+          "hash": "oDGlNvWBvDr2572kcW04VyyMdWSafEdwkxQbyfY6s9A="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Hyperlinks.Hyperlinks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Hyperlinks.Hyperlinks.html",
+          "hash": "eeVQnhz8izznmXd6HYJUeL/sMhcq5H1GLZE2Iw1mDOE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Hyperlinks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Hyperlinks.html",
+          "hash": "+92v45Y0kt8qe/UZ8gmfKC57kJUyeNcdVO7k+QnUxeE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Instructions.Compose.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Instructions.Compose.html",
+          "hash": "hpPW/gWvCxi9ozZHAKG+ljoQEYBH/ATS5y0yrxIV1nQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Instructions.Merge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Instructions.Merge.html",
+          "hash": "G88DBJYEtj5hnPFHQ+ay8WS8aIC2I0ehnuTxz8/FYko="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Instructions.WorkCopy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Instructions.WorkCopy.html",
+          "hash": "6+ECOFIHBaAiRr5UlScTprjPmupa/peeA+rOplAUY3E="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Instructions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Instructions.html",
+          "hash": "dySRepvuyXCK55RUrC+Yky38cbGYI40faaiMaTHfGo8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.Composition.Descriptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.Composition.Descriptions.html",
+          "hash": "N0JyhhZzsK5Y3HleMtRU/egGmAVKF4IIaETWdPpQ2Xs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.Composition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.Composition.html",
+          "hash": "u06DX0zExrEaq9eebcxo0WU+ARTocRc8gR3sH8i8W8E="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.Bookmark.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.Dialogs.Bookmark.html",
+          "hash": "z1ruUDmSSQ4lbTo9pYrMzF/O8CkJHQhT3zxZGL0OWjo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionFileCount.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionFileCount.html",
+          "hash": "8sRgGrYqRyeNJSV9ebQq57v/j7HNLYM3N+U8LPmRs8g="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionFileSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionFileSegment.html",
+          "hash": "YwgTnCI4+v7NGksWd+gXSjcM1G8w9Oik4g5pjYtnGCI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionOptions.html",
+          "hash": "3103DOODQDg4kba4MzbZ7VksRhc+abJ8+uVjpFelMY8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionProfile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionProfile.html",
+          "hash": "tLHWB1FvnaKIKAm8E1HnK+/Q4TDEa79PyWz0JNPlaHY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionProfileSelection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionProfileSelection.html",
+          "hash": "GYs7TZzNhJcSXP5dpPqHaR/Ah9t/0YkSyT5ydlQokXo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.Confirmation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.Dialogs.Confirmation.html",
+          "hash": "CJ/d5JBdYrVLzc4KJnOUj+GHjrwh9OpUqPbL7Xyb/Z4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.ExtractionAnnotations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.Dialogs.ExtractionAnnotations.html",
+          "hash": "s954Hzy/DgoxjseFgbI7tQOxivn+7flw8DchCkQkYik="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.ExtractionOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.Dialogs.ExtractionOptions.html",
+          "hash": "eCjJxdu28jc9X+WXkQr7zjC8ayv51zeT7pRhJxZTGOg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.ExtractionOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.Dialogs.ExtractionOrder.html",
+          "hash": "rtfXgjul94hjnywycHupC5dzgS4cxij8z+YU3xjGd+Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.FileTitle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.Dialogs.FileTitle.html",
+          "hash": "3MhEPrfOsWr4B677vVQ871gKNtauixE8+hLV+n5ipAI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.MergeOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.Dialogs.MergeOptions.html",
+          "hash": "Mp9SeMRmIZRZ4RoX+tz0D//ZjQirv8rzWFYmV8QIwb4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.WorkCopyOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.Dialogs.WorkCopyOptions.html",
+          "hash": "cjuQ+pGKJJPoWj/hwwnqqqZugAhf/Tx11BJg5j35ZtI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.Dialogs.html",
+          "hash": "FRopnrcGT1KjOWR4nmTRZOTj4AVGYOZyZi9yqp4sdAI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.Extraction.Titles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.Extraction.Titles.html",
+          "hash": "RerNYSYGQoVCE+Zd6dInWJq3V4MSnAiNZUSMNO84Ydk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.Extraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.Extraction.html",
+          "hash": "OJJ0JAGSzohU05t+zmwH6yz4PrXg01r02kEh4UzX7Bw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.General.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.General.html",
+          "hash": "NTmpZ6gCDM6klFBcX7pYUamNk3uoZ1Ye4/l0HiaeebI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.MainWindow.HelpMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.MainWindow.HelpMenu.html",
+          "hash": "kzZ0FPDRv1yfXBGPQlFIj9K2NBuvbRLiqtS1fOoe/cM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.MainWindow.Languages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.MainWindow.Languages.html",
+          "hash": "IGogDrbB1DXN89jJQCqoNEtJvMA0uoQ5GEJtov8LFv0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.MainWindow.Titles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.MainWindow.Titles.html",
+          "hash": "0IDYZIBJ0LpGeU4zS80XGB9fL7ykKL43WKMAgB5YpVM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.MainWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.MainWindow.html",
+          "hash": "qzh9UzmK2hH0Kr03/lE6ovHV7rSMtq0CGuLSffks2Vg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Labels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Labels.html",
+          "hash": "Ni/z9AAJ2uls5GYcqRbNlqRkF6jENQ4MQnaGBhbd/Bs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Messages.Composition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Messages.Composition.html",
+          "hash": "xA1LlacJ32ERNRSINfKbY6PK3I9Dyc3vU/OcETuYpKU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Messages.ContextMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Messages.ContextMenu.html",
+          "hash": "WeITeIsh2MCKuFnHOgrUTE560gj/K55C8RAhYV2Jj9I="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Messages.Extraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Messages.Extraction.html",
+          "hash": "PF4zCp4Maex6k+mRfaxP6HuHlLEbMZ2WcgEBw6H5RBM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Messages.General.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Messages.General.html",
+          "hash": "+0KMUrdIygA9s235GKKFOyhvqjEcJAi0MCWu1oWtWPQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Messages.MainWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Messages.MainWindow.html",
+          "hash": "UOvVqFpl0j1b5+9usx/QBFOTfYfwRlMuxhmyp9/pvVM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Messages.Merging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Messages.Merging.html",
+          "hash": "HQPNN3U/jIL/9eCDmFvmLfaTqgSzTzD1j4WULqYYay4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Messages.Signature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Messages.Signature.html",
+          "hash": "sYzF1HVY2XamOdpC1+q7aICXns58qjIB1/C+O0hlkBE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Messages.StartUp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Messages.StartUp.html",
+          "hash": "WdHkwl67YA84mGyXw9TruaZMrblOWYBfgTvAlH/nMxI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Messages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Messages.html",
+          "hash": "czBq8MQlTlJc5WqlUwX1cu2UgfCQkVJ5hSlU1YnXufU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Operations.PhaseNames.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Operations.PhaseNames.html",
+          "hash": "6DGfSVzBl8prKvGSzEgYfY3Pq0vUBFtLDYrYJIwOvM0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Operations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Operations.html",
+          "hash": "IOHWAOvbV3oTP3u+vOnuFgYOGyzUqWQcJtXYuxV5VB4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Placeholders.FileNames.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Placeholders.FileNames.html",
+          "hash": "1WX2WK7MVEsYhDyBGgPgPJreAJ5G+hD7/iBLaPsn65U="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Placeholders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Placeholders.html",
+          "hash": "DiUwUCgPUM7hnRPuuIItSuQg8zpKEufv4tsIlzJaAjA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.ToolTips.Composition.Buttons.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.ToolTips.Composition.Buttons.html",
+          "hash": "xjCAq9e9lNFbjJYpULMkWLxiv/DNhxNyChDhVTLZnas="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.ToolTips.Composition.SegmentList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.ToolTips.Composition.SegmentList.html",
+          "hash": "5Be9BzVpErhGQ8XZX9Vnx8U67684d5HmvhE3RJij+rI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.ToolTips.Composition.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.ToolTips.Composition.Settings.html",
+          "hash": "bqeb1wnrK2ylGQ/Sjpt+jU4N/cCDoSEobyecnLQyxAA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.ToolTips.Composition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.ToolTips.Composition.html",
+          "hash": "0iHtBIgFeWQInUg4psnHfbFoFJUZnV5uBJM8S8TgSsA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.ToolTips.Extraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.ToolTips.Extraction.html",
+          "hash": "Gqz0Tozsta0ayAboVufRwsO8fmvM7NNL7SM9BFmzHDQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.ToolTips.Main.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.ToolTips.Main.html",
+          "hash": "kNEKaUyOWmoaf/zRX6x5YsHd+qNOFoy5O0qpv68/9bo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.ToolTips.Merge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.ToolTips.Merge.html",
+          "hash": "xNqUMfJZfPwDwTI1GR3ZgUCz+LKEInRfpBIOVrV6Bao="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.ToolTips.WorkCopy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.ToolTips.WorkCopy.html",
+          "hash": "OeGylK9ZjGFFn6OxZSyEBCNNr3lmUz4Hm6B80/MY2+k="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.ToolTips.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.ToolTips.html",
+          "hash": "iUnSdKWLTgHPsR9utkwYHlRAw4Cb64y62RW7afU8nQ0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.UserInput.Descriptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.UserInput.Descriptions.html",
+          "hash": "namstEFNbRbEMLD2aIEkZbd402F27dTiWDXon7bEzSM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.UserInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.UserInput.html",
+          "hash": "Bnxl7IQZ2u9DwE+h4MTo5qI0gqFsZ3yOYXGY3zA0GaU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Validation.Composition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Validation.Composition.html",
+          "hash": "vu3SZdi3Wx3V4J8wNUzzIATTTnxD7O5f/m5Git/78mI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Validation.Extraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Validation.Extraction.html",
+          "hash": "dtig7RChHBw1B9uYu9Kg1+HG0IBSaVGcN0/bpHpEp0k="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Validation.General.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Validation.General.html",
+          "hash": "IGPquGMX+dnVjAiqD2ZH9CeurXZdSqYPiuJPNW5/WOM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Resources.Validation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Resources.Validation.html",
+          "hash": "Zpu5uA9bfHz1+UkZlV2gST1X2Gw/Xie5FQWRQ+DOHtw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Base.IIndexed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Base.IIndexed.html",
+          "hash": "0YC5IX/ZwGnRdEj8OHJ8ViLct4NlfR5f44pRZ2J2sKc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Base.ISelectable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Base.ISelectable.html",
+          "hash": "gxdsOX5rVuwpQn9k9y3Z7sQc9lzvP58m5ljSmbdkb2k="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Base.html",
+          "hash": "kp5aOHQgT4yueKImXTNvxpgF4E5hG7Q6NB5kj1KCuEQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Configuration.IConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Configuration.IConfiguration.html",
+          "hash": "hYN36eHtgTGyiknaSQUYyHnNoQ9+xlpz8tqLA8s1XwA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Configuration.html",
+          "hash": "903nUYwdLOB5/O7vjGRz6dcL2xyEnyE30Zdfd7mkp6U="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Data.Composition.ICompositionFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Data.Composition.ICompositionFile.html",
+          "hash": "7nFUqqDRDu5JCkkFuWAV2+6+keqF98a3QCI6FANZ5iQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Data.Composition.ICompositionOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Data.Composition.ICompositionOptions.html",
+          "hash": "24xpR7uksmjnPxXUmg/JvShlsWF2cKDsPxbh3Y4dygM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Data.Composition.ICompositionProfile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Data.Composition.ICompositionProfile.html",
+          "hash": "lIqqla/KbPKjglur0U0X6GfIvgi5eJTSAas9Edd6ikY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Data.Composition.ICompositionSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Data.Composition.ICompositionSegment.html",
+          "hash": "yIs+KKVAuex9BaHi314HqrBHvhjUJIWdpSsRHeTl2o4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Data.Composition.ICompositionTitle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Data.Composition.ICompositionTitle.html",
+          "hash": "yY3y9aBZakvffsoKGFCWE54XXgCrXeitmecP+/bbbhA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Data.Composition.IFileEvaluationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Data.Composition.IFileEvaluationResult.html",
+          "hash": "OBmFPQ6wy1aHvn3kLMn9B1XMsYjkttjBX+7jNa+QYC4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Data.Composition.OutcomeType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Data.Composition.OutcomeType.html",
+          "hash": "gCHHZZfdmlCjvSSrKcEvVve7LAHbay0Aq4Pz23hRxZo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Data.Composition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Data.Composition.html",
+          "hash": "5BbD8bDVcWt32lO/Ro/+ssBohvRJU0pFvRNRrrZNFE4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Data.IComposer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Data.IComposer.html",
+          "hash": "Ei30zmjcKt7NGi7G/XaXY3jInVaspEbZcho3fVKeG0U="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Data.IDataObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Data.IDataObject.html",
+          "hash": "VPWMyFmAR0Qt+BvkljjCFWHn4Gn+5jQuzGUySPOCfxk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Data.IDataProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Data.IDataProvider.html",
+          "hash": "l8RBAaTcxOVto9natrM2GKZvZkTnHCRf5kZpvDDC4C4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Data.html",
+          "hash": "2Yul+7bcSPQRV237hiaSCt205cYBwN5OCxgBwV5dnDY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Extensions.EnumerableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Extensions.EnumerableExtensions.html",
+          "hash": "wp9CDZKphPzPu4PKaXaQJJOu3dMpLRR3eWBHrEbPoLU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Extensions.ObservableCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Extensions.ObservableCollectionExtensions.html",
+          "hash": "/5zbSA5IbvfAbbgSfVzCDZnze1BFppfloI3aZi/5p9c="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Extensions.html",
+          "hash": "IaWAiwSi4P42mp+ghnRfYtltTjsFI0wcZDoA5upC4H8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Helpers.InterfaceConverter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Helpers.InterfaceConverter-1.html",
+          "hash": "FG2Xn077bUTuMdxUTQ4oequYC11CvUKEoJ3O33BYkIU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Helpers.JsonInterfaceConverterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Helpers.JsonInterfaceConverterAttribute.html",
+          "hash": "oRbjrae71E/3IwoURAaWrcP3Ib9cR7aOtwsCebJCT2w="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Helpers.html",
+          "hash": "5P6rtwdue05u9fIxD73sqGRcP96d8fOtB7qPv9gylIQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Base.SelectableBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Base.SelectableBase.html",
+          "hash": "HfllM7TpeebHDHqCWGwo5ZsxC3Fw8X59L8RiJhFr3vY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Base.html",
+          "hash": "gBTUS1RN2CS7e4gbUce7u41mBtWFRIvYVVWiolA6qbs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Configuration.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Configuration.Configuration.html",
+          "hash": "+hPTz+zbA7ACy6CCb4xH61gkiB17Pwvzr8kqw4Z200Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Configuration.html",
+          "hash": "fu3MaIsWTI6Kc6Lp1HY3mgom1UAlJLct+nKSkgWEqPQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Data.Composition.Composer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Data.Composition.Composer.html",
+          "hash": "mzQOcsKLGvNiSuyMr1kf8K27lP9jNNkHLrMJrOG0aCU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Data.Composition.CompositionFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Data.Composition.CompositionFile.html",
+          "hash": "dyJWnpz4L5gHxueKOUVNLnTeC21QHMpAkFS1TaCYAlc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Data.Composition.CompositionOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Data.Composition.CompositionOptions.html",
+          "hash": "yBSbWXkcmPvemeJgbrmsd4oyXW6uwaCTUnRT/FjHbAc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Data.Composition.CompositionSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Data.Composition.CompositionSegment.html",
+          "hash": "DDBOHwTbaM5xr0Nw6xHlZWOiOoxiZPdemmL2tBlr8jY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Data.Composition.CompositionTitle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Data.Composition.CompositionTitle.html",
+          "hash": "QckJjPtNnJorABZ3Pye4+At8K7aX5XPV9l2skHOHsPA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Data.Composition.EvaluationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Data.Composition.EvaluationResult.html",
+          "hash": "dus0NFpimkij2teWqMShbQModUQCVKYzvCXyLePCFeM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Data.Composition.EvaluationWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Data.Composition.EvaluationWrapper.html",
+          "hash": "5LhyK67GSqIqPxSDqd33OWepgq0Cyv+/+s4qqn4K618="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Data.Composition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Data.Composition.html",
+          "hash": "C2zVByNE1wee/mCVwwQa4VZpOtjMFvsmGUaunvIXqls="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Data.DataObject-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Data.DataObject-1.html",
+          "hash": "EBlXO2O8o8yNlCY6qLnfiKyc3VDb/7247z8TaSXjGj4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Data.DataProviderLiteDB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Data.DataProviderLiteDB.html",
+          "hash": "9WRjF6Zubf1fWeaxBYsrxdR1/h2F4claWXhzptAOSus="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Data.Extraction.FileAndBookmarkWrapper.html",
+          "hash": "VTgaC/p5RnWcw7vmcCIu/v3G1CVkMeSSmHk6Y/2yTVI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Data.Extraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Data.Extraction.html",
+          "hash": "Sxjxuf62AGM8aubXG6yrIy4ni4loaXokolyaZ0//pB0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Data.html",
+          "hash": "poM0/YVxSQWrIvIGUZB+lMd3hDdoD5ywNSPkgoNAvS8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Extensions.FileAndBookmarkWrapperExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Extensions.FileAndBookmarkWrapperExtensions.html",
+          "hash": "b1z/5gXXD31LWEujRKELHw+0t17GD3CsEvhYaKzuo+s="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Extensions.html",
+          "hash": "VLdpDZW6W+BS+FteYkRRtdkXAgyQD39RVIdnctAC2vU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Input.PathSelectionWin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Input.PathSelectionWin.html",
+          "hash": "4267lkG6FZeWpeO/cJURNq/I/LeLk1JTzGTuDqLZKW4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Input.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Input.html",
+          "hash": "/l6RkWLhDOffUezLRgSnOg2DyUOoLEg5uBwf+sVYUeQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Logging.LoggingCapable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Logging.LoggingCapable-1.html",
+          "hash": "lnJShMM6oDrZSvhaB6hdKE8qdxTXbHfMEnVne8RDmlY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Logging.SeriLogbook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Logging.SeriLogbook.html",
+          "hash": "t++c/XIgR02jeqsRakcSsIcKvnQ5K4fHHtoA3KdpNSc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.Logging.html",
+          "hash": "JchFhWe3D82hnZfoDlE+uMBfrwXtWQ60XWuArkrBe7w="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.StaticHelpers.BookmarkMethods.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.StaticHelpers.BookmarkMethods.html",
+          "hash": "xoc3aN3PUIxVv/OxokeL4Kn3vjHlIQ0GjZ4jmNa7XmQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.StaticHelpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.StaticHelpers.html",
+          "hash": "x4DCUyLKQ9CHi5eZuGGzdgf/080IdLa1Xv7Llgb/T8c="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.DialogAssist.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.DialogAssist.html",
+          "hash": "spu40v45Pkh1DW+tgv9zG5jxmF7PiOlpv3FXnswOJds="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.DialogBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.DialogBase.html",
+          "hash": "T2O6Q2ja1x/kt2JZ54AUj8QXmRG86Q+2qAGHWRZ/eu0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.AnnotationCreator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.AnnotationCreator.html",
+          "hash": "/Xv30I185qx6EpxfEVLPTneKvlmR86io6a9eZG3yc6A="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.BookmarkDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.BookmarkDialog.html",
+          "hash": "fz2rFjYiA8Ov6ISeQv9wBGn8xiHbKrqLLocp6sWUzkc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.html",
+          "hash": "9ofN9lziDDQi+///YTP/IeSjy8zia3qSqzMAzHpsRq8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.CompositionFileSegmentDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.CompositionFileSegmentDialog.html",
+          "hash": "4WBlqEmC3J8ZFBDZgPPTQjNrubOzFuftXzkUan+uEjQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.CompositionProfileDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.CompositionProfileDialog.html",
+          "hash": "6ttRziBSgr5ETj+Y+cuKvSbEr3LqL8p1MmDolzZdUI8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.CompositionProfileSelectionDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.CompositionProfileSelectionDialog.html",
+          "hash": "+ok768YwEufk2lS+LtE9dPsAFBcTa5tmHlugwAf2TD8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.CompositionSettingsDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.CompositionSettingsDialog.html",
+          "hash": "g+Ufv55PzZ5Vr9Mo6lEmfLlcolvWd//6nCBKMcNinC4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.CompositionTitleSegmentDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.CompositionTitleSegmentDialog.html",
+          "hash": "GBS4J7nWAzez6jiKac5jf+R8Blp9nZyXptcdqzZBMmg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.ConfirmationDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.ConfirmationDialog.html",
+          "hash": "6xSbpGCHLejtwuj8Oetx9TTXTMAdoR4MprL+yuENTJM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.ExtractAnnotationsDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.ExtractAnnotationsDialog.html",
+          "hash": "dWA7/haswiRCIWywM/W849sLICpL5ADm+GBvlL8lbfg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.ExtractOrderDialog.html",
+          "hash": "+NlLXzuaRysLeDK87E7E67ocNT4mF+QQtTAhK+alwSM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.ExtractSettingsDialog.html",
+          "hash": "D5pijg6XPwKVoJvHmijbHZ7ybaZGk2vJXR9gc16ZbNU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.FileTitleDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.FileTitleDialog.html",
+          "hash": "VWJmpMfcoE3dM8rw7EjNPHCss8giZx/Ikj+EwI4bp+I="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.MergeSettingsDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.MergeSettingsDialog.html",
+          "hash": "QZcFX0nj+ga0HKgL/BgZdpcu5YrLZNbPKgVWXVcZZCg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.MessageDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.MessageDialog.html",
+          "hash": "7jYKsfhdJwCzIX0ijQRz8SdabeIfVgg/AVVrxE3SKAM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.ProgressDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.ProgressDialog.html",
+          "hash": "L7Z8hahJWKLW8WnxPYH906zCp3MieiVmPKtWWpN+Hzs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.UpdateDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.UpdateDialog.html",
+          "hash": "YAISqz2vjslP6NzhMxkdPdUkdXeZIpUwZ+pbOKk+VuA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.WorkCopySettingsDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.WorkCopySettingsDialog.html",
+          "hash": "hcda1x8oxikDTNi9HR3891vOt3IiVJ18CIAeurT3J6U="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.Dialogs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.html",
+          "hash": "XwYrOdofSpkTWxCL3PHa8RfGhrjFojJBMYgWN9fS/4A="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.NavigationAssist.SchemeNavigator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.NavigationAssist.SchemeNavigator.html",
+          "hash": "LooXTfwUt0vLJSttQUiBl8IXW+tI7Drp7a0UCm7aKlM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.NavigationAssist.SchemeTarget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.NavigationAssist.SchemeTarget.html",
+          "hash": "4oq09rrsLx96R0WlXlZLvjNA0b6Pk5H4lF2XUA9yIxk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.NavigationAssist.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.NavigationAssist.html",
+          "hash": "ZRR34gmNVSxJ/OhRocXrIEoXmJ3M/cLQXZ2UpZX0Dng="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.SchemeInstructions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.SchemeInstructions.html",
+          "hash": "FtWUHixdCcbefcKdLJW7Lla+stDneEQbrZnYwJ3Z/FE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Implementation.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Implementation.UI.html",
+          "hash": "SZ2XwSvXofKqTv3PNS36OhUI3O/iF7QLlvSZF3XZFE0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Input.FileType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Input.FileType.html",
+          "hash": "mLYMMCI+x/gSpPJcpB24mSTCFg4qrsaX8oiq0LQct2k="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Input.IPathSelection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Input.IPathSelection.html",
+          "hash": "nGzunO0oJdpNuttB5juLRscMAQ6+wMt07ZWO1yHUU3Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.Input.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.Input.html",
+          "hash": "rSKDGjL+kkfUHbJT37d/V+w5VnROjSWQvHyVRxWTB8Y="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.UI.CollectionItemAddedEventArgs-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.UI.CollectionItemAddedEventArgs-1.html",
+          "hash": "EtK9QEmvz/iTsocUVjk8/YCOrsLohzt/ErM5ULHiRxE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.UI.CollectionReorderedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.UI.CollectionReorderedEventArgs.html",
+          "hash": "xfwQs/CvqPLGPDlFi8bV/NIWkZnVPOgwYC1jyT05kMA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.UI.CollectionSelectedItemChangedEventArgs-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.UI.CollectionSelectedItemChangedEventArgs-1.html",
+          "hash": "eje67cTbpwrr+wmFqFiD+kOp8xNs0DeWbaWGs8NyH5M="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.UI.IContextMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.UI.IContextMenu.html",
+          "hash": "l1RYIxNaYJesNdn0OObPkFMpniJOKatGME/dnPExEt4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.UI.IDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.UI.IDialog.html",
+          "hash": "7EF5ZDEWWcQIdodMWNr8aj/PoO2A/03WaB8mgxXdkdg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.UI.IDialogAssist.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.UI.IDialogAssist.html",
+          "hash": "IJGyC/FFrBtp8mYZ+2uM+SV2E3eyEO1wqA/I3AmXA9M="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.UI.INavigationAssist.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.UI.INavigationAssist.html",
+          "hash": "hljhJwU2YHRe0cgJoqEiho85pyjGM8IXwy9XYr29M6M="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.UI.INavigationTarget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.UI.INavigationTarget.html",
+          "hash": "/98WQO7iZM5Gm8+tbJ+akv+EdBMGl8uRpK0H9RhJSHA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.UI.INavigationTargetRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.UI.INavigationTargetRegistry.html",
+          "hash": "6HomEG013MWmBYotTIsprVDyZ1KuCOW5TrCpMMi4LoA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.UI.ISchemeInstructions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.UI.ISchemeInstructions.html",
+          "hash": "KSijy5baMWK1LK/VJFx0V4kQkbZCKzHborUs3G817o4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.UI.Instruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.UI.Instruction.html",
+          "hash": "Xnhgtg6wKsZryMt6YGhipdMjX7wd3TIlgd2+1HXaa+4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.UI.MoveCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.UI.MoveCommand.html",
+          "hash": "fabzCbIx4saad2oW8o8Tyndop2gU5rw9+k/Y/NRfmBk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.UI.ProgressContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.UI.ProgressContainer.html",
+          "hash": "7T+A5/5zTcFGaLbaHyju9v+RE3SHn4J8q0hecRN0dAQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.UI.ReorderCollection-1.CollectionItemAddedEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.UI.ReorderCollection-1.CollectionItemAddedEventHandler.html",
+          "hash": "vVZI3v5XqJ13gOths78tjanEnGmFXJUzb40WGuDxlP8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.UI.ReorderCollection-1.CollectionReorderedEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.UI.ReorderCollection-1.CollectionReorderedEventHandler.html",
+          "hash": "4e+xMB1Slm5Y4hJjNMmQRpcsySs5rPghL+iL90KX7y0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.UI.ReorderCollection-1.CollectionSelectedItemChangedEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.UI.ReorderCollection-1.CollectionSelectedItemChangedEventHandler.html",
+          "hash": "QTmnOxw7cOgjCEw5JrZKs72yTfNZ2zI/0IZ0CB73NBY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.UI.ReorderCollection-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.UI.ReorderCollection-1.html",
+          "hash": "eN6Ds/GqRRTtnyUYSUbD4RhUoih0Ifa7dcD8XrdUgd8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Services.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Services.UI.html",
+          "hash": "/JnhGhOw3dP6KdXMMlj5zLaVf4GhfLcUeArnusHeBN4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Controls.OrderList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Controls.OrderList.html",
+          "hash": "neR4UEGDlQxpsQKT1YLE89AeOgCiOEhvUkWyknSwC6Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Controls.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Controls.html",
+          "hash": "Sg3cU2If+VLp19m/xWe8p5h8/5940wfOhMYp4odd12c="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Converters.BooleanAllNegative.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Converters.BooleanAllNegative.html",
+          "hash": "xxUvredoWM5llt6F3nmuk8wNLqILfZ0dvom4jA+luXQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Converters.BooleanToFontWeight.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Converters.BooleanToFontWeight.html",
+          "hash": "sOrOHrOyckN6Mxy2L41yxzV0CUJXqFxpFAA5OU8zfao="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Converters.BooleanToInt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Converters.BooleanToInt.html",
+          "hash": "LKx1/AVj12TCmRco+xKLTeTjDHGDjKj++KUecX1DGac="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Converters.BooleanToOppositeVisibility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Converters.BooleanToOppositeVisibility.html",
+          "hash": "LR7buhCF5ezFh53KhmLOnuIoJ+cUowhTwe4ajmUm1Qg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Converters.EmptyToBoolConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Converters.EmptyToBoolConverter.html",
+          "hash": "gzp8N8ii1kuWxD52/iT+ykb1qVutFmL/ikVGU12a3fs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Converters.LevelToFontWeightConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Converters.LevelToFontWeightConverter.html",
+          "hash": "3LKJRMrtTQww4mJPGq6r0Coqz0vDL7VTShnYjLIjGpg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Converters.LevelToMargin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Converters.LevelToMargin.html",
+          "hash": "sGsJzRPYWXmkTzvI+lNjnN8QXmeGrfJv0Z6oogIwveg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Converters.NullToBoolConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Converters.NullToBoolConverter.html",
+          "hash": "MbSlhgoIWh1r2Nk4HoMyxA+L3r9BPVb6NeIQvKzMxbw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Converters.NullToString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Converters.NullToString.html",
+          "hash": "xa7yP/YSDsm0yi3CxQBVm5hsWPu43k/z+lfwNO4tokQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Converters.PercentToBooleanConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Converters.PercentToBooleanConverter.html",
+          "hash": "kwSxDXJlNxHo7xE8lW4A/Tb9140Uu5CsWOsSH6u77E4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Converters.PercentToVisibilityConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Converters.PercentToVisibilityConverter.html",
+          "hash": "pZTGzAKFgIme90E1iAOkRvr/p8bLUjk37UbPUQF4klc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Converters.SegmentNameConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Converters.SegmentNameConverter.html",
+          "hash": "dzsMElv6Bf4QsdNMvYTZ4qxQ5xYLIccGAYQQdbK10aQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Converters.UserNameReplace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Converters.UserNameReplace.html",
+          "hash": "+Cr3GkToeDUNKJfkWmz90r2XnV6RnutTwyMGM2bhqfM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Converters.UserNameToFontWeight.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Converters.UserNameToFontWeight.html",
+          "hash": "qVC3+kNgcR29ZIzwlX+v2rd2JfZeSgEce5+IAXGVzDI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Converters.ZeroAndTrue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Converters.ZeroAndTrue.html",
+          "hash": "2nrL95zf3Gkx2UsomE15R4CouARtxD55o/q6MCHN+ro="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Converters.ZeroToOppositeVisibility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Converters.ZeroToOppositeVisibility.html",
+          "hash": "SFQWt1iL7Sxl5c96AMxtb60HsQQQINlJ2gLrwtzlw74="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Converters.ZeroToTrueConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Converters.ZeroToTrueConverter.html",
+          "hash": "ffjTxBlwTTGvu8gQJg9nxAb7Bf3/0oClXPgaHHct0c8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Styles.Converters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Styles.Converters.html",
+          "hash": "1DFD7pU8mAZad1WTUygTLhhxaEWGalPmh1LFUHrcqV8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.UpdateInfoCreator.UpdateInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.UpdateInfoCreator.UpdateInfo.html",
+          "hash": "dsBwmEamLjSgMZFmD17uIATmF77Izf1g4Oyl4gH+RiY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.UpdateInfoCreator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.UpdateInfoCreator.html",
+          "hash": "UyhOeZ7j4ILLbwlImVzXBMp+eVGTPzLeuiZ8rAJjz6A="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Values.FilePaths.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Values.FilePaths.html",
+          "hash": "IdlbdWT5mDo1/xMZfQcXuDgXxKOv4bM+gzP7UoZKaD4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Values.RegionNames.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Values.RegionNames.html",
+          "hash": "LJDsDSlCZV0boj14wqC5TofBuBIrBih4ezv6RKXe1ss="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Values.SchemeNames.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Values.SchemeNames.html",
+          "hash": "vh6ytW7zEyNvLo8q9BSCh3IjZ8FCkn9IR7Wgk/fRY8E="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Values.SupportedTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Values.SupportedTypes.html",
+          "hash": "zuULNNSwA3pOztw36IYE5D+pPAnxFGAjaLugWBgIj1I="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Values.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Values.html",
+          "hash": "nvBvbSa/SMfK4C31LWa7JUhh7jwU3XuYAMgQtBR3d4c="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.ViewModels.ContextMenuViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.ViewModels.ContextMenuViewModel.html",
+          "hash": "pnwbP85ag+VyjGoV57qNir1mGdw2C4TW+zjP1BG82mc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.ViewModels.MainWindowViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.ViewModels.MainWindowViewModel.html",
+          "hash": "HWAyu6ugCmLlHevy8NRU19vc0Hy+OIrfdqQLfWH9k9g="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.ViewModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.ViewModels.html",
+          "hash": "G97Yy517eQt1ILyBPPaanLcLr44gAEAxcC+9ZVHrdBY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Views.ContextMenuView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Views.ContextMenuView.html",
+          "hash": "yYY7FaoV006g2L7bymCAXNJC+IjXs4agIZcy4CJGjMU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Views.MainWindowView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Views.MainWindowView.html",
+          "hash": "uvewt9ibnlu6EwV44+cF4SOd8boCVxMk8TWRr+Lc0kA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.Views.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.Views.html",
+          "hash": "kmfzstzFPWAE8MdsJCSmvl8YONSXKqG/IhDF3iJZtSY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Opus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Opus.html",
+          "hash": "v6jgiLyugbhEPi/NArP6mR/6X3AAd/NNGFRyjC8iAY8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "npgGBNEmh0+OX/R+ZxjQS9mEI9M2FOiimNrqLE9g7/Y="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "9tD6BQ3pSmh0ZgFZB56/pluAtgZnn06/MXGHciARUjM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/extract/add_bookmark.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/extract/add_bookmark.html",
+          "hash": "7Pyu4W5djKFFVx4XafToiAl2Uu9CdBaL9xKJ6oMQklk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/extract/file_options.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/extract/file_options.html",
+          "hash": "H5lSMGis/V1jysGG4JUQK2y1CQ2uvun70u2l40dI5hg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/extract/modifying_selected_bookmarks.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/extract/modifying_selected_bookmarks.html",
+          "hash": "wdWS1FDicdiBuGMGNxCFBTY6GPLW8IYkjNqGA9iGLWQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/extract/reordering_bookmarks.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/extract/reordering_bookmarks.html",
+          "hash": "DgHjrrbuVR6Ccj6pUAcWiAztkY9lMJA38yJEUhA6QzQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/extract/saving.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/extract/saving.html",
+          "hash": "vSts2OKq8uDEr54eBCwy91piKughk1FIFa0x3DUJxCs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/extract/selected_bookmarks.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/extract/selected_bookmarks.html",
+          "hash": "RmZ+oDPi+HqmBHrYvtycUJ1Pf5Fr7bddJBcivymqyRQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/extract/selecting_bookmarks.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/extract/selecting_bookmarks.html",
+          "hash": "RFsdsN0conBS5hi6giekvm191kVUIgtz6ROw3sjuTcM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/extract/selecting_files.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/extract/selecting_files.html",
+          "hash": "ib1K+B9nVd/KcfYOqS5OZblQTAD+5U1AQ92VufBBDBs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/extract/settings.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/extract/settings.html",
+          "hash": "KU33r7T60vXwv2qZYaxgYVXebPKqMP4HrGvx4ehs0nk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/general.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/general.html",
+          "hash": "2IzzfyRjlWOc+XDB0K82+g9iZcQViLhnHSk3rz13BY8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "luzNhw7n3lJH4LXHm9rL94snoy4y6UZkwoJeddBLFks="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "sydES9MhrLWVjVUjpvK5fFpz+YF4lzxvH4Cb+IiV2aA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/workcopy/editing_files.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/workcopy/editing_files.html",
+          "hash": "1a9Y9sOHpYmtutpqQN86J8t/g38/Ugz+TnS5AAvpJzg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/workcopy/selecting_files.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/workcopy/selecting_files.html",
+          "hash": "x0G0JLSWR8NHi+J8Rk2lcV8eMaqeqJv1analaQWXZog="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/workcopy/settings.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/workcopy/settings.html",
+          "hash": "trJeYmqaXwT+SSKGQMAby4hZxVlW5HBfIdyl9M47iSY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_add_bookmark_button.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_add_bookmark_button.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_add_bookmark_dialog.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_add_bookmark_dialog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_add_external.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_add_external.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_bookmarks_section.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_bookmarks_section.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_delete_selected_bookmark.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_delete_selected_bookmark.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_edit_selected_bookmark.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_edit_selected_bookmark.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_edit_selected_bookmark_dialog.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_edit_selected_bookmark_dialog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_extraction_finished.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_extraction_finished.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_rearrange_bookmarks.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_rearrange_bookmarks.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_remove_file.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_remove_file.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_save_multiple_files.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_save_multiple_files.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_save_one_file.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_save_one_file.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_select_bookmarks.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_select_bookmarks.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_select_dropdown.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_select_dropdown.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_select_files.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_select_files.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_selected_bookmark_filename.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_selected_bookmark_filename.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_selected_bookmark_name.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_selected_bookmark_name.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_selected_bookmark_pagerange.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_selected_bookmark_pagerange.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_selected_bookmark_serial.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_selected_bookmark_serial.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_selected_bookmarks.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_selected_bookmarks.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_settings_button.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_settings_button.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_settings_dialog.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_settings_dialog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/extract_view_file.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/extract_view_file.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo38pt.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo38pt.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/main_menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/main_menu.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/top_bar_heading.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/top_bar_heading.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/top_bar_menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/top_bar_menu.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/top_bar_reset.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/top_bar_reset.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/workcopy_clear_list.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/workcopy_clear_list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/workcopy_remove_file.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/workcopy_remove_file.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/workcopy_select_files.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/workcopy_select_files.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/workcopy_settings_button.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/workcopy_settings_button.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/workcopy_settings_dialog.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/workcopy_settings_dialog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "ovIUGRSVVmAOGtOjLxFV6KDDo5JRLzg5ElNv0scIYqI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "rMHpSzlRMMAy4pn4NfriYtsRnn6IC6wVDuW3HkH4D3o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 16,
+          "skipped_file_count": 16
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 296,
+          "skipped_file_count": 296
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
