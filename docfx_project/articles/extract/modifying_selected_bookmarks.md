@@ -5,10 +5,12 @@
 ## Kirjanmerkin muokkaamisen painike
 
 <details>
-    <summary><span class="expand-stub"></span>Valitun merkin muokkaaminen</summary>
+<summary>Valitun kirjanmerkin muokkaaminen</summary>
+<div class="accordioncontent">
 
 ![Valitun kirjanmerkin muokkaamisen painike](../../images/extract_edit_selected_bookmark.png)
 
+</div>
 </details>
 
 Valitun kirjanmerkin tietoja saat muokattua valitsemalla haluamasi kirjanmerkin [valittujen kirjanmerkkien luettelosta](selected_bookmarks.md) ja painamalla näkymän alalaidassa olevaa kynän kuvaa.
@@ -18,10 +20,12 @@ Valitun kirjanmerkin tietoja saat muokattua valitsemalla haluamasi kirjanmerkin 
 ## Tietojen muokkaamisen valinnat
 
 <details>
-    <summary><span class="expand-stub"></span>Tietojen muokkausikkuna</summary>
+<summary>Tietojen muokkausikkuna</summary>
+<div class="accordioncontent">
 
 ![Kirjanmerkin tietojen muokkaamisen ikkuna](../../images/extract_edit_selected_bookmark_dialog.png)
 
+</div>
 </details>
 
 Valitun kirjanmerkin tietoja saat muokattua avautuvassa ikkunassa. Kaikki tiedot ovat pakollisia ja niitä koskevat samat ohjeet, kuin luotaessa [uutta kirjanmerkkiä](add_bookmark.md#uuden-kirjanmerkin-valinnat).
@@ -29,10 +33,12 @@ Valitun kirjanmerkin tietoja saat muokattua avautuvassa ikkunassa. Kaikki tiedot
 ## Kirjanmerkin poistaminen
 
 <details>
-    <summary><span class="expand-stub"></span>Kirjanmerkin poistamisen painike</summary>
+<summary>Kirjanmerkin poistamisen painike</summary>
+<div class="accordioncontent">
 
 ![Kirjanmerkin poistamisen painike](../../images/extract_delete_selected_bookmark.png)
 
+</div>
 </details>
 
 Valitun kirjanmerkin saa poistettua valittujen kirjanmerkkien luettelosta valitsemalla sen ja klikkaamalla näkymän alalaidasta roskakorin kuvaa. Kirjanmerkki palautetaan [tiedostokohtaiseen kirjanmerkkiluetteloon](file_options.md#käsiteltävän-tiedoston-valitseminen) näkymän vasempaan laitaan (oikean tiedoston alle), josta sen voi [valita uudelleen](selecting_bookmarks.md#kirjanmerkkien-valitseminen).

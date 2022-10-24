@@ -19,6 +19,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using System.IO;
+using System.Linq;
 
 namespace Opus.Modules.Action.ViewModels
 {
@@ -196,6 +197,7 @@ namespace Opus.Modules.Action.ViewModels
         /// </summary>
         protected void ExecuteDeleteCommand()
         {
+            DropChildrenLevelsWhenDeleting();
             Collection.RemoveAll(x => x.IsSelected);
         }
 
@@ -297,6 +299,29 @@ namespace Opus.Modules.Action.ViewModels
                 inputs.Add(new MergeInput(file.FilePath, file.Title, file.Level));
             }
             return inputs;
+        }
+
+        /// <summary>
+        /// When deleting files from the list, check if they have children. If they
+        /// do have children, drop the level of those children to 1 (otherwise
+        /// they will have have "hanging" levels or they will become children
+        /// of incorrect files).
+        /// </summary>
+        protected void DropChildrenLevelsWhenDeleting()
+        {
+            foreach (FileStorage file in Collection.Where(b => b.IsSelected))
+            {
+                int delIndex = Collection.IndexOf(file);
+                for (int i = delIndex + 1; i < Collection.Count; i++)
+                {
+                    if (Collection[i].Level <= file.Level)
+                    {
+                        break;
+                    }
+
+                    Collection[i].Level = 1;
+                }
+            }
         }
         #endregion
     }

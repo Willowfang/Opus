@@ -1,7 +1,11 @@
 - name: Johdanto
   href: intro.md
 - name: Yleistä
-  href: general.md
+  items:
+    - name: Ohjelman avaaminen
+      href: general/program_start.md
+    - name: Näkymän rakenne
+      href: general/view_structure.md
 - name: Kirjanmerkkien erotteleminen
   items:
     - name: Asetukset
@@ -34,3 +38,23 @@
       href: workcopy/selecting_files.md
     - name: Valintojen muokkaaminen
       href: workcopy/editing_files.md
+    - name: Tallentaminen
+      href: workcopy/saving.md
+- name: Tiedostojen yhdistäminen
+  items:
+    - name: Asetukset
+      href: merge/settings.md
+    - name: Tiedostojen valitseminen
+      href: merge/selecting_files.md
+    - name: Valintojen muokkaaminen
+      href: merge/editing_files.md
+    - name: Tallentaminen
+      href: merge/saving.md
+- name: Asiakirjan kokoaminen
+  items:
+    - name: Yleistä
+      href: compose/general.md
+    - name: Asetukset
+      href: compose/settings.md
+    - name: Profiili
+      href: compose/profile.md

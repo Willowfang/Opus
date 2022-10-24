@@ -3,10 +3,12 @@
 ---
 
 <details>
-    <summary><span class="expand-stub"></span>Tiedostojen valitseminen käsiteltäväksi</summary>
+<summary>Tiedostojen valitseminen käsiteltäväksi</summary>
+<div class="accordioncontent">
 
 ![Tiedostojen tuomisen painike](../../images/workcopy_select_files.png)
 
+</div>
 </details>
 
 Voit valita asiakirjat, joista työkappaleet luodaan, klikkaamalla "Valitse tiedostoja" -painiketta.

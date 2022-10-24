@@ -141,6 +141,24 @@ details > p {
 
 details > p > img {
   text-align: center;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 1%;
+}
+
+.accordioncontent {
+  padding: 10px;
+  text-align: center;
+}
+
+.accordioncontent > img {
+  text-align: center;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 1%;
+}
+
+.accordioncontent > p > img {
+  text-align: center;
+  box-shadow: 0px 0px 5px black;
   border-radius: 1%;
 }
 

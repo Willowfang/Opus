@@ -5,10 +5,12 @@
 ## Asetusten avaaminen
 
 <details>
-    <summary><span class="expand-stub"></span>Asetusten painike</summary>
+<summary>Asetusten painike</summary>
+<div class="accordioncontent">
 
 ![Erottelun asetusten avauspainike](../../images/extract_settings_button.png)
 
+</div>
 </details>
 
 Erottelua koskevat asetukset saat avattua klikkaamalla näkymän keskivaiheilla olevaa hammasratasta.
@@ -16,10 +18,12 @@ Erottelua koskevat asetukset saat avattua klikkaamalla näkymän keskivaiheilla 
 ## Erottelun asetukset
 
 <details>
-    <summary><span class="expand-stub"></span>Asetusikkuna</summary>
+<summary>Asetusikkuna</summary>
+<div class="accordioncontent">
 
 ![Erottelun asetusten ikkuna](../../images/extract_settings_dialog.png)
 
+</div>
 </details>
 
 Erottelua koskien voit muokata seuraavia asetuksia:

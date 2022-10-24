@@ -177,16 +177,24 @@
                         Command="{Binding OpenSegmentMenuCommand}">
                     <materialDesign:PopupBox PlacementMode="TopAndAlignCentres" StaysOpen="False"
                                              IsPopupOpen="{Binding AddSegmentMenuOpen}"
-                                             ToolTip="{x:Static resToolTips:Buttons.SegmentPopup}">
+                                             ToolTip="{x:Static resToolTips:Buttons.SegmentPopup}"
+                                             Padding="0">
                         <materialDesign:PopupBox.ToggleContent>
                             <materialDesign:PackIcon Kind="PlusThick" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                         </materialDesign:PopupBox.ToggleContent>
-                        <StackPanel>
-                            <Button Style="{StaticResource DialogButton}"
-                                    Content="{x:Static resButtons:Menus.NewSegmentTitle}" Command="{Binding AddTitleSegmentCommand}"/>
-                            <Button Style="{StaticResource DialogButton}"
-                                    Content="{x:Static resButtons:Menus.NewSegmentFile}" Command="{Binding AddFileSegmentCommand}"/>
-                        </StackPanel>
+                        <Menu Background="#FF0F1316">
+                            <Menu.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel Orientation="Vertical"/>
+                                </ItemsPanelTemplate>
+                            </Menu.ItemsPanel>
+                            <MenuItem Header="{x:Static resButtons:Menus.NewSegmentTitle}"
+                                      Command="{Binding AddTitleSegmentCommand}"
+                                      Style="{StaticResource ProfilePopupMenuItem}"/>
+                            <MenuItem Header="{x:Static resButtons:Menus.NewSegmentFile}"
+                                      Command="{Binding AddFileSegmentCommand}"
+                                      Style="{StaticResource ProfilePopupMenuItem}"/>
+                        </Menu>
                     </materialDesign:PopupBox>
                 </Button>
                 <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>

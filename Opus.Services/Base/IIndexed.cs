@@ -5,7 +5,7 @@ namespace Opus.Services.Base
     /// <summary>
     /// An item that has an index (used in lists).
     /// <para>
-    /// Inherits <see cref="ILeveledItem"/>, so needs to also have
+    /// Inherits ILeveledItem, so needs to also have
     /// a level property.
     /// </para>
     /// </summary>

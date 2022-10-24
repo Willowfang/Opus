@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Yleist&#228; | Opus Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Yleist&#228; | Opus Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo38pt.png" alt="Opus Docs">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="yleistä">Yleistä</h1>
+
+<hr>
+<h2 id="toiminnon-tarkoitus">Toiminnon tarkoitus</h2>
+<p>Asiakirjan kokoamistoiminnolla on mahdollista koota asiakirjoja kansion sisältämistä erillisistä asiakirjoista määriteltyjen sääntöjen mukaan. Näin ollen on mahdollista tuottaa asiakirjoja muilla ohjelmilla ja nimetä tuotetut asiakirjat määritellyn kaavan mukaan ja sen jälkeen yhdistää Opuksella kyseiset yksittäiset asiakirjat valmiiksi kokonaisuudeksi.</p>
+<p><strong>Esimerkki</strong></p>
+<p>Kansio sisältää seuraavat, muilla ohjelmilla tuotetut tiedostot ja alikansiot (K = kansio, T = tiedosto):</p>
+<pre><code>K: ASIA 127763
+    T: Kansilehti.pdf
+    K: SELVITYKSET
+        T: Selvitys, Matti Möttönen.docx
+        T: Selvitys, Mikki Hiiri.docx
+        T: Selvitys, Hessu Hopo.docx
+    K: LIITTEET
+        T: Liite 1, Kuitti.pdf
+        T: Liite 2, Lasku.pdf
+        T: Liite 3, Valokuvat.pdf
+        T: Liite 4, Vaatimukset.pdf
+</code></pre>
+<p>Toiminnolla on mahdollista koota edeltävät tiedostot automaattisesti yhteen tiedostoon esimerkiksi siten, että kansilehti on omana yläkirjanmerkkinään, sen jälkeen kaikki selvitykset on koottu oman yläkirjanmerkkinsä alle ja vastaavasti liitteet oman yläkirjanmerkkinsä alle. Kokoaminen yhteen lopputiedostoon voisi siis kirjanmerkkien puolesta näyttää esimerkiksi seuraavalta:</p>
+<pre><code>Kansilehti
+Selvitykset
+    Selvitys, Matti Möttönen
+    Selvitys, Mikki Hiiri
+    Selvitys, Hessu Hopo
+Liitteet
+    Liite 1, Kuitti
+    Liite 2, Lasku
+    Liite 3, Valokuvat
+    Liite 4, Vaatimukset
+</code></pre>
+<h2 id="periaatteet-pääpiirteissään">Periaatteet pääpiirteissään</h2>
+<p>Asiakirjoja etsitään kansiosta (ja <a href="settings.html#1-tiedostojen-etsiminen-alikansioista">asetuksista</a> riippuen myös sen alikansioista) annettujen <a href="https://fi.wikipedia.org/wiki/S%C3%A4%C3%A4nn%C3%B6llinen_lauseke">säännöllisten lausekkeiden (regular expression, regex)</a> perusteella. Säännöllisiä lausekkeita voi muotoilla ja testata esimerkiksi <a href="https://regexr.com/">täällä</a>.</p>
+<p>Kun säännöllistä lauseketta vastaava tiedosto löytyy, sen sisältö liitetään osaksi muodostettavaa asiakirjaa ja sille annetaan kirjanmerkki, joka nimetään joko etsintäkriteereissä annetulla nimellä tai tiedoston nimen mukaan. Kirjanmerkki järjestetään kirjanmerkkipuuhun annetun rakenteen mukaisesti.</p>
+<p>Mikäli pakolliseksi merkattua asiakirjaa ei löydetä tai kriteerien mukaisia asiakirjoja löydetään liikaa, käyttäjää pyydetään etsimään puuttuvat tiedostot tai valitsemaan, mikä löydetyistä tiedostoista on oikea.</p>
+<p>Koska etsintä perustuu säännöllisiin lausekkeisiin, periaatteessa hyvinkin monimutkaiset etsintäkriteerit ovat mahdollisia.</p>
+<h2 id="hyväksytyt-tiedostotyypit">Hyväksytyt tiedostotyypit</h2>
+<ul>
+<li>PDF (pdf)</li>
+<li>Word (doc, docx)</li>
+</ul>
+<p>Muut hyväksytyt tiedostomuodot, kuin pdf, muunnetaan pdf-muotoon ennen niiden liittämistä osaksi muodostettavaa asiakirjaa.</p>
+<hr>
+<blockquote>
+<p>“We all make choices, but in the end... our choices make us.” - Andrew Ryan</p>
+</blockquote>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/docfx_project/articles/compose/general.md/#L1" class="contribution-link">Parannusehdotus</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>Tässä osiossa</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Takaisin ylös</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Takaisin ylös</a>
+            </span>
+            <div class="pull-left">
+              
+              <span><strong>Opus</strong>: ohjeet</span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+        <script type="text/javascript" src="../../styles/accordion.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

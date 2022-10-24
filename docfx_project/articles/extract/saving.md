@@ -9,10 +9,12 @@ Valittujen kirjanmerkkien mukaiset, tiedostoista eroteltavat sivualueet voi tall
 ### 1. Tallentaminen samaan tiedostoon
 
 <details>
-    <summary><span class="expand-stub"></span>Sama tiedosto</summary>
+<summary>Sama tiedosto</summary>
+<div class="accordioncontent">
 
 ![Samaan tiedostoon tallentamisen painike](../../images/extract_save_one_file.png)
 
+</div>
 </details>
 
 Saat tallennettua valitut kirjanmerkit yhteen tiedostoon klikkaamalla näkymän alalaidassa olevaa, yhden levykkeen kuvaa. Windowsin tiedostopolun valintaikkuna aukeaa. Valitse siitä kansio, johon valmis tiedosto tallennetaan sekä anna tiedostolle nimi. Klikkaa sitten tallenna.
@@ -22,10 +24,12 @@ Lopputuote tallennetaan valitsemallasi nimellä valitsemaasi kansioon. Tiedosto 
 ### 2. Tallentaminen erillisiin tiedostoihin
 
 <details>
-    <summary><span class="expand-stub"></span>Erilliset tiedostot</summary>
+<summary>Erilliset tiedostot</summary>
+<div class="accordioncontent">
 
 ![Erillisiin tiedostoihin tallentamisen painike](../../images/extract_save_multiple_files.png)
 
+</div>
 </details>
 
 Erillisiin tiedostoihin voit tallentaa klikkaamalla näkymän alalaidassa olevaa, kahden levykkeen kuvaa. Windowsin kansiopolun valintaikkuna aukeaa. Valitse kansio, johon tiedostot tallennetaan.
@@ -45,13 +49,15 @@ Vastaa kysymyksiin, mikäli niitä esitetään.
 ## Ilmoitus valmistumisesta
 
 <details>
-    <summary><span class="expand-stub"></span>Erottelun valmistuminen</summary>
+<summary>Erottelun valmistuminen</summary>
+<div class="accordioncontent">
 
 ![Erottelun valmistumisen ikkuna](../../images/extract_extraction_finished.png)
 
+</div>
 </details>
 
-Kun erottelu on valmis, siitä ilmoitetaan sinulle erillisellä ikkunalla. Voit nyt sulkea ikkunan ja tarkastaa tarvittaessa lopputuotteet. Saat aloitettua erottelun uudelleen alusta klikkaamalla [Aloita alusta -painiketta](../general.md#1-aloita-alusta--painike).
+Kun erottelu on valmis, siitä ilmoitetaan sinulle erillisellä ikkunalla. Voit nyt sulkea ikkunan ja tarkastaa tarvittaessa lopputuotteet. Saat aloitettua erottelun uudelleen alusta klikkaamalla [Aloita alusta -painiketta](../general/view_structure.md#1-aloita-alusta--painike).
 
 ---
 

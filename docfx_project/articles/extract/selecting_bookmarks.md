@@ -3,10 +3,12 @@
 ---
 
 <details>
-    <summary><span class="expand-stub"></span>Kirjanmerkkien valinta</summary>
+<summary>Kirjanmerkkien valinta</summary>
+<div class="accordioncontent">
 
 ![Kirjanmerkkien valitsemisen vaiheet](../../images/extract_select_bookmarks.gif)
 
+</div>
 </details>
 
 ## Yksittäisten kirjanmerkkien valinta

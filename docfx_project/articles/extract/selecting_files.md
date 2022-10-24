@@ -3,10 +3,12 @@
 ---
 
 <details>
-    <summary><span class="expand-stub"></span>Tiedostojen valitseminen käsiteltäväksi</summary>
+<summary>Tiedostojen valitseminen käsiteltäväksi</summary>
+<div class="accordioncontent">
 
 ![Tiedostojen valitsemisen painike](../../images/extract_select_files.png)
 
+</div>
 </details>
 
 Voit valita erottelussa käsiteltävät tiedostot klikkaamalla "Valitse tiedostoja" -painiketta.

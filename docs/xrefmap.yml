@@ -2415,6 +2415,19 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.Action.ViewModels.MergeViewModel.DeleteCommand
   nameWithType: MergeViewModel.DeleteCommand
+- uid: Opus.Modules.Action.ViewModels.MergeViewModel.DropChildrenLevelsWhenDeleting
+  name: DropChildrenLevelsWhenDeleting()
+  href: api/Opus.Modules.Action.ViewModels.MergeViewModel.html#Opus_Modules_Action_ViewModels_MergeViewModel_DropChildrenLevelsWhenDeleting
+  commentId: M:Opus.Modules.Action.ViewModels.MergeViewModel.DropChildrenLevelsWhenDeleting
+  fullName: Opus.Modules.Action.ViewModels.MergeViewModel.DropChildrenLevelsWhenDeleting()
+  nameWithType: MergeViewModel.DropChildrenLevelsWhenDeleting()
+- uid: Opus.Modules.Action.ViewModels.MergeViewModel.DropChildrenLevelsWhenDeleting*
+  name: DropChildrenLevelsWhenDeleting
+  href: api/Opus.Modules.Action.ViewModels.MergeViewModel.html#Opus_Modules_Action_ViewModels_MergeViewModel_DropChildrenLevelsWhenDeleting_
+  commentId: Overload:Opus.Modules.Action.ViewModels.MergeViewModel.DropChildrenLevelsWhenDeleting
+  isSpec: "True"
+  fullName: Opus.Modules.Action.ViewModels.MergeViewModel.DropChildrenLevelsWhenDeleting
+  nameWithType: MergeViewModel.DropChildrenLevelsWhenDeleting
 - uid: Opus.Modules.Action.ViewModels.MergeViewModel.EditCommand
   name: EditCommand
   href: api/Opus.Modules.Action.ViewModels.MergeViewModel.html#Opus_Modules_Action_ViewModels_MergeViewModel_EditCommand

@@ -5,10 +5,12 @@
 ## Yksittäisen tiedoston poistaminen listalta
 
 <details>
-    <summary><span class="expand-stub"></span>Tiedoston poistaminen</summary>
+<summary>Tiedoston poistaminen</summary>
+<div class="accordioncontent">
 
 ![Tiedoston poistamisen painike](../../images/workcopy_remove_file.png)
 
+</div>
 </details>
 
 Saat poistettua tuomasi tiedoston käsiteltävien tiedostojen listalta klikkaamalla näkymän alaosassa olevaa roskakorin kuvaa. Tiedosto poistetaan ainoastaan listalta, alkuperäinen tiedosto ei katoa sen sijaintipaikasta mihinkään.
@@ -16,10 +18,12 @@ Saat poistettua tuomasi tiedoston käsiteltävien tiedostojen listalta klikkaama
 ## Listan tyhjentäminen
 
 <details>
-    <summary><span class="expand-stub"></span>Listan tyhjentäminen</summary>
+<summary>Listan tyhjentäminen</summary>
+<div class="accordioncontent">
 
 ![Listan tyhjentämisen painike](../../images/workcopy_clear_list.png)
 
+</div>
 </details>
 
 Saat tyhjennettyä koko käsiteltävien tiedostojen listan klikkaamalla näkymän alaosassa olevaa rastin kuvaa.

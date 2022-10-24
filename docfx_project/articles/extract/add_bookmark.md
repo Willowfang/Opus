@@ -5,10 +5,12 @@
 ## Uuden kirjanmerkin painike
 
 <details>
-    <summary><span class="expand-stub"></span>Uuden kirjanmerkin lisääminen</summary>
+<summary>Uuden kirjanmerkin lisääminen</summary>
+<div class="accordioncontent">
 
 ![Uuden kirjanmerkin lisäämisen painike](../../images/extract_add_bookmark_button.png)
 
+</div>
 </details>
 
 Uuden kirjanmerkin saat lisättyä asiakirjaan klikkaamalla kirjanmerkkilistauksen alapuolella olevaa +-painiketta.
@@ -16,10 +18,12 @@ Uuden kirjanmerkin saat lisättyä asiakirjaan klikkaamalla kirjanmerkkilistauks
 ## Uuden kirjanmerkin valinnat
 
 <details>
-    <summary><span class="expand-stub"></span>Kirjanmerkin valinnat</summary>
+<summary>Kirjanmerkin valinnat</summary>
+<div class="accordioncontent">
 
 ![Uuden kirjanmerkin lisäämisen ikkuna](../../images/extract_add_bookmark_dialog.png)
 
+</div>
 </details>
 
 Uuden kirjanmerkin tiedot saat syötettyä avautuvaan ikkunaan. Kaikki kentät ovat pakollisia ja niiden sisältö on seuraava:

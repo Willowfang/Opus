@@ -5,10 +5,12 @@
 ## Merkkien järjestyksen vaihtaminen
 
 <details>
-    <summary><span class="expand-stub"></span>Merkkien järjestys</summary>
+<summary>Merkkien järjestys</summary>
+<div class="accordioncontent">
 
 ![Kirjanmerkkien järjestyksen muuttaminen](../../images/extract_rearrange_bookmarks.gif)
 
+</div>
 </details>
 
 Valittujen kirjanmerkkien keskinäistä järjestystä voi muuttaa [valittujen kirjanmerkkien luettelossa](selected_bookmarks.md) kahdella eri tavalla:
@@ -24,10 +26,12 @@ Toinen tapa on valita kirjanmerkki klikkaamalla sitä ja sen jälkeen painaa sam
 ## Ulkopuolisen tiedoston merkinnän lisääminen
 
 <details>
-    <summary><span class="expand-stub"></span>Ulkopuolinen tiedosto</summary>
+<summary>Ulkopuolinen tiedosto</summary>
+<div class="accordioncontent">
 
 ![Ulkopuolisen tiedoston lisäämisen prosessi](../../images/extract_add_external.gif)
 
+</div>
 </details>
 
 Klikkaamalla Lisää ulkopuolinen -painiketta, voit lisätä valittujen kirjanmerkkien luetteloon merkinnän ulkopuolisesta tiedostosta. Tällainen merkintä ei vaikuta itse erotteluun mitenkään, mutta se vaikuttaa tiedostojen nimeämiseen. Ulkopuolisen tiedoston merkintä vie yhden järjestysnumeron paikan, millä on vaikutusta lopputiedostoja nimettäessä silloin, kun [nimen rakenteessa](settings.md#1-nimen-rakenne) on käytössä numeron [paikkavaraus](settings.md#1-nimen-rakenne) \[numero\]. Tällöin numerointiin lisätään yksi siinä kohtaa, johon ulkopuolisen tiedoston merkintä on lisätty.

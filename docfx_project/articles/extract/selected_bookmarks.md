@@ -3,10 +3,12 @@
 ---
 
 <details>
-    <summary><span class="expand-stub"></span>Valittujen luettelo</summary>
+<summary>Valittujen luettelo</summary>
+<div class="accordioncontent">
 
 ![Valittujen kirjanmerkkien luettelonäkymä](../../images/extract_selected_bookmarks.png)
 
+</div>
 </details>
 
 Valitsemasi kirjanmerkit näkyvät näkymän oikean laidan luettelossa. Kyseiset kirjanmerkit eivät enää näy [tiedoston kirjanmerkkiluettelossa](file_options#käsiteltävän-tiedoston-valitseminen), jotta niitä ei voisi valita kahteen kertaan.
@@ -16,10 +18,12 @@ Kustakin kirjanmerkistä on näkyvissä seuraavat tiedot:
 ### 1. Järjestysluku
 
 <details>
-    <summary><span class="expand-stub"></span>Kirjanmerkin järjestysluku</summary>
+<summary>Kirjanmerkin järjestysluku</summary>
+<div class="accordioncontent">
 
 ![Kirjanmerkin järjestysluvun sijainti](../../images/extract_selected_bookmark_serial.png)
 
+</div>
 </details>
 
 Tämä kertoo kirjanmerkin sijainnin valittujen kirjanmerkkien luettelossa. Numerot ovat siinä järjestyksessä, jossa kirjanmerkit listallakin ovat. Numeroinnin tarkoitus on ainoastaan helpottaa tietyn kirjanmerkin paikan hahmottamista nopeasti varsinkin silloin, kun kirjanmerkkejä on valittuna paljon.
@@ -29,10 +33,12 @@ Mikäli erottelun [nimen rakenteessa](settings.md#1-nimen-rakenne) on käytöss�
 ### 2. Nimi
 
 <details>
-    <summary><span class="expand-stub"></span>Kirjanmerkin nimi</summary>
+<summary>Kirjanmerkin nimi</summary>
+<div class="accordioncontent">
 
 ![Kirjanmerkin nimen sijainti](../../images/extract_selected_bookmark_name.png)
 
+</div>
 </details>
 
 Tämä kohta näyttää valitun kirjanmerkin nimen.
@@ -42,10 +48,12 @@ Mikäli erottelun [nimen rakenteessa](settings.md#1-nimen-rakenne) on käytöss�
 ### 3. Sivuväli
 
 <details>
-    <summary><span class="expand-stub"></span>Merkin sivuväli</summary>
+<summary>Merkin sivuväli</summary>
+<div class="accordioncontent">
 
 ![Kirjanmerkin sivuvälin sijainti](../../images/extract_selected_bookmark_pagerange.png)
 
+</div>
 </details>
 
 Tämä kohta näyttää valitun kirjanmerkin alku- ja loppusivut, eli sen sivuvälin, jonka kirjanmerkki alkuperäisessä asiakirjassa kattaa. Kyseessä oleva väli on se, jonka mukaisesti sivut poimitaan lopulliseen tiedostoon.
@@ -53,10 +61,12 @@ Tämä kohta näyttää valitun kirjanmerkin alku- ja loppusivut, eli sen sivuv�
 ### 4. Tiedoston nimi
 
 <details>
-    <summary><span class="expand-stub"></span>Merkin tiedoston nimi</summary>
+<summary>Merkin tiedoston nimi</summary>
+<div class="accordioncontent">
 
 ![Kirjanmerkin tiedoston nimen sijainti](../../images/extract_selected_bookmark_filename.png)
 
+</div>
 </details>
 
 Tämä kohta näyttää sen tiedoston nimen, josta kirjanmerkki on valittu.
