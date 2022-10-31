@@ -16,7 +16,7 @@ Conveniently remove digital signatures from hundreds of files at once, creating 
 
 Merge multiple pdf files into one with ease! Create bookmark trees with hierarchical structures from merged files.
 
-### Compose documents
+### Document composition
 
 Compose documents contained in a directory structure into a new document based on composition profiles and pre-defined sections - using the familiar syntax of Regex!
 
