@@ -102,12 +102,20 @@ Liitteet
 <p>Kun säännöllistä lauseketta vastaava tiedosto löytyy, sen sisältö liitetään osaksi muodostettavaa asiakirjaa ja sille annetaan kirjanmerkki, joka nimetään joko etsintäkriteereissä annetulla nimellä tai tiedoston nimen mukaan. Kirjanmerkki järjestetään kirjanmerkkipuuhun annetun rakenteen mukaisesti.</p>
 <p>Mikäli pakolliseksi merkattua asiakirjaa ei löydetä tai kriteerien mukaisia asiakirjoja löydetään liikaa, käyttäjää pyydetään etsimään puuttuvat tiedostot tai valitsemaan, mikä löydetyistä tiedostoista on oikea.</p>
 <p>Koska etsintä perustuu säännöllisiin lausekkeisiin, periaatteessa hyvinkin monimutkaiset etsintäkriteerit ovat mahdollisia.</p>
+<h2 id="profiilit-ja-osiot">Profiilit ja osiot</h2>
+<p>Asiakirjojen haun kriteerit sisältyvät profiileihin, jotka on puolestaan jaettu osioihin. Jokainen osio vastaa yhtä tai useampaa kirjanmerkkiä valmiissa, kootussa tiedostossa.</p>
+<p>Osiot voivat olla tiedosto- tai otsikko-tyyppisiä. Tiedosto-osioita vastaavasti haetaan annetusta kansiosta tiedostoja. Kyseiset osiot voivat olla vapaaehtoisia tai pakollisia riippuen siitä, millainen vaadittujen tiedostojen määrä niille on asetettu.</p>
+<p>Otsikko-osioiden perusteella ei haeta tiedostoja, vaan niitä käytetään ainoastaan ylätason kirjanmerkkeinä valmiissa asiakirjassa. Otsikko-osiot lisätään asiakirjaan, mikäli ne sisältävät alakirjanmerkkejä (eli mikäli niiden alla on tiedosto-osioita, joiden perusteella on löydetty asiakirjoja).</p>
 <h2 id="hyväksytyt-tiedostotyypit">Hyväksytyt tiedostotyypit</h2>
 <ul>
 <li>PDF (pdf)</li>
 <li>Word (doc, docx)</li>
 </ul>
 <p>Muut hyväksytyt tiedostomuodot, kuin pdf, muunnetaan pdf-muotoon ennen niiden liittämistä osaksi muodostettavaa asiakirjaa.</p>
+<h2 id="esiasennetut-koontiprofiilit">Esiasennetut koontiprofiilit</h2>
+<p>Koontiprofiileja voidaan toimittaa käyttäjille myös asennustiedoston mukana sisällyttämällä ne asennuksen (tai päivityksen) yhteydessä tai jälkikäteen muulla tavalla ohjelman asennuskansion alle kansioon &quot;ProfileImport&quot;. Nämä profiilit tuodaan ohjelma avattaessa käyttäjän valittavaksi.</p>
+<p>Näin tuotavat profiilit on mahdollista asettaa myös tilaan, joka estää niiden muokkaamisen tai poistamisen. Näin voidaan järjestelmänvalvojan toimesta asennuttaa käyttäjille sellaisia profiileja, jotka ovat organisaation yhteisen käytännön mukaisia ja joita ei siis käyttäjän toimesta voida muuttaa.</p>
+<p>Profiilitiedostot ovat .opusprofile -päätteisiä ja JSON-muotoisia tiedostoja, joten niiden muokkaaminen on mahdollista myös tavallisilla tekstinkäsittelyohjelmilla.</p>
 <hr>
 <blockquote>
 <p>“We all make choices, but in the end... our choices make us.” - Andrew Ryan</p>

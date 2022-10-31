@@ -12,7 +12,7 @@ using Opus.Services.Implementation.UI.Dialogs;
 using AsyncAwaitBestPractices.MVVM;
 using System.Threading.Tasks;
 using System.Windows;
-using CX.LoggingLib;
+using WF.LoggingLib;
 using Opus.Core.Wrappers;
 using System.Collections.ObjectModel;
 using System.Resources;

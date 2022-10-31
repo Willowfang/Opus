@@ -1,11 +1,6 @@
-﻿using CX.LoggingLib;
-using LoggingLib.Defaults;
+﻿using WF.LoggingLib;
+using WF.LoggingLib.Defaults;
 using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Opus.Services.Implementation.Logging
 {

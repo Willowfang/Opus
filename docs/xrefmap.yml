@@ -1,6 +1,2887 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: CX.Common.Base
+  name: CX.Common.Base
+  href: api/CX.Common.Base.html
+  commentId: N:CX.Common.Base
+  fullName: CX.Common.Base
+  nameWithType: CX.Common.Base
+- uid: CX.Common.Base.CommonWorkerBase`1
+  name: CommonWorkerBase<TDerived>
+  href: api/CX.Common.Base.CommonWorkerBase-1.html
+  commentId: T:CX.Common.Base.CommonWorkerBase`1
+  name.vb: CommonWorkerBase(Of TDerived)
+  fullName: CX.Common.Base.CommonWorkerBase<TDerived>
+  fullName.vb: CX.Common.Base.CommonWorkerBase(Of TDerived)
+  nameWithType: CommonWorkerBase<TDerived>
+  nameWithType.vb: CommonWorkerBase(Of TDerived)
+- uid: CX.Common.Base.CommonWorkerBase`1.#ctor(CX.LoggingLib.ILogbook)
+  name: CommonWorkerBase(ILogbook)
+  href: api/CX.Common.Base.CommonWorkerBase-1.html#CX_Common_Base_CommonWorkerBase_1__ctor_CX_LoggingLib_ILogbook_
+  commentId: M:CX.Common.Base.CommonWorkerBase`1.#ctor(CX.LoggingLib.ILogbook)
+  fullName: CX.Common.Base.CommonWorkerBase<TDerived>.CommonWorkerBase(CX.LoggingLib.ILogbook)
+  fullName.vb: CX.Common.Base.CommonWorkerBase(Of TDerived).CommonWorkerBase(CX.LoggingLib.ILogbook)
+  nameWithType: CommonWorkerBase<TDerived>.CommonWorkerBase(ILogbook)
+  nameWithType.vb: CommonWorkerBase(Of TDerived).CommonWorkerBase(ILogbook)
+- uid: CX.Common.Base.CommonWorkerBase`1.#ctor*
+  name: CommonWorkerBase
+  href: api/CX.Common.Base.CommonWorkerBase-1.html#CX_Common_Base_CommonWorkerBase_1__ctor_
+  commentId: Overload:CX.Common.Base.CommonWorkerBase`1.#ctor
+  isSpec: "True"
+  fullName: CX.Common.Base.CommonWorkerBase<TDerived>.CommonWorkerBase
+  fullName.vb: CX.Common.Base.CommonWorkerBase(Of TDerived).CommonWorkerBase
+  nameWithType: CommonWorkerBase<TDerived>.CommonWorkerBase
+  nameWithType.vb: CommonWorkerBase(Of TDerived).CommonWorkerBase
+- uid: CX.Common.Base.CommonWorkerBase`1.CheckIfCancelledAndCleanUp(CancellationToken)
+  name: CheckIfCancelledAndCleanUp(CancellationToken)
+  href: api/CX.Common.Base.CommonWorkerBase-1.html#CX_Common_Base_CommonWorkerBase_1_CheckIfCancelledAndCleanUp_CancellationToken_
+  commentId: M:CX.Common.Base.CommonWorkerBase`1.CheckIfCancelledAndCleanUp(CancellationToken)
+  fullName: CX.Common.Base.CommonWorkerBase<TDerived>.CheckIfCancelledAndCleanUp(CancellationToken)
+  fullName.vb: CX.Common.Base.CommonWorkerBase(Of TDerived).CheckIfCancelledAndCleanUp(CancellationToken)
+  nameWithType: CommonWorkerBase<TDerived>.CheckIfCancelledAndCleanUp(CancellationToken)
+  nameWithType.vb: CommonWorkerBase(Of TDerived).CheckIfCancelledAndCleanUp(CancellationToken)
+- uid: CX.Common.Base.CommonWorkerBase`1.CheckIfCancelledAndCleanUp*
+  name: CheckIfCancelledAndCleanUp
+  href: api/CX.Common.Base.CommonWorkerBase-1.html#CX_Common_Base_CommonWorkerBase_1_CheckIfCancelledAndCleanUp_
+  commentId: Overload:CX.Common.Base.CommonWorkerBase`1.CheckIfCancelledAndCleanUp
+  isSpec: "True"
+  fullName: CX.Common.Base.CommonWorkerBase<TDerived>.CheckIfCancelledAndCleanUp
+  fullName.vb: CX.Common.Base.CommonWorkerBase(Of TDerived).CheckIfCancelledAndCleanUp
+  nameWithType: CommonWorkerBase<TDerived>.CheckIfCancelledAndCleanUp
+  nameWithType.vb: CommonWorkerBase(Of TDerived).CheckIfCancelledAndCleanUp
+- uid: CX.Common.Base.CommonWorkerBase`1.CheckIfFileDoesNotExistAndCleanUp(FileInfo)
+  name: CheckIfFileDoesNotExistAndCleanUp(FileInfo)
+  href: api/CX.Common.Base.CommonWorkerBase-1.html#CX_Common_Base_CommonWorkerBase_1_CheckIfFileDoesNotExistAndCleanUp_FileInfo_
+  commentId: M:CX.Common.Base.CommonWorkerBase`1.CheckIfFileDoesNotExistAndCleanUp(FileInfo)
+  fullName: CX.Common.Base.CommonWorkerBase<TDerived>.CheckIfFileDoesNotExistAndCleanUp(FileInfo)
+  fullName.vb: CX.Common.Base.CommonWorkerBase(Of TDerived).CheckIfFileDoesNotExistAndCleanUp(FileInfo)
+  nameWithType: CommonWorkerBase<TDerived>.CheckIfFileDoesNotExistAndCleanUp(FileInfo)
+  nameWithType.vb: CommonWorkerBase(Of TDerived).CheckIfFileDoesNotExistAndCleanUp(FileInfo)
+- uid: CX.Common.Base.CommonWorkerBase`1.CheckIfFileDoesNotExistAndCleanUp(System.String)
+  name: CheckIfFileDoesNotExistAndCleanUp(String)
+  href: api/CX.Common.Base.CommonWorkerBase-1.html#CX_Common_Base_CommonWorkerBase_1_CheckIfFileDoesNotExistAndCleanUp_System_String_
+  commentId: M:CX.Common.Base.CommonWorkerBase`1.CheckIfFileDoesNotExistAndCleanUp(System.String)
+  fullName: CX.Common.Base.CommonWorkerBase<TDerived>.CheckIfFileDoesNotExistAndCleanUp(System.String)
+  fullName.vb: CX.Common.Base.CommonWorkerBase(Of TDerived).CheckIfFileDoesNotExistAndCleanUp(System.String)
+  nameWithType: CommonWorkerBase<TDerived>.CheckIfFileDoesNotExistAndCleanUp(String)
+  nameWithType.vb: CommonWorkerBase(Of TDerived).CheckIfFileDoesNotExistAndCleanUp(String)
+- uid: CX.Common.Base.CommonWorkerBase`1.CheckIfFileDoesNotExistAndCleanUp*
+  name: CheckIfFileDoesNotExistAndCleanUp
+  href: api/CX.Common.Base.CommonWorkerBase-1.html#CX_Common_Base_CommonWorkerBase_1_CheckIfFileDoesNotExistAndCleanUp_
+  commentId: Overload:CX.Common.Base.CommonWorkerBase`1.CheckIfFileDoesNotExistAndCleanUp
+  isSpec: "True"
+  fullName: CX.Common.Base.CommonWorkerBase<TDerived>.CheckIfFileDoesNotExistAndCleanUp
+  fullName.vb: CX.Common.Base.CommonWorkerBase(Of TDerived).CheckIfFileDoesNotExistAndCleanUp
+  nameWithType: CommonWorkerBase<TDerived>.CheckIfFileDoesNotExistAndCleanUp
+  nameWithType.vb: CommonWorkerBase(Of TDerived).CheckIfFileDoesNotExistAndCleanUp
+- uid: CX.Common.Base.CommonWorkerBase`1.CleanUp
+  name: CleanUp()
+  href: api/CX.Common.Base.CommonWorkerBase-1.html#CX_Common_Base_CommonWorkerBase_1_CleanUp
+  commentId: M:CX.Common.Base.CommonWorkerBase`1.CleanUp
+  fullName: CX.Common.Base.CommonWorkerBase<TDerived>.CleanUp()
+  fullName.vb: CX.Common.Base.CommonWorkerBase(Of TDerived).CleanUp()
+  nameWithType: CommonWorkerBase<TDerived>.CleanUp()
+  nameWithType.vb: CommonWorkerBase(Of TDerived).CleanUp()
+- uid: CX.Common.Base.CommonWorkerBase`1.CleanUp*
+  name: CleanUp
+  href: api/CX.Common.Base.CommonWorkerBase-1.html#CX_Common_Base_CommonWorkerBase_1_CleanUp_
+  commentId: Overload:CX.Common.Base.CommonWorkerBase`1.CleanUp
+  isSpec: "True"
+  fullName: CX.Common.Base.CommonWorkerBase<TDerived>.CleanUp
+  fullName.vb: CX.Common.Base.CommonWorkerBase(Of TDerived).CleanUp
+  nameWithType: CommonWorkerBase<TDerived>.CleanUp
+  nameWithType.vb: CommonWorkerBase(Of TDerived).CleanUp
+- uid: CX.Common.Base.CommonWorkerBase`1.CreatedPaths
+  name: CreatedPaths
+  href: api/CX.Common.Base.CommonWorkerBase-1.html#CX_Common_Base_CommonWorkerBase_1_CreatedPaths
+  commentId: F:CX.Common.Base.CommonWorkerBase`1.CreatedPaths
+  fullName: CX.Common.Base.CommonWorkerBase<TDerived>.CreatedPaths
+  fullName.vb: CX.Common.Base.CommonWorkerBase(Of TDerived).CreatedPaths
+  nameWithType: CommonWorkerBase<TDerived>.CreatedPaths
+  nameWithType.vb: CommonWorkerBase(Of TDerived).CreatedPaths
+- uid: CX.Common.Base.CommonWorkerBase`1.PrepareCleanUp
+  name: PrepareCleanUp()
+  href: api/CX.Common.Base.CommonWorkerBase-1.html#CX_Common_Base_CommonWorkerBase_1_PrepareCleanUp
+  commentId: M:CX.Common.Base.CommonWorkerBase`1.PrepareCleanUp
+  fullName: CX.Common.Base.CommonWorkerBase<TDerived>.PrepareCleanUp()
+  fullName.vb: CX.Common.Base.CommonWorkerBase(Of TDerived).PrepareCleanUp()
+  nameWithType: CommonWorkerBase<TDerived>.PrepareCleanUp()
+  nameWithType.vb: CommonWorkerBase(Of TDerived).PrepareCleanUp()
+- uid: CX.Common.Base.CommonWorkerBase`1.PrepareCleanUp*
+  name: PrepareCleanUp
+  href: api/CX.Common.Base.CommonWorkerBase-1.html#CX_Common_Base_CommonWorkerBase_1_PrepareCleanUp_
+  commentId: Overload:CX.Common.Base.CommonWorkerBase`1.PrepareCleanUp
+  isSpec: "True"
+  fullName: CX.Common.Base.CommonWorkerBase<TDerived>.PrepareCleanUp
+  fullName.vb: CX.Common.Base.CommonWorkerBase(Of TDerived).PrepareCleanUp
+  nameWithType: CommonWorkerBase<TDerived>.PrepareCleanUp
+  nameWithType.vb: CommonWorkerBase(Of TDerived).PrepareCleanUp
+- uid: CX.Common.Base.IdClass
+  name: IdClass
+  href: api/CX.Common.Base.IdClass.html
+  commentId: T:CX.Common.Base.IdClass
+  fullName: CX.Common.Base.IdClass
+  nameWithType: IdClass
+- uid: CX.Common.Base.IdClass.#ctor(System.Guid,System.DateTime)
+  name: IdClass(Guid, DateTime)
+  href: api/CX.Common.Base.IdClass.html#CX_Common_Base_IdClass__ctor_System_Guid_System_DateTime_
+  commentId: M:CX.Common.Base.IdClass.#ctor(System.Guid,System.DateTime)
+  fullName: CX.Common.Base.IdClass.IdClass(System.Guid, System.DateTime)
+  nameWithType: IdClass.IdClass(Guid, DateTime)
+- uid: CX.Common.Base.IdClass.#ctor*
+  name: IdClass
+  href: api/CX.Common.Base.IdClass.html#CX_Common_Base_IdClass__ctor_
+  commentId: Overload:CX.Common.Base.IdClass.#ctor
+  isSpec: "True"
+  fullName: CX.Common.Base.IdClass.IdClass
+  nameWithType: IdClass.IdClass
+- uid: CX.Common.Base.IdClass.CreationDate
+  name: CreationDate
+  href: api/CX.Common.Base.IdClass.html#CX_Common_Base_IdClass_CreationDate
+  commentId: P:CX.Common.Base.IdClass.CreationDate
+  fullName: CX.Common.Base.IdClass.CreationDate
+  nameWithType: IdClass.CreationDate
+- uid: CX.Common.Base.IdClass.CreationDate*
+  name: CreationDate
+  href: api/CX.Common.Base.IdClass.html#CX_Common_Base_IdClass_CreationDate_
+  commentId: Overload:CX.Common.Base.IdClass.CreationDate
+  isSpec: "True"
+  fullName: CX.Common.Base.IdClass.CreationDate
+  nameWithType: IdClass.CreationDate
+- uid: CX.Common.Base.IdClass.Equals(System.Object)
+  name: Equals(Object)
+  href: api/CX.Common.Base.IdClass.html#CX_Common_Base_IdClass_Equals_System_Object_
+  commentId: M:CX.Common.Base.IdClass.Equals(System.Object)
+  fullName: CX.Common.Base.IdClass.Equals(System.Object)
+  nameWithType: IdClass.Equals(Object)
+- uid: CX.Common.Base.IdClass.Equals*
+  name: Equals
+  href: api/CX.Common.Base.IdClass.html#CX_Common_Base_IdClass_Equals_
+  commentId: Overload:CX.Common.Base.IdClass.Equals
+  isSpec: "True"
+  fullName: CX.Common.Base.IdClass.Equals
+  nameWithType: IdClass.Equals
+- uid: CX.Common.Base.IdClass.GetHashCode
+  name: GetHashCode()
+  href: api/CX.Common.Base.IdClass.html#CX_Common_Base_IdClass_GetHashCode
+  commentId: M:CX.Common.Base.IdClass.GetHashCode
+  fullName: CX.Common.Base.IdClass.GetHashCode()
+  nameWithType: IdClass.GetHashCode()
+- uid: CX.Common.Base.IdClass.GetHashCode*
+  name: GetHashCode
+  href: api/CX.Common.Base.IdClass.html#CX_Common_Base_IdClass_GetHashCode_
+  commentId: Overload:CX.Common.Base.IdClass.GetHashCode
+  isSpec: "True"
+  fullName: CX.Common.Base.IdClass.GetHashCode
+  nameWithType: IdClass.GetHashCode
+- uid: CX.Common.Base.IdClass.Id
+  name: Id
+  href: api/CX.Common.Base.IdClass.html#CX_Common_Base_IdClass_Id
+  commentId: P:CX.Common.Base.IdClass.Id
+  fullName: CX.Common.Base.IdClass.Id
+  nameWithType: IdClass.Id
+- uid: CX.Common.Base.IdClass.Id*
+  name: Id
+  href: api/CX.Common.Base.IdClass.html#CX_Common_Base_IdClass_Id_
+  commentId: Overload:CX.Common.Base.IdClass.Id
+  isSpec: "True"
+  fullName: CX.Common.Base.IdClass.Id
+  nameWithType: IdClass.Id
+- uid: CX.LoggingLib
+  name: CX.LoggingLib
+  href: api/CX.LoggingLib.html
+  commentId: N:CX.LoggingLib
+  fullName: CX.LoggingLib
+  nameWithType: CX.LoggingLib
+- uid: CX.LoggingLib.ILogbook
+  name: ILogbook
+  href: api/CX.LoggingLib.ILogbook.html
+  commentId: T:CX.LoggingLib.ILogbook
+  fullName: CX.LoggingLib.ILogbook
+  nameWithType: ILogbook
+- uid: CX.LoggingLib.ILogbook.CreateTyped*
+  name: CreateTyped
+  href: api/CX.LoggingLib.ILogbook.html#CX_LoggingLib_ILogbook_CreateTyped_
+  commentId: Overload:CX.LoggingLib.ILogbook.CreateTyped
+  isSpec: "True"
+  fullName: CX.LoggingLib.ILogbook.CreateTyped
+  nameWithType: ILogbook.CreateTyped
+- uid: CX.LoggingLib.ILogbook.CreateTyped``1
+  name: CreateTyped<T>()
+  href: api/CX.LoggingLib.ILogbook.html#CX_LoggingLib_ILogbook_CreateTyped__1
+  commentId: M:CX.LoggingLib.ILogbook.CreateTyped``1
+  name.vb: CreateTyped(Of T)()
+  fullName: CX.LoggingLib.ILogbook.CreateTyped<T>()
+  fullName.vb: CX.LoggingLib.ILogbook.CreateTyped(Of T)()
+  nameWithType: ILogbook.CreateTyped<T>()
+  nameWithType.vb: ILogbook.CreateTyped(Of T)()
+- uid: CX.LoggingLib.ILogbook.Write(System.String,CX.LoggingLib.LogLevel,System.Nullable{Exception},System.String,System.String,System.Object[])
+  name: Write(String, LogLevel, Nullable<Exception>, String, String, Object[])
+  href: api/CX.LoggingLib.ILogbook.html#CX_LoggingLib_ILogbook_Write_System_String_CX_LoggingLib_LogLevel_System_Nullable_Exception__System_String_System_String_System_Object___
+  commentId: M:CX.LoggingLib.ILogbook.Write(System.String,CX.LoggingLib.LogLevel,System.Nullable{Exception},System.String,System.String,System.Object[])
+  name.vb: Write(String, LogLevel, Nullable(Of Exception), String, String, Object())
+  fullName: CX.LoggingLib.ILogbook.Write(System.String, CX.LoggingLib.LogLevel, System.Nullable<Exception>, System.String, System.String, System.Object[])
+  fullName.vb: CX.LoggingLib.ILogbook.Write(System.String, CX.LoggingLib.LogLevel, System.Nullable(Of Exception), System.String, System.String, System.Object())
+  nameWithType: ILogbook.Write(String, LogLevel, Nullable<Exception>, String, String, Object[])
+  nameWithType.vb: ILogbook.Write(String, LogLevel, Nullable(Of Exception), String, String, Object())
+- uid: CX.LoggingLib.ILogbook.Write*
+  name: Write
+  href: api/CX.LoggingLib.ILogbook.html#CX_LoggingLib_ILogbook_Write_
+  commentId: Overload:CX.LoggingLib.ILogbook.Write
+  isSpec: "True"
+  fullName: CX.LoggingLib.ILogbook.Write
+  nameWithType: ILogbook.Write
+- uid: CX.LoggingLib.Logbook
+  name: Logbook
+  href: api/CX.LoggingLib.Logbook.html
+  commentId: T:CX.LoggingLib.Logbook
+  fullName: CX.LoggingLib.Logbook
+  nameWithType: Logbook
+- uid: CX.LoggingLib.Logbook.CreateTyped*
+  name: CreateTyped
+  href: api/CX.LoggingLib.Logbook.html#CX_LoggingLib_Logbook_CreateTyped_
+  commentId: Overload:CX.LoggingLib.Logbook.CreateTyped
+  isSpec: "True"
+  fullName: CX.LoggingLib.Logbook.CreateTyped
+  nameWithType: Logbook.CreateTyped
+- uid: CX.LoggingLib.Logbook.CreateTyped``1
+  name: CreateTyped<T>()
+  href: api/CX.LoggingLib.Logbook.html#CX_LoggingLib_Logbook_CreateTyped__1
+  commentId: M:CX.LoggingLib.Logbook.CreateTyped``1
+  name.vb: CreateTyped(Of T)()
+  fullName: CX.LoggingLib.Logbook.CreateTyped<T>()
+  fullName.vb: CX.LoggingLib.Logbook.CreateTyped(Of T)()
+  nameWithType: Logbook.CreateTyped<T>()
+  nameWithType.vb: Logbook.CreateTyped(Of T)()
+- uid: CX.LoggingLib.Logbook.Write(System.String,CX.LoggingLib.LogLevel,System.Nullable{Exception},System.String,System.String,System.Object[])
+  name: Write(String, LogLevel, Nullable<Exception>, String, String, Object[])
+  href: api/CX.LoggingLib.Logbook.html#CX_LoggingLib_Logbook_Write_System_String_CX_LoggingLib_LogLevel_System_Nullable_Exception__System_String_System_String_System_Object___
+  commentId: M:CX.LoggingLib.Logbook.Write(System.String,CX.LoggingLib.LogLevel,System.Nullable{Exception},System.String,System.String,System.Object[])
+  name.vb: Write(String, LogLevel, Nullable(Of Exception), String, String, Object())
+  fullName: CX.LoggingLib.Logbook.Write(System.String, CX.LoggingLib.LogLevel, System.Nullable<Exception>, System.String, System.String, System.Object[])
+  fullName.vb: CX.LoggingLib.Logbook.Write(System.String, CX.LoggingLib.LogLevel, System.Nullable(Of Exception), System.String, System.String, System.Object())
+  nameWithType: Logbook.Write(String, LogLevel, Nullable<Exception>, String, String, Object[])
+  nameWithType.vb: Logbook.Write(String, LogLevel, Nullable(Of Exception), String, String, Object())
+- uid: CX.LoggingLib.Logbook.Write*
+  name: Write
+  href: api/CX.LoggingLib.Logbook.html#CX_LoggingLib_Logbook_Write_
+  commentId: Overload:CX.LoggingLib.Logbook.Write
+  isSpec: "True"
+  fullName: CX.LoggingLib.Logbook.Write
+  nameWithType: Logbook.Write
+- uid: CX.LoggingLib.LoggingEnabled
+  name: LoggingEnabled
+  href: api/CX.LoggingLib.LoggingEnabled.html
+  commentId: T:CX.LoggingLib.LoggingEnabled
+  fullName: CX.LoggingLib.LoggingEnabled
+  nameWithType: LoggingEnabled
+- uid: CX.LoggingLib.LoggingEnabled.#ctor(CX.LoggingLib.ILogbook)
+  name: LoggingEnabled(ILogbook)
+  href: api/CX.LoggingLib.LoggingEnabled.html#CX_LoggingLib_LoggingEnabled__ctor_CX_LoggingLib_ILogbook_
+  commentId: M:CX.LoggingLib.LoggingEnabled.#ctor(CX.LoggingLib.ILogbook)
+  fullName: CX.LoggingLib.LoggingEnabled.LoggingEnabled(CX.LoggingLib.ILogbook)
+  nameWithType: LoggingEnabled.LoggingEnabled(ILogbook)
+- uid: CX.LoggingLib.LoggingEnabled.#ctor*
+  name: LoggingEnabled
+  href: api/CX.LoggingLib.LoggingEnabled.html#CX_LoggingLib_LoggingEnabled__ctor_
+  commentId: Overload:CX.LoggingLib.LoggingEnabled.#ctor
+  isSpec: "True"
+  fullName: CX.LoggingLib.LoggingEnabled.LoggingEnabled
+  nameWithType: LoggingEnabled.LoggingEnabled
+- uid: CX.LoggingLib.LoggingEnabled.ChangeLogbook(CX.LoggingLib.ILogbook)
+  name: ChangeLogbook(ILogbook)
+  href: api/CX.LoggingLib.LoggingEnabled.html#CX_LoggingLib_LoggingEnabled_ChangeLogbook_CX_LoggingLib_ILogbook_
+  commentId: M:CX.LoggingLib.LoggingEnabled.ChangeLogbook(CX.LoggingLib.ILogbook)
+  fullName: CX.LoggingLib.LoggingEnabled.ChangeLogbook(CX.LoggingLib.ILogbook)
+  nameWithType: LoggingEnabled.ChangeLogbook(ILogbook)
+- uid: CX.LoggingLib.LoggingEnabled.ChangeLogbook*
+  name: ChangeLogbook
+  href: api/CX.LoggingLib.LoggingEnabled.html#CX_LoggingLib_LoggingEnabled_ChangeLogbook_
+  commentId: Overload:CX.LoggingLib.LoggingEnabled.ChangeLogbook
+  isSpec: "True"
+  fullName: CX.LoggingLib.LoggingEnabled.ChangeLogbook
+  nameWithType: LoggingEnabled.ChangeLogbook
+- uid: CX.LoggingLib.LoggingEnabled.logbook
+  name: logbook
+  href: api/CX.LoggingLib.LoggingEnabled.html#CX_LoggingLib_LoggingEnabled_logbook
+  commentId: F:CX.LoggingLib.LoggingEnabled.logbook
+  fullName: CX.LoggingLib.LoggingEnabled.logbook
+  nameWithType: LoggingEnabled.logbook
+- uid: CX.LoggingLib.LoggingEnabled`1
+  name: LoggingEnabled<T>
+  href: api/CX.LoggingLib.LoggingEnabled-1.html
+  commentId: T:CX.LoggingLib.LoggingEnabled`1
+  name.vb: LoggingEnabled(Of T)
+  fullName: CX.LoggingLib.LoggingEnabled<T>
+  fullName.vb: CX.LoggingLib.LoggingEnabled(Of T)
+  nameWithType: LoggingEnabled<T>
+  nameWithType.vb: LoggingEnabled(Of T)
+- uid: CX.LoggingLib.LoggingEnabled`1.#ctor(CX.LoggingLib.ILogbook)
+  name: LoggingEnabled(ILogbook)
+  href: api/CX.LoggingLib.LoggingEnabled-1.html#CX_LoggingLib_LoggingEnabled_1__ctor_CX_LoggingLib_ILogbook_
+  commentId: M:CX.LoggingLib.LoggingEnabled`1.#ctor(CX.LoggingLib.ILogbook)
+  fullName: CX.LoggingLib.LoggingEnabled<T>.LoggingEnabled(CX.LoggingLib.ILogbook)
+  fullName.vb: CX.LoggingLib.LoggingEnabled(Of T).LoggingEnabled(CX.LoggingLib.ILogbook)
+  nameWithType: LoggingEnabled<T>.LoggingEnabled(ILogbook)
+  nameWithType.vb: LoggingEnabled(Of T).LoggingEnabled(ILogbook)
+- uid: CX.LoggingLib.LoggingEnabled`1.#ctor*
+  name: LoggingEnabled
+  href: api/CX.LoggingLib.LoggingEnabled-1.html#CX_LoggingLib_LoggingEnabled_1__ctor_
+  commentId: Overload:CX.LoggingLib.LoggingEnabled`1.#ctor
+  isSpec: "True"
+  fullName: CX.LoggingLib.LoggingEnabled<T>.LoggingEnabled
+  fullName.vb: CX.LoggingLib.LoggingEnabled(Of T).LoggingEnabled
+  nameWithType: LoggingEnabled<T>.LoggingEnabled
+  nameWithType.vb: LoggingEnabled(Of T).LoggingEnabled
+- uid: CX.LoggingLib.LoggingEnabled`1.ChangeLogbook(CX.LoggingLib.ILogbook)
+  name: ChangeLogbook(ILogbook)
+  href: api/CX.LoggingLib.LoggingEnabled-1.html#CX_LoggingLib_LoggingEnabled_1_ChangeLogbook_CX_LoggingLib_ILogbook_
+  commentId: M:CX.LoggingLib.LoggingEnabled`1.ChangeLogbook(CX.LoggingLib.ILogbook)
+  fullName: CX.LoggingLib.LoggingEnabled<T>.ChangeLogbook(CX.LoggingLib.ILogbook)
+  fullName.vb: CX.LoggingLib.LoggingEnabled(Of T).ChangeLogbook(CX.LoggingLib.ILogbook)
+  nameWithType: LoggingEnabled<T>.ChangeLogbook(ILogbook)
+  nameWithType.vb: LoggingEnabled(Of T).ChangeLogbook(ILogbook)
+- uid: CX.LoggingLib.LoggingEnabled`1.ChangeLogbook*
+  name: ChangeLogbook
+  href: api/CX.LoggingLib.LoggingEnabled-1.html#CX_LoggingLib_LoggingEnabled_1_ChangeLogbook_
+  commentId: Overload:CX.LoggingLib.LoggingEnabled`1.ChangeLogbook
+  isSpec: "True"
+  fullName: CX.LoggingLib.LoggingEnabled<T>.ChangeLogbook
+  fullName.vb: CX.LoggingLib.LoggingEnabled(Of T).ChangeLogbook
+  nameWithType: LoggingEnabled<T>.ChangeLogbook
+  nameWithType.vb: LoggingEnabled(Of T).ChangeLogbook
+- uid: CX.LoggingLib.LoggingEnabled`1.logbook
+  name: logbook
+  href: api/CX.LoggingLib.LoggingEnabled-1.html#CX_LoggingLib_LoggingEnabled_1_logbook
+  commentId: F:CX.LoggingLib.LoggingEnabled`1.logbook
+  fullName: CX.LoggingLib.LoggingEnabled<T>.logbook
+  fullName.vb: CX.LoggingLib.LoggingEnabled(Of T).logbook
+  nameWithType: LoggingEnabled<T>.logbook
+  nameWithType.vb: LoggingEnabled(Of T).logbook
+- uid: CX.LoggingLib.LogLevel
+  name: LogLevel
+  href: api/CX.LoggingLib.LogLevel.html
+  commentId: T:CX.LoggingLib.LogLevel
+  fullName: CX.LoggingLib.LogLevel
+  nameWithType: LogLevel
+- uid: CX.LoggingLib.LogLevel.Debug
+  name: Debug
+  href: api/CX.LoggingLib.LogLevel.html#CX_LoggingLib_LogLevel_Debug
+  commentId: F:CX.LoggingLib.LogLevel.Debug
+  fullName: CX.LoggingLib.LogLevel.Debug
+  nameWithType: LogLevel.Debug
+- uid: CX.LoggingLib.LogLevel.Error
+  name: Error
+  href: api/CX.LoggingLib.LogLevel.html#CX_LoggingLib_LogLevel_Error
+  commentId: F:CX.LoggingLib.LogLevel.Error
+  fullName: CX.LoggingLib.LogLevel.Error
+  nameWithType: LogLevel.Error
+- uid: CX.LoggingLib.LogLevel.Fatal
+  name: Fatal
+  href: api/CX.LoggingLib.LogLevel.html#CX_LoggingLib_LogLevel_Fatal
+  commentId: F:CX.LoggingLib.LogLevel.Fatal
+  fullName: CX.LoggingLib.LogLevel.Fatal
+  nameWithType: LogLevel.Fatal
+- uid: CX.LoggingLib.LogLevel.Information
+  name: Information
+  href: api/CX.LoggingLib.LogLevel.html#CX_LoggingLib_LogLevel_Information
+  commentId: F:CX.LoggingLib.LogLevel.Information
+  fullName: CX.LoggingLib.LogLevel.Information
+  nameWithType: LogLevel.Information
+- uid: CX.LoggingLib.LogLevel.Warning
+  name: Warning
+  href: api/CX.LoggingLib.LogLevel.html#CX_LoggingLib_LogLevel_Warning
+  commentId: F:CX.LoggingLib.LogLevel.Warning
+  fullName: CX.LoggingLib.LogLevel.Warning
+  nameWithType: LogLevel.Warning
+- uid: CX.LoggingLib.TypedLogbook`1
+  name: TypedLogbook<T>
+  href: api/CX.LoggingLib.TypedLogbook-1.html
+  commentId: T:CX.LoggingLib.TypedLogbook`1
+  name.vb: TypedLogbook(Of T)
+  fullName: CX.LoggingLib.TypedLogbook<T>
+  fullName.vb: CX.LoggingLib.TypedLogbook(Of T)
+  nameWithType: TypedLogbook<T>
+  nameWithType.vb: TypedLogbook(Of T)
+- uid: CX.LoggingLib.TypedLogbook`1.#ctor(CX.LoggingLib.ILogbook)
+  name: TypedLogbook(ILogbook)
+  href: api/CX.LoggingLib.TypedLogbook-1.html#CX_LoggingLib_TypedLogbook_1__ctor_CX_LoggingLib_ILogbook_
+  commentId: M:CX.LoggingLib.TypedLogbook`1.#ctor(CX.LoggingLib.ILogbook)
+  fullName: CX.LoggingLib.TypedLogbook<T>.TypedLogbook(CX.LoggingLib.ILogbook)
+  fullName.vb: CX.LoggingLib.TypedLogbook(Of T).TypedLogbook(CX.LoggingLib.ILogbook)
+  nameWithType: TypedLogbook<T>.TypedLogbook(ILogbook)
+  nameWithType.vb: TypedLogbook(Of T).TypedLogbook(ILogbook)
+- uid: CX.LoggingLib.TypedLogbook`1.#ctor*
+  name: TypedLogbook
+  href: api/CX.LoggingLib.TypedLogbook-1.html#CX_LoggingLib_TypedLogbook_1__ctor_
+  commentId: Overload:CX.LoggingLib.TypedLogbook`1.#ctor
+  isSpec: "True"
+  fullName: CX.LoggingLib.TypedLogbook<T>.TypedLogbook
+  fullName.vb: CX.LoggingLib.TypedLogbook(Of T).TypedLogbook
+  nameWithType: TypedLogbook<T>.TypedLogbook
+  nameWithType.vb: TypedLogbook(Of T).TypedLogbook
+- uid: CX.LoggingLib.TypedLogbook`1.BaseLogbook
+  name: BaseLogbook
+  href: api/CX.LoggingLib.TypedLogbook-1.html#CX_LoggingLib_TypedLogbook_1_BaseLogbook
+  commentId: P:CX.LoggingLib.TypedLogbook`1.BaseLogbook
+  fullName: CX.LoggingLib.TypedLogbook<T>.BaseLogbook
+  fullName.vb: CX.LoggingLib.TypedLogbook(Of T).BaseLogbook
+  nameWithType: TypedLogbook<T>.BaseLogbook
+  nameWithType.vb: TypedLogbook(Of T).BaseLogbook
+- uid: CX.LoggingLib.TypedLogbook`1.BaseLogbook*
+  name: BaseLogbook
+  href: api/CX.LoggingLib.TypedLogbook-1.html#CX_LoggingLib_TypedLogbook_1_BaseLogbook_
+  commentId: Overload:CX.LoggingLib.TypedLogbook`1.BaseLogbook
+  isSpec: "True"
+  fullName: CX.LoggingLib.TypedLogbook<T>.BaseLogbook
+  fullName.vb: CX.LoggingLib.TypedLogbook(Of T).BaseLogbook
+  nameWithType: TypedLogbook<T>.BaseLogbook
+  nameWithType.vb: TypedLogbook(Of T).BaseLogbook
+- uid: CX.LoggingLib.TypedLogbook`1.Write(System.String,CX.LoggingLib.LogLevel,System.Nullable{Exception},System.String,System.Object[])
+  name: Write(String, LogLevel, Nullable<Exception>, String, Object[])
+  href: api/CX.LoggingLib.TypedLogbook-1.html#CX_LoggingLib_TypedLogbook_1_Write_System_String_CX_LoggingLib_LogLevel_System_Nullable_Exception__System_String_System_Object___
+  commentId: M:CX.LoggingLib.TypedLogbook`1.Write(System.String,CX.LoggingLib.LogLevel,System.Nullable{Exception},System.String,System.Object[])
+  name.vb: Write(String, LogLevel, Nullable(Of Exception), String, Object())
+  fullName: CX.LoggingLib.TypedLogbook<T>.Write(System.String, CX.LoggingLib.LogLevel, System.Nullable<Exception>, System.String, System.Object[])
+  fullName.vb: CX.LoggingLib.TypedLogbook(Of T).Write(System.String, CX.LoggingLib.LogLevel, System.Nullable(Of Exception), System.String, System.Object())
+  nameWithType: TypedLogbook<T>.Write(String, LogLevel, Nullable<Exception>, String, Object[])
+  nameWithType.vb: TypedLogbook(Of T).Write(String, LogLevel, Nullable(Of Exception), String, Object())
+- uid: CX.LoggingLib.TypedLogbook`1.Write*
+  name: Write
+  href: api/CX.LoggingLib.TypedLogbook-1.html#CX_LoggingLib_TypedLogbook_1_Write_
+  commentId: Overload:CX.LoggingLib.TypedLogbook`1.Write
+  isSpec: "True"
+  fullName: CX.LoggingLib.TypedLogbook<T>.Write
+  fullName.vb: CX.LoggingLib.TypedLogbook(Of T).Write
+  nameWithType: TypedLogbook<T>.Write
+  nameWithType.vb: TypedLogbook(Of T).Write
+- uid: CX.PdfLib.Common
+  name: CX.PdfLib.Common
+  href: api/CX.PdfLib.Common.html
+  commentId: N:CX.PdfLib.Common
+  fullName: CX.PdfLib.Common
+  nameWithType: CX.PdfLib.Common
+- uid: CX.PdfLib.Common.AnnotationOption
+  name: AnnotationOption
+  href: api/CX.PdfLib.Common.AnnotationOption.html
+  commentId: T:CX.PdfLib.Common.AnnotationOption
+  fullName: CX.PdfLib.Common.AnnotationOption
+  nameWithType: AnnotationOption
+- uid: CX.PdfLib.Common.AnnotationOption.Keep
+  name: Keep
+  href: api/CX.PdfLib.Common.AnnotationOption.html#CX_PdfLib_Common_AnnotationOption_Keep
+  commentId: F:CX.PdfLib.Common.AnnotationOption.Keep
+  fullName: CX.PdfLib.Common.AnnotationOption.Keep
+  nameWithType: AnnotationOption.Keep
+- uid: CX.PdfLib.Common.AnnotationOption.RemoveAll
+  name: RemoveAll
+  href: api/CX.PdfLib.Common.AnnotationOption.html#CX_PdfLib_Common_AnnotationOption_RemoveAll
+  commentId: F:CX.PdfLib.Common.AnnotationOption.RemoveAll
+  fullName: CX.PdfLib.Common.AnnotationOption.RemoveAll
+  nameWithType: AnnotationOption.RemoveAll
+- uid: CX.PdfLib.Common.AnnotationOption.RemoveUser
+  name: RemoveUser
+  href: api/CX.PdfLib.Common.AnnotationOption.html#CX_PdfLib_Common_AnnotationOption_RemoveUser
+  commentId: F:CX.PdfLib.Common.AnnotationOption.RemoveUser
+  fullName: CX.PdfLib.Common.AnnotationOption.RemoveUser
+  nameWithType: AnnotationOption.RemoveUser
+- uid: CX.PdfLib.Common.Bookmark
+  name: Bookmark
+  href: api/CX.PdfLib.Common.Bookmark.html
+  commentId: T:CX.PdfLib.Common.Bookmark
+  fullName: CX.PdfLib.Common.Bookmark
+  nameWithType: Bookmark
+- uid: CX.PdfLib.Common.Bookmark.#ctor(System.String,System.Collections.Generic.IList{System.Int32})
+  name: Bookmark(String, IList<Int32>)
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark__ctor_System_String_System_Collections_Generic_IList_System_Int32__
+  commentId: M:CX.PdfLib.Common.Bookmark.#ctor(System.String,System.Collections.Generic.IList{System.Int32})
+  name.vb: Bookmark(String, IList(Of Int32))
+  fullName: CX.PdfLib.Common.Bookmark.Bookmark(System.String, System.Collections.Generic.IList<System.Int32>)
+  fullName.vb: CX.PdfLib.Common.Bookmark.Bookmark(System.String, System.Collections.Generic.IList(Of System.Int32))
+  nameWithType: Bookmark.Bookmark(String, IList<Int32>)
+  nameWithType.vb: Bookmark.Bookmark(String, IList(Of Int32))
+- uid: CX.PdfLib.Common.Bookmark.#ctor(System.String,System.Int32,System.Int32)
+  name: Bookmark(String, Int32, Int32)
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark__ctor_System_String_System_Int32_System_Int32_
+  commentId: M:CX.PdfLib.Common.Bookmark.#ctor(System.String,System.Int32,System.Int32)
+  fullName: CX.PdfLib.Common.Bookmark.Bookmark(System.String, System.Int32, System.Int32)
+  nameWithType: Bookmark.Bookmark(String, Int32, Int32)
+- uid: CX.PdfLib.Common.Bookmark.#ctor*
+  name: Bookmark
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark__ctor_
+  commentId: Overload:CX.PdfLib.Common.Bookmark.#ctor
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.Bookmark.Bookmark
+  nameWithType: Bookmark.Bookmark
+- uid: CX.PdfLib.Common.Bookmark.EndPage
+  name: EndPage
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark_EndPage
+  commentId: P:CX.PdfLib.Common.Bookmark.EndPage
+  fullName: CX.PdfLib.Common.Bookmark.EndPage
+  nameWithType: Bookmark.EndPage
+- uid: CX.PdfLib.Common.Bookmark.EndPage*
+  name: EndPage
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark_EndPage_
+  commentId: Overload:CX.PdfLib.Common.Bookmark.EndPage
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.Bookmark.EndPage
+  nameWithType: Bookmark.EndPage
+- uid: CX.PdfLib.Common.Bookmark.Equals(CX.PdfLib.Common.Bookmark)
+  name: Equals(Bookmark)
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark_Equals_CX_PdfLib_Common_Bookmark_
+  commentId: M:CX.PdfLib.Common.Bookmark.Equals(CX.PdfLib.Common.Bookmark)
+  fullName: CX.PdfLib.Common.Bookmark.Equals(CX.PdfLib.Common.Bookmark)
+  nameWithType: Bookmark.Equals(Bookmark)
+- uid: CX.PdfLib.Common.Bookmark.Equals(System.Object)
+  name: Equals(Object)
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark_Equals_System_Object_
+  commentId: M:CX.PdfLib.Common.Bookmark.Equals(System.Object)
+  fullName: CX.PdfLib.Common.Bookmark.Equals(System.Object)
+  nameWithType: Bookmark.Equals(Object)
+- uid: CX.PdfLib.Common.Bookmark.Equals*
+  name: Equals
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark_Equals_
+  commentId: Overload:CX.PdfLib.Common.Bookmark.Equals
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.Bookmark.Equals
+  nameWithType: Bookmark.Equals
+- uid: CX.PdfLib.Common.Bookmark.GetHashCode
+  name: GetHashCode()
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark_GetHashCode
+  commentId: M:CX.PdfLib.Common.Bookmark.GetHashCode
+  fullName: CX.PdfLib.Common.Bookmark.GetHashCode()
+  nameWithType: Bookmark.GetHashCode()
+- uid: CX.PdfLib.Common.Bookmark.GetHashCode*
+  name: GetHashCode
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark_GetHashCode_
+  commentId: Overload:CX.PdfLib.Common.Bookmark.GetHashCode
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.Bookmark.GetHashCode
+  nameWithType: Bookmark.GetHashCode
+- uid: CX.PdfLib.Common.Bookmark.op_Equality(CX.PdfLib.Common.Bookmark,CX.PdfLib.Common.Bookmark)
+  name: Equality(Bookmark, Bookmark)
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark_op_Equality_CX_PdfLib_Common_Bookmark_CX_PdfLib_Common_Bookmark_
+  commentId: M:CX.PdfLib.Common.Bookmark.op_Equality(CX.PdfLib.Common.Bookmark,CX.PdfLib.Common.Bookmark)
+  fullName: CX.PdfLib.Common.Bookmark.Equality(CX.PdfLib.Common.Bookmark, CX.PdfLib.Common.Bookmark)
+  nameWithType: Bookmark.Equality(Bookmark, Bookmark)
+- uid: CX.PdfLib.Common.Bookmark.op_Equality*
+  name: Equality
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark_op_Equality_
+  commentId: Overload:CX.PdfLib.Common.Bookmark.op_Equality
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.Bookmark.Equality
+  nameWithType: Bookmark.Equality
+- uid: CX.PdfLib.Common.Bookmark.op_Inequality(CX.PdfLib.Common.Bookmark,CX.PdfLib.Common.Bookmark)
+  name: Inequality(Bookmark, Bookmark)
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark_op_Inequality_CX_PdfLib_Common_Bookmark_CX_PdfLib_Common_Bookmark_
+  commentId: M:CX.PdfLib.Common.Bookmark.op_Inequality(CX.PdfLib.Common.Bookmark,CX.PdfLib.Common.Bookmark)
+  fullName: CX.PdfLib.Common.Bookmark.Inequality(CX.PdfLib.Common.Bookmark, CX.PdfLib.Common.Bookmark)
+  nameWithType: Bookmark.Inequality(Bookmark, Bookmark)
+- uid: CX.PdfLib.Common.Bookmark.op_Inequality*
+  name: Inequality
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark_op_Inequality_
+  commentId: Overload:CX.PdfLib.Common.Bookmark.op_Inequality
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.Bookmark.Inequality
+  nameWithType: Bookmark.Inequality
+- uid: CX.PdfLib.Common.Bookmark.Pages
+  name: Pages
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark_Pages
+  commentId: P:CX.PdfLib.Common.Bookmark.Pages
+  fullName: CX.PdfLib.Common.Bookmark.Pages
+  nameWithType: Bookmark.Pages
+- uid: CX.PdfLib.Common.Bookmark.Pages*
+  name: Pages
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark_Pages_
+  commentId: Overload:CX.PdfLib.Common.Bookmark.Pages
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.Bookmark.Pages
+  nameWithType: Bookmark.Pages
+- uid: CX.PdfLib.Common.Bookmark.StartPage
+  name: StartPage
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark_StartPage
+  commentId: P:CX.PdfLib.Common.Bookmark.StartPage
+  fullName: CX.PdfLib.Common.Bookmark.StartPage
+  nameWithType: Bookmark.StartPage
+- uid: CX.PdfLib.Common.Bookmark.StartPage*
+  name: StartPage
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark_StartPage_
+  commentId: Overload:CX.PdfLib.Common.Bookmark.StartPage
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.Bookmark.StartPage
+  nameWithType: Bookmark.StartPage
+- uid: CX.PdfLib.Common.Bookmark.Title
+  name: Title
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark_Title
+  commentId: P:CX.PdfLib.Common.Bookmark.Title
+  fullName: CX.PdfLib.Common.Bookmark.Title
+  nameWithType: Bookmark.Title
+- uid: CX.PdfLib.Common.Bookmark.Title*
+  name: Title
+  href: api/CX.PdfLib.Common.Bookmark.html#CX_PdfLib_Common_Bookmark_Title_
+  commentId: Overload:CX.PdfLib.Common.Bookmark.Title
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.Bookmark.Title
+  nameWithType: Bookmark.Title
+- uid: CX.PdfLib.Common.ExtractionOptions
+  name: ExtractionOptions
+  href: api/CX.PdfLib.Common.ExtractionOptions.html
+  commentId: T:CX.PdfLib.Common.ExtractionOptions
+  fullName: CX.PdfLib.Common.ExtractionOptions
+  nameWithType: ExtractionOptions
+- uid: CX.PdfLib.Common.ExtractionOptions.#ctor(System.Collections.Generic.IEnumerable{CX.PdfLib.Common.FileAndExtractables},System.IO.FileSystemInfo)
+  name: ExtractionOptions(IEnumerable<FileAndExtractables>, FileSystemInfo)
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions__ctor_System_Collections_Generic_IEnumerable_CX_PdfLib_Common_FileAndExtractables__System_IO_FileSystemInfo_
+  commentId: M:CX.PdfLib.Common.ExtractionOptions.#ctor(System.Collections.Generic.IEnumerable{CX.PdfLib.Common.FileAndExtractables},System.IO.FileSystemInfo)
+  name.vb: ExtractionOptions(IEnumerable(Of FileAndExtractables), FileSystemInfo)
+  fullName: CX.PdfLib.Common.ExtractionOptions.ExtractionOptions(System.Collections.Generic.IEnumerable<CX.PdfLib.Common.FileAndExtractables>, System.IO.FileSystemInfo)
+  fullName.vb: CX.PdfLib.Common.ExtractionOptions.ExtractionOptions(System.Collections.Generic.IEnumerable(Of CX.PdfLib.Common.FileAndExtractables), System.IO.FileSystemInfo)
+  nameWithType: ExtractionOptions.ExtractionOptions(IEnumerable<FileAndExtractables>, FileSystemInfo)
+  nameWithType.vb: ExtractionOptions.ExtractionOptions(IEnumerable(Of FileAndExtractables), FileSystemInfo)
+- uid: CX.PdfLib.Common.ExtractionOptions.#ctor*
+  name: ExtractionOptions
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions__ctor_
+  commentId: Overload:CX.PdfLib.Common.ExtractionOptions.#ctor
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.ExtractionOptions.ExtractionOptions
+  nameWithType: ExtractionOptions.ExtractionOptions
+- uid: CX.PdfLib.Common.ExtractionOptions.Annotations
+  name: Annotations
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions_Annotations
+  commentId: P:CX.PdfLib.Common.ExtractionOptions.Annotations
+  fullName: CX.PdfLib.Common.ExtractionOptions.Annotations
+  nameWithType: ExtractionOptions.Annotations
+- uid: CX.PdfLib.Common.ExtractionOptions.Annotations*
+  name: Annotations
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions_Annotations_
+  commentId: Overload:CX.PdfLib.Common.ExtractionOptions.Annotations
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.ExtractionOptions.Annotations
+  nameWithType: ExtractionOptions.Annotations
+- uid: CX.PdfLib.Common.ExtractionOptions.AnnotationUsersToRemove
+  name: AnnotationUsersToRemove
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions_AnnotationUsersToRemove
+  commentId: P:CX.PdfLib.Common.ExtractionOptions.AnnotationUsersToRemove
+  fullName: CX.PdfLib.Common.ExtractionOptions.AnnotationUsersToRemove
+  nameWithType: ExtractionOptions.AnnotationUsersToRemove
+- uid: CX.PdfLib.Common.ExtractionOptions.AnnotationUsersToRemove*
+  name: AnnotationUsersToRemove
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions_AnnotationUsersToRemove_
+  commentId: Overload:CX.PdfLib.Common.ExtractionOptions.AnnotationUsersToRemove
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.ExtractionOptions.AnnotationUsersToRemove
+  nameWithType: ExtractionOptions.AnnotationUsersToRemove
+- uid: CX.PdfLib.Common.ExtractionOptions.Cancellation
+  name: Cancellation
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions_Cancellation
+  commentId: P:CX.PdfLib.Common.ExtractionOptions.Cancellation
+  fullName: CX.PdfLib.Common.ExtractionOptions.Cancellation
+  nameWithType: ExtractionOptions.Cancellation
+- uid: CX.PdfLib.Common.ExtractionOptions.Cancellation*
+  name: Cancellation
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions_Cancellation_
+  commentId: Overload:CX.PdfLib.Common.ExtractionOptions.Cancellation
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.ExtractionOptions.Cancellation
+  nameWithType: ExtractionOptions.Cancellation
+- uid: CX.PdfLib.Common.ExtractionOptions.Destination
+  name: Destination
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions_Destination
+  commentId: P:CX.PdfLib.Common.ExtractionOptions.Destination
+  fullName: CX.PdfLib.Common.ExtractionOptions.Destination
+  nameWithType: ExtractionOptions.Destination
+- uid: CX.PdfLib.Common.ExtractionOptions.Destination*
+  name: Destination
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions_Destination_
+  commentId: Overload:CX.PdfLib.Common.ExtractionOptions.Destination
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.ExtractionOptions.Destination
+  nameWithType: ExtractionOptions.Destination
+- uid: CX.PdfLib.Common.ExtractionOptions.Files
+  name: Files
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions_Files
+  commentId: P:CX.PdfLib.Common.ExtractionOptions.Files
+  fullName: CX.PdfLib.Common.ExtractionOptions.Files
+  nameWithType: ExtractionOptions.Files
+- uid: CX.PdfLib.Common.ExtractionOptions.Files*
+  name: Files
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions_Files_
+  commentId: Overload:CX.PdfLib.Common.ExtractionOptions.Files
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.ExtractionOptions.Files
+  nameWithType: ExtractionOptions.Files
+- uid: CX.PdfLib.Common.ExtractionOptions.OnPdfAConversionFinished(CX.PdfLib.Common.PdfAConversionEventArgs)
+  name: OnPdfAConversionFinished(PdfAConversionEventArgs)
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions_OnPdfAConversionFinished_CX_PdfLib_Common_PdfAConversionEventArgs_
+  commentId: M:CX.PdfLib.Common.ExtractionOptions.OnPdfAConversionFinished(CX.PdfLib.Common.PdfAConversionEventArgs)
+  fullName: CX.PdfLib.Common.ExtractionOptions.OnPdfAConversionFinished(CX.PdfLib.Common.PdfAConversionEventArgs)
+  nameWithType: ExtractionOptions.OnPdfAConversionFinished(PdfAConversionEventArgs)
+- uid: CX.PdfLib.Common.ExtractionOptions.OnPdfAConversionFinished*
+  name: OnPdfAConversionFinished
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions_OnPdfAConversionFinished_
+  commentId: Overload:CX.PdfLib.Common.ExtractionOptions.OnPdfAConversionFinished
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.ExtractionOptions.OnPdfAConversionFinished
+  nameWithType: ExtractionOptions.OnPdfAConversionFinished
+- uid: CX.PdfLib.Common.ExtractionOptions.PdfA
+  name: PdfA
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions_PdfA
+  commentId: P:CX.PdfLib.Common.ExtractionOptions.PdfA
+  fullName: CX.PdfLib.Common.ExtractionOptions.PdfA
+  nameWithType: ExtractionOptions.PdfA
+- uid: CX.PdfLib.Common.ExtractionOptions.PdfA*
+  name: PdfA
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions_PdfA_
+  commentId: Overload:CX.PdfLib.Common.ExtractionOptions.PdfA
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.ExtractionOptions.PdfA
+  nameWithType: ExtractionOptions.PdfA
+- uid: CX.PdfLib.Common.ExtractionOptions.PdfAConversionFinished
+  name: PdfAConversionFinished
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions_PdfAConversionFinished
+  commentId: E:CX.PdfLib.Common.ExtractionOptions.PdfAConversionFinished
+  fullName: CX.PdfLib.Common.ExtractionOptions.PdfAConversionFinished
+  nameWithType: ExtractionOptions.PdfAConversionFinished
+- uid: CX.PdfLib.Common.ExtractionOptions.Progress
+  name: Progress
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions_Progress
+  commentId: P:CX.PdfLib.Common.ExtractionOptions.Progress
+  fullName: CX.PdfLib.Common.ExtractionOptions.Progress
+  nameWithType: ExtractionOptions.Progress
+- uid: CX.PdfLib.Common.ExtractionOptions.Progress*
+  name: Progress
+  href: api/CX.PdfLib.Common.ExtractionOptions.html#CX_PdfLib_Common_ExtractionOptions_Progress_
+  commentId: Overload:CX.PdfLib.Common.ExtractionOptions.Progress
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.ExtractionOptions.Progress
+  nameWithType: ExtractionOptions.Progress
+- uid: CX.PdfLib.Common.FileAndExtractables
+  name: FileAndExtractables
+  href: api/CX.PdfLib.Common.FileAndExtractables.html
+  commentId: T:CX.PdfLib.Common.FileAndExtractables
+  fullName: CX.PdfLib.Common.FileAndExtractables
+  nameWithType: FileAndExtractables
+- uid: CX.PdfLib.Common.FileAndExtractables.#ctor(System.String,System.Collections.Generic.IEnumerable{CX.PdfLib.Services.Data.ILeveledBookmark})
+  name: FileAndExtractables(String, IEnumerable<ILeveledBookmark>)
+  href: api/CX.PdfLib.Common.FileAndExtractables.html#CX_PdfLib_Common_FileAndExtractables__ctor_System_String_System_Collections_Generic_IEnumerable_CX_PdfLib_Services_Data_ILeveledBookmark__
+  commentId: M:CX.PdfLib.Common.FileAndExtractables.#ctor(System.String,System.Collections.Generic.IEnumerable{CX.PdfLib.Services.Data.ILeveledBookmark})
+  name.vb: FileAndExtractables(String, IEnumerable(Of ILeveledBookmark))
+  fullName: CX.PdfLib.Common.FileAndExtractables.FileAndExtractables(System.String, System.Collections.Generic.IEnumerable<CX.PdfLib.Services.Data.ILeveledBookmark>)
+  fullName.vb: CX.PdfLib.Common.FileAndExtractables.FileAndExtractables(System.String, System.Collections.Generic.IEnumerable(Of CX.PdfLib.Services.Data.ILeveledBookmark))
+  nameWithType: FileAndExtractables.FileAndExtractables(String, IEnumerable<ILeveledBookmark>)
+  nameWithType.vb: FileAndExtractables.FileAndExtractables(String, IEnumerable(Of ILeveledBookmark))
+- uid: CX.PdfLib.Common.FileAndExtractables.#ctor*
+  name: FileAndExtractables
+  href: api/CX.PdfLib.Common.FileAndExtractables.html#CX_PdfLib_Common_FileAndExtractables__ctor_
+  commentId: Overload:CX.PdfLib.Common.FileAndExtractables.#ctor
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.FileAndExtractables.FileAndExtractables
+  nameWithType: FileAndExtractables.FileAndExtractables
+- uid: CX.PdfLib.Common.FileAndExtractables.Extractables
+  name: Extractables
+  href: api/CX.PdfLib.Common.FileAndExtractables.html#CX_PdfLib_Common_FileAndExtractables_Extractables
+  commentId: P:CX.PdfLib.Common.FileAndExtractables.Extractables
+  fullName: CX.PdfLib.Common.FileAndExtractables.Extractables
+  nameWithType: FileAndExtractables.Extractables
+- uid: CX.PdfLib.Common.FileAndExtractables.Extractables*
+  name: Extractables
+  href: api/CX.PdfLib.Common.FileAndExtractables.html#CX_PdfLib_Common_FileAndExtractables_Extractables_
+  commentId: Overload:CX.PdfLib.Common.FileAndExtractables.Extractables
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.FileAndExtractables.Extractables
+  nameWithType: FileAndExtractables.Extractables
+- uid: CX.PdfLib.Common.FileAndExtractables.FilePath
+  name: FilePath
+  href: api/CX.PdfLib.Common.FileAndExtractables.html#CX_PdfLib_Common_FileAndExtractables_FilePath
+  commentId: P:CX.PdfLib.Common.FileAndExtractables.FilePath
+  fullName: CX.PdfLib.Common.FileAndExtractables.FilePath
+  nameWithType: FileAndExtractables.FilePath
+- uid: CX.PdfLib.Common.FileAndExtractables.FilePath*
+  name: FilePath
+  href: api/CX.PdfLib.Common.FileAndExtractables.html#CX_PdfLib_Common_FileAndExtractables_FilePath_
+  commentId: Overload:CX.PdfLib.Common.FileAndExtractables.FilePath
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.FileAndExtractables.FilePath
+  nameWithType: FileAndExtractables.FilePath
+- uid: CX.PdfLib.Common.LeveledBookmark
+  name: LeveledBookmark
+  href: api/CX.PdfLib.Common.LeveledBookmark.html
+  commentId: T:CX.PdfLib.Common.LeveledBookmark
+  fullName: CX.PdfLib.Common.LeveledBookmark
+  nameWithType: LeveledBookmark
+- uid: CX.PdfLib.Common.LeveledBookmark.#ctor(System.Int32,System.String,System.Collections.Generic.IList{System.Int32})
+  name: LeveledBookmark(Int32, String, IList<Int32>)
+  href: api/CX.PdfLib.Common.LeveledBookmark.html#CX_PdfLib_Common_LeveledBookmark__ctor_System_Int32_System_String_System_Collections_Generic_IList_System_Int32__
+  commentId: M:CX.PdfLib.Common.LeveledBookmark.#ctor(System.Int32,System.String,System.Collections.Generic.IList{System.Int32})
+  name.vb: LeveledBookmark(Int32, String, IList(Of Int32))
+  fullName: CX.PdfLib.Common.LeveledBookmark.LeveledBookmark(System.Int32, System.String, System.Collections.Generic.IList<System.Int32>)
+  fullName.vb: CX.PdfLib.Common.LeveledBookmark.LeveledBookmark(System.Int32, System.String, System.Collections.Generic.IList(Of System.Int32))
+  nameWithType: LeveledBookmark.LeveledBookmark(Int32, String, IList<Int32>)
+  nameWithType.vb: LeveledBookmark.LeveledBookmark(Int32, String, IList(Of Int32))
+- uid: CX.PdfLib.Common.LeveledBookmark.#ctor(System.Int32,System.String,System.Int32,System.Int32)
+  name: LeveledBookmark(Int32, String, Int32, Int32)
+  href: api/CX.PdfLib.Common.LeveledBookmark.html#CX_PdfLib_Common_LeveledBookmark__ctor_System_Int32_System_String_System_Int32_System_Int32_
+  commentId: M:CX.PdfLib.Common.LeveledBookmark.#ctor(System.Int32,System.String,System.Int32,System.Int32)
+  fullName: CX.PdfLib.Common.LeveledBookmark.LeveledBookmark(System.Int32, System.String, System.Int32, System.Int32)
+  nameWithType: LeveledBookmark.LeveledBookmark(Int32, String, Int32, Int32)
+- uid: CX.PdfLib.Common.LeveledBookmark.#ctor*
+  name: LeveledBookmark
+  href: api/CX.PdfLib.Common.LeveledBookmark.html#CX_PdfLib_Common_LeveledBookmark__ctor_
+  commentId: Overload:CX.PdfLib.Common.LeveledBookmark.#ctor
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.LeveledBookmark.LeveledBookmark
+  nameWithType: LeveledBookmark.LeveledBookmark
+- uid: CX.PdfLib.Common.LeveledBookmark.Level
+  name: Level
+  href: api/CX.PdfLib.Common.LeveledBookmark.html#CX_PdfLib_Common_LeveledBookmark_Level
+  commentId: P:CX.PdfLib.Common.LeveledBookmark.Level
+  fullName: CX.PdfLib.Common.LeveledBookmark.Level
+  nameWithType: LeveledBookmark.Level
+- uid: CX.PdfLib.Common.LeveledBookmark.Level*
+  name: Level
+  href: api/CX.PdfLib.Common.LeveledBookmark.html#CX_PdfLib_Common_LeveledBookmark_Level_
+  commentId: Overload:CX.PdfLib.Common.LeveledBookmark.Level
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.LeveledBookmark.Level
+  nameWithType: LeveledBookmark.Level
+- uid: CX.PdfLib.Common.MergeInput
+  name: MergeInput
+  href: api/CX.PdfLib.Common.MergeInput.html
+  commentId: T:CX.PdfLib.Common.MergeInput
+  fullName: CX.PdfLib.Common.MergeInput
+  nameWithType: MergeInput
+- uid: CX.PdfLib.Common.MergeInput.#ctor(System.String,System.String,System.Int32)
+  name: MergeInput(String, String, Int32)
+  href: api/CX.PdfLib.Common.MergeInput.html#CX_PdfLib_Common_MergeInput__ctor_System_String_System_String_System_Int32_
+  commentId: M:CX.PdfLib.Common.MergeInput.#ctor(System.String,System.String,System.Int32)
+  fullName: CX.PdfLib.Common.MergeInput.MergeInput(System.String, System.String, System.Int32)
+  nameWithType: MergeInput.MergeInput(String, String, Int32)
+- uid: CX.PdfLib.Common.MergeInput.#ctor*
+  name: MergeInput
+  href: api/CX.PdfLib.Common.MergeInput.html#CX_PdfLib_Common_MergeInput__ctor_
+  commentId: Overload:CX.PdfLib.Common.MergeInput.#ctor
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.MergeInput.MergeInput
+  nameWithType: MergeInput.MergeInput
+- uid: CX.PdfLib.Common.MergeInput.FilePath
+  name: FilePath
+  href: api/CX.PdfLib.Common.MergeInput.html#CX_PdfLib_Common_MergeInput_FilePath
+  commentId: P:CX.PdfLib.Common.MergeInput.FilePath
+  fullName: CX.PdfLib.Common.MergeInput.FilePath
+  nameWithType: MergeInput.FilePath
+- uid: CX.PdfLib.Common.MergeInput.FilePath*
+  name: FilePath
+  href: api/CX.PdfLib.Common.MergeInput.html#CX_PdfLib_Common_MergeInput_FilePath_
+  commentId: Overload:CX.PdfLib.Common.MergeInput.FilePath
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.MergeInput.FilePath
+  nameWithType: MergeInput.FilePath
+- uid: CX.PdfLib.Common.MergeInput.Level
+  name: Level
+  href: api/CX.PdfLib.Common.MergeInput.html#CX_PdfLib_Common_MergeInput_Level
+  commentId: P:CX.PdfLib.Common.MergeInput.Level
+  fullName: CX.PdfLib.Common.MergeInput.Level
+  nameWithType: MergeInput.Level
+- uid: CX.PdfLib.Common.MergeInput.Level*
+  name: Level
+  href: api/CX.PdfLib.Common.MergeInput.html#CX_PdfLib_Common_MergeInput_Level_
+  commentId: Overload:CX.PdfLib.Common.MergeInput.Level
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.MergeInput.Level
+  nameWithType: MergeInput.Level
+- uid: CX.PdfLib.Common.MergeInput.Title
+  name: Title
+  href: api/CX.PdfLib.Common.MergeInput.html#CX_PdfLib_Common_MergeInput_Title
+  commentId: P:CX.PdfLib.Common.MergeInput.Title
+  fullName: CX.PdfLib.Common.MergeInput.Title
+  nameWithType: MergeInput.Title
+- uid: CX.PdfLib.Common.MergeInput.Title*
+  name: Title
+  href: api/CX.PdfLib.Common.MergeInput.html#CX_PdfLib_Common_MergeInput_Title_
+  commentId: Overload:CX.PdfLib.Common.MergeInput.Title
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.MergeInput.Title
+  nameWithType: MergeInput.Title
+- uid: CX.PdfLib.Common.MergingOptions
+  name: MergingOptions
+  href: api/CX.PdfLib.Common.MergingOptions.html
+  commentId: T:CX.PdfLib.Common.MergingOptions
+  fullName: CX.PdfLib.Common.MergingOptions
+  nameWithType: MergingOptions
+- uid: CX.PdfLib.Common.MergingOptions.#ctor(System.Collections.Generic.IEnumerable{CX.PdfLib.Services.Data.IMergeInput},System.IO.FileInfo,System.Boolean,System.Boolean)
+  name: MergingOptions(IEnumerable<IMergeInput>, FileInfo, Boolean, Boolean)
+  href: api/CX.PdfLib.Common.MergingOptions.html#CX_PdfLib_Common_MergingOptions__ctor_System_Collections_Generic_IEnumerable_CX_PdfLib_Services_Data_IMergeInput__System_IO_FileInfo_System_Boolean_System_Boolean_
+  commentId: M:CX.PdfLib.Common.MergingOptions.#ctor(System.Collections.Generic.IEnumerable{CX.PdfLib.Services.Data.IMergeInput},System.IO.FileInfo,System.Boolean,System.Boolean)
+  name.vb: MergingOptions(IEnumerable(Of IMergeInput), FileInfo, Boolean, Boolean)
+  fullName: CX.PdfLib.Common.MergingOptions.MergingOptions(System.Collections.Generic.IEnumerable<CX.PdfLib.Services.Data.IMergeInput>, System.IO.FileInfo, System.Boolean, System.Boolean)
+  fullName.vb: CX.PdfLib.Common.MergingOptions.MergingOptions(System.Collections.Generic.IEnumerable(Of CX.PdfLib.Services.Data.IMergeInput), System.IO.FileInfo, System.Boolean, System.Boolean)
+  nameWithType: MergingOptions.MergingOptions(IEnumerable<IMergeInput>, FileInfo, Boolean, Boolean)
+  nameWithType.vb: MergingOptions.MergingOptions(IEnumerable(Of IMergeInput), FileInfo, Boolean, Boolean)
+- uid: CX.PdfLib.Common.MergingOptions.#ctor*
+  name: MergingOptions
+  href: api/CX.PdfLib.Common.MergingOptions.html#CX_PdfLib_Common_MergingOptions__ctor_
+  commentId: Overload:CX.PdfLib.Common.MergingOptions.#ctor
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.MergingOptions.MergingOptions
+  nameWithType: MergingOptions.MergingOptions
+- uid: CX.PdfLib.Common.MergingOptions.AddPageNumbers
+  name: AddPageNumbers
+  href: api/CX.PdfLib.Common.MergingOptions.html#CX_PdfLib_Common_MergingOptions_AddPageNumbers
+  commentId: P:CX.PdfLib.Common.MergingOptions.AddPageNumbers
+  fullName: CX.PdfLib.Common.MergingOptions.AddPageNumbers
+  nameWithType: MergingOptions.AddPageNumbers
+- uid: CX.PdfLib.Common.MergingOptions.AddPageNumbers*
+  name: AddPageNumbers
+  href: api/CX.PdfLib.Common.MergingOptions.html#CX_PdfLib_Common_MergingOptions_AddPageNumbers_
+  commentId: Overload:CX.PdfLib.Common.MergingOptions.AddPageNumbers
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.MergingOptions.AddPageNumbers
+  nameWithType: MergingOptions.AddPageNumbers
+- uid: CX.PdfLib.Common.MergingOptions.Cancellation
+  name: Cancellation
+  href: api/CX.PdfLib.Common.MergingOptions.html#CX_PdfLib_Common_MergingOptions_Cancellation
+  commentId: P:CX.PdfLib.Common.MergingOptions.Cancellation
+  fullName: CX.PdfLib.Common.MergingOptions.Cancellation
+  nameWithType: MergingOptions.Cancellation
+- uid: CX.PdfLib.Common.MergingOptions.Cancellation*
+  name: Cancellation
+  href: api/CX.PdfLib.Common.MergingOptions.html#CX_PdfLib_Common_MergingOptions_Cancellation_
+  commentId: Overload:CX.PdfLib.Common.MergingOptions.Cancellation
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.MergingOptions.Cancellation
+  nameWithType: MergingOptions.Cancellation
+- uid: CX.PdfLib.Common.MergingOptions.ConvertWordDocuments
+  name: ConvertWordDocuments
+  href: api/CX.PdfLib.Common.MergingOptions.html#CX_PdfLib_Common_MergingOptions_ConvertWordDocuments
+  commentId: P:CX.PdfLib.Common.MergingOptions.ConvertWordDocuments
+  fullName: CX.PdfLib.Common.MergingOptions.ConvertWordDocuments
+  nameWithType: MergingOptions.ConvertWordDocuments
+- uid: CX.PdfLib.Common.MergingOptions.ConvertWordDocuments*
+  name: ConvertWordDocuments
+  href: api/CX.PdfLib.Common.MergingOptions.html#CX_PdfLib_Common_MergingOptions_ConvertWordDocuments_
+  commentId: Overload:CX.PdfLib.Common.MergingOptions.ConvertWordDocuments
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.MergingOptions.ConvertWordDocuments
+  nameWithType: MergingOptions.ConvertWordDocuments
+- uid: CX.PdfLib.Common.MergingOptions.Inputs
+  name: Inputs
+  href: api/CX.PdfLib.Common.MergingOptions.html#CX_PdfLib_Common_MergingOptions_Inputs
+  commentId: P:CX.PdfLib.Common.MergingOptions.Inputs
+  fullName: CX.PdfLib.Common.MergingOptions.Inputs
+  nameWithType: MergingOptions.Inputs
+- uid: CX.PdfLib.Common.MergingOptions.Inputs*
+  name: Inputs
+  href: api/CX.PdfLib.Common.MergingOptions.html#CX_PdfLib_Common_MergingOptions_Inputs_
+  commentId: Overload:CX.PdfLib.Common.MergingOptions.Inputs
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.MergingOptions.Inputs
+  nameWithType: MergingOptions.Inputs
+- uid: CX.PdfLib.Common.MergingOptions.OutputFile
+  name: OutputFile
+  href: api/CX.PdfLib.Common.MergingOptions.html#CX_PdfLib_Common_MergingOptions_OutputFile
+  commentId: P:CX.PdfLib.Common.MergingOptions.OutputFile
+  fullName: CX.PdfLib.Common.MergingOptions.OutputFile
+  nameWithType: MergingOptions.OutputFile
+- uid: CX.PdfLib.Common.MergingOptions.OutputFile*
+  name: OutputFile
+  href: api/CX.PdfLib.Common.MergingOptions.html#CX_PdfLib_Common_MergingOptions_OutputFile_
+  commentId: Overload:CX.PdfLib.Common.MergingOptions.OutputFile
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.MergingOptions.OutputFile
+  nameWithType: MergingOptions.OutputFile
+- uid: CX.PdfLib.Common.MergingOptions.Progress
+  name: Progress
+  href: api/CX.PdfLib.Common.MergingOptions.html#CX_PdfLib_Common_MergingOptions_Progress
+  commentId: P:CX.PdfLib.Common.MergingOptions.Progress
+  fullName: CX.PdfLib.Common.MergingOptions.Progress
+  nameWithType: MergingOptions.Progress
+- uid: CX.PdfLib.Common.MergingOptions.Progress*
+  name: Progress
+  href: api/CX.PdfLib.Common.MergingOptions.html#CX_PdfLib_Common_MergingOptions_Progress_
+  commentId: Overload:CX.PdfLib.Common.MergingOptions.Progress
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.MergingOptions.Progress
+  nameWithType: MergingOptions.Progress
+- uid: CX.PdfLib.Common.PdfAConversionEventArgs
+  name: PdfAConversionEventArgs
+  href: api/CX.PdfLib.Common.PdfAConversionEventArgs.html
+  commentId: T:CX.PdfLib.Common.PdfAConversionEventArgs
+  fullName: CX.PdfLib.Common.PdfAConversionEventArgs
+  nameWithType: PdfAConversionEventArgs
+- uid: CX.PdfLib.Common.PdfAConversionEventArgs.Path
+  name: Path
+  href: api/CX.PdfLib.Common.PdfAConversionEventArgs.html#CX_PdfLib_Common_PdfAConversionEventArgs_Path
+  commentId: P:CX.PdfLib.Common.PdfAConversionEventArgs.Path
+  fullName: CX.PdfLib.Common.PdfAConversionEventArgs.Path
+  nameWithType: PdfAConversionEventArgs.Path
+- uid: CX.PdfLib.Common.PdfAConversionEventArgs.Path*
+  name: Path
+  href: api/CX.PdfLib.Common.PdfAConversionEventArgs.html#CX_PdfLib_Common_PdfAConversionEventArgs_Path_
+  commentId: Overload:CX.PdfLib.Common.PdfAConversionEventArgs.Path
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.PdfAConversionEventArgs.Path
+  nameWithType: PdfAConversionEventArgs.Path
+- uid: CX.PdfLib.Common.PdfAConversionEventArgs.WasFaulted
+  name: WasFaulted
+  href: api/CX.PdfLib.Common.PdfAConversionEventArgs.html#CX_PdfLib_Common_PdfAConversionEventArgs_WasFaulted
+  commentId: P:CX.PdfLib.Common.PdfAConversionEventArgs.WasFaulted
+  fullName: CX.PdfLib.Common.PdfAConversionEventArgs.WasFaulted
+  nameWithType: PdfAConversionEventArgs.WasFaulted
+- uid: CX.PdfLib.Common.PdfAConversionEventArgs.WasFaulted*
+  name: WasFaulted
+  href: api/CX.PdfLib.Common.PdfAConversionEventArgs.html#CX_PdfLib_Common_PdfAConversionEventArgs_WasFaulted_
+  commentId: Overload:CX.PdfLib.Common.PdfAConversionEventArgs.WasFaulted
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.PdfAConversionEventArgs.WasFaulted
+  nameWithType: PdfAConversionEventArgs.WasFaulted
+- uid: CX.PdfLib.Common.ProgressPhase
+  name: ProgressPhase
+  href: api/CX.PdfLib.Common.ProgressPhase.html
+  commentId: T:CX.PdfLib.Common.ProgressPhase
+  fullName: CX.PdfLib.Common.ProgressPhase
+  nameWithType: ProgressPhase
+- uid: CX.PdfLib.Common.ProgressPhase.AddingBookmarks
+  name: AddingBookmarks
+  href: api/CX.PdfLib.Common.ProgressPhase.html#CX_PdfLib_Common_ProgressPhase_AddingBookmarks
+  commentId: F:CX.PdfLib.Common.ProgressPhase.AddingBookmarks
+  fullName: CX.PdfLib.Common.ProgressPhase.AddingBookmarks
+  nameWithType: ProgressPhase.AddingBookmarks
+- uid: CX.PdfLib.Common.ProgressPhase.AddingPageNumbers
+  name: AddingPageNumbers
+  href: api/CX.PdfLib.Common.ProgressPhase.html#CX_PdfLib_Common_ProgressPhase_AddingPageNumbers
+  commentId: F:CX.PdfLib.Common.ProgressPhase.AddingPageNumbers
+  fullName: CX.PdfLib.Common.ProgressPhase.AddingPageNumbers
+  nameWithType: ProgressPhase.AddingPageNumbers
+- uid: CX.PdfLib.Common.ProgressPhase.ChoosingDestination
+  name: ChoosingDestination
+  href: api/CX.PdfLib.Common.ProgressPhase.html#CX_PdfLib_Common_ProgressPhase_ChoosingDestination
+  commentId: F:CX.PdfLib.Common.ProgressPhase.ChoosingDestination
+  fullName: CX.PdfLib.Common.ProgressPhase.ChoosingDestination
+  nameWithType: ProgressPhase.ChoosingDestination
+- uid: CX.PdfLib.Common.ProgressPhase.Converting
+  name: Converting
+  href: api/CX.PdfLib.Common.ProgressPhase.html#CX_PdfLib_Common_ProgressPhase_Converting
+  commentId: F:CX.PdfLib.Common.ProgressPhase.Converting
+  fullName: CX.PdfLib.Common.ProgressPhase.Converting
+  nameWithType: ProgressPhase.Converting
+- uid: CX.PdfLib.Common.ProgressPhase.Extracting
+  name: Extracting
+  href: api/CX.PdfLib.Common.ProgressPhase.html#CX_PdfLib_Common_ProgressPhase_Extracting
+  commentId: F:CX.PdfLib.Common.ProgressPhase.Extracting
+  fullName: CX.PdfLib.Common.ProgressPhase.Extracting
+  nameWithType: ProgressPhase.Extracting
+- uid: CX.PdfLib.Common.ProgressPhase.Finished
+  name: Finished
+  href: api/CX.PdfLib.Common.ProgressPhase.html#CX_PdfLib_Common_ProgressPhase_Finished
+  commentId: F:CX.PdfLib.Common.ProgressPhase.Finished
+  fullName: CX.PdfLib.Common.ProgressPhase.Finished
+  nameWithType: ProgressPhase.Finished
+- uid: CX.PdfLib.Common.ProgressPhase.GettingBookmarks
+  name: GettingBookmarks
+  href: api/CX.PdfLib.Common.ProgressPhase.html#CX_PdfLib_Common_ProgressPhase_GettingBookmarks
+  commentId: F:CX.PdfLib.Common.ProgressPhase.GettingBookmarks
+  fullName: CX.PdfLib.Common.ProgressPhase.GettingBookmarks
+  nameWithType: ProgressPhase.GettingBookmarks
+- uid: CX.PdfLib.Common.ProgressPhase.Merging
+  name: Merging
+  href: api/CX.PdfLib.Common.ProgressPhase.html#CX_PdfLib_Common_ProgressPhase_Merging
+  commentId: F:CX.PdfLib.Common.ProgressPhase.Merging
+  fullName: CX.PdfLib.Common.ProgressPhase.Merging
+  nameWithType: ProgressPhase.Merging
+- uid: CX.PdfLib.Common.ProgressPhase.Unassigned
+  name: Unassigned
+  href: api/CX.PdfLib.Common.ProgressPhase.html#CX_PdfLib_Common_ProgressPhase_Unassigned
+  commentId: F:CX.PdfLib.Common.ProgressPhase.Unassigned
+  fullName: CX.PdfLib.Common.ProgressPhase.Unassigned
+  nameWithType: ProgressPhase.Unassigned
+- uid: CX.PdfLib.Common.ProgressReport
+  name: ProgressReport
+  href: api/CX.PdfLib.Common.ProgressReport.html
+  commentId: T:CX.PdfLib.Common.ProgressReport
+  fullName: CX.PdfLib.Common.ProgressReport
+  nameWithType: ProgressReport
+- uid: CX.PdfLib.Common.ProgressReport.#ctor(System.Int32,CX.PdfLib.Common.ProgressPhase,System.String)
+  name: ProgressReport(Int32, ProgressPhase, String)
+  href: api/CX.PdfLib.Common.ProgressReport.html#CX_PdfLib_Common_ProgressReport__ctor_System_Int32_CX_PdfLib_Common_ProgressPhase_System_String_
+  commentId: M:CX.PdfLib.Common.ProgressReport.#ctor(System.Int32,CX.PdfLib.Common.ProgressPhase,System.String)
+  fullName: CX.PdfLib.Common.ProgressReport.ProgressReport(System.Int32, CX.PdfLib.Common.ProgressPhase, System.String)
+  nameWithType: ProgressReport.ProgressReport(Int32, ProgressPhase, String)
+- uid: CX.PdfLib.Common.ProgressReport.#ctor*
+  name: ProgressReport
+  href: api/CX.PdfLib.Common.ProgressReport.html#CX_PdfLib_Common_ProgressReport__ctor_
+  commentId: Overload:CX.PdfLib.Common.ProgressReport.#ctor
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.ProgressReport.ProgressReport
+  nameWithType: ProgressReport.ProgressReport
+- uid: CX.PdfLib.Common.ProgressReport.CurrentItem
+  name: CurrentItem
+  href: api/CX.PdfLib.Common.ProgressReport.html#CX_PdfLib_Common_ProgressReport_CurrentItem
+  commentId: P:CX.PdfLib.Common.ProgressReport.CurrentItem
+  fullName: CX.PdfLib.Common.ProgressReport.CurrentItem
+  nameWithType: ProgressReport.CurrentItem
+- uid: CX.PdfLib.Common.ProgressReport.CurrentItem*
+  name: CurrentItem
+  href: api/CX.PdfLib.Common.ProgressReport.html#CX_PdfLib_Common_ProgressReport_CurrentItem_
+  commentId: Overload:CX.PdfLib.Common.ProgressReport.CurrentItem
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.ProgressReport.CurrentItem
+  nameWithType: ProgressReport.CurrentItem
+- uid: CX.PdfLib.Common.ProgressReport.CurrentPhase
+  name: CurrentPhase
+  href: api/CX.PdfLib.Common.ProgressReport.html#CX_PdfLib_Common_ProgressReport_CurrentPhase
+  commentId: P:CX.PdfLib.Common.ProgressReport.CurrentPhase
+  fullName: CX.PdfLib.Common.ProgressReport.CurrentPhase
+  nameWithType: ProgressReport.CurrentPhase
+- uid: CX.PdfLib.Common.ProgressReport.CurrentPhase*
+  name: CurrentPhase
+  href: api/CX.PdfLib.Common.ProgressReport.html#CX_PdfLib_Common_ProgressReport_CurrentPhase_
+  commentId: Overload:CX.PdfLib.Common.ProgressReport.CurrentPhase
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.ProgressReport.CurrentPhase
+  nameWithType: ProgressReport.CurrentPhase
+- uid: CX.PdfLib.Common.ProgressReport.Percentage
+  name: Percentage
+  href: api/CX.PdfLib.Common.ProgressReport.html#CX_PdfLib_Common_ProgressReport_Percentage
+  commentId: P:CX.PdfLib.Common.ProgressReport.Percentage
+  fullName: CX.PdfLib.Common.ProgressReport.Percentage
+  nameWithType: ProgressReport.Percentage
+- uid: CX.PdfLib.Common.ProgressReport.Percentage*
+  name: Percentage
+  href: api/CX.PdfLib.Common.ProgressReport.html#CX_PdfLib_Common_ProgressReport_Percentage_
+  commentId: Overload:CX.PdfLib.Common.ProgressReport.Percentage
+  isSpec: "True"
+  fullName: CX.PdfLib.Common.ProgressReport.Percentage
+  nameWithType: ProgressReport.Percentage
+- uid: CX.PdfLib.Extensions
+  name: CX.PdfLib.Extensions
+  href: api/CX.PdfLib.Extensions.html
+  commentId: N:CX.PdfLib.Extensions
+  fullName: CX.PdfLib.Extensions
+  nameWithType: CX.PdfLib.Extensions
+- uid: CX.PdfLib.Extensions.BookmarkExtensions
+  name: BookmarkExtensions
+  href: api/CX.PdfLib.Extensions.BookmarkExtensions.html
+  commentId: T:CX.PdfLib.Extensions.BookmarkExtensions
+  fullName: CX.PdfLib.Extensions.BookmarkExtensions
+  nameWithType: BookmarkExtensions
+- uid: CX.PdfLib.Extensions.BookmarkExtensions.AdjustLevels(System.Collections.Generic.IEnumerable{CX.PdfLib.Services.Data.ILeveledBookmark},System.Int32)
+  name: AdjustLevels(IEnumerable<ILeveledBookmark>, Int32)
+  href: api/CX.PdfLib.Extensions.BookmarkExtensions.html#CX_PdfLib_Extensions_BookmarkExtensions_AdjustLevels_System_Collections_Generic_IEnumerable_CX_PdfLib_Services_Data_ILeveledBookmark__System_Int32_
+  commentId: M:CX.PdfLib.Extensions.BookmarkExtensions.AdjustLevels(System.Collections.Generic.IEnumerable{CX.PdfLib.Services.Data.ILeveledBookmark},System.Int32)
+  name.vb: AdjustLevels(IEnumerable(Of ILeveledBookmark), Int32)
+  fullName: CX.PdfLib.Extensions.BookmarkExtensions.AdjustLevels(System.Collections.Generic.IEnumerable<CX.PdfLib.Services.Data.ILeveledBookmark>, System.Int32)
+  fullName.vb: CX.PdfLib.Extensions.BookmarkExtensions.AdjustLevels(System.Collections.Generic.IEnumerable(Of CX.PdfLib.Services.Data.ILeveledBookmark), System.Int32)
+  nameWithType: BookmarkExtensions.AdjustLevels(IEnumerable<ILeveledBookmark>, Int32)
+  nameWithType.vb: BookmarkExtensions.AdjustLevels(IEnumerable(Of ILeveledBookmark), Int32)
+- uid: CX.PdfLib.Extensions.BookmarkExtensions.AdjustLevels*
+  name: AdjustLevels
+  href: api/CX.PdfLib.Extensions.BookmarkExtensions.html#CX_PdfLib_Extensions_BookmarkExtensions_AdjustLevels_
+  commentId: Overload:CX.PdfLib.Extensions.BookmarkExtensions.AdjustLevels
+  isSpec: "True"
+  fullName: CX.PdfLib.Extensions.BookmarkExtensions.AdjustLevels
+  nameWithType: BookmarkExtensions.AdjustLevels
+- uid: CX.PdfLib.Extensions.BookmarkExtensions.IsChild(CX.PdfLib.Services.Data.ILeveledBookmark,System.Collections.Generic.IEnumerable{CX.PdfLib.Services.Data.ILeveledBookmark})
+  name: IsChild(ILeveledBookmark, IEnumerable<ILeveledBookmark>)
+  href: api/CX.PdfLib.Extensions.BookmarkExtensions.html#CX_PdfLib_Extensions_BookmarkExtensions_IsChild_CX_PdfLib_Services_Data_ILeveledBookmark_System_Collections_Generic_IEnumerable_CX_PdfLib_Services_Data_ILeveledBookmark__
+  commentId: M:CX.PdfLib.Extensions.BookmarkExtensions.IsChild(CX.PdfLib.Services.Data.ILeveledBookmark,System.Collections.Generic.IEnumerable{CX.PdfLib.Services.Data.ILeveledBookmark})
+  name.vb: IsChild(ILeveledBookmark, IEnumerable(Of ILeveledBookmark))
+  fullName: CX.PdfLib.Extensions.BookmarkExtensions.IsChild(CX.PdfLib.Services.Data.ILeveledBookmark, System.Collections.Generic.IEnumerable<CX.PdfLib.Services.Data.ILeveledBookmark>)
+  fullName.vb: CX.PdfLib.Extensions.BookmarkExtensions.IsChild(CX.PdfLib.Services.Data.ILeveledBookmark, System.Collections.Generic.IEnumerable(Of CX.PdfLib.Services.Data.ILeveledBookmark))
+  nameWithType: BookmarkExtensions.IsChild(ILeveledBookmark, IEnumerable<ILeveledBookmark>)
+  nameWithType.vb: BookmarkExtensions.IsChild(ILeveledBookmark, IEnumerable(Of ILeveledBookmark))
+- uid: CX.PdfLib.Extensions.BookmarkExtensions.IsChild*
+  name: IsChild
+  href: api/CX.PdfLib.Extensions.BookmarkExtensions.html#CX_PdfLib_Extensions_BookmarkExtensions_IsChild_
+  commentId: Overload:CX.PdfLib.Extensions.BookmarkExtensions.IsChild
+  isSpec: "True"
+  fullName: CX.PdfLib.Extensions.BookmarkExtensions.IsChild
+  nameWithType: BookmarkExtensions.IsChild
+- uid: CX.PdfLib.Extensions.IEnumerableExtensions
+  name: IEnumerableExtensions
+  href: api/CX.PdfLib.Extensions.IEnumerableExtensions.html
+  commentId: T:CX.PdfLib.Extensions.IEnumerableExtensions
+  fullName: CX.PdfLib.Extensions.IEnumerableExtensions
+  nameWithType: IEnumerableExtensions
+- uid: CX.PdfLib.Extensions.IEnumerableExtensions.Children(System.Collections.Generic.IEnumerable{CX.PdfLib.Services.Data.ILeveledBookmark},CX.PdfLib.Services.Data.ILeveledBookmark)
+  name: Children(IEnumerable<ILeveledBookmark>, ILeveledBookmark)
+  href: api/CX.PdfLib.Extensions.IEnumerableExtensions.html#CX_PdfLib_Extensions_IEnumerableExtensions_Children_System_Collections_Generic_IEnumerable_CX_PdfLib_Services_Data_ILeveledBookmark__CX_PdfLib_Services_Data_ILeveledBookmark_
+  commentId: M:CX.PdfLib.Extensions.IEnumerableExtensions.Children(System.Collections.Generic.IEnumerable{CX.PdfLib.Services.Data.ILeveledBookmark},CX.PdfLib.Services.Data.ILeveledBookmark)
+  name.vb: Children(IEnumerable(Of ILeveledBookmark), ILeveledBookmark)
+  fullName: CX.PdfLib.Extensions.IEnumerableExtensions.Children(System.Collections.Generic.IEnumerable<CX.PdfLib.Services.Data.ILeveledBookmark>, CX.PdfLib.Services.Data.ILeveledBookmark)
+  fullName.vb: CX.PdfLib.Extensions.IEnumerableExtensions.Children(System.Collections.Generic.IEnumerable(Of CX.PdfLib.Services.Data.ILeveledBookmark), CX.PdfLib.Services.Data.ILeveledBookmark)
+  nameWithType: IEnumerableExtensions.Children(IEnumerable<ILeveledBookmark>, ILeveledBookmark)
+  nameWithType.vb: IEnumerableExtensions.Children(IEnumerable(Of ILeveledBookmark), ILeveledBookmark)
+- uid: CX.PdfLib.Extensions.IEnumerableExtensions.Children*
+  name: Children
+  href: api/CX.PdfLib.Extensions.IEnumerableExtensions.html#CX_PdfLib_Extensions_IEnumerableExtensions_Children_
+  commentId: Overload:CX.PdfLib.Extensions.IEnumerableExtensions.Children
+  isSpec: "True"
+  fullName: CX.PdfLib.Extensions.IEnumerableExtensions.Children
+  nameWithType: IEnumerableExtensions.Children
+- uid: CX.PdfLib.Extensions.ListExtensions
+  name: ListExtensions
+  href: api/CX.PdfLib.Extensions.ListExtensions.html
+  commentId: T:CX.PdfLib.Extensions.ListExtensions
+  fullName: CX.PdfLib.Extensions.ListExtensions
+  nameWithType: ListExtensions
+- uid: CX.PdfLib.Extensions.ListExtensions.Range(System.Collections.Generic.List{System.Int32},System.Int32,System.Int32)
+  name: Range(List<Int32>, Int32, Int32)
+  href: api/CX.PdfLib.Extensions.ListExtensions.html#CX_PdfLib_Extensions_ListExtensions_Range_System_Collections_Generic_List_System_Int32__System_Int32_System_Int32_
+  commentId: M:CX.PdfLib.Extensions.ListExtensions.Range(System.Collections.Generic.List{System.Int32},System.Int32,System.Int32)
+  name.vb: Range(List(Of Int32), Int32, Int32)
+  fullName: CX.PdfLib.Extensions.ListExtensions.Range(System.Collections.Generic.List<System.Int32>, System.Int32, System.Int32)
+  fullName.vb: CX.PdfLib.Extensions.ListExtensions.Range(System.Collections.Generic.List(Of System.Int32), System.Int32, System.Int32)
+  nameWithType: ListExtensions.Range(List<Int32>, Int32, Int32)
+  nameWithType.vb: ListExtensions.Range(List(Of Int32), Int32, Int32)
+- uid: CX.PdfLib.Extensions.ListExtensions.Range*
+  name: Range
+  href: api/CX.PdfLib.Extensions.ListExtensions.html#CX_PdfLib_Extensions_ListExtensions_Range_
+  commentId: Overload:CX.PdfLib.Extensions.ListExtensions.Range
+  isSpec: "True"
+  fullName: CX.PdfLib.Extensions.ListExtensions.Range
+  nameWithType: ListExtensions.Range
+- uid: CX.PdfLib.Extensions.RangeList
+  name: RangeList
+  href: api/CX.PdfLib.Extensions.RangeList.html
+  commentId: T:CX.PdfLib.Extensions.RangeList
+  fullName: CX.PdfLib.Extensions.RangeList
+  nameWithType: RangeList
+- uid: CX.PdfLib.Extensions.RangeList.Create(System.Int32,System.Int32)
+  name: Create(Int32, Int32)
+  href: api/CX.PdfLib.Extensions.RangeList.html#CX_PdfLib_Extensions_RangeList_Create_System_Int32_System_Int32_
+  commentId: M:CX.PdfLib.Extensions.RangeList.Create(System.Int32,System.Int32)
+  fullName: CX.PdfLib.Extensions.RangeList.Create(System.Int32, System.Int32)
+  nameWithType: RangeList.Create(Int32, Int32)
+- uid: CX.PdfLib.Extensions.RangeList.Create*
+  name: Create
+  href: api/CX.PdfLib.Extensions.RangeList.html#CX_PdfLib_Extensions_RangeList_Create_
+  commentId: Overload:CX.PdfLib.Extensions.RangeList.Create
+  isSpec: "True"
+  fullName: CX.PdfLib.Extensions.RangeList.Create
+  nameWithType: RangeList.Create
+- uid: CX.PdfLib.Extensions.StringExtensions
+  name: StringExtensions
+  href: api/CX.PdfLib.Extensions.StringExtensions.html
+  commentId: T:CX.PdfLib.Extensions.StringExtensions
+  fullName: CX.PdfLib.Extensions.StringExtensions
+  nameWithType: StringExtensions
+- uid: CX.PdfLib.Extensions.StringExtensions.ReplaceIllegal(System.String)
+  name: ReplaceIllegal(String)
+  href: api/CX.PdfLib.Extensions.StringExtensions.html#CX_PdfLib_Extensions_StringExtensions_ReplaceIllegal_System_String_
+  commentId: M:CX.PdfLib.Extensions.StringExtensions.ReplaceIllegal(System.String)
+  fullName: CX.PdfLib.Extensions.StringExtensions.ReplaceIllegal(System.String)
+  nameWithType: StringExtensions.ReplaceIllegal(String)
+- uid: CX.PdfLib.Extensions.StringExtensions.ReplaceIllegal*
+  name: ReplaceIllegal
+  href: api/CX.PdfLib.Extensions.StringExtensions.html#CX_PdfLib_Extensions_StringExtensions_ReplaceIllegal_
+  commentId: Overload:CX.PdfLib.Extensions.StringExtensions.ReplaceIllegal
+  isSpec: "True"
+  fullName: CX.PdfLib.Extensions.StringExtensions.ReplaceIllegal
+  nameWithType: StringExtensions.ReplaceIllegal
+- uid: CX.PdfLib.iText7
+  name: CX.PdfLib.iText7
+  href: api/CX.PdfLib.iText7.html
+  commentId: N:CX.PdfLib.iText7
+  fullName: CX.PdfLib.iText7
+  nameWithType: CX.PdfLib.iText7
+- uid: CX.PdfLib.iText7.AnnotationService
+  name: AnnotationService
+  href: api/CX.PdfLib.iText7.AnnotationService.html
+  commentId: T:CX.PdfLib.iText7.AnnotationService
+  fullName: CX.PdfLib.iText7.AnnotationService
+  nameWithType: AnnotationService
+- uid: CX.PdfLib.iText7.AnnotationService.#ctor(CX.LoggingLib.ILogbook)
+  name: AnnotationService(ILogbook)
+  href: api/CX.PdfLib.iText7.AnnotationService.html#CX_PdfLib_iText7_AnnotationService__ctor_CX_LoggingLib_ILogbook_
+  commentId: M:CX.PdfLib.iText7.AnnotationService.#ctor(CX.LoggingLib.ILogbook)
+  fullName: CX.PdfLib.iText7.AnnotationService.AnnotationService(CX.LoggingLib.ILogbook)
+  nameWithType: AnnotationService.AnnotationService(ILogbook)
+- uid: CX.PdfLib.iText7.AnnotationService.#ctor*
+  name: AnnotationService
+  href: api/CX.PdfLib.iText7.AnnotationService.html#CX_PdfLib_iText7_AnnotationService__ctor_
+  commentId: Overload:CX.PdfLib.iText7.AnnotationService.#ctor
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.AnnotationService.AnnotationService
+  nameWithType: AnnotationService.AnnotationService
+- uid: CX.PdfLib.iText7.AnnotationService.FlattenRedactions(System.String)
+  name: FlattenRedactions(String)
+  href: api/CX.PdfLib.iText7.AnnotationService.html#CX_PdfLib_iText7_AnnotationService_FlattenRedactions_System_String_
+  commentId: M:CX.PdfLib.iText7.AnnotationService.FlattenRedactions(System.String)
+  fullName: CX.PdfLib.iText7.AnnotationService.FlattenRedactions(System.String)
+  nameWithType: AnnotationService.FlattenRedactions(String)
+- uid: CX.PdfLib.iText7.AnnotationService.FlattenRedactions(System.String,System.Threading.CancellationToken)
+  name: FlattenRedactions(String, CancellationToken)
+  href: api/CX.PdfLib.iText7.AnnotationService.html#CX_PdfLib_iText7_AnnotationService_FlattenRedactions_System_String_System_Threading_CancellationToken_
+  commentId: M:CX.PdfLib.iText7.AnnotationService.FlattenRedactions(System.String,System.Threading.CancellationToken)
+  fullName: CX.PdfLib.iText7.AnnotationService.FlattenRedactions(System.String, System.Threading.CancellationToken)
+  nameWithType: AnnotationService.FlattenRedactions(String, CancellationToken)
+- uid: CX.PdfLib.iText7.AnnotationService.FlattenRedactions*
+  name: FlattenRedactions
+  href: api/CX.PdfLib.iText7.AnnotationService.html#CX_PdfLib_iText7_AnnotationService_FlattenRedactions_
+  commentId: Overload:CX.PdfLib.iText7.AnnotationService.FlattenRedactions
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.AnnotationService.FlattenRedactions
+  nameWithType: AnnotationService.FlattenRedactions
+- uid: CX.PdfLib.iText7.AnnotationService.GetTitles(System.String)
+  name: GetTitles(String)
+  href: api/CX.PdfLib.iText7.AnnotationService.html#CX_PdfLib_iText7_AnnotationService_GetTitles_System_String_
+  commentId: M:CX.PdfLib.iText7.AnnotationService.GetTitles(System.String)
+  fullName: CX.PdfLib.iText7.AnnotationService.GetTitles(System.String)
+  nameWithType: AnnotationService.GetTitles(String)
+- uid: CX.PdfLib.iText7.AnnotationService.GetTitles(System.String,System.Threading.CancellationToken)
+  name: GetTitles(String, CancellationToken)
+  href: api/CX.PdfLib.iText7.AnnotationService.html#CX_PdfLib_iText7_AnnotationService_GetTitles_System_String_System_Threading_CancellationToken_
+  commentId: M:CX.PdfLib.iText7.AnnotationService.GetTitles(System.String,System.Threading.CancellationToken)
+  fullName: CX.PdfLib.iText7.AnnotationService.GetTitles(System.String, System.Threading.CancellationToken)
+  nameWithType: AnnotationService.GetTitles(String, CancellationToken)
+- uid: CX.PdfLib.iText7.AnnotationService.GetTitles*
+  name: GetTitles
+  href: api/CX.PdfLib.iText7.AnnotationService.html#CX_PdfLib_iText7_AnnotationService_GetTitles_
+  commentId: Overload:CX.PdfLib.iText7.AnnotationService.GetTitles
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.AnnotationService.GetTitles
+  nameWithType: AnnotationService.GetTitles
+- uid: CX.PdfLib.iText7.AnnotationService.RemoveAll(System.String)
+  name: RemoveAll(String)
+  href: api/CX.PdfLib.iText7.AnnotationService.html#CX_PdfLib_iText7_AnnotationService_RemoveAll_System_String_
+  commentId: M:CX.PdfLib.iText7.AnnotationService.RemoveAll(System.String)
+  fullName: CX.PdfLib.iText7.AnnotationService.RemoveAll(System.String)
+  nameWithType: AnnotationService.RemoveAll(String)
+- uid: CX.PdfLib.iText7.AnnotationService.RemoveAll(System.String,System.Threading.CancellationToken)
+  name: RemoveAll(String, CancellationToken)
+  href: api/CX.PdfLib.iText7.AnnotationService.html#CX_PdfLib_iText7_AnnotationService_RemoveAll_System_String_System_Threading_CancellationToken_
+  commentId: M:CX.PdfLib.iText7.AnnotationService.RemoveAll(System.String,System.Threading.CancellationToken)
+  fullName: CX.PdfLib.iText7.AnnotationService.RemoveAll(System.String, System.Threading.CancellationToken)
+  nameWithType: AnnotationService.RemoveAll(String, CancellationToken)
+- uid: CX.PdfLib.iText7.AnnotationService.RemoveAll*
+  name: RemoveAll
+  href: api/CX.PdfLib.iText7.AnnotationService.html#CX_PdfLib_iText7_AnnotationService_RemoveAll_
+  commentId: Overload:CX.PdfLib.iText7.AnnotationService.RemoveAll
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.AnnotationService.RemoveAll
+  nameWithType: AnnotationService.RemoveAll
+- uid: CX.PdfLib.iText7.AnnotationService.RemoveByTitle(System.Collections.Generic.IEnumerable{System.String},System.String)
+  name: RemoveByTitle(IEnumerable<String>, String)
+  href: api/CX.PdfLib.iText7.AnnotationService.html#CX_PdfLib_iText7_AnnotationService_RemoveByTitle_System_Collections_Generic_IEnumerable_System_String__System_String_
+  commentId: M:CX.PdfLib.iText7.AnnotationService.RemoveByTitle(System.Collections.Generic.IEnumerable{System.String},System.String)
+  name.vb: RemoveByTitle(IEnumerable(Of String), String)
+  fullName: CX.PdfLib.iText7.AnnotationService.RemoveByTitle(System.Collections.Generic.IEnumerable<System.String>, System.String)
+  fullName.vb: CX.PdfLib.iText7.AnnotationService.RemoveByTitle(System.Collections.Generic.IEnumerable(Of System.String), System.String)
+  nameWithType: AnnotationService.RemoveByTitle(IEnumerable<String>, String)
+  nameWithType.vb: AnnotationService.RemoveByTitle(IEnumerable(Of String), String)
+- uid: CX.PdfLib.iText7.AnnotationService.RemoveByTitle(System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)
+  name: RemoveByTitle(IEnumerable<String>, String, CancellationToken)
+  href: api/CX.PdfLib.iText7.AnnotationService.html#CX_PdfLib_iText7_AnnotationService_RemoveByTitle_System_Collections_Generic_IEnumerable_System_String__System_String_System_Threading_CancellationToken_
+  commentId: M:CX.PdfLib.iText7.AnnotationService.RemoveByTitle(System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)
+  name.vb: RemoveByTitle(IEnumerable(Of String), String, CancellationToken)
+  fullName: CX.PdfLib.iText7.AnnotationService.RemoveByTitle(System.Collections.Generic.IEnumerable<System.String>, System.String, System.Threading.CancellationToken)
+  fullName.vb: CX.PdfLib.iText7.AnnotationService.RemoveByTitle(System.Collections.Generic.IEnumerable(Of System.String), System.String, System.Threading.CancellationToken)
+  nameWithType: AnnotationService.RemoveByTitle(IEnumerable<String>, String, CancellationToken)
+  nameWithType.vb: AnnotationService.RemoveByTitle(IEnumerable(Of String), String, CancellationToken)
+- uid: CX.PdfLib.iText7.AnnotationService.RemoveByTitle*
+  name: RemoveByTitle
+  href: api/CX.PdfLib.iText7.AnnotationService.html#CX_PdfLib_iText7_AnnotationService_RemoveByTitle_
+  commentId: Overload:CX.PdfLib.iText7.AnnotationService.RemoveByTitle
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.AnnotationService.RemoveByTitle
+  nameWithType: AnnotationService.RemoveByTitle
+- uid: CX.PdfLib.iText7.BookmarkService
+  name: BookmarkService
+  href: api/CX.PdfLib.iText7.BookmarkService.html
+  commentId: T:CX.PdfLib.iText7.BookmarkService
+  fullName: CX.PdfLib.iText7.BookmarkService
+  nameWithType: BookmarkService
+- uid: CX.PdfLib.iText7.BookmarkService.#ctor(CX.LoggingLib.ILogbook)
+  name: BookmarkService(ILogbook)
+  href: api/CX.PdfLib.iText7.BookmarkService.html#CX_PdfLib_iText7_BookmarkService__ctor_CX_LoggingLib_ILogbook_
+  commentId: M:CX.PdfLib.iText7.BookmarkService.#ctor(CX.LoggingLib.ILogbook)
+  fullName: CX.PdfLib.iText7.BookmarkService.BookmarkService(CX.LoggingLib.ILogbook)
+  nameWithType: BookmarkService.BookmarkService(ILogbook)
+- uid: CX.PdfLib.iText7.BookmarkService.#ctor*
+  name: BookmarkService
+  href: api/CX.PdfLib.iText7.BookmarkService.html#CX_PdfLib_iText7_BookmarkService__ctor_
+  commentId: Overload:CX.PdfLib.iText7.BookmarkService.#ctor
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.BookmarkService.BookmarkService
+  nameWithType: BookmarkService.BookmarkService
+- uid: CX.PdfLib.iText7.BookmarkService.AddBookmarks(System.Collections.Generic.IList{CX.PdfLib.Services.Data.ILeveledBookmark},System.String)
+  name: AddBookmarks(IList<ILeveledBookmark>, String)
+  href: api/CX.PdfLib.iText7.BookmarkService.html#CX_PdfLib_iText7_BookmarkService_AddBookmarks_System_Collections_Generic_IList_CX_PdfLib_Services_Data_ILeveledBookmark__System_String_
+  commentId: M:CX.PdfLib.iText7.BookmarkService.AddBookmarks(System.Collections.Generic.IList{CX.PdfLib.Services.Data.ILeveledBookmark},System.String)
+  name.vb: AddBookmarks(IList(Of ILeveledBookmark), String)
+  fullName: CX.PdfLib.iText7.BookmarkService.AddBookmarks(System.Collections.Generic.IList<CX.PdfLib.Services.Data.ILeveledBookmark>, System.String)
+  fullName.vb: CX.PdfLib.iText7.BookmarkService.AddBookmarks(System.Collections.Generic.IList(Of CX.PdfLib.Services.Data.ILeveledBookmark), System.String)
+  nameWithType: BookmarkService.AddBookmarks(IList<ILeveledBookmark>, String)
+  nameWithType.vb: BookmarkService.AddBookmarks(IList(Of ILeveledBookmark), String)
+- uid: CX.PdfLib.iText7.BookmarkService.AddBookmarks*
+  name: AddBookmarks
+  href: api/CX.PdfLib.iText7.BookmarkService.html#CX_PdfLib_iText7_BookmarkService_AddBookmarks_
+  commentId: Overload:CX.PdfLib.iText7.BookmarkService.AddBookmarks
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.BookmarkService.AddBookmarks
+  nameWithType: BookmarkService.AddBookmarks
+- uid: CX.PdfLib.iText7.BookmarkService.FindBookmarks(System.String)
+  name: FindBookmarks(String)
+  href: api/CX.PdfLib.iText7.BookmarkService.html#CX_PdfLib_iText7_BookmarkService_FindBookmarks_System_String_
+  commentId: M:CX.PdfLib.iText7.BookmarkService.FindBookmarks(System.String)
+  fullName: CX.PdfLib.iText7.BookmarkService.FindBookmarks(System.String)
+  nameWithType: BookmarkService.FindBookmarks(String)
+- uid: CX.PdfLib.iText7.BookmarkService.FindBookmarks*
+  name: FindBookmarks
+  href: api/CX.PdfLib.iText7.BookmarkService.html#CX_PdfLib_iText7_BookmarkService_FindBookmarks_
+  commentId: Overload:CX.PdfLib.iText7.BookmarkService.FindBookmarks
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.BookmarkService.FindBookmarks
+  nameWithType: BookmarkService.FindBookmarks
+- uid: CX.PdfLib.iText7.ExtractionService
+  name: ExtractionService
+  href: api/CX.PdfLib.iText7.ExtractionService.html
+  commentId: T:CX.PdfLib.iText7.ExtractionService
+  fullName: CX.PdfLib.iText7.ExtractionService
+  nameWithType: ExtractionService
+- uid: CX.PdfLib.iText7.ExtractionService.#ctor(CX.PdfLib.Services.IPdfAConvertService,CX.LoggingLib.ILogbook)
+  name: ExtractionService(IPdfAConvertService, ILogbook)
+  href: api/CX.PdfLib.iText7.ExtractionService.html#CX_PdfLib_iText7_ExtractionService__ctor_CX_PdfLib_Services_IPdfAConvertService_CX_LoggingLib_ILogbook_
+  commentId: M:CX.PdfLib.iText7.ExtractionService.#ctor(CX.PdfLib.Services.IPdfAConvertService,CX.LoggingLib.ILogbook)
+  fullName: CX.PdfLib.iText7.ExtractionService.ExtractionService(CX.PdfLib.Services.IPdfAConvertService, CX.LoggingLib.ILogbook)
+  nameWithType: ExtractionService.ExtractionService(IPdfAConvertService, ILogbook)
+- uid: CX.PdfLib.iText7.ExtractionService.#ctor*
+  name: ExtractionService
+  href: api/CX.PdfLib.iText7.ExtractionService.html#CX_PdfLib_iText7_ExtractionService__ctor_
+  commentId: Overload:CX.PdfLib.iText7.ExtractionService.#ctor
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.ExtractionService.ExtractionService
+  nameWithType: ExtractionService.ExtractionService
+- uid: CX.PdfLib.iText7.ExtractionService.Extract(CX.PdfLib.Common.ExtractionOptions)
+  name: Extract(ExtractionOptions)
+  href: api/CX.PdfLib.iText7.ExtractionService.html#CX_PdfLib_iText7_ExtractionService_Extract_CX_PdfLib_Common_ExtractionOptions_
+  commentId: M:CX.PdfLib.iText7.ExtractionService.Extract(CX.PdfLib.Common.ExtractionOptions)
+  fullName: CX.PdfLib.iText7.ExtractionService.Extract(CX.PdfLib.Common.ExtractionOptions)
+  nameWithType: ExtractionService.Extract(ExtractionOptions)
+- uid: CX.PdfLib.iText7.ExtractionService.Extract*
+  name: Extract
+  href: api/CX.PdfLib.iText7.ExtractionService.html#CX_PdfLib_iText7_ExtractionService_Extract_
+  commentId: Overload:CX.PdfLib.iText7.ExtractionService.Extract
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.ExtractionService.Extract
+  nameWithType: ExtractionService.Extract
+- uid: CX.PdfLib.iText7.MergingService
+  name: MergingService
+  href: api/CX.PdfLib.iText7.MergingService.html
+  commentId: T:CX.PdfLib.iText7.MergingService
+  fullName: CX.PdfLib.iText7.MergingService
+  nameWithType: MergingService
+- uid: CX.PdfLib.iText7.MergingService.#ctor(CX.PdfLib.Services.IWordConvertService,CX.LoggingLib.ILogbook)
+  name: MergingService(IWordConvertService, ILogbook)
+  href: api/CX.PdfLib.iText7.MergingService.html#CX_PdfLib_iText7_MergingService__ctor_CX_PdfLib_Services_IWordConvertService_CX_LoggingLib_ILogbook_
+  commentId: M:CX.PdfLib.iText7.MergingService.#ctor(CX.PdfLib.Services.IWordConvertService,CX.LoggingLib.ILogbook)
+  fullName: CX.PdfLib.iText7.MergingService.MergingService(CX.PdfLib.Services.IWordConvertService, CX.LoggingLib.ILogbook)
+  nameWithType: MergingService.MergingService(IWordConvertService, ILogbook)
+- uid: CX.PdfLib.iText7.MergingService.#ctor*
+  name: MergingService
+  href: api/CX.PdfLib.iText7.MergingService.html#CX_PdfLib_iText7_MergingService__ctor_
+  commentId: Overload:CX.PdfLib.iText7.MergingService.#ctor
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.MergingService.MergingService
+  nameWithType: MergingService.MergingService
+- uid: CX.PdfLib.iText7.MergingService.Merge(System.Collections.Generic.IList{System.String},System.String)
+  name: Merge(IList<String>, String)
+  href: api/CX.PdfLib.iText7.MergingService.html#CX_PdfLib_iText7_MergingService_Merge_System_Collections_Generic_IList_System_String__System_String_
+  commentId: M:CX.PdfLib.iText7.MergingService.Merge(System.Collections.Generic.IList{System.String},System.String)
+  name.vb: Merge(IList(Of String), String)
+  fullName: CX.PdfLib.iText7.MergingService.Merge(System.Collections.Generic.IList<System.String>, System.String)
+  fullName.vb: CX.PdfLib.iText7.MergingService.Merge(System.Collections.Generic.IList(Of System.String), System.String)
+  nameWithType: MergingService.Merge(IList<String>, String)
+  nameWithType.vb: MergingService.Merge(IList(Of String), String)
+- uid: CX.PdfLib.iText7.MergingService.Merge(System.Collections.Generic.IList{System.String},System.String,System.Threading.CancellationToken)
+  name: Merge(IList<String>, String, CancellationToken)
+  href: api/CX.PdfLib.iText7.MergingService.html#CX_PdfLib_iText7_MergingService_Merge_System_Collections_Generic_IList_System_String__System_String_System_Threading_CancellationToken_
+  commentId: M:CX.PdfLib.iText7.MergingService.Merge(System.Collections.Generic.IList{System.String},System.String,System.Threading.CancellationToken)
+  name.vb: Merge(IList(Of String), String, CancellationToken)
+  fullName: CX.PdfLib.iText7.MergingService.Merge(System.Collections.Generic.IList<System.String>, System.String, System.Threading.CancellationToken)
+  fullName.vb: CX.PdfLib.iText7.MergingService.Merge(System.Collections.Generic.IList(Of System.String), System.String, System.Threading.CancellationToken)
+  nameWithType: MergingService.Merge(IList<String>, String, CancellationToken)
+  nameWithType.vb: MergingService.Merge(IList(Of String), String, CancellationToken)
+- uid: CX.PdfLib.iText7.MergingService.Merge*
+  name: Merge
+  href: api/CX.PdfLib.iText7.MergingService.html#CX_PdfLib_iText7_MergingService_Merge_
+  commentId: Overload:CX.PdfLib.iText7.MergingService.Merge
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.MergingService.Merge
+  nameWithType: MergingService.Merge
+- uid: CX.PdfLib.iText7.MergingService.MergeWithOptions(CX.PdfLib.Common.MergingOptions)
+  name: MergeWithOptions(MergingOptions)
+  href: api/CX.PdfLib.iText7.MergingService.html#CX_PdfLib_iText7_MergingService_MergeWithOptions_CX_PdfLib_Common_MergingOptions_
+  commentId: M:CX.PdfLib.iText7.MergingService.MergeWithOptions(CX.PdfLib.Common.MergingOptions)
+  fullName: CX.PdfLib.iText7.MergingService.MergeWithOptions(CX.PdfLib.Common.MergingOptions)
+  nameWithType: MergingService.MergeWithOptions(MergingOptions)
+- uid: CX.PdfLib.iText7.MergingService.MergeWithOptions*
+  name: MergeWithOptions
+  href: api/CX.PdfLib.iText7.MergingService.html#CX_PdfLib_iText7_MergingService_MergeWithOptions_
+  commentId: Overload:CX.PdfLib.iText7.MergingService.MergeWithOptions
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.MergingService.MergeWithOptions
+  nameWithType: MergingService.MergeWithOptions
+- uid: CX.PdfLib.iText7.Properties
+  name: CX.PdfLib.iText7.Properties
+  href: api/CX.PdfLib.iText7.Properties.html
+  commentId: N:CX.PdfLib.iText7.Properties
+  fullName: CX.PdfLib.iText7.Properties
+  nameWithType: CX.PdfLib.iText7.Properties
+- uid: CX.PdfLib.iText7.Properties.Resources
+  name: Resources
+  href: api/CX.PdfLib.iText7.Properties.Resources.html
+  commentId: T:CX.PdfLib.iText7.Properties.Resources
+  fullName: CX.PdfLib.iText7.Properties.Resources
+  nameWithType: Resources
+- uid: CX.PdfLib.iText7.Properties.Resources.Culture
+  name: Culture
+  href: api/CX.PdfLib.iText7.Properties.Resources.html#CX_PdfLib_iText7_Properties_Resources_Culture
+  commentId: P:CX.PdfLib.iText7.Properties.Resources.Culture
+  fullName: CX.PdfLib.iText7.Properties.Resources.Culture
+  nameWithType: Resources.Culture
+- uid: CX.PdfLib.iText7.Properties.Resources.Culture*
+  name: Culture
+  href: api/CX.PdfLib.iText7.Properties.Resources.html#CX_PdfLib_iText7_Properties_Resources_Culture_
+  commentId: Overload:CX.PdfLib.iText7.Properties.Resources.Culture
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.Properties.Resources.Culture
+  nameWithType: Resources.Culture
+- uid: CX.PdfLib.iText7.Properties.Resources.ResourceManager
+  name: ResourceManager
+  href: api/CX.PdfLib.iText7.Properties.Resources.html#CX_PdfLib_iText7_Properties_Resources_ResourceManager
+  commentId: P:CX.PdfLib.iText7.Properties.Resources.ResourceManager
+  fullName: CX.PdfLib.iText7.Properties.Resources.ResourceManager
+  nameWithType: Resources.ResourceManager
+- uid: CX.PdfLib.iText7.Properties.Resources.ResourceManager*
+  name: ResourceManager
+  href: api/CX.PdfLib.iText7.Properties.Resources.html#CX_PdfLib_iText7_Properties_Resources_ResourceManager_
+  commentId: Overload:CX.PdfLib.iText7.Properties.Resources.ResourceManager
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.Properties.Resources.ResourceManager
+  nameWithType: Resources.ResourceManager
+- uid: CX.PdfLib.iText7.SigningService
+  name: SigningService
+  href: api/CX.PdfLib.iText7.SigningService.html
+  commentId: T:CX.PdfLib.iText7.SigningService
+  fullName: CX.PdfLib.iText7.SigningService
+  nameWithType: SigningService
+- uid: CX.PdfLib.iText7.SigningService.#ctor(CX.LoggingLib.ILogbook)
+  name: SigningService(ILogbook)
+  href: api/CX.PdfLib.iText7.SigningService.html#CX_PdfLib_iText7_SigningService__ctor_CX_LoggingLib_ILogbook_
+  commentId: M:CX.PdfLib.iText7.SigningService.#ctor(CX.LoggingLib.ILogbook)
+  fullName: CX.PdfLib.iText7.SigningService.SigningService(CX.LoggingLib.ILogbook)
+  nameWithType: SigningService.SigningService(ILogbook)
+- uid: CX.PdfLib.iText7.SigningService.#ctor*
+  name: SigningService
+  href: api/CX.PdfLib.iText7.SigningService.html#CX_PdfLib_iText7_SigningService__ctor_
+  commentId: Overload:CX.PdfLib.iText7.SigningService.#ctor
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.SigningService.SigningService
+  nameWithType: SigningService.SigningService
+- uid: CX.PdfLib.iText7.SigningService.RemoveSignature(System.IO.FileInfo,System.IO.FileInfo)
+  name: RemoveSignature(FileInfo, FileInfo)
+  href: api/CX.PdfLib.iText7.SigningService.html#CX_PdfLib_iText7_SigningService_RemoveSignature_System_IO_FileInfo_System_IO_FileInfo_
+  commentId: M:CX.PdfLib.iText7.SigningService.RemoveSignature(System.IO.FileInfo,System.IO.FileInfo)
+  fullName: CX.PdfLib.iText7.SigningService.RemoveSignature(System.IO.FileInfo, System.IO.FileInfo)
+  nameWithType: SigningService.RemoveSignature(FileInfo, FileInfo)
+- uid: CX.PdfLib.iText7.SigningService.RemoveSignature(System.IO.FileInfo,System.IO.FileInfo,System.Threading.CancellationToken)
+  name: RemoveSignature(FileInfo, FileInfo, CancellationToken)
+  href: api/CX.PdfLib.iText7.SigningService.html#CX_PdfLib_iText7_SigningService_RemoveSignature_System_IO_FileInfo_System_IO_FileInfo_System_Threading_CancellationToken_
+  commentId: M:CX.PdfLib.iText7.SigningService.RemoveSignature(System.IO.FileInfo,System.IO.FileInfo,System.Threading.CancellationToken)
+  fullName: CX.PdfLib.iText7.SigningService.RemoveSignature(System.IO.FileInfo, System.IO.FileInfo, System.Threading.CancellationToken)
+  nameWithType: SigningService.RemoveSignature(FileInfo, FileInfo, CancellationToken)
+- uid: CX.PdfLib.iText7.SigningService.RemoveSignature*
+  name: RemoveSignature
+  href: api/CX.PdfLib.iText7.SigningService.html#CX_PdfLib_iText7_SigningService_RemoveSignature_
+  commentId: Overload:CX.PdfLib.iText7.SigningService.RemoveSignature
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.SigningService.RemoveSignature
+  nameWithType: SigningService.RemoveSignature
+- uid: CX.PdfLib.iText7.WordConvertService
+  name: WordConvertService
+  href: api/CX.PdfLib.iText7.WordConvertService.html
+  commentId: T:CX.PdfLib.iText7.WordConvertService
+  fullName: CX.PdfLib.iText7.WordConvertService
+  nameWithType: WordConvertService
+- uid: CX.PdfLib.iText7.WordConvertService.#ctor(CX.LoggingLib.ILogbook)
+  name: WordConvertService(ILogbook)
+  href: api/CX.PdfLib.iText7.WordConvertService.html#CX_PdfLib_iText7_WordConvertService__ctor_CX_LoggingLib_ILogbook_
+  commentId: M:CX.PdfLib.iText7.WordConvertService.#ctor(CX.LoggingLib.ILogbook)
+  fullName: CX.PdfLib.iText7.WordConvertService.WordConvertService(CX.LoggingLib.ILogbook)
+  nameWithType: WordConvertService.WordConvertService(ILogbook)
+- uid: CX.PdfLib.iText7.WordConvertService.#ctor*
+  name: WordConvertService
+  href: api/CX.PdfLib.iText7.WordConvertService.html#CX_PdfLib_iText7_WordConvertService__ctor_
+  commentId: Overload:CX.PdfLib.iText7.WordConvertService.#ctor
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.WordConvertService.WordConvertService
+  nameWithType: WordConvertService.WordConvertService
+- uid: CX.PdfLib.iText7.WordConvertService.Convert(System.Collections.Generic.IList{System.String},System.String)
+  name: Convert(IList<String>, String)
+  href: api/CX.PdfLib.iText7.WordConvertService.html#CX_PdfLib_iText7_WordConvertService_Convert_System_Collections_Generic_IList_System_String__System_String_
+  commentId: M:CX.PdfLib.iText7.WordConvertService.Convert(System.Collections.Generic.IList{System.String},System.String)
+  name.vb: Convert(IList(Of String), String)
+  fullName: CX.PdfLib.iText7.WordConvertService.Convert(System.Collections.Generic.IList<System.String>, System.String)
+  fullName.vb: CX.PdfLib.iText7.WordConvertService.Convert(System.Collections.Generic.IList(Of System.String), System.String)
+  nameWithType: WordConvertService.Convert(IList<String>, String)
+  nameWithType.vb: WordConvertService.Convert(IList(Of String), String)
+- uid: CX.PdfLib.iText7.WordConvertService.Convert(System.Collections.Generic.IList{System.String},System.String,System.Threading.CancellationToken)
+  name: Convert(IList<String>, String, CancellationToken)
+  href: api/CX.PdfLib.iText7.WordConvertService.html#CX_PdfLib_iText7_WordConvertService_Convert_System_Collections_Generic_IList_System_String__System_String_System_Threading_CancellationToken_
+  commentId: M:CX.PdfLib.iText7.WordConvertService.Convert(System.Collections.Generic.IList{System.String},System.String,System.Threading.CancellationToken)
+  name.vb: Convert(IList(Of String), String, CancellationToken)
+  fullName: CX.PdfLib.iText7.WordConvertService.Convert(System.Collections.Generic.IList<System.String>, System.String, System.Threading.CancellationToken)
+  fullName.vb: CX.PdfLib.iText7.WordConvertService.Convert(System.Collections.Generic.IList(Of System.String), System.String, System.Threading.CancellationToken)
+  nameWithType: WordConvertService.Convert(IList<String>, String, CancellationToken)
+  nameWithType.vb: WordConvertService.Convert(IList(Of String), String, CancellationToken)
+- uid: CX.PdfLib.iText7.WordConvertService.Convert(System.String,System.String)
+  name: Convert(String, String)
+  href: api/CX.PdfLib.iText7.WordConvertService.html#CX_PdfLib_iText7_WordConvertService_Convert_System_String_System_String_
+  commentId: M:CX.PdfLib.iText7.WordConvertService.Convert(System.String,System.String)
+  fullName: CX.PdfLib.iText7.WordConvertService.Convert(System.String, System.String)
+  nameWithType: WordConvertService.Convert(String, String)
+- uid: CX.PdfLib.iText7.WordConvertService.Convert(System.String,System.String,System.Threading.CancellationToken)
+  name: Convert(String, String, CancellationToken)
+  href: api/CX.PdfLib.iText7.WordConvertService.html#CX_PdfLib_iText7_WordConvertService_Convert_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:CX.PdfLib.iText7.WordConvertService.Convert(System.String,System.String,System.Threading.CancellationToken)
+  fullName: CX.PdfLib.iText7.WordConvertService.Convert(System.String, System.String, System.Threading.CancellationToken)
+  nameWithType: WordConvertService.Convert(String, String, CancellationToken)
+- uid: CX.PdfLib.iText7.WordConvertService.Convert*
+  name: Convert
+  href: api/CX.PdfLib.iText7.WordConvertService.html#CX_PdfLib_iText7_WordConvertService_Convert_
+  commentId: Overload:CX.PdfLib.iText7.WordConvertService.Convert
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.WordConvertService.Convert
+  nameWithType: WordConvertService.Convert
+- uid: CX.PdfLib.iText7.WorkerBase`1
+  name: WorkerBase<TDerived>
+  href: api/CX.PdfLib.iText7.WorkerBase-1.html
+  commentId: T:CX.PdfLib.iText7.WorkerBase`1
+  name.vb: WorkerBase(Of TDerived)
+  fullName: CX.PdfLib.iText7.WorkerBase<TDerived>
+  fullName.vb: CX.PdfLib.iText7.WorkerBase(Of TDerived)
+  nameWithType: WorkerBase<TDerived>
+  nameWithType.vb: WorkerBase(Of TDerived)
+- uid: CX.PdfLib.iText7.WorkerBase`1.#ctor(CX.LoggingLib.ILogbook)
+  name: WorkerBase(ILogbook)
+  href: api/CX.PdfLib.iText7.WorkerBase-1.html#CX_PdfLib_iText7_WorkerBase_1__ctor_CX_LoggingLib_ILogbook_
+  commentId: M:CX.PdfLib.iText7.WorkerBase`1.#ctor(CX.LoggingLib.ILogbook)
+  fullName: CX.PdfLib.iText7.WorkerBase<TDerived>.WorkerBase(CX.LoggingLib.ILogbook)
+  fullName.vb: CX.PdfLib.iText7.WorkerBase(Of TDerived).WorkerBase(CX.LoggingLib.ILogbook)
+  nameWithType: WorkerBase<TDerived>.WorkerBase(ILogbook)
+  nameWithType.vb: WorkerBase(Of TDerived).WorkerBase(ILogbook)
+- uid: CX.PdfLib.iText7.WorkerBase`1.#ctor*
+  name: WorkerBase
+  href: api/CX.PdfLib.iText7.WorkerBase-1.html#CX_PdfLib_iText7_WorkerBase_1__ctor_
+  commentId: Overload:CX.PdfLib.iText7.WorkerBase`1.#ctor
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.WorkerBase<TDerived>.WorkerBase
+  fullName.vb: CX.PdfLib.iText7.WorkerBase(Of TDerived).WorkerBase
+  nameWithType: WorkerBase<TDerived>.WorkerBase
+  nameWithType.vb: WorkerBase(Of TDerived).WorkerBase
+- uid: CX.PdfLib.iText7.WorkerBase`1.CleanUp
+  name: CleanUp()
+  href: api/CX.PdfLib.iText7.WorkerBase-1.html#CX_PdfLib_iText7_WorkerBase_1_CleanUp
+  commentId: M:CX.PdfLib.iText7.WorkerBase`1.CleanUp
+  fullName: CX.PdfLib.iText7.WorkerBase<TDerived>.CleanUp()
+  fullName.vb: CX.PdfLib.iText7.WorkerBase(Of TDerived).CleanUp()
+  nameWithType: WorkerBase<TDerived>.CleanUp()
+  nameWithType.vb: WorkerBase(Of TDerived).CleanUp()
+- uid: CX.PdfLib.iText7.WorkerBase`1.CleanUp*
+  name: CleanUp
+  href: api/CX.PdfLib.iText7.WorkerBase-1.html#CX_PdfLib_iText7_WorkerBase_1_CleanUp_
+  commentId: Overload:CX.PdfLib.iText7.WorkerBase`1.CleanUp
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.WorkerBase<TDerived>.CleanUp
+  fullName.vb: CX.PdfLib.iText7.WorkerBase(Of TDerived).CleanUp
+  nameWithType: WorkerBase<TDerived>.CleanUp
+  nameWithType.vb: WorkerBase(Of TDerived).CleanUp
+- uid: CX.PdfLib.iText7.WorkerBase`1.OpenedDocuments
+  name: OpenedDocuments
+  href: api/CX.PdfLib.iText7.WorkerBase-1.html#CX_PdfLib_iText7_WorkerBase_1_OpenedDocuments
+  commentId: F:CX.PdfLib.iText7.WorkerBase`1.OpenedDocuments
+  fullName: CX.PdfLib.iText7.WorkerBase<TDerived>.OpenedDocuments
+  fullName.vb: CX.PdfLib.iText7.WorkerBase(Of TDerived).OpenedDocuments
+  nameWithType: WorkerBase<TDerived>.OpenedDocuments
+  nameWithType.vb: WorkerBase(Of TDerived).OpenedDocuments
+- uid: CX.PdfLib.iText7.WorkerBase`1.PrepareCleanUp
+  name: PrepareCleanUp()
+  href: api/CX.PdfLib.iText7.WorkerBase-1.html#CX_PdfLib_iText7_WorkerBase_1_PrepareCleanUp
+  commentId: M:CX.PdfLib.iText7.WorkerBase`1.PrepareCleanUp
+  fullName: CX.PdfLib.iText7.WorkerBase<TDerived>.PrepareCleanUp()
+  fullName.vb: CX.PdfLib.iText7.WorkerBase(Of TDerived).PrepareCleanUp()
+  nameWithType: WorkerBase<TDerived>.PrepareCleanUp()
+  nameWithType.vb: WorkerBase(Of TDerived).PrepareCleanUp()
+- uid: CX.PdfLib.iText7.WorkerBase`1.PrepareCleanUp*
+  name: PrepareCleanUp
+  href: api/CX.PdfLib.iText7.WorkerBase-1.html#CX_PdfLib_iText7_WorkerBase_1_PrepareCleanUp_
+  commentId: Overload:CX.PdfLib.iText7.WorkerBase`1.PrepareCleanUp
+  isSpec: "True"
+  fullName: CX.PdfLib.iText7.WorkerBase<TDerived>.PrepareCleanUp
+  fullName.vb: CX.PdfLib.iText7.WorkerBase(Of TDerived).PrepareCleanUp
+  nameWithType: WorkerBase<TDerived>.PrepareCleanUp
+  nameWithType.vb: WorkerBase(Of TDerived).PrepareCleanUp
+- uid: CX.PdfLib.Services
+  name: CX.PdfLib.Services
+  href: api/CX.PdfLib.Services.html
+  commentId: N:CX.PdfLib.Services
+  fullName: CX.PdfLib.Services
+  nameWithType: CX.PdfLib.Services
+- uid: CX.PdfLib.Services.Data
+  name: CX.PdfLib.Services.Data
+  href: api/CX.PdfLib.Services.Data.html
+  commentId: N:CX.PdfLib.Services.Data
+  fullName: CX.PdfLib.Services.Data
+  nameWithType: CX.PdfLib.Services.Data
+- uid: CX.PdfLib.Services.Data.IBookmark
+  name: IBookmark
+  href: api/CX.PdfLib.Services.Data.IBookmark.html
+  commentId: T:CX.PdfLib.Services.Data.IBookmark
+  fullName: CX.PdfLib.Services.Data.IBookmark
+  nameWithType: IBookmark
+- uid: CX.PdfLib.Services.Data.IBookmark.EndPage
+  name: EndPage
+  href: api/CX.PdfLib.Services.Data.IBookmark.html#CX_PdfLib_Services_Data_IBookmark_EndPage
+  commentId: P:CX.PdfLib.Services.Data.IBookmark.EndPage
+  fullName: CX.PdfLib.Services.Data.IBookmark.EndPage
+  nameWithType: IBookmark.EndPage
+- uid: CX.PdfLib.Services.Data.IBookmark.EndPage*
+  name: EndPage
+  href: api/CX.PdfLib.Services.Data.IBookmark.html#CX_PdfLib_Services_Data_IBookmark_EndPage_
+  commentId: Overload:CX.PdfLib.Services.Data.IBookmark.EndPage
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.Data.IBookmark.EndPage
+  nameWithType: IBookmark.EndPage
+- uid: CX.PdfLib.Services.Data.IBookmark.Pages
+  name: Pages
+  href: api/CX.PdfLib.Services.Data.IBookmark.html#CX_PdfLib_Services_Data_IBookmark_Pages
+  commentId: P:CX.PdfLib.Services.Data.IBookmark.Pages
+  fullName: CX.PdfLib.Services.Data.IBookmark.Pages
+  nameWithType: IBookmark.Pages
+- uid: CX.PdfLib.Services.Data.IBookmark.Pages*
+  name: Pages
+  href: api/CX.PdfLib.Services.Data.IBookmark.html#CX_PdfLib_Services_Data_IBookmark_Pages_
+  commentId: Overload:CX.PdfLib.Services.Data.IBookmark.Pages
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.Data.IBookmark.Pages
+  nameWithType: IBookmark.Pages
+- uid: CX.PdfLib.Services.Data.IBookmark.StartPage
+  name: StartPage
+  href: api/CX.PdfLib.Services.Data.IBookmark.html#CX_PdfLib_Services_Data_IBookmark_StartPage
+  commentId: P:CX.PdfLib.Services.Data.IBookmark.StartPage
+  fullName: CX.PdfLib.Services.Data.IBookmark.StartPage
+  nameWithType: IBookmark.StartPage
+- uid: CX.PdfLib.Services.Data.IBookmark.StartPage*
+  name: StartPage
+  href: api/CX.PdfLib.Services.Data.IBookmark.html#CX_PdfLib_Services_Data_IBookmark_StartPage_
+  commentId: Overload:CX.PdfLib.Services.Data.IBookmark.StartPage
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.Data.IBookmark.StartPage
+  nameWithType: IBookmark.StartPage
+- uid: CX.PdfLib.Services.Data.IBookmark.Title
+  name: Title
+  href: api/CX.PdfLib.Services.Data.IBookmark.html#CX_PdfLib_Services_Data_IBookmark_Title
+  commentId: P:CX.PdfLib.Services.Data.IBookmark.Title
+  fullName: CX.PdfLib.Services.Data.IBookmark.Title
+  nameWithType: IBookmark.Title
+- uid: CX.PdfLib.Services.Data.IBookmark.Title*
+  name: Title
+  href: api/CX.PdfLib.Services.Data.IBookmark.html#CX_PdfLib_Services_Data_IBookmark_Title_
+  commentId: Overload:CX.PdfLib.Services.Data.IBookmark.Title
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.Data.IBookmark.Title
+  nameWithType: IBookmark.Title
+- uid: CX.PdfLib.Services.Data.ILeveledBookmark
+  name: ILeveledBookmark
+  href: api/CX.PdfLib.Services.Data.ILeveledBookmark.html
+  commentId: T:CX.PdfLib.Services.Data.ILeveledBookmark
+  fullName: CX.PdfLib.Services.Data.ILeveledBookmark
+  nameWithType: ILeveledBookmark
+- uid: CX.PdfLib.Services.Data.ILeveledItem
+  name: ILeveledItem
+  href: api/CX.PdfLib.Services.Data.ILeveledItem.html
+  commentId: T:CX.PdfLib.Services.Data.ILeveledItem
+  fullName: CX.PdfLib.Services.Data.ILeveledItem
+  nameWithType: ILeveledItem
+- uid: CX.PdfLib.Services.Data.ILeveledItem.Level
+  name: Level
+  href: api/CX.PdfLib.Services.Data.ILeveledItem.html#CX_PdfLib_Services_Data_ILeveledItem_Level
+  commentId: P:CX.PdfLib.Services.Data.ILeveledItem.Level
+  fullName: CX.PdfLib.Services.Data.ILeveledItem.Level
+  nameWithType: ILeveledItem.Level
+- uid: CX.PdfLib.Services.Data.ILeveledItem.Level*
+  name: Level
+  href: api/CX.PdfLib.Services.Data.ILeveledItem.html#CX_PdfLib_Services_Data_ILeveledItem_Level_
+  commentId: Overload:CX.PdfLib.Services.Data.ILeveledItem.Level
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.Data.ILeveledItem.Level
+  nameWithType: ILeveledItem.Level
+- uid: CX.PdfLib.Services.Data.IMergeInput
+  name: IMergeInput
+  href: api/CX.PdfLib.Services.Data.IMergeInput.html
+  commentId: T:CX.PdfLib.Services.Data.IMergeInput
+  fullName: CX.PdfLib.Services.Data.IMergeInput
+  nameWithType: IMergeInput
+- uid: CX.PdfLib.Services.Data.IMergeInput.FilePath
+  name: FilePath
+  href: api/CX.PdfLib.Services.Data.IMergeInput.html#CX_PdfLib_Services_Data_IMergeInput_FilePath
+  commentId: P:CX.PdfLib.Services.Data.IMergeInput.FilePath
+  fullName: CX.PdfLib.Services.Data.IMergeInput.FilePath
+  nameWithType: IMergeInput.FilePath
+- uid: CX.PdfLib.Services.Data.IMergeInput.FilePath*
+  name: FilePath
+  href: api/CX.PdfLib.Services.Data.IMergeInput.html#CX_PdfLib_Services_Data_IMergeInput_FilePath_
+  commentId: Overload:CX.PdfLib.Services.Data.IMergeInput.FilePath
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.Data.IMergeInput.FilePath
+  nameWithType: IMergeInput.FilePath
+- uid: CX.PdfLib.Services.Data.IMergeInput.Title
+  name: Title
+  href: api/CX.PdfLib.Services.Data.IMergeInput.html#CX_PdfLib_Services_Data_IMergeInput_Title
+  commentId: P:CX.PdfLib.Services.Data.IMergeInput.Title
+  fullName: CX.PdfLib.Services.Data.IMergeInput.Title
+  nameWithType: IMergeInput.Title
+- uid: CX.PdfLib.Services.Data.IMergeInput.Title*
+  name: Title
+  href: api/CX.PdfLib.Services.Data.IMergeInput.html#CX_PdfLib_Services_Data_IMergeInput_Title_
+  commentId: Overload:CX.PdfLib.Services.Data.IMergeInput.Title
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.Data.IMergeInput.Title
+  nameWithType: IMergeInput.Title
+- uid: CX.PdfLib.Services.IAnnotationService
+  name: IAnnotationService
+  href: api/CX.PdfLib.Services.IAnnotationService.html
+  commentId: T:CX.PdfLib.Services.IAnnotationService
+  fullName: CX.PdfLib.Services.IAnnotationService
+  nameWithType: IAnnotationService
+- uid: CX.PdfLib.Services.IAnnotationService.FlattenRedactions(System.String)
+  name: FlattenRedactions(String)
+  href: api/CX.PdfLib.Services.IAnnotationService.html#CX_PdfLib_Services_IAnnotationService_FlattenRedactions_System_String_
+  commentId: M:CX.PdfLib.Services.IAnnotationService.FlattenRedactions(System.String)
+  fullName: CX.PdfLib.Services.IAnnotationService.FlattenRedactions(System.String)
+  nameWithType: IAnnotationService.FlattenRedactions(String)
+- uid: CX.PdfLib.Services.IAnnotationService.FlattenRedactions(System.String,System.Threading.CancellationToken)
+  name: FlattenRedactions(String, CancellationToken)
+  href: api/CX.PdfLib.Services.IAnnotationService.html#CX_PdfLib_Services_IAnnotationService_FlattenRedactions_System_String_System_Threading_CancellationToken_
+  commentId: M:CX.PdfLib.Services.IAnnotationService.FlattenRedactions(System.String,System.Threading.CancellationToken)
+  fullName: CX.PdfLib.Services.IAnnotationService.FlattenRedactions(System.String, System.Threading.CancellationToken)
+  nameWithType: IAnnotationService.FlattenRedactions(String, CancellationToken)
+- uid: CX.PdfLib.Services.IAnnotationService.FlattenRedactions*
+  name: FlattenRedactions
+  href: api/CX.PdfLib.Services.IAnnotationService.html#CX_PdfLib_Services_IAnnotationService_FlattenRedactions_
+  commentId: Overload:CX.PdfLib.Services.IAnnotationService.FlattenRedactions
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.IAnnotationService.FlattenRedactions
+  nameWithType: IAnnotationService.FlattenRedactions
+- uid: CX.PdfLib.Services.IAnnotationService.GetTitles(System.String)
+  name: GetTitles(String)
+  href: api/CX.PdfLib.Services.IAnnotationService.html#CX_PdfLib_Services_IAnnotationService_GetTitles_System_String_
+  commentId: M:CX.PdfLib.Services.IAnnotationService.GetTitles(System.String)
+  fullName: CX.PdfLib.Services.IAnnotationService.GetTitles(System.String)
+  nameWithType: IAnnotationService.GetTitles(String)
+- uid: CX.PdfLib.Services.IAnnotationService.GetTitles(System.String,System.Threading.CancellationToken)
+  name: GetTitles(String, CancellationToken)
+  href: api/CX.PdfLib.Services.IAnnotationService.html#CX_PdfLib_Services_IAnnotationService_GetTitles_System_String_System_Threading_CancellationToken_
+  commentId: M:CX.PdfLib.Services.IAnnotationService.GetTitles(System.String,System.Threading.CancellationToken)
+  fullName: CX.PdfLib.Services.IAnnotationService.GetTitles(System.String, System.Threading.CancellationToken)
+  nameWithType: IAnnotationService.GetTitles(String, CancellationToken)
+- uid: CX.PdfLib.Services.IAnnotationService.GetTitles*
+  name: GetTitles
+  href: api/CX.PdfLib.Services.IAnnotationService.html#CX_PdfLib_Services_IAnnotationService_GetTitles_
+  commentId: Overload:CX.PdfLib.Services.IAnnotationService.GetTitles
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.IAnnotationService.GetTitles
+  nameWithType: IAnnotationService.GetTitles
+- uid: CX.PdfLib.Services.IAnnotationService.RemoveAll(System.String)
+  name: RemoveAll(String)
+  href: api/CX.PdfLib.Services.IAnnotationService.html#CX_PdfLib_Services_IAnnotationService_RemoveAll_System_String_
+  commentId: M:CX.PdfLib.Services.IAnnotationService.RemoveAll(System.String)
+  fullName: CX.PdfLib.Services.IAnnotationService.RemoveAll(System.String)
+  nameWithType: IAnnotationService.RemoveAll(String)
+- uid: CX.PdfLib.Services.IAnnotationService.RemoveAll(System.String,System.Threading.CancellationToken)
+  name: RemoveAll(String, CancellationToken)
+  href: api/CX.PdfLib.Services.IAnnotationService.html#CX_PdfLib_Services_IAnnotationService_RemoveAll_System_String_System_Threading_CancellationToken_
+  commentId: M:CX.PdfLib.Services.IAnnotationService.RemoveAll(System.String,System.Threading.CancellationToken)
+  fullName: CX.PdfLib.Services.IAnnotationService.RemoveAll(System.String, System.Threading.CancellationToken)
+  nameWithType: IAnnotationService.RemoveAll(String, CancellationToken)
+- uid: CX.PdfLib.Services.IAnnotationService.RemoveAll*
+  name: RemoveAll
+  href: api/CX.PdfLib.Services.IAnnotationService.html#CX_PdfLib_Services_IAnnotationService_RemoveAll_
+  commentId: Overload:CX.PdfLib.Services.IAnnotationService.RemoveAll
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.IAnnotationService.RemoveAll
+  nameWithType: IAnnotationService.RemoveAll
+- uid: CX.PdfLib.Services.IAnnotationService.RemoveByTitle(System.Collections.Generic.IEnumerable{System.String},System.String)
+  name: RemoveByTitle(IEnumerable<String>, String)
+  href: api/CX.PdfLib.Services.IAnnotationService.html#CX_PdfLib_Services_IAnnotationService_RemoveByTitle_System_Collections_Generic_IEnumerable_System_String__System_String_
+  commentId: M:CX.PdfLib.Services.IAnnotationService.RemoveByTitle(System.Collections.Generic.IEnumerable{System.String},System.String)
+  name.vb: RemoveByTitle(IEnumerable(Of String), String)
+  fullName: CX.PdfLib.Services.IAnnotationService.RemoveByTitle(System.Collections.Generic.IEnumerable<System.String>, System.String)
+  fullName.vb: CX.PdfLib.Services.IAnnotationService.RemoveByTitle(System.Collections.Generic.IEnumerable(Of System.String), System.String)
+  nameWithType: IAnnotationService.RemoveByTitle(IEnumerable<String>, String)
+  nameWithType.vb: IAnnotationService.RemoveByTitle(IEnumerable(Of String), String)
+- uid: CX.PdfLib.Services.IAnnotationService.RemoveByTitle(System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)
+  name: RemoveByTitle(IEnumerable<String>, String, CancellationToken)
+  href: api/CX.PdfLib.Services.IAnnotationService.html#CX_PdfLib_Services_IAnnotationService_RemoveByTitle_System_Collections_Generic_IEnumerable_System_String__System_String_System_Threading_CancellationToken_
+  commentId: M:CX.PdfLib.Services.IAnnotationService.RemoveByTitle(System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)
+  name.vb: RemoveByTitle(IEnumerable(Of String), String, CancellationToken)
+  fullName: CX.PdfLib.Services.IAnnotationService.RemoveByTitle(System.Collections.Generic.IEnumerable<System.String>, System.String, System.Threading.CancellationToken)
+  fullName.vb: CX.PdfLib.Services.IAnnotationService.RemoveByTitle(System.Collections.Generic.IEnumerable(Of System.String), System.String, System.Threading.CancellationToken)
+  nameWithType: IAnnotationService.RemoveByTitle(IEnumerable<String>, String, CancellationToken)
+  nameWithType.vb: IAnnotationService.RemoveByTitle(IEnumerable(Of String), String, CancellationToken)
+- uid: CX.PdfLib.Services.IAnnotationService.RemoveByTitle*
+  name: RemoveByTitle
+  href: api/CX.PdfLib.Services.IAnnotationService.html#CX_PdfLib_Services_IAnnotationService_RemoveByTitle_
+  commentId: Overload:CX.PdfLib.Services.IAnnotationService.RemoveByTitle
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.IAnnotationService.RemoveByTitle
+  nameWithType: IAnnotationService.RemoveByTitle
+- uid: CX.PdfLib.Services.IBookmarkService
+  name: IBookmarkService
+  href: api/CX.PdfLib.Services.IBookmarkService.html
+  commentId: T:CX.PdfLib.Services.IBookmarkService
+  fullName: CX.PdfLib.Services.IBookmarkService
+  nameWithType: IBookmarkService
+- uid: CX.PdfLib.Services.IBookmarkService.AddBookmarks(System.Collections.Generic.IList{CX.PdfLib.Services.Data.ILeveledBookmark},System.String)
+  name: AddBookmarks(IList<ILeveledBookmark>, String)
+  href: api/CX.PdfLib.Services.IBookmarkService.html#CX_PdfLib_Services_IBookmarkService_AddBookmarks_System_Collections_Generic_IList_CX_PdfLib_Services_Data_ILeveledBookmark__System_String_
+  commentId: M:CX.PdfLib.Services.IBookmarkService.AddBookmarks(System.Collections.Generic.IList{CX.PdfLib.Services.Data.ILeveledBookmark},System.String)
+  name.vb: AddBookmarks(IList(Of ILeveledBookmark), String)
+  fullName: CX.PdfLib.Services.IBookmarkService.AddBookmarks(System.Collections.Generic.IList<CX.PdfLib.Services.Data.ILeveledBookmark>, System.String)
+  fullName.vb: CX.PdfLib.Services.IBookmarkService.AddBookmarks(System.Collections.Generic.IList(Of CX.PdfLib.Services.Data.ILeveledBookmark), System.String)
+  nameWithType: IBookmarkService.AddBookmarks(IList<ILeveledBookmark>, String)
+  nameWithType.vb: IBookmarkService.AddBookmarks(IList(Of ILeveledBookmark), String)
+- uid: CX.PdfLib.Services.IBookmarkService.AddBookmarks*
+  name: AddBookmarks
+  href: api/CX.PdfLib.Services.IBookmarkService.html#CX_PdfLib_Services_IBookmarkService_AddBookmarks_
+  commentId: Overload:CX.PdfLib.Services.IBookmarkService.AddBookmarks
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.IBookmarkService.AddBookmarks
+  nameWithType: IBookmarkService.AddBookmarks
+- uid: CX.PdfLib.Services.IBookmarkService.FindBookmarks(System.String)
+  name: FindBookmarks(String)
+  href: api/CX.PdfLib.Services.IBookmarkService.html#CX_PdfLib_Services_IBookmarkService_FindBookmarks_System_String_
+  commentId: M:CX.PdfLib.Services.IBookmarkService.FindBookmarks(System.String)
+  fullName: CX.PdfLib.Services.IBookmarkService.FindBookmarks(System.String)
+  nameWithType: IBookmarkService.FindBookmarks(String)
+- uid: CX.PdfLib.Services.IBookmarkService.FindBookmarks*
+  name: FindBookmarks
+  href: api/CX.PdfLib.Services.IBookmarkService.html#CX_PdfLib_Services_IBookmarkService_FindBookmarks_
+  commentId: Overload:CX.PdfLib.Services.IBookmarkService.FindBookmarks
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.IBookmarkService.FindBookmarks
+  nameWithType: IBookmarkService.FindBookmarks
+- uid: CX.PdfLib.Services.IExtractionService
+  name: IExtractionService
+  href: api/CX.PdfLib.Services.IExtractionService.html
+  commentId: T:CX.PdfLib.Services.IExtractionService
+  fullName: CX.PdfLib.Services.IExtractionService
+  nameWithType: IExtractionService
+- uid: CX.PdfLib.Services.IExtractionService.Extract(CX.PdfLib.Common.ExtractionOptions)
+  name: Extract(ExtractionOptions)
+  href: api/CX.PdfLib.Services.IExtractionService.html#CX_PdfLib_Services_IExtractionService_Extract_CX_PdfLib_Common_ExtractionOptions_
+  commentId: M:CX.PdfLib.Services.IExtractionService.Extract(CX.PdfLib.Common.ExtractionOptions)
+  fullName: CX.PdfLib.Services.IExtractionService.Extract(CX.PdfLib.Common.ExtractionOptions)
+  nameWithType: IExtractionService.Extract(ExtractionOptions)
+- uid: CX.PdfLib.Services.IExtractionService.Extract*
+  name: Extract
+  href: api/CX.PdfLib.Services.IExtractionService.html#CX_PdfLib_Services_IExtractionService_Extract_
+  commentId: Overload:CX.PdfLib.Services.IExtractionService.Extract
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.IExtractionService.Extract
+  nameWithType: IExtractionService.Extract
+- uid: CX.PdfLib.Services.IMergingService
+  name: IMergingService
+  href: api/CX.PdfLib.Services.IMergingService.html
+  commentId: T:CX.PdfLib.Services.IMergingService
+  fullName: CX.PdfLib.Services.IMergingService
+  nameWithType: IMergingService
+- uid: CX.PdfLib.Services.IMergingService.Merge(System.Collections.Generic.IList{System.String},System.String)
+  name: Merge(IList<String>, String)
+  href: api/CX.PdfLib.Services.IMergingService.html#CX_PdfLib_Services_IMergingService_Merge_System_Collections_Generic_IList_System_String__System_String_
+  commentId: M:CX.PdfLib.Services.IMergingService.Merge(System.Collections.Generic.IList{System.String},System.String)
+  name.vb: Merge(IList(Of String), String)
+  fullName: CX.PdfLib.Services.IMergingService.Merge(System.Collections.Generic.IList<System.String>, System.String)
+  fullName.vb: CX.PdfLib.Services.IMergingService.Merge(System.Collections.Generic.IList(Of System.String), System.String)
+  nameWithType: IMergingService.Merge(IList<String>, String)
+  nameWithType.vb: IMergingService.Merge(IList(Of String), String)
+- uid: CX.PdfLib.Services.IMergingService.Merge(System.Collections.Generic.IList{System.String},System.String,System.Threading.CancellationToken)
+  name: Merge(IList<String>, String, CancellationToken)
+  href: api/CX.PdfLib.Services.IMergingService.html#CX_PdfLib_Services_IMergingService_Merge_System_Collections_Generic_IList_System_String__System_String_System_Threading_CancellationToken_
+  commentId: M:CX.PdfLib.Services.IMergingService.Merge(System.Collections.Generic.IList{System.String},System.String,System.Threading.CancellationToken)
+  name.vb: Merge(IList(Of String), String, CancellationToken)
+  fullName: CX.PdfLib.Services.IMergingService.Merge(System.Collections.Generic.IList<System.String>, System.String, System.Threading.CancellationToken)
+  fullName.vb: CX.PdfLib.Services.IMergingService.Merge(System.Collections.Generic.IList(Of System.String), System.String, System.Threading.CancellationToken)
+  nameWithType: IMergingService.Merge(IList<String>, String, CancellationToken)
+  nameWithType.vb: IMergingService.Merge(IList(Of String), String, CancellationToken)
+- uid: CX.PdfLib.Services.IMergingService.Merge*
+  name: Merge
+  href: api/CX.PdfLib.Services.IMergingService.html#CX_PdfLib_Services_IMergingService_Merge_
+  commentId: Overload:CX.PdfLib.Services.IMergingService.Merge
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.IMergingService.Merge
+  nameWithType: IMergingService.Merge
+- uid: CX.PdfLib.Services.IMergingService.MergeWithOptions(CX.PdfLib.Common.MergingOptions)
+  name: MergeWithOptions(MergingOptions)
+  href: api/CX.PdfLib.Services.IMergingService.html#CX_PdfLib_Services_IMergingService_MergeWithOptions_CX_PdfLib_Common_MergingOptions_
+  commentId: M:CX.PdfLib.Services.IMergingService.MergeWithOptions(CX.PdfLib.Common.MergingOptions)
+  fullName: CX.PdfLib.Services.IMergingService.MergeWithOptions(CX.PdfLib.Common.MergingOptions)
+  nameWithType: IMergingService.MergeWithOptions(MergingOptions)
+- uid: CX.PdfLib.Services.IMergingService.MergeWithOptions*
+  name: MergeWithOptions
+  href: api/CX.PdfLib.Services.IMergingService.html#CX_PdfLib_Services_IMergingService_MergeWithOptions_
+  commentId: Overload:CX.PdfLib.Services.IMergingService.MergeWithOptions
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.IMergingService.MergeWithOptions
+  nameWithType: IMergingService.MergeWithOptions
+- uid: CX.PdfLib.Services.IPdfAConvertService
+  name: IPdfAConvertService
+  href: api/CX.PdfLib.Services.IPdfAConvertService.html
+  commentId: T:CX.PdfLib.Services.IPdfAConvertService
+  fullName: CX.PdfLib.Services.IPdfAConvertService
+  nameWithType: IPdfAConvertService
+- uid: CX.PdfLib.Services.IPdfAConvertService.Convert(System.IO.FileSystemInfo,System.IO.DirectoryInfo,System.Threading.CancellationToken)
+  name: Convert(FileSystemInfo, DirectoryInfo, CancellationToken)
+  href: api/CX.PdfLib.Services.IPdfAConvertService.html#CX_PdfLib_Services_IPdfAConvertService_Convert_System_IO_FileSystemInfo_System_IO_DirectoryInfo_System_Threading_CancellationToken_
+  commentId: M:CX.PdfLib.Services.IPdfAConvertService.Convert(System.IO.FileSystemInfo,System.IO.DirectoryInfo,System.Threading.CancellationToken)
+  fullName: CX.PdfLib.Services.IPdfAConvertService.Convert(System.IO.FileSystemInfo, System.IO.DirectoryInfo, System.Threading.CancellationToken)
+  nameWithType: IPdfAConvertService.Convert(FileSystemInfo, DirectoryInfo, CancellationToken)
+- uid: CX.PdfLib.Services.IPdfAConvertService.Convert*
+  name: Convert
+  href: api/CX.PdfLib.Services.IPdfAConvertService.html#CX_PdfLib_Services_IPdfAConvertService_Convert_
+  commentId: Overload:CX.PdfLib.Services.IPdfAConvertService.Convert
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.IPdfAConvertService.Convert
+  nameWithType: IPdfAConvertService.Convert
+- uid: CX.PdfLib.Services.ISigningService
+  name: ISigningService
+  href: api/CX.PdfLib.Services.ISigningService.html
+  commentId: T:CX.PdfLib.Services.ISigningService
+  fullName: CX.PdfLib.Services.ISigningService
+  nameWithType: ISigningService
+- uid: CX.PdfLib.Services.ISigningService.RemoveSignature(System.IO.FileInfo,System.IO.FileInfo)
+  name: RemoveSignature(FileInfo, FileInfo)
+  href: api/CX.PdfLib.Services.ISigningService.html#CX_PdfLib_Services_ISigningService_RemoveSignature_System_IO_FileInfo_System_IO_FileInfo_
+  commentId: M:CX.PdfLib.Services.ISigningService.RemoveSignature(System.IO.FileInfo,System.IO.FileInfo)
+  fullName: CX.PdfLib.Services.ISigningService.RemoveSignature(System.IO.FileInfo, System.IO.FileInfo)
+  nameWithType: ISigningService.RemoveSignature(FileInfo, FileInfo)
+- uid: CX.PdfLib.Services.ISigningService.RemoveSignature(System.IO.FileInfo,System.IO.FileInfo,System.Threading.CancellationToken)
+  name: RemoveSignature(FileInfo, FileInfo, CancellationToken)
+  href: api/CX.PdfLib.Services.ISigningService.html#CX_PdfLib_Services_ISigningService_RemoveSignature_System_IO_FileInfo_System_IO_FileInfo_System_Threading_CancellationToken_
+  commentId: M:CX.PdfLib.Services.ISigningService.RemoveSignature(System.IO.FileInfo,System.IO.FileInfo,System.Threading.CancellationToken)
+  fullName: CX.PdfLib.Services.ISigningService.RemoveSignature(System.IO.FileInfo, System.IO.FileInfo, System.Threading.CancellationToken)
+  nameWithType: ISigningService.RemoveSignature(FileInfo, FileInfo, CancellationToken)
+- uid: CX.PdfLib.Services.ISigningService.RemoveSignature*
+  name: RemoveSignature
+  href: api/CX.PdfLib.Services.ISigningService.html#CX_PdfLib_Services_ISigningService_RemoveSignature_
+  commentId: Overload:CX.PdfLib.Services.ISigningService.RemoveSignature
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.ISigningService.RemoveSignature
+  nameWithType: ISigningService.RemoveSignature
+- uid: CX.PdfLib.Services.IWordConvertService
+  name: IWordConvertService
+  href: api/CX.PdfLib.Services.IWordConvertService.html
+  commentId: T:CX.PdfLib.Services.IWordConvertService
+  fullName: CX.PdfLib.Services.IWordConvertService
+  nameWithType: IWordConvertService
+- uid: CX.PdfLib.Services.IWordConvertService.Convert(System.Collections.Generic.IList{System.String},System.String)
+  name: Convert(IList<String>, String)
+  href: api/CX.PdfLib.Services.IWordConvertService.html#CX_PdfLib_Services_IWordConvertService_Convert_System_Collections_Generic_IList_System_String__System_String_
+  commentId: M:CX.PdfLib.Services.IWordConvertService.Convert(System.Collections.Generic.IList{System.String},System.String)
+  name.vb: Convert(IList(Of String), String)
+  fullName: CX.PdfLib.Services.IWordConvertService.Convert(System.Collections.Generic.IList<System.String>, System.String)
+  fullName.vb: CX.PdfLib.Services.IWordConvertService.Convert(System.Collections.Generic.IList(Of System.String), System.String)
+  nameWithType: IWordConvertService.Convert(IList<String>, String)
+  nameWithType.vb: IWordConvertService.Convert(IList(Of String), String)
+- uid: CX.PdfLib.Services.IWordConvertService.Convert(System.Collections.Generic.IList{System.String},System.String,System.Threading.CancellationToken)
+  name: Convert(IList<String>, String, CancellationToken)
+  href: api/CX.PdfLib.Services.IWordConvertService.html#CX_PdfLib_Services_IWordConvertService_Convert_System_Collections_Generic_IList_System_String__System_String_System_Threading_CancellationToken_
+  commentId: M:CX.PdfLib.Services.IWordConvertService.Convert(System.Collections.Generic.IList{System.String},System.String,System.Threading.CancellationToken)
+  name.vb: Convert(IList(Of String), String, CancellationToken)
+  fullName: CX.PdfLib.Services.IWordConvertService.Convert(System.Collections.Generic.IList<System.String>, System.String, System.Threading.CancellationToken)
+  fullName.vb: CX.PdfLib.Services.IWordConvertService.Convert(System.Collections.Generic.IList(Of System.String), System.String, System.Threading.CancellationToken)
+  nameWithType: IWordConvertService.Convert(IList<String>, String, CancellationToken)
+  nameWithType.vb: IWordConvertService.Convert(IList(Of String), String, CancellationToken)
+- uid: CX.PdfLib.Services.IWordConvertService.Convert(System.String,System.String)
+  name: Convert(String, String)
+  href: api/CX.PdfLib.Services.IWordConvertService.html#CX_PdfLib_Services_IWordConvertService_Convert_System_String_System_String_
+  commentId: M:CX.PdfLib.Services.IWordConvertService.Convert(System.String,System.String)
+  fullName: CX.PdfLib.Services.IWordConvertService.Convert(System.String, System.String)
+  nameWithType: IWordConvertService.Convert(String, String)
+- uid: CX.PdfLib.Services.IWordConvertService.Convert(System.String,System.String,System.Threading.CancellationToken)
+  name: Convert(String, String, CancellationToken)
+  href: api/CX.PdfLib.Services.IWordConvertService.html#CX_PdfLib_Services_IWordConvertService_Convert_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:CX.PdfLib.Services.IWordConvertService.Convert(System.String,System.String,System.Threading.CancellationToken)
+  fullName: CX.PdfLib.Services.IWordConvertService.Convert(System.String, System.String, System.Threading.CancellationToken)
+  nameWithType: IWordConvertService.Convert(String, String, CancellationToken)
+- uid: CX.PdfLib.Services.IWordConvertService.Convert*
+  name: Convert
+  href: api/CX.PdfLib.Services.IWordConvertService.html#CX_PdfLib_Services_IWordConvertService_Convert_
+  commentId: Overload:CX.PdfLib.Services.IWordConvertService.Convert
+  isSpec: "True"
+  fullName: CX.PdfLib.Services.IWordConvertService.Convert
+  nameWithType: IWordConvertService.Convert
+- uid: CX.TaskManagerLib
+  name: CX.TaskManagerLib
+  href: api/CX.TaskManagerLib.html
+  commentId: N:CX.TaskManagerLib
+  fullName: CX.TaskManagerLib
+  nameWithType: CX.TaskManagerLib
+- uid: CX.TaskManagerLib.ITaskConnection
+  name: ITaskConnection
+  href: api/CX.TaskManagerLib.ITaskConnection.html
+  commentId: T:CX.TaskManagerLib.ITaskConnection
+  fullName: CX.TaskManagerLib.ITaskConnection
+  nameWithType: ITaskConnection
+- uid: CX.TaskManagerLib.ITaskConnection.TaskDataStorageLocation
+  name: TaskDataStorageLocation
+  href: api/CX.TaskManagerLib.ITaskConnection.html#CX_TaskManagerLib_ITaskConnection_TaskDataStorageLocation
+  commentId: P:CX.TaskManagerLib.ITaskConnection.TaskDataStorageLocation
+  fullName: CX.TaskManagerLib.ITaskConnection.TaskDataStorageLocation
+  nameWithType: ITaskConnection.TaskDataStorageLocation
+- uid: CX.TaskManagerLib.ITaskConnection.TaskDataStorageLocation*
+  name: TaskDataStorageLocation
+  href: api/CX.TaskManagerLib.ITaskConnection.html#CX_TaskManagerLib_ITaskConnection_TaskDataStorageLocation_
+  commentId: Overload:CX.TaskManagerLib.ITaskConnection.TaskDataStorageLocation
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.ITaskConnection.TaskDataStorageLocation
+  nameWithType: ITaskConnection.TaskDataStorageLocation
+- uid: CX.TaskManagerLib.ITaskManager
+  name: ITaskManager
+  href: api/CX.TaskManagerLib.ITaskManager.html
+  commentId: T:CX.TaskManagerLib.ITaskManager
+  fullName: CX.TaskManagerLib.ITaskManager
+  nameWithType: ITaskManager
+- uid: CX.TaskManagerLib.ITaskManager.AddOrModifySource(CX.TaskManagerLib.TaskPollingSource)
+  name: AddOrModifySource(TaskPollingSource)
+  href: api/CX.TaskManagerLib.ITaskManager.html#CX_TaskManagerLib_ITaskManager_AddOrModifySource_CX_TaskManagerLib_TaskPollingSource_
+  commentId: M:CX.TaskManagerLib.ITaskManager.AddOrModifySource(CX.TaskManagerLib.TaskPollingSource)
+  fullName: CX.TaskManagerLib.ITaskManager.AddOrModifySource(CX.TaskManagerLib.TaskPollingSource)
+  nameWithType: ITaskManager.AddOrModifySource(TaskPollingSource)
+- uid: CX.TaskManagerLib.ITaskManager.AddOrModifySource*
+  name: AddOrModifySource
+  href: api/CX.TaskManagerLib.ITaskManager.html#CX_TaskManagerLib_ITaskManager_AddOrModifySource_
+  commentId: Overload:CX.TaskManagerLib.ITaskManager.AddOrModifySource
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.ITaskManager.AddOrModifySource
+  nameWithType: ITaskManager.AddOrModifySource
+- uid: CX.TaskManagerLib.ITaskManager.AddOrModifyTaskItem(CX.TaskManagerLib.TaskItem)
+  name: AddOrModifyTaskItem(TaskItem)
+  href: api/CX.TaskManagerLib.ITaskManager.html#CX_TaskManagerLib_ITaskManager_AddOrModifyTaskItem_CX_TaskManagerLib_TaskItem_
+  commentId: M:CX.TaskManagerLib.ITaskManager.AddOrModifyTaskItem(CX.TaskManagerLib.TaskItem)
+  fullName: CX.TaskManagerLib.ITaskManager.AddOrModifyTaskItem(CX.TaskManagerLib.TaskItem)
+  nameWithType: ITaskManager.AddOrModifyTaskItem(TaskItem)
+- uid: CX.TaskManagerLib.ITaskManager.AddOrModifyTaskItem*
+  name: AddOrModifyTaskItem
+  href: api/CX.TaskManagerLib.ITaskManager.html#CX_TaskManagerLib_ITaskManager_AddOrModifyTaskItem_
+  commentId: Overload:CX.TaskManagerLib.ITaskManager.AddOrModifyTaskItem
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.ITaskManager.AddOrModifyTaskItem
+  nameWithType: ITaskManager.AddOrModifyTaskItem
+- uid: CX.TaskManagerLib.ITaskManager.GetAllTaskItems
+  name: GetAllTaskItems()
+  href: api/CX.TaskManagerLib.ITaskManager.html#CX_TaskManagerLib_ITaskManager_GetAllTaskItems
+  commentId: M:CX.TaskManagerLib.ITaskManager.GetAllTaskItems
+  fullName: CX.TaskManagerLib.ITaskManager.GetAllTaskItems()
+  nameWithType: ITaskManager.GetAllTaskItems()
+- uid: CX.TaskManagerLib.ITaskManager.GetAllTaskItems*
+  name: GetAllTaskItems
+  href: api/CX.TaskManagerLib.ITaskManager.html#CX_TaskManagerLib_ITaskManager_GetAllTaskItems_
+  commentId: Overload:CX.TaskManagerLib.ITaskManager.GetAllTaskItems
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.ITaskManager.GetAllTaskItems
+  nameWithType: ITaskManager.GetAllTaskItems
+- uid: CX.TaskManagerLib.ITaskManager.Poll
+  name: Poll()
+  href: api/CX.TaskManagerLib.ITaskManager.html#CX_TaskManagerLib_ITaskManager_Poll
+  commentId: M:CX.TaskManagerLib.ITaskManager.Poll
+  fullName: CX.TaskManagerLib.ITaskManager.Poll()
+  nameWithType: ITaskManager.Poll()
+- uid: CX.TaskManagerLib.ITaskManager.Poll*
+  name: Poll
+  href: api/CX.TaskManagerLib.ITaskManager.html#CX_TaskManagerLib_ITaskManager_Poll_
+  commentId: Overload:CX.TaskManagerLib.ITaskManager.Poll
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.ITaskManager.Poll
+  nameWithType: ITaskManager.Poll
+- uid: CX.TaskManagerLib.ITaskManager.PollingEvent
+  name: PollingEvent
+  href: api/CX.TaskManagerLib.ITaskManager.html#CX_TaskManagerLib_ITaskManager_PollingEvent
+  commentId: E:CX.TaskManagerLib.ITaskManager.PollingEvent
+  fullName: CX.TaskManagerLib.ITaskManager.PollingEvent
+  nameWithType: ITaskManager.PollingEvent
+- uid: CX.TaskManagerLib.ITaskManager.RemoveSource(CX.TaskManagerLib.TaskPollingSource)
+  name: RemoveSource(TaskPollingSource)
+  href: api/CX.TaskManagerLib.ITaskManager.html#CX_TaskManagerLib_ITaskManager_RemoveSource_CX_TaskManagerLib_TaskPollingSource_
+  commentId: M:CX.TaskManagerLib.ITaskManager.RemoveSource(CX.TaskManagerLib.TaskPollingSource)
+  fullName: CX.TaskManagerLib.ITaskManager.RemoveSource(CX.TaskManagerLib.TaskPollingSource)
+  nameWithType: ITaskManager.RemoveSource(TaskPollingSource)
+- uid: CX.TaskManagerLib.ITaskManager.RemoveSource*
+  name: RemoveSource
+  href: api/CX.TaskManagerLib.ITaskManager.html#CX_TaskManagerLib_ITaskManager_RemoveSource_
+  commentId: Overload:CX.TaskManagerLib.ITaskManager.RemoveSource
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.ITaskManager.RemoveSource
+  nameWithType: ITaskManager.RemoveSource
+- uid: CX.TaskManagerLib.ITaskManager.RemoveTaskItem(CX.TaskManagerLib.TaskItem)
+  name: RemoveTaskItem(TaskItem)
+  href: api/CX.TaskManagerLib.ITaskManager.html#CX_TaskManagerLib_ITaskManager_RemoveTaskItem_CX_TaskManagerLib_TaskItem_
+  commentId: M:CX.TaskManagerLib.ITaskManager.RemoveTaskItem(CX.TaskManagerLib.TaskItem)
+  fullName: CX.TaskManagerLib.ITaskManager.RemoveTaskItem(CX.TaskManagerLib.TaskItem)
+  nameWithType: ITaskManager.RemoveTaskItem(TaskItem)
+- uid: CX.TaskManagerLib.ITaskManager.RemoveTaskItem*
+  name: RemoveTaskItem
+  href: api/CX.TaskManagerLib.ITaskManager.html#CX_TaskManagerLib_ITaskManager_RemoveTaskItem_
+  commentId: Overload:CX.TaskManagerLib.ITaskManager.RemoveTaskItem
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.ITaskManager.RemoveTaskItem
+  nameWithType: ITaskManager.RemoveTaskItem
+- uid: CX.TaskManagerLib.ITaskManager.StopPolling
+  name: StopPolling()
+  href: api/CX.TaskManagerLib.ITaskManager.html#CX_TaskManagerLib_ITaskManager_StopPolling
+  commentId: M:CX.TaskManagerLib.ITaskManager.StopPolling
+  fullName: CX.TaskManagerLib.ITaskManager.StopPolling()
+  nameWithType: ITaskManager.StopPolling()
+- uid: CX.TaskManagerLib.ITaskManager.StopPolling*
+  name: StopPolling
+  href: api/CX.TaskManagerLib.ITaskManager.html#CX_TaskManagerLib_ITaskManager_StopPolling_
+  commentId: Overload:CX.TaskManagerLib.ITaskManager.StopPolling
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.ITaskManager.StopPolling
+  nameWithType: ITaskManager.StopPolling
+- uid: CX.TaskManagerLib.LiteDB
+  name: CX.TaskManagerLib.LiteDB
+  href: api/CX.TaskManagerLib.LiteDB.html
+  commentId: N:CX.TaskManagerLib.LiteDB
+  fullName: CX.TaskManagerLib.LiteDB
+  nameWithType: CX.TaskManagerLib.LiteDB
+- uid: CX.TaskManagerLib.LiteDB.TaskManager
+  name: TaskManager
+  href: api/CX.TaskManagerLib.LiteDB.TaskManager.html
+  commentId: T:CX.TaskManagerLib.LiteDB.TaskManager
+  fullName: CX.TaskManagerLib.LiteDB.TaskManager
+  nameWithType: TaskManager
+- uid: CX.TaskManagerLib.LiteDB.TaskManager.#ctor(CX.TaskManagerLib.ITaskConnection,CX.LoggingLib.ILogbook)
+  name: TaskManager(ITaskConnection, ILogbook)
+  href: api/CX.TaskManagerLib.LiteDB.TaskManager.html#CX_TaskManagerLib_LiteDB_TaskManager__ctor_CX_TaskManagerLib_ITaskConnection_CX_LoggingLib_ILogbook_
+  commentId: M:CX.TaskManagerLib.LiteDB.TaskManager.#ctor(CX.TaskManagerLib.ITaskConnection,CX.LoggingLib.ILogbook)
+  fullName: CX.TaskManagerLib.LiteDB.TaskManager.TaskManager(CX.TaskManagerLib.ITaskConnection, CX.LoggingLib.ILogbook)
+  nameWithType: TaskManager.TaskManager(ITaskConnection, ILogbook)
+- uid: CX.TaskManagerLib.LiteDB.TaskManager.#ctor*
+  name: TaskManager
+  href: api/CX.TaskManagerLib.LiteDB.TaskManager.html#CX_TaskManagerLib_LiteDB_TaskManager__ctor_
+  commentId: Overload:CX.TaskManagerLib.LiteDB.TaskManager.#ctor
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.LiteDB.TaskManager.TaskManager
+  nameWithType: TaskManager.TaskManager
+- uid: CX.TaskManagerLib.LiteDB.TaskManager.AddOrModifySource(CX.TaskManagerLib.TaskPollingSource)
+  name: AddOrModifySource(TaskPollingSource)
+  href: api/CX.TaskManagerLib.LiteDB.TaskManager.html#CX_TaskManagerLib_LiteDB_TaskManager_AddOrModifySource_CX_TaskManagerLib_TaskPollingSource_
+  commentId: M:CX.TaskManagerLib.LiteDB.TaskManager.AddOrModifySource(CX.TaskManagerLib.TaskPollingSource)
+  fullName: CX.TaskManagerLib.LiteDB.TaskManager.AddOrModifySource(CX.TaskManagerLib.TaskPollingSource)
+  nameWithType: TaskManager.AddOrModifySource(TaskPollingSource)
+- uid: CX.TaskManagerLib.LiteDB.TaskManager.AddOrModifySource*
+  name: AddOrModifySource
+  href: api/CX.TaskManagerLib.LiteDB.TaskManager.html#CX_TaskManagerLib_LiteDB_TaskManager_AddOrModifySource_
+  commentId: Overload:CX.TaskManagerLib.LiteDB.TaskManager.AddOrModifySource
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.LiteDB.TaskManager.AddOrModifySource
+  nameWithType: TaskManager.AddOrModifySource
+- uid: CX.TaskManagerLib.LiteDB.TaskManager.AddOrModifyTaskItem(CX.TaskManagerLib.TaskItem)
+  name: AddOrModifyTaskItem(TaskItem)
+  href: api/CX.TaskManagerLib.LiteDB.TaskManager.html#CX_TaskManagerLib_LiteDB_TaskManager_AddOrModifyTaskItem_CX_TaskManagerLib_TaskItem_
+  commentId: M:CX.TaskManagerLib.LiteDB.TaskManager.AddOrModifyTaskItem(CX.TaskManagerLib.TaskItem)
+  fullName: CX.TaskManagerLib.LiteDB.TaskManager.AddOrModifyTaskItem(CX.TaskManagerLib.TaskItem)
+  nameWithType: TaskManager.AddOrModifyTaskItem(TaskItem)
+- uid: CX.TaskManagerLib.LiteDB.TaskManager.AddOrModifyTaskItem*
+  name: AddOrModifyTaskItem
+  href: api/CX.TaskManagerLib.LiteDB.TaskManager.html#CX_TaskManagerLib_LiteDB_TaskManager_AddOrModifyTaskItem_
+  commentId: Overload:CX.TaskManagerLib.LiteDB.TaskManager.AddOrModifyTaskItem
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.LiteDB.TaskManager.AddOrModifyTaskItem
+  nameWithType: TaskManager.AddOrModifyTaskItem
+- uid: CX.TaskManagerLib.LiteDB.TaskManager.GetAllTaskItems
+  name: GetAllTaskItems()
+  href: api/CX.TaskManagerLib.LiteDB.TaskManager.html#CX_TaskManagerLib_LiteDB_TaskManager_GetAllTaskItems
+  commentId: M:CX.TaskManagerLib.LiteDB.TaskManager.GetAllTaskItems
+  fullName: CX.TaskManagerLib.LiteDB.TaskManager.GetAllTaskItems()
+  nameWithType: TaskManager.GetAllTaskItems()
+- uid: CX.TaskManagerLib.LiteDB.TaskManager.GetAllTaskItems*
+  name: GetAllTaskItems
+  href: api/CX.TaskManagerLib.LiteDB.TaskManager.html#CX_TaskManagerLib_LiteDB_TaskManager_GetAllTaskItems_
+  commentId: Overload:CX.TaskManagerLib.LiteDB.TaskManager.GetAllTaskItems
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.LiteDB.TaskManager.GetAllTaskItems
+  nameWithType: TaskManager.GetAllTaskItems
+- uid: CX.TaskManagerLib.LiteDB.TaskManager.Poll
+  name: Poll()
+  href: api/CX.TaskManagerLib.LiteDB.TaskManager.html#CX_TaskManagerLib_LiteDB_TaskManager_Poll
+  commentId: M:CX.TaskManagerLib.LiteDB.TaskManager.Poll
+  fullName: CX.TaskManagerLib.LiteDB.TaskManager.Poll()
+  nameWithType: TaskManager.Poll()
+- uid: CX.TaskManagerLib.LiteDB.TaskManager.Poll*
+  name: Poll
+  href: api/CX.TaskManagerLib.LiteDB.TaskManager.html#CX_TaskManagerLib_LiteDB_TaskManager_Poll_
+  commentId: Overload:CX.TaskManagerLib.LiteDB.TaskManager.Poll
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.LiteDB.TaskManager.Poll
+  nameWithType: TaskManager.Poll
+- uid: CX.TaskManagerLib.LiteDB.TaskManager.PollingEvent
+  name: PollingEvent
+  href: api/CX.TaskManagerLib.LiteDB.TaskManager.html#CX_TaskManagerLib_LiteDB_TaskManager_PollingEvent
+  commentId: E:CX.TaskManagerLib.LiteDB.TaskManager.PollingEvent
+  fullName: CX.TaskManagerLib.LiteDB.TaskManager.PollingEvent
+  nameWithType: TaskManager.PollingEvent
+- uid: CX.TaskManagerLib.LiteDB.TaskManager.RemoveSource(CX.TaskManagerLib.TaskPollingSource)
+  name: RemoveSource(TaskPollingSource)
+  href: api/CX.TaskManagerLib.LiteDB.TaskManager.html#CX_TaskManagerLib_LiteDB_TaskManager_RemoveSource_CX_TaskManagerLib_TaskPollingSource_
+  commentId: M:CX.TaskManagerLib.LiteDB.TaskManager.RemoveSource(CX.TaskManagerLib.TaskPollingSource)
+  fullName: CX.TaskManagerLib.LiteDB.TaskManager.RemoveSource(CX.TaskManagerLib.TaskPollingSource)
+  nameWithType: TaskManager.RemoveSource(TaskPollingSource)
+- uid: CX.TaskManagerLib.LiteDB.TaskManager.RemoveSource*
+  name: RemoveSource
+  href: api/CX.TaskManagerLib.LiteDB.TaskManager.html#CX_TaskManagerLib_LiteDB_TaskManager_RemoveSource_
+  commentId: Overload:CX.TaskManagerLib.LiteDB.TaskManager.RemoveSource
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.LiteDB.TaskManager.RemoveSource
+  nameWithType: TaskManager.RemoveSource
+- uid: CX.TaskManagerLib.LiteDB.TaskManager.RemoveTaskItem(CX.TaskManagerLib.TaskItem)
+  name: RemoveTaskItem(TaskItem)
+  href: api/CX.TaskManagerLib.LiteDB.TaskManager.html#CX_TaskManagerLib_LiteDB_TaskManager_RemoveTaskItem_CX_TaskManagerLib_TaskItem_
+  commentId: M:CX.TaskManagerLib.LiteDB.TaskManager.RemoveTaskItem(CX.TaskManagerLib.TaskItem)
+  fullName: CX.TaskManagerLib.LiteDB.TaskManager.RemoveTaskItem(CX.TaskManagerLib.TaskItem)
+  nameWithType: TaskManager.RemoveTaskItem(TaskItem)
+- uid: CX.TaskManagerLib.LiteDB.TaskManager.RemoveTaskItem*
+  name: RemoveTaskItem
+  href: api/CX.TaskManagerLib.LiteDB.TaskManager.html#CX_TaskManagerLib_LiteDB_TaskManager_RemoveTaskItem_
+  commentId: Overload:CX.TaskManagerLib.LiteDB.TaskManager.RemoveTaskItem
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.LiteDB.TaskManager.RemoveTaskItem
+  nameWithType: TaskManager.RemoveTaskItem
+- uid: CX.TaskManagerLib.LiteDB.TaskManager.StopPolling
+  name: StopPolling()
+  href: api/CX.TaskManagerLib.LiteDB.TaskManager.html#CX_TaskManagerLib_LiteDB_TaskManager_StopPolling
+  commentId: M:CX.TaskManagerLib.LiteDB.TaskManager.StopPolling
+  fullName: CX.TaskManagerLib.LiteDB.TaskManager.StopPolling()
+  nameWithType: TaskManager.StopPolling()
+- uid: CX.TaskManagerLib.LiteDB.TaskManager.StopPolling*
+  name: StopPolling
+  href: api/CX.TaskManagerLib.LiteDB.TaskManager.html#CX_TaskManagerLib_LiteDB_TaskManager_StopPolling_
+  commentId: Overload:CX.TaskManagerLib.LiteDB.TaskManager.StopPolling
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.LiteDB.TaskManager.StopPolling
+  nameWithType: TaskManager.StopPolling
+- uid: CX.TaskManagerLib.TaskDeadlineItem
+  name: TaskDeadlineItem
+  href: api/CX.TaskManagerLib.TaskDeadlineItem.html
+  commentId: T:CX.TaskManagerLib.TaskDeadlineItem
+  fullName: CX.TaskManagerLib.TaskDeadlineItem
+  nameWithType: TaskDeadlineItem
+- uid: CX.TaskManagerLib.TaskDeadlineItem.#ctor(System.Guid,System.DateTime,System.String,System.String,System.DateTime)
+  name: TaskDeadlineItem(Guid, DateTime, String, String, DateTime)
+  href: api/CX.TaskManagerLib.TaskDeadlineItem.html#CX_TaskManagerLib_TaskDeadlineItem__ctor_System_Guid_System_DateTime_System_String_System_String_System_DateTime_
+  commentId: M:CX.TaskManagerLib.TaskDeadlineItem.#ctor(System.Guid,System.DateTime,System.String,System.String,System.DateTime)
+  fullName: CX.TaskManagerLib.TaskDeadlineItem.TaskDeadlineItem(System.Guid, System.DateTime, System.String, System.String, System.DateTime)
+  nameWithType: TaskDeadlineItem.TaskDeadlineItem(Guid, DateTime, String, String, DateTime)
+- uid: CX.TaskManagerLib.TaskDeadlineItem.#ctor*
+  name: TaskDeadlineItem
+  href: api/CX.TaskManagerLib.TaskDeadlineItem.html#CX_TaskManagerLib_TaskDeadlineItem__ctor_
+  commentId: Overload:CX.TaskManagerLib.TaskDeadlineItem.#ctor
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskDeadlineItem.TaskDeadlineItem
+  nameWithType: TaskDeadlineItem.TaskDeadlineItem
+- uid: CX.TaskManagerLib.TaskDeadlineItem.Color
+  name: Color
+  href: api/CX.TaskManagerLib.TaskDeadlineItem.html#CX_TaskManagerLib_TaskDeadlineItem_Color
+  commentId: P:CX.TaskManagerLib.TaskDeadlineItem.Color
+  fullName: CX.TaskManagerLib.TaskDeadlineItem.Color
+  nameWithType: TaskDeadlineItem.Color
+- uid: CX.TaskManagerLib.TaskDeadlineItem.Color*
+  name: Color
+  href: api/CX.TaskManagerLib.TaskDeadlineItem.html#CX_TaskManagerLib_TaskDeadlineItem_Color_
+  commentId: Overload:CX.TaskManagerLib.TaskDeadlineItem.Color
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskDeadlineItem.Color
+  nameWithType: TaskDeadlineItem.Color
+- uid: CX.TaskManagerLib.TaskDeadlineItem.CreateNew(System.String,System.String,System.DateTime)
+  name: CreateNew(String, String, DateTime)
+  href: api/CX.TaskManagerLib.TaskDeadlineItem.html#CX_TaskManagerLib_TaskDeadlineItem_CreateNew_System_String_System_String_System_DateTime_
+  commentId: M:CX.TaskManagerLib.TaskDeadlineItem.CreateNew(System.String,System.String,System.DateTime)
+  fullName: CX.TaskManagerLib.TaskDeadlineItem.CreateNew(System.String, System.String, System.DateTime)
+  nameWithType: TaskDeadlineItem.CreateNew(String, String, DateTime)
+- uid: CX.TaskManagerLib.TaskDeadlineItem.CreateNew*
+  name: CreateNew
+  href: api/CX.TaskManagerLib.TaskDeadlineItem.html#CX_TaskManagerLib_TaskDeadlineItem_CreateNew_
+  commentId: Overload:CX.TaskManagerLib.TaskDeadlineItem.CreateNew
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskDeadlineItem.CreateNew
+  nameWithType: TaskDeadlineItem.CreateNew
+- uid: CX.TaskManagerLib.TaskDeadlineItem.Deadline
+  name: Deadline
+  href: api/CX.TaskManagerLib.TaskDeadlineItem.html#CX_TaskManagerLib_TaskDeadlineItem_Deadline
+  commentId: P:CX.TaskManagerLib.TaskDeadlineItem.Deadline
+  fullName: CX.TaskManagerLib.TaskDeadlineItem.Deadline
+  nameWithType: TaskDeadlineItem.Deadline
+- uid: CX.TaskManagerLib.TaskDeadlineItem.Deadline*
+  name: Deadline
+  href: api/CX.TaskManagerLib.TaskDeadlineItem.html#CX_TaskManagerLib_TaskDeadlineItem_Deadline_
+  commentId: Overload:CX.TaskManagerLib.TaskDeadlineItem.Deadline
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskDeadlineItem.Deadline
+  nameWithType: TaskDeadlineItem.Deadline
+- uid: CX.TaskManagerLib.TaskDeadlineItem.Name
+  name: Name
+  href: api/CX.TaskManagerLib.TaskDeadlineItem.html#CX_TaskManagerLib_TaskDeadlineItem_Name
+  commentId: P:CX.TaskManagerLib.TaskDeadlineItem.Name
+  fullName: CX.TaskManagerLib.TaskDeadlineItem.Name
+  nameWithType: TaskDeadlineItem.Name
+- uid: CX.TaskManagerLib.TaskDeadlineItem.Name*
+  name: Name
+  href: api/CX.TaskManagerLib.TaskDeadlineItem.html#CX_TaskManagerLib_TaskDeadlineItem_Name_
+  commentId: Overload:CX.TaskManagerLib.TaskDeadlineItem.Name
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskDeadlineItem.Name
+  nameWithType: TaskDeadlineItem.Name
+- uid: CX.TaskManagerLib.TaskItem
+  name: TaskItem
+  href: api/CX.TaskManagerLib.TaskItem.html
+  commentId: T:CX.TaskManagerLib.TaskItem
+  fullName: CX.TaskManagerLib.TaskItem
+  nameWithType: TaskItem
+- uid: CX.TaskManagerLib.TaskItem.#ctor(System.Guid,System.DateTime,System.String,FileSystemInfo,System.Int32,CX.TaskManagerLib.TaskStatusItem,CX.TaskManagerLib.TaskDeadlineItem,System.Collections.Generic.List{System.String},System.Boolean,CX.TaskManagerLib.TaskPollingSource)
+  name: TaskItem(Guid, DateTime, String, FileSystemInfo, Int32, TaskStatusItem, TaskDeadlineItem, List<String>, Boolean, TaskPollingSource)
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem__ctor_System_Guid_System_DateTime_System_String_FileSystemInfo_System_Int32_CX_TaskManagerLib_TaskStatusItem_CX_TaskManagerLib_TaskDeadlineItem_System_Collections_Generic_List_System_String__System_Boolean_CX_TaskManagerLib_TaskPollingSource_
+  commentId: M:CX.TaskManagerLib.TaskItem.#ctor(System.Guid,System.DateTime,System.String,FileSystemInfo,System.Int32,CX.TaskManagerLib.TaskStatusItem,CX.TaskManagerLib.TaskDeadlineItem,System.Collections.Generic.List{System.String},System.Boolean,CX.TaskManagerLib.TaskPollingSource)
+  name.vb: TaskItem(Guid, DateTime, String, FileSystemInfo, Int32, TaskStatusItem, TaskDeadlineItem, List(Of String), Boolean, TaskPollingSource)
+  fullName: CX.TaskManagerLib.TaskItem.TaskItem(System.Guid, System.DateTime, System.String, FileSystemInfo, System.Int32, CX.TaskManagerLib.TaskStatusItem, CX.TaskManagerLib.TaskDeadlineItem, System.Collections.Generic.List<System.String>, System.Boolean, CX.TaskManagerLib.TaskPollingSource)
+  fullName.vb: CX.TaskManagerLib.TaskItem.TaskItem(System.Guid, System.DateTime, System.String, FileSystemInfo, System.Int32, CX.TaskManagerLib.TaskStatusItem, CX.TaskManagerLib.TaskDeadlineItem, System.Collections.Generic.List(Of System.String), System.Boolean, CX.TaskManagerLib.TaskPollingSource)
+  nameWithType: TaskItem.TaskItem(Guid, DateTime, String, FileSystemInfo, Int32, TaskStatusItem, TaskDeadlineItem, List<String>, Boolean, TaskPollingSource)
+  nameWithType.vb: TaskItem.TaskItem(Guid, DateTime, String, FileSystemInfo, Int32, TaskStatusItem, TaskDeadlineItem, List(Of String), Boolean, TaskPollingSource)
+- uid: CX.TaskManagerLib.TaskItem.#ctor*
+  name: TaskItem
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem__ctor_
+  commentId: Overload:CX.TaskManagerLib.TaskItem.#ctor
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskItem.TaskItem
+  nameWithType: TaskItem.TaskItem
+- uid: CX.TaskManagerLib.TaskItem.Create(FileSystemInfo,CX.TaskManagerLib.TaskPollingSource)
+  name: Create(FileSystemInfo, TaskPollingSource)
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem_Create_FileSystemInfo_CX_TaskManagerLib_TaskPollingSource_
+  commentId: M:CX.TaskManagerLib.TaskItem.Create(FileSystemInfo,CX.TaskManagerLib.TaskPollingSource)
+  fullName: CX.TaskManagerLib.TaskItem.Create(FileSystemInfo, CX.TaskManagerLib.TaskPollingSource)
+  nameWithType: TaskItem.Create(FileSystemInfo, TaskPollingSource)
+- uid: CX.TaskManagerLib.TaskItem.Create*
+  name: Create
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem_Create_
+  commentId: Overload:CX.TaskManagerLib.TaskItem.Create
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskItem.Create
+  nameWithType: TaskItem.Create
+- uid: CX.TaskManagerLib.TaskItem.Deadline
+  name: Deadline
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem_Deadline
+  commentId: P:CX.TaskManagerLib.TaskItem.Deadline
+  fullName: CX.TaskManagerLib.TaskItem.Deadline
+  nameWithType: TaskItem.Deadline
+- uid: CX.TaskManagerLib.TaskItem.Deadline*
+  name: Deadline
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem_Deadline_
+  commentId: Overload:CX.TaskManagerLib.TaskItem.Deadline
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskItem.Deadline
+  nameWithType: TaskItem.Deadline
+- uid: CX.TaskManagerLib.TaskItem.IsNew
+  name: IsNew
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem_IsNew
+  commentId: P:CX.TaskManagerLib.TaskItem.IsNew
+  fullName: CX.TaskManagerLib.TaskItem.IsNew
+  nameWithType: TaskItem.IsNew
+- uid: CX.TaskManagerLib.TaskItem.IsNew*
+  name: IsNew
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem_IsNew_
+  commentId: Overload:CX.TaskManagerLib.TaskItem.IsNew
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskItem.IsNew
+  nameWithType: TaskItem.IsNew
+- uid: CX.TaskManagerLib.TaskItem.Name
+  name: Name
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem_Name
+  commentId: P:CX.TaskManagerLib.TaskItem.Name
+  fullName: CX.TaskManagerLib.TaskItem.Name
+  nameWithType: TaskItem.Name
+- uid: CX.TaskManagerLib.TaskItem.Name*
+  name: Name
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem_Name_
+  commentId: Overload:CX.TaskManagerLib.TaskItem.Name
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskItem.Name
+  nameWithType: TaskItem.Name
+- uid: CX.TaskManagerLib.TaskItem.Notes
+  name: Notes
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem_Notes
+  commentId: P:CX.TaskManagerLib.TaskItem.Notes
+  fullName: CX.TaskManagerLib.TaskItem.Notes
+  nameWithType: TaskItem.Notes
+- uid: CX.TaskManagerLib.TaskItem.Notes*
+  name: Notes
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem_Notes_
+  commentId: Overload:CX.TaskManagerLib.TaskItem.Notes
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskItem.Notes
+  nameWithType: TaskItem.Notes
+- uid: CX.TaskManagerLib.TaskItem.Path
+  name: Path
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem_Path
+  commentId: P:CX.TaskManagerLib.TaskItem.Path
+  fullName: CX.TaskManagerLib.TaskItem.Path
+  nameWithType: TaskItem.Path
+- uid: CX.TaskManagerLib.TaskItem.Path*
+  name: Path
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem_Path_
+  commentId: Overload:CX.TaskManagerLib.TaskItem.Path
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskItem.Path
+  nameWithType: TaskItem.Path
+- uid: CX.TaskManagerLib.TaskItem.Priority
+  name: Priority
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem_Priority
+  commentId: P:CX.TaskManagerLib.TaskItem.Priority
+  fullName: CX.TaskManagerLib.TaskItem.Priority
+  nameWithType: TaskItem.Priority
+- uid: CX.TaskManagerLib.TaskItem.Priority*
+  name: Priority
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem_Priority_
+  commentId: Overload:CX.TaskManagerLib.TaskItem.Priority
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskItem.Priority
+  nameWithType: TaskItem.Priority
+- uid: CX.TaskManagerLib.TaskItem.Source
+  name: Source
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem_Source
+  commentId: P:CX.TaskManagerLib.TaskItem.Source
+  fullName: CX.TaskManagerLib.TaskItem.Source
+  nameWithType: TaskItem.Source
+- uid: CX.TaskManagerLib.TaskItem.Source*
+  name: Source
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem_Source_
+  commentId: Overload:CX.TaskManagerLib.TaskItem.Source
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskItem.Source
+  nameWithType: TaskItem.Source
+- uid: CX.TaskManagerLib.TaskItem.Status
+  name: Status
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem_Status
+  commentId: P:CX.TaskManagerLib.TaskItem.Status
+  fullName: CX.TaskManagerLib.TaskItem.Status
+  nameWithType: TaskItem.Status
+- uid: CX.TaskManagerLib.TaskItem.Status*
+  name: Status
+  href: api/CX.TaskManagerLib.TaskItem.html#CX_TaskManagerLib_TaskItem_Status_
+  commentId: Overload:CX.TaskManagerLib.TaskItem.Status
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskItem.Status
+  nameWithType: TaskItem.Status
+- uid: CX.TaskManagerLib.TaskPollingEventArgs
+  name: TaskPollingEventArgs
+  href: api/CX.TaskManagerLib.TaskPollingEventArgs.html
+  commentId: T:CX.TaskManagerLib.TaskPollingEventArgs
+  fullName: CX.TaskManagerLib.TaskPollingEventArgs
+  nameWithType: TaskPollingEventArgs
+- uid: CX.TaskManagerLib.TaskPollingEventArgs.#ctor(System.Collections.Generic.IList{CX.TaskManagerLib.TaskItem})
+  name: TaskPollingEventArgs(IList<TaskItem>)
+  href: api/CX.TaskManagerLib.TaskPollingEventArgs.html#CX_TaskManagerLib_TaskPollingEventArgs__ctor_System_Collections_Generic_IList_CX_TaskManagerLib_TaskItem__
+  commentId: M:CX.TaskManagerLib.TaskPollingEventArgs.#ctor(System.Collections.Generic.IList{CX.TaskManagerLib.TaskItem})
+  name.vb: TaskPollingEventArgs(IList(Of TaskItem))
+  fullName: CX.TaskManagerLib.TaskPollingEventArgs.TaskPollingEventArgs(System.Collections.Generic.IList<CX.TaskManagerLib.TaskItem>)
+  fullName.vb: CX.TaskManagerLib.TaskPollingEventArgs.TaskPollingEventArgs(System.Collections.Generic.IList(Of CX.TaskManagerLib.TaskItem))
+  nameWithType: TaskPollingEventArgs.TaskPollingEventArgs(IList<TaskItem>)
+  nameWithType.vb: TaskPollingEventArgs.TaskPollingEventArgs(IList(Of TaskItem))
+- uid: CX.TaskManagerLib.TaskPollingEventArgs.#ctor*
+  name: TaskPollingEventArgs
+  href: api/CX.TaskManagerLib.TaskPollingEventArgs.html#CX_TaskManagerLib_TaskPollingEventArgs__ctor_
+  commentId: Overload:CX.TaskManagerLib.TaskPollingEventArgs.#ctor
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskPollingEventArgs.TaskPollingEventArgs
+  nameWithType: TaskPollingEventArgs.TaskPollingEventArgs
+- uid: CX.TaskManagerLib.TaskPollingEventArgs.TaskItems
+  name: TaskItems
+  href: api/CX.TaskManagerLib.TaskPollingEventArgs.html#CX_TaskManagerLib_TaskPollingEventArgs_TaskItems
+  commentId: P:CX.TaskManagerLib.TaskPollingEventArgs.TaskItems
+  fullName: CX.TaskManagerLib.TaskPollingEventArgs.TaskItems
+  nameWithType: TaskPollingEventArgs.TaskItems
+- uid: CX.TaskManagerLib.TaskPollingEventArgs.TaskItems*
+  name: TaskItems
+  href: api/CX.TaskManagerLib.TaskPollingEventArgs.html#CX_TaskManagerLib_TaskPollingEventArgs_TaskItems_
+  commentId: Overload:CX.TaskManagerLib.TaskPollingEventArgs.TaskItems
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskPollingEventArgs.TaskItems
+  nameWithType: TaskPollingEventArgs.TaskItems
+- uid: CX.TaskManagerLib.TaskPollingSource
+  name: TaskPollingSource
+  href: api/CX.TaskManagerLib.TaskPollingSource.html
+  commentId: T:CX.TaskManagerLib.TaskPollingSource
+  fullName: CX.TaskManagerLib.TaskPollingSource
+  nameWithType: TaskPollingSource
+- uid: CX.TaskManagerLib.TaskPollingSource.#ctor(System.Guid,System.DateTime,System.String,System.String,System.Boolean,System.Boolean)
+  name: TaskPollingSource(Guid, DateTime, String, String, Boolean, Boolean)
+  href: api/CX.TaskManagerLib.TaskPollingSource.html#CX_TaskManagerLib_TaskPollingSource__ctor_System_Guid_System_DateTime_System_String_System_String_System_Boolean_System_Boolean_
+  commentId: M:CX.TaskManagerLib.TaskPollingSource.#ctor(System.Guid,System.DateTime,System.String,System.String,System.Boolean,System.Boolean)
+  fullName: CX.TaskManagerLib.TaskPollingSource.TaskPollingSource(System.Guid, System.DateTime, System.String, System.String, System.Boolean, System.Boolean)
+  nameWithType: TaskPollingSource.TaskPollingSource(Guid, DateTime, String, String, Boolean, Boolean)
+- uid: CX.TaskManagerLib.TaskPollingSource.#ctor*
+  name: TaskPollingSource
+  href: api/CX.TaskManagerLib.TaskPollingSource.html#CX_TaskManagerLib_TaskPollingSource__ctor_
+  commentId: Overload:CX.TaskManagerLib.TaskPollingSource.#ctor
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskPollingSource.TaskPollingSource
+  nameWithType: TaskPollingSource.TaskPollingSource
+- uid: CX.TaskManagerLib.TaskPollingSource.CreateNew(System.String,System.String,System.Boolean,System.Boolean)
+  name: CreateNew(String, String, Boolean, Boolean)
+  href: api/CX.TaskManagerLib.TaskPollingSource.html#CX_TaskManagerLib_TaskPollingSource_CreateNew_System_String_System_String_System_Boolean_System_Boolean_
+  commentId: M:CX.TaskManagerLib.TaskPollingSource.CreateNew(System.String,System.String,System.Boolean,System.Boolean)
+  fullName: CX.TaskManagerLib.TaskPollingSource.CreateNew(System.String, System.String, System.Boolean, System.Boolean)
+  nameWithType: TaskPollingSource.CreateNew(String, String, Boolean, Boolean)
+- uid: CX.TaskManagerLib.TaskPollingSource.CreateNew*
+  name: CreateNew
+  href: api/CX.TaskManagerLib.TaskPollingSource.html#CX_TaskManagerLib_TaskPollingSource_CreateNew_
+  commentId: Overload:CX.TaskManagerLib.TaskPollingSource.CreateNew
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskPollingSource.CreateNew
+  nameWithType: TaskPollingSource.CreateNew
+- uid: CX.TaskManagerLib.TaskPollingSource.Definition
+  name: Definition
+  href: api/CX.TaskManagerLib.TaskPollingSource.html#CX_TaskManagerLib_TaskPollingSource_Definition
+  commentId: P:CX.TaskManagerLib.TaskPollingSource.Definition
+  fullName: CX.TaskManagerLib.TaskPollingSource.Definition
+  nameWithType: TaskPollingSource.Definition
+- uid: CX.TaskManagerLib.TaskPollingSource.Definition*
+  name: Definition
+  href: api/CX.TaskManagerLib.TaskPollingSource.html#CX_TaskManagerLib_TaskPollingSource_Definition_
+  commentId: Overload:CX.TaskManagerLib.TaskPollingSource.Definition
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskPollingSource.Definition
+  nameWithType: TaskPollingSource.Definition
+- uid: CX.TaskManagerLib.TaskPollingSource.DirectoryPath
+  name: DirectoryPath
+  href: api/CX.TaskManagerLib.TaskPollingSource.html#CX_TaskManagerLib_TaskPollingSource_DirectoryPath
+  commentId: P:CX.TaskManagerLib.TaskPollingSource.DirectoryPath
+  fullName: CX.TaskManagerLib.TaskPollingSource.DirectoryPath
+  nameWithType: TaskPollingSource.DirectoryPath
+- uid: CX.TaskManagerLib.TaskPollingSource.DirectoryPath*
+  name: DirectoryPath
+  href: api/CX.TaskManagerLib.TaskPollingSource.html#CX_TaskManagerLib_TaskPollingSource_DirectoryPath_
+  commentId: Overload:CX.TaskManagerLib.TaskPollingSource.DirectoryPath
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskPollingSource.DirectoryPath
+  nameWithType: TaskPollingSource.DirectoryPath
+- uid: CX.TaskManagerLib.TaskPollingSource.PollForDirectories
+  name: PollForDirectories
+  href: api/CX.TaskManagerLib.TaskPollingSource.html#CX_TaskManagerLib_TaskPollingSource_PollForDirectories
+  commentId: P:CX.TaskManagerLib.TaskPollingSource.PollForDirectories
+  fullName: CX.TaskManagerLib.TaskPollingSource.PollForDirectories
+  nameWithType: TaskPollingSource.PollForDirectories
+- uid: CX.TaskManagerLib.TaskPollingSource.PollForDirectories*
+  name: PollForDirectories
+  href: api/CX.TaskManagerLib.TaskPollingSource.html#CX_TaskManagerLib_TaskPollingSource_PollForDirectories_
+  commentId: Overload:CX.TaskManagerLib.TaskPollingSource.PollForDirectories
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskPollingSource.PollForDirectories
+  nameWithType: TaskPollingSource.PollForDirectories
+- uid: CX.TaskManagerLib.TaskPollingSource.PollForFiles
+  name: PollForFiles
+  href: api/CX.TaskManagerLib.TaskPollingSource.html#CX_TaskManagerLib_TaskPollingSource_PollForFiles
+  commentId: P:CX.TaskManagerLib.TaskPollingSource.PollForFiles
+  fullName: CX.TaskManagerLib.TaskPollingSource.PollForFiles
+  nameWithType: TaskPollingSource.PollForFiles
+- uid: CX.TaskManagerLib.TaskPollingSource.PollForFiles*
+  name: PollForFiles
+  href: api/CX.TaskManagerLib.TaskPollingSource.html#CX_TaskManagerLib_TaskPollingSource_PollForFiles_
+  commentId: Overload:CX.TaskManagerLib.TaskPollingSource.PollForFiles
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskPollingSource.PollForFiles
+  nameWithType: TaskPollingSource.PollForFiles
+- uid: CX.TaskManagerLib.TaskStatusItem
+  name: TaskStatusItem
+  href: api/CX.TaskManagerLib.TaskStatusItem.html
+  commentId: T:CX.TaskManagerLib.TaskStatusItem
+  fullName: CX.TaskManagerLib.TaskStatusItem
+  nameWithType: TaskStatusItem
+- uid: CX.TaskManagerLib.TaskStatusItem.#ctor(System.Guid,System.DateTime,System.String,System.String)
+  name: TaskStatusItem(Guid, DateTime, String, String)
+  href: api/CX.TaskManagerLib.TaskStatusItem.html#CX_TaskManagerLib_TaskStatusItem__ctor_System_Guid_System_DateTime_System_String_System_String_
+  commentId: M:CX.TaskManagerLib.TaskStatusItem.#ctor(System.Guid,System.DateTime,System.String,System.String)
+  fullName: CX.TaskManagerLib.TaskStatusItem.TaskStatusItem(System.Guid, System.DateTime, System.String, System.String)
+  nameWithType: TaskStatusItem.TaskStatusItem(Guid, DateTime, String, String)
+- uid: CX.TaskManagerLib.TaskStatusItem.#ctor*
+  name: TaskStatusItem
+  href: api/CX.TaskManagerLib.TaskStatusItem.html#CX_TaskManagerLib_TaskStatusItem__ctor_
+  commentId: Overload:CX.TaskManagerLib.TaskStatusItem.#ctor
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskStatusItem.TaskStatusItem
+  nameWithType: TaskStatusItem.TaskStatusItem
+- uid: CX.TaskManagerLib.TaskStatusItem.Color
+  name: Color
+  href: api/CX.TaskManagerLib.TaskStatusItem.html#CX_TaskManagerLib_TaskStatusItem_Color
+  commentId: P:CX.TaskManagerLib.TaskStatusItem.Color
+  fullName: CX.TaskManagerLib.TaskStatusItem.Color
+  nameWithType: TaskStatusItem.Color
+- uid: CX.TaskManagerLib.TaskStatusItem.Color*
+  name: Color
+  href: api/CX.TaskManagerLib.TaskStatusItem.html#CX_TaskManagerLib_TaskStatusItem_Color_
+  commentId: Overload:CX.TaskManagerLib.TaskStatusItem.Color
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskStatusItem.Color
+  nameWithType: TaskStatusItem.Color
+- uid: CX.TaskManagerLib.TaskStatusItem.CreateNew(System.String,System.String)
+  name: CreateNew(String, String)
+  href: api/CX.TaskManagerLib.TaskStatusItem.html#CX_TaskManagerLib_TaskStatusItem_CreateNew_System_String_System_String_
+  commentId: M:CX.TaskManagerLib.TaskStatusItem.CreateNew(System.String,System.String)
+  fullName: CX.TaskManagerLib.TaskStatusItem.CreateNew(System.String, System.String)
+  nameWithType: TaskStatusItem.CreateNew(String, String)
+- uid: CX.TaskManagerLib.TaskStatusItem.CreateNew*
+  name: CreateNew
+  href: api/CX.TaskManagerLib.TaskStatusItem.html#CX_TaskManagerLib_TaskStatusItem_CreateNew_
+  commentId: Overload:CX.TaskManagerLib.TaskStatusItem.CreateNew
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskStatusItem.CreateNew
+  nameWithType: TaskStatusItem.CreateNew
+- uid: CX.TaskManagerLib.TaskStatusItem.Name
+  name: Name
+  href: api/CX.TaskManagerLib.TaskStatusItem.html#CX_TaskManagerLib_TaskStatusItem_Name
+  commentId: P:CX.TaskManagerLib.TaskStatusItem.Name
+  fullName: CX.TaskManagerLib.TaskStatusItem.Name
+  nameWithType: TaskStatusItem.Name
+- uid: CX.TaskManagerLib.TaskStatusItem.Name*
+  name: Name
+  href: api/CX.TaskManagerLib.TaskStatusItem.html#CX_TaskManagerLib_TaskStatusItem_Name_
+  commentId: Overload:CX.TaskManagerLib.TaskStatusItem.Name
+  isSpec: "True"
+  fullName: CX.TaskManagerLib.TaskStatusItem.Name
+  nameWithType: TaskStatusItem.Name
+- uid: CX.ZipLib
+  name: CX.ZipLib
+  href: api/CX.ZipLib.html
+  commentId: N:CX.ZipLib
+  fullName: CX.ZipLib
+  nameWithType: CX.ZipLib
+- uid: CX.ZipLib.Framework
+  name: CX.ZipLib.Framework
+  href: api/CX.ZipLib.Framework.html
+  commentId: N:CX.ZipLib.Framework
+  fullName: CX.ZipLib.Framework
+  nameWithType: CX.ZipLib.Framework
+- uid: CX.ZipLib.Framework.ZipService
+  name: ZipService
+  href: api/CX.ZipLib.Framework.ZipService.html
+  commentId: T:CX.ZipLib.Framework.ZipService
+  fullName: CX.ZipLib.Framework.ZipService
+  nameWithType: ZipService
+- uid: CX.ZipLib.Framework.ZipService.#ctor(CX.LoggingLib.ILogbook)
+  name: ZipService(ILogbook)
+  href: api/CX.ZipLib.Framework.ZipService.html#CX_ZipLib_Framework_ZipService__ctor_CX_LoggingLib_ILogbook_
+  commentId: M:CX.ZipLib.Framework.ZipService.#ctor(CX.LoggingLib.ILogbook)
+  fullName: CX.ZipLib.Framework.ZipService.ZipService(CX.LoggingLib.ILogbook)
+  nameWithType: ZipService.ZipService(ILogbook)
+- uid: CX.ZipLib.Framework.ZipService.#ctor*
+  name: ZipService
+  href: api/CX.ZipLib.Framework.ZipService.html#CX_ZipLib_Framework_ZipService__ctor_
+  commentId: Overload:CX.ZipLib.Framework.ZipService.#ctor
+  isSpec: "True"
+  fullName: CX.ZipLib.Framework.ZipService.ZipService
+  nameWithType: ZipService.ZipService
+- uid: CX.ZipLib.Framework.ZipService.Compress(DirectoryInfo,FileInfo)
+  name: Compress(DirectoryInfo, FileInfo)
+  href: api/CX.ZipLib.Framework.ZipService.html#CX_ZipLib_Framework_ZipService_Compress_DirectoryInfo_FileInfo_
+  commentId: M:CX.ZipLib.Framework.ZipService.Compress(DirectoryInfo,FileInfo)
+  fullName: CX.ZipLib.Framework.ZipService.Compress(DirectoryInfo, FileInfo)
+  nameWithType: ZipService.Compress(DirectoryInfo, FileInfo)
+- uid: CX.ZipLib.Framework.ZipService.Compress*
+  name: Compress
+  href: api/CX.ZipLib.Framework.ZipService.html#CX_ZipLib_Framework_ZipService_Compress_
+  commentId: Overload:CX.ZipLib.Framework.ZipService.Compress
+  isSpec: "True"
+  fullName: CX.ZipLib.Framework.ZipService.Compress
+  nameWithType: ZipService.Compress
+- uid: CX.ZipLib.IZipService
+  name: IZipService
+  href: api/CX.ZipLib.IZipService.html
+  commentId: T:CX.ZipLib.IZipService
+  fullName: CX.ZipLib.IZipService
+  nameWithType: IZipService
+- uid: CX.ZipLib.IZipService.Compress(DirectoryInfo,FileInfo)
+  name: Compress(DirectoryInfo, FileInfo)
+  href: api/CX.ZipLib.IZipService.html#CX_ZipLib_IZipService_Compress_DirectoryInfo_FileInfo_
+  commentId: M:CX.ZipLib.IZipService.Compress(DirectoryInfo,FileInfo)
+  fullName: CX.ZipLib.IZipService.Compress(DirectoryInfo, FileInfo)
+  nameWithType: IZipService.Compress(DirectoryInfo, FileInfo)
+- uid: CX.ZipLib.IZipService.Compress*
+  name: Compress
+  href: api/CX.ZipLib.IZipService.html#CX_ZipLib_IZipService_Compress_
+  commentId: Overload:CX.ZipLib.IZipService.Compress
+  isSpec: "True"
+  fullName: CX.ZipLib.IZipService.Compress
+  nameWithType: IZipService.Compress
+- uid: LoggingLib.Defaults
+  name: LoggingLib.Defaults
+  href: api/LoggingLib.Defaults.html
+  commentId: N:LoggingLib.Defaults
+  fullName: LoggingLib.Defaults
+  nameWithType: LoggingLib.Defaults
+- uid: LoggingLib.Defaults.EmptyLogbook
+  name: EmptyLogbook
+  href: api/LoggingLib.Defaults.EmptyLogbook.html
+  commentId: T:LoggingLib.Defaults.EmptyLogbook
+  fullName: LoggingLib.Defaults.EmptyLogbook
+  nameWithType: EmptyLogbook
+- uid: LoggingLib.Defaults.EmptyLogbook.Create
+  name: Create()
+  href: api/LoggingLib.Defaults.EmptyLogbook.html#LoggingLib_Defaults_EmptyLogbook_Create
+  commentId: M:LoggingLib.Defaults.EmptyLogbook.Create
+  fullName: LoggingLib.Defaults.EmptyLogbook.Create()
+  nameWithType: EmptyLogbook.Create()
+- uid: LoggingLib.Defaults.EmptyLogbook.Create*
+  name: Create
+  href: api/LoggingLib.Defaults.EmptyLogbook.html#LoggingLib_Defaults_EmptyLogbook_Create_
+  commentId: Overload:LoggingLib.Defaults.EmptyLogbook.Create
+  isSpec: "True"
+  fullName: LoggingLib.Defaults.EmptyLogbook.Create
+  nameWithType: EmptyLogbook.Create
+- uid: LoggingLib.Defaults.EmptyLogbook.Create``1
+  name: Create<T>()
+  href: api/LoggingLib.Defaults.EmptyLogbook.html#LoggingLib_Defaults_EmptyLogbook_Create__1
+  commentId: M:LoggingLib.Defaults.EmptyLogbook.Create``1
+  name.vb: Create(Of T)()
+  fullName: LoggingLib.Defaults.EmptyLogbook.Create<T>()
+  fullName.vb: LoggingLib.Defaults.EmptyLogbook.Create(Of T)()
+  nameWithType: EmptyLogbook.Create<T>()
+  nameWithType.vb: EmptyLogbook.Create(Of T)()
+- uid: LoggingLib.Defaults.EmptyLogbook.Write(System.String,CX.LoggingLib.LogLevel,System.Nullable{Exception},System.String,System.String,System.Object[])
+  name: Write(String, LogLevel, Nullable<Exception>, String, String, Object[])
+  href: api/LoggingLib.Defaults.EmptyLogbook.html#LoggingLib_Defaults_EmptyLogbook_Write_System_String_CX_LoggingLib_LogLevel_System_Nullable_Exception__System_String_System_String_System_Object___
+  commentId: M:LoggingLib.Defaults.EmptyLogbook.Write(System.String,CX.LoggingLib.LogLevel,System.Nullable{Exception},System.String,System.String,System.Object[])
+  name.vb: Write(String, LogLevel, Nullable(Of Exception), String, String, Object())
+  fullName: LoggingLib.Defaults.EmptyLogbook.Write(System.String, CX.LoggingLib.LogLevel, System.Nullable<Exception>, System.String, System.String, System.Object[])
+  fullName.vb: LoggingLib.Defaults.EmptyLogbook.Write(System.String, CX.LoggingLib.LogLevel, System.Nullable(Of Exception), System.String, System.String, System.Object())
+  nameWithType: EmptyLogbook.Write(String, LogLevel, Nullable<Exception>, String, String, Object[])
+  nameWithType.vb: EmptyLogbook.Write(String, LogLevel, Nullable(Of Exception), String, String, Object())
+- uid: LoggingLib.Defaults.EmptyLogbook.Write*
+  name: Write
+  href: api/LoggingLib.Defaults.EmptyLogbook.html#LoggingLib_Defaults_EmptyLogbook_Write_
+  commentId: Overload:LoggingLib.Defaults.EmptyLogbook.Write
+  isSpec: "True"
+  fullName: LoggingLib.Defaults.EmptyLogbook.Write
+  nameWithType: EmptyLogbook.Write
+- uid: LoggingLib.Defaults.EmptyLogbook`1
+  name: EmptyLogbook<TCaller>
+  href: api/LoggingLib.Defaults.EmptyLogbook-1.html
+  commentId: T:LoggingLib.Defaults.EmptyLogbook`1
+  name.vb: EmptyLogbook(Of TCaller)
+  fullName: LoggingLib.Defaults.EmptyLogbook<TCaller>
+  fullName.vb: LoggingLib.Defaults.EmptyLogbook(Of TCaller)
+  nameWithType: EmptyLogbook<TCaller>
+  nameWithType.vb: EmptyLogbook(Of TCaller)
 - uid: Opus
   name: Opus
   href: api/Opus.html
@@ -13905,6 +16786,23 @@ references:
   fullName.vb: Opus.Services.UI.ReorderCollection(Of T).CollectionSelectedItemChangedEventHandler
   nameWithType: ReorderCollection<T>.CollectionSelectedItemChangedEventHandler
   nameWithType.vb: ReorderCollection(Of T).CollectionSelectedItemChangedEventHandler
+- uid: Opus.Services.UI.ReorderCollection`1.DropChildrenLevelsWhenDeleting
+  name: DropChildrenLevelsWhenDeleting
+  href: api/Opus.Services.UI.ReorderCollection-1.html#Opus_Services_UI_ReorderCollection_1_DropChildrenLevelsWhenDeleting
+  commentId: P:Opus.Services.UI.ReorderCollection`1.DropChildrenLevelsWhenDeleting
+  fullName: Opus.Services.UI.ReorderCollection<T>.DropChildrenLevelsWhenDeleting
+  fullName.vb: Opus.Services.UI.ReorderCollection(Of T).DropChildrenLevelsWhenDeleting
+  nameWithType: ReorderCollection<T>.DropChildrenLevelsWhenDeleting
+  nameWithType.vb: ReorderCollection(Of T).DropChildrenLevelsWhenDeleting
+- uid: Opus.Services.UI.ReorderCollection`1.DropChildrenLevelsWhenDeleting*
+  name: DropChildrenLevelsWhenDeleting
+  href: api/Opus.Services.UI.ReorderCollection-1.html#Opus_Services_UI_ReorderCollection_1_DropChildrenLevelsWhenDeleting_
+  commentId: Overload:Opus.Services.UI.ReorderCollection`1.DropChildrenLevelsWhenDeleting
+  isSpec: "True"
+  fullName: Opus.Services.UI.ReorderCollection<T>.DropChildrenLevelsWhenDeleting
+  fullName.vb: Opus.Services.UI.ReorderCollection(Of T).DropChildrenLevelsWhenDeleting
+  nameWithType: ReorderCollection<T>.DropChildrenLevelsWhenDeleting
+  nameWithType.vb: ReorderCollection(Of T).DropChildrenLevelsWhenDeleting
 - uid: Opus.Services.UI.ReorderCollection`1.ExecuteMoveDown
   name: ExecuteMoveDown()
   href: api/Opus.Services.UI.ReorderCollection-1.html#Opus_Services_UI_ReorderCollection_1_ExecuteMoveDown
@@ -15344,3 +18242,98 @@ references:
   isSpec: "True"
   fullName: Opus.Views.MainWindowView.Window_Loaded
   nameWithType: MainWindowView.Window_Loaded
+- uid: PdfLib.PDFTools
+  name: PdfLib.PDFTools
+  href: api/PdfLib.PDFTools.html
+  commentId: N:PdfLib.PDFTools
+  fullName: PdfLib.PDFTools
+  nameWithType: PdfLib.PDFTools
+- uid: PdfLib.PDFTools.PdfAConverter
+  name: PdfAConverter
+  href: api/PdfLib.PDFTools.PdfAConverter.html
+  commentId: T:PdfLib.PDFTools.PdfAConverter
+  fullName: PdfLib.PDFTools.PdfAConverter
+  nameWithType: PdfAConverter
+- uid: PdfLib.PDFTools.PdfAConverter.#ctor(CX.LoggingLib.ILogbook)
+  name: PdfAConverter(ILogbook)
+  href: api/PdfLib.PDFTools.PdfAConverter.html#PdfLib_PDFTools_PdfAConverter__ctor_CX_LoggingLib_ILogbook_
+  commentId: M:PdfLib.PDFTools.PdfAConverter.#ctor(CX.LoggingLib.ILogbook)
+  fullName: PdfLib.PDFTools.PdfAConverter.PdfAConverter(CX.LoggingLib.ILogbook)
+  nameWithType: PdfAConverter.PdfAConverter(ILogbook)
+- uid: PdfLib.PDFTools.PdfAConverter.#ctor*
+  name: PdfAConverter
+  href: api/PdfLib.PDFTools.PdfAConverter.html#PdfLib_PDFTools_PdfAConverter__ctor_
+  commentId: Overload:PdfLib.PDFTools.PdfAConverter.#ctor
+  isSpec: "True"
+  fullName: PdfLib.PDFTools.PdfAConverter.PdfAConverter
+  nameWithType: PdfAConverter.PdfAConverter
+- uid: PdfLib.PDFTools.PdfAConverter.Convert(System.IO.FileSystemInfo,System.IO.DirectoryInfo,System.Threading.CancellationToken)
+  name: Convert(FileSystemInfo, DirectoryInfo, CancellationToken)
+  href: api/PdfLib.PDFTools.PdfAConverter.html#PdfLib_PDFTools_PdfAConverter_Convert_System_IO_FileSystemInfo_System_IO_DirectoryInfo_System_Threading_CancellationToken_
+  commentId: M:PdfLib.PDFTools.PdfAConverter.Convert(System.IO.FileSystemInfo,System.IO.DirectoryInfo,System.Threading.CancellationToken)
+  fullName: PdfLib.PDFTools.PdfAConverter.Convert(System.IO.FileSystemInfo, System.IO.DirectoryInfo, System.Threading.CancellationToken)
+  nameWithType: PdfAConverter.Convert(FileSystemInfo, DirectoryInfo, CancellationToken)
+- uid: PdfLib.PDFTools.PdfAConverter.Convert*
+  name: Convert
+  href: api/PdfLib.PDFTools.PdfAConverter.html#PdfLib_PDFTools_PdfAConverter_Convert_
+  commentId: Overload:PdfLib.PDFTools.PdfAConverter.Convert
+  isSpec: "True"
+  fullName: PdfLib.PDFTools.PdfAConverter.Convert
+  nameWithType: PdfAConverter.Convert
+- uid: PdfLibTests
+  name: PdfLibTests
+  href: api/PdfLibTests.html
+  commentId: N:PdfLibTests
+  fullName: PdfLibTests
+  nameWithType: PdfLibTests
+- uid: PdfLibTests.Annotations
+  name: Annotations
+  href: api/PdfLibTests.Annotations.html
+  commentId: T:PdfLibTests.Annotations
+  fullName: PdfLibTests.Annotations
+  nameWithType: Annotations
+- uid: PdfLibTests.Annotations.MakeAllReadOnly
+  name: MakeAllReadOnly()
+  href: api/PdfLibTests.Annotations.html#PdfLibTests_Annotations_MakeAllReadOnly
+  commentId: M:PdfLibTests.Annotations.MakeAllReadOnly
+  fullName: PdfLibTests.Annotations.MakeAllReadOnly()
+  nameWithType: Annotations.MakeAllReadOnly()
+- uid: PdfLibTests.Annotations.MakeAllReadOnly*
+  name: MakeAllReadOnly
+  href: api/PdfLibTests.Annotations.html#PdfLibTests_Annotations_MakeAllReadOnly_
+  commentId: Overload:PdfLibTests.Annotations.MakeAllReadOnly
+  isSpec: "True"
+  fullName: PdfLibTests.Annotations.MakeAllReadOnly
+  nameWithType: Annotations.MakeAllReadOnly
+- uid: PdfLibTests.ExtractionPdfa
+  name: ExtractionPdfa
+  href: api/PdfLibTests.ExtractionPdfa.html
+  commentId: T:PdfLibTests.ExtractionPdfa
+  fullName: PdfLibTests.ExtractionPdfa
+  nameWithType: ExtractionPdfa
+- uid: PdfLibTests.ExtractionPdfa.ExtractionStepByStep
+  name: ExtractionStepByStep()
+  href: api/PdfLibTests.ExtractionPdfa.html#PdfLibTests_ExtractionPdfa_ExtractionStepByStep
+  commentId: M:PdfLibTests.ExtractionPdfa.ExtractionStepByStep
+  fullName: PdfLibTests.ExtractionPdfa.ExtractionStepByStep()
+  nameWithType: ExtractionPdfa.ExtractionStepByStep()
+- uid: PdfLibTests.ExtractionPdfa.ExtractionStepByStep*
+  name: ExtractionStepByStep
+  href: api/PdfLibTests.ExtractionPdfa.html#PdfLibTests_ExtractionPdfa_ExtractionStepByStep_
+  commentId: Overload:PdfLibTests.ExtractionPdfa.ExtractionStepByStep
+  isSpec: "True"
+  fullName: PdfLibTests.ExtractionPdfa.ExtractionStepByStep
+  nameWithType: ExtractionPdfa.ExtractionStepByStep
+- uid: PdfLibTests.ExtractionPdfa.ExtractionWhole
+  name: ExtractionWhole()
+  href: api/PdfLibTests.ExtractionPdfa.html#PdfLibTests_ExtractionPdfa_ExtractionWhole
+  commentId: M:PdfLibTests.ExtractionPdfa.ExtractionWhole
+  fullName: PdfLibTests.ExtractionPdfa.ExtractionWhole()
+  nameWithType: ExtractionPdfa.ExtractionWhole()
+- uid: PdfLibTests.ExtractionPdfa.ExtractionWhole*
+  name: ExtractionWhole
+  href: api/PdfLibTests.ExtractionPdfa.html#PdfLibTests_ExtractionPdfa_ExtractionWhole_
+  commentId: Overload:PdfLibTests.ExtractionPdfa.ExtractionWhole
+  isSpec: "True"
+  fullName: PdfLibTests.ExtractionPdfa.ExtractionWhole
+  nameWithType: ExtractionPdfa.ExtractionWhole

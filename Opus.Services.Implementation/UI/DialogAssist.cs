@@ -1,10 +1,9 @@
-﻿using CX.LoggingLib;
-using CX.PdfLib.Common;
+﻿using WF.LoggingLib;
+using WF.PdfLib.Common;
 using Opus.Services.Extensions;
 using Opus.Services.Implementation.Logging;
 using Opus.Services.Implementation.UI.Dialogs;
 using Opus.Services.UI;
-using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Threading;

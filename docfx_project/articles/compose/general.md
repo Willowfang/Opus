@@ -49,12 +49,28 @@ Mikäli pakolliseksi merkattua asiakirjaa ei löydetä tai kriteerien mukaisia a
 
 Koska etsintä perustuu säännöllisiin lausekkeisiin, periaatteessa hyvinkin monimutkaiset etsintäkriteerit ovat mahdollisia.
 
+## Profiilit ja osiot
+
+Asiakirjojen haun kriteerit sisältyvät profiileihin, jotka on puolestaan jaettu osioihin. Jokainen osio vastaa yhtä tai useampaa kirjanmerkkiä valmiissa, kootussa tiedostossa.
+
+Osiot voivat olla tiedosto- tai otsikko-tyyppisiä. Tiedosto-osioita vastaavasti haetaan annetusta kansiosta tiedostoja. Kyseiset osiot voivat olla vapaaehtoisia tai pakollisia riippuen siitä, millainen vaadittujen tiedostojen määrä niille on asetettu.
+
+Otsikko-osioiden perusteella ei haeta tiedostoja, vaan niitä käytetään ainoastaan ylätason kirjanmerkkeinä valmiissa asiakirjassa. Otsikko-osiot lisätään asiakirjaan, mikäli ne sisältävät alakirjanmerkkejä (eli mikäli niiden alla on tiedosto-osioita, joiden perusteella on löydetty asiakirjoja).
+
 ## Hyväksytyt tiedostotyypit
 
 - PDF (pdf)
 - Word (doc, docx)
 
 Muut hyväksytyt tiedostomuodot, kuin pdf, muunnetaan pdf-muotoon ennen niiden liittämistä osaksi muodostettavaa asiakirjaa.
+
+## Esiasennetut koontiprofiilit
+
+Koontiprofiileja voidaan toimittaa käyttäjille myös asennustiedoston mukana sisällyttämällä ne asennuksen (tai päivityksen) yhteydessä tai jälkikäteen muulla tavalla ohjelman asennuskansion alle kansioon "ProfileImport". Nämä profiilit tuodaan ohjelma avattaessa käyttäjän valittavaksi.
+
+Näin tuotavat profiilit on mahdollista asettaa myös tilaan, joka estää niiden muokkaamisen tai poistamisen. Näin voidaan järjestelmänvalvojan toimesta asennuttaa käyttäjille sellaisia profiileja, jotka ovat organisaation yhteisen käytännön mukaisia ja joita ei siis käyttäjän toimesta voida muuttaa.
+
+Profiilitiedostot ovat .opusprofile -päätteisiä ja JSON-muotoisia tiedostoja, joten niiden muokkaaminen on mahdollista myös tavallisilla tekstinkäsittelyohjelmilla.
 
 ---
 

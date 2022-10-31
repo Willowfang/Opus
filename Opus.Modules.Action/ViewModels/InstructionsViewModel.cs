@@ -1,13 +1,7 @@
 ﻿using Opus.Events;
 using Opus.Services.UI;
-using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Opus.Values;
-using System.Windows;
 
 namespace Opus.Modules.Action.ViewModels
 {

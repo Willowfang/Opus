@@ -1,4 +1,4 @@
-﻿using CX.PdfLib.Services.Data;
+﻿using WF.PdfLib.Services.Data;
 using Prism.Mvvm;
 
 namespace Opus.Core.Wrappers

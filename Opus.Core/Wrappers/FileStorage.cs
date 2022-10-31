@@ -1,4 +1,5 @@
-﻿using CX.PdfLib.Services.Data;
+﻿using WF.PdfLib.Services.Data;
+using Opus.Services.Base;
 using Prism.Mvvm;
 using System.IO;
 
@@ -7,7 +8,7 @@ namespace Opus.Core.Wrappers
     /// <summary>
     /// Class for storing information about a file.
     /// </summary>
-    public class FileStorage : BindableBase, ILeveledItem
+    public class FileStorage : BindableBase, ILeveledItem, ISelectable
     {
         // Backing properties
 

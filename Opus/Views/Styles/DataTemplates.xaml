@@ -750,12 +750,14 @@
                 -->
                 <StackPanel>
                     <TextBox Style="{DynamicResource NumberTextBox}"
-                             Text="{Binding MinCount, UpdateSourceTrigger=PropertyChanged}"
+                             Text="{Binding MinCount, UpdateSourceTrigger=PropertyChanged, 
+                             ValidatesOnDataErrors=True}"
                              Width="70"
                              Name="CompositionFileMinCountText"
                              md:HintAssist.Hint="{x:Static resLabels:General.Minimum}"/>
                     <TextBox Style="{DynamicResource NumberTextBox}"
-                             Text="{Binding MaxCount, UpdateSourceTrigger=PropertyChanged}"
+                             Text="{Binding MaxCount, UpdateSourceTrigger=PropertyChanged, 
+                             ValidatesOnDataErrors=True}"
                              Width="70"
                              Name="CompositionFileMaxCountText"
                              md:HintAssist.Hint="{x:Static resLabels:General.Maximum}"/>

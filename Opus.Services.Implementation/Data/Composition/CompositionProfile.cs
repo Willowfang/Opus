@@ -1,7 +1,6 @@
 ﻿using Opus.Services.Data;
 using Opus.Services.Data.Composition;
 using Opus.Services.UI;
-using Prism.Mvvm;
 
 namespace Opus.Services.Implementation.Data.Composition
 {

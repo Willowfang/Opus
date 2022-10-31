@@ -1,5 +1,5 @@
 ﻿using AsyncAwaitBestPractices.MVVM;
-using CX.LoggingLib;
+using WF.LoggingLib;
 using Opus.Services.Configuration;
 using Opus.Services.UI;
 using System.Threading.Tasks;

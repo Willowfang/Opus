@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Opus.Services.UI
+﻿namespace Opus.Services.UI
 {
     /// <summary>
     /// Service for navigation targets of <see cref="INavigationAssist"/>

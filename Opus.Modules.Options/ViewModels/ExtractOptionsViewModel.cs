@@ -1,15 +1,8 @@
 ﻿using Opus.Core.Base;
-using Opus.Events;
-using Prism.Commands;
-using Prism.Events;
-using Prism.Regions;
-using Opus.Events.Data;
 using Opus.Services.UI;
 using Opus.Services.Implementation.UI.Dialogs;
-using AsyncAwaitBestPractices.MVVM;
-using System.Threading.Tasks;
 using Opus.Services.Configuration;
-using CX.LoggingLib;
+using WF.LoggingLib;
 
 namespace Opus.Modules.Options.ViewModels
 {

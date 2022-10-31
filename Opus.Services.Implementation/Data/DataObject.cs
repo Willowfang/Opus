@@ -1,5 +1,4 @@
-﻿using Opus.Services.Data;
-using Prism.Mvvm;
+﻿using Prism.Mvvm;
 using System;
 
 namespace Opus.Services.Implementation.Data

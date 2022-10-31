@@ -2,7 +2,7 @@
 
 ---
 
-# Järjestyksen muuttaminen
+## Järjestyksen muuttaminen
 
 <details>
 <summary>Järjestyksen muuttaminen</summary>
@@ -15,17 +15,17 @@
 
 Voit muuttaa valitsemiesi tiedostojen keskinäistä järjestystä ja hierarkiaa tiedostolistassa seuraavilla tavoilla:
 
-## Siirtäminen pystysuunnassa
+### Siirtäminen pystysuunnassa
 
 Valitse haluamasi tiedosto listasta ja liikuta sitä ylä- ja alasuuntaan painamalla samanaikaisesti pohjaan CTRL-näppäin sekä ylä- tai alanuolinäppäin. Tiedosto siirretään edeltävän tai seuraavan _samantasoisen_ kirjanmerkin edelle tai sen jälkeen.
 
-## Siirtäminen sivusuunnassa
+### Siirtäminen sivusuunnassa
 
 Tiedostojen keskinäistä hierarkiaa saat muutettua painamalla vastaavasti samanaikaisesti pohjaan CTRL-näppäimen sekä vasemmalle tai oikealle osoittavan nuolinäppäimen. Siirto on mahdollista ainoastaan yhden tason edeltävää tiedostoa sisemmäs. Toiseen suuntaan siirto on mahdollinen korkeimmalle ylätasolle saakka.
 
 Tiedoston siirtäminen hierarkiassa ei ole mahdollista, jos tiedosto sisältää alatason tiedostoja. Alatason tiedostot on ensin siirrettävä vähintään samalle tasolle siirrettävän tiedoston kanssa (eli pois siirrettävän tiedoston alta).
 
-## Järjestyksen ja hierarkian vaikutus
+### Järjestyksen ja hierarkian vaikutus
 
 Tuodut tiedostot yhdistetään lopputuotteeseen siinä järjestyksessä, johon ne on tiedostolistassa järjestetty. Niille luodaan lopputuotteeseen kirjanmerkit, joiden hierarkia on listan mukainen (eli listassa toisen tiedoston alle sisennetyt tiedostot lisätään alikirjanmerkeiksi kirjanmerkkiluetteloon).
 

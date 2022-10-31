@@ -4,16 +4,16 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using CX.PdfLib.Common;
-using CX.PdfLib.Services;
-using CX.PdfLib.Services.Data;
+using WF.PdfLib.Common;
+using WF.PdfLib.Services;
+using WF.PdfLib.Services.Data;
 using Opus.Services.Data;
 using Opus.Services.Data.Composition;
 using Opus.Services.Implementation.UI.Dialogs;
 using Opus.Services.Input;
 using Opus.Services.UI;
 using Opus.Services.Extensions;
-using CX.LoggingLib;
+using WF.LoggingLib;
 
 namespace Opus.Services.Implementation.Data.Composition
 {

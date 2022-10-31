@@ -56,5 +56,25 @@
       href: compose/general.md
     - name: Asetukset
       href: compose/settings.md
-    - name: Profiili
-      href: compose/profile.md
+    - name: Profiilit
+      items:
+        - name: Valitseminen
+          href: compose/profile_select.md
+        - name: Yleiset toiminnot
+          href: compose/profile_actions.md
+        - name: Muokkaaminen
+          href: compose/profile_edit.md
+        - name: Poistaminen
+          href: compose/profile_delete.md
+    - name: Osiot
+      items:
+        - name: Uuden osion luominen
+          href: compose/section_create.md
+        - name: Osion muokkaaminen
+          href: compose/section_edit.md
+        - name: Osion poistaminen
+          href: compose/section_delete.md
+        - name: Osioiden järjesteleminen
+          href: compose/section_rearrange.md
+    - name: Tallentaminen
+      href: compose/saving.md

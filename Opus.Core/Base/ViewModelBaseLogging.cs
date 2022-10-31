@@ -1,4 +1,4 @@
-﻿using CX.LoggingLib;
+﻿using WF.LoggingLib;
 using Opus.Services.Implementation.Logging;
 using Prism.Mvvm;
 using Prism.Regions;

@@ -1,13 +1,8 @@
-﻿using AsyncAwaitBestPractices.MVVM;
-using CX.LoggingLib;
+﻿using WF.LoggingLib;
 using Opus.Core.Base;
 using Opus.Services.Configuration;
-using Opus.Services.Data;
 using Opus.Services.Implementation.UI.Dialogs;
 using Opus.Services.UI;
-using Prism.Events;
-using Prism.Regions;
-using System.Threading.Tasks;
 
 namespace Opus.Modules.Options.ViewModels
 {

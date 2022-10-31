@@ -1,6 +1,7 @@
-﻿using CX.PdfLib.Services.Data;
+﻿using WF.PdfLib.Services.Data;
+using Opus.Services.Base;
+using Opus.Services.Extensions;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -221,6 +222,11 @@ namespace Opus.Services.UI
                 );
             }
         }
+
+        /// <summary>
+        /// If true, children items' levels will be dropped to 1 when deleting a parent. Defaults to true.
+        /// </summary>
+        public bool DropChildrenLevelsWhenDeleting { get; set; } = true;
         #endregion
 
         #region Commands
@@ -472,12 +478,51 @@ namespace Opus.Services.UI
         }
 
         /// <summary>
-        /// Remove the selected item from the collection. Set selected item to null.
+        /// Remove selected items from the collection. Set selected item to null.
+        /// Adjust childrens' levels if applicable.
         /// </summary>
         public void RemoveSelected()
         {
-            Remove(SelectedItem);
+            if (typeof(ISelectable).IsAssignableFrom(typeof(T)))
+            {
+                if (DropChildrenLevelsWhenDeleting)
+                {
+                    foreach (T item in this)
+                    {
+                        if ((item as ISelectable).IsSelected)
+                        {
+                            DropChildrenLevels(item);
+                        }
+                    }
+                }
+
+                this.RemoveAll(x => (x as ISelectable).IsSelected);
+            }
+            else
+            {
+                if (DropChildrenLevelsWhenDeleting)
+                {
+                    DropChildrenLevels(SelectedItem);
+                }
+
+                Remove(SelectedItem);
+            }
+              
             SelectedItem = default(T);
+        }
+
+        private void DropChildrenLevels(T item)
+        {
+            int delIndex = IndexOf(item);
+            for (int i = delIndex + 1; i < Count; i++)
+            {
+                if (this[i].Level <= item.Level)
+                {
+                    break;
+                }
+
+                this[i].Level = 1;
+            }
         }
 
         /// <summary>

@@ -11,22 +11,22 @@ using Opus.Services.Data;
 using Opus.Services.Implementation.Data;
 using Opus.Services.Configuration;
 using Opus.Services.Implementation.Configuration;
-using CX.PdfLib.Services;
-using CX.PdfLib.iText7;
+using WF.PdfLib.Services;
+using WF.PdfLib.iText7;
 using Opus.Services.Input;
 using Opus.Services.Implementation.Input;
 using System.IO;
 using Opus.Services.Data.Composition;
 using Opus.Services.Implementation.Data.Composition;
 using Opus.ViewModels;
-using PdfLib.PDFTools;
+using WF.PdfLib.PDFTools;
 using Opus.Core.Executors;
-using CX.LoggingLib;
-using LoggingLib.Defaults;
+using WF.LoggingLib;
+using WF.LoggingLib.Defaults;
 using Opus.Services.Implementation.Logging;
 using Opus.Values;
-using CX.ZipLib;
-using CX.ZipLib.Framework;
+using WF.ZipLib;
+using WF.ZipLib.Framework;
 
 namespace Opus
 {

@@ -1,6 +1,4 @@
-﻿using CX.LoggingLib;
-using Opus.Services.Implementation.Logging;
-using Opus.Services.UI;
+﻿using Opus.Services.UI;
 using Prism.Commands;
 using Prism.Mvvm;
 using System.Threading.Tasks;

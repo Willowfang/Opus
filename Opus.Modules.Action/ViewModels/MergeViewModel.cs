@@ -1,8 +1,8 @@
 ﻿using AsyncAwaitBestPractices.MVVM;
-using CX.LoggingLib;
-using CX.PdfLib.Common;
-using CX.PdfLib.Services;
-using CX.PdfLib.Services.Data;
+using WF.LoggingLib;
+using WF.PdfLib.Common;
+using WF.PdfLib.Services;
+using WF.PdfLib.Services.Data;
 using Opus.Core.Base;
 using Opus.Values;
 using Opus.Core.Wrappers;
@@ -66,7 +66,9 @@ namespace Opus.Modules.Action.ViewModels
         ) : base(logbook)
         {
             // Initialize collection
-            Collection = new ReorderCollection<FileStorage>() { CanReorder = true };
+            Collection = new ReorderCollection<FileStorage>() { 
+                CanReorder = true,
+            };
 
             // Assign DI services
             this.eventAggregator = eventAggregator;
@@ -197,8 +199,9 @@ namespace Opus.Modules.Action.ViewModels
         /// </summary>
         protected void ExecuteDeleteCommand()
         {
-            DropChildrenLevelsWhenDeleting();
-            Collection.RemoveAll(x => x.IsSelected);
+            Collection.RemoveSelected();
+            //DropChildrenLevelsWhenDeleting();
+            //Collection.RemoveAll(x => x.IsSelected);
         }
 
         private DelegateCommand clearCommand;

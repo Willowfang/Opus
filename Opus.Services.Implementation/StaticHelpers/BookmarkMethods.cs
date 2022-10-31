@@ -1,15 +1,15 @@
-﻿using CX.PdfLib.Common;
-using CX.PdfLib.Services.Data;
+﻿using WF.PdfLib.Common;
+using WF.PdfLib.Services.Data;
 using Opus.Services.Configuration;
 using Opus.Services.Implementation.UI.Dialogs;
 using Opus.Services.UI;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CX.PdfLib.Extensions;
+using WF.PdfLib.Extensions;
 using Opus.Services.Implementation.Data.Extraction;
 using System.IO;
-using CX.LoggingLib;
+using WF.LoggingLib;
 using Opus.ExtensionMethods;
 
 namespace Opus.Services.Implementation.StaticHelpers

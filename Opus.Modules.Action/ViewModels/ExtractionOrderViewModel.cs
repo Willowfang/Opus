@@ -1,5 +1,5 @@
 ﻿using AsyncAwaitBestPractices.MVVM;
-using CX.LoggingLib;
+using WF.LoggingLib;
 using Opus.Events.Data;
 using Opus.Services.Implementation.Data.Extraction;
 using Opus.Services.Implementation.StaticHelpers;
@@ -12,14 +12,14 @@ using System.Threading.Tasks;
 using Prism.Events;
 using Opus.Core.Executors;
 using Opus.Core.Base;
-using CX.PdfLib.Common;
+using WF.PdfLib.Common;
 using Opus.Events;
 using Opus.Values;
 using Opus.Services.Extensions;
 using System.IO;
 using Opus.Services.Configuration;
 using Opus.Services.Input;
-using CX.PdfLib.Extensions;
+using WF.PdfLib.Extensions;
 using Opus.Services.Implementation.Extensions;
 
 namespace Opus.Modules.Action.ViewModels

@@ -1,11 +1,4 @@
-﻿using CX.LoggingLib;
-using Opus.Services.UI;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace Opus.Services.Implementation.UI.Dialogs
 {

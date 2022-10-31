@@ -16,10 +16,6 @@
     <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="6.0.3" />
     <PackageReference Include="MaterialDesignThemes" Version="4.3.0" />
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
-    <PackageReference Include="Vsxmd" Version="1.4.5">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -28,20 +24,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="CodeX-LoggingLib">
-      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\LoggingLib\bin\Debug\net6.0\CodeX-LoggingLib.dll</HintPath>
+    <Reference Include="WF-LoggingLib">
+      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\LoggingLib\bin\Debug\net6.0\WF-LoggingLib.dll</HintPath>
     </Reference>
-    <Reference Include="CodeX-PdfLib">
-      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\PdfLib\bin\Debug\net6.0\CodeX-PdfLib.dll</HintPath>
+    <Reference Include="WF-PdfLib">
+      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\PdfLib\bin\Debug\net6.0\WF-PdfLib.dll</HintPath>
     </Reference>
-    <Reference Include="CodeX-PdfLib-iText7">
-      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\PdfLib.iText7\bin\Debug\net6.0\CodeX-PdfLib-iText7.dll</HintPath>
+    <Reference Include="WF-PdfLib-iText7">
+      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\PdfLib.iText7\bin\Debug\net6.0\WF-PdfLib-iText7.dll</HintPath>
     </Reference>
-    <Reference Include="CodeX-ZipLib">
-      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\ZipLib\bin\Debug\net6.0\CodeX-ZipLib.dll</HintPath>
+    <Reference Include="WF-PdfLib.PDFTools">
+      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\PdfLib.PDFTools\bin\Debug\net6.0\WF-PdfLib.PDFTools.dll</HintPath>
     </Reference>
-    <Reference Include="PdfLib.PDFTools">
-      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\PdfLib.PDFTools\bin\Debug\net6.0\PdfLib.PDFTools.dll</HintPath>
+    <Reference Include="WF-ZipLib">
+      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\ZipLib\bin\Debug\net6.0\WF-ZipLib.dll</HintPath>
     </Reference>
   </ItemGroup>
 

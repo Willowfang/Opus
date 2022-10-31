@@ -1,6 +1,5 @@
 ﻿using AsyncAwaitBestPractices.MVVM;
-using CX.LoggingLib;
-using CX.PdfLib.Services;
+using WF.LoggingLib;
 using Opus.Core.Base;
 using Opus.Values;
 using Opus.Events;
@@ -15,7 +14,6 @@ using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -893,7 +891,7 @@ namespace Opus.Modules.Action.ViewModels
 
             string selectedName = SelectedProfile.Segments.SelectedItem.DisplayName;
 
-            SelectedProfile.Segments.Remove(SelectedProfile.Segments.SelectedItem);
+            SelectedProfile.Segments.RemoveSelected();
             options.SaveProfile(SelectedProfile);
 
             logbook.Write(

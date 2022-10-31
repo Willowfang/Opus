@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Opus.Services.UI
+﻿namespace Opus.Services.UI
 {
     /// <summary>
     /// Registry for all viewmodels that have been registered as navigation targets.

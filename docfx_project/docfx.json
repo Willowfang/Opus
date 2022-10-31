@@ -5,6 +5,10 @@
         {
           "src": "../",
           "files": ["**/*.csproj"]
+        },
+        {
+          "src": "../../../../CodeX/Libraries/",
+          "files": ["**/*.csproj"]
         }
       ],
       "dest": "api",

@@ -21,8 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="CodeX-PdfLib">
-      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\PdfLib\bin\Debug\net6.0\CodeX-PdfLib.dll</HintPath>
+    <Reference Include="WF-PdfLib">
+      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\PdfLib\bin\Debug\net6.0\WF-PdfLib.dll</HintPath>
     </Reference>
   </ItemGroup>
 

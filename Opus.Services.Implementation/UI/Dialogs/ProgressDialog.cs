@@ -1,14 +1,5 @@
-﻿using CX.LoggingLib;
-using CX.PdfLib.Common;
-using Opus.Services.Implementation.UI;
-using Opus.Services.UI;
-using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Opus.Services.UI;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Opus.Services.Implementation.UI.Dialogs
 {

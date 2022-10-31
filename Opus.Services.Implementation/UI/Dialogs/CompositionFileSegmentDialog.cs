@@ -1,12 +1,7 @@
-﻿using CX.LoggingLib;
-using Opus.Services.UI;
+﻿using Opus.Services.UI;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Opus.Services.Implementation.UI.Dialogs
 {
@@ -152,6 +147,12 @@ namespace Opus.Services.Implementation.UI.Dialogs
                     {
                         return Resources.Validation.Composition.ExpressionInvalid;
                     }
+                }
+
+                if (propertyName == nameof(MinCount) || propertyName == nameof(MaxCount))
+                {
+                    if (MinCount > maxCount)
+                        return " ";
                 }
 
                 return string.Empty;

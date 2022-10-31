@@ -1,5 +1,4 @@
-﻿using CX.LoggingLib;
-using Opus.Services.Data.Composition;
+﻿using Opus.Services.Data.Composition;
 using Opus.Services.Extensions;
 using Opus.Services.Implementation.Data.Composition;
 using Opus.Services.Input;
@@ -7,7 +6,6 @@ using Opus.Services.UI;
 using Prism.Commands;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.IO;
 using System.Linq;
 
 namespace Opus.Services.Implementation.UI.Dialogs
@@ -165,6 +163,8 @@ namespace Opus.Services.Implementation.UI.Dialogs
                 Resources.UserInput.Descriptions.SelectOpenFile,
                 FileType.PDF
             );
+
+            if (path == null) return;
 
             if (Files.Count == 0)
             {

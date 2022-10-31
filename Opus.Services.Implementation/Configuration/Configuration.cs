@@ -4,11 +4,8 @@ using System.IO;
 using Prism.Mvvm;
 using System.Threading;
 using System;
-using Opus.Services.Implementation.Logging;
-using CX.LoggingLib;
-using LoggingLib.Defaults;
-using System.Collections.Generic;
-using System.Security.Cryptography.Xml;
+using WF.LoggingLib;
+using WF.LoggingLib.Defaults;
 
 namespace Opus.Services.Implementation.Configuration
 {

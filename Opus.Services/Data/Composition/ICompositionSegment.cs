@@ -1,7 +1,5 @@
-﻿using CX.PdfLib.Services.Data;
+﻿using WF.PdfLib.Services.Data;
 using Opus.Services.Helpers;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
 
 namespace Opus.Services.Data.Composition
 {
