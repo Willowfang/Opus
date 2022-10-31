@@ -5,810 +5,6 @@
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CX.Common.Base.CommonWorkerBase-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.Common.Base.CommonWorkerBase-1.html",
-          "hash": "63tUUofiT13wRUaBuO1lCFDDaFbF/Bwg/Yc/HtXGw3w="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.Common.Base.IdClass.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.Common.Base.IdClass.html",
-          "hash": "E4rV1EAfQ4ODevmpkkP++2cyFW44+nKRV+YBwatGXGM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.Common.Base.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.Common.Base.html",
-          "hash": "eegW6oBuAyPXmWXL/5nP+IsyLhsyuQWZ2E7aXwER8kQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.LoggingLib.ILogbook.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.LoggingLib.ILogbook.html",
-          "hash": "x2TQven+NVIgPNKPahLJ6jNsHsTSBoAgEikieXTxYA8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.LoggingLib.LogLevel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.LoggingLib.LogLevel.html",
-          "hash": "tT4HvQp2spJHvxEI17wtlOn2Q7pZT5jn3aZMZ6ZcuHw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.LoggingLib.Logbook.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.LoggingLib.Logbook.html",
-          "hash": "37xoON7SoP436kv1pguOYeeZdaj8kn+AAIY57pxHoxg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.LoggingLib.LoggingEnabled-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.LoggingLib.LoggingEnabled-1.html",
-          "hash": "JEo3NhY5EU01KZMdzK6DFqk4UcGUhzhcm80Z04yA7xc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.LoggingLib.LoggingEnabled.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.LoggingLib.LoggingEnabled.html",
-          "hash": "6rSFnKbtkUor6m5gPA8kJPP3DN0pVcMl1+08ZQGGg18="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.LoggingLib.TypedLogbook-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.LoggingLib.TypedLogbook-1.html",
-          "hash": "M0Uk+p5wtwOgVzdTuuTZfub1gTzrwULI8RLn88UJxx8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.LoggingLib.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.LoggingLib.html",
-          "hash": "iXPtecQNB60oCfGT8EAHmcwd1t2yf7b5kpl9YsebuDA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Common.AnnotationOption.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Common.AnnotationOption.html",
-          "hash": "f3yN/s42n6HElZN+7DuRYg+6M1wyMJc0pFTq5eQEjws="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Common.Bookmark.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Common.Bookmark.html",
-          "hash": "3h5r23/Hn0B/6FFOYZEzd+Bhuo7xzYH+TmhMP6RtalA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Common.ExtractionOptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Common.ExtractionOptions.html",
-          "hash": "zub5Zux0Xc/u3YYDLvsWIiZHpnV1SE6bzsH7UfofLyc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Common.FileAndExtractables.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Common.FileAndExtractables.html",
-          "hash": "HlEWezD5eH4Te403NFDifYnvL44Ptr/v7M2tNRI1SqE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Common.LeveledBookmark.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Common.LeveledBookmark.html",
-          "hash": "HaNp362cS5KB4iIQaxqu7XX7JCKmPjx066cZQcMCYLg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Common.MergeInput.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Common.MergeInput.html",
-          "hash": "DpNsJew0IUNMqDDwOCW0z3fJp4ex14V/3LQFwp61U2I="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Common.MergingOptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Common.MergingOptions.html",
-          "hash": "vK7r5envRI3NH/c0kqODlE99biUxk/pbyXkq/oKxTTA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Common.PdfAConversionEventArgs.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Common.PdfAConversionEventArgs.html",
-          "hash": "2zHqCNBz7ZyuGp6vrj20ZVcYxOv5zEhXyUr0H0kxsek="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Common.ProgressPhase.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Common.ProgressPhase.html",
-          "hash": "N8jPrZtAUz5adEehXYDcq+EUKNXgYhFrYpKtqk2bQIA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Common.ProgressReport.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Common.ProgressReport.html",
-          "hash": "wvtzoUjUMBBSfy4ZkE6nZ8U4FIeUAgv2ugfmBF0N8hI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Common.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Common.html",
-          "hash": "jRVYx3QoLsbS0LSLII5yZaR9mIq6FKBxoVIZwbwgl84="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Extensions.BookmarkExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Extensions.BookmarkExtensions.html",
-          "hash": "WSL2DqMbFTx9bQPXBFifFt45SPTSZWkEWZ5FloOw+bs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Extensions.IEnumerableExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Extensions.IEnumerableExtensions.html",
-          "hash": "OepBDXTN5yp6xrrA6s/7WDdm6i2OL2fxbACPHPCugT4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Extensions.ListExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Extensions.ListExtensions.html",
-          "hash": "wNby1XDiB6IYWuCXKV9XJ50b4suQyoOtMG/Y8gYCbew="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Extensions.RangeList.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Extensions.RangeList.html",
-          "hash": "lfm4gLIl/CxSXozWIilbWWM04siW8p011U9p1v14vMs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Extensions.StringExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Extensions.StringExtensions.html",
-          "hash": "ODMRiUbuPCjTJJmedRHWW6ZDbFHaSdAPFKxDIyLgGEY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Extensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Extensions.html",
-          "hash": "nKj2VPNeN8v5nndPtqZNzodLQu1CYuboypcTKnum5fE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Services.Data.IBookmark.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Services.Data.IBookmark.html",
-          "hash": "4x3afXA132zZFp+fzT5xsgn/LdmWjXoUSYgdb+a1hkw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Services.Data.ILeveledBookmark.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Services.Data.ILeveledBookmark.html",
-          "hash": "k1tx9bpsHsTQtwFNZfXbqZ+Gzc2etgZx/q2dS0sYP/4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Services.Data.ILeveledItem.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Services.Data.ILeveledItem.html",
-          "hash": "SOT1lZ9d1mQPnlWjMp70v/Z07RqBFN3whgyymdojA7M="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Services.Data.IMergeInput.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Services.Data.IMergeInput.html",
-          "hash": "noeT9tuVVzuLkOJBMvoxwLxfocI8iV2DdwZygyhYSLc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Services.Data.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Services.Data.html",
-          "hash": "KRuS6tvZ5aP0uy4NwJ0KVkl89PQQX1MGftz23UP51g4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Services.IAnnotationService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Services.IAnnotationService.html",
-          "hash": "N31ln1+bTgOceNI60ytzgdoumb1kQpt4mQ7cBIr2qvU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Services.IBookmarkService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Services.IBookmarkService.html",
-          "hash": "F2ht7v896qzo7bmmWD7rpdhcQ1ppLtuKj5HTLB1WTfQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Services.IExtractionService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Services.IExtractionService.html",
-          "hash": "dPwO3g12a1hbggrjlR8TCXuYx4WVrDEF7CKE+pb/5qg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Services.IMergingService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Services.IMergingService.html",
-          "hash": "gLgHf5tPQL+BWOFcuiXPCAp139T/8OJ9OXEjynCfh8I="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Services.IPdfAConvertService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Services.IPdfAConvertService.html",
-          "hash": "ohoHN5kCL8T/MkpcRxQICRgik5nzZ88+L3vrPy3JO9g="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Services.ISigningService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Services.ISigningService.html",
-          "hash": "cyu6jb2FBLy2fbX4SbMdI3Cnb3AtzxdDXgkeZVIbPfo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Services.IWordConvertService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Services.IWordConvertService.html",
-          "hash": "I+SIFWrHeZXHO29xoX0kE+Ht+G8IiteE56EIpnYxU58="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.Services.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.Services.html",
-          "hash": "zOuCQXJahvpDeVZDDGFPeUh+uBbUjVYudAQ7CEZV7Ps="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.iText7.AnnotationService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.iText7.AnnotationService.html",
-          "hash": "0/KLEkDOpU6xB9SVJ71dxsGClyCsOaI+cN33TtNG7Ig="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.iText7.BookmarkService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.iText7.BookmarkService.html",
-          "hash": "z+Tn0ie1SW+CmM/U9EHUSILj6z55aJn/hf09eNXkNSA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.iText7.ExtractionService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.iText7.ExtractionService.html",
-          "hash": "h6c9jLSxOmPYWTNqnVTkqD9zZyLbmn/VxQHN4gEzxNM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.iText7.MergingService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.iText7.MergingService.html",
-          "hash": "9VlLIzvMY408xqvnZjZ1WqcO5ag8JpGMxc6nH1AzvcM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.iText7.Properties.Resources.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.iText7.Properties.Resources.html",
-          "hash": "Pf7Y3VqDuLNs/rMRmTJz1AALE++eoB5UMeduZhYF/RE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.iText7.Properties.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.iText7.Properties.html",
-          "hash": "7wLnmq1hJ+e3s8qBXEqMOHlB8mbhNl96vGYnNKVG6bs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.iText7.SigningService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.iText7.SigningService.html",
-          "hash": "jgya+RDVrbXYRHfal/7Wm/HOlRB2An68bXcVxqxguKY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.iText7.WordConvertService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.iText7.WordConvertService.html",
-          "hash": "RWCGvWTRTSNu0HckfI2KZNGlLwJ1Z0gVlpUe+rG7m00="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.iText7.WorkerBase-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.iText7.WorkerBase-1.html",
-          "hash": "eZGgnODvYy+XJHbfc/pwFsrhzTtVVkEkRsqJPwG18yI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.PdfLib.iText7.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.PdfLib.iText7.html",
-          "hash": "RNfxFu7siaZ4Pb2V0QrV/XzBlroBjj5W0CXtx9Zo3W8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.TaskManagerLib.ITaskConnection.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.TaskManagerLib.ITaskConnection.html",
-          "hash": "vsR+6xUIy2ZOzQbrsaTtE4KeIblYtlydgrBYAGNqpKA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.TaskManagerLib.ITaskManager.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.TaskManagerLib.ITaskManager.html",
-          "hash": "WYy1g9Hm/f9Ttev0j7mu8sqBmyg943kbrTCVYlKETe0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.TaskManagerLib.LiteDB.TaskManager.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.TaskManagerLib.LiteDB.TaskManager.html",
-          "hash": "58BYv8IGTupjCOQvbLpvy7EG0JiJsQfuWHJ/nd8W7bU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.TaskManagerLib.LiteDB.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.TaskManagerLib.LiteDB.html",
-          "hash": "Mw7eSTEll5wJo1k6lhYc8IIFCJqkLtWeU8OAUN1kyBQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.TaskManagerLib.TaskDeadlineItem.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.TaskManagerLib.TaskDeadlineItem.html",
-          "hash": "l6R5BqYmIPy8jy00RVnwVmBYSJXsG4WDPi1bKIzHtpA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.TaskManagerLib.TaskItem.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.TaskManagerLib.TaskItem.html",
-          "hash": "UKCcHIULmEcID2XrYGuFvpm+1Y14XclYZw8Xd0qsDVk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.TaskManagerLib.TaskPollingEventArgs.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.TaskManagerLib.TaskPollingEventArgs.html",
-          "hash": "+eFt4mmnoULTIAsnjf7u3/jAhup1Py0Er2/QQ36pQFQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.TaskManagerLib.TaskPollingSource.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.TaskManagerLib.TaskPollingSource.html",
-          "hash": "MIZM2q9BEkT2+jFzo83t0AT1+J35xwVPB+aFsZ15Kxw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.TaskManagerLib.TaskStatusItem.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.TaskManagerLib.TaskStatusItem.html",
-          "hash": "ZPeGwE3Hnv/tNRY3CQGY5ATOv2lCY8RmS05NzW+4XJU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.TaskManagerLib.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.TaskManagerLib.html",
-          "hash": "GbeEvJpge0fJP9M0FteQ0t8ZKH4q4vwI9KLUSbtJR7E="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.ZipLib.Framework.ZipService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.ZipLib.Framework.ZipService.html",
-          "hash": "CnaT0DulakNEIyDpxuPeyjQ7q3Y85sU48RuQqxjqHlQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.ZipLib.Framework.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.ZipLib.Framework.html",
-          "hash": "xSzpbdzQPOlo3E5jMeDcLEhqGih1+ivnuDRmpzrb2uk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.ZipLib.IZipService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.ZipLib.IZipService.html",
-          "hash": "iFBVHAXV9EOp5lNJBgIPjXbHHPZEKfpFgsdtdlzD+LM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CX.ZipLib.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CX.ZipLib.html",
-          "hash": "gXBTG9tjBh4sCLl+9CTI/z2w7h/Ph8byorgT1onm+rI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/LoggingLib.Defaults.EmptyLogbook-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/LoggingLib.Defaults.EmptyLogbook-1.html",
-          "hash": "Cn2TgvCI4t8+RCYv31/8ep2erpsCf0WYsSo9/OHheDw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/LoggingLib.Defaults.EmptyLogbook.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/LoggingLib.Defaults.EmptyLogbook.html",
-          "hash": "mfQR257oJ0byQkXxKXoz5HIRKgmRq40R7NVpLsEnNjM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/LoggingLib.Defaults.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/LoggingLib.Defaults.html",
-          "hash": "IzG6b9a+4gZxmx1bFY70bfl8OiJwXSLejsLAyaHq5mk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Opus.App.yml",
       "output": {
         ".html": {
@@ -1221,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Modules.Action.ViewModels.CompositionViewModel.html",
-          "hash": "RbIMZdMExP3HStajY/g77dPkmtRtrLCWeG5ISrbPdLA="
+          "hash": "ZoDlKhkTTEE5M6xSTK9ZHBe6rsTY64vihvmwTCJ6bTI="
         }
       },
       "is_incremental": false,
@@ -1365,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Modules.Action.Views.WorkCopyView.html",
-          "hash": "Hv6sCXQwPxcj3OPzoj2IbikXGCaIGtAsIELbyYBKvms="
+          "hash": "t+9Bga6L2u4RfriLyL/DUaDf7+BQ7vVkb/59NEjReG4="
         }
       },
       "is_incremental": false,
@@ -1593,7 +789,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Modules.File.Views.FileMultipleView.html",
-          "hash": "NC40ioKKQ5Ivam8e7xcJIBELCDY4iipSdHv8TNwTbAs="
+          "hash": "pfyjqIH6rjezwBc13oUA64y/Hip5RrI0rOW81HGZyRs="
         }
       },
       "is_incremental": false,
@@ -1605,7 +801,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Modules.File.Views.FileNavigationView.html",
-          "hash": "OsLynQ37s2n2qoKLr9rqI1YpRBx9TxdWP0OGo6Wgu+0="
+          "hash": "1MV/DB+UMgEPkcqflsf8eWcOl91xWLhn4kHYN5D3eMI="
         }
       },
       "is_incremental": false,
@@ -1653,7 +849,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Modules.MainSection.ViewModels.FourRegionsViewModel.html",
-          "hash": "52T9KeAqlWQ+II2KvMacGKttXJcDRNteXCKkswhS7rA="
+          "hash": "EUofSseTslqawtUuM+Hz2zQZAXg09l2atK5Emo80kDA="
         }
       },
       "is_incremental": false,
@@ -1665,7 +861,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Modules.MainSection.ViewModels.SingleRegionViewModel.html",
-          "hash": "C9Gl1KAbd2xrWSZA5NuOEoOV8FuT/bVgFtFkAdaIjEQ="
+          "hash": "lROwOx4Mocs8GvhDsu5PvoBDGYoBkMoOs/1jENSVXaU="
         }
       },
       "is_incremental": false,
@@ -1677,7 +873,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Modules.MainSection.ViewModels.ThreeRegionsViewModel.html",
-          "hash": "t6xNyKFdW+ysNVXUHiQXyJ/kP2kFQb/1wQD/JQV0mWg="
+          "hash": "OoMC3IzxpyOGyXnnIJG0emRdJhAhJ0JVaSIdxHvsxoc="
         }
       },
       "is_incremental": false,
@@ -1689,7 +885,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Modules.MainSection.ViewModels.TwoRegionsViewModel.html",
-          "hash": "v0b610FK7+1iY7V7g6a1U2/zZFeTKIru2jnttFWsLps="
+          "hash": "KCKuxfl1UMy1pwj10vUB9jSX20yEPqmjd5US5FylpnI="
         }
       },
       "is_incremental": false,
@@ -1725,7 +921,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Modules.MainSection.Views.SingleRegionView.html",
-          "hash": "YVdJS7qYIe24TPrK4MjiH/7CPMKijSl5nyE4crhOA+Y="
+          "hash": "welWIIDGg5YTCXNfxdktZYFnP9TeUHBU7dwkGVN6a/o="
         }
       },
       "is_incremental": false,
@@ -1797,7 +993,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Modules.Options.ViewModels.ComposeOptionsViewModel.html",
-          "hash": "6aQeEaotHYtJTPCYP2dySeiSFpPQ47yJeR0kFIv94EM="
+          "hash": "LpNwmE7m6oQZ5JN+GguB1Sv+3WeiyBvqqzLtaIvemms="
         }
       },
       "is_incremental": false,
@@ -1809,7 +1005,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Modules.Options.ViewModels.ExtractOptionsViewModel.html",
-          "hash": "OxgxrKVG9qgYtCN+MySXbQjJuqdeUxF2MBw+jlLnMB4="
+          "hash": "5G1qgyJW8uu/SyT3zgr9tj+dRbzlk7IraDLGh9RW3cU="
         }
       },
       "is_incremental": false,
@@ -1821,7 +1017,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Modules.Options.ViewModels.MergeOptionsViewModel.html",
-          "hash": "gBzMtKz3g9CJMun3M4rPm/4LVp4W2hO4X+gLGdaGohE="
+          "hash": "Jgvc3GPC1+PwMZCyd56eSyyTr9K1Holdgpt5sEhXrz4="
         }
       },
       "is_incremental": false,
@@ -1833,7 +1029,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Modules.Options.ViewModels.WorkCopyOptionsViewModel.html",
-          "hash": "yV322q7WB6LBLFgHWNZNDj91k/BCiJEaEPI7JtS5lQo="
+          "hash": "T5GhMNdFcmPosXgn3aeizJlavUnoyyWDVBbKKoLSKdc="
         }
       },
       "is_incremental": false,
@@ -1869,7 +1065,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Modules.Options.Views.ExtractOptionsView.html",
-          "hash": "lmA3GrB/0de+R7ghgljLCMat3XEJ461O0TmSTE/hjUc="
+          "hash": "KINT+BV3aQgRZ6Ltf9bp47bWgVEQ+pOGn383mcV6UD8="
         }
       },
       "is_incremental": false,
@@ -1893,7 +1089,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Modules.Options.Views.WorkCopyOptionsView.html",
-          "hash": "ro3jSAbllEDdzQOl58kpixVDY173Mrofaj3v2UUE6kI="
+          "hash": "uOv17/haDcn/PXbkOcIxKkYV5QUk4S6myvGG+Xg7pdw="
         }
       },
       "is_incremental": false,
@@ -1925,882 +1121,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Buttons.Composition.Menus.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Buttons.Composition.Menus.html",
-          "hash": "IfVGjiodll7IPlMWWCEkCQ7D6qXh7kSpSecq0grFq/M="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Buttons.Composition.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Buttons.Composition.html",
-          "hash": "L3SPWfryKcdJNlxea0XtiVhSJLUFk2q2CYyMLlVJ8NE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Buttons.Extraction.Order.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Buttons.Extraction.Order.html",
-          "hash": "YOTl1IpBdPV/YiIiBTUI7SsQsLeqXYjAHECpfRcNguw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Buttons.Extraction.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Buttons.Extraction.html",
-          "hash": "qmScOTHqLffVBTwauZfm8S1krX+vuGZUpMzdfTmBKP4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Buttons.General.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Buttons.General.html",
-          "hash": "PMFqVBxqEi5IyZQHqNVjV+A0ztlKvnUEZ/d0gGpo1Dw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Buttons.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Buttons.html",
-          "hash": "3rqPKmF34vkZKU9P1UEvPLSP3n9A0QELOpacxlTmM3o="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.ContextMenu.Arguments.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.ContextMenu.Arguments.html",
-          "hash": "gucQ/SSVTDFwnZ7FB/iywCdtGp51yjJCTKNz1QZU0S0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.ContextMenu.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.ContextMenu.html",
-          "hash": "YE4oLDIVBtxpfyyBqh47TYYnqlwXyX2wGzQjq978WPg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.DefaultValues.DefaultValues.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.DefaultValues.DefaultValues.html",
-          "hash": "PncfS5mmJn4qAIAz5eAvmZ9pAuN9uLNcS4wJa+bapeI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.DefaultValues.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.DefaultValues.html",
-          "hash": "NnP4i4umQEfGex7wgzkRwX0tooDIuDizU9qs8gXa9kE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Files.FileExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Files.FileExtensions.html",
-          "hash": "7UR1pTCZOs0GwquhsssOcm7ziuAiNiR+H6hNDmlUMYY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Files.FileTypeNames.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Files.FileTypeNames.html",
-          "hash": "aOfq1s0tdXhgwdNDWUjKRImLsRHFWwoQNDNVPTMSHKU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Files.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Files.html",
-          "hash": "0Cc+6zEw0HJ0eyiDpjOJbnaXygOh2hi87Y/r5rgA/CU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.HelperTexts.Extraction.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.HelperTexts.Extraction.html",
-          "hash": "7Pn/YCJOCQXZmunLrSin/kv7nYQuDXRW37zJMICWmjw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.HelperTexts.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.HelperTexts.html",
-          "hash": "1rrwAEPV+YrbiVn0JLOo93axoe7/tCYWll8E0bSvEuY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Hyperlinks.Hyperlinks.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Hyperlinks.Hyperlinks.html",
-          "hash": "t3ZUaOYB/H02CtsBxrx41npc4SPCV4PARcOP2ITSypg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Hyperlinks.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Hyperlinks.html",
-          "hash": "Fm+ryr7DGuQK0NLqxmQkZVyV6VgDXQ4ty3s5p2RXUKI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Instructions.Compose.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Instructions.Compose.html",
-          "hash": "cdDMbNAsvYo6vt4YD7EHZql7XdSaXz/IzX26+XioczE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Instructions.Merge.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Instructions.Merge.html",
-          "hash": "iJ29Sc306xSYQanSazNFXd06UuxopVNQQmZeR52LL2A="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Instructions.WorkCopy.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Instructions.WorkCopy.html",
-          "hash": "C8MVe7D5ebS5RJMUoNOH04p6AoseKDu3dcNOby4b0yo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Instructions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Instructions.html",
-          "hash": "bqDh/eNm+GG1bIywkNgA1ceSH5MBEH6tsgganmDoaPQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.Composition.Descriptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.Composition.Descriptions.html",
-          "hash": "GQIM+NoegKgPzxswmFcF5VcAn695E904c48xhuah5m8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.Composition.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.Composition.html",
-          "hash": "l6IoXRv478qpuRmJusQmWMhbNnPHWCPIIA07NZl9s6I="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.Bookmark.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.Dialogs.Bookmark.html",
-          "hash": "HRbGB5GIb81wOZJ6c2rTInUqjjqhVkH53srV8SeTgCY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionFileCount.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionFileCount.html",
-          "hash": "3GN3qph8QaYup9zRQwhweaCVNxGewnNFXt+1EGggNJM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionFileSegment.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionFileSegment.html",
-          "hash": "xPGfLLyFXctT/H+9RDyBWyTW+MkoSJVpsmuFRqNpTSc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionOptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionOptions.html",
-          "hash": "Ad67dkndHhcQY2g/oyUKdMK4HT2/4u2sqVEnvTPT/r0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionProfile.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionProfile.html",
-          "hash": "Ax8QixVlvqa7FxnXJVEYVRK6BNt6dIfZp9qoqYUlg04="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionProfileSelection.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.Dialogs.CompositionProfileSelection.html",
-          "hash": "TyHnilrz1FMmsL2BH6T9HyL4lVUpiUGX30BpuNYD9+g="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.Confirmation.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.Dialogs.Confirmation.html",
-          "hash": "xCxKVb9OGw+UK81tr9cx8wAPoMCW7KHkt+aId9PZsAM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.ExtractionAnnotations.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.Dialogs.ExtractionAnnotations.html",
-          "hash": "zKnTV/q8AlCZIgykefC0806Hi6EOQnOGAU3vr2NlTrk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.ExtractionOptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.Dialogs.ExtractionOptions.html",
-          "hash": "avVzg+uyDZUKYkfpZiO5FT1piYXrqhOmI6iaGeEJt+o="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.ExtractionOrder.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.Dialogs.ExtractionOrder.html",
-          "hash": "FRUpoKAprn6fcthES7GsYwhBKCTZDqoc0i5KP9p9pFk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.FileTitle.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.Dialogs.FileTitle.html",
-          "hash": "6X4FjpYuQaU+1MvXtH4ZnXXlbCKXgsaSSc1W3MD+bEw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.MergeOptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.Dialogs.MergeOptions.html",
-          "hash": "+bZ06p3wD9XzvbBRchWAhyRDHBpVY29sfgX2clRN4Xk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.WorkCopyOptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.Dialogs.WorkCopyOptions.html",
-          "hash": "seVBTpj0c13VO3txzTYmGd068qAWB+dTjMuFLJfvBb8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.Dialogs.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.Dialogs.html",
-          "hash": "PH/1iy10Oe9Bfc57kukpBGpjfcR9XQVSvRsyU3lV0tM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.Extraction.Titles.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.Extraction.Titles.html",
-          "hash": "GHT4Bhg6N1ebyk+Fxc/2K4eEWgTgZYmyccXb6n0gSN4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.Extraction.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.Extraction.html",
-          "hash": "fZARWSzhooyFB3IRe+wm+FWJB7ckBJB8LCKxXY7WH3Y="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.General.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.General.html",
-          "hash": "ZQB2I/mxYZAb0asNsoIq4NGsyMjv/yBb6KAVmU78Hdg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.MainWindow.HelpMenu.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.MainWindow.HelpMenu.html",
-          "hash": "N95sheoDc8Rzm/B/n5/ClnnUf4snXnOMP/iaIQ3qRtw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.MainWindow.Languages.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.MainWindow.Languages.html",
-          "hash": "IR+rj/DvAnKE490MVGHuaodeypK0oT3uUU32MpojdNU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.MainWindow.Titles.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.MainWindow.Titles.html",
-          "hash": "m93rWSORtpZ5HgBfsfIzWN3eU3rVS9bHSIOS/PS+9hA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.MainWindow.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.MainWindow.html",
-          "hash": "dC07R2RHvaS5wouxbQL0hpP7yjvFqlfnDDX/WxaRj0I="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Labels.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Labels.html",
-          "hash": "NpCrgo5yn6C2aqaS7SPq9AqgyvWW9Ek4SXN2qyTzTLU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Messages.Composition.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Messages.Composition.html",
-          "hash": "Z4poBbhUb5MzXDP4OHXI8s8V5mAdZL+ivSKenS2666E="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Messages.ContextMenu.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Messages.ContextMenu.html",
-          "hash": "gwjS1zko5wZGbK9LjMkfZqmlAllNXf5a6xsVx8ohuZw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Messages.Extraction.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Messages.Extraction.html",
-          "hash": "+z4uHLNugkAEhU5e5PTAVJ3DPGHcuq3xNQogxGJqFak="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Messages.General.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Messages.General.html",
-          "hash": "VNv7yVADmaH8Yoy55Lm2hlsXGeVUEH4VaHAxQSUNIGc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Messages.MainWindow.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Messages.MainWindow.html",
-          "hash": "mnK52uJ5Ui1fokfP3ZPIXI2doPU6qkXuZ852baEWsQY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Messages.Merging.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Messages.Merging.html",
-          "hash": "GfGLocUxffQ+s8xS0uhnFaqpBa68MMCE8JsbhiqXmUc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Messages.Signature.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Messages.Signature.html",
-          "hash": "f4fao+81Gja82mL/wv+SBB423YJV3Bv63g1coUWSV04="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Messages.StartUp.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Messages.StartUp.html",
-          "hash": "olzMtOlOd/IwXcghqyUAjGoV47H3Us2oR/IOANw1z88="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Messages.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Messages.html",
-          "hash": "YZygnT9uf+F9uP53/34tGs1xbO9udEJ4k3OCHJDwT0U="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Operations.PhaseNames.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Operations.PhaseNames.html",
-          "hash": "14l8f/mDEmfSBz/OxNPSsOqkR+UAIwoCCZnfnCcsdsE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Operations.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Operations.html",
-          "hash": "khqTOUMG7Qg+DOQ5emP5G/DKOLrrjhFXebXQDwvZVlU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Placeholders.FileNames.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Placeholders.FileNames.html",
-          "hash": "yJrVhGZ6YDeMuhkJhoXKUMu6G1Hbgbl3Gdlmj/8enF4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Placeholders.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Placeholders.html",
-          "hash": "chBk4ahqtXHt9qifWhV0Ck5mHd/b7lIc4HFE/QIUrBM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.ToolTips.Composition.Buttons.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.ToolTips.Composition.Buttons.html",
-          "hash": "4K9L0Lj1AWlughRj85meKjMDuc7MC+JxzFwvcgM5cMM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.ToolTips.Composition.SegmentList.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.ToolTips.Composition.SegmentList.html",
-          "hash": "74h7gIxwrWUoTIsi+DvMQhmre+yFjEyCZyhxUr56Qk8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.ToolTips.Composition.Settings.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.ToolTips.Composition.Settings.html",
-          "hash": "YAR4katq0f99h6OyZjtaYeW6f4grASWFFN0AzNTWNoY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.ToolTips.Composition.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.ToolTips.Composition.html",
-          "hash": "Dc2wqT1sX9FrlTWLU9unu8LfrB+urhg8IwBYeQCdEMU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.ToolTips.Extraction.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.ToolTips.Extraction.html",
-          "hash": "HwhODCVYB6PvY2y+cRTqRj3psqMamKFhyyOvW4GcLUs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.ToolTips.Main.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.ToolTips.Main.html",
-          "hash": "tYuATzdXF7TEC6YVeRCpHvt6yDUEbUBc/2+CxclZaOk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.ToolTips.Merge.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.ToolTips.Merge.html",
-          "hash": "SV9ddFvPlWahmxCoqLlIcID5o7jCuEDvba2VNPg7nVM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.ToolTips.WorkCopy.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.ToolTips.WorkCopy.html",
-          "hash": "1XqpFvUz3x2IdUsArKyEll89wMZadEarcXkv7FlYpOE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.ToolTips.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.ToolTips.html",
-          "hash": "WfNljgojedYJGPbbG5zyWYjvl9hIXXjn37DtNpmIrdI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.UserInput.Descriptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.UserInput.Descriptions.html",
-          "hash": "guQYxkivJL161i3LmtEkgsv5ocBt5xSPWAFlAPP5dkQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.UserInput.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.UserInput.html",
-          "hash": "LYCjZ7qapcvuKM8nzO1qIvqV2p1W4tNGeAxi2U9GTWU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Validation.Composition.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Validation.Composition.html",
-          "hash": "bOnMNrReN35TMvqHqkhbF195kawgWBC+lOdiXLX3v3Y="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Validation.Extraction.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Validation.Extraction.html",
-          "hash": "gTWdm5QWl9jHlONAg16Tsqni3G2A7Mt4YCjfQWAkR2U="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Validation.General.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Validation.General.html",
-          "hash": "ilIqnCxO+37F5p4a5qC8AlEBD9norHSEMiCF7UJqoWo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.Resources.Validation.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.Resources.Validation.html",
-          "hash": "0lUnUR5JgqD49UwezjDBtMWU8X8jsLzn3BzeWBPqmj4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Opus.Services.Base.IIndexed.yml",
       "output": {
         ".html": {
@@ -2817,7 +1137,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Base.ISelectable.html",
-          "hash": "R0DMyJ/ZJr4ojojSat1yHHFqOssVIYHN7gs/73+Vefo="
+          "hash": "PzLLan0bqGKhHv2zXV5uID6vRfwfwwdydLKRbWYEkbU="
         }
       },
       "is_incremental": false,
@@ -2841,7 +1161,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Configuration.IConfiguration.html",
-          "hash": "tIHPJfHhnxKJMZd2waBdsmdm4/U0T7XqnrGZ/mFmeO4="
+          "hash": "VorxL78lBu3T+BEH8Uu0ghjiVwnAXCTfUVp34EMsJ2g="
         }
       },
       "is_incremental": false,
@@ -2865,7 +1185,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Data.Composition.ICompositionFile.html",
-          "hash": "CjpIYJsNT0CgRcD9DkQ4xRh+zZJ8aZs9qxrPlgaImio="
+          "hash": "M5J2KugYXPK4q8wPtf1uG43r+GTyOX+lpCdo6omyJ+Q="
         }
       },
       "is_incremental": false,
@@ -2877,7 +1197,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Data.Composition.ICompositionOptions.html",
-          "hash": "KjLBen27dgP6s40PKyasSkH16Z/BNJLoKZGo0UikSEM="
+          "hash": "XBtFCy7d3h4JB1PkQvbuZVyWVcYWObQ38Msse2phbnc="
         }
       },
       "is_incremental": false,
@@ -2889,7 +1209,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Data.Composition.ICompositionProfile.html",
-          "hash": "aFbayf7pdFVbMiroH89RY6q3GOcChxy8GziANpF0h2Q="
+          "hash": "a5syRHuNSbvwWUSuf3iOSaf97TcEML/MvN0gV50w3jo="
         }
       },
       "is_incremental": false,
@@ -2925,7 +1245,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Data.Composition.IFileEvaluationResult.html",
-          "hash": "JRP1PQPa4+SA8GTtG+TKXnviINGw+AzD1bFdqz4catY="
+          "hash": "Pl1f9KPHOxhaVl3MUp5lCwkjDfHJrKqv8vmi1Kf7ZIk="
         }
       },
       "is_incremental": false,
@@ -2937,7 +1257,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Data.Composition.OutcomeType.html",
-          "hash": "U02Kh3oSMpyUUm00IgzYB+dzhZbsBhvDIIHqZMA1SKI="
+          "hash": "eEnHgR/rVFsRKVJBhLaRGPritBVbN9+2WtQApIvoC1k="
         }
       },
       "is_incremental": false,
@@ -2973,7 +1293,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Data.IDataObject.html",
-          "hash": "yIWfL7HRKVWqZh9+eYyrQZKOrC6HkyhIrdYgassoUnc="
+          "hash": "056DTSWPzNI1qos7khG46c/PhggGovbmkFV6XJrh2xY="
         }
       },
       "is_incremental": false,
@@ -2985,7 +1305,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Data.IDataProvider.html",
-          "hash": "dudcsuVUDyDrtUlfvFfImUnrECN1ifqSX3xn/pWBFrw="
+          "hash": "nR43h627XYe0KlO0yUX87y8/6E5uQjclxM29lk2bF0U="
         }
       },
       "is_incremental": false,
@@ -3009,7 +1329,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Extensions.EnumerableExtensions.html",
-          "hash": "BBTW6Rw0+AKz5oJaHJncqN8MEQMBGngMCpB8Lmb/QQ4="
+          "hash": "Ctqw7wTqPCxj2eG0+FIE8hYX/+lXLhy4ieblhGMS/RA="
         }
       },
       "is_incremental": false,
@@ -3081,7 +1401,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.Base.SelectableBase.html",
-          "hash": "o/ShMvMixU0b0CZlam0ae66vWQ+Re113tB6CuytY9Mg="
+          "hash": "g4IPOinCjNCBXpH7w8/x17avBBVI088gIcQnZXCPmNA="
         }
       },
       "is_incremental": false,
@@ -3105,7 +1425,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.Configuration.Configuration.html",
-          "hash": "c61GZ+SmuKVWy7sUURNhpkwwW1JMNFlHbxzRHfyTQ10="
+          "hash": "GC66XC6Bau2WByRpeXIDq91mSIUnbWcDkUOqVSgLIJU="
         }
       },
       "is_incremental": false,
@@ -3141,7 +1461,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.Data.Composition.CompositionFile.html",
-          "hash": "8/YTwMl6ujEzvoWluWsq7RzxuixiorljvnTq1ugXbw4="
+          "hash": "s+lTB0qHzrbDNnATh/crDczxcmLdwQuok9h8qMiHAA4="
         }
       },
       "is_incremental": false,
@@ -3153,7 +1473,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.Data.Composition.CompositionOptions.html",
-          "hash": "GQ/f2yugaw1P+PCPyBH2wMqe5aTxLhggBSOdU7BCa6c="
+          "hash": "m1U2GTBx9sEG85TkiXR8nauVOQGcJd1Mwe7I9jwwi+o="
         }
       },
       "is_incremental": false,
@@ -3165,7 +1485,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.Data.Composition.CompositionSegment.html",
-          "hash": "m1ddQ9WUpR4ssifi5NdGruw09hrTtanGAJvpmMVM91Q="
+          "hash": "wnGD4zv0bP6C7p+4/tk0ltXbKlczY3wrhtSx2xHznoM="
         }
       },
       "is_incremental": false,
@@ -3177,7 +1497,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.Data.Composition.CompositionTitle.html",
-          "hash": "uXwWoxci3sDf4M2Dt0tQ652FnjzTnZAnCYOuJaY/tuU="
+          "hash": "IItnahJ98urUlPfGCVtHxIuBhCGnGegxYpYmrKPyG3I="
         }
       },
       "is_incremental": false,
@@ -3189,7 +1509,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.Data.Composition.EvaluationResult.html",
-          "hash": "tCQ1lA4KHhFQ26ncM/aKq3c91WjZWukqNx8gln/J87g="
+          "hash": "OCe11uLa619q8qf5fVeW8/QZ8UCZV0TC4OMZ8OGbOvs="
         }
       },
       "is_incremental": false,
@@ -3225,7 +1545,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.Data.DataObject-1.html",
-          "hash": "R+g512iHDuz+aQihtQ5XhRRZNvCVJVEmoVPuvbhdf7g="
+          "hash": "zwpVXid+WvcsME8j4AHT0gCx5UrvwxYA1ghjKBIYUug="
         }
       },
       "is_incremental": false,
@@ -3285,7 +1605,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.Extensions.FileAndBookmarkWrapperExtensions.html",
-          "hash": "aRDPDnPrQ2xBdXC8uopoXP/nAd2HC6mwAHoREn9ndRg="
+          "hash": "ZvZdl372K2HrOdVHBbLXifmMH6U2xxuhxz6JT5wMy/Y="
         }
       },
       "is_incremental": false,
@@ -3309,7 +1629,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.Input.PathSelectionWin.html",
-          "hash": "p+EXvbymNfe8ix0QYuSazIxQikFpBMrP4pj2/UM6WBk="
+          "hash": "BlaS97goMVknoffZ2boxvGBoIBHuvHNG6KfzBjP+uEs="
         }
       },
       "is_incremental": false,
@@ -3333,7 +1653,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.Logging.LoggingCapable-1.html",
-          "hash": "iWqAeMPP4TNe2p7EBC+WthdGmqoj8Fe1F9ualC36tQw="
+          "hash": "LUQHxWcXvrcdp+xEGqZ3ZknrdqHNmhJ5Yk51n2Bfec4="
         }
       },
       "is_incremental": false,
@@ -3345,7 +1665,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.Logging.SeriLogbook.html",
-          "hash": "i/0QFZfyiH0dgKt0zsZDaRvEgFl87UtIQZvy0VkEstA="
+          "hash": "NfK891QgywAsk9o5rwsC8Hti/qUnUsomiwJZiOY4hJI="
         }
       },
       "is_incremental": false,
@@ -3393,7 +1713,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.UI.DialogAssist.html",
-          "hash": "kQZzXxUM27MJYo43jG6Km58RNjzVhq0ZGf4ifNmCXI0="
+          "hash": "paRx9BSryOCwxOHCnFIpiFYIbT+BgH0wikceegmwga4="
         }
       },
       "is_incremental": false,
@@ -3405,7 +1725,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.UI.DialogBase.html",
-          "hash": "oZIu5Wkn46oZHhR8dE005DoUmqgcTls/PEVDyCEX5R8="
+          "hash": "sSht6+TJTjhPq3z49jjcwHwQZXts8PkRJUhW4FjELHo="
         }
       },
       "is_incremental": false,
@@ -3417,7 +1737,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.AnnotationCreator.html",
-          "hash": "T7Fdyi/pKpu5hjYB0jDIy8u3Y9aqUtaUJei7etBkdDM="
+          "hash": "0dr78yuXSW48GvWFSaPuQ1EcZahltna8r3GfDaUKmzc="
         }
       },
       "is_incremental": false,
@@ -3441,7 +1761,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.CompositionFileCountDialog.html",
-          "hash": "AZxDyjyvStm6YcbYj5QrsEymwTGCu/UwifhI3C+7jfY="
+          "hash": "OwuqIBFdbTiZlzbChViUUHvYKphjMfJzLmVbIoNgV5c="
         }
       },
       "is_incremental": false,
@@ -3453,7 +1773,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.CompositionFileSegmentDialog.html",
-          "hash": "SNCGLVqgZ6umOiFggDNSej+a8TpRdh3VfH1kJSyqLng="
+          "hash": "8pfybnxHshquO+CQ6bXn/thvT6rEEOWkF0NwzcNh2j8="
         }
       },
       "is_incremental": false,
@@ -3477,7 +1797,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.CompositionProfileSelectionDialog.html",
-          "hash": "7/06r8ZIXFFVU77kCYzuEPrSekTuORgw3DvDH//PP3o="
+          "hash": "4vjGq96V/twc6YPpJrckDiS4OnZ2iFUA5/1/858y9EI="
         }
       },
       "is_incremental": false,
@@ -3489,7 +1809,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.CompositionSettingsDialog.html",
-          "hash": "CIq05V15HFzrciR84xdGdyKVHLsWK4Xj+aEGpqGMraM="
+          "hash": "5L7rYff+EPbypGi6n74JAcysBuxNtXk+xoaZG3S/o1M="
         }
       },
       "is_incremental": false,
@@ -3501,7 +1821,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.CompositionTitleSegmentDialog.html",
-          "hash": "NUPwgxwpD44QiJl67ol+qQFz5Y/KxlLHfEK8t6WIg4M="
+          "hash": "LFbJ8XTlZDuuR64z5pkCOobBrGJIQhb+sz0xYWlZ+Wo="
         }
       },
       "is_incremental": false,
@@ -3513,7 +1833,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.ConfirmationDialog.html",
-          "hash": "sNW8WxvfRiyE+2defWYoIc9RBOwskaPXcRmISSuP6yM="
+          "hash": "df1vhQNciJmRrSNwEQejrMl3e5ByOam0gxWCNOwIUMk="
         }
       },
       "is_incremental": false,
@@ -3525,7 +1845,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.ExtractAnnotationsDialog.html",
-          "hash": "vk8Dy2PhqO0bzQ86neHgioehZudiakPxGgcg2F1Fh9Y="
+          "hash": "WtVyfQEVpgYa+NNsBza8F0Ev8AuHjYTczT/jV+w4GWE="
         }
       },
       "is_incremental": false,
@@ -3561,7 +1881,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.FileTitleDialog.html",
-          "hash": "5LKuwAjN4UVOxH07Jf/UI2gGts3rfWOc16Vk7T2bHUw="
+          "hash": "rG6tAb0JlT/L+ZGVuxfh/Kd3zrCRCdaN7DH1myRWyy8="
         }
       },
       "is_incremental": false,
@@ -3573,7 +1893,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.MergeSettingsDialog.html",
-          "hash": "RwMBED3rzpW5odxJNcf0yS7ELbvI2QCTa8quogAZlck="
+          "hash": "NadquNGtQ09P3Gl/xUoyg/wpuuEfPnPEb/XCritcQe0="
         }
       },
       "is_incremental": false,
@@ -3585,7 +1905,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.MessageDialog.html",
-          "hash": "hYrUXfh+JL0b8uDAsCCYHrwiq5OYoLdZLEZ/0S4iwv0="
+          "hash": "+WiPrJNH/uCsUvAGH5r26/qDf/op7VxfyFAVUUHZqSc="
         }
       },
       "is_incremental": false,
@@ -3597,7 +1917,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.ProgressDialog.html",
-          "hash": "uEBrBkmT+IJlE/fP9YP1U9MWhCucxQ97QFh2wWpc3GQ="
+          "hash": "DtF1sjnHpUTneQ/Z9idbnTW9+a48NaytC5diRmVLcBQ="
         }
       },
       "is_incremental": false,
@@ -3609,7 +1929,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.UpdateDialog.html",
-          "hash": "RfB+WmV3pRbozUbc6nzch0RJzAjopZSkRoca3mf3kFA="
+          "hash": "bH7K1pY8KuEUobWShCq6XzfiLP/OvbW06JNc9cyU3RU="
         }
       },
       "is_incremental": false,
@@ -3621,7 +1941,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.Implementation.UI.Dialogs.WorkCopySettingsDialog.html",
-          "hash": "+jOwSPDLnfu0DORTqfK+iwEB4+RCrt7cW4x+kEXotx4="
+          "hash": "bIds+htBEr+TodssC4x0DfhLUBvSX3P6iw5oBdDhKYo="
         }
       },
       "is_incremental": false,
@@ -3741,7 +2061,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.UI.CollectionItemAddedEventArgs-1.html",
-          "hash": "YCWNIWYcsHBxsmsFeXSpZFY9m7h9mSeZu722jcibpuc="
+          "hash": "9tWqOa4AR4XoGf3ea4aBbpCuff90B3ybYV5gjy26szg="
         }
       },
       "is_incremental": false,
@@ -3753,7 +2073,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.UI.CollectionReorderedEventArgs.html",
-          "hash": "MZMlAj/diPDxhcTh6Ros4qXvQZGQGZGYy/y55QtPbwI="
+          "hash": "NjpEPxY5CsGUVHEJYDouF5P3kTljZqUXV1IP2xZ6Ksg="
         }
       },
       "is_incremental": false,
@@ -3765,7 +2085,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.UI.CollectionSelectedItemChangedEventArgs-1.html",
-          "hash": "Mgwfe94U0ivrP9Zu5iEGVxFsl5G1DrZdLVquHExb2I8="
+          "hash": "eyucuWmobzf0zOWFkGlB+Iq9B+9fox/djoS2zTmkMHQ="
         }
       },
       "is_incremental": false,
@@ -3777,7 +2097,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.UI.IContextMenu.html",
-          "hash": "Eva8FhWyQ+BTgDzKe9C1dxpMrdncdOQsiaogpNODEDA="
+          "hash": "wLTIrfxAJ0EwAkSbyfxwbjMYUT6xk1/u2admN40pNfE="
         }
       },
       "is_incremental": false,
@@ -3801,7 +2121,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.UI.IDialogAssist.html",
-          "hash": "XaNrQjiQAfFv8yJeb1/Eeb2jVMqkZUwT3myszNKx0bU="
+          "hash": "F4k/pidojTQuKk1d/63xiBYfTjv6RfCLQ+S61JS6a6Q="
         }
       },
       "is_incremental": false,
@@ -3813,7 +2133,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.UI.INavigationAssist.html",
-          "hash": "bBAxKCjZmedQtM8xcHUKrICD9t2fUF+vRJIGGUY8rug="
+          "hash": "Jy906cSqdwvuR2tNfdN5Vqpc9lSO12rV5/BQx20xVv8="
         }
       },
       "is_incremental": false,
@@ -3825,7 +2145,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.UI.INavigationTarget.html",
-          "hash": "rGyL6xNO9m6QmbVFaYQYGVTPhIrSpYQ/Az9aiov2AKQ="
+          "hash": "pRvvzU8nBRHSIvjpB911CV4cN7C8Ly3TsNN9X8F42lY="
         }
       },
       "is_incremental": false,
@@ -3837,7 +2157,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.UI.INavigationTargetRegistry.html",
-          "hash": "8RpPtlgHysgPh9udv0x/DCZcpSoMiC+j847D4KkdaDs="
+          "hash": "t5Bw9nsGLjRhb2zw4MVh4SJL1BXUWl03jz63WnNljcc="
         }
       },
       "is_incremental": false,
@@ -3849,7 +2169,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.UI.ISchemeInstructions.html",
-          "hash": "FovjokI/mbc0qYtyMFYg1LcNmQyNpllCwdmKZ1WXuvs="
+          "hash": "fb2FeuUu9F7PR6TIIUK2+xfQqSoX1OmmmSBwQ+6wlVQ="
         }
       },
       "is_incremental": false,
@@ -3861,7 +2181,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.UI.Instruction.html",
-          "hash": "A8Ljkg96K2LowYPjz65YvyC2Tmm0zS0s4QM/W+8vvuQ="
+          "hash": "/HY9dH1TfQxrR/kmVVKriiZBYbsYJuNAAYej3bZmqDM="
         }
       },
       "is_incremental": false,
@@ -3873,7 +2193,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.UI.MoveCommand.html",
-          "hash": "keid9ZWc+8ApDO2jvBMRdg8YlkyKm6trhbstQ9qd6/Q="
+          "hash": "PZEptBZte3YL+mH0ww+d1odc0vnQXXfRoqAR/pSEcZA="
         }
       },
       "is_incremental": false,
@@ -3885,7 +2205,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.UI.ProgressContainer.html",
-          "hash": "6/haKVbXgqyIBXthMvVPTfLuoTlT8UEg+mhUDXvgtxA="
+          "hash": "grFjj5e4tEs1NT7aCVZez6HFJbUKzpJUyG+p1gjzq6Q="
         }
       },
       "is_incremental": false,
@@ -3897,7 +2217,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.UI.ReorderCollection-1.CollectionItemAddedEventHandler.html",
-          "hash": "NjQZ+WrIZNHUuCVKiDlaCLZccAji3xfkJHYeqin5mwQ="
+          "hash": "onVoT9bYoQyHgCvLAyG6epGmYaxyIYzY2krpH+IwfZQ="
         }
       },
       "is_incremental": false,
@@ -3909,7 +2229,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.UI.ReorderCollection-1.CollectionReorderedEventHandler.html",
-          "hash": "CtLhvC/eC2l4GFA211m/Z1jfLdeqkiKLGXJGa3xp9uA="
+          "hash": "Vy/l6gLb/sHq8z5u68hglP8jKfvIkItfeqiN+n90jCQ="
         }
       },
       "is_incremental": false,
@@ -3921,7 +2241,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.UI.ReorderCollection-1.CollectionSelectedItemChangedEventHandler.html",
-          "hash": "XvoCm7ayLrsSj2j1E524LK06KG04URDu6KoMqEk+Ar0="
+          "hash": "jZF4tW+MKn8+/PVfmYvX3jRHkMIDiJV3/BI4m7EOiB4="
         }
       },
       "is_incremental": false,
@@ -3933,7 +2253,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Services.UI.ReorderCollection-1.html",
-          "hash": "hx3Ul9dT/YZhAKydNgbepL6J1whBkJZleY5U6GHuXGM="
+          "hash": "zuChOPDbzmb7cwAvQM54yAS+rPILn6t3W7aBpvL587M="
         }
       },
       "is_incremental": false,
@@ -3957,7 +2277,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Opus.Styles.Controls.OrderList.html",
-          "hash": "jq8zdxQA6xVAl6sbngdnabKcz+fACCDQAAUsEG0ew/A="
+          "hash": "Wi8cv745/ga0UPUcdV4EoSgAiodHufPIfkV/sZDihlY="
         }
       },
       "is_incremental": false,
@@ -4193,30 +2513,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Opus.UpdateInfoCreator.UpdateInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.UpdateInfoCreator.UpdateInfo.html",
-          "hash": "bytpw9ES1j5rVRn/znJQcEwNoBZdPDjVDJSrGqAIbnY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Opus.UpdateInfoCreator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Opus.UpdateInfoCreator.html",
-          "hash": "ko6xH9ThqsTSnWRI9Czht4dCNj65zckRsu9DJVV18Ms="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Opus.Values.FilePaths.yml",
       "output": {
         ".html": {
@@ -4361,11 +2657,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PdfLib.PDFTools.PdfAConverter.yml",
+      "source_relative_path": "api/WF.Common.Base.CommonWorkerBase-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PdfLib.PDFTools.PdfAConverter.html",
-          "hash": "unKWHVnEI5MSCb2EvJI3J9Gz3pxTD931nLvrhvr902w="
+          "relative_path": "api/WF.Common.Base.CommonWorkerBase-1.html",
+          "hash": "3/EK8moiGLodcOaEyznOrpQAqeQXUq3juRgPtvpARaM="
         }
       },
       "is_incremental": false,
@@ -4373,11 +2669,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PdfLib.PDFTools.yml",
+      "source_relative_path": "api/WF.Common.Base.IdClass.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PdfLib.PDFTools.html",
-          "hash": "myKor9FNEjx8g9lFxu6F2m+M+1c0j9o+bP79C1SiIXs="
+          "relative_path": "api/WF.Common.Base.IdClass.html",
+          "hash": "KCm99VCpnMZXX1DhvHNkN/ZRBjKTGGGpafWEQ0l2HR4="
         }
       },
       "is_incremental": false,
@@ -4385,11 +2681,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PdfLibTests.Annotations.yml",
+      "source_relative_path": "api/WF.Common.Base.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PdfLibTests.Annotations.html",
-          "hash": "jZj5Of4pChkSlubVO2hadij0XE31iQOJCXTFYxTGUhk="
+          "relative_path": "api/WF.Common.Base.html",
+          "hash": "dcnoio+cTwrIky7px2XOyJ3aVc2sZad8pBnOaRnaOUA="
         }
       },
       "is_incremental": false,
@@ -4397,11 +2693,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PdfLibTests.ExtractionPdfa.yml",
+      "source_relative_path": "api/WF.LoggingLib.Defaults.EmptyLogbook-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PdfLibTests.ExtractionPdfa.html",
-          "hash": "v5iwlbdrTt/sUmt4I/EFeywzc3c8VbbGLUFLlAU7t0A="
+          "relative_path": "api/WF.LoggingLib.Defaults.EmptyLogbook-1.html",
+          "hash": "9fWdQMldW4tg/UqDrrjcLu1AA/ef3Ik1aIyNkIpMw1M="
         }
       },
       "is_incremental": false,
@@ -4409,11 +2705,755 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PdfLibTests.yml",
+      "source_relative_path": "api/WF.LoggingLib.Defaults.EmptyLogbook.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PdfLibTests.html",
-          "hash": "DGeQogCtGaY8CoRVHPriNRoHrnhyOLKNIX50o1TMZdE="
+          "relative_path": "api/WF.LoggingLib.Defaults.EmptyLogbook.html",
+          "hash": "PT3rUXf7Cd5PwIY4XYlc1gGE89Sdw7BLn8DQz/8IjjA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.LoggingLib.Defaults.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.LoggingLib.Defaults.html",
+          "hash": "ZkmuwnWLZwr2Ws5aR0Kpfl4BezEUGKtallJMdL/vhVc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.LoggingLib.ILogbook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.LoggingLib.ILogbook.html",
+          "hash": "u1AuAFVZnZ10FaTTd57TUhfW/VzKDB1z/637rUfvqho="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.LoggingLib.LogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.LoggingLib.LogLevel.html",
+          "hash": "kKMjtu+O8PASlelWq7mz5nDTsJWuj+9Iv8gIoEVao6E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.LoggingLib.Logbook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.LoggingLib.Logbook.html",
+          "hash": "ceT4r6YzVm1ZvsVBZrCOBoos1rzMus7IZzd5S2phMaQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.LoggingLib.LoggingEnabled-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.LoggingLib.LoggingEnabled-1.html",
+          "hash": "Rm7giYS71OPxaJWtVATP6Ujx8Rp2h3kJvqMgN5E9kyY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.LoggingLib.LoggingEnabled.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.LoggingLib.LoggingEnabled.html",
+          "hash": "HgDacmFN3JMh+HDDjjPqxGHnI1256KVnsG7JDwNgnVA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.LoggingLib.TypedLogbook-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.LoggingLib.TypedLogbook-1.html",
+          "hash": "PPXTspSJLY6RdnUxxLKsd0DbjkBVD8vVh/JKnO93lIg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.LoggingLib.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.LoggingLib.html",
+          "hash": "qkDl2TlSwDLI+4QFgKhRGezVdP8INIh4qGQvSvXzfFk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Common.AnnotationOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Common.AnnotationOption.html",
+          "hash": "1zy6Km80jChIYdSvrAmsMjMgOIJYzOFAoB7MfJjDDX0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Common.Bookmark.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Common.Bookmark.html",
+          "hash": "/mm1mkUNhrUcCElqhxAwiiyhBaW+NfQVPZi4mSoO2NA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Common.ExtractionOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Common.ExtractionOptions.html",
+          "hash": "+yxntV8YXXe58IbDh5fp3S2o81PIAXFAZSLlJRKUAp8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Common.FileAndExtractables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Common.FileAndExtractables.html",
+          "hash": "W2omuMzkxCTTcNgQoqL2aW29tTM1UrWiWzSIMzcOtSQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Common.LeveledBookmark.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Common.LeveledBookmark.html",
+          "hash": "TwljVXy8+jtbLzxQeSV6DztPccZJOzn21E9lwEEKbL8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Common.MergeInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Common.MergeInput.html",
+          "hash": "7jDyfOF0zLUD4jJskrhZKM9FITTMmV6i7yTyz2vXyn4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Common.MergingOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Common.MergingOptions.html",
+          "hash": "yia9l3ozw4tRfaje6MCIHZm7raL4Eo3MqtR1dZp0j8Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Common.PdfAConversionEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Common.PdfAConversionEventArgs.html",
+          "hash": "4W9ZSvFrKWgr1vOoP7lKLPAU2aPMgNBr/V0hQvBqvAI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Common.ProgressPhase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Common.ProgressPhase.html",
+          "hash": "w1mX+J55SSOMiS67Ey9JiuKAXY5ZQmiCDzjnUEZcdTQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Common.ProgressReport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Common.ProgressReport.html",
+          "hash": "NsTjL2YoxiVDxsitPecbtNEkmlB8Rj9LmE95Tc3CJak="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Common.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Common.html",
+          "hash": "3TTFTTb674W9kXHpB+CynIKsMV2D8dMBZh+N+phT5Y0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Extensions.BookmarkExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Extensions.BookmarkExtensions.html",
+          "hash": "C8YpwxGqOxx4WtGvjzRcCHhjK4nANYUC8FN9OqTrcEk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Extensions.IEnumerableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Extensions.IEnumerableExtensions.html",
+          "hash": "uDICOowGPzhgqoSLB7QduBlvFzpEvmWxCSizmNLDF00="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Extensions.ListExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Extensions.ListExtensions.html",
+          "hash": "KAGW7WZQaJu/QqQBxuAMi7qGACIGsgOxaGgEeZJp0RI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Extensions.RangeList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Extensions.RangeList.html",
+          "hash": "P+xmFWa4KTPcmzNPHqMcro5WD0qvBuSbMpboa0HRn9Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Extensions.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Extensions.StringExtensions.html",
+          "hash": "osvePA58agAS+DIWMo8dLSvuxdkMEPTbMmPiph+q4ms="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Extensions.html",
+          "hash": "r2AFoLn6V+rPugGrtipg8OVswJMV6EOOU49btB53A/c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.PDFTools.PdfAConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.PDFTools.PdfAConverter.html",
+          "hash": "nQ7mxhdKzYv8E3IGdmE0Qa5vp+hKxZ+L9vy/3TxraBI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.PDFTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.PDFTools.html",
+          "hash": "MLiQ6Q2QYgiUfH2sebFgPh9xJ8sh8OyUvYyx3lfBlTg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Services.Data.IBookmark.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Services.Data.IBookmark.html",
+          "hash": "AcCpJrhvM5ncCGrbBWD+C35uECIXLEusOG8UwQIy5mo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Services.Data.ILeveledBookmark.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Services.Data.ILeveledBookmark.html",
+          "hash": "fkkveryF3coxWNwIa0IkMxf32Qa2T/yxidqflVsXyOQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Services.Data.ILeveledItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Services.Data.ILeveledItem.html",
+          "hash": "254Gc59rEI0ZWEstuBsQHPsPHZGQ/RJQEMpZ+XVWL5s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Services.Data.IMergeInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Services.Data.IMergeInput.html",
+          "hash": "gMpN0U1J3iVOnphs25ZU7HTdrbR7N+2oAEc88PFmYHE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Services.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Services.Data.html",
+          "hash": "GF8H88Di9/CRKlKmq0p+YMMGUaDfWOhooUYeZYNRnuU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Services.IAnnotationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Services.IAnnotationService.html",
+          "hash": "IVoVZU5TGA/mM1/MTTMQ/xPx1k/oyM+Z62RRJ2Kzv4Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Services.IBookmarkService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Services.IBookmarkService.html",
+          "hash": "uwXbAeguJVZmP+Qd2nspuPFSilRaNodUJbgbcWQHtIY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Services.IExtractionService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Services.IExtractionService.html",
+          "hash": "dKo0m98fVWhjAlRgA0ONPfZqeN0n1EKvWFBUNpICUUk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Services.IMergingService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Services.IMergingService.html",
+          "hash": "1PG2F1slWKsZGVWJOuEVEI9jx17i7ZwHO5Hc3o1thzA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Services.IPdfAConvertService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Services.IPdfAConvertService.html",
+          "hash": "ewgCdfwzG0w/j7xKalsszH62/yvNOlbFMdxw2COFous="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Services.ISigningService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Services.ISigningService.html",
+          "hash": "faHuGulsDHI+zOSbNoyAZUHAlJfjW36rddjs0iKyeUk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Services.IWordConvertService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Services.IWordConvertService.html",
+          "hash": "lwL8NkqoWUPgyiwJwreCGv8J1+wjqRiz6kI53fjBUOY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.Services.html",
+          "hash": "IuQ0MO1A2rptNOA3haQP+aYIIjb85priJFBeimO2HSc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.iText7.AnnotationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.iText7.AnnotationService.html",
+          "hash": "vc2Vr1uMCa82a02XyOxHY/cAmexeTCJn4cnLPwTRPFQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.iText7.BookmarkService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.iText7.BookmarkService.html",
+          "hash": "9hEb9ut9x4LAVrLLKiqXA9B7fAaCGqlX9OK1Q1RC/Go="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.iText7.ExtractionService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.iText7.ExtractionService.html",
+          "hash": "PRlCaSVQXjQdZWXCehVeT3Y3YTeDqEhF8bfz1WO0kfY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.iText7.MergingService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.iText7.MergingService.html",
+          "hash": "Aq3j8Ms+lo4tIQvszCcvf4BnsGh1tZuZyOFBgAOKruE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.iText7.SigningService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.iText7.SigningService.html",
+          "hash": "AxPbdp8Vhm1o6fPfivH3nBoXBL++xARNciuf/VfyShA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.iText7.WordConvertService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.iText7.WordConvertService.html",
+          "hash": "OIx6lr5xN+ovvje4r4cD9zgJU/g1cVIxLywrjo7+6ms="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.iText7.WorkerBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.iText7.WorkerBase-1.html",
+          "hash": "OWHksg4e/5EPQ5jUZP1k6GLHcnDYci4W9yR0NBk9ghU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.PdfLib.iText7.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.PdfLib.iText7.html",
+          "hash": "qd+CRjctboBQtYl8BgsL4ZplITNsHBra2Cdd62rR/aA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.TaskManagerLib.ITaskConnection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.TaskManagerLib.ITaskConnection.html",
+          "hash": "GEseOpik6ZrOYDNliFY/b1/Ln1HpLDAFC7GtfzUYYkQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.TaskManagerLib.ITaskManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.TaskManagerLib.ITaskManager.html",
+          "hash": "Crv/0JGBLAEICwVX0D0QRas9TJio1KKyYcgfEuwtknQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.TaskManagerLib.LiteDB.TaskManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.TaskManagerLib.LiteDB.TaskManager.html",
+          "hash": "c/eCJreS+oqt3xvyfpbmRnVervujiNju1SmdkiHk+as="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.TaskManagerLib.LiteDB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.TaskManagerLib.LiteDB.html",
+          "hash": "VQKcX5N1Mg1yjJKdJCAfYjpuRboFWBd/N5Qx7R6kcF0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.TaskManagerLib.TaskDeadlineItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.TaskManagerLib.TaskDeadlineItem.html",
+          "hash": "2lN98b+WgnSExNbyjG0cytcrW2AzGEtzT/tVgt+vLlo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.TaskManagerLib.TaskItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.TaskManagerLib.TaskItem.html",
+          "hash": "kQbfHiIo5UCJ6/Lx9SlU4EN2YnSro2e9S5uQNrrScrA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.TaskManagerLib.TaskPollingEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.TaskManagerLib.TaskPollingEventArgs.html",
+          "hash": "SIoysWypiONVce4MWLW5NTOy+UmYb9YkVWupojSVdUg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.TaskManagerLib.TaskPollingSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.TaskManagerLib.TaskPollingSource.html",
+          "hash": "mZa5vsX2U3rZwpNGRNWzrd/dNXROsusX/PXabJ2UGYU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.TaskManagerLib.TaskStatusItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.TaskManagerLib.TaskStatusItem.html",
+          "hash": "zQhqrg8aH0Y2HF2Q58m7OOJOqSlg1kyOP538HBqtvm4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.TaskManagerLib.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.TaskManagerLib.html",
+          "hash": "W14EZgmQeFuLHRV0XQMVTUb+9ziY60gah3OPIZkK+CI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.ZipLib.Framework.ZipService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.ZipLib.Framework.ZipService.html",
+          "hash": "V2a9CzpcKJTC4sr4rrEDEW0lLV+fwoHjOuMWNCXOCkE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.ZipLib.Framework.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.ZipLib.Framework.html",
+          "hash": "vz+yVBYFyIBecykyZzLnCRbMbalMOuKFZqwg4T4pj0U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.ZipLib.IZipService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.ZipLib.IZipService.html",
+          "hash": "xWa6vZkC2fOyUUo3+eCMjOnKJUg0u27RSdhdgtvhgQU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WF.ZipLib.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WF.ZipLib.html",
+          "hash": "Rbem4yGRyfRLOT/0UiSMsqnseuoYE5I9qKMpZB4TtnY="
         }
       },
       "is_incremental": false,
@@ -4440,7 +3480,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "WVZv7Fvz9VgFEKVU/vlVjXJ9S3AYDL1aO6mbRdD2BQo="
+          "hash": "drwbrwvPiOTLRXi9Lg+4oZn/k/nZV3YsQWKdkMHMNzU="
         }
       },
       "is_incremental": false,
@@ -5661,8 +4701,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 368,
-          "skipped_file_count": 243
+          "total_file_count": 288,
+          "skipped_file_count": 288
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

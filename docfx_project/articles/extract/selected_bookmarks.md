@@ -11,7 +11,7 @@
 </div>
 </details>
 
-Valitsemasi kirjanmerkit näkyvät näkymän oikean laidan luettelossa. Kyseiset kirjanmerkit eivät enää näy [tiedoston kirjanmerkkiluettelossa](file_options#käsiteltävän-tiedoston-valitseminen), jotta niitä ei voisi valita kahteen kertaan.
+Valitsemasi kirjanmerkit näkyvät näkymän oikean laidan luettelossa. Kyseiset kirjanmerkit eivät enää näy [tiedoston kirjanmerkkiluettelossa](file_options.md#käsiteltävän-tiedoston-valitseminen), jotta niitä ei voisi valita kahteen kertaan.
 
 Kustakin kirjanmerkistä on näkyvissä seuraavat tiedot:
 

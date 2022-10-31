@@ -4,11 +4,13 @@
       "src": [
         {
           "src": "../",
-          "files": ["**/*.csproj"]
+          "files": ["**/*.csproj"],
+          "exclude": ["**/Opus.Resources/**", "**/Opus.UpdateInfoCreator/**"]
         },
         {
           "src": "../../../../CodeX/Libraries/",
-          "files": ["**/*.csproj"]
+          "files": ["**/*.csproj"],
+          "exclude": ["**/PdfLibTests/**"]
         }
       ],
       "dest": "api",
