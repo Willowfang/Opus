@@ -281,7 +281,8 @@ namespace Opus.Services.Implementation.Configuration
                 CompositionSearchSubDirectories = true,
                 ExtractionTitleAsk = true,
                 GroupByFiles = true,
-                WorkCopyFlattenRedactions = true
+                WorkCopyFlattenRedactions = true,
+                UnsignedTitleTemplate = Resources.DefaultValues.DefaultValues.UnsignedTemplate
             };
         }
 

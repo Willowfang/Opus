@@ -18,6 +18,7 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Opus.Values;
 
 namespace Opus.Core.Executors
 {
@@ -98,6 +99,8 @@ namespace Opus.Core.Executors
                 await ExtractFile(arguments);
             else if (operation == Resources.ContextMenu.Arguments.WorkingCopy)
                 await CreateWorkingCopy(arguments);
+            else if (operation == Resources.ContextMenu.Arguments.WorkingCopyMultiple)
+                await CreateWorkCopyFolder(arguments);
             else if (operation == Resources.ContextMenu.Arguments.Compose)
                 await Compose(arguments);
             else if (operation == Resources.ContextMenu.Arguments.ConvertToPdfA)
@@ -152,7 +155,7 @@ namespace Opus.Core.Executors
                 string selectedPath = Path.GetFullPath(destinationPath);
 
                 if (originalPath.Equals(selectedPath, StringComparison.OrdinalIgnoreCase) == false)
-                    File.Copy(filePath, destinationPath, true);
+                    System.IO.File.Copy(filePath, destinationPath, true);
             }
             catch (UnauthorizedAccessException)
             {
@@ -290,6 +293,80 @@ namespace Opus.Core.Executors
             logbook.Write($"Starting signature removal.", LogLevel.Information);
 
             IList<FileInfo> created = await signatureExecutor.Remove(file, directory, tokenSource);
+
+            // Flatten redactions.
+
+            List<Task> tasks = new List<Task>();
+            foreach (FileInfo redFile in created)
+            {
+                tasks.Add(annotationService.FlattenRedactions(redFile.FullName));
+            }
+
+            // When all is ready, inform the user.
+
+            await Task.WhenAll(tasks);
+
+            logbook.Write($"Signature removal finished.", LogLevel.Information);
+
+            dialog.TotalPercent = 100;
+            dialog.Phase = Resources.Operations.PhaseNames.Finished;
+
+            await showProgress;
+        }
+
+        /// <summary>
+        /// Create work copies from all pdf-files in a given folder and its subfolders.
+        /// </summary>
+        /// <param name="arguments">Arguments passed to the application.</param>
+        /// <returns>An awaitable task.</returns>
+        protected async Task CreateWorkCopyFolder(string[] arguments)
+        {
+            // If there is an incorrect number of arguments, return.
+
+            if (arguments.Length != 2)
+                return;
+            if (string.IsNullOrEmpty(arguments[1]))
+                return;
+
+            // Create a new subdirectory for products.
+
+            string directoryPath = arguments[1];
+            DirectoryInfo searchDir = new DirectoryInfo(directoryPath);
+
+            DirectoryInfo directory = new DirectoryInfo(Path.Combine(
+                directoryPath, 
+                Resources.ContextMenu.FolderNames.WorkCopyMultipleFolder));
+            directory.Create();
+
+            // Find all pdf files in the directory and its subdirectories.
+
+            IEnumerable<FileInfo> pdfs = searchDir.GetFiles("*.pdf", SearchOption.AllDirectories);
+
+            // Prepare for signature removal.
+
+            CancellationTokenSource tokenSource = new CancellationTokenSource();
+
+            ProgressDialog dialog = new ProgressDialog(string.Empty, tokenSource)
+            {
+                TotalPercent = 0,
+                Phase = Resources.Operations.PhaseNames.Unassigned
+            };
+
+            Task showProgress = dialogAssist.Show(dialog);
+
+            // Create storage instances.
+
+            List<FileStorage> storages = new List<FileStorage>();
+            foreach (FileInfo pdf in pdfs)
+            {
+                storages.Add(new FileStorage(pdf.FullName));
+            }
+
+            // Remove signature.
+
+            logbook.Write($"Starting signature removal.", LogLevel.Information);
+
+            IList<FileInfo> created = await signatureExecutor.Remove(storages, directory, tokenSource);
 
             // Flatten redactions.
 

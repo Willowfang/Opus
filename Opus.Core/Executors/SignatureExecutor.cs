@@ -126,6 +126,9 @@ namespace Opus.Core.Executors
             CancellationToken token
         )
         {
+            if (string.IsNullOrEmpty(configuration.UnsignedTitleTemplate))
+                configuration.UnsignedTitleTemplate = Resources.DefaultValues.DefaultValues.UnsignedTemplate;
+
             // Get the name template for products.
 
             string destinationTemplate =

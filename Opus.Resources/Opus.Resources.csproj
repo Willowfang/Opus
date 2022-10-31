@@ -27,6 +27,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Arguments.resx</DependentUpon>
     </Compile>
+    <Compile Update="ContextMenu\FolderNames.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FolderNames.resx</DependentUpon>
+    </Compile>
     <Compile Update="DefaultValues\DefaultValues.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -285,6 +290,10 @@
     <EmbeddedResource Update="ContextMenu\Arguments.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Arguments.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ContextMenu\FolderNames.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FolderNames.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="DefaultValues\DefaultValues.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
