@@ -1,0 +1,70 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dialog="clr-namespace:Opus.Common.Dialogs"
+                    xmlns:resDialog="clr-namespace:Opus.Resources.Labels.Dialogs;assembly=Opus.Resources">
+
+    <!--
+         EXTRACTION ANNOTATIONS DIALOG
+         A dialog prompting the user to select which annotations the user wishes to get removed
+         from extracted files (when "Select" has been chosen as the annotation removal method).
+    -->
+    <DataTemplate DataType="{x:Type dialog:ExtractAnnotationsDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       Width="320"
+                       Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       FontStyle="Italic"
+                       Text="{x:Static resDialog:ExtractionAnnotations.Instructions}"
+                       Margin="10, 10, 10, 0"/>
+            <Separator Style="{DynamicResource MaterialDesignSeparator}"
+                       Margin="20, 20, 20, 10"/>
+
+            <!--
+                 List all annotation creators from the pdfs to this ItemsControl. Creators are
+                 searched directly from the pdfs. User can select any number of creators and
+                 annotations by selected creators will be removed from products.
+            -->
+            <ItemsControl ItemsSource="{Binding Creators}"
+                          Width="220"
+                          HorizontalAlignment="Center">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Style="{DynamicResource MaterialDesignFilterChipPrimaryOutlineCheckBox}"
+                                  Grid.Column="0"
+                                  Width="200"
+                                  IsChecked="{Binding IsChecked, Mode=TwoWay}">
+                            <!--
+                                 For all other creators, show their name included in the pdf, but for
+                                 the extractor himself, show "Own" (if the creator name matches Windows
+                                 user name - as it does by default).
+                            -->
+                            <TextBlock Grid.Column="1"
+                                       Margin="5, 0, 0, 0"
+                                       VerticalAlignment="Center"
+                                       Style="{DynamicResource MaterialDesignButtonTextBlock}"
+                                       Text="{Binding Name, 
+                                            Converter={StaticResource UserNameReplacement}, ConverterParameter=Omat}"
+                                       FontWeight="{Binding Name, 
+                                            Converter={StaticResource UserNameToFontWeight}}"
+                                       TextTrimming="CharacterEllipsis"/>
+                        </CheckBox>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <!--
+                 Buttons for saving and cancelling.
+            -->
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+</ResourceDictionary>

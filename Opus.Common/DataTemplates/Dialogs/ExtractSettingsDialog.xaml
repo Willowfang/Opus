@@ -1,0 +1,204 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dialog="clr-namespace:Opus.Common.Dialogs"
+                    xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+                    xmlns:resDialog="clr-namespace:Opus.Resources.Labels.Dialogs;assembly=Opus.Resources"
+                    xmlns:resValidation="clr-namespace:Opus.Resources.Validation;assembly=Opus.Resources"
+                    xmlns:resToolTips="clr-namespace:Opus.Resources.ToolTips;assembly=Opus.Resources">
+
+    <!--
+         EXTRACT SETTINGS DIALOG
+         Provides controls for changing settings applied to extracted bookmarks.
+    -->
+    <DataTemplate DataType="{x:Type dialog:ExtractSettingsDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+
+            <!--
+                 Textbox for entering file name template. Various placeholders can be user.
+                 Cannot be empty and is validated.
+            -->
+            <TextBox Style="{DynamicResource HintedTextBox}"
+                     x:Name="TitleTextBox"
+                     Text="{Binding Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
+                     ValidatesOnDataErrors=True}"
+                     md:ValidationAssist.Suppress="True"
+                     Width="300"
+                     md:HintAssist.Hint="{Binding NameDescription}"
+                     md:HintAssist.HelperText="{Binding NameHelper}"/>
+
+            <Separator Style="{DynamicResource MaterialDesignSeparator}"
+                       Margin="10, 20, 10, 20"
+                       Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
+                        Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}">
+
+                <!--
+                     Switch for selecting whether name template is inquired every time an extraction
+                     is requested (vs. using the same template for all extractions). This option is only shown
+                     when this dialog is not displayed as part of an extraction process.
+                -->
+                <StackPanel Margin="0, 0, 10, 0">
+                    <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                               VerticalAlignment="Center"
+                               Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                               Text="{x:Static resDialog:ExtractionOptions.AlwaysAskTitle}"
+                               Margin="0, 0, 0, 10"/>
+                    <CheckBox Style="{DynamicResource OptionSwitch}"
+                              IsChecked="{Binding AlwaysAsk}"
+                              x:Name="AlwaysAskCB"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Center"
+                              Cursor="Hand"
+                              ToolTip="{x:Static resToolTips:Extraction.SettingsAlwaysAsk}"/>
+                </StackPanel>
+
+                <!--
+                     Switch for selecting whether extracted files should be converted to pdf/a. 
+                     This option is only shown when this dialog is not displayed as part of an extraction process.
+                     Setting is disabled and an informative text is shown, if PDF Tools could not be located.
+                -->
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                               VerticalAlignment="Center"
+                               Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                               Text="{x:Static resDialog:ExtractionOptions.PdfA}"
+                               Margin="0, 0, 0, 10"/>
+                    <CheckBox Style="{DynamicResource OptionSwitch}"
+                              IsChecked="{Binding PdfA}"
+                              IsEnabled="{Binding PdfADisabled, Converter={StaticResource InvertBooleanConverter}}"
+                              x:Name="PdfACB"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Center"
+                              Cursor="Hand"
+                              ToolTip="{x:Static resToolTips:Extraction.SettingsPdfA}"/>
+                    <TextBlock Style="{DynamicResource MaterialDesignHelperTextBlock}"
+                               HorizontalAlignment="Center" VerticalAlignment="Center"
+                               Text="{x:Static resValidation:Extraction.PdfTools}"
+                               Margin="0, 10, 0, 0"
+                               Visibility="{Binding PdfADisabled, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                </StackPanel>
+            </StackPanel>
+
+            <Separator Style="{DynamicResource MaterialDesignSeparator}"
+                       Margin="10, 20, 10, 20"
+                       Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}"/>
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}">
+
+                <!--
+                     Switch for selecting whether the extracted files should be compressed into a zip-file.
+                     This option is only shown when this dialog is not displayed as a part of an extraction process.
+                -->
+                <StackPanel Margin="0, 0, 10, 0">
+                    <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                               VerticalAlignment="Center"
+                               Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                               Text="{x:Static resDialog:ExtractionOptions.CreateZipTitle}"
+                               Margin="0, 0, 0, 10"/>
+                    <CheckBox Style="{DynamicResource OptionSwitch}"
+                              IsChecked="{Binding CreateZip}"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Center"
+                              Cursor="Hand"
+                              ToolTip="{x:Static resToolTips:Extraction.SettingsCreateZip}"/>
+                </StackPanel>
+
+                <!--
+                     Switch for selecting whether the bookmarks should be organized according to the files they
+                     have been extracted from (when extracting to a single file).
+                -->
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                               VerticalAlignment="Center"
+                               Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                               Text="{x:Static resDialog:ExtractionOrder.GroupByFiles}"
+                               Margin="0, 0, 0, 10"/>
+                    <CheckBox Style="{DynamicResource OptionSwitch}"
+                              IsChecked="{Binding GroupByFiles}"
+                              x:Name="GroupByFilesCB"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Center"
+                              Cursor="Hand"
+                              ToolTip="{x:Static resToolTips:Extraction.BookmarkOrderDialogGroupByFiles}"/>
+                </StackPanel>
+            </StackPanel>
+
+            <Separator Style="{DynamicResource MaterialDesignSeparator}"
+                       Margin="10, 20, 10, 20"
+                       Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}"/>
+
+            <StackPanel HorizontalAlignment="Center"
+                        Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}">
+                
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                               VerticalAlignment="Center"
+                               Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                               Text="{x:Static resDialog:ExtractionOrder.OpenAfterComplete}"
+                               Margin="0, 0, 0, 10"/>
+                    <CheckBox Style="{DynamicResource OptionSwitch}"
+                              IsChecked="{Binding OpenAfterComplete}"
+                              x:Name="OpenAfterCompleteCB"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Center"
+                              Cursor="Hand"/>
+                </StackPanel>
+            </StackPanel>
+
+            <!--
+                 Options for selecting what to do with annotation contained in page ranges of the bookmarks
+                 selected for extraction. Keep all, select which ones to remove or remove all.
+                 This option is only shown when this dialog is not displayed as a part of an extraction process.
+            -->
+            <StackPanel Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}"
+                        Margin="0, 0, 0, 10">
+                <Separator Style="{DynamicResource MaterialDesignSeparator}"
+                           Margin="10, 20, 10, 20"/>
+                <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                           VerticalAlignment="Center"
+                           Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                           Text="{x:Static resDialog:ExtractionOptions.Annotations}"
+                           Margin="0, 0, 0, 10"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <RadioButton Style="{DynamicResource TabRadioButton}"
+                                 Content="{x:Static resDialog:ExtractionOptions.Keep}"
+                                 GroupName="AnnotOption"
+                                 IsChecked="{Binding Annotations, Converter={StaticResource BooleanToInt}, 
+                                 ConverterParameter=0}"
+                                 ToolTip="{x:Static resToolTips:Extraction.SettingsAnnotationsKeep}"/>
+                    <RadioButton Style="{DynamicResource TabRadioButton}"
+                                 Content="{x:Static resDialog:ExtractionOptions.RemoveUser}"
+                                 GroupName="AnnotOption"
+                                 IsChecked="{Binding Annotations, Converter={StaticResource BooleanToInt}, 
+                                 ConverterParameter=1}"
+                                 ToolTip="{x:Static resToolTips:Extraction.SettingsAnnotationsUser}"/>
+                    <RadioButton Style="{DynamicResource TabRadioButton}"
+                                 Content="{x:Static resDialog:ExtractionOptions.RemoveAll}"
+                                 GroupName="AnnotOption"
+                                 IsChecked="{Binding Annotations, Converter={StaticResource BooleanToInt}, 
+                                 ConverterParameter=2}"
+                                 ToolTip="{x:Static resToolTips:Extraction.SettingsAnnotationsAll}"/>
+                </StackPanel>
+            </StackPanel>
+
+            <!--
+                 Buttons for saving or cancelling. Cancel-button is hidden, if this dialog is shown as
+                 a part of an extraction process.
+            -->
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"
+                        IsEnabled="{Binding ElementName=TitleTextBox, Path=(Validation.HasError),
+                        Converter={StaticResource InvertBooleanConverter}}"/>
+                <Button Style="{StaticResource DialogCancelButton}"
+                        Visibility="{Binding IsAsking, Converter={StaticResource InverseBoolToVisConverter}}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+</ResourceDictionary>

@@ -1,0 +1,39 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dialog="clr-namespace:Opus.Common.Dialogs"
+                    xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+                    xmlns:resLabels="clr-namespace:Opus.Resources.Labels;assembly=Opus.Resources">
+
+    <!--
+         FILE TITLE DIALOG
+         A dialog prompting the user for a file name.
+    -->
+    <DataTemplate DataType="{x:Type dialog:FileTitleDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+
+            <!--
+                 Textbox for entering the filename. Validates input according to given rules and
+                 enables save button only when input is validated.
+            -->
+            <TextBox Style="{DynamicResource HintedValidationTextBox}"
+                     Text="{Binding Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                     FontSize="16"
+                     Width="250"
+                     x:Name="TitleText"
+                     md:HintAssist.Hint="{x:Static resLabels:General.Name}"/>
+
+            <!--
+                 Buttons for saving with the given name or canceling the operation.
+            -->
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"
+                        IsEnabled="{Binding ElementName=TitleText, Path=(Validation.HasError), 
+                        Converter={StaticResource InvertBooleanConverter}}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+</ResourceDictionary>

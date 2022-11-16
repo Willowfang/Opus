@@ -1,5 +1,5 @@
 ﻿using Opus.Events;
-using Opus.Services.UI;
+using Opus.Common.Services.Navigation;
 using Prism.Events;
 using Prism.Mvvm;
 

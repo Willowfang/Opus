@@ -3,6 +3,7 @@ using System;
 using System.Runtime.CompilerServices;
 using Serilog;
 using Serilog.Events;
+using Serilog.Core;
 
 namespace Opus.Services.Implementation.Logging
 {
@@ -11,6 +12,8 @@ namespace Opus.Services.Implementation.Logging
     /// </summary>
     public class SeriLogbook : Logbook
     {
+        private readonly LoggingLevelSwitch levelSwitch;
+
         /// <summary>
         /// Template for log entries.
         /// </summary>
@@ -22,8 +25,10 @@ namespace Opus.Services.Implementation.Logging
         /// </summary>
         public SeriLogbook()
         {
+            levelSwitch = new LoggingLevelSwitch(LogEventLevel.Information);
+
             Log.Logger = new LoggerConfiguration().MinimumLevel
-                .Debug()
+                .ControlledBy(levelSwitch)
                 .Enrich.FromLogContext()
                 .WriteTo.Async(
                     a =>
@@ -44,6 +49,27 @@ namespace Opus.Services.Implementation.Logging
         {
             Write("Closing and flushing logger.", LogLevel.Information);
             Log.CloseAndFlush();
+        }
+
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        public override void ChangeLevel(LogLevel level)
+        {
+            levelSwitch.MinimumLevel = LogLevelToSerilogLevel(level);
+        }
+
+        private LogEventLevel LogLevelToSerilogLevel(LogLevel level)
+        {
+            return level switch
+            {
+                LogLevel.Debug => LogEventLevel.Debug,
+                LogLevel.Information => LogEventLevel.Information,
+                LogLevel.Warning => LogEventLevel.Warning,
+                LogLevel.Error => LogEventLevel.Error,
+                LogLevel.Fatal => LogEventLevel.Fatal,
+                _ => LogEventLevel.Verbose
+            };
         }
 
         /// <summary>

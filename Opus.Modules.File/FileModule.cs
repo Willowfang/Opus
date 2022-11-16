@@ -2,7 +2,7 @@
 using Prism.Ioc;
 using Prism.Modularity;
 using Opus.Values;
-using Opus.Services.UI;
+using Opus.Common.Services.Navigation;
 
 namespace Opus.Modules.File
 {

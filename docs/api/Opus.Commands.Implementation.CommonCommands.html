@@ -1,0 +1,754 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CommonCommands
+   | Opus Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CommonCommands
+   | Opus Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo38pt.png" alt="Opus Docs">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Opus.Commands.Implementation.CommonCommands">
+  
+  
+  <h1 id="Opus_Commands_Implementation_CommonCommands" data-uid="Opus.Commands.Implementation.CommonCommands" class="text-break">Class CommonCommands
+  </h1>
+  <div class="markdown level0 summary"><p>Commands for common functionalities (such as opening external websites and language changes).</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Prism.Mvvm.BindableBase</span></div>
+    <div class="level2"><a class="xref" href="Opus.Common.Logging.LoggingCapable-1.html">LoggingCapable</a>&lt;<a class="xref" href="Opus.Commands.Implementation.CommonCommands.html">CommonCommands</a>&gt;</div>
+    <div class="level3"><span class="xref">CommonCommands</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+    <div><a class="xref" href="Opus.Common.Services.Commands.ICommonCommands.html">ICommonCommands</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Opus.Common.Logging.LoggingCapable-1.html#Opus_Common_Logging_LoggingCapable_1_logbook">LoggingCapable&lt;CommonCommands&gt;.logbook</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Common.Logging.LoggingCapable-1.html#Opus_Common_Logging_LoggingCapable_1_ChangeLogbook_ILogbook_">LoggingCapable&lt;CommonCommands&gt;.ChangeLogbook(ILogbook)</a>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.Action, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.RaisePropertyChanged(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Opus.Commands.Implementation.html">Opus.Commands.Implementation</a></h6>
+  <h6><strong>Assembly</strong>: Opus.Commands.dll</h6>
+  <h5 id="Opus_Commands_Implementation_CommonCommands_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CommonCommands : LoggingCapable&lt;CommonCommands&gt;, INotifyPropertyChanged, ICommonCommands</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Commands_Implementation_CommonCommands__ctor_ILogbook_Opus_Common_Services_Configuration_IConfiguration_Opus_Common_Services_Dialogs_IDialogAssist_Prism_Events_IEventAggregator_.md&amp;value=---%0Auid%3A%20Opus.Commands.Implementation.CommonCommands.%23ctor(ILogbook%2COpus.Common.Services.Configuration.IConfiguration%2COpus.Common.Services.Dialogs.IDialogAssist%2CPrism.Events.IEventAggregator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Commands/Implementation/CommonCommands.cs/#L34">View Source</a>
+  </span>
+  <a id="Opus_Commands_Implementation_CommonCommands__ctor_" data-uid="Opus.Commands.Implementation.CommonCommands.#ctor*"></a>
+  <h4 id="Opus_Commands_Implementation_CommonCommands__ctor_ILogbook_Opus_Common_Services_Configuration_IConfiguration_Opus_Common_Services_Dialogs_IDialogAssist_Prism_Events_IEventAggregator_" data-uid="Opus.Commands.Implementation.CommonCommands.#ctor(ILogbook,Opus.Common.Services.Configuration.IConfiguration,Opus.Common.Services.Dialogs.IDialogAssist,Prism.Events.IEventAggregator)">CommonCommands(ILogbook, IConfiguration, IDialogAssist, IEventAggregator)</h4>
+  <div class="markdown level1 summary"><p>Create new implementation instance for general commands.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommonCommands(ILogbook logbook, IConfiguration configuration, IDialogAssist dialogAssist, IEventAggregator eventAggregator)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ILogbook</span></td>
+        <td><span class="parametername">logbook</span></td>
+        <td><p>Logging service.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Common.Services.Configuration.IConfiguration.html">IConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>Application configuration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Common.Services.Dialogs.IDialogAssist.html">IDialogAssist</a></td>
+        <td><span class="parametername">dialogAssist</span></td>
+        <td><p>Dialog service.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Prism.Events.IEventAggregator</span></td>
+        <td><span class="parametername">eventAggregator</span></td>
+        <td><p>Event service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Commands_Implementation_CommonCommands_ExitCommand.md&amp;value=---%0Auid%3A%20Opus.Commands.Implementation.CommonCommands.ExitCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Commands/Implementation/CommonCommands.cs/#L220">View Source</a>
+  </span>
+  <a id="Opus_Commands_Implementation_CommonCommands_ExitCommand_" data-uid="Opus.Commands.Implementation.CommonCommands.ExitCommand*"></a>
+  <h4 id="Opus_Commands_Implementation_CommonCommands_ExitCommand" data-uid="Opus.Commands.Implementation.CommonCommands.ExitCommand">ExitCommand</h4>
+  <div class="markdown level1 summary"><p>Command for exiting the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICommand ExitCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Input.ICommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Commands_Implementation_CommonCommands_LanguageCommand.md&amp;value=---%0Auid%3A%20Opus.Commands.Implementation.CommonCommands.LanguageCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Commands/Implementation/CommonCommands.cs/#L144">View Source</a>
+  </span>
+  <a id="Opus_Commands_Implementation_CommonCommands_LanguageCommand_" data-uid="Opus.Commands.Implementation.CommonCommands.LanguageCommand*"></a>
+  <h4 id="Opus_Commands_Implementation_CommonCommands_LanguageCommand" data-uid="Opus.Commands.Implementation.CommonCommands.LanguageCommand">LanguageCommand</h4>
+  <div class="markdown level1 summary"><p>Command for changing UI language.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICommand LanguageCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Input.ICommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Commands_Implementation_CommonCommands_LogLevelCommand.md&amp;value=---%0Auid%3A%20Opus.Commands.Implementation.CommonCommands.LogLevelCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Commands/Implementation/CommonCommands.cs/#L264">View Source</a>
+  </span>
+  <a id="Opus_Commands_Implementation_CommonCommands_LogLevelCommand_" data-uid="Opus.Commands.Implementation.CommonCommands.LogLevelCommand*"></a>
+  <h4 id="Opus_Commands_Implementation_CommonCommands_LogLevelCommand" data-uid="Opus.Commands.Implementation.CommonCommands.LogLevelCommand">LogLevelCommand</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICommand LogLevelCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Input.ICommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Commands_Implementation_CommonCommands_NavigateCommand.md&amp;value=---%0Auid%3A%20Opus.Commands.Implementation.CommonCommands.NavigateCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Commands/Implementation/CommonCommands.cs/#L191">View Source</a>
+  </span>
+  <a id="Opus_Commands_Implementation_CommonCommands_NavigateCommand_" data-uid="Opus.Commands.Implementation.CommonCommands.NavigateCommand*"></a>
+  <h4 id="Opus_Commands_Implementation_CommonCommands_NavigateCommand" data-uid="Opus.Commands.Implementation.CommonCommands.NavigateCommand">NavigateCommand</h4>
+  <div class="markdown level1 summary"><p>Command for navigating regions to different views based on a scheme name (e.g. &quot;extract&quot;).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICommand NavigateCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Input.ICommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Commands_Implementation_CommonCommands_OpenLicensesCommand.md&amp;value=---%0Auid%3A%20Opus.Commands.Implementation.CommonCommands.OpenLicensesCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Commands/Implementation/CommonCommands.cs/#L82">View Source</a>
+  </span>
+  <a id="Opus_Commands_Implementation_CommonCommands_OpenLicensesCommand_" data-uid="Opus.Commands.Implementation.CommonCommands.OpenLicensesCommand*"></a>
+  <h4 id="Opus_Commands_Implementation_CommonCommands_OpenLicensesCommand" data-uid="Opus.Commands.Implementation.CommonCommands.OpenLicensesCommand">OpenLicensesCommand</h4>
+  <div class="markdown level1 summary"><p>Command for opening the licenses for viewing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICommand OpenLicensesCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Input.ICommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Commands_Implementation_CommonCommands_OpenManualCommand.md&amp;value=---%0Auid%3A%20Opus.Commands.Implementation.CommonCommands.OpenManualCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Commands/Implementation/CommonCommands.cs/#L50">View Source</a>
+  </span>
+  <a id="Opus_Commands_Implementation_CommonCommands_OpenManualCommand_" data-uid="Opus.Commands.Implementation.CommonCommands.OpenManualCommand*"></a>
+  <h4 id="Opus_Commands_Implementation_CommonCommands_OpenManualCommand" data-uid="Opus.Commands.Implementation.CommonCommands.OpenManualCommand">OpenManualCommand</h4>
+  <div class="markdown level1 summary"><p>Command for opening the user manual.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICommand OpenManualCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Input.ICommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Commands_Implementation_CommonCommands_OpenSourceCodeCommand.md&amp;value=---%0Auid%3A%20Opus.Commands.Implementation.CommonCommands.OpenSourceCodeCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Commands/Implementation/CommonCommands.cs/#L113">View Source</a>
+  </span>
+  <a id="Opus_Commands_Implementation_CommonCommands_OpenSourceCodeCommand_" data-uid="Opus.Commands.Implementation.CommonCommands.OpenSourceCodeCommand*"></a>
+  <h4 id="Opus_Commands_Implementation_CommonCommands_OpenSourceCodeCommand" data-uid="Opus.Commands.Implementation.CommonCommands.OpenSourceCodeCommand">OpenSourceCodeCommand</h4>
+  <div class="markdown level1 summary"><p>Command for opening the source code browser.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICommand OpenSourceCodeCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Input.ICommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Commands_Implementation_CommonCommands_ResetCommand.md&amp;value=---%0Auid%3A%20Opus.Commands.Implementation.CommonCommands.ResetCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Commands/Implementation/CommonCommands.cs/#L241">View Source</a>
+  </span>
+  <a id="Opus_Commands_Implementation_CommonCommands_ResetCommand_" data-uid="Opus.Commands.Implementation.CommonCommands.ResetCommand*"></a>
+  <h4 id="Opus_Commands_Implementation_CommonCommands_ResetCommand" data-uid="Opus.Commands.Implementation.CommonCommands.ResetCommand">ResetCommand</h4>
+  <div class="markdown level1 summary"><p>Command for resetting current scheme to defaults.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICommand ResetCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Windows.Input.ICommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Commands_Implementation_CommonCommands_ExecuteExitCommand.md&amp;value=---%0Auid%3A%20Opus.Commands.Implementation.CommonCommands.ExecuteExitCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Commands/Implementation/CommonCommands.cs/#L229">View Source</a>
+  </span>
+  <a id="Opus_Commands_Implementation_CommonCommands_ExecuteExitCommand_" data-uid="Opus.Commands.Implementation.CommonCommands.ExecuteExitCommand*"></a>
+  <h4 id="Opus_Commands_Implementation_CommonCommands_ExecuteExitCommand" data-uid="Opus.Commands.Implementation.CommonCommands.ExecuteExitCommand">ExecuteExitCommand()</h4>
+  <div class="markdown level1 summary"><p>Execution method for exit command, see <a class="xref" href="Opus.Commands.Implementation.CommonCommands.html#Opus_Commands_Implementation_CommonCommands_ExitCommand">ExitCommand</a>.</p>
+<p>
+Shuts the program down by calling shutdown on <span class="xref">System.Windows.Application.Current</span>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteExitCommand()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Commands_Implementation_CommonCommands_ExecuteLanguageCommand_System_String_.md&amp;value=---%0Auid%3A%20Opus.Commands.Implementation.CommonCommands.ExecuteLanguageCommand(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Commands/Implementation/CommonCommands.cs/#L158">View Source</a>
+  </span>
+  <a id="Opus_Commands_Implementation_CommonCommands_ExecuteLanguageCommand_" data-uid="Opus.Commands.Implementation.CommonCommands.ExecuteLanguageCommand*"></a>
+  <h4 id="Opus_Commands_Implementation_CommonCommands_ExecuteLanguageCommand_System_String_" data-uid="Opus.Commands.Implementation.CommonCommands.ExecuteLanguageCommand(System.String)">ExecuteLanguageCommand(String)</h4>
+  <div class="markdown level1 summary"><p>Execution method for UI language change command, see <a class="xref" href="Opus.Commands.Implementation.CommonCommands.html#Opus_Commands_Implementation_CommonCommands_LanguageCommand">LanguageCommand</a>.</p>
+<p>
+Only changes language, if the selected language is not the same as the language already selected.
+</p>
+<p>
+Saves the language configuration for persistence and notifies the user of the need for restart.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async Task ExecuteLanguageCommand(string language)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">language</span></td>
+        <td><p>New language choice as a two-letter code (e.g. &quot;fi&quot;)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td><p>A void async task</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Commands_Implementation_CommonCommands_ExecuteLogLevelCommand_System_String_.md&amp;value=---%0Auid%3A%20Opus.Commands.Implementation.CommonCommands.ExecuteLogLevelCommand(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Commands/Implementation/CommonCommands.cs/#L267">View Source</a>
+  </span>
+  <a id="Opus_Commands_Implementation_CommonCommands_ExecuteLogLevelCommand_" data-uid="Opus.Commands.Implementation.CommonCommands.ExecuteLogLevelCommand*"></a>
+  <h4 id="Opus_Commands_Implementation_CommonCommands_ExecuteLogLevelCommand_System_String_" data-uid="Opus.Commands.Implementation.CommonCommands.ExecuteLogLevelCommand(System.String)">ExecuteLogLevelCommand(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteLogLevelCommand(string parameter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Commands_Implementation_CommonCommands_ExecuteNavigateCommand_System_String_.md&amp;value=---%0Auid%3A%20Opus.Commands.Implementation.CommonCommands.ExecuteNavigateCommand(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Commands/Implementation/CommonCommands.cs/#L203">View Source</a>
+  </span>
+  <a id="Opus_Commands_Implementation_CommonCommands_ExecuteNavigateCommand_" data-uid="Opus.Commands.Implementation.CommonCommands.ExecuteNavigateCommand*"></a>
+  <h4 id="Opus_Commands_Implementation_CommonCommands_ExecuteNavigateCommand_System_String_" data-uid="Opus.Commands.Implementation.CommonCommands.ExecuteNavigateCommand(System.String)">ExecuteNavigateCommand(String)</h4>
+  <div class="markdown level1 summary"><p>Execution method for navigation command, see <a class="xref" href="Opus.Commands.Implementation.CommonCommands.html#Opus_Commands_Implementation_CommonCommands_NavigateCommand">NavigateCommand</a>.</p>
+<p>
+Publishes a ViewChange event that is listened to by <see cref="!:INavigationAssist"></see>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteNavigateCommand(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name of the scheme to apply. Scheme names can be found at
+<a class="xref" href="Opus.Values.SchemeNames.html">SchemeNames</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Commands_Implementation_CommonCommands_ExecuteOpenLicensesCommand.md&amp;value=---%0Auid%3A%20Opus.Commands.Implementation.CommonCommands.ExecuteOpenLicensesCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Commands/Implementation/CommonCommands.cs/#L92">View Source</a>
+  </span>
+  <a id="Opus_Commands_Implementation_CommonCommands_ExecuteOpenLicensesCommand_" data-uid="Opus.Commands.Implementation.CommonCommands.ExecuteOpenLicensesCommand*"></a>
+  <h4 id="Opus_Commands_Implementation_CommonCommands_ExecuteOpenLicensesCommand" data-uid="Opus.Commands.Implementation.CommonCommands.ExecuteOpenLicensesCommand">ExecuteOpenLicensesCommand()</h4>
+  <div class="markdown level1 summary"><p>Execution method for open licences command, see <a class="xref" href="Opus.Commands.Implementation.CommonCommands.html#Opus_Commands_Implementation_CommonCommands_OpenLicensesCommand">OpenLicensesCommand</a></p>
+<p>
+Opens the license page.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteOpenLicensesCommand()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Commands_Implementation_CommonCommands_ExecuteOpenManualCommand.md&amp;value=---%0Auid%3A%20Opus.Commands.Implementation.CommonCommands.ExecuteOpenManualCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Commands/Implementation/CommonCommands.cs/#L61">View Source</a>
+  </span>
+  <a id="Opus_Commands_Implementation_CommonCommands_ExecuteOpenManualCommand_" data-uid="Opus.Commands.Implementation.CommonCommands.ExecuteOpenManualCommand*"></a>
+  <h4 id="Opus_Commands_Implementation_CommonCommands_ExecuteOpenManualCommand" data-uid="Opus.Commands.Implementation.CommonCommands.ExecuteOpenManualCommand">ExecuteOpenManualCommand()</h4>
+  <div class="markdown level1 summary"><p>Execution method for user manual opening command, see <a class="xref" href="Opus.Commands.Implementation.CommonCommands.html#Opus_Commands_Implementation_CommonCommands_OpenManualCommand">OpenManualCommand</a></p>
+<p>
+Opens the User manual as a separate process. The manual is an internet link, so most probably it will
+be opened in the system default browser.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteOpenManualCommand()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Commands_Implementation_CommonCommands_ExecuteOpenSourceCodeCommand.md&amp;value=---%0Auid%3A%20Opus.Commands.Implementation.CommonCommands.ExecuteOpenSourceCodeCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Commands/Implementation/CommonCommands.cs/#L123">View Source</a>
+  </span>
+  <a id="Opus_Commands_Implementation_CommonCommands_ExecuteOpenSourceCodeCommand_" data-uid="Opus.Commands.Implementation.CommonCommands.ExecuteOpenSourceCodeCommand*"></a>
+  <h4 id="Opus_Commands_Implementation_CommonCommands_ExecuteOpenSourceCodeCommand" data-uid="Opus.Commands.Implementation.CommonCommands.ExecuteOpenSourceCodeCommand">ExecuteOpenSourceCodeCommand()</h4>
+  <div class="markdown level1 summary"><p>Execution method for source code opening command, see <a class="xref" href="Opus.Commands.Implementation.CommonCommands.html#Opus_Commands_Implementation_CommonCommands_OpenSourceCodeCommand">OpenSourceCodeCommand</a>.</p>
+<p>
+Source code is published to GitHub. This is, again, an internet link and will most likely be opened in the default browser.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteOpenSourceCodeCommand()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Commands_Implementation_CommonCommands_ExecuteResetCommand.md&amp;value=---%0Auid%3A%20Opus.Commands.Implementation.CommonCommands.ExecuteResetCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Commands/Implementation/CommonCommands.cs/#L251">View Source</a>
+  </span>
+  <a id="Opus_Commands_Implementation_CommonCommands_ExecuteResetCommand_" data-uid="Opus.Commands.Implementation.CommonCommands.ExecuteResetCommand*"></a>
+  <h4 id="Opus_Commands_Implementation_CommonCommands_ExecuteResetCommand" data-uid="Opus.Commands.Implementation.CommonCommands.ExecuteResetCommand">ExecuteResetCommand()</h4>
+  <div class="markdown level1 summary"><p>Execution method for scheme resetting command, see <a class="xref" href="Opus.Commands.Implementation.CommonCommands.html#Opus_Commands_Implementation_CommonCommands_ResetCommand">ResetCommand</a></p>
+<p>
+Publishes an <a class="xref" href="Opus.Events.ActionResetEvent.html">ActionResetEvent</a> that is subscribed to by viewmodels of currently viewed
+views.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExecuteResetCommand()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+  <div>
+      <a class="xref" href="Opus.Common.Services.Commands.ICommonCommands.html">ICommonCommands</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Opus.Common.Extensions.ObjectExtensions.html#Opus_Common_Extensions_ObjectExtensions_IfNotNullExecute__1___0_Action___0__">ObjectExtensions.IfNotNullExecute&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Opus.Common.Extensions.ObjectExtensions.html#Opus_Common_Extensions_ObjectExtensions_IfNullExecute__1___0_Action___0__">ObjectExtensions.IfNullExecute&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Commands_Implementation_CommonCommands.md&amp;value=---%0Auid%3A%20Opus.Commands.Implementation.CommonCommands%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Parannusehdotus</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Commands/Implementation/CommonCommands.cs/#L21" class="contribution-link">Näytä lähdekoodi</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>Tässä osiossa</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Takaisin ylös</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Takaisin ylös</a>
+            </span>
+            <div class="pull-left">
+              
+              <span><strong>Opus</strong>: ohjeet</span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+        <script type="text/javascript" src="../styles/accordion.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

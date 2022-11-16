@@ -12,8 +12,8 @@
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Opus.Core\Opus.Core.csproj" />
-    <ProjectReference Include="..\Opus.Services.Implementation\Opus.Services.Implementation.csproj" />
+    <ProjectReference Include="..\Opus.Actions\Opus.Actions.csproj" />
+    <ProjectReference Include="..\Opus.Resources\Opus.Resources.csproj" />
     <ProjectReference Include="..\Opus.Styles\Opus.Styles.csproj" />
   </ItemGroup>
   <ItemGroup>

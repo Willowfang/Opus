@@ -39,13 +39,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Opus.Core\Opus.Core.csproj" />
+    <ProjectReference Include="..\Opus.Actions\Opus.Actions.csproj" />
+    <ProjectReference Include="..\Opus.Commands\Opus.Commands.csproj" />
+    <ProjectReference Include="..\Opus.Common\Opus.Common.csproj" />
     <ProjectReference Include="..\Opus.Modules.Action\Opus.Modules.Action.csproj" />
     <ProjectReference Include="..\Opus.Modules.File\Opus.Modules.File.csproj" />
     <ProjectReference Include="..\Opus.Modules.MainSection\Opus.Modules.MainSection.csproj" />
     <ProjectReference Include="..\Opus.Modules.Options\Opus.Modules.Options.csproj" />
-    <ProjectReference Include="..\Opus.Services.Implementation\Opus.Services.Implementation.csproj" />
-    <ProjectReference Include="..\Opus.Services\Opus.Services.csproj" />
     <ProjectReference Include="..\Opus.Styles\Opus.Styles.csproj" />
   </ItemGroup>
 
@@ -77,17 +77,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Update="Textfiles\Licenses.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Textfiles\Licenses_EN.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MaterialDesignColors" Version="2.0.4" />
-    <PackageReference Include="MaterialDesignThemes" Version="4.3.0" />
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.37" />
     <PackageReference Include="Prism.Unity" Version="8.1.97" />
   </ItemGroup>

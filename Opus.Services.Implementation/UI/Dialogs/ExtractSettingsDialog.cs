@@ -91,6 +91,17 @@ namespace Opus.Services.Implementation.UI.Dialogs
             set => SetProperty(ref annotations, value);
         }
 
+        private bool openAfterComplete;
+
+        /// <summary>
+        /// Open the destination file or folder after extraction is complete.
+        /// </summary>
+        public bool OpenAfterComplete
+        {
+            get => openAfterComplete;
+            set => SetProperty(ref openAfterComplete, value);
+        }
+
         /// <summary>
         /// If true, the dialog is currently being used while processing files (as opposed to choosing the
         /// settings beforehand).

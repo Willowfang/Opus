@@ -49,7 +49,7 @@
                     IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Command="{Binding ViewFileCommand}"
+                    Command="{Binding Commands.ViewFileCommand}"
                     ToolTip="{x:Static resTooltips:Extraction.ViewFileButton}">
                 <materialDesign:PackIcon Kind="Eye"/>
             </Button>
@@ -62,8 +62,8 @@
                       FontSize="16"
                       Margin="0, 0, 0, 10"
                       materialDesign:ComboBoxAssist.ShowSelectedItem="True"
-                      SelectedItem="{Binding SelectedFile, Mode=TwoWay}"
-                      ItemsSource="{Binding Files}"
+                      SelectedItem="{Binding Properties.SelectedFile, Mode=TwoWay}"
+                      ItemsSource="{Binding Properties.Files}"
                       VerticalAlignment="Center"
                       VerticalContentAlignment="Bottom"
                       HorizontalContentAlignment="Left">
@@ -80,7 +80,7 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                    Command="{Binding DeleteFileCommand}"
+                    Command="{Binding Commands.DeleteFileCommand}"
                     ToolTip="{x:Static resTooltips:Extraction.DeleteFileButton}">
                 <materialDesign:PackIcon Kind="Delete"/>
             </Button>
@@ -88,14 +88,14 @@
         <StackPanel Grid.Row="1" 
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center"
-                    Visibility="{Binding Files.Count, Converter={StaticResource ZeroToOppositeVisibility}}">
+                    Visibility="{Binding Properties.Files.Count, Converter={StaticResource ZeroToOppositeVisibility}}">
             <TextBlock Text="{x:Static resHelpers:Extraction.FileSelectionTitle}" Style="{DynamicResource MaterialDesignHeadline6TextBlock}" Grid.Row="1"
                    TextAlignment="Center" Foreground="{DynamicResource PrimaryHueLightBrush}"/>
             <TextBlock Text="{x:Static resHelpers:Extraction.FileSelectionDescription}" Style="{DynamicResource MaterialDesignBody1TextBlock}"
                        TextAlignment="Center"/>
         </StackPanel>
         <Grid Grid.Row="1">
-            <ListView ItemsSource="{Binding FileBookmarks, NotifyOnTargetUpdated=True}"
+            <ListView ItemsSource="{Binding Properties.FileBookmarks, NotifyOnTargetUpdated=True}"
                       Style="{StaticResource SelectionList}"
                       SelectedItem="{Binding SelectedBookmark}"
                       ItemContainerStyle="{StaticResource SelectVisibilityItem}"
@@ -103,7 +103,7 @@
                       ItemTemplate="{StaticResource ExtractList}">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="SelectionChanged">
-                        <prism:InvokeCommandAction Command="{Binding SelectionCommand}"/>
+                        <prism:InvokeCommandAction Command="{Binding Commands.SelectionCommand}"/>
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </ListView>
@@ -113,8 +113,8 @@
                     Grid.Row="2"
                     HorizontalAlignment="Center">
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding SelectedFile, Converter={StaticResource NullToBool}}"
-                    Command="{Binding AddCommand}"
+                    IsEnabled="{Binding Properties.SelectedFile, Converter={StaticResource NullToBool}}"
+                    Command="{Binding Commands.AddCommand}"
                     ToolTip="{x:Static resTooltips:Extraction.AddButton}">
                 <materialDesign:PackIcon Kind="PlusBold"/>
             </Button>

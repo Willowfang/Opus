@@ -21,7 +21,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Opus.Events\Opus.Events.csproj" />
     <ProjectReference Include="..\Opus.ExtensionMethods\Opus.ExtensionMethods.csproj" />
-    <ProjectReference Include="..\Opus.Services\Opus.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

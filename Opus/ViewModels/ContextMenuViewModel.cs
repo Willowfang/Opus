@@ -1,4 +1,5 @@
-﻿using Opus.Services.UI;
+﻿using Opus.Common.Services.ContextMenu;
+using Opus.Common.Services.Dialogs;
 using Prism.Mvvm;
 
 namespace Opus.ViewModels

@@ -1,0 +1,39 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dialog="clr-namespace:Opus.Common.Dialogs"
+                    xmlns:resDialog="clr-namespace:Opus.Resources.Labels.Dialogs;assembly=Opus.Resources">
+
+    <!--
+         MERGE SETTINGS DIALOG
+         A dialog for choosing settings for merging files.
+    -->
+    <DataTemplate DataType="{x:Type dialog:MergeSettingsDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+
+            <!--
+                 Switch for choosing whether to number the pages in the resulting document.
+            -->
+            <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                       VerticalAlignment="Center"
+                       Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       Text="{x:Static resDialog:MergeOptions.PageNumbersTitle}"
+                       Margin="0, 0, 0, 10"/>
+            <CheckBox Style="{DynamicResource OptionSwitch}"
+                      IsChecked="{Binding AddPageNumbers}"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Cursor="Hand"/>
+
+            <!--
+                 Buttons for saving and cancelling.
+            -->
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+</ResourceDictionary>

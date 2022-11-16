@@ -1,6 +1,6 @@
-﻿using Opus.Core.Base;
+﻿using Opus.Common.ViewModels;
 using Opus.Events;
-using Opus.Services.Input;
+using Opus.Common.Services.Input;
 using Prism.Commands;
 using Prism.Events;
 using System.IO;

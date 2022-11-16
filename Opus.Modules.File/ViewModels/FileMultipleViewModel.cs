@@ -1,10 +1,8 @@
-﻿using Microsoft.Win32;
-using Opus.Core.Base;
+﻿using Opus.Common.ViewModels;
 using Opus.Events;
-using Opus.Services.Input;
+using Opus.Common.Services.Input;
 using Prism.Commands;
 using Prism.Events;
-using Prism.Regions;
 
 namespace Opus.Modules.File.ViewModels
 {

@@ -1,5 +1,7 @@
 - name: Käyttöohje
   href: articles/
+- name: Lisenssi
+  href: license/license.md
 - name: Tekninen dokumentaatio
   href: api/
   homepage: api/index.md

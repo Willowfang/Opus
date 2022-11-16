@@ -1,0 +1,120 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dialog="clr-namespace:Opus.Common.Dialogs"
+                    xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+                    xmlns:resDialog="clr-namespace:Opus.Resources.Labels.Dialogs;assembly=Opus.Resources"
+                    xmlns:resLabels="clr-namespace:Opus.Resources.Labels;assembly=Opus.Resources">
+
+    <!--
+         COMPOSITION FILESEGMENT DIALOG
+         A dialog for creating or modifying a profile file segment. File segments are rules that
+         are used to scan for files and rename them in the product.
+    -->
+    <DataTemplate DataType="{x:Type dialog:CompositionFileSegmentDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+
+            <!--
+                 Name of the file segment. Cannot be empty and is validated.
+            -->
+            <TextBox Style="{DynamicResource HintedValidationTextBox}"
+                     md:HintAssist.Hint="{x:Static resLabels:General.Name}"
+                     Text="{Binding SegmentName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
+                     ValidatesOnDataErrors=True}"
+                     Name="CompositionFileTitleText"
+                     Width="200"/>
+
+            <!--
+                 Switch for choosing whether the final name in the product document should be obtained
+                 from the file itself (rather than from a manually entered template).
+            -->
+            <CheckBox Style="{DynamicResource MaterialDesignAccentCheckBox}"
+                      Content="{x:Static resDialog:CompositionFileSegment.NameFromFileDescription}" 
+                      FontSize="14"
+                      IsChecked="{Binding NameFromFile}"
+                      HorizontalAlignment="Center"
+                      Margin="20, 0, 20, 10"/>
+
+            <Separator Style="{DynamicResource MaterialDesignSeparator}"
+                       Margin="10"/>
+
+            <StackPanel Orientation="Horizontal">
+
+                <!--
+                     Textboxes for entering the search (and ignore) criteria of filenames. Must be entered in a valid
+                     Regex form. They are validated.
+                -->
+                <StackPanel>
+                    <TextBox Style="{DynamicResource HintedTextBox}"
+                             md:HintAssist.Hint="{x:Static resLabels:General.SearchExpression}"
+                             Text="{Binding SearchTerm, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
+                             ValidatesOnDataErrors=True}"
+                             Name="CompositionFileSearchExpressionText"
+                             Width="200"/>
+                    <TextBox Style="{DynamicResource HintedTextBox}"
+                             md:HintAssist.Hint="{x:Static resLabels:General.IgnoreExpression}"
+                             Text="{Binding ToRemove, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
+                             ValidatesOnDataErrors=True}"
+                             Name="CompositionFileIgnoreExpressionText"
+                             Width="200"/>
+                </StackPanel>
+
+                <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5" RadiusX="2" RadiusY="2"/>
+
+                <!--
+                     Textboxes for entering the minimun and maximun amount of accepted files of the
+                     same file segment type. Zero means unlimited.
+                -->
+                <StackPanel>
+                    <TextBox Style="{DynamicResource NumberTextBox}"
+                             Text="{Binding MinCount, UpdateSourceTrigger=PropertyChanged, 
+                             ValidatesOnDataErrors=True}"
+                             Width="70"
+                             Name="CompositionFileMinCountText"
+                             md:HintAssist.Hint="{x:Static resLabels:General.Minimum}"/>
+                    <TextBox Style="{DynamicResource NumberTextBox}"
+                             Text="{Binding MaxCount, UpdateSourceTrigger=PropertyChanged, 
+                             ValidatesOnDataErrors=True}"
+                             Width="70"
+                             Name="CompositionFileMaxCountText"
+                             md:HintAssist.Hint="{x:Static resLabels:General.Maximum}"/>
+                </StackPanel>
+            </StackPanel>
+
+            <Separator Style="{DynamicResource MaterialDesignSeparator}"
+                       Margin="10, 10, 10, 0"/>
+
+            <!--
+                 Textbox for entering a sample name (e.g. "Account receipt 1"). This will be displayed
+                 to the user when hovering over a file segment element. This example is not mandatory.
+            -->
+            <TextBox Style="{DynamicResource HintedValidationTextBox}"
+                     md:HintAssist.Hint="{x:Static resLabels:General.Example}"
+                     Text="{Binding Example, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     Width="200"/>
+
+            <Separator Style="{DynamicResource MaterialDesignSeparator}"
+                       Margin="10"/>
+
+            <!--
+                 Buttons for saving and cancelling. Save is only possible if all validations have been approved.
+            -->
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}">
+                    <Button.IsEnabled>
+                        <MultiBinding Converter="{StaticResource BooleanAllNegative}">
+                            <Binding ElementName="CompositionFileTitleText" Path="(Validation.HasError)"/>
+                            <Binding ElementName="CompositionFileSearchExpressionText" Path="(Validation.HasError)"/>
+                            <Binding ElementName="CompositionFileIgnoreExpressionText" Path="(Validation.HasError)"/>
+                            <Binding ElementName="CompositionFileMinCountText" Path="(Validation.HasError)"/>
+                            <Binding ElementName="CompositionFileMaxCountText" Path="(Validation.HasError)"/>
+                        </MultiBinding>
+                    </Button.IsEnabled>
+                </Button>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+</ResourceDictionary>

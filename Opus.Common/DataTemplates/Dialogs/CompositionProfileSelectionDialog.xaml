@@ -1,0 +1,71 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dialog="clr-namespace:Opus.Common.Dialogs"
+                    xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+                    xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+                    xmlns:resButtons="clr-namespace:Opus.Resources.Buttons;assembly=Opus.Resources"
+                    xmlns:resLabels="clr-namespace:Opus.Resources.Labels;assembly=Opus.Resources">
+
+    <!--
+         COMPOSITION PROFILE SELECTION DIALOG
+         A dialog for selecting a composition profile. 
+    -->
+    <DataTemplate DataType="{x:Type dialog:CompositionProfileSelectionDialog}">
+        <StackPanel Margin="10">
+
+            <!--
+                 Organize profiles according to their editability and name.
+            -->
+            <StackPanel.Resources>
+                <CollectionViewSource x:Key="ProfileSource"
+                                      Source="{Binding Profiles}">
+                    <CollectionViewSource.SortDescriptions>
+                        <scm:SortDescription PropertyName="IsEditable"/>
+                        <scm:SortDescription PropertyName="ProfileName" Direction="Ascending"/>
+                    </CollectionViewSource.SortDescriptions>
+                </CollectionViewSource>
+            </StackPanel.Resources>
+
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+
+            <!--
+                 Combobox for choosing the correct profile.
+            -->
+            <ComboBox Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
+                      Grid.Column="2"
+                      md:HintAssist.Hint="{x:Static resLabels:General.Profile}"
+                      md:HintAssist.FloatingOffset="0, -22"
+                      md:HintAssist.FloatingScale="0.9"
+                      md:HintAssist.Foreground="{DynamicResource SecondaryHueMidBrush}"
+                      Width="200"
+                      FontSize="16"
+                      Margin="0, 30, 0, 0"
+                      md:ComboBoxAssist.ShowSelectedItem="True"
+                      SelectedItem="{Binding SelectedProfile, Mode=TwoWay}"
+                      ItemsSource="{Binding Source={StaticResource ProfileSource}}"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      VerticalContentAlignment="Bottom"
+                      HorizontalContentAlignment="Left">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock TextTrimming="CharacterEllipsis"
+                                   Text="{Binding ProfileName}"
+                                   FontWeight="{Binding IsEditable, Converter={StaticResource NegativeToBold}}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <!--
+                 Buttons for saving and cancelling.
+            -->
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"
+                        Content="{x:Static resButtons:General.Confirm}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+</ResourceDictionary>

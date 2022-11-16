@@ -25,6 +25,9 @@
       },
       {
         "files": ["articles/**.md", "articles/**/toc.yml", "toc.yml", "*.md"]
+      },
+      {
+        "files": ["license/**.md"]
       }
     ],
     "resource": [

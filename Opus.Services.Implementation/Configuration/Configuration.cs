@@ -91,6 +91,17 @@ namespace Opus.Services.Implementation.Configuration
             set => SetProperty(ref extractionCreateZip, value, SaveConfiguration);
         }
 
+        private bool extractionOpenDestinationAfterComplete;
+
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        public bool ExtractionOpenDestinationAfterComplete
+        {
+            get => extractionOpenDestinationAfterComplete;
+            set => SetProperty(ref extractionOpenDestinationAfterComplete, value, SaveConfiguration);
+        }
+
         private int annotations;
 
         /// <summary>
@@ -177,6 +188,17 @@ namespace Opus.Services.Implementation.Configuration
         {
             get => defaultProfile;
             set => SetProperty(ref defaultProfile, value, SaveConfiguration);
+        }
+
+        private int loggingLevel;
+
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        public int LoggingLevel
+        {
+            get => loggingLevel;
+            set => SetProperty(ref loggingLevel, value, SaveConfiguration);
         }
 
         /// <summary>
@@ -282,7 +304,9 @@ namespace Opus.Services.Implementation.Configuration
                 ExtractionTitleAsk = true,
                 GroupByFiles = true,
                 WorkCopyFlattenRedactions = true,
-                UnsignedTitleTemplate = Resources.DefaultValues.DefaultValues.UnsignedTemplate
+                UnsignedTitleTemplate = Resources.DefaultValues.DefaultValues.UnsignedTemplate,
+                ExtractionOpenDestinationAfterComplete = true,
+                LoggingLevel = (int)LogLevel.Information
             };
         }
 

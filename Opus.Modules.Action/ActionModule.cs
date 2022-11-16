@@ -1,10 +1,8 @@
 ﻿using Prism.Ioc;
 using Prism.Modularity;
-using Prism.Regions;
 using Opus.Modules.Action.Views;
 using Opus.Values;
-using Opus.Services.UI;
-using Opus.Core.Wrappers;
+using Opus.Common.Services.Navigation;
 
 namespace Opus.Modules.Action
 {

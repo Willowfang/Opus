@@ -72,41 +72,13 @@
   
   <h1 id="Opus_Services_Implementation_Data_DataProviderLiteDB" data-uid="Opus.Services.Implementation.Data.DataProviderLiteDB" class="text-break">Class DataProviderLiteDB
   </h1>
-  <div class="markdown level0 summary"><p>Default implementation for <a class="xref" href="Opus.Services.Data.IDataProvider.html">IDataProvider</a>. Accesses a local LiteDB database.</p>
+  <div class="markdown level0 summary"><p>Default implementation for <see cref="!:IDataProvider"></see>. Accesses a local LiteDB database.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DataProviderLiteDB</span></div>
-  </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Opus.Services.Data.IDataProvider.html">IDataProvider</a></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Opus.Services.Implementation.Data.html">Opus.Services.Implementation.Data</a></h6>
   <h6><strong>Assembly</strong>: Opus.Services.Implementation.dll</h6>
@@ -199,7 +171,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public T Delete&lt;T&gt;(T instance)
-
     where T : IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -381,7 +352,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public T GetOneById&lt;T&gt;(int id)
-
     where T : IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -449,7 +419,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public T Save&lt;T&gt;(T instance)
-
     where T : IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -502,9 +471,12 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
+  <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="Opus.Services.Data.IDataProvider.html">IDataProvider</a>
+      <a class="xref" href="Opus.Common.Extensions.ObjectExtensions.html#Opus_Common_Extensions_ObjectExtensions_IfNotNullExecute__1___0_Action___0__">ObjectExtensions.IfNotNullExecute&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Opus.Common.Extensions.ObjectExtensions.html#Opus_Common_Extensions_ObjectExtensions_IfNullExecute__1___0_Action___0__">ObjectExtensions.IfNullExecute&lt;T&gt;(T, Action&lt;T&gt;)</a>
   </div>
 </article>
           </div>

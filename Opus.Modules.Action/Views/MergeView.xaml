@@ -18,46 +18,46 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <ListView ItemsSource="{Binding Collection}"
+        <ListView ItemsSource="{Binding Properties.Collection}"
                   Style="{StaticResource SelectionList}"
-                  SelectedItem="{Binding Collection.SelectedItem}"
+                  SelectedItem="{Binding Properties.Collection.SelectedItem}"
                   Grid.Row="0"
                   SelectionMode="Single"
                   x:Name="FilesList"
                   ItemTemplate="{StaticResource MergeList}">
             <ListView.InputBindings>
-                <KeyBinding Key="Up" Modifiers="Ctrl" Command="{Binding Collection.MoveUp}"/>
-                <KeyBinding Key="Down" Modifiers="Ctrl" Command="{Binding Collection.MoveDown}"/>
-                <KeyBinding Key="Left" Modifiers="Ctrl" Command="{Binding Collection.MoveLeft}"/>
-                <KeyBinding Key="Right" Modifiers="Ctrl" Command="{Binding Collection.MoveRight}"/>
+                <KeyBinding Key="Up" Modifiers="Ctrl" Command="{Binding Properties.Collection.MoveUp}"/>
+                <KeyBinding Key="Down" Modifiers="Ctrl" Command="{Binding Properties.Collection.MoveDown}"/>
+                <KeyBinding Key="Left" Modifiers="Ctrl" Command="{Binding Properties.Collection.MoveLeft}"/>
+                <KeyBinding Key="Right" Modifiers="Ctrl" Command="{Binding Properties.Collection.MoveRight}"/>
             </ListView.InputBindings>
         </ListView>
 
         <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding Collection.Count, Converter={StaticResource EmptyToBool}, Mode=OneWay}"
-                    Command="{Binding MergeCommand}"
+                    IsEnabled="{Binding Properties.Collection.Count, Converter={StaticResource EmptyToBool}, Mode=OneWay}"
+                    Command="{Binding Commands.MergeCommand}"
                     ToolTip="{x:Static resToolTips:Merge.MergeButton}">
                 <md:PackIcon Kind="ContentSave"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                    Command="{Binding EditCommand}"
+                    Command="{Binding Commands.EditCommand}"
                     ToolTip="{x:Static resToolTips:Merge.EditButton}">
                 <md:PackIcon Kind="Pencil"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding Collection.Count, Converter={StaticResource EmptyToBool}, Mode=OneWay}"
-                    Command="{Binding ClearCommand}"
+                    IsEnabled="{Binding Properties.Collection.Count, Converter={StaticResource EmptyToBool}, Mode=OneWay}"
+                    Command="{Binding Commands.ClearCommand}"
                     Margin="5, 16, 0, 0"
                     ToolTip="{x:Static resToolTips:Merge.ClearButton}">
                 <md:PackIcon Kind="Close"/>
             </Button>
             <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                    Command="{Binding DeleteCommand}"
+                    Command="{Binding Commands.DeleteCommand}"
                     Margin="0, 16, 0, 0"
                     ToolTip="{x:Static resToolTips:Merge.DeleteButton}">
                 <md:PackIcon Kind="Delete"/>

@@ -5,28 +5,14 @@ using Prism.Modularity;
 using Opus.Views;
 using System.Globalization;
 using System.Threading;
-using Opus.Services.UI;
-using Opus.Services.Implementation.UI;
-using Opus.Services.Data;
-using Opus.Services.Implementation.Data;
-using Opus.Services.Configuration;
-using Opus.Services.Implementation.Configuration;
-using WF.PdfLib.Services;
-using WF.PdfLib.iText7;
-using Opus.Services.Input;
-using Opus.Services.Implementation.Input;
-using System.IO;
-using Opus.Services.Data.Composition;
-using Opus.Services.Implementation.Data.Composition;
+using Opus.Common.Services.Configuration;
+using Opus.Common.Services.Data.Composition;
 using Opus.ViewModels;
-using WF.PdfLib.PDFTools;
-using Opus.Core.Executors;
 using WF.LoggingLib;
-using WF.LoggingLib.Defaults;
-using Opus.Services.Implementation.Logging;
-using Opus.Values;
-using WF.ZipLib;
-using WF.ZipLib.Framework;
+using Opus.Common.Logging;
+using Opus.Initialize;
+using Opus.Initialize.Registrations;
+using Opus.Actions.Services.Update;
 
 namespace Opus
 {
@@ -86,8 +72,14 @@ namespace Opus
         /// </summary>
         protected void SetLanguage()
         {
+            ILogbook logbook = Container.Resolve<ILogbook>();
+
+            logbook.Write("Setting application language.", LogLevel.Debug, callerName: "App");
+
             CultureInfo ci = new CultureInfo(Container.Resolve<IConfiguration>().LanguageCode);
             Thread.CurrentThread.CurrentUICulture = ci;
+
+            logbook.Write($"Application language set to {ci.DisplayName}.", LogLevel.Debug, callerName: "App");
         }
 
         /// <summary>
@@ -99,37 +91,17 @@ namespace Opus
         /// </summary>
         protected void UpdateProfiles()
         {
+            ILogbook logbook = Container.Resolve<ILogbook>();
+
+            logbook.Write("Checking for updates to profiles.", LogLevel.Debug, callerName: "App");
+
             ICompositionOptions options = Container.Resolve<ICompositionOptions>();
 
-            bool errorFlag = false;
+            ProfileUpdater updater = new ProfileUpdater(options);
 
-            if (Directory.Exists(FilePaths.PROFILE_DIRECTORY) == false)
-                return;
+            updater.CheckNewProfilesAndUpdate();
 
-            // Find new profile files in the profiles directory.
-            foreach (string filePath in Directory.GetFiles(FilePaths.PROFILE_DIRECTORY))
-            {
-                try
-                {
-                    // Import each profile and override and old one, if such a profile exist.
-                    ICompositionProfile profile = options.ImportProfile(filePath);
-                    options.SaveProfile(profile);
-                    File.Delete(filePath);
-                }
-                catch
-                {
-                    errorFlag = true;
-                }
-            }
-
-            // If there was an error when importing profiles, notify the user.
-            if (errorFlag)
-            {
-                MessageBox.Show(
-                    Opus.Resources.Messages.StartUp.ProfileUpdateFailed,
-                    Opus.Resources.Labels.General.Error
-                );
-            }
+            logbook.Write("Profile update check completed.", LogLevel.Debug, callerName: "App");
         }
 
         /// <summary>
@@ -142,20 +114,14 @@ namespace Opus
             // If the arguments given for program start were not null, then this instance
             // is a context menu or command line instance. If that is the case, do not
             // save log files.
-            if (arguments == null)
-                containerRegistry.RegisterSingleton<ILogbook, SeriLogbook>();
-            else
-                containerRegistry.RegisterSingleton<ILogbook>(x => EmptyLogbook.Create());
+            RLogging.Register(containerRegistry, arguments);
 
             // Configuration services. Load from file or create new configuration if none is found
             // from files.
-            string configPath = Path.Combine(
-                FilePaths.CONFIG_DIRECTORY,
-                "Config" + FilePaths.CONFIG_EXTENSION
-            );
-            containerRegistry.RegisterSingleton<IConfiguration>(
-                x => Configuration.Load(configPath, Container.Resolve<ILogbook>())
-            );
+            RConfiguration.Register(containerRegistry, Container);
+
+            // Set logging level according to configuration and write first logbook entry.
+            ILogbook logbook = SetLogLevelAndTest();
 
             // Set the program language according to loaded settings.
             SetLanguage();
@@ -164,14 +130,7 @@ namespace Opus
             // contains the bulk of the business logic the application uses. Many of these services
             // are contained in the CX.PdfLib -libraries. If you are looking for particulars of
             // pdf manipulation functions, they are probably included in one of these.
-            containerRegistry.Register<IAnnotationService, AnnotationService>();
-            containerRegistry.Register<IPdfAConvertService, PdfAConverter>();
-            containerRegistry.Register<IBookmarkService, BookmarkService>();
-            containerRegistry.Register<IExtractionService, ExtractionService>();
-            containerRegistry.Register<ISigningService, SigningService>();
-            containerRegistry.Register<IMergingService, MergingService>();
-            containerRegistry.Register<IWordConvertService, WordConvertService>();
-            containerRegistry.Register<IZipService, ZipService>();
+            RExternalServices.Register(containerRegistry, logbook);
 
             // UI-related services. Navigation assistant and registry takes care
             // of navigation of the view according to selected scheme name.
@@ -179,53 +138,66 @@ namespace Opus
             // path (the implementation of said service was dependent on native libraries)
             // and dialogAssist takes care of displaying dialogs to the user in the selected
             // order.
-            containerRegistry.RegisterManySingleton<NavigationAssist>(
-                typeof(INavigationAssist),
-                typeof(INavigationTargetRegistry)
-            );
-            containerRegistry.Register<IPathSelection, PathSelectionWin>();
-            containerRegistry.RegisterSingleton<IDialogAssist, DialogAssist>();
-            containerRegistry.RegisterSingleton<ISchemeInstructions, SchemeInstructions>();
+            RUserInterface.Register(containerRegistry, logbook);
 
             // Data services. This service saves data to a database. In this case, a NoSQL-database
             // called LiteDB. Database is currently basically only used to store file composition
             // profiles. The database is stored locally along with the configuration file, inside the
             // application directory.
-            var provider = new DataProviderLiteDB(
-                Path.Combine(FilePaths.CONFIG_DIRECTORY, "App" + FilePaths.CONFIG_EXTENSION)
-            );
-            containerRegistry.RegisterInstance<IDataProvider>(provider);
+            RData.Register(containerRegistry, logbook);
 
             // Composition options contain many different options so they are stored
             // separate from the application-wide configuration file.
-            containerRegistry.RegisterSingleton<ICompositionOptions, CompositionOptions>();
-
-            // These are services that hold together individual, smaller services related
-            // to file parts extraction and signature removal.
-            containerRegistry.Register<IExtractionExecutor, ExtractionExecutor>();
-            containerRegistry.Register<ISignatureExecutor, SignatureExecutor>();
+            ROptions.Register(containerRegistry, logbook);
 
             // Update composition profiles once relevant services have been registered
             // in the container.
             UpdateProfiles();
 
-            // Register the composing service after the profiles have been updated.
-            containerRegistry.Register<IComposer, Composer>();
+            // Register update checkin service for checking program updates.
+            RUpdate.Register(containerRegistry, logbook);
+
+            // Register actions. This includes properties, methods and event handling.
+
+            RExtractionActions.Register(containerRegistry, logbook);
+
+            RMergeActions.Register(containerRegistry, logbook);
+
+            RWorkCopyActions.Register(containerRegistry, logbook);
+
+            RCompositionActions.Register(containerRegistry, logbook);
+
+            // Register commands.
+
+            RCommands.Register(containerRegistry, logbook);
 
             // Context Menu. This service takes care of the windows context menu functionalities
-            // and is dependant on many of the previous services.
-            containerRegistry.Register<IContextMenu, ContextMenuExecutor>();
+            // and is dependent on many of the previous services.
 
-            // Register update checkin service for checking program updates.
-            containerRegistry.RegisterSingleton<IUpdateExecutor, UpdateExecutor>();
+            RContextMenu.Register(containerRegistry, logbook);
 
-            // Register logging services and write the first logbook entry.
-            ILogbook logbook = Container.Resolve<ILogbook>();
             logbook.Write(
-                "Hello from logging! I have been registered.",
+                "All services registered.",
                 LogLevel.Debug,
-                callerName: "Application"
-            );
+                callerName: "App",
+                callerMemberName: "RegisterTypes");
+        }
+
+        private ILogbook SetLogLevelAndTest()
+        {
+            ILogbook logbook = Container.Resolve<ILogbook>();
+
+            IConfiguration configuration = Container.Resolve<IConfiguration>();
+
+            logbook.ChangeLevel((LogLevel)configuration.LoggingLevel);
+
+            logbook.Write(
+                "Hello from logging! I have been registered. Starting registration for other services.",
+                LogLevel.Debug,
+                callerName: "App",
+                callerMemberName: "SetLogLevelAndTest");
+
+            return logbook;
         }
 
         /// <summary>
@@ -235,13 +207,13 @@ namespace Opus
         /// <param name="moduleCatalog">The catalog to register the modules in.</param>
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
-            moduleCatalog.AddModule<Modules.MainSection.MainSectionModule>();
-            moduleCatalog.AddModule<Modules.File.FileModule>();
-            moduleCatalog.AddModule<Modules.Action.ActionModule>();
-            moduleCatalog.AddModule<Modules.Options.OptionsModule>();
-
             ILogbook logbook = Container.Resolve<ILogbook>();
-            logbook.Write("Modules configured.", LogLevel.Debug, callerName: "Application");
+
+            logbook.Write("Starting module configuration.", LogLevel.Debug, callerName: "App");
+
+            RModules.Register(moduleCatalog);
+
+            logbook.Write("Modules configured.", LogLevel.Debug, callerName: "App");
         }
 
         /// <summary>
@@ -250,11 +222,23 @@ namespace Opus
         /// <returns>Returns the instance of the main shell window.</returns>
         protected override Window CreateShell()
         {
-            updating = Container.Resolve<IUpdateExecutor>().CheckForUpdates();
+            ILogbook logbook = Container.Resolve<ILogbook>();
 
-            return arguments == null
+            logbook.Write("Checking for application updates.", LogLevel.Debug, callerName: "App");
+
+            updating = Container.Resolve<IUpdateMethods>().CheckForUpdates();
+
+            logbook.Write("Application updates checked.", LogLevel.Debug, callerName: "App");
+
+            logbook.Write("Creating shell.", LogLevel.Debug, callerName: "App");
+
+            Window shell = arguments == null
                 ? Container.Resolve<MainWindowView>()
                 : Container.Resolve<ContextMenuView>();
+
+            logbook.Write("Shell created.", LogLevel.Debug, callerName: "App");
+
+            return shell;
         }
 
         /// <summary>
@@ -283,6 +267,10 @@ namespace Opus
         /// the action on.</param>
         protected async void RunContext(ContextMenuViewModel viewModel)
         {
+            ILogbook logbook = Container.Resolve<ILogbook>();
+
+            logbook.Write("Running context menu action.", LogLevel.Debug, callerName: "App");
+
             await viewModel.ContextMenu.Run(arguments);
             Current.Shutdown();
         }
@@ -292,10 +280,16 @@ namespace Opus
         /// </summary>
         protected async void Update()
         {
-            bool initialized = await Container.Resolve<IUpdateExecutor>().InitializeUpdate();
+            ILogbook logbook = Container.Resolve<ILogbook>();
+
+            logbook.Write("Update found. Starting update process.", LogLevel.Debug, callerName: "App");
+
+            bool initialized = await Container.Resolve<IUpdateMethods>().InitializeUpdate();
 
             if (initialized)
             {
+                logbook.Write($"Shutting down application for updates...", LogLevel.Debug, callerName: "App");
+
                 Current.Shutdown();
             }
             else

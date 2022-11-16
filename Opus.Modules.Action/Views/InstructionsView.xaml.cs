@@ -3,10 +3,13 @@
 namespace Opus.Modules.Action.Views
 {
     /// <summary>
-    /// Interaction logic for InstructionsView
+    /// View for displaying instructions for an action.
     /// </summary>
     public partial class InstructionsView : UserControl
     {
+        /// <summary>
+        /// Create new view instance.
+        /// </summary>
         public InstructionsView()
         {
             InitializeComponent();

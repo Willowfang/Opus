@@ -32,12 +32,12 @@ namespace Opus.Services.Implementation.UI.Dialogs
             get { return endPage; }
             set { SetProperty(ref endPage, value); }
         }
-        private string? title;
+        private string title;
 
         /// <summary>
         /// Bookmark title (its name in the tree).
         /// </summary>
-        public string? Title
+        public string Title
         {
             get { return title; }
             set { SetProperty(ref title, value); }
@@ -46,8 +46,12 @@ namespace Opus.Services.Implementation.UI.Dialogs
         /// <summary>
         /// Create a new bookmark dialog.
         /// </summary>
+        /// <param name="initialBookmarkTitle">Initial name for the bookmark.</param>
         /// <param name="dialogTitle">Title of the dialog.</param>
-        public BookmarkDialog(string dialogTitle) : base(dialogTitle) { }
+        public BookmarkDialog(string dialogTitle, string? initialBookmarkTitle = null) : base(dialogTitle) 
+        {
+            title = initialBookmarkTitle ?? string.Empty;
+        }
 
         /// <summary>
         /// Validation error, always return empty string.

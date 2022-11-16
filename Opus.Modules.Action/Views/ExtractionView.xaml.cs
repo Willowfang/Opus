@@ -1,4 +1,4 @@
-﻿using Opus.Services.Implementation.Data.Extraction;
+﻿using Opus.Common.Wrappers;
 using System;
 using System.Windows;
 using System.Windows.Controls;

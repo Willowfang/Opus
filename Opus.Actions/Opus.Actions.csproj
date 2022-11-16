@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>C:\Users\jbjok\OneDrive - O365 Turun yliopisto\Koodaus\Signatures\opusKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Opus.Common\Opus.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="WF-LoggingLib">
+      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\LoggingLib\bin\Debug\net6.0\WF-LoggingLib.dll</HintPath>
+    </Reference>
+    <Reference Include="WF-PdfLib">
+      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\PdfLib\bin\Debug\net6.0\WF-PdfLib.dll</HintPath>
+    </Reference>
+    <Reference Include="WF-ZipLib">
+      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\ZipLib\bin\Debug\net6.0\WF-ZipLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

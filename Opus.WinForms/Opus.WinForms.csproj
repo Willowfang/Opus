@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <UseWindowsForms>true</UseWindowsForms>
+	  <SignAssembly>True</SignAssembly>
+	  <AssemblyOriginatorKeyFile>C:\Users\jbjok\OneDrive - O365 Turun yliopisto\Koodaus\Signatures\opusKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+</Project>

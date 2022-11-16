@@ -79,6 +79,15 @@ namespace Opus.Resources.Labels.MainWindow {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Lokitustaso.
+        /// </summary>
+        public static string LogLevel {
+            get {
+                return ResourceManager.GetString("LogLevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Lähdekoodi.
         /// </summary>
         public static string SourceCode {

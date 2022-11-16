@@ -6,7 +6,7 @@
     <!-- MAIN MENU BUTTON -->
     <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource MaterialDesignFlatButton}"
            x:Key="MainMenuButton">
-        <Setter Property="Command" Value="{Binding NavigateCommand}"/>
+        <Setter Property="Command" Value="{Binding CommonCommands.NavigateCommand}"/>
         <Setter Property="Width" Value="80"/>
         <Setter Property="Height" Value="50"/>
         <Setter Property="Padding" Value="0"/>
@@ -88,7 +88,7 @@
            BasedOn="{StaticResource MaterialDesignIconButton}">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
-        <Setter Property="Command" Value="{Binding SettingsCommand}"/>
+        <Setter Property="Command" Value="{Binding SettingsCommands.SettingsCommand}"/>
         <Setter Property="ContentTemplate">
             <Setter.Value>
                 <DataTemplate>

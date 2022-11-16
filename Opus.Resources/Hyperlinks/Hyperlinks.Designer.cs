@@ -61,7 +61,7 @@ namespace Opus.Resources.Hyperlinks {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Licenses.txt.
+        ///   Looks up a localized string similar to https://willowfang.github.io/Opus/license/license.html.
         /// </summary>
         public static string Licenses {
             get {

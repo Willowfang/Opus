@@ -26,7 +26,7 @@
         Width="1000">
     <Window.Background>
         <!--
-            BACKGROUND IMAGE
+             BACKGROUND IMAGE
         -->
         <ImageBrush ImageSource="/Opus;component/Images/OpusBackground.png"
                     Stretch="Fill"/>
@@ -39,14 +39,37 @@
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Styles/DataTemplates.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Opus.Common;component/DataTemplates/Dialogs.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="MenuItem"
+               BasedOn="{StaticResource MaterialDesignMenuItem}"
+               x:Key="LogLevelMenuItem">
+                <Style.Triggers>
+                    <Trigger Property="IsChecked" Value="True">
+                        <Setter Property="Background">
+                            <Setter.Value>
+                                <SolidColorBrush Color="#9d5baf" Opacity="0.5"/>
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style TargetType="MenuItem" 
+                   BasedOn="{StaticResource MaterialDesignMenuItem}"
+                   x:Key="LanguageMenuItem">
+                <Setter Property="Header" Value="{Binding Name}"/>
+                <Setter Property="StaysOpenOnClick" Value="False"/>
+                <Setter Property="Command" Value="{Binding RelativeSource={RelativeSource AncestorType=MenuItem}, Path=DataContext.CommonCommands.LanguageCommand}"/>
+                <Setter Property="CommandParameter" Value="{Binding Code}"/>
+            </Style>
         </ResourceDictionary>
     </Window.Resources>
     
     <!--
-        DIALOG
-        Dialogs are hosted here. They are displayed through the dialog service, where they are registered when needed.
+         DIALOG
+         Dialogs are hosted here. They are displayed through the dialog service, where they are registered when needed.
     -->
     <materialDesign:DialogHost IsOpen="{Binding Dialog.IsShowing}" DialogContent="{Binding Dialog.Active}">
         <materialDesign:DialogHost.DialogBackground>
@@ -54,7 +77,7 @@
         </materialDesign:DialogHost.DialogBackground>
         
         <!--
-            MAIN GRID
+             MAIN GRID
         -->
         
         <Grid>
@@ -64,9 +87,9 @@
             </Grid.RowDefinitions>
 
             <!--
-                TOPBAR
-                This is the absolute top bar containg buttons for minimizing, maximising and closing the window.
-                Window can be dragged around by grabbing this bar (that is what the "MouseLeftButtonDown"-event is for).
+                 TOPBAR
+                 This is the absolute top bar containg buttons for minimizing, maximising and closing the window.
+                 Window can be dragged around by grabbing this bar (that is what the "MouseLeftButtonDown"-event is for).
             -->
             <materialDesign:Card Grid.Row="0" Padding="5, 5, 5, 5" Margin="0, 0, 0, 0" x:Name="TopBar"
                                  materialDesign:ShadowAssist.ShadowDepth="Depth0"
@@ -80,14 +103,14 @@
                 </materialDesign:Card.Effect>
                 
                 <!--
-                    TOPBAR BUTTONS
-                    For standard window actions.
+                     TOPBAR BUTTONS
+                     For standard window actions.
                 -->
                 <StackPanel HorizontalAlignment="Right" Margin="0, 0, 10, 0"
                             Orientation="Horizontal">
                     
                     <!--
-                        MINIMIZE
+                         MINIMIZE
                     -->
                     <Button Style="{DynamicResource MaterialDesignFlatButton}" Height="25" Width="25" Padding="0"
                             Margin="0, 0, 10, 0"
@@ -96,7 +119,7 @@
                     </Button>
                     
                     <!--
-                        MAXIMIZE
+                         MAXIMIZE
                     -->
                     <Button Style="{DynamicResource MaterialDesignFlatButton}" Height="25" Width="25" Padding="0"
                             Margin="0, 0, 10, 0"
@@ -105,18 +128,18 @@
                     </Button>
                     
                     <!--
-                        CLOSE
+                         CLOSE
                     -->
                     <Button Style="{DynamicResource MaterialDesignFlatButton}" Height="25" Width="25" Padding="0"
-                            Command="{Binding ExitCommand}">
+                            Command="{Binding CommonCommands.ExitCommand}">
                         <materialDesign:PackIcon Kind="CloseThick" Width="25"/>
                     </Button>
                 </StackPanel>
             </materialDesign:Card>
             
             <!--
-                CONTENT GRID
-                This grid contains the actual contentparts of the application.
+                 CONTENT GRID
+                 This grid contains the actual contentparts of the application.
             -->
             <Grid Grid.Row="1" Margin="0, 0, 0, 0">
                 <ContentControl Content="{StaticResource Divided}" HorizontalAlignment="Center"
@@ -125,9 +148,9 @@
                     
 
                     <!--
-                        MAIN MENU
-                        This is the main menu on the left-hand-side of the user interface (with all the main
-                        sections of the application as selectable items).
+                         MAIN MENU
+                         This is the main menu on the left-hand-side of the user interface (with all the main
+                         sections of the application as selectable items).
                     -->
                     <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth0"
                                          HorizontalAlignment="Center" Margin="0, 0, 0, 0"
@@ -141,15 +164,15 @@
                         <StackPanel Margin="5, 0, 0, 0">
                             
                             <!--
-                                LOGO
+                                 LOGO
                             -->
                             <Image Source="/Opus;component/Images/LogoCX.png" Grid.Row="0" Grid.Column="0"
                                    Width="50" Margin="0, 10, 0, 0"/>
                             <Separator Style="{DynamicResource MaterialDesignLightSeparator}" Margin="5, 10, 5, 10"/>
 
                             <!--
-                                MAIN MENU BUTTONS
-                                All the main action sections.
+                                 MAIN MENU BUTTONS
+                                 All the main action sections.
                             -->
                             <RadioButton Style="{DynamicResource MainMenuButton}"
                                          CommandParameter="{x:Static const:SchemeNames.EXTRACT}"
@@ -176,9 +199,9 @@
                     </materialDesign:Card>
 
                     <!--
-                        HEADER
-                        Top part of all pages with the name of the section, a reset-button and a menu of common
-                        links and actions.
+                         HEADER
+                         Top part of all pages with the name of the section, a reset-button and a menu of common
+                         links and actions.
                     -->
                     <materialDesign:Card Margin="16, 10, 16, 16"
                                          Padding="30, 0, 30, 0" DockPanel.Dock="Top" Opacity="1"
@@ -195,20 +218,20 @@
                             </Grid.ColumnDefinitions>
                             
                             <!--
-                                Button for using the reset command and resetting the current view to its default
-                                values (or otherwise in a state that is considered neutral).
+                                 Button for using the reset command and resetting the current view to its default
+                                 values (or otherwise in a state that is considered neutral).
                             -->
                             <Button Style="{DynamicResource MaterialDesignIconButton}"
                                     Grid.Column="0"
                                     HorizontalAlignment="Left"
-                                    Command="{Binding ResetCommand}"
+                                    Command="{Binding CommonCommands.ResetCommand}"
                                     ToolTip="{x:Static resTooltips:Main.ResetButton}">
                                 <materialDesign:PackIcon
                                     Kind="Restart"/>
                             </Button>
                             
                             <!--
-                                Page of section title.
+                                 Page of section title.
                             -->
                             <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
                                        Grid.Column="1"
@@ -217,8 +240,8 @@
                                        VerticalAlignment="Center"/>
 
                             <!--
-                                Common menu. Has options for viewing manuals, source code etc. as well as for
-                                changing UI language.
+                                 Common menu. Has options for viewing manuals, source code etc. as well as for
+                                 changing UI language.
                             -->
                             <materialDesign:PopupBox Grid.Column="2" 
                                                      HorizontalAlignment="Right" 
@@ -226,30 +249,42 @@
                                                      StaysOpen="True"
                                                      Padding="0">
                                 <Menu Background="#FF0F1316">
-                                        <Menu.ItemsPanel>
-                                            <ItemsPanelTemplate>
-                                                <VirtualizingStackPanel Orientation="Vertical"/>
-                                            </ItemsPanelTemplate>
-                                        </Menu.ItemsPanel>
-                                        <MenuItem Header="{x:Static resMain:HelpMenu.UserManual}"
-                                                  Command="{Binding OpenManualCommand}"/>
-                                        <MenuItem Header="{x:Static resMain:HelpMenu.Licences}"
-                                                  Command="{Binding OpenLicensesCommand}"/>
-                                        <MenuItem Header="{x:Static resMain:HelpMenu.SourceCode}"
-                                                  Command="{Binding OpenSourceCodeCommand}"/>
-                                        <MenuItem Header="{x:Static resMain:HelpMenu.Language}"
-                                                  ItemsSource="{Binding Languages}"
-                                                  DisplayMemberPath="Name"
-                                                  StaysOpenOnClick="False">
-                                            <MenuItem.ItemContainerStyle>
-                                                <Style TargetType="MenuItem">
-                                                    <Setter Property="StaysOpenOnClick" Value="False"/>
-                                                    <Setter Property="Command" Value="{Binding RelativeSource={RelativeSource AncestorType=MenuItem}, Path=DataContext.LanguageCommand}"/>
-                                                    <Setter Property="CommandParameter" Value="{Binding Code}"/>
-                                                </Style>
-                                            </MenuItem.ItemContainerStyle>
-                                        </MenuItem>
-                                    </Menu>
+                                    <Menu.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <VirtualizingStackPanel Orientation="Vertical"/>
+                                        </ItemsPanelTemplate>
+                                    </Menu.ItemsPanel>
+                                    <MenuItem Header="{x:Static resMain:HelpMenu.UserManual}"
+                                              Command="{Binding CommonCommands.OpenManualCommand}"/>
+                                    <MenuItem Header="{x:Static resMain:HelpMenu.Licences}"
+                                              Command="{Binding CommonCommands.OpenLicensesCommand}"/>
+                                    <MenuItem Header="{x:Static resMain:HelpMenu.SourceCode}"
+                                              Command="{Binding CommonCommands.OpenSourceCodeCommand}"/>
+                                    <MenuItem Header="{x:Static resMain:HelpMenu.Language}"
+                                              Background="#FF0F1316"
+                                              ItemsSource="{Binding Languages}"
+                                              ItemContainerStyle="{StaticResource LanguageMenuItem}"
+                                              StaysOpenOnClick="False">
+                                    </MenuItem>
+                                    <MenuItem Header="{x:Static resMain:HelpMenu.LogLevel}"
+                                              StaysOpenOnClick="False"
+                                              Background="#FF0F1316">
+                                        <MenuItem Header="Information"
+                                                  Style="{StaticResource LogLevelMenuItem}"
+                                                  Command="{Binding CommonCommands.LogLevelCommand}"
+                                                  CommandParameter="Information"
+                                                  IsChecked="{Binding Configuration.LoggingLevel, Mode=OneWay,
+                                                        Converter={StaticResource LogLevelToBoolean},
+                                                        ConverterParameter=1}"/>
+                                        <MenuItem Header="Debug"
+                                                  Style="{StaticResource LogLevelMenuItem}"
+                                                  Command="{Binding CommonCommands.LogLevelCommand}"
+                                                  CommandParameter="Debug"
+                                                  IsChecked="{Binding Configuration.LoggingLevel, Mode=OneWay, 
+                                                        Converter={StaticResource LogLevelToBoolean},
+                                                        ConverterParameter=0}"/>
+                                    </MenuItem>
+                                </Menu>
                             </materialDesign:PopupBox>
                         </Grid>
                     </materialDesign:Card>

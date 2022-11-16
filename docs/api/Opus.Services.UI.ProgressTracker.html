@@ -1,0 +1,513 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ProgressTracker
+   | Opus Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ProgressTracker
+   | Opus Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo38pt.png" alt="Opus Docs">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Opus.Services.UI.ProgressTracker">
+  
+  
+  <h1 id="Opus_Services_UI_ProgressTracker" data-uid="Opus.Services.UI.ProgressTracker" class="text-break">Class ProgressTracker
+  </h1>
+  <div class="markdown level0 summary"><p>A class to track progress for an action. Shows a progress dialog.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ProgressTracker</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Opus.Services.UI.html">Opus.Services.UI</a></h6>
+  <h6><strong>Assembly</strong>: Opus.Services.dll</h6>
+  <h5 id="Opus_Services_UI_ProgressTracker_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ProgressTracker</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_UI_ProgressTracker__ctor_System_Int32_Opus_Services_UI_IDialogAssist_.md&amp;value=---%0Auid%3A%20Opus.Services.UI.ProgressTracker.%23ctor(System.Int32%2COpus.Services.UI.IDialogAssist)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services/UI/ProgressTracker.cs/#L60">View Source</a>
+  </span>
+  <a id="Opus_Services_UI_ProgressTracker__ctor_" data-uid="Opus.Services.UI.ProgressTracker.#ctor*"></a>
+  <h4 id="Opus_Services_UI_ProgressTracker__ctor_System_Int32_Opus_Services_UI_IDialogAssist_" data-uid="Opus.Services.UI.ProgressTracker.#ctor(System.Int32,Opus.Services.UI.IDialogAssist)">ProgressTracker(Int32, IDialogAssist)</h4>
+  <div class="markdown level1 summary"><p>Create new progress instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProgressTracker(int grandTotal, IDialogAssist dialogAssist)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">grandTotal</span></td>
+        <td><p>When this is reached, progress is completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Services.UI.IDialogAssist.html">IDialogAssist</a></td>
+        <td><span class="parametername">dialogAssist</span></td>
+        <td><p>Dialog service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_UI_ProgressTracker_IsCanceled.md&amp;value=---%0Auid%3A%20Opus.Services.UI.ProgressTracker.IsCanceled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services/UI/ProgressTracker.cs/#L42">View Source</a>
+  </span>
+  <a id="Opus_Services_UI_ProgressTracker_IsCanceled_" data-uid="Opus.Services.UI.ProgressTracker.IsCanceled*"></a>
+  <h4 id="Opus_Services_UI_ProgressTracker_IsCanceled" data-uid="Opus.Services.UI.ProgressTracker.IsCanceled">IsCanceled</h4>
+  <div class="markdown level1 summary"><p>If true, this progress has been canceled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCanceled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_UI_ProgressTracker_ProgressInterface.md&amp;value=---%0Auid%3A%20Opus.Services.UI.ProgressTracker.ProgressInterface%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services/UI/ProgressTracker.cs/#L34">View Source</a>
+  </span>
+  <a id="Opus_Services_UI_ProgressTracker_ProgressInterface_" data-uid="Opus.Services.UI.ProgressTracker.ProgressInterface*"></a>
+  <h4 id="Opus_Services_UI_ProgressTracker_ProgressInterface" data-uid="Opus.Services.UI.ProgressTracker.ProgressInterface">ProgressInterface</h4>
+  <div class="markdown level1 summary"><p>Get the progress interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IProgress&lt;ProgressReport&gt; ProgressInterface { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IProgress</span>&lt;<span class="xref">ProgressReport</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_UI_ProgressTracker_Show.md&amp;value=---%0Auid%3A%20Opus.Services.UI.ProgressTracker.Show%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services/UI/ProgressTracker.cs/#L50">View Source</a>
+  </span>
+  <a id="Opus_Services_UI_ProgressTracker_Show_" data-uid="Opus.Services.UI.ProgressTracker.Show*"></a>
+  <h4 id="Opus_Services_UI_ProgressTracker_Show" data-uid="Opus.Services.UI.ProgressTracker.Show">Show</h4>
+  <div class="markdown level1 summary"><p>Get the progress dialog show task.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task Show { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_UI_ProgressTracker_Token.md&amp;value=---%0Auid%3A%20Opus.Services.UI.ProgressTracker.Token%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services/UI/ProgressTracker.cs/#L29">View Source</a>
+  </span>
+  <a id="Opus_Services_UI_ProgressTracker_Token_" data-uid="Opus.Services.UI.ProgressTracker.Token*"></a>
+  <h4 id="Opus_Services_UI_ProgressTracker_Token" data-uid="Opus.Services.UI.ProgressTracker.Token">Token</h4>
+  <div class="markdown level1 summary"><p>Cancellation token for this progress.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CancellationToken Token { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_UI_ProgressTracker_TokenSource.md&amp;value=---%0Auid%3A%20Opus.Services.UI.ProgressTracker.TokenSource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services/UI/ProgressTracker.cs/#L24">View Source</a>
+  </span>
+  <a id="Opus_Services_UI_ProgressTracker_TokenSource_" data-uid="Opus.Services.UI.ProgressTracker.TokenSource*"></a>
+  <h4 id="Opus_Services_UI_ProgressTracker_TokenSource" data-uid="Opus.Services.UI.ProgressTracker.TokenSource">TokenSource</h4>
+  <div class="markdown level1 summary"><p>Source for the cancellation token.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CancellationTokenSource TokenSource { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationTokenSource</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_UI_ProgressTracker_Cancel.md&amp;value=---%0Auid%3A%20Opus.Services.UI.ProgressTracker.Cancel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services/UI/ProgressTracker.cs/#L120">View Source</a>
+  </span>
+  <a id="Opus_Services_UI_ProgressTracker_Cancel_" data-uid="Opus.Services.UI.ProgressTracker.Cancel*"></a>
+  <h4 id="Opus_Services_UI_ProgressTracker_Cancel" data-uid="Opus.Services.UI.ProgressTracker.Cancel">Cancel()</h4>
+  <div class="markdown level1 summary"><p>Cancel the progress.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Cancel()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_UI_ProgressTracker_SetPercentage_System_Int32_.md&amp;value=---%0Auid%3A%20Opus.Services.UI.ProgressTracker.SetPercentage(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services/UI/ProgressTracker.cs/#L96">View Source</a>
+  </span>
+  <a id="Opus_Services_UI_ProgressTracker_SetPercentage_" data-uid="Opus.Services.UI.ProgressTracker.SetPercentage*"></a>
+  <h4 id="Opus_Services_UI_ProgressTracker_SetPercentage_System_Int32_" data-uid="Opus.Services.UI.ProgressTracker.SetPercentage(System.Int32)">SetPercentage(Int32)</h4>
+  <div class="markdown level1 summary"><p>Set percentage to a fixed value. Retains current total and grand total.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPercentage(int percentage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">percentage</span></td>
+        <td><p>Percentage to set to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_UI_ProgressTracker_SetToComplete.md&amp;value=---%0Auid%3A%20Opus.Services.UI.ProgressTracker.SetToComplete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services/UI/ProgressTracker.cs/#L110">View Source</a>
+  </span>
+  <a id="Opus_Services_UI_ProgressTracker_SetToComplete_" data-uid="Opus.Services.UI.ProgressTracker.SetToComplete*"></a>
+  <h4 id="Opus_Services_UI_ProgressTracker_SetToComplete" data-uid="Opus.Services.UI.ProgressTracker.SetToComplete">SetToComplete()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetToComplete()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_UI_ProgressTracker_SetToUndefined.md&amp;value=---%0Auid%3A%20Opus.Services.UI.ProgressTracker.SetToUndefined%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services/UI/ProgressTracker.cs/#L103">View Source</a>
+  </span>
+  <a id="Opus_Services_UI_ProgressTracker_SetToUndefined_" data-uid="Opus.Services.UI.ProgressTracker.SetToUndefined*"></a>
+  <h4 id="Opus_Services_UI_ProgressTracker_SetToUndefined" data-uid="Opus.Services.UI.ProgressTracker.SetToUndefined">SetToUndefined()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetToUndefined()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_UI_ProgressTracker_Update_System_Int32_System_Nullable_ProgressPhase__.md&amp;value=---%0Auid%3A%20Opus.Services.UI.ProgressTracker.Update(System.Int32%2CSystem.Nullable%7BProgressPhase%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services/UI/ProgressTracker.cs/#L81">View Source</a>
+  </span>
+  <a id="Opus_Services_UI_ProgressTracker_Update_" data-uid="Opus.Services.UI.ProgressTracker.Update*"></a>
+  <h4 id="Opus_Services_UI_ProgressTracker_Update_System_Int32_System_Nullable_ProgressPhase__" data-uid="Opus.Services.UI.ProgressTracker.Update(System.Int32,System.Nullable{ProgressPhase})">Update(Int32, Nullable&lt;ProgressPhase&gt;)</h4>
+  <div class="markdown level1 summary"><p>Update current progress.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update(int addToCurrentTotal, ProgressPhase? phase = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">addToCurrentTotal</span></td>
+        <td><p>Amount to add to current total.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ProgressPhase</span>&gt;</td>
+        <td><span class="parametername">phase</span></td>
+        <td><p>Current phase in the progress. If no phase is provided,
+currently used phase is preserved.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Opus.Common.Extensions.ObjectExtensions.html#Opus_Common_Extensions_ObjectExtensions_IfNotNullExecute__1___0_Action___0__">ObjectExtensions.IfNotNullExecute&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Opus.Common.Extensions.ObjectExtensions.html#Opus_Common_Extensions_ObjectExtensions_IfNullExecute__1___0_Action___0__">ObjectExtensions.IfNullExecute&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_UI_ProgressTracker.md&amp;value=---%0Auid%3A%20Opus.Services.UI.ProgressTracker%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Parannusehdotus</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services/UI/ProgressTracker.cs/#L11" class="contribution-link">Näytä lähdekoodi</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>Tässä osiossa</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Takaisin ylös</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Takaisin ylös</a>
+            </span>
+            <div class="pull-left">
+              
+              <span><strong>Opus</strong>: ohjeet</span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+        <script type="text/javascript" src="../styles/accordion.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

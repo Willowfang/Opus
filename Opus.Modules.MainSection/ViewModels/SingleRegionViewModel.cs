@@ -1,4 +1,4 @@
-﻿using Opus.Core.Base;
+﻿using Opus.Common.ViewModels;
 
 namespace Opus.Modules.MainSection.ViewModels
 {

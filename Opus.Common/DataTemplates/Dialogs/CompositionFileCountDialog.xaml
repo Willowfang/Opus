@@ -1,0 +1,172 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dialog="clr-namespace:Opus.Common.Dialogs"
+                    xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+                    xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
+                    xmlns:resDialog="clr-namespace:Opus.Resources.Labels.Dialogs;assembly=Opus.Resources">
+
+    <!--
+         COMPOSITION FILE COUNT DIALOG
+         A dialog prompting user to choose the correct files when there are extra files with
+         the selection rule in question or no file with matching (required) criteria is found.
+    -->
+    <DataTemplate DataType="{x:Type dialog:CompositionFileCountDialog}">
+        <StackPanel Margin="10">
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding Segment.SegmentName}"/>
+            <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       FontSize="14" Width="300"
+                       TextAlignment="Justify"
+                       TextWrapping="Wrap"
+                       Text="{Binding DialogTextContent}"
+                       Margin="15, 15, 15, 0"/>
+
+            <!--
+                 No file matching the criteria was found.
+                 One file is missing.
+            -->
+            <StackPanel Orientation="Horizontal"
+                        Margin="15"
+                        HorizontalAlignment="Center"
+                        Visibility="{Binding SingleSelection, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <!--
+                     Button for previewing a file. Shows the path and name of the selected file.
+                -->
+                <Button Style="{DynamicResource MaterialDesignPaperSecondaryButton}"
+                        Margin="0, 0, 15, 0"
+                        Width="230"
+                        VerticalContentAlignment="Center"
+                        VerticalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        ToolTip="{Binding Files[0].FilePath}"
+                        Command="{Binding Files[0].OpenFile}">
+                    <TextBlock FontSize="14"
+                               Text="{Binding Files[0].FileName}"
+                               TextTrimming="CharacterEllipsis"/>
+                </Button>
+
+                <!--
+                     Button for browsing for the correct file.
+                -->
+                <Button Style="{DynamicResource MaterialDesignIconButton}"
+                        Command="{Binding AddFile}">
+                    <md:PackIcon Kind="Folder" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
+                </Button>
+            </StackPanel>
+
+            <!--
+                 Multiple files were not found or more than the allowed number of files were found.
+            -->
+            <Grid Margin="15, 15, 15, 0"
+                  Visibility="{Binding SingleSelection, Converter={StaticResource BooleanToOppositeVisibility}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!--
+                     Show info on the amount of found files (how many were found,
+                     what are the max and min values, etc.).
+                -->
+                <StackPanel Grid.Column="0"
+                            Grid.Row="0"
+                            Grid.ColumnSpan="2"
+                            HorizontalAlignment="Center">
+                    <TextBlock Style="{StaticResource SegmentHeaderText}"
+                               Foreground="{DynamicResource SecondaryHueMidBrush}"
+                               Text="{x:Static resDialog:CompositionFileCount.FilesFound}"
+                               HorizontalAlignment="Center"
+                               Margin="10, 0, 10, 10"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Margin="10, 0, 10, 0">
+                            <Run Text="{x:Static resDialog:CompositionFileCount.MinimumFiles}"/>
+                            <Run Text="{Binding Segment.MinCount}" FontWeight="ExtraBold"/>
+                        </TextBlock>
+                        <TextBlock Margin="10, 0, 10, 0">
+                            <Run Text="{x:Static resDialog:CompositionFileCount.MaximumFiles}"/>
+                            <Run Text="{Binding Segment.MaxCount, StringFormat={}{0:#;;&#x221E;}}" FontWeight="ExtraBold"/>
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+
+                <Separator Margin="15" Grid.Row="1" Grid.Column="0"
+                           Grid.ColumnSpan="2" Style="{DynamicResource MaterialDesignSeparator}"/>
+
+                <!--
+                     A listview showing the files that were found. Allows selecting files.
+                -->
+                <ListView ItemsSource="{Binding Files}"
+                          Grid.Column="0"
+                          Grid.Row="2"
+                          Height="120"
+                          Width="300"
+                          SelectedItem="{Binding SelectedFile}"
+                          Style="{DynamicResource SelectionList}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <ContentControl Grid.Column="0">
+                                    <TextBlock Text="{Binding FileName}"
+                                               TextTrimming="CharacterEllipsis"/>
+                                    <behaviors:Interaction.Triggers>
+                                        <behaviors:EventTrigger EventName="MouseDoubleClick">
+                                            <behaviors:InvokeCommandAction Command="{Binding OpenFile}"/>
+                                        </behaviors:EventTrigger>
+                                    </behaviors:Interaction.Triggers>
+                                </ContentControl>
+                                <md:PackIcon Grid.Column="1"
+                                             Margin="10, 0, 10, 0"
+                                             Kind="FolderInformation"
+                                             VerticalAlignment="Center"
+                                             Foreground="{DynamicResource SecondaryHueMidBrush}"
+                                             ToolTip="{Binding FilePath}"
+                                             ToolTipService.InitialShowDelay="0"
+                                             ToolTipService.ShowDuration="30000"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <!--
+                     Button for adding files to the list and removing them from the list.
+                -->
+                <StackPanel VerticalAlignment="Center"
+                            Grid.Column="1"
+                            Grid.Row="2">
+                    <Button Style="{DynamicResource MaterialDesignIconButton}"
+                            Foreground="{DynamicResource SecondaryHueMidBrush}"
+                            Command="{Binding AddFiles}">
+                        <md:PackIcon Kind="PlusThick"/>
+                    </Button>
+                    <Button Style="{DynamicResource MaterialDesignIconButton}"
+                            Foreground="{DynamicResource SecondaryHueMidBrush}"
+                            Command="{Binding RemoveFiles}">
+                        <md:PackIcon Kind="MinusThick"/>
+                    </Button>
+                </StackPanel>
+
+                <Separator Margin="15" Grid.Row="3" Grid.Column="0"
+                           Grid.ColumnSpan="2" Style="{DynamicResource MaterialDesignSeparator}"/>
+
+                <!--
+                     Buttons for saving and cancelling.
+                -->
+            </Grid>
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+</ResourceDictionary>

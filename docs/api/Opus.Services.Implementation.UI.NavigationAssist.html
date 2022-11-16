@@ -72,7 +72,7 @@
   
   <h1 id="Opus_Services_Implementation_UI_NavigationAssist" data-uid="Opus.Services.Implementation.UI.NavigationAssist" class="text-break">Class NavigationAssist
   </h1>
-  <div class="markdown level0 summary"><p>A default implementation of <a class="xref" href="Opus.Services.UI.INavigationAssist.html">INavigationAssist</a>.</p>
+  <div class="markdown level0 summary"><p>A default implementation of <see cref="!:INavigationAssist"></see>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -85,8 +85,8 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
-    <div><a class="xref" href="Opus.Services.UI.INavigationAssist.html">INavigationAssist</a></div>
-    <div><a class="xref" href="Opus.Services.UI.INavigationTargetRegistry.html">INavigationTargetRegistry</a></div>
+    <div><span class="xref">INavigationAssist</span></div>
+    <div><span class="xref">INavigationTargetRegistry</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -137,7 +137,7 @@
   <h6><strong>Assembly</strong>: Opus.Services.Implementation.dll</h6>
   <h5 id="Opus_Services_Implementation_UI_NavigationAssist_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class NavigationAssist : LoggingCapable&lt;NavigationAssist&gt;, INotifyPropertyChanged, INavigationAssist, INavigationTargetRegistry</code></pre>
+    <pre><code class="lang-csharp hljs">public class NavigationAssist : LoggingCapable&lt;NavigationAssist&gt;, INotifyPropertyChanged</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -399,13 +399,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_NavigationAssist_AddTarget_System_String_Opus_Services_UI_INavigationTarget_.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.NavigationAssist.AddTarget(System.String%2COpus.Services.UI.INavigationTarget)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_NavigationAssist_AddTarget_System_String_INavigationTarget_.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.NavigationAssist.AddTarget(System.String%2CINavigationTarget)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/NavigationAssist.cs/#L161">View Source</a>
   </span>
   <a id="Opus_Services_Implementation_UI_NavigationAssist_AddTarget_" data-uid="Opus.Services.Implementation.UI.NavigationAssist.AddTarget*"></a>
-  <h4 id="Opus_Services_Implementation_UI_NavigationAssist_AddTarget_System_String_Opus_Services_UI_INavigationTarget_" data-uid="Opus.Services.Implementation.UI.NavigationAssist.AddTarget(System.String,Opus.Services.UI.INavigationTarget)">AddTarget(String, INavigationTarget)</h4>
+  <h4 id="Opus_Services_Implementation_UI_NavigationAssist_AddTarget_System_String_INavigationTarget_" data-uid="Opus.Services.Implementation.UI.NavigationAssist.AddTarget(System.String,INavigationTarget)">AddTarget(String, INavigationTarget)</h4>
   <div class="markdown level1 summary"><p>Add a navigation target.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -430,7 +430,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Opus.Services.UI.INavigationTarget.html">INavigationTarget</a></td>
+        <td><span class="xref">INavigationTarget</span></td>
         <td><span class="parametername">target</span></td>
         <td><p>Target of the navigation.</p>
 </td>
@@ -476,10 +476,17 @@
       <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
   </div>
   <div>
-      <a class="xref" href="Opus.Services.UI.INavigationAssist.html">INavigationAssist</a>
+      <span class="xref">INavigationAssist</span>
   </div>
   <div>
-      <a class="xref" href="Opus.Services.UI.INavigationTargetRegistry.html">INavigationTargetRegistry</a>
+      <span class="xref">INavigationTargetRegistry</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Opus.Common.Extensions.ObjectExtensions.html#Opus_Common_Extensions_ObjectExtensions_IfNotNullExecute__1___0_Action___0__">ObjectExtensions.IfNotNullExecute&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Opus.Common.Extensions.ObjectExtensions.html#Opus_Common_Extensions_ObjectExtensions_IfNullExecute__1___0_Action___0__">ObjectExtensions.IfNullExecute&lt;T&gt;(T, Action&lt;T&gt;)</a>
   </div>
 </article>
           </div>

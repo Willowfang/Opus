@@ -41,6 +41,11 @@ namespace Opus.Services.Configuration
         public bool ExtractionCreateZip { get; set; }
 
         /// <summary>
+        /// If true, open directory or file after extraction is complete.
+        /// </summary>
+        public bool ExtractionOpenDestinationAfterComplete { get; set; }
+
+        /// <summary>
         /// Annotation handling option
         /// </summary>
         public int Annotations { get; set; }
@@ -80,5 +85,10 @@ namespace Opus.Services.Configuration
         /// The <see cref="ICompositionProfile"/> to select by default
         /// </summary>
         public Guid DefaultProfile { get; set; }
+
+        /// <summary>
+        /// Logging level for the logger.
+        /// </summary>
+        public int LoggingLevel { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using Opus.Values;
-using Opus.Services.UI;
+using Opus.Common.Services.Navigation;
 using Opus.Modules.Options.Views;
 using Prism.Ioc;
 using Prism.Modularity;

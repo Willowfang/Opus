@@ -21,9 +21,9 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <ListView ItemsSource="{Binding OriginalFiles}"
+        <ListView ItemsSource="{Binding Properties.OriginalFiles}"
                   Style="{StaticResource SelectionList}"
-                  SelectedItem="{Binding SelectedFile}"
+                  SelectedItem="{Binding Properties.SelectedFile}"
                   Grid.Row="0"
                   x:Name="FilesList">
             <ListView.ItemTemplate>
@@ -39,22 +39,22 @@
 
         <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding OriginalFiles.Count, Converter={StaticResource EmptyToBool}, Mode=OneWay}"
-                    Command="{Binding CreateWorkCopyCommand}"
+                    IsEnabled="{Binding Properties.OriginalFiles.Count, Converter={StaticResource EmptyToBool}, Mode=OneWay}"
+                    Command="{Binding Commands.CreateWorkCopyCommand}"
                     ToolTip="{x:Static resToolTips:WorkCopy.CreateButton}">
                 <materialDesign:PackIcon Kind="ContentSave"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding OriginalFiles.Count, Converter={StaticResource EmptyToBool}, Mode=OneWay}"
-                    Command="{Binding ClearCommand}"
+                    IsEnabled="{Binding Properties.OriginalFiles.Count, Converter={StaticResource EmptyToBool}, Mode=OneWay}"
+                    Command="{Binding Commands.ClearCommand}"
                     ToolTip="{x:Static resToolTips:WorkCopy.ClearButton}">
                 <materialDesign:PackIcon Kind="Close"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{StaticResource ToolButton}"
                     IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                    Command="{Binding DeleteCommand}"
+                    Command="{Binding Commands.DeleteCommand}"
                     ToolTip="{x:Static resToolTips:WorkCopy.DeleteButton}">
                 <materialDesign:PackIcon Kind="Delete"/>
             </Button>

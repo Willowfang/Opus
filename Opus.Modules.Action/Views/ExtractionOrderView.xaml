@@ -7,7 +7,7 @@
              xmlns:resExtractButtons="clr-namespace:Opus.Resources.Buttons.Extraction;assembly=Opus.Resources"
              xmlns:resHelpers="clr-namespace:Opus.Resources.HelperTexts;assembly=Opus.Resources"
              xmlns:resTooltips="clr-namespace:Opus.Resources.ToolTips;assembly=Opus.Resources"
-             xmlns:controls="clr-namespace:Opus.Styles.Controls;assembly=Opus.Styles"
+             xmlns:controls="clr-namespace:Opus.Common.Controls;assembly=Opus.Common"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True">
     <UserControl.Resources>
@@ -33,7 +33,7 @@
         <StackPanel Grid.Row="1" 
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center"
-                    Visibility="{Binding Bookmarks.Count, Converter={StaticResource ZeroToOppositeVisibility}}">
+                    Visibility="{Binding Properties.Bookmarks.Count, Converter={StaticResource ZeroToOppositeVisibility}}">
             <TextBlock Text="{x:Static resHelpers:Extraction.BookmarkSelectionTitle}" Style="{DynamicResource MaterialDesignHeadline6TextBlock}" Grid.Row="1"
                    TextAlignment="Center" Foreground="{DynamicResource PrimaryHueLightBrush}"/>
             <TextBlock Text="{x:Static resHelpers:Extraction.BookmarkSelectionDescription}" Style="{DynamicResource MaterialDesignBody1TextBlock}"
@@ -42,36 +42,36 @@
         <controls:OrderList Grid.Row="1"/>
         <Button Style="{StaticResource MaterialDesignOutlinedLightButton}"
                 Content="{x:Static resExtractButtons:Order.AddExternal}"
-                IsEnabled="{Binding CollectionHasActualBookmarks}"
-                Command="{Binding AddExternalCommand}"
+                IsEnabled="{Binding Properties.CollectionHasActualBookmarks}"
+                Command="{Binding Commands.AddExternalCommand}"
                 Margin="10, 20, 10, 0"
                 Grid.Row="2"/>
         <StackPanel Orientation="Horizontal" 
                     Grid.Row="3"
                     HorizontalAlignment="Center">
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding CollectionHasActualBookmarks}"
-                    Command="{Binding SaveFileCommand}"
+                    IsEnabled="{Binding Properties.CollectionHasActualBookmarks}"
+                    Command="{Binding Commands.SaveFileCommand}"
                     ToolTip="{x:Static resTooltips:Extraction.SaveAsSingleButton}">
                 <materialDesign:PackIcon Kind="ContentSave"/>
             </Button>
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding CollectionHasActualBookmarks}"
-                    Command="{Binding SaveSeparateCommand}"
+                    IsEnabled="{Binding Properties.CollectionHasActualBookmarks}"
+                    Command="{Binding Commands.SaveSeparateCommand}"
                     ToolTip="{x:Static resTooltips:Extraction.SaveAsMultipleButton}">
                 <materialDesign:PackIcon Kind="ContentSaveAll"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding IsSelectedActualBookmark}"
-                    Command="{Binding EditCommand}"
+                    IsEnabled="{Binding Properties.IsSelectedActualBookmark}"
+                    Command="{Binding Commands.EditCommand}"
                     ToolTip="{x:Static resTooltips:Extraction.EditButton}">
                 <materialDesign:PackIcon Kind="Pencil"/>
             </Button>
             <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
             <Button Style="{StaticResource ToolButton}"
-                    IsEnabled="{Binding Bookmarks.SelectedItem, Converter={StaticResource NullToBool}}"
-                    Command="{Binding DeleteCommand}"
+                    IsEnabled="{Binding Properties.Bookmarks.SelectedItem, Converter={StaticResource NullToBool}}"
+                    Command="{Binding Commands.DeleteCommand}"
                     ToolTip="{x:Static resTooltips:Extraction.DeleteButton}">
                 <materialDesign:PackIcon Kind="Delete"/>
             </Button>

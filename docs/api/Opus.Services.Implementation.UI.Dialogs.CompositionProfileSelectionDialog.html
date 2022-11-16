@@ -85,7 +85,7 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
-    <div><a class="xref" href="Opus.Services.UI.IDialog.html">IDialog</a></div>
+    <div><span class="xref">IDialog</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -166,19 +166,19 @@
   <h6><strong>Assembly</strong>: Opus.Services.Implementation.dll</h6>
   <h5 id="Opus_Services_Implementation_UI_Dialogs_CompositionProfileSelectionDialog_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CompositionProfileSelectionDialog : DialogBase, INotifyPropertyChanged, IDialog</code></pre>
+    <pre><code class="lang-csharp hljs">public class CompositionProfileSelectionDialog : DialogBase, INotifyPropertyChanged</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_CompositionProfileSelectionDialog__ctor_System_String_System_Collections_Generic_IList_Opus_Services_Data_Composition_ICompositionProfile__.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.CompositionProfileSelectionDialog.%23ctor(System.String%2CSystem.Collections.Generic.IList%7BOpus.Services.Data.Composition.ICompositionProfile%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Services_Implementation_UI_Dialogs_CompositionProfileSelectionDialog__ctor_System_String_System_Collections_Generic_IList_ICompositionProfile__.md&amp;value=---%0Auid%3A%20Opus.Services.Implementation.UI.Dialogs.CompositionProfileSelectionDialog.%23ctor(System.String%2CSystem.Collections.Generic.IList%7BICompositionProfile%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Services.Implementation/UI/Dialogs/CompositionProfileSelectionDialog.cs/#L32">View Source</a>
   </span>
   <a id="Opus_Services_Implementation_UI_Dialogs_CompositionProfileSelectionDialog__ctor_" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionProfileSelectionDialog.#ctor*"></a>
-  <h4 id="Opus_Services_Implementation_UI_Dialogs_CompositionProfileSelectionDialog__ctor_System_String_System_Collections_Generic_IList_Opus_Services_Data_Composition_ICompositionProfile__" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionProfileSelectionDialog.#ctor(System.String,System.Collections.Generic.IList{Opus.Services.Data.Composition.ICompositionProfile})">CompositionProfileSelectionDialog(String, IList&lt;ICompositionProfile&gt;)</h4>
+  <h4 id="Opus_Services_Implementation_UI_Dialogs_CompositionProfileSelectionDialog__ctor_System_String_System_Collections_Generic_IList_ICompositionProfile__" data-uid="Opus.Services.Implementation.UI.Dialogs.CompositionProfileSelectionDialog.#ctor(System.String,System.Collections.Generic.IList{ICompositionProfile})">CompositionProfileSelectionDialog(String, IList&lt;ICompositionProfile&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a new dialog for choosing the correct profile.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -203,7 +203,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Opus.Services.Data.Composition.ICompositionProfile.html">ICompositionProfile</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">ICompositionProfile</span>&gt;</td>
         <td><span class="parametername">profiles</span></td>
         <td><p>All the profiles.</p>
 </td>
@@ -238,7 +238,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Opus.Services.Data.Composition.ICompositionProfile.html">ICompositionProfile</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">ICompositionProfile</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -257,7 +257,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ICompositionProfile SelectedProfile { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ICompositionProfile? SelectedProfile { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -269,7 +269,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Opus.Services.Data.Composition.ICompositionProfile.html">ICompositionProfile</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ICompositionProfile</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -279,7 +279,14 @@
       <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
   </div>
   <div>
-      <a class="xref" href="Opus.Services.UI.IDialog.html">IDialog</a>
+      <span class="xref">IDialog</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Opus.Common.Extensions.ObjectExtensions.html#Opus_Common_Extensions_ObjectExtensions_IfNotNullExecute__1___0_Action___0__">ObjectExtensions.IfNotNullExecute&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Opus.Common.Extensions.ObjectExtensions.html#Opus_Common_Extensions_ObjectExtensions_IfNullExecute__1___0_Action___0__">ObjectExtensions.IfNullExecute&lt;T&gt;(T, Action&lt;T&gt;)</a>
   </div>
 </article>
           </div>

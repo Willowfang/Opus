@@ -1,0 +1,61 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dialog="clr-namespace:Opus.Common.Dialogs"
+                    xmlns:resDialog="clr-namespace:Opus.Resources.Labels.Dialogs;assembly=Opus.Resources"
+                    xmlns:resCompositionToolTips="clr-namespace:Opus.Resources.ToolTips.Composition;assembly=Opus.Resources">
+
+    <!--
+         COMPOSITION SETTINGS DIALOG
+         A dialog for choosing composition settings.
+    -->
+    <DataTemplate DataType="{x:Type dialog:CompositionSettingsDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+
+            <!--
+                 Switch for choosing whether to also scan in subfolders or not.
+            -->
+            <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                       VerticalAlignment="Center"
+                       Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       Text="{x:Static resDialog:CompositionOptions.SubDirectories}"
+                       Margin="0, 15, 0, 10"/>
+            <CheckBox Style="{DynamicResource OptionSwitch}"
+                      IsChecked="{Binding SearchSubDirectories, Mode=TwoWay}"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Cursor="Hand"
+                      ToolTip="{x:Static resCompositionToolTips:Settings.Subdirectories}"/>
+
+            <Separator Style="{DynamicResource MaterialDesignSeparator}"
+                       Margin="15"/>
+
+            <!--
+                 Switch for choosing whether to delete any converted files created during the process.
+                 For example, Word documents are converted to pdf before they are merged into the resulting
+                 document. These pdf-files will be preserved unless this option is set to true.
+            -->
+            <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
+                       VerticalAlignment="Center"
+                       Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       Text="{x:Static resDialog:CompositionOptions.DeleteConverted}"
+                       Margin="0, 0, 0, 10"/>
+            <CheckBox Style="{DynamicResource OptionSwitch}"
+                      IsChecked="{Binding DeleteConverted, Mode=TwoWay}"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Cursor="Hand"
+                      ToolTip="{x:Static resCompositionToolTips:Settings.DeleteConverted}"/>
+
+            <!--
+                 Buttons for saving and cancelling.
+            -->
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+</ResourceDictionary>

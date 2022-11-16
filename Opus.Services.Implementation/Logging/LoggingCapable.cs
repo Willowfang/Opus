@@ -7,7 +7,7 @@ namespace Opus.Services.Implementation.Logging
     /// <summary>
     /// A class that is capable of logging to file.
     /// </summary>
-    /// <typeparam name="T">Type of the implementing class</typeparam>
+    /// <typeparam name="T">Type of the implementing class.</typeparam>
     public abstract class LoggingCapable<T> : BindableBase
     {
         /// <summary>

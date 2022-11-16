@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
-                    xmlns:data="clr-namespace:Opus.Services.Implementation.Data.Composition;assembly=Opus.Services.Implementation"
+                    xmlns:data="clr-namespace:Opus.Common.Implementation.Data.Composition;assembly=Opus.Common"
                     xmlns:resTooltips="clr-namespace:Opus.Resources.ToolTips.Composition;assembly=Opus.Resources">
 
     <!--

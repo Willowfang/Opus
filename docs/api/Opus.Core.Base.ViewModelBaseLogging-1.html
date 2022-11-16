@@ -79,72 +79,18 @@ this application.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Prism.Mvvm.BindableBase</span></div>
-    <div class="level2"><a class="xref" href="Opus.Services.Implementation.Logging.LoggingCapable-1.html">LoggingCapable</a>&lt;ViewModelType&gt;</div>
-    <div class="level3"><span class="xref">ViewModelBaseLogging&lt;ViewModelType&gt;</span></div>
-      <div class="level4"><a class="xref" href="Opus.Core.Base.OptionsViewModelBase-1.html">OptionsViewModelBase&lt;DialogType&gt;</a></div>
-      <div class="level4"><a class="xref" href="Opus.Modules.Action.ViewModels.CompositionViewModel.html">CompositionViewModel</a></div>
-      <div class="level4"><a class="xref" href="Opus.Modules.Action.ViewModels.ExtractionOrderViewModel.html">ExtractionOrderViewModel</a></div>
-      <div class="level4"><a class="xref" href="Opus.Modules.Action.ViewModels.ExtractionViewModel.html">ExtractionViewModel</a></div>
-      <div class="level4"><a class="xref" href="Opus.Modules.Action.ViewModels.MergeViewModel.html">MergeViewModel</a></div>
-      <div class="level4"><a class="xref" href="Opus.Modules.Action.ViewModels.WorkCopyViewModel.html">WorkCopyViewModel</a></div>
-      <div class="level4"><a class="xref" href="Opus.ViewModels.MainWindowViewModel.html">MainWindowViewModel</a></div>
+    <div class="level1"><span class="xref">ViewModelBaseLogging&lt;ViewModelType&gt;</span></div>
+      <div class="level2"><a class="xref" href="Opus.Core.Base.OptionsViewModelBase-1.html">OptionsViewModelBase&lt;VMType&gt;</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
     <div><span class="xref">Prism.Regions.INavigationAware</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Opus.Services.Implementation.Logging.LoggingCapable-1.html#Opus_Services_Implementation_Logging_LoggingCapable_1_logbook">LoggingCapable&lt;ViewModelType&gt;.logbook</a>
-    </div>
-    <div>
-      <a class="xref" href="Opus.Services.Implementation.Logging.LoggingCapable-1.html#Opus_Services_Implementation_Logging_LoggingCapable_1_ChangeLogbook_ILogbook_">LoggingCapable&lt;ViewModelType&gt;.ChangeLogbook(ILogbook)</a>
-    </div>
-    <div>
-      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.Action, System.String)</span>
-    </div>
-    <div>
-      <span class="xref">Prism.Mvvm.BindableBase.RaisePropertyChanged(System.String)</span>
-    </div>
-    <div>
-      <span class="xref">Prism.Mvvm.BindableBase.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)</span>
-    </div>
-    <div>
-      <span class="xref">Prism.Mvvm.BindableBase.PropertyChanged</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Opus.Core.Base.html">Opus.Core.Base</a></h6>
   <h6><strong>Assembly</strong>: Opus.Core.dll</h6>
   <h5 id="Opus_Core_Base_ViewModelBaseLogging_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ViewModelBaseLogging&lt;ViewModelType&gt; : LoggingCapable&lt;ViewModelType&gt;, INotifyPropertyChanged, INavigationAware</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ViewModelBaseLogging&lt;ViewModelType&gt; : LoggingCapable&lt;ViewModelType&gt;, INavigationAware</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -325,10 +271,14 @@ default is an empty method, but this may be overridden in the inheriting class.<
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+      <span class="xref">Prism.Regions.INavigationAware</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Opus.Common.Extensions.ObjectExtensions.html#Opus_Common_Extensions_ObjectExtensions_IfNotNullExecute__1___0_Action___0__">ObjectExtensions.IfNotNullExecute&lt;T&gt;(T, Action&lt;T&gt;)</a>
   </div>
   <div>
-      <span class="xref">Prism.Regions.INavigationAware</span>
+      <a class="xref" href="Opus.Common.Extensions.ObjectExtensions.html#Opus_Common_Extensions_ObjectExtensions_IfNullExecute__1___0_Action___0__">ObjectExtensions.IfNullExecute&lt;T&gt;(T, Action&lt;T&gt;)</a>
   </div>
 </article>
           </div>

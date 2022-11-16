@@ -1,0 +1,40 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dialog="clr-namespace:Opus.Common.Dialogs"
+                    xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+                    xmlns:resLabels="clr-namespace:Opus.Resources.Labels;assembly=Opus.Resources">
+
+    <!--
+         COMPOSITION TITLESEGMENT DIALOG
+         A dialog for creating and editing a title segment. Title segments are simply bookmarks that
+         will be inserted in the relevant position in the final product. There is no file that would
+         associate with a title.
+    -->
+    <DataTemplate DataType="{x:Type dialog:CompositionTitleSegmentDialog}">
+        <StackPanel>
+            <TextBlock Style="{DynamicResource DialogTitleTextBlock}"
+                       Text="{Binding DialogTitle}"/>
+
+            <!--
+                 Name of the title segment. Cannot be empty and is validated.
+            -->
+            <TextBox Style="{DynamicResource HintedValidationTextBox}"
+                     md:HintAssist.Hint="{x:Static resLabels:General.Name}"
+                     Text="{Binding SegmentName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, 
+                     ValidatesOnDataErrors=True}"
+                     Name="CompositionTitleNameText"
+                     Width="200"/>
+
+            <!--
+                 Buttons for saving and cancelling.
+            -->
+            <StackPanel Style="{StaticResource DialogButtonStackPanel}">
+                <Button Style="{StaticResource DialogSaveButton}"
+                        IsEnabled="{Binding ElementName=CompositionTitleNameText, Path=(Validation.HasError),
+                        Converter={StaticResource InvertBooleanConverter}}"/>
+                <Button Style="{StaticResource DialogCancelButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+</ResourceDictionary>

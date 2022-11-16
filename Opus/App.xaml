@@ -21,7 +21,7 @@
                     Load own resources for application-wide usage.
                 -->
                 <ResourceDictionary Source="/Images/Vectors.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Converters/ConvertersCollection.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Opus.Common;component/Converters/ConvertersCollection.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Controls/ButtonsCollection.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Controls/ListViewCollection.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/Opus.Styles;component/Controls/TextBoxCollection.xaml"/>

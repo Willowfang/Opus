@@ -74,7 +74,7 @@
   </h1>
   <div class="markdown level0 summary"><p>Composition segment representing a file.</p>
 <p>
-For more comments, see <a class="xref" href="Opus.Services.Data.Composition.ICompositionSegment.html">ICompositionSegment</a>.
+For more comments, see <see cref="!:ICompositionSegment"></see>.
 </p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -88,9 +88,8 @@ For more comments, see <a class="xref" href="Opus.Services.Data.Composition.ICom
   <div class="implements">
     <h5>Implements</h5>
     <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
-    <div><a class="xref" href="Opus.Services.Data.Composition.ICompositionFile.html">ICompositionFile</a></div>
-    <div><a class="xref" href="Opus.Services.Data.Composition.ICompositionSegment.html">ICompositionSegment</a></div>
-    <div><span class="xref">ILeveledItem</span></div>
+    <div><span class="xref">ICompositionSegment</span></div>
+    <div><span class="xref">ICompositionFile</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -138,7 +137,7 @@ For more comments, see <a class="xref" href="Opus.Services.Data.Composition.ICom
   <h6><strong>Assembly</strong>: Opus.Services.Implementation.dll</h6>
   <h5 id="Opus_Services_Implementation_Data_Composition_CompositionFile_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CompositionFile : CompositionSegment, INotifyPropertyChanged, ICompositionFile, ICompositionSegment</code></pre>
+    <pre><code class="lang-csharp hljs">public class CompositionFile : CompositionSegment, INotifyPropertyChanged</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -589,7 +588,7 @@ check out <a class="xref" href="Opus.Services.Implementation.Data.Composition.Co
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Opus.Services.Data.Composition.IFileEvaluationResult.html">IFileEvaluationResult</a></td>
+        <td><span class="xref">IFileEvaluationResult</span></td>
         <td><p>Evaluation result for the given file.</p>
 </td>
       </tr>
@@ -616,13 +615,17 @@ check out <a class="xref" href="Opus.Services.Implementation.Data.Composition.Co
       <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
   </div>
   <div>
-      <a class="xref" href="Opus.Services.Data.Composition.ICompositionFile.html">ICompositionFile</a>
+      <span class="xref">ICompositionSegment</span>
   </div>
   <div>
-      <a class="xref" href="Opus.Services.Data.Composition.ICompositionSegment.html">ICompositionSegment</a>
+      <span class="xref">ICompositionFile</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Opus.Common.Extensions.ObjectExtensions.html#Opus_Common_Extensions_ObjectExtensions_IfNotNullExecute__1___0_Action___0__">ObjectExtensions.IfNotNullExecute&lt;T&gt;(T, Action&lt;T&gt;)</a>
   </div>
   <div>
-      <span class="xref">ILeveledItem</span>
+      <a class="xref" href="Opus.Common.Extensions.ObjectExtensions.html#Opus_Common_Extensions_ObjectExtensions_IfNullExecute__1___0_Action___0__">ObjectExtensions.IfNullExecute&lt;T&gt;(T, Action&lt;T&gt;)</a>
   </div>
 </article>
           </div>

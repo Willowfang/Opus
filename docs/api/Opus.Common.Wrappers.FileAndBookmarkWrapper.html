@@ -1,0 +1,980 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class FileAndBookmarkWrapper
+   | Opus Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FileAndBookmarkWrapper
+   | Opus Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo38pt.png" alt="Opus Docs">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper">
+  
+  
+  <h1 id="Opus_Common_Wrappers_FileAndBookmarkWrapper" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper" class="text-break">Class FileAndBookmarkWrapper
+  </h1>
+  <div class="markdown level0 summary"><p>Wrapper for wrapping bookmark and related file info.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Prism.Mvvm.BindableBase</span></div>
+    <div class="level2"><span class="xref">FileAndBookmarkWrapper</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+    <div><a class="xref" href="Opus.Common.Services.Base.IIndexed.html">IIndexed</a></div>
+    <div><span class="xref">ILeveledItem</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.Action, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.RaisePropertyChanged(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Prism.Mvvm.BindableBase.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Opus.Common.Wrappers.html">Opus.Common.Wrappers</a></h6>
+  <h6><strong>Assembly</strong>: Opus.Common.dll</h6>
+  <h5 id="Opus_Common_Wrappers_FileAndBookmarkWrapper_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FileAndBookmarkWrapper : BindableBase, INotifyPropertyChanged, IIndexed</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper__ctor_ILeveledBookmark_System_String_System_Int32_Guid_.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper.%23ctor(ILeveledBookmark%2CSystem.String%2CSystem.Int32%2CGuid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L78">View Source</a>
+  </span>
+  <a id="Opus_Common_Wrappers_FileAndBookmarkWrapper__ctor_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.#ctor*"></a>
+  <h4 id="Opus_Common_Wrappers_FileAndBookmarkWrapper__ctor_ILeveledBookmark_System_String_System_Int32_Guid_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.#ctor(ILeveledBookmark,System.String,System.Int32,Guid)">FileAndBookmarkWrapper(ILeveledBookmark, String, Int32, Guid)</h4>
+  <div class="markdown level1 summary"><p>Create a new wrapper.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileAndBookmarkWrapper(ILeveledBookmark bookmark, string filePath, int index = 0, Guid id = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ILeveledBookmark</span></td>
+        <td><span class="parametername">bookmark</span></td>
+        <td><p>Bookmark to include in this wrapper.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">filePath</span></td>
+        <td><p>Filepath of the related file.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>Index in the bookmark sequence.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>Id associated with this combo (will be created if not given).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper_Bookmark.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper.Bookmark%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L69">View Source</a>
+  </span>
+  <a id="Opus_Common_Wrappers_FileAndBookmarkWrapper_Bookmark_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.Bookmark*"></a>
+  <h4 id="Opus_Common_Wrappers_FileAndBookmarkWrapper_Bookmark" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.Bookmark">Bookmark</h4>
+  <div class="markdown level1 summary"><p>Bookmark contained in this wrapper.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILeveledBookmark Bookmark { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ILeveledBookmark</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper_FileName.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper.FileName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L48">View Source</a>
+  </span>
+  <a id="Opus_Common_Wrappers_FileAndBookmarkWrapper_FileName_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.FileName*"></a>
+  <h4 id="Opus_Common_Wrappers_FileAndBookmarkWrapper_FileName" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.FileName">FileName</h4>
+  <div class="markdown level1 summary"><p>Name of the file associated with the bookmark.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FileName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper_FilePath.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper.FilePath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L53">View Source</a>
+  </span>
+  <a id="Opus_Common_Wrappers_FileAndBookmarkWrapper_FilePath_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.FilePath*"></a>
+  <h4 id="Opus_Common_Wrappers_FileAndBookmarkWrapper_FilePath" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.FilePath">FilePath</h4>
+  <div class="markdown level1 summary"><p>Path of the file associated with the bookmark.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FilePath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper_Id.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L16">View Source</a>
+  </span>
+  <a id="Opus_Common_Wrappers_FileAndBookmarkWrapper_Id_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.Id*"></a>
+  <h4 id="Opus_Common_Wrappers_FileAndBookmarkWrapper_Id" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.Id">Id</h4>
+  <div class="markdown level1 summary"><p>Guid for identifying particular wrapper.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guid Id { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper_Index.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper.Index%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L28">View Source</a>
+  </span>
+  <a id="Opus_Common_Wrappers_FileAndBookmarkWrapper_Index_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.Index*"></a>
+  <h4 id="Opus_Common_Wrappers_FileAndBookmarkWrapper_Index" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.Index">Index</h4>
+  <div class="markdown level1 summary"><p>Index of this wrapper in bookmark sequence.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Index { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper_IsSelected.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper.IsSelected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L39">View Source</a>
+  </span>
+  <a id="Opus_Common_Wrappers_FileAndBookmarkWrapper_IsSelected_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.IsSelected*"></a>
+  <h4 id="Opus_Common_Wrappers_FileAndBookmarkWrapper_IsSelected" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.IsSelected">IsSelected</h4>
+  <div class="markdown level1 summary"><p>If true, this wrapper has been selected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSelected { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper_Level.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper.Level%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L21">View Source</a>
+  </span>
+  <a id="Opus_Common_Wrappers_FileAndBookmarkWrapper_Level_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.Level*"></a>
+  <h4 id="Opus_Common_Wrappers_FileAndBookmarkWrapper_Level" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.Level">Level</h4>
+  <div class="markdown level1 summary"><p>Level of this wrapper in the hierarchy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Level { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper_Range.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper.Range%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L58">View Source</a>
+  </span>
+  <a id="Opus_Common_Wrappers_FileAndBookmarkWrapper_Range_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.Range*"></a>
+  <h4 id="Opus_Common_Wrappers_FileAndBookmarkWrapper_Range" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.Range">Range</h4>
+  <div class="markdown level1 summary"><p>Page range of the bookmark as a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Range { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper_Equals_Opus_Common_Wrappers_FileAndBookmarkWrapper_.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper.Equals(Opus.Common.Wrappers.FileAndBookmarkWrapper)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L191">View Source</a>
+  </span>
+  <a id="Opus_Common_Wrappers_FileAndBookmarkWrapper_Equals_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.Equals*"></a>
+  <h4 id="Opus_Common_Wrappers_FileAndBookmarkWrapper_Equals_Opus_Common_Wrappers_FileAndBookmarkWrapper_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.Equals(Opus.Common.Wrappers.FileAndBookmarkWrapper)">Equals(FileAndBookmarkWrapper)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(FileAndBookmarkWrapper other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.Common.Wrappers.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L183">View Source</a>
+  </span>
+  <a id="Opus_Common_Wrappers_FileAndBookmarkWrapper_Equals_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.Equals*"></a>
+  <h4 id="Opus_Common_Wrappers_FileAndBookmarkWrapper_Equals_System_Object_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper_FindChildren_IList_Opus_Common_Wrappers_FileAndBookmarkWrapper__.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper.FindChildren(IList%7BOpus.Common.Wrappers.FileAndBookmarkWrapper%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L161">View Source</a>
+  </span>
+  <a id="Opus_Common_Wrappers_FileAndBookmarkWrapper_FindChildren_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.FindChildren*"></a>
+  <h4 id="Opus_Common_Wrappers_FileAndBookmarkWrapper_FindChildren_IList_Opus_Common_Wrappers_FileAndBookmarkWrapper__" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.FindChildren(IList{Opus.Common.Wrappers.FileAndBookmarkWrapper})">FindChildren(IList&lt;FileAndBookmarkWrapper&gt;)</h4>
+  <div class="markdown level1 summary"><p>Find the children of the bookmark contained in this wrapper.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;FileAndBookmarkWrapper&gt; FindChildren(IList&lt;FileAndBookmarkWrapper&gt; storage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;<a class="xref" href="Opus.Common.Wrappers.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a>&gt;</td>
+        <td><span class="parametername">storage</span></td>
+        <td><p>List of the bookmarks to search for children.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;<a class="xref" href="Opus.Common.Wrappers.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a>&gt;</td>
+        <td><p>Children, if some were found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper_FindParent_IList_Opus_Common_Wrappers_FileAndBookmarkWrapper__.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper.FindParent(IList%7BOpus.Common.Wrappers.FileAndBookmarkWrapper%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L98">View Source</a>
+  </span>
+  <a id="Opus_Common_Wrappers_FileAndBookmarkWrapper_FindParent_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.FindParent*"></a>
+  <h4 id="Opus_Common_Wrappers_FileAndBookmarkWrapper_FindParent_IList_Opus_Common_Wrappers_FileAndBookmarkWrapper__" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.FindParent(IList{Opus.Common.Wrappers.FileAndBookmarkWrapper})">FindParent(IList&lt;FileAndBookmarkWrapper&gt;)</h4>
+  <div class="markdown level1 summary"><p>Find the parent of the bookmark contained in this wrapper, if there is one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileAndBookmarkWrapper FindParent(IList&lt;FileAndBookmarkWrapper&gt; storage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;<a class="xref" href="Opus.Common.Wrappers.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a>&gt;</td>
+        <td><span class="parametername">storage</span></td>
+        <td><p>List to look the parent from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.Common.Wrappers.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a></td>
+        <td><p>The parent or null, if no parent found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper_FindParent_IList_Opus_Common_Wrappers_FileAndBookmarkWrapper__System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper.FindParent(IList%7BOpus.Common.Wrappers.FileAndBookmarkWrapper%7D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L110">View Source</a>
+  </span>
+  <a id="Opus_Common_Wrappers_FileAndBookmarkWrapper_FindParent_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.FindParent*"></a>
+  <h4 id="Opus_Common_Wrappers_FileAndBookmarkWrapper_FindParent_IList_Opus_Common_Wrappers_FileAndBookmarkWrapper__System_Int32_System_Int32_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.FindParent(IList{Opus.Common.Wrappers.FileAndBookmarkWrapper},System.Int32,System.Int32)">FindParent(IList&lt;FileAndBookmarkWrapper&gt;, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Find the parent of a bookmark, if there is one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FileAndBookmarkWrapper FindParent(IList&lt;FileAndBookmarkWrapper&gt; storage, int childStartPage, int childEndPage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;<a class="xref" href="Opus.Common.Wrappers.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a>&gt;</td>
+        <td><span class="parametername">storage</span></td>
+        <td><p>List to look the parent from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">childStartPage</span></td>
+        <td><p>Start page of the child.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">childEndPage</span></td>
+        <td><p>End page of the child.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.Common.Wrappers.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a></td>
+        <td><p>Parent of null, if no parent is found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper_FindPrecedingSibling_IList_Opus_Common_Wrappers_FileAndBookmarkWrapper__Opus_Common_Wrappers_FileAndBookmarkWrapper_.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper.FindPrecedingSibling(IList%7BOpus.Common.Wrappers.FileAndBookmarkWrapper%7D%2COpus.Common.Wrappers.FileAndBookmarkWrapper)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L132">View Source</a>
+  </span>
+  <a id="Opus_Common_Wrappers_FileAndBookmarkWrapper_FindPrecedingSibling_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.FindPrecedingSibling*"></a>
+  <h4 id="Opus_Common_Wrappers_FileAndBookmarkWrapper_FindPrecedingSibling_IList_Opus_Common_Wrappers_FileAndBookmarkWrapper__Opus_Common_Wrappers_FileAndBookmarkWrapper_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.FindPrecedingSibling(IList{Opus.Common.Wrappers.FileAndBookmarkWrapper},Opus.Common.Wrappers.FileAndBookmarkWrapper)">FindPrecedingSibling(IList&lt;FileAndBookmarkWrapper&gt;, FileAndBookmarkWrapper)</h4>
+  <div class="markdown level1 summary"><p>Find the sibling of a given bookmark that is the nearest &quot;elder&quot; sibling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileAndBookmarkWrapper FindPrecedingSibling(IList&lt;FileAndBookmarkWrapper&gt; storage, FileAndBookmarkWrapper commonParent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;<a class="xref" href="Opus.Common.Wrappers.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a>&gt;</td>
+        <td><span class="parametername">storage</span></td>
+        <td><p>List to look the sibling from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Common.Wrappers.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a></td>
+        <td><span class="parametername">commonParent</span></td>
+        <td><p>Parent wrapper common to this wrappers bookmark and the sibling.e2</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.Common.Wrappers.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a></td>
+        <td><p>Sibling or null, if no sibling is found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper_GetHashCode.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L200">View Source</a>
+  </span>
+  <a id="Opus_Common_Wrappers_FileAndBookmarkWrapper_GetHashCode_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.GetHashCode*"></a>
+  <h4 id="Opus_Common_Wrappers_FileAndBookmarkWrapper_GetHashCode" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper_op_Equality_Opus_Common_Wrappers_FileAndBookmarkWrapper_Opus_Common_Wrappers_FileAndBookmarkWrapper_.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper.op_Equality(Opus.Common.Wrappers.FileAndBookmarkWrapper%2COpus.Common.Wrappers.FileAndBookmarkWrapper)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L211">View Source</a>
+  </span>
+  <a id="Opus_Common_Wrappers_FileAndBookmarkWrapper_op_Equality_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.op_Equality*"></a>
+  <h4 id="Opus_Common_Wrappers_FileAndBookmarkWrapper_op_Equality_Opus_Common_Wrappers_FileAndBookmarkWrapper_Opus_Common_Wrappers_FileAndBookmarkWrapper_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.op_Equality(Opus.Common.Wrappers.FileAndBookmarkWrapper,Opus.Common.Wrappers.FileAndBookmarkWrapper)">Equality(FileAndBookmarkWrapper, FileAndBookmarkWrapper)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(FileAndBookmarkWrapper a, FileAndBookmarkWrapper b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.Common.Wrappers.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Common.Wrappers.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper_op_Inequality_Opus_Common_Wrappers_FileAndBookmarkWrapper_Opus_Common_Wrappers_FileAndBookmarkWrapper_.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper.op_Inequality(Opus.Common.Wrappers.FileAndBookmarkWrapper%2COpus.Common.Wrappers.FileAndBookmarkWrapper)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L222">View Source</a>
+  </span>
+  <a id="Opus_Common_Wrappers_FileAndBookmarkWrapper_op_Inequality_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.op_Inequality*"></a>
+  <h4 id="Opus_Common_Wrappers_FileAndBookmarkWrapper_op_Inequality_Opus_Common_Wrappers_FileAndBookmarkWrapper_Opus_Common_Wrappers_FileAndBookmarkWrapper_" data-uid="Opus.Common.Wrappers.FileAndBookmarkWrapper.op_Inequality(Opus.Common.Wrappers.FileAndBookmarkWrapper,Opus.Common.Wrappers.FileAndBookmarkWrapper)">Inequality(FileAndBookmarkWrapper, FileAndBookmarkWrapper)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(FileAndBookmarkWrapper a, FileAndBookmarkWrapper b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Opus.Common.Wrappers.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Opus.Common.Wrappers.FileAndBookmarkWrapper.html">FileAndBookmarkWrapper</a></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+  <div>
+      <a class="xref" href="Opus.Common.Services.Base.IIndexed.html">IIndexed</a>
+  </div>
+  <div>
+      <span class="xref">ILeveledItem</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Opus.Common.Extensions.ObjectExtensions.html#Opus_Common_Extensions_ObjectExtensions_IfNotNullExecute__1___0_Action___0__">ObjectExtensions.IfNotNullExecute&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Opus.Common.Extensions.ObjectExtensions.html#Opus_Common_Extensions_ObjectExtensions_IfNullExecute__1___0_Action___0__">ObjectExtensions.IfNullExecute&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Common_Wrappers_FileAndBookmarkWrapper.md&amp;value=---%0Auid%3A%20Opus.Common.Wrappers.FileAndBookmarkWrapper%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Parannusehdotus</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Common/Wrappers/FileAndBookmarkWrapper.cs/#L11" class="contribution-link">Näytä lähdekoodi</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>Tässä osiossa</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Takaisin ylös</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Takaisin ylös</a>
+            </span>
+            <div class="pull-left">
+              
+              <span><strong>Opus</strong>: ohjeet</span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+        <script type="text/javascript" src="../styles/accordion.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

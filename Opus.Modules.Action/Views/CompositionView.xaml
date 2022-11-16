@@ -23,7 +23,7 @@
                 <Setter Property="Foreground" Value="{DynamicResource SecondaryHueLightBrush}"/>
             </Style>
             <CollectionViewSource x:Key="ProfileSource"
-                                  Source="{Binding Profiles}">
+                                  Source="{Binding Properties.Profiles}">
                 <CollectionViewSource.SortDescriptions>
                     <scm:SortDescription PropertyName="IsEditable"/>
                     <scm:SortDescription PropertyName="ProfileName" Direction="Ascending"/>
@@ -53,10 +53,10 @@
             <StackPanel Orientation="Horizontal" 
                         Grid.Column="0">
                 <Button Style="{StaticResource ToolButton}"
-                        Command="{Binding OpenProfileMenuCommand}"
+                        Command="{Binding Commands.OpenProfileMenuCommand}"
                         Margin="0">
                     <materialDesign:PopupBox PlacementMode="TopAndAlignCentres" StaysOpen="False"
-                                             IsPopupOpen="{Binding AddProfileMenuOpen}"
+                                             IsPopupOpen="{Binding Properties.AddProfileMenuOpen}"
                                              ToolTip="{x:Static resToolTips:Buttons.ProfilePopup}"
                                              Padding="0">
                         <materialDesign:PopupBox.ToggleContent>
@@ -69,16 +69,16 @@
                                 </ItemsPanelTemplate>
                             </Menu.ItemsPanel>
                             <MenuItem Header="{x:Static resButtons:Menus.NewProfile}"
-                                      Command="{Binding AddProfileCommand}"
+                                      Command="{Binding Commands.AddProfileCommand}"
                                       Style="{StaticResource ProfilePopupMenuItem}"/>
                             <MenuItem Header="{x:Static resButtons:Menus.CopyProfile}"
-                                      Command="{Binding CopyProfileCommand}"
+                                      Command="{Binding Commands.CopyProfileCommand}"
                                       Style="{StaticResource ProfilePopupMenuItem}"/>
                             <MenuItem Header="{x:Static resButtons:Menus.ImportProfile}"
-                                      Command="{Binding ImportProfileCommand}"
+                                      Command="{Binding Commands.ImportProfileCommand}"
                                       Style="{StaticResource ProfilePopupMenuItem}"/>
                             <MenuItem Header="{x:Static resButtons:Menus.ExportProfile}"
-                                      Command="{Binding ExportProfileCommand}"
+                                      Command="{Binding Commands.ExportProfileCommand}"
                                       Style="{StaticResource ProfilePopupMenuItem}"/>
                         </Menu>
                     </materialDesign:PopupBox>
@@ -92,7 +92,7 @@
                       FontSize="16"
                       Margin="8, 0, 8, 10"
                       materialDesign:ComboBoxAssist.ShowSelectedItem="True"
-                      SelectedItem="{Binding SelectedProfile, Mode=TwoWay}"
+                      SelectedItem="{Binding Properties.SelectedProfile, Mode=TwoWay}"
                       ItemsSource="{Binding Source={StaticResource ProfileSource}}"
                       VerticalAlignment="Center"
                       VerticalContentAlignment="Bottom"
@@ -107,15 +107,15 @@
             </ComboBox>
             <StackPanel Orientation="Horizontal" Grid.Column="4">
                 <Button Style="{StaticResource ToolButton}"
-                        Command="{Binding EditProfileCommand}"
-                        IsEnabled="{Binding SelectedProfile.IsEditable}"
+                        Command="{Binding Commands.EditProfileCommand}"
+                        IsEnabled="{Binding Properties.SelectedProfile.IsEditable}"
                         Margin="0"
                         ToolTip="{x:Static resToolTips:Buttons.ProfileEditButton}">
                     <materialDesign:PackIcon Kind="Pencil"/>
                 </Button>
                 <Button Style="{StaticResource ToolButton}"
-                        Command="{Binding DeleteProfileCommand}"
-                        IsEnabled="{Binding SelectedProfile.IsEditable}"
+                        Command="{Binding Commands.DeleteProfileCommand}"
+                        IsEnabled="{Binding Properties.SelectedProfile.IsEditable}"
                         Margin="0"
                         ToolTip="{x:Static resToolTips:Buttons.DeleteProfileButton}">
                     <materialDesign:PackIcon Kind="Delete"/>
@@ -144,39 +144,39 @@
                        Margin="30">
                 <TextBlock.Visibility>
                     <MultiBinding Converter="{StaticResource ZeroAndTrue}">
-                        <Binding Path="SelectedProfile.Segments.Count"/>
-                        <Binding Path="ProfileContentShow"/>
+                        <Binding Path="Properties.SelectedProfile.Segments.Count"/>
+                        <Binding Path="Properties.ProfileContentShow"/>
                     </MultiBinding>
                 </TextBlock.Visibility>
             </TextBlock>
-            <ListView ItemsSource="{Binding SelectedProfile.Segments}"
+            <ListView ItemsSource="{Binding Properties.SelectedProfile.Segments}"
                   Style="{StaticResource SelectionList}"
-                  SelectedItem="{Binding SelectedProfile.Segments.SelectedItem}"
+                  SelectedItem="{Binding Properties.SelectedProfile.Segments.SelectedItem}"
                   SelectionMode="Single"
                   x:Name="SegmentsList">
                 <ListView.InputBindings>
-                    <KeyBinding Key="Up" Modifiers="Ctrl" Command="{Binding SelectedProfile.Segments.MoveUp}"/>
-                    <KeyBinding Key="Down" Modifiers="Ctrl" Command="{Binding SelectedProfile.Segments.MoveDown}"/>
-                    <KeyBinding Key="Left" Modifiers="Ctrl" Command="{Binding SelectedProfile.Segments.MoveLeft}"/>
-                    <KeyBinding Key="Right" Modifiers="Ctrl" Command="{Binding SelectedProfile.Segments.MoveRight}"/>
+                    <KeyBinding Key="Up" Modifiers="Ctrl" Command="{Binding Properties.SelectedProfile.Segments.MoveUp}"/>
+                    <KeyBinding Key="Down" Modifiers="Ctrl" Command="{Binding Properties.SelectedProfile.Segments.MoveDown}"/>
+                    <KeyBinding Key="Left" Modifiers="Ctrl" Command="{Binding Properties.SelectedProfile.Segments.MoveLeft}"/>
+                    <KeyBinding Key="Right" Modifiers="Ctrl" Command="{Binding Properties.SelectedProfile.Segments.MoveRight}"/>
                 </ListView.InputBindings>
             </ListView>
         </Grid>
 
         <StackPanel Orientation="Horizontal" Grid.Row="5" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal"
-                        IsEnabled="{Binding SelectedProfile.IsEditable}">
+                        IsEnabled="{Binding Properties.SelectedProfile.IsEditable}">
                 <Button Style="{StaticResource ToolButton}"
                         IsEnabled="{Binding ElementName=SegmentsList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                        Command="{Binding EditSegmentCommand}"
+                        Command="{Binding Commands.EditSegmentCommand}"
                         ToolTip="{x:Static resToolTips:Buttons.SegmentEditButton}">
                     <materialDesign:PackIcon Kind="Pencil"/>
                 </Button>
                 <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
                 <Button Style="{StaticResource ToolButton}" x:Name="AddSegmentButton"
-                        Command="{Binding OpenSegmentMenuCommand}">
+                        Command="{Binding Commands.OpenSegmentMenuCommand}">
                     <materialDesign:PopupBox PlacementMode="TopAndAlignCentres" StaysOpen="False"
-                                             IsPopupOpen="{Binding AddSegmentMenuOpen}"
+                                             IsPopupOpen="{Binding Properties.AddSegmentMenuOpen}"
                                              ToolTip="{x:Static resToolTips:Buttons.SegmentPopup}"
                                              Padding="0">
                         <materialDesign:PopupBox.ToggleContent>
@@ -189,10 +189,10 @@
                                 </ItemsPanelTemplate>
                             </Menu.ItemsPanel>
                             <MenuItem Header="{x:Static resButtons:Menus.NewSegmentTitle}"
-                                      Command="{Binding AddTitleSegmentCommand}"
+                                      Command="{Binding Commands.AddTitleSegmentCommand}"
                                       Style="{StaticResource ProfilePopupMenuItem}"/>
                             <MenuItem Header="{x:Static resButtons:Menus.NewSegmentFile}"
-                                      Command="{Binding AddFileSegmentCommand}"
+                                      Command="{Binding Commands.AddFileSegmentCommand}"
                                       Style="{StaticResource ProfilePopupMenuItem}"/>
                         </Menu>
                     </materialDesign:PopupBox>
@@ -200,7 +200,7 @@
                 <Rectangle Width="2" Fill="LightGray" Opacity="0.5" Margin="5, 20, 5, 5" RadiusX="2" RadiusY="2"/>
                 <Button Style="{StaticResource ToolButton}"
                         IsEnabled="{Binding ElementName=FilesList, Path=SelectedItem, Converter={StaticResource NullToBool}}"
-                        Command="{Binding DeleteSegmentCommand}"
+                        Command="{Binding Commands.DeleteSegmentCommand}"
                         ToolTip="{x:Static resToolTips:Buttons.SegmentDeleteButton}">
                     <materialDesign:PackIcon Kind="Delete"/>
                 </Button>
