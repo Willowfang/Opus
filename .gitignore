@@ -339,20 +339,8 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 
-# Installer project
-/Opus.Install/
-
-# Resource directories
-Resources/
-
 # Configuration files
 *.ops
-
-# Resource files
-*.resx
-
-# Resources project
-/Opus.Resources/
 
 # Opus profiles
 *.opusprofile

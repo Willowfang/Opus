@@ -127,7 +127,7 @@ namespace Opus.Actions.Implementation.Extract
             await progress.Show;
 
             if (configuration.ExtractionOpenDestinationAfterComplete
-                && progress.IsCanceled == false) OpenPathForViewing(openDestination);
+                && progress.IsCanceled == false) openDestination.OpenPdfOrDirectory();
         }
 
         private async Task<FileSystemInfo> SaveCreateZip(

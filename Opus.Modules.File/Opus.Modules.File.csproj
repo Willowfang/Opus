@@ -13,4 +13,9 @@
   <ItemGroup>
     <ProjectReference Include="..\Opus.Common\Opus.Common.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="WF-LoggingLib">
+      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\LoggingLib\bin\Debug\net6.0\WF-LoggingLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

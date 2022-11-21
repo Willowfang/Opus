@@ -21,6 +21,7 @@ namespace Opus.Modules.Action
             var navigator = containerProvider.Resolve<INavigationAssist>();
 
             navigator.Add<ExtractionView>(RegionNames.MAINSECTION_FOUR_ACTION, SchemeNames.EXTRACT);
+
             navigator.Add<ExtractionOrderView>(
                 RegionNames.MAINSECTION_FOUR_SUPPORT,
                 SchemeNames.EXTRACT

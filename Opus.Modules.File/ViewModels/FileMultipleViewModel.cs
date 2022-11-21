@@ -3,55 +3,49 @@ using Opus.Events;
 using Opus.Common.Services.Input;
 using Prism.Commands;
 using Prism.Events;
+using Opus.Modules.File.Base;
+using WF.LoggingLib;
+using System.Windows.Automation;
 
 namespace Opus.Modules.File.ViewModels
 {
     /// <summary>
     /// View model for selecting multiple files.
     /// </summary>
-    public class FileMultipleViewModel : ViewModelBase
+    public class FileMultipleViewModel : FileViewModelBase<FileMultipleViewModel>
     {
-        #region DI Services
-        private IPathSelection input;
-        private IEventAggregator eventAggregator;
-        #endregion
-
-        #region Constructor
         /// <summary>
-        /// Create a new multiple file selection viewModel.
+        /// Create new viewmodel for selecting multiple files.
         /// </summary>
-        /// <param name="eventAggregator">Service for publishing and subscribing to events between viewModels.</param>
-        /// <param name="input">Service for user input path selection.</param>
-        public FileMultipleViewModel(IEventAggregator eventAggregator, IPathSelection input)
+        /// <param name="pathSelection">Path selection service.</param>
+        /// <param name="eventAggregator">Event handling service.</param>
+        /// <param name="logbook">Logging service.</param>
+        public FileMultipleViewModel(
+            IPathSelection pathSelection,
+            IEventAggregator eventAggregator,
+            ILogbook logbook) : base(pathSelection, eventAggregator, logbook) { }
+
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        protected override void OpenExecute()
         {
-            this.input = input;
-            this.eventAggregator = eventAggregator;
-        }
-        #endregion
+            logbook.Write($"Selecting one or more files.", LogLevel.Debug);
 
-        #region Commands
-        private DelegateCommand addFilesCommand;
-
-        /// <summary>
-        /// Command for adding new files.
-        /// </summary>
-        public DelegateCommand AddFilesCommand =>
-            addFilesCommand ?? (addFilesCommand = new DelegateCommand(ExecuteAddFiles));
-
-        /// <summary>
-        /// Execution method for files addition command, see <see cref="AddFilesCommand"/>.
-        /// </summary>
-        protected void ExecuteAddFiles()
-        {
-            string[] path = input.OpenFiles(
+            string[] path = pathSelection.OpenFiles(
                 Resources.UserInput.Descriptions.SelectOpenFiles,
-                FileType.PDF
-            );
+                FileType.PDF);
+
             if (path.Length == 0)
+            {
+                logbook.Write($"No paths were selected.", LogLevel.Debug);
+                
                 return;
+            }
 
             eventAggregator.GetEvent<FilesAddedEvent>().Publish(path);
+
+            logbook.Write($"Paths selected and event sent.", LogLevel.Debug);
         }
-        #endregion
     }
 }

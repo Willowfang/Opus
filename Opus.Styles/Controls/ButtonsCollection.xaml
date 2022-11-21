@@ -4,7 +4,9 @@
                     xmlns:resButtons="clr-namespace:Opus.Resources.Buttons;assembly=Opus.Resources">
 
     <!-- MAIN MENU BUTTON -->
-    <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource MaterialDesignFlatButton}"
+    
+    <Style TargetType="{x:Type RadioButton}" 
+           BasedOn="{StaticResource MaterialDesignFlatButton}"
            x:Key="MainMenuButton">
         <Setter Property="Command" Value="{Binding CommonCommands.NavigateCommand}"/>
         <Setter Property="Width" Value="80"/>
@@ -34,49 +36,49 @@
         </Style.Triggers>
     </Style>
 
-    <Style TargetType="{x:Type Button}" x:Key="HeaderMenuButton" 
-           BasedOn="{StaticResource MaterialDesignFlatButton}">
-        <Setter Property="Foreground" Value="{DynamicResource MaterialDesignDarkForeground}"/>
-        <Setter Property="Height" Value="40"/>
-        <Setter Property="Width" Value="120"/>
-        <Setter Property="Margin" Value="0"/>
-    </Style>
-
-    <Style TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource MaterialDesignFlatButton}"
-           x:Key="HeaderMenuToggleButton">
-        <Setter Property="Foreground" Value="{DynamicResource MaterialDesignDarkForeground}"/>
-        <Setter Property="Height" Value="40"/>
-        <Setter Property="Width" Value="120"/>
-        <Setter Property="Margin" Value="0"/>
-    </Style>
-
-    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFlatButton}"
+    <!-- BUTTON FOR SELECTING PATHS-->
+    
+    <Style TargetType="{x:Type Button}" 
+           BasedOn="{StaticResource MaterialDesignFlatButton}"
            x:Key="InputPathButton">
         <Setter Property="Foreground" Value="{DynamicResource MaterialDesignDarkForeground}"/>
     </Style>
 
     <!--DIALOG BUTTONS-->
-    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFlatSecondaryButton}"
+    
+    <!-- Dialog button base -->
+    
+    <Style TargetType="{x:Type Button}" 
+           BasedOn="{StaticResource MaterialDesignFlatSecondaryButton}"
            x:Key="DialogButton">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Margin" Value="10, 0, 10, 0"/>
     </Style>
 
-    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource DialogButton}"
+    <!-- Dialog save button -->
+    
+    <Style TargetType="{x:Type Button}" 
+           BasedOn="{StaticResource DialogButton}"
            x:Key="DialogSaveButton">
         <Setter Property="Command" Value="{Binding Save}"/>
         <Setter Property="Content" Value="{x:Static resButtons:General.Save}"/>
         <Setter Property="IsDefault" Value="True"/>
     </Style>
 
-    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource DialogButton}"
+    <!-- Dialog cancel button -->
+    
+    <Style TargetType="{x:Type Button}" 
+           BasedOn="{StaticResource DialogButton}"
            x:Key="DialogCancelButton">
         <Setter Property="Command" Value="{Binding Close}"/>
         <Setter Property="Content" Value="{x:Static resButtons:General.Cancel}"/>
         <Setter Property="IsCancel" Value="True"/>
     </Style>
 
-    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource DialogButton}"
+    <!-- Dialog OK button -->
+    
+    <Style TargetType="{x:Type Button}" 
+           BasedOn="{StaticResource DialogButton}"
            x:Key="DialogOkButton">
         <Setter Property="Command" Value="{Binding Close}"/>
         <Setter Property="Content" Value="{x:Static resButtons:General.OK}"/>
@@ -84,7 +86,9 @@
     </Style>
 
     <!--SETTINGS BUTTON-->
-    <Style TargetType="{x:Type Button}" x:Key="SettingsButton" 
+    
+    <Style TargetType="{x:Type Button}" 
+           x:Key="SettingsButton" 
            BasedOn="{StaticResource MaterialDesignIconButton}">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -95,7 +99,10 @@
                     <md:PackIcon Kind="Cog"
                                  Foreground="{DynamicResource PrimaryHueMidBrush}">
                         <md:PackIcon.LayoutTransform>
-                            <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1" ScaleY="1"/>
+                            <ScaleTransform CenterX="0.5" 
+                                            CenterY="0.5" 
+                                            ScaleX="1" 
+                                            ScaleY="1"/>
                         </md:PackIcon.LayoutTransform>
                     </md:PackIcon>
                 </DataTemplate>
@@ -104,6 +111,7 @@
     </Style>
     
     <!--RADIO BUTTON TAB-->
+    
     <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource MaterialDesignTabRadioButton}"
            x:Key="TabRadioButton">
         <Setter Property="Cursor" Value="Hand"/>

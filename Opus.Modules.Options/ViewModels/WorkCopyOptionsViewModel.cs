@@ -2,6 +2,7 @@
 using Opus.Common.ViewModels;
 using Opus.Common.Dialogs;
 using Opus.Common.Services.Commands;
+using Opus.Modules.Options.Base;
 
 namespace Opus.Modules.Options.ViewModels
 {
@@ -10,7 +11,6 @@ namespace Opus.Modules.Options.ViewModels
     /// </summary>
     public class WorkCopyOptionsViewModel : OptionsViewModelBase<WorkCopySettingsDialog>
     {
-        #region Constructor
         /// <summary>
         /// Create a new view model for modifying work copy options.
         /// </summary>
@@ -20,6 +20,5 @@ namespace Opus.Modules.Options.ViewModels
             ILogbook logbook,
             IWorkCopySettingsCommands settingsCommands
         ) : base(logbook, settingsCommands) { }
-        #endregion
     }
 }

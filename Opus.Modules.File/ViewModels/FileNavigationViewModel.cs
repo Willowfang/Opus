@@ -4,20 +4,16 @@ using Opus.Common.Services.Input;
 using Prism.Commands;
 using Prism.Events;
 using System.IO;
+using Opus.Modules.File.Base;
+using WF.LoggingLib;
 
 namespace Opus.Modules.File.ViewModels
 {
     /// <summary>
     /// Viewmodel for selecting a single file.
     /// </summary>
-    public class FileNavigationViewModel : ViewModelBase
+    public class FileNavigationViewModel : FileViewModelBase<FileNavigationViewModel>
     {
-        #region DI services
-        private IPathSelection input;
-        private IEventAggregator eventAggregator;
-        #endregion
-
-        #region Fields and properties
         private string fileName;
 
         /// <summary>
@@ -28,46 +24,44 @@ namespace Opus.Modules.File.ViewModels
             get { return Path.GetFileNameWithoutExtension(fileName); }
             set { SetProperty(ref fileName, value); }
         }
-        #endregion
 
-        #region Constructor
         /// <summary>
-        /// Create a new viewmodel for selecting a single file.
+        /// Create a new viewmodel for single file selection.
         /// </summary>
-        /// <param name="eventAggregator">Service for publishing and subscribing to events between viewModels.</param>
-        /// <param name="input">Service for user selection of an input path.</param>
-        public FileNavigationViewModel(IEventAggregator eventAggregator, IPathSelection input)
+        /// <param name="pathSelection">Path selection service.</param>
+        /// <param name="eventAggregator">Event handling service.</param>
+        /// <param name="logbook">Logging service.</param>
+        public FileNavigationViewModel(
+            IPathSelection pathSelection,
+            IEventAggregator eventAggregator,
+            ILogbook logbook) : base(pathSelection, eventAggregator, logbook)
         {
             FileName = Resources.Buttons.General.SelectFile;
-            this.input = input;
-            this.eventAggregator = eventAggregator;
         }
-        #endregion
-
-        #region Commands
-        private DelegateCommand openFileCommand;
 
         /// <summary>
-        /// Command for opening a file path.
+        /// <inheritdoc/>
         /// </summary>
-        public DelegateCommand OpenFileCommand =>
-            openFileCommand ?? (openFileCommand = new DelegateCommand(ExecuteOpenFile));
-
-        /// <summary>
-        /// Execution method for open file command, see <see cref="OpenFileCommand"/>.
-        /// </summary>
-        protected void ExecuteOpenFile()
+        protected override void OpenExecute()
         {
-            string path = input.OpenFile(
+            logbook.Write($"Selecting file path.", LogLevel.Debug);
+
+            string path = pathSelection.OpenFile(
                 Resources.UserInput.Descriptions.SelectOpenFile,
-                FileType.PDF
-            );
+                FileType.PDF);
+
             if (path == null)
+            {
+                logbook.Write($"No path was selected.", LogLevel.Debug);
+
                 return;
+            }
 
             FileName = path;
+
             eventAggregator.GetEvent<FileSelectedEvent>().Publish(path);
+
+            logbook.Write($"Path was selected and event sent.", LogLevel.Debug);
         }
-        #endregion
     }
 }

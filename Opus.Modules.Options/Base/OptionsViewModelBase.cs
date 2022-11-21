@@ -1,7 +1,8 @@
 ﻿using WF.LoggingLib;
 using Opus.Common.Services.Commands;
+using Opus.Common.ViewModels;
 
-namespace Opus.Common.ViewModels
+namespace Opus.Modules.Options.Base
 {
     /// <summary>
     /// Abstract base class for ViewModels that represent options and settings for various actions. Contains

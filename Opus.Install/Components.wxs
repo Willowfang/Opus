@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Fragment>
+		
+	<!-- Define included components -->
+    <ComponentGroup Id="ProductComponents">
+      <ComponentRef Id="MainAppShortcut"/>
+      <ComponentRef Id="OpenFileAssociation"/>
+      <ComponentRef Id="Path"/>
+	  <ComponentRef Id="UpdateInfoComponent"/>
+    </ComponentGroup>
+    
+	<!-- Define installation target directory -->
+    <DirectoryRef Id="TARGETDIR">
+      <Component Id="Path" Guid="{C89B9A0B-20F9-4921-83B8-70D60EFB383C}">
+        <Environment Id="PATH" Name="PATH" Value="[INSTALLFOLDER]" Permanent="no" Part="last" Action="set" System="no"/>
+      </Component>
+    </DirectoryRef>
+
+	<!-- Include update information with the installation -->
+	<DirectoryRef Id="INSTALLFOLDER">
+		<Component Id="UpdateInfoComponent" Guid="{56741441-44A6-45C7-87F6-C0DABA5DFC91}">
+			<File Id="UpdateInfoJSON" Name="UpdateInfo.json" KeyPath="yes" Source="$(var.UpdateInfo)" Compressed="no"/>
+		</Component>
+	</DirectoryRef>
+
+	<!-- Windows context menu registry entries-->
+    <DirectoryRef Id="ProgramMenuFolder">
+      <Component Id ="OpenFileAssociation" Guid="{B1A80D39-4D3D-42AF-9E96-14E19229221F}">
+        <!--Main pdf menu-->
+        <RegistryValue Id="PdfMenuName"
+                       Root="HKCU"
+                       Key="SOFTWARE\Classes\PDFXEdit.PDF\shell\Opus"
+                       Name="MUIVerb"
+                       Value="Opus"
+                       Type="string"/>
+        <RegistryValue Id="PdfSubCommands"
+                       Root="HKCU"
+                       Key="SOFTWARE\Classes\PDFXEdit.PDF\shell\Opus"
+                       Name="subcommands"
+                       Value=""
+                       Type="string"/>
+        <RegistryValue Id="PdfIcon"
+                       Root="HKCU"
+                       Key="SOFTWARE\Classes\PDFXEdit.PDF\shell\Opus"
+                       Name="Icon"
+                       Value="[INSTALLFOLDER]logocx.ico"
+                       Type="string"/>
+        
+        <!--Pdf menu-->
+        <RegistryValue Id="ExtractPDFAll"
+                       Root="HKCU"
+                       Key="SOFTWARE\Classes\PDFXEdit.PDF\shell\Opus\shell\Erota kaikki\command"
+                       Value="[INSTALLFOLDER]Opus.exe -extract &quot;%1&quot;"
+                       Type="string"/>
+        <RegistryValue Id="ExtractPDFAppendices"
+                       Root="HKCU"
+                       Key="SOFTWARE\Classes\PDFXEdit.PDF\shell\Opus\shell\Erota liitteet\command"
+                       Value="[INSTALLFOLDER]Opus.exe -extract &quot;%1&quot; Liite"
+                       Type="string"/>
+        <RegistryValue Id="SignaturePDFRemove"
+                       Root="HKCU"
+                       Key="SOFTWARE\Classes\PDFXEdit.PDF\shell\Opus\shell\Luo työkappale\command"
+                       Value="[INSTALLFOLDER]Opus.exe -workcopy &quot;%1&quot;"
+                       Type="string"/>
+		  <RegistryValue Id="ConvertPDFtoPDFA"
+                       Root="HKCU"
+                       Key="SOFTWARE\Classes\PDFXEdit.PDF\shell\Opus\shell\PDF-A\command"
+                       Value="[INSTALLFOLDER]Opus.exe -pdfa &quot;%1&quot;"
+                       Type="string"/>
+
+        <!--Main directory menu-->
+        <RegistryValue Id="DirMenuName"
+                       Root="HKCU"
+                       Key="SOFTWARE\Classes\Directory\shell\Opus"
+                       Name="MUIVerb"
+                       Value="Opus"
+                       Type="string"/>
+        <RegistryValue Id="DirSubCommands"
+                       Root="HKCU"
+                       Key="SOFTWARE\Classes\Directory\shell\Opus"
+                       Name="subcommands"
+                       Value=""
+                       Type="string"/>
+        <RegistryValue Id="DirIcon"
+                       Root="HKCU"
+                       Key="SOFTWARE\Classes\Directory\shell\Opus"
+                       Name="Icon"
+                       Value="[INSTALLFOLDER]logocx.ico"
+                       Type="string"/>
+
+        <!--Directory choices-->
+		<RegistryValue Id="ComposeDir"
+                       Root="HKCU"
+                       Key="SOFTWARE\Classes\Directory\shell\Opus\shell\Kokoa asiakirja\command"
+                       Value="[INSTALLFOLDER]Opus.exe -compose &quot;%v&quot;"
+                       Type="string"/>
+		<RegistryValue Id ="WorkCopyDir"
+					   Root="HKCU"
+					   Key="SOFTWARE\Classes\Directory\shell\Opus\shell\Luo työkappaleet\command"
+					   Value="[INSTALLFOLDER]Opus.exe -workcopyfolder &quot;%v&quot;"
+					   Type="string"/>
+		
+      </Component>
+		
+	  <!-- Program menu shortcut -->
+      <Component Id="MainAppShortcut" Guid="{C708EB2F-7528-43C1-9319-7C839547B313}">
+        <Shortcut Id="ShortcutMainAppShortcut"
+                  Name="!(loc.ProductName)"
+                  Target="[INSTALLFOLDER]Opus.exe"
+                  Directory="ProgramMenuFolder"
+                  WorkingDirectory="INSTALLFOLDER"
+                  Icon="appicon"/>
+        <RegistryValue Id="RegShortcutKey"
+                       Root="HKCU"
+                       Key="SOFTWARE\!(loc.ProductFolderName)"
+                       Name="Shortcut"
+                       Value="1"
+                       Type="integer"
+                       KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+	</Fragment>
+</Wix>

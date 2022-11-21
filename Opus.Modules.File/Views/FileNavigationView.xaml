@@ -10,7 +10,7 @@
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True" >
     <Grid>
-        <Button Content="{Binding FileName}" Command="{Binding OpenFileCommand}" 
+        <Button Content="{Binding FileName}" Command="{Binding OpenCommand}" 
                 Style="{DynamicResource InputPathButton}"/>
     </Grid>
 </UserControl>

@@ -127,7 +127,7 @@
         /// <summary>
         /// Extract scheme.
         /// </summary>
-        public const string EXTRACT = "split";
+        public const string EXTRACT = "extract";
         /// <summary>
         /// Work copy scheme.
         /// </summary>

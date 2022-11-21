@@ -24,27 +24,37 @@
         Height="800" 
         MinWidth="1000" 
         Width="1000">
+    
+    <!-- GENERAL WINDOW OUTLOOK -->
+    
     <Window.Background>
-        <!--
-             BACKGROUND IMAGE
-        -->
         <ImageBrush ImageSource="/Opus;component/Images/OpusBackground.png"
                     Stretch="Fill"/>
     </Window.Background>
-    
     <WindowChrome.WindowChrome>
-        <WindowChrome GlassFrameThickness="1" CornerRadius="15" CaptionHeight="0" UseAeroCaptionButtons="False" ResizeBorderThickness="7"/>
+        <WindowChrome GlassFrameThickness="1" 
+                      CornerRadius="15" 
+                      CaptionHeight="0" 
+                      UseAeroCaptionButtons="False" 
+                      ResizeBorderThickness="7"/>
     </WindowChrome.WindowChrome>
+    
+    <!-- RESOURCES -->
     
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                
+                <!-- Include dialog datatemplates -->
+                
                 <ResourceDictionary Source="pack://application:,,,/Opus.Common;component/DataTemplates/Dialogs.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
+            <!-- STYLES FOR MENU BUTTONS -->
+            
             <Style TargetType="MenuItem"
-               BasedOn="{StaticResource MaterialDesignMenuItem}"
-               x:Key="LogLevelMenuItem">
+                   BasedOn="{StaticResource MaterialDesignMenuItem}"
+                   x:Key="LogLevelMenuItem">
                 <Style.Triggers>
                     <Trigger Property="IsChecked" Value="True">
                         <Setter Property="Background">
@@ -61,24 +71,24 @@
                    x:Key="LanguageMenuItem">
                 <Setter Property="Header" Value="{Binding Name}"/>
                 <Setter Property="StaysOpenOnClick" Value="False"/>
-                <Setter Property="Command" Value="{Binding RelativeSource={RelativeSource AncestorType=MenuItem}, Path=DataContext.CommonCommands.LanguageCommand}"/>
+                <Setter Property="Command" 
+                        Value="{Binding RelativeSource={RelativeSource AncestorType=MenuItem}, 
+                        Path=DataContext.CommonCommands.LanguageCommand}"/>
                 <Setter Property="CommandParameter" Value="{Binding Code}"/>
             </Style>
         </ResourceDictionary>
     </Window.Resources>
     
-    <!--
-         DIALOG
-         Dialogs are hosted here. They are displayed through the dialog service, where they are registered when needed.
-    -->
+    <!-- DIALOG
+         Dialogs are hosted here. They are displayed through the dialog service, where they are registered 
+         when needed. -->
+    
     <materialDesign:DialogHost IsOpen="{Binding Dialog.IsShowing}" DialogContent="{Binding Dialog.Active}">
         <materialDesign:DialogHost.DialogBackground>
             <SolidColorBrush Color="#FF0F1316" Opacity="1"/>
         </materialDesign:DialogHost.DialogBackground>
         
-        <!--
-             MAIN GRID
-        -->
+        <!-- MAIN GRID -->
         
         <Grid>
             <Grid.RowDefinitions>
@@ -86,11 +96,11 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <!--
-                 TOPBAR
+            <!-- TOPBAR
                  This is the absolute top bar containg buttons for minimizing, maximising and closing the window.
-                 Window can be dragged around by grabbing this bar (that is what the "MouseLeftButtonDown"-event is for).
-            -->
+                 Window can be dragged around by grabbing this bar (that is what the "MouseLeftButtonDown"-event 
+                 is for). -->
+            
             <materialDesign:Card Grid.Row="0" Padding="5, 5, 5, 5" Margin="0, 0, 0, 0" x:Name="TopBar"
                                  materialDesign:ShadowAssist.ShadowDepth="Depth0"
                                  MouseLeftButtonDown="TopBar_MouseLeftButtonDown"
@@ -102,34 +112,30 @@
                     <DropShadowEffect ShadowDepth="4" Opacity="0" BlurRadius="8" Color="White"/>
                 </materialDesign:Card.Effect>
                 
-                <!--
-                     TOPBAR BUTTONS
-                     For standard window actions.
-                -->
+                <!-- TOPBAR BUTTONS
+                     For standard window actions. -->
+                
                 <StackPanel HorizontalAlignment="Right" Margin="0, 0, 10, 0"
                             Orientation="Horizontal">
                     
-                    <!--
-                         MINIMIZE
-                    -->
+                    <!-- Minimize -->
+                    
                     <Button Style="{DynamicResource MaterialDesignFlatButton}" Height="25" Width="25" Padding="0"
                             Margin="0, 0, 10, 0"
                             Click="Minimize_Click">
                         <materialDesign:PackIcon Kind="WindowMinimize" Width="25"/>
                     </Button>
                     
-                    <!--
-                         MAXIMIZE
-                    -->
+                    <!-- Maximize -->
+                    
                     <Button Style="{DynamicResource MaterialDesignFlatButton}" Height="25" Width="25" Padding="0"
                             Margin="0, 0, 10, 0"
                             Click="Maximize_Click">
                         <materialDesign:PackIcon Kind="WindowMaximize" Width="25"/>
                     </Button>
                     
-                    <!--
-                         CLOSE
-                    -->
+                    <!-- Close -->
+                    
                     <Button Style="{DynamicResource MaterialDesignFlatButton}" Height="25" Width="25" Padding="0"
                             Command="{Binding CommonCommands.ExitCommand}">
                         <materialDesign:PackIcon Kind="CloseThick" Width="25"/>
@@ -137,74 +143,79 @@
                 </StackPanel>
             </materialDesign:Card>
             
-            <!--
-                 CONTENT GRID
-                 This grid contains the actual contentparts of the application.
-            -->
+            <!-- CONTENT GRID
+                 This grid contains the actual contentparts of the application. -->
+            
             <Grid Grid.Row="1" Margin="0, 0, 0, 0">
                 <ContentControl Content="{StaticResource Divided}" HorizontalAlignment="Center"
                                 Margin="0, 0, -100, 0" Opacity="0"/>
                 <DockPanel>
                     
-
-                    <!--
-                         MAIN MENU
+                    <!-- MAIN MENU
                          This is the main menu on the left-hand-side of the user interface (with all the main
-                         sections of the application as selectable items).
-                    -->
+                         sections of the application as selectable items). -->
+                    
                     <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth0"
-                                         HorizontalAlignment="Center" Margin="0, 0, 0, 0"
+                                         HorizontalAlignment="Center" 
+                                         Margin="0, 0, 0, 0"
                                          Opacity="1">
                         <materialDesign:Card.Background>
                             <SolidColorBrush Color="{DynamicResource MaterialDesignShadow}" Opacity="0.7"/>
                         </materialDesign:Card.Background>
                         <materialDesign:Card.Effect>
-                            <DropShadowEffect ShadowDepth="4" Opacity="0" BlurRadius="8" Color="White"/>
+                            <DropShadowEffect ShadowDepth="4" 
+                                              Opacity="0" 
+                                              BlurRadius="8" 
+                                              Color="White"/>
                         </materialDesign:Card.Effect>
                         <StackPanel Margin="5, 0, 0, 0">
                             
-                            <!--
-                                 LOGO
-                            -->
+                            <!-- LOGO -->
+                            
                             <Image Source="/Opus;component/Images/LogoCX.png" Grid.Row="0" Grid.Column="0"
                                    Width="50" Margin="0, 10, 0, 0"/>
+                            
                             <Separator Style="{DynamicResource MaterialDesignLightSeparator}" Margin="5, 10, 5, 10"/>
 
-                            <!--
-                                 MAIN MENU BUTTONS
-                                 All the main action sections.
-                            -->
+                            <!-- MAIN MENU BUTTONS
+                                 All the main action sections. -->
+                            
                             <RadioButton Style="{DynamicResource MainMenuButton}"
                                          CommandParameter="{x:Static const:SchemeNames.EXTRACT}"
                                          x:Name="SplitButton">
-                                <materialDesign:PackIcon Width="30" Height="30" 
+                                <materialDesign:PackIcon Width="30" 
+                                                         Height="30" 
                                                          Kind="FileDocumentMultiple"/>
                             </RadioButton>
                             <RadioButton Style="{DynamicResource MainMenuButton}"
                                          CommandParameter="{x:Static const:SchemeNames.WORKCOPY}">
-                                <materialDesign:PackIcon Width="30" Height="30" 
+                                <materialDesign:PackIcon Width="30" 
+                                                         Height="30" 
                                                          Kind="Draw"/>
                             </RadioButton>
                             <RadioButton Style="{DynamicResource MainMenuButton}"
                                          CommandParameter="{x:Static const:SchemeNames.MERGE}">
-                                <materialDesign:PackIcon Width="30" Height="30" 
+                                <materialDesign:PackIcon Width="30" 
+                                                         Height="30" 
                                                          Kind="Merge"/>
                             </RadioButton>
                             <RadioButton Style="{DynamicResource MainMenuButton}"
                                          CommandParameter="{x:Static const:SchemeNames.COMPOSE}">
-                                <materialDesign:PackIcon Width="30" Height="30" 
+                                <materialDesign:PackIcon Width="30" 
+                                                         Height="30" 
                                                          Kind="Layers"/>
                             </RadioButton>
                         </StackPanel>
                     </materialDesign:Card>
 
-                    <!--
-                         HEADER
+                    <!-- HEADER
                          Top part of all pages with the name of the section, a reset-button and a menu of common
-                         links and actions.
-                    -->
+                         links and actions. -->
+                    
                     <materialDesign:Card Margin="16, 10, 16, 16"
-                                         Padding="30, 0, 30, 0" DockPanel.Dock="Top" Opacity="1"
+                                         Padding="30, 0, 30, 0" 
+                                         DockPanel.Dock="Top" 
+                                         Opacity="1"
                                          materialDesign:ShadowAssist.ShadowDepth="Depth3"
                                          Height="100">
                         <materialDesign:Card.Background>
@@ -217,10 +228,9 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             
-                            <!--
-                                 Button for using the reset command and resetting the current view to its default
-                                 values (or otherwise in a state that is considered neutral).
-                            -->
+                            <!-- Button for using the reset command and resetting the current view to its default
+                                 values (or otherwise in a state that is considered neutral). -->
+                            
                             <Button Style="{DynamicResource MaterialDesignIconButton}"
                                     Grid.Column="0"
                                     HorizontalAlignment="Left"
@@ -230,19 +240,17 @@
                                     Kind="Restart"/>
                             </Button>
                             
-                            <!--
-                                 Page of section title.
-                            -->
+                            <!-- Page of section title. -->
+                            
                             <TextBlock HorizontalAlignment="Center" FontWeight="Bold"
                                        Grid.Column="1"
                                        Style="{DynamicResource MaterialDesignHeadline5TextBlock}"
                                        Text="{Binding Title}"
                                        VerticalAlignment="Center"/>
 
-                            <!--
-                                 Common menu. Has options for viewing manuals, source code etc. as well as for
-                                 changing UI language.
-                            -->
+                            <!-- Common menu. Has options for viewing manuals, source code etc. as well as for
+                                 changing UI language. -->
+                            
                             <materialDesign:PopupBox Grid.Column="2" 
                                                      HorizontalAlignment="Right" 
                                                      VerticalAlignment="Center"
@@ -274,21 +282,25 @@
                                                   Command="{Binding CommonCommands.LogLevelCommand}"
                                                   CommandParameter="Information"
                                                   IsChecked="{Binding Configuration.LoggingLevel, Mode=OneWay,
-                                                        Converter={StaticResource LogLevelToBoolean},
-                                                        ConverterParameter=1}"/>
+                                                  Converter={StaticResource LogLevelToBoolean},
+                                                  ConverterParameter=1}"/>
                                         <MenuItem Header="Debug"
                                                   Style="{StaticResource LogLevelMenuItem}"
                                                   Command="{Binding CommonCommands.LogLevelCommand}"
                                                   CommandParameter="Debug"
                                                   IsChecked="{Binding Configuration.LoggingLevel, Mode=OneWay, 
-                                                        Converter={StaticResource LogLevelToBoolean},
-                                                        ConverterParameter=0}"/>
+                                                  Converter={StaticResource LogLevelToBoolean},
+                                                  ConverterParameter=0}"/>
                                     </MenuItem>
                                 </Menu>
                             </materialDesign:PopupBox>
                         </Grid>
                     </materialDesign:Card>
-                    <ContentControl DockPanel.Dock="Top" Margin="0, 0, 0, 10"
+                    
+                    <!-- CHANGING ACTION CONTENT -->
+                    
+                    <ContentControl DockPanel.Dock="Top" 
+                                    Margin="0, 0, 0, 10"
                                     prism:RegionManager.RegionName="{x:Static const:RegionNames.SHELL_MAINSECTION}"/>
                 </DockPanel>
             </Grid>

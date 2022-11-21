@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="fi-FI" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+
+	<String Id="ProductFolderName">Opus</String>
+	<String Id="ProductName">Opus Machinae</String>
+	<String Id="ProductShortName">Opus</String>
+	<String Id="MakerName">Willowfang</String>
+	<String Id="Description">"The test of the machine is the satisfaction it gives you. 
+	There isn't any other test. If the machine produces tranquility it's right. 
+	If it disturbs you it's wrong until either the machine or your mind is changed." - Robert M. Pirsig</String>
+	<String Id="Keywords">opus</String>
+
+	<String Id="DowngradeMessage">Uudempi versio ohjelmasta !(loc.ProductName) on jo asennettu.</String>
+
+	<String Id="WelcomeDlg_Title">!(loc.ProductName)</String>
+	<String Id="WelcomeDlgTitle">{\WixUI_Font_Bigger}Asenna tai päivitä !(loc.ProductShortName)</String>
+	<String Id="WelcomeDlgDescription">
+		Tämä asennusohjelma asentaa tai päivittää PDF-tiedostojen käsittelyyn tarkoitetun ohjelman !(loc.ProductName).
+		
+		Voit jatkaa valitsemalla Seuraava tai lopettaa asennuksen valitsemalla Peruuta.
+	</String>
+	<String Id="WelcomeUpdateDlgDescriptionUpdate">
+		Tämä on päivityspaketti ohjelmalle !(loc.ProductName). 
+	
+		Valitse Seuraava, jos haluat jatkaa, tai valitse Peruuta, jos haluat lopettaa asennuksen.
+	</String>
+
+	<String Id="ProgressDlg_Title">!(loc.ProductName)</String>
+	<String Id="ProgressDlgTextInstalling">Odota. Asennetaan kohdetta !(loc.ProductName).</String>
+	<String Id="ProgressDlgTitleInstalling">{\WixUI_Font_Title}Asennetaan kohdetta !(loc.ProductName)</String>
+	<String Id="ProgressDlgTextUpdating">Odota. Päivitetään kohdetta !(loc.ProductName).</String>
+	<String Id="ProgressDlgTitleUpdating">{\WixUI_Font_Title}Päivitetään kohdetta !(loc.ProductName)</String>
+
+	<String Id="ProgressTextInstallFilesTemplate">Tiedostoja asennetaan...</String>
+
+	<String Id="ExitDialog_Title">!(loc.ProductName)</String>
+
+	<String Id="ExitDialogDescription">Sulje asennusohjelma ja avaa !(loc.ProductShortName) valitsemalla Valmis.</String>
+	<String Id="ExitDialogTitle">{\WixUI_Font_Bigger}!(loc.ProductShortName) on nyt asennettu tai päivitetty!</String>
+	
+</WixLocalization>

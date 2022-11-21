@@ -4,20 +4,16 @@ using Opus.Common.Services.Input;
 using Prism.Commands;
 using Prism.Events;
 using System.IO;
+using WF.LoggingLib;
+using Opus.Modules.File.Base;
 
 namespace Opus.Modules.File.ViewModels
 {
     /// <summary>
     /// Viewmodel for choosing directory paths.
     /// </summary>
-    public class DirectoryNavigationViewModel : ViewModelBase
+    public class DirectoryNavigationViewModel : FileViewModelBase<DirectoryNavigationViewModel>
     {
-        #region DI services
-        private IPathSelection input;
-        private IEventAggregator eventAggregator;
-        #endregion
-
-        #region Fields and properties
         private DirectoryInfo directory;
 
         /// <summary>
@@ -34,42 +30,36 @@ namespace Opus.Modules.File.ViewModels
             }
             set => SetProperty(ref directory, new DirectoryInfo(value));
         }
-        #endregion
 
-        #region Constructor
         /// <summary>
-        /// Create a new directory navigation viewModel.
+        /// Create new viewmodel for handling directory selection.
         /// </summary>
-        /// <param name="input">Service for obtaining user path input.</param>
-        /// <param name="eventAggregator">Service for publishing and subscribing to events between viewModels.</param>
-        public DirectoryNavigationViewModel(IPathSelection input, IEventAggregator eventAggregator)
+        /// <param name="pathSelection">Path selection service.</param>
+        /// <param name="eventAggregator">Event handling service.</param>
+        /// <param name="logbook">Logging service.</param>
+        public DirectoryNavigationViewModel(
+            IPathSelection pathSelection,
+            IEventAggregator eventAggregator,
+            ILogbook logbook) : base(pathSelection, eventAggregator, logbook) { }
+
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        protected override void OpenExecute()
         {
-            // Assign DI services
+            logbook.Write($"Selecting a directory.", LogLevel.Debug);
 
-            this.input = input;
-            this.eventAggregator = eventAggregator;
-        }
-        #endregion
+            string path = pathSelection.OpenDirectory(Resources.UserInput.Descriptions.SelectOpenFolder);
 
-        #region Commands
-        private DelegateCommand openDirectoryCommand;
-
-        /// <summary>
-        /// Command for finding and opening a directory.
-        /// </summary>
-        public DelegateCommand OpenDirectoryCommand =>
-            openDirectoryCommand ??= new DelegateCommand(ExecuteOpenDirectory);
-
-        /// <summary>
-        /// Execution method for directory open command, see <see cref="OpenDirectoryCommand"/>.
-        /// </summary>
-        protected void ExecuteOpenDirectory()
-        {
-            string path = input.OpenDirectory(Resources.UserInput.Descriptions.SelectOpenFolder);
             if (path == null)
+            {
+                logbook.Write($"No directory selected.", LogLevel.Debug);
                 return;
+            }
+
             eventAggregator.GetEvent<DirectorySelectedEvent>().Publish(path);
+
+            logbook.Write($"Directory selected and event sent.", LogLevel.Debug);
         }
-        #endregion
     }
 }
