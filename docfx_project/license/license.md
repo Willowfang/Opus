@@ -58,6 +58,12 @@ The source code of this application is available [here](https://github.com/Willo
 
 [Apache 2.0](https://github.com/serilog/serilog/blob/dev/LICENSE)
 
+### jq
+
+**[Home page](https://stedolan.github.io/jq/)**
+
+[MIT](https://github.com/stedolan/jq/blob/master/COPYING)
+
 ## Others
 
 ### System.Text.Json InterfaceConverter
