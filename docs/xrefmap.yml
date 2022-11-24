@@ -6417,6 +6417,25 @@ references:
   isSpec: "True"
   fullName: Opus.Common.Extensions.FileAndBookmarkWrapperExtensions.Extractables
   nameWithType: FileAndBookmarkWrapperExtensions.Extractables
+- uid: Opus.Common.Extensions.FileSystemExtensions
+  name: FileSystemExtensions
+  href: api/Opus.Common.Extensions.FileSystemExtensions.html
+  commentId: T:Opus.Common.Extensions.FileSystemExtensions
+  fullName: Opus.Common.Extensions.FileSystemExtensions
+  nameWithType: FileSystemExtensions
+- uid: Opus.Common.Extensions.FileSystemExtensions.OpenPdfOrDirectory(System.IO.FileSystemInfo)
+  name: OpenPdfOrDirectory(FileSystemInfo)
+  href: api/Opus.Common.Extensions.FileSystemExtensions.html#Opus_Common_Extensions_FileSystemExtensions_OpenPdfOrDirectory_System_IO_FileSystemInfo_
+  commentId: M:Opus.Common.Extensions.FileSystemExtensions.OpenPdfOrDirectory(System.IO.FileSystemInfo)
+  fullName: Opus.Common.Extensions.FileSystemExtensions.OpenPdfOrDirectory(System.IO.FileSystemInfo)
+  nameWithType: FileSystemExtensions.OpenPdfOrDirectory(FileSystemInfo)
+- uid: Opus.Common.Extensions.FileSystemExtensions.OpenPdfOrDirectory*
+  name: OpenPdfOrDirectory
+  href: api/Opus.Common.Extensions.FileSystemExtensions.html#Opus_Common_Extensions_FileSystemExtensions_OpenPdfOrDirectory_
+  commentId: Overload:Opus.Common.Extensions.FileSystemExtensions.OpenPdfOrDirectory
+  isSpec: "True"
+  fullName: Opus.Common.Extensions.FileSystemExtensions.OpenPdfOrDirectory
+  nameWithType: FileSystemExtensions.OpenPdfOrDirectory
 - uid: Opus.Common.Extensions.ObjectExtensions
   name: ObjectExtensions
   href: api/Opus.Common.Extensions.ObjectExtensions.html
@@ -10604,49 +10623,6 @@ references:
   commentId: N:Opus.Common.ViewModels
   fullName: Opus.Common.ViewModels
   nameWithType: Opus.Common.ViewModels
-- uid: Opus.Common.ViewModels.OptionsViewModelBase`1
-  name: OptionsViewModelBase<VMType>
-  href: api/Opus.Common.ViewModels.OptionsViewModelBase-1.html
-  commentId: T:Opus.Common.ViewModels.OptionsViewModelBase`1
-  name.vb: OptionsViewModelBase(Of VMType)
-  fullName: Opus.Common.ViewModels.OptionsViewModelBase<VMType>
-  fullName.vb: Opus.Common.ViewModels.OptionsViewModelBase(Of VMType)
-  nameWithType: OptionsViewModelBase<VMType>
-  nameWithType.vb: OptionsViewModelBase(Of VMType)
-- uid: Opus.Common.ViewModels.OptionsViewModelBase`1.#ctor(ILogbook,Opus.Common.Services.Commands.ISettingsCommands)
-  name: OptionsViewModelBase(ILogbook, ISettingsCommands)
-  href: api/Opus.Common.ViewModels.OptionsViewModelBase-1.html#Opus_Common_ViewModels_OptionsViewModelBase_1__ctor_ILogbook_Opus_Common_Services_Commands_ISettingsCommands_
-  commentId: M:Opus.Common.ViewModels.OptionsViewModelBase`1.#ctor(ILogbook,Opus.Common.Services.Commands.ISettingsCommands)
-  fullName: Opus.Common.ViewModels.OptionsViewModelBase<VMType>.OptionsViewModelBase(ILogbook, Opus.Common.Services.Commands.ISettingsCommands)
-  fullName.vb: Opus.Common.ViewModels.OptionsViewModelBase(Of VMType).OptionsViewModelBase(ILogbook, Opus.Common.Services.Commands.ISettingsCommands)
-  nameWithType: OptionsViewModelBase<VMType>.OptionsViewModelBase(ILogbook, ISettingsCommands)
-  nameWithType.vb: OptionsViewModelBase(Of VMType).OptionsViewModelBase(ILogbook, ISettingsCommands)
-- uid: Opus.Common.ViewModels.OptionsViewModelBase`1.#ctor*
-  name: OptionsViewModelBase
-  href: api/Opus.Common.ViewModels.OptionsViewModelBase-1.html#Opus_Common_ViewModels_OptionsViewModelBase_1__ctor_
-  commentId: Overload:Opus.Common.ViewModels.OptionsViewModelBase`1.#ctor
-  isSpec: "True"
-  fullName: Opus.Common.ViewModels.OptionsViewModelBase<VMType>.OptionsViewModelBase
-  fullName.vb: Opus.Common.ViewModels.OptionsViewModelBase(Of VMType).OptionsViewModelBase
-  nameWithType: OptionsViewModelBase<VMType>.OptionsViewModelBase
-  nameWithType.vb: OptionsViewModelBase(Of VMType).OptionsViewModelBase
-- uid: Opus.Common.ViewModels.OptionsViewModelBase`1.SettingsCommands
-  name: SettingsCommands
-  href: api/Opus.Common.ViewModels.OptionsViewModelBase-1.html#Opus_Common_ViewModels_OptionsViewModelBase_1_SettingsCommands
-  commentId: P:Opus.Common.ViewModels.OptionsViewModelBase`1.SettingsCommands
-  fullName: Opus.Common.ViewModels.OptionsViewModelBase<VMType>.SettingsCommands
-  fullName.vb: Opus.Common.ViewModels.OptionsViewModelBase(Of VMType).SettingsCommands
-  nameWithType: OptionsViewModelBase<VMType>.SettingsCommands
-  nameWithType.vb: OptionsViewModelBase(Of VMType).SettingsCommands
-- uid: Opus.Common.ViewModels.OptionsViewModelBase`1.SettingsCommands*
-  name: SettingsCommands
-  href: api/Opus.Common.ViewModels.OptionsViewModelBase-1.html#Opus_Common_ViewModels_OptionsViewModelBase_1_SettingsCommands_
-  commentId: Overload:Opus.Common.ViewModels.OptionsViewModelBase`1.SettingsCommands
-  isSpec: "True"
-  fullName: Opus.Common.ViewModels.OptionsViewModelBase<VMType>.SettingsCommands
-  fullName.vb: Opus.Common.ViewModels.OptionsViewModelBase(Of VMType).SettingsCommands
-  nameWithType: OptionsViewModelBase<VMType>.SettingsCommands
-  nameWithType.vb: OptionsViewModelBase(Of VMType).SettingsCommands
 - uid: Opus.Common.ViewModels.ViewModelBase
   name: ViewModelBase
   href: api/Opus.Common.ViewModels.ViewModelBase.html
@@ -12717,6 +12693,88 @@ references:
   commentId: N:Opus.Modules.File
   fullName: Opus.Modules.File
   nameWithType: Opus.Modules.File
+- uid: Opus.Modules.File.Base
+  name: Opus.Modules.File.Base
+  href: api/Opus.Modules.File.Base.html
+  commentId: N:Opus.Modules.File.Base
+  fullName: Opus.Modules.File.Base
+  nameWithType: Opus.Modules.File.Base
+- uid: Opus.Modules.File.Base.FileViewModelBase`1
+  name: FileViewModelBase<VMType>
+  href: api/Opus.Modules.File.Base.FileViewModelBase-1.html
+  commentId: T:Opus.Modules.File.Base.FileViewModelBase`1
+  name.vb: FileViewModelBase(Of VMType)
+  fullName: Opus.Modules.File.Base.FileViewModelBase<VMType>
+  fullName.vb: Opus.Modules.File.Base.FileViewModelBase(Of VMType)
+  nameWithType: FileViewModelBase<VMType>
+  nameWithType.vb: FileViewModelBase(Of VMType)
+- uid: Opus.Modules.File.Base.FileViewModelBase`1.#ctor(Opus.Common.Services.Input.IPathSelection,Prism.Events.IEventAggregator,ILogbook)
+  name: FileViewModelBase(IPathSelection, IEventAggregator, ILogbook)
+  href: api/Opus.Modules.File.Base.FileViewModelBase-1.html#Opus_Modules_File_Base_FileViewModelBase_1__ctor_Opus_Common_Services_Input_IPathSelection_Prism_Events_IEventAggregator_ILogbook_
+  commentId: M:Opus.Modules.File.Base.FileViewModelBase`1.#ctor(Opus.Common.Services.Input.IPathSelection,Prism.Events.IEventAggregator,ILogbook)
+  fullName: Opus.Modules.File.Base.FileViewModelBase<VMType>.FileViewModelBase(Opus.Common.Services.Input.IPathSelection, Prism.Events.IEventAggregator, ILogbook)
+  fullName.vb: Opus.Modules.File.Base.FileViewModelBase(Of VMType).FileViewModelBase(Opus.Common.Services.Input.IPathSelection, Prism.Events.IEventAggregator, ILogbook)
+  nameWithType: FileViewModelBase<VMType>.FileViewModelBase(IPathSelection, IEventAggregator, ILogbook)
+  nameWithType.vb: FileViewModelBase(Of VMType).FileViewModelBase(IPathSelection, IEventAggregator, ILogbook)
+- uid: Opus.Modules.File.Base.FileViewModelBase`1.#ctor*
+  name: FileViewModelBase
+  href: api/Opus.Modules.File.Base.FileViewModelBase-1.html#Opus_Modules_File_Base_FileViewModelBase_1__ctor_
+  commentId: Overload:Opus.Modules.File.Base.FileViewModelBase`1.#ctor
+  isSpec: "True"
+  fullName: Opus.Modules.File.Base.FileViewModelBase<VMType>.FileViewModelBase
+  fullName.vb: Opus.Modules.File.Base.FileViewModelBase(Of VMType).FileViewModelBase
+  nameWithType: FileViewModelBase<VMType>.FileViewModelBase
+  nameWithType.vb: FileViewModelBase(Of VMType).FileViewModelBase
+- uid: Opus.Modules.File.Base.FileViewModelBase`1.eventAggregator
+  name: eventAggregator
+  href: api/Opus.Modules.File.Base.FileViewModelBase-1.html#Opus_Modules_File_Base_FileViewModelBase_1_eventAggregator
+  commentId: F:Opus.Modules.File.Base.FileViewModelBase`1.eventAggregator
+  fullName: Opus.Modules.File.Base.FileViewModelBase<VMType>.eventAggregator
+  fullName.vb: Opus.Modules.File.Base.FileViewModelBase(Of VMType).eventAggregator
+  nameWithType: FileViewModelBase<VMType>.eventAggregator
+  nameWithType.vb: FileViewModelBase(Of VMType).eventAggregator
+- uid: Opus.Modules.File.Base.FileViewModelBase`1.OpenCommand
+  name: OpenCommand
+  href: api/Opus.Modules.File.Base.FileViewModelBase-1.html#Opus_Modules_File_Base_FileViewModelBase_1_OpenCommand
+  commentId: P:Opus.Modules.File.Base.FileViewModelBase`1.OpenCommand
+  fullName: Opus.Modules.File.Base.FileViewModelBase<VMType>.OpenCommand
+  fullName.vb: Opus.Modules.File.Base.FileViewModelBase(Of VMType).OpenCommand
+  nameWithType: FileViewModelBase<VMType>.OpenCommand
+  nameWithType.vb: FileViewModelBase(Of VMType).OpenCommand
+- uid: Opus.Modules.File.Base.FileViewModelBase`1.OpenCommand*
+  name: OpenCommand
+  href: api/Opus.Modules.File.Base.FileViewModelBase-1.html#Opus_Modules_File_Base_FileViewModelBase_1_OpenCommand_
+  commentId: Overload:Opus.Modules.File.Base.FileViewModelBase`1.OpenCommand
+  isSpec: "True"
+  fullName: Opus.Modules.File.Base.FileViewModelBase<VMType>.OpenCommand
+  fullName.vb: Opus.Modules.File.Base.FileViewModelBase(Of VMType).OpenCommand
+  nameWithType: FileViewModelBase<VMType>.OpenCommand
+  nameWithType.vb: FileViewModelBase(Of VMType).OpenCommand
+- uid: Opus.Modules.File.Base.FileViewModelBase`1.OpenExecute
+  name: OpenExecute()
+  href: api/Opus.Modules.File.Base.FileViewModelBase-1.html#Opus_Modules_File_Base_FileViewModelBase_1_OpenExecute
+  commentId: M:Opus.Modules.File.Base.FileViewModelBase`1.OpenExecute
+  fullName: Opus.Modules.File.Base.FileViewModelBase<VMType>.OpenExecute()
+  fullName.vb: Opus.Modules.File.Base.FileViewModelBase(Of VMType).OpenExecute()
+  nameWithType: FileViewModelBase<VMType>.OpenExecute()
+  nameWithType.vb: FileViewModelBase(Of VMType).OpenExecute()
+- uid: Opus.Modules.File.Base.FileViewModelBase`1.OpenExecute*
+  name: OpenExecute
+  href: api/Opus.Modules.File.Base.FileViewModelBase-1.html#Opus_Modules_File_Base_FileViewModelBase_1_OpenExecute_
+  commentId: Overload:Opus.Modules.File.Base.FileViewModelBase`1.OpenExecute
+  isSpec: "True"
+  fullName: Opus.Modules.File.Base.FileViewModelBase<VMType>.OpenExecute
+  fullName.vb: Opus.Modules.File.Base.FileViewModelBase(Of VMType).OpenExecute
+  nameWithType: FileViewModelBase<VMType>.OpenExecute
+  nameWithType.vb: FileViewModelBase(Of VMType).OpenExecute
+- uid: Opus.Modules.File.Base.FileViewModelBase`1.pathSelection
+  name: pathSelection
+  href: api/Opus.Modules.File.Base.FileViewModelBase-1.html#Opus_Modules_File_Base_FileViewModelBase_1_pathSelection
+  commentId: F:Opus.Modules.File.Base.FileViewModelBase`1.pathSelection
+  fullName: Opus.Modules.File.Base.FileViewModelBase<VMType>.pathSelection
+  fullName.vb: Opus.Modules.File.Base.FileViewModelBase(Of VMType).pathSelection
+  nameWithType: FileViewModelBase<VMType>.pathSelection
+  nameWithType.vb: FileViewModelBase(Of VMType).pathSelection
 - uid: Opus.Modules.File.FileModule
   name: FileModule
   href: api/Opus.Modules.File.FileModule.html
@@ -12761,12 +12819,12 @@ references:
   commentId: T:Opus.Modules.File.ViewModels.DirectoryNavigationViewModel
   fullName: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel
   nameWithType: DirectoryNavigationViewModel
-- uid: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.#ctor(Opus.Common.Services.Input.IPathSelection,Prism.Events.IEventAggregator)
-  name: DirectoryNavigationViewModel(IPathSelection, IEventAggregator)
-  href: api/Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.html#Opus_Modules_File_ViewModels_DirectoryNavigationViewModel__ctor_Opus_Common_Services_Input_IPathSelection_Prism_Events_IEventAggregator_
-  commentId: M:Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.#ctor(Opus.Common.Services.Input.IPathSelection,Prism.Events.IEventAggregator)
-  fullName: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.DirectoryNavigationViewModel(Opus.Common.Services.Input.IPathSelection, Prism.Events.IEventAggregator)
-  nameWithType: DirectoryNavigationViewModel.DirectoryNavigationViewModel(IPathSelection, IEventAggregator)
+- uid: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.#ctor(Opus.Common.Services.Input.IPathSelection,Prism.Events.IEventAggregator,ILogbook)
+  name: DirectoryNavigationViewModel(IPathSelection, IEventAggregator, ILogbook)
+  href: api/Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.html#Opus_Modules_File_ViewModels_DirectoryNavigationViewModel__ctor_Opus_Common_Services_Input_IPathSelection_Prism_Events_IEventAggregator_ILogbook_
+  commentId: M:Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.#ctor(Opus.Common.Services.Input.IPathSelection,Prism.Events.IEventAggregator,ILogbook)
+  fullName: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.DirectoryNavigationViewModel(Opus.Common.Services.Input.IPathSelection, Prism.Events.IEventAggregator, ILogbook)
+  nameWithType: DirectoryNavigationViewModel.DirectoryNavigationViewModel(IPathSelection, IEventAggregator, ILogbook)
 - uid: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.#ctor*
   name: DirectoryNavigationViewModel
   href: api/Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.html#Opus_Modules_File_ViewModels_DirectoryNavigationViewModel__ctor_
@@ -12787,44 +12845,31 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.DirectoryName
   nameWithType: DirectoryNavigationViewModel.DirectoryName
-- uid: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.ExecuteOpenDirectory
-  name: ExecuteOpenDirectory()
-  href: api/Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.html#Opus_Modules_File_ViewModels_DirectoryNavigationViewModel_ExecuteOpenDirectory
-  commentId: M:Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.ExecuteOpenDirectory
-  fullName: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.ExecuteOpenDirectory()
-  nameWithType: DirectoryNavigationViewModel.ExecuteOpenDirectory()
-- uid: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.ExecuteOpenDirectory*
-  name: ExecuteOpenDirectory
-  href: api/Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.html#Opus_Modules_File_ViewModels_DirectoryNavigationViewModel_ExecuteOpenDirectory_
-  commentId: Overload:Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.ExecuteOpenDirectory
+- uid: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenExecute
+  name: OpenExecute()
+  href: api/Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.html#Opus_Modules_File_ViewModels_DirectoryNavigationViewModel_OpenExecute
+  commentId: M:Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenExecute
+  fullName: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenExecute()
+  nameWithType: DirectoryNavigationViewModel.OpenExecute()
+- uid: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenExecute*
+  name: OpenExecute
+  href: api/Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.html#Opus_Modules_File_ViewModels_DirectoryNavigationViewModel_OpenExecute_
+  commentId: Overload:Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenExecute
   isSpec: "True"
-  fullName: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.ExecuteOpenDirectory
-  nameWithType: DirectoryNavigationViewModel.ExecuteOpenDirectory
-- uid: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenDirectoryCommand
-  name: OpenDirectoryCommand
-  href: api/Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.html#Opus_Modules_File_ViewModels_DirectoryNavigationViewModel_OpenDirectoryCommand
-  commentId: P:Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenDirectoryCommand
-  fullName: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenDirectoryCommand
-  nameWithType: DirectoryNavigationViewModel.OpenDirectoryCommand
-- uid: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenDirectoryCommand*
-  name: OpenDirectoryCommand
-  href: api/Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.html#Opus_Modules_File_ViewModels_DirectoryNavigationViewModel_OpenDirectoryCommand_
-  commentId: Overload:Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenDirectoryCommand
-  isSpec: "True"
-  fullName: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenDirectoryCommand
-  nameWithType: DirectoryNavigationViewModel.OpenDirectoryCommand
+  fullName: Opus.Modules.File.ViewModels.DirectoryNavigationViewModel.OpenExecute
+  nameWithType: DirectoryNavigationViewModel.OpenExecute
 - uid: Opus.Modules.File.ViewModels.FileMultipleViewModel
   name: FileMultipleViewModel
   href: api/Opus.Modules.File.ViewModels.FileMultipleViewModel.html
   commentId: T:Opus.Modules.File.ViewModels.FileMultipleViewModel
   fullName: Opus.Modules.File.ViewModels.FileMultipleViewModel
   nameWithType: FileMultipleViewModel
-- uid: Opus.Modules.File.ViewModels.FileMultipleViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Common.Services.Input.IPathSelection)
-  name: FileMultipleViewModel(IEventAggregator, IPathSelection)
-  href: api/Opus.Modules.File.ViewModels.FileMultipleViewModel.html#Opus_Modules_File_ViewModels_FileMultipleViewModel__ctor_Prism_Events_IEventAggregator_Opus_Common_Services_Input_IPathSelection_
-  commentId: M:Opus.Modules.File.ViewModels.FileMultipleViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Common.Services.Input.IPathSelection)
-  fullName: Opus.Modules.File.ViewModels.FileMultipleViewModel.FileMultipleViewModel(Prism.Events.IEventAggregator, Opus.Common.Services.Input.IPathSelection)
-  nameWithType: FileMultipleViewModel.FileMultipleViewModel(IEventAggregator, IPathSelection)
+- uid: Opus.Modules.File.ViewModels.FileMultipleViewModel.#ctor(Opus.Common.Services.Input.IPathSelection,Prism.Events.IEventAggregator,ILogbook)
+  name: FileMultipleViewModel(IPathSelection, IEventAggregator, ILogbook)
+  href: api/Opus.Modules.File.ViewModels.FileMultipleViewModel.html#Opus_Modules_File_ViewModels_FileMultipleViewModel__ctor_Opus_Common_Services_Input_IPathSelection_Prism_Events_IEventAggregator_ILogbook_
+  commentId: M:Opus.Modules.File.ViewModels.FileMultipleViewModel.#ctor(Opus.Common.Services.Input.IPathSelection,Prism.Events.IEventAggregator,ILogbook)
+  fullName: Opus.Modules.File.ViewModels.FileMultipleViewModel.FileMultipleViewModel(Opus.Common.Services.Input.IPathSelection, Prism.Events.IEventAggregator, ILogbook)
+  nameWithType: FileMultipleViewModel.FileMultipleViewModel(IPathSelection, IEventAggregator, ILogbook)
 - uid: Opus.Modules.File.ViewModels.FileMultipleViewModel.#ctor*
   name: FileMultipleViewModel
   href: api/Opus.Modules.File.ViewModels.FileMultipleViewModel.html#Opus_Modules_File_ViewModels_FileMultipleViewModel__ctor_
@@ -12832,44 +12877,31 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.File.ViewModels.FileMultipleViewModel.FileMultipleViewModel
   nameWithType: FileMultipleViewModel.FileMultipleViewModel
-- uid: Opus.Modules.File.ViewModels.FileMultipleViewModel.AddFilesCommand
-  name: AddFilesCommand
-  href: api/Opus.Modules.File.ViewModels.FileMultipleViewModel.html#Opus_Modules_File_ViewModels_FileMultipleViewModel_AddFilesCommand
-  commentId: P:Opus.Modules.File.ViewModels.FileMultipleViewModel.AddFilesCommand
-  fullName: Opus.Modules.File.ViewModels.FileMultipleViewModel.AddFilesCommand
-  nameWithType: FileMultipleViewModel.AddFilesCommand
-- uid: Opus.Modules.File.ViewModels.FileMultipleViewModel.AddFilesCommand*
-  name: AddFilesCommand
-  href: api/Opus.Modules.File.ViewModels.FileMultipleViewModel.html#Opus_Modules_File_ViewModels_FileMultipleViewModel_AddFilesCommand_
-  commentId: Overload:Opus.Modules.File.ViewModels.FileMultipleViewModel.AddFilesCommand
+- uid: Opus.Modules.File.ViewModels.FileMultipleViewModel.OpenExecute
+  name: OpenExecute()
+  href: api/Opus.Modules.File.ViewModels.FileMultipleViewModel.html#Opus_Modules_File_ViewModels_FileMultipleViewModel_OpenExecute
+  commentId: M:Opus.Modules.File.ViewModels.FileMultipleViewModel.OpenExecute
+  fullName: Opus.Modules.File.ViewModels.FileMultipleViewModel.OpenExecute()
+  nameWithType: FileMultipleViewModel.OpenExecute()
+- uid: Opus.Modules.File.ViewModels.FileMultipleViewModel.OpenExecute*
+  name: OpenExecute
+  href: api/Opus.Modules.File.ViewModels.FileMultipleViewModel.html#Opus_Modules_File_ViewModels_FileMultipleViewModel_OpenExecute_
+  commentId: Overload:Opus.Modules.File.ViewModels.FileMultipleViewModel.OpenExecute
   isSpec: "True"
-  fullName: Opus.Modules.File.ViewModels.FileMultipleViewModel.AddFilesCommand
-  nameWithType: FileMultipleViewModel.AddFilesCommand
-- uid: Opus.Modules.File.ViewModels.FileMultipleViewModel.ExecuteAddFiles
-  name: ExecuteAddFiles()
-  href: api/Opus.Modules.File.ViewModels.FileMultipleViewModel.html#Opus_Modules_File_ViewModels_FileMultipleViewModel_ExecuteAddFiles
-  commentId: M:Opus.Modules.File.ViewModels.FileMultipleViewModel.ExecuteAddFiles
-  fullName: Opus.Modules.File.ViewModels.FileMultipleViewModel.ExecuteAddFiles()
-  nameWithType: FileMultipleViewModel.ExecuteAddFiles()
-- uid: Opus.Modules.File.ViewModels.FileMultipleViewModel.ExecuteAddFiles*
-  name: ExecuteAddFiles
-  href: api/Opus.Modules.File.ViewModels.FileMultipleViewModel.html#Opus_Modules_File_ViewModels_FileMultipleViewModel_ExecuteAddFiles_
-  commentId: Overload:Opus.Modules.File.ViewModels.FileMultipleViewModel.ExecuteAddFiles
-  isSpec: "True"
-  fullName: Opus.Modules.File.ViewModels.FileMultipleViewModel.ExecuteAddFiles
-  nameWithType: FileMultipleViewModel.ExecuteAddFiles
+  fullName: Opus.Modules.File.ViewModels.FileMultipleViewModel.OpenExecute
+  nameWithType: FileMultipleViewModel.OpenExecute
 - uid: Opus.Modules.File.ViewModels.FileNavigationViewModel
   name: FileNavigationViewModel
   href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html
   commentId: T:Opus.Modules.File.ViewModels.FileNavigationViewModel
   fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel
   nameWithType: FileNavigationViewModel
-- uid: Opus.Modules.File.ViewModels.FileNavigationViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Common.Services.Input.IPathSelection)
-  name: FileNavigationViewModel(IEventAggregator, IPathSelection)
-  href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html#Opus_Modules_File_ViewModels_FileNavigationViewModel__ctor_Prism_Events_IEventAggregator_Opus_Common_Services_Input_IPathSelection_
-  commentId: M:Opus.Modules.File.ViewModels.FileNavigationViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Common.Services.Input.IPathSelection)
-  fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel.FileNavigationViewModel(Prism.Events.IEventAggregator, Opus.Common.Services.Input.IPathSelection)
-  nameWithType: FileNavigationViewModel.FileNavigationViewModel(IEventAggregator, IPathSelection)
+- uid: Opus.Modules.File.ViewModels.FileNavigationViewModel.#ctor(Opus.Common.Services.Input.IPathSelection,Prism.Events.IEventAggregator,ILogbook)
+  name: FileNavigationViewModel(IPathSelection, IEventAggregator, ILogbook)
+  href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html#Opus_Modules_File_ViewModels_FileNavigationViewModel__ctor_Opus_Common_Services_Input_IPathSelection_Prism_Events_IEventAggregator_ILogbook_
+  commentId: M:Opus.Modules.File.ViewModels.FileNavigationViewModel.#ctor(Opus.Common.Services.Input.IPathSelection,Prism.Events.IEventAggregator,ILogbook)
+  fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel.FileNavigationViewModel(Opus.Common.Services.Input.IPathSelection, Prism.Events.IEventAggregator, ILogbook)
+  nameWithType: FileNavigationViewModel.FileNavigationViewModel(IPathSelection, IEventAggregator, ILogbook)
 - uid: Opus.Modules.File.ViewModels.FileNavigationViewModel.#ctor*
   name: FileNavigationViewModel
   href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html#Opus_Modules_File_ViewModels_FileNavigationViewModel__ctor_
@@ -12877,19 +12909,6 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel.FileNavigationViewModel
   nameWithType: FileNavigationViewModel.FileNavigationViewModel
-- uid: Opus.Modules.File.ViewModels.FileNavigationViewModel.ExecuteOpenFile
-  name: ExecuteOpenFile()
-  href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html#Opus_Modules_File_ViewModels_FileNavigationViewModel_ExecuteOpenFile
-  commentId: M:Opus.Modules.File.ViewModels.FileNavigationViewModel.ExecuteOpenFile
-  fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel.ExecuteOpenFile()
-  nameWithType: FileNavigationViewModel.ExecuteOpenFile()
-- uid: Opus.Modules.File.ViewModels.FileNavigationViewModel.ExecuteOpenFile*
-  name: ExecuteOpenFile
-  href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html#Opus_Modules_File_ViewModels_FileNavigationViewModel_ExecuteOpenFile_
-  commentId: Overload:Opus.Modules.File.ViewModels.FileNavigationViewModel.ExecuteOpenFile
-  isSpec: "True"
-  fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel.ExecuteOpenFile
-  nameWithType: FileNavigationViewModel.ExecuteOpenFile
 - uid: Opus.Modules.File.ViewModels.FileNavigationViewModel.FileName
   name: FileName
   href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html#Opus_Modules_File_ViewModels_FileNavigationViewModel_FileName
@@ -12903,19 +12922,19 @@ references:
   isSpec: "True"
   fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel.FileName
   nameWithType: FileNavigationViewModel.FileName
-- uid: Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFileCommand
-  name: OpenFileCommand
-  href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html#Opus_Modules_File_ViewModels_FileNavigationViewModel_OpenFileCommand
-  commentId: P:Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFileCommand
-  fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFileCommand
-  nameWithType: FileNavigationViewModel.OpenFileCommand
-- uid: Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFileCommand*
-  name: OpenFileCommand
-  href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html#Opus_Modules_File_ViewModels_FileNavigationViewModel_OpenFileCommand_
-  commentId: Overload:Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFileCommand
+- uid: Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenExecute
+  name: OpenExecute()
+  href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html#Opus_Modules_File_ViewModels_FileNavigationViewModel_OpenExecute
+  commentId: M:Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenExecute
+  fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenExecute()
+  nameWithType: FileNavigationViewModel.OpenExecute()
+- uid: Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenExecute*
+  name: OpenExecute
+  href: api/Opus.Modules.File.ViewModels.FileNavigationViewModel.html#Opus_Modules_File_ViewModels_FileNavigationViewModel_OpenExecute_
+  commentId: Overload:Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenExecute
   isSpec: "True"
-  fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFileCommand
-  nameWithType: FileNavigationViewModel.OpenFileCommand
+  fullName: Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenExecute
+  nameWithType: FileNavigationViewModel.OpenExecute
 - uid: Opus.Modules.File.Views
   name: Opus.Modules.File.Views
   href: api/Opus.Modules.File.Views.html
@@ -13239,6 +13258,55 @@ references:
   commentId: N:Opus.Modules.Options
   fullName: Opus.Modules.Options
   nameWithType: Opus.Modules.Options
+- uid: Opus.Modules.Options.Base
+  name: Opus.Modules.Options.Base
+  href: api/Opus.Modules.Options.Base.html
+  commentId: N:Opus.Modules.Options.Base
+  fullName: Opus.Modules.Options.Base
+  nameWithType: Opus.Modules.Options.Base
+- uid: Opus.Modules.Options.Base.OptionsViewModelBase`1
+  name: OptionsViewModelBase<VMType>
+  href: api/Opus.Modules.Options.Base.OptionsViewModelBase-1.html
+  commentId: T:Opus.Modules.Options.Base.OptionsViewModelBase`1
+  name.vb: OptionsViewModelBase(Of VMType)
+  fullName: Opus.Modules.Options.Base.OptionsViewModelBase<VMType>
+  fullName.vb: Opus.Modules.Options.Base.OptionsViewModelBase(Of VMType)
+  nameWithType: OptionsViewModelBase<VMType>
+  nameWithType.vb: OptionsViewModelBase(Of VMType)
+- uid: Opus.Modules.Options.Base.OptionsViewModelBase`1.#ctor(ILogbook,Opus.Common.Services.Commands.ISettingsCommands)
+  name: OptionsViewModelBase(ILogbook, ISettingsCommands)
+  href: api/Opus.Modules.Options.Base.OptionsViewModelBase-1.html#Opus_Modules_Options_Base_OptionsViewModelBase_1__ctor_ILogbook_Opus_Common_Services_Commands_ISettingsCommands_
+  commentId: M:Opus.Modules.Options.Base.OptionsViewModelBase`1.#ctor(ILogbook,Opus.Common.Services.Commands.ISettingsCommands)
+  fullName: Opus.Modules.Options.Base.OptionsViewModelBase<VMType>.OptionsViewModelBase(ILogbook, Opus.Common.Services.Commands.ISettingsCommands)
+  fullName.vb: Opus.Modules.Options.Base.OptionsViewModelBase(Of VMType).OptionsViewModelBase(ILogbook, Opus.Common.Services.Commands.ISettingsCommands)
+  nameWithType: OptionsViewModelBase<VMType>.OptionsViewModelBase(ILogbook, ISettingsCommands)
+  nameWithType.vb: OptionsViewModelBase(Of VMType).OptionsViewModelBase(ILogbook, ISettingsCommands)
+- uid: Opus.Modules.Options.Base.OptionsViewModelBase`1.#ctor*
+  name: OptionsViewModelBase
+  href: api/Opus.Modules.Options.Base.OptionsViewModelBase-1.html#Opus_Modules_Options_Base_OptionsViewModelBase_1__ctor_
+  commentId: Overload:Opus.Modules.Options.Base.OptionsViewModelBase`1.#ctor
+  isSpec: "True"
+  fullName: Opus.Modules.Options.Base.OptionsViewModelBase<VMType>.OptionsViewModelBase
+  fullName.vb: Opus.Modules.Options.Base.OptionsViewModelBase(Of VMType).OptionsViewModelBase
+  nameWithType: OptionsViewModelBase<VMType>.OptionsViewModelBase
+  nameWithType.vb: OptionsViewModelBase(Of VMType).OptionsViewModelBase
+- uid: Opus.Modules.Options.Base.OptionsViewModelBase`1.SettingsCommands
+  name: SettingsCommands
+  href: api/Opus.Modules.Options.Base.OptionsViewModelBase-1.html#Opus_Modules_Options_Base_OptionsViewModelBase_1_SettingsCommands
+  commentId: P:Opus.Modules.Options.Base.OptionsViewModelBase`1.SettingsCommands
+  fullName: Opus.Modules.Options.Base.OptionsViewModelBase<VMType>.SettingsCommands
+  fullName.vb: Opus.Modules.Options.Base.OptionsViewModelBase(Of VMType).SettingsCommands
+  nameWithType: OptionsViewModelBase<VMType>.SettingsCommands
+  nameWithType.vb: OptionsViewModelBase(Of VMType).SettingsCommands
+- uid: Opus.Modules.Options.Base.OptionsViewModelBase`1.SettingsCommands*
+  name: SettingsCommands
+  href: api/Opus.Modules.Options.Base.OptionsViewModelBase-1.html#Opus_Modules_Options_Base_OptionsViewModelBase_1_SettingsCommands_
+  commentId: Overload:Opus.Modules.Options.Base.OptionsViewModelBase`1.SettingsCommands
+  isSpec: "True"
+  fullName: Opus.Modules.Options.Base.OptionsViewModelBase<VMType>.SettingsCommands
+  fullName.vb: Opus.Modules.Options.Base.OptionsViewModelBase(Of VMType).SettingsCommands
+  nameWithType: OptionsViewModelBase<VMType>.SettingsCommands
+  nameWithType.vb: OptionsViewModelBase(Of VMType).SettingsCommands
 - uid: Opus.Modules.Options.OptionsModule
   name: OptionsModule
   href: api/Opus.Modules.Options.OptionsModule.html

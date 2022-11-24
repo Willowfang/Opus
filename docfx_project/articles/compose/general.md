@@ -26,7 +26,7 @@ K: ASIA 127763
 
 Toiminnolla on mahdollista koota edeltävät tiedostot automaattisesti yhteen tiedostoon esimerkiksi siten, että kansilehti on omana yläkirjanmerkkinään, sen jälkeen kaikki selvitykset on koottu oman yläkirjanmerkkinsä alle ja vastaavasti liitteet oman yläkirjanmerkkinsä alle. Kokoaminen yhteen lopputiedostoon voisi siis kirjanmerkkien puolesta näyttää esimerkiksi seuraavalta:
 
-```
+```bat
 Kansilehti
 Selvitykset
     Selvitys, Matti Möttönen

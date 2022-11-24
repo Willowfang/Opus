@@ -36,11 +36,11 @@ Toinen tapa on valita kirjanmerkki klikkaamalla sitä ja sen jälkeen painaa sam
 
 Klikkaamalla Lisää ulkopuolinen -painiketta, voit lisätä valittujen kirjanmerkkien luetteloon merkinnän ulkopuolisesta tiedostosta. Tällainen merkintä ei vaikuta itse erotteluun mitenkään, mutta se vaikuttaa tiedostojen nimeämiseen. Ulkopuolisen tiedoston merkintä vie yhden järjestysnumeron paikan, millä on vaikutusta lopputiedostoja nimettäessä silloin, kun [nimen rakenteessa](settings.md#1-nimen-rakenne) on käytössä numeron [paikkavaraus](settings.md#1-nimen-rakenne) \[numero\]. Tällöin numerointiin lisätään yksi siinä kohtaa, johon ulkopuolisen tiedoston merkintä on lisätty.
 
-_Esimerkki_
+**Esimerkki**
 
 Valittuna ovat seuraavat eroteltavat kirjanmerkit, joiden väliin on sijoitettu ulkopuolisen tiedoston merkintä:
 
-```
+```bat
 Tiliote
 Valokuvat
 ULKOPUOLINEN TIEDOSTO
@@ -55,7 +55,7 @@ Tiedosto [numero] [kirjanmerkki]
 
 Kun erottelu toteutetaan, tuotetaan seuraavalla tavalla nimetyt tiedostot:
 
-```
+```bat
 Tiedosto 1 Tiliote.pdf
 Tiedosto 2 Valokuvat.pdf
 Tiedosto 4 Kirje.pdf

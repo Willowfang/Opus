@@ -45,7 +45,8 @@
     "globalMetadata": {
       "_appTitle": "Opus Docs",
       "_appName": "Opus Docs",
-      "_appLogoPath": "images/logo38pt.png"
+      "_appLogoPath": "images/logo38pt.png",
+      "_appFaviconPath": "images/favicon.ico"
     },
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],

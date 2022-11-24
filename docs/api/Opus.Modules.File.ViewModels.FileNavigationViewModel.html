@@ -12,7 +12,7 @@
    | Opus Docs ">
     <meta name="generator" content="docfx 2.59.4.0">
     
-    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="shortcut icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
@@ -79,8 +79,10 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Prism.Mvvm.BindableBase</span></div>
-    <div class="level2"><a class="xref" href="Opus.Common.ViewModels.ViewModelBase.html">ViewModelBase</a></div>
-    <div class="level3"><span class="xref">FileNavigationViewModel</span></div>
+    <div class="level2"><a class="xref" href="Opus.Common.Logging.LoggingCapable-1.html">LoggingCapable</a>&lt;<a class="xref" href="Opus.Modules.File.ViewModels.FileNavigationViewModel.html">FileNavigationViewModel</a>&gt;</div>
+    <div class="level3"><a class="xref" href="Opus.Common.ViewModels.ViewModelBaseLogging-1.html">ViewModelBaseLogging</a>&lt;<a class="xref" href="Opus.Modules.File.ViewModels.FileNavigationViewModel.html">FileNavigationViewModel</a>&gt;</div>
+    <div class="level4"><a class="xref" href="Opus.Modules.File.Base.FileViewModelBase-1.html">FileViewModelBase</a>&lt;<a class="xref" href="Opus.Modules.File.ViewModels.FileNavigationViewModel.html">FileNavigationViewModel</a>&gt;</div>
+    <div class="level5"><span class="xref">FileNavigationViewModel</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -90,13 +92,28 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Opus.Common.ViewModels.ViewModelBase.html#Opus_Common_ViewModels_ViewModelBase_IsNavigationTarget_Prism_Regions_NavigationContext_">ViewModelBase.IsNavigationTarget(NavigationContext)</a>
+      <a class="xref" href="Opus.Modules.File.Base.FileViewModelBase-1.html#Opus_Modules_File_Base_FileViewModelBase_1_pathSelection">FileViewModelBase&lt;FileNavigationViewModel&gt;.pathSelection</a>
     </div>
     <div>
-      <a class="xref" href="Opus.Common.ViewModels.ViewModelBase.html#Opus_Common_ViewModels_ViewModelBase_OnNavigatedFrom_Prism_Regions_NavigationContext_">ViewModelBase.OnNavigatedFrom(NavigationContext)</a>
+      <a class="xref" href="Opus.Modules.File.Base.FileViewModelBase-1.html#Opus_Modules_File_Base_FileViewModelBase_1_eventAggregator">FileViewModelBase&lt;FileNavigationViewModel&gt;.eventAggregator</a>
     </div>
     <div>
-      <a class="xref" href="Opus.Common.ViewModels.ViewModelBase.html#Opus_Common_ViewModels_ViewModelBase_OnNavigatedTo_Prism_Regions_NavigationContext_">ViewModelBase.OnNavigatedTo(NavigationContext)</a>
+      <a class="xref" href="Opus.Modules.File.Base.FileViewModelBase-1.html#Opus_Modules_File_Base_FileViewModelBase_1_OpenCommand">FileViewModelBase&lt;FileNavigationViewModel&gt;.OpenCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Common.ViewModels.ViewModelBaseLogging-1.html#Opus_Common_ViewModels_ViewModelBaseLogging_1_IsNavigationTarget_Prism_Regions_NavigationContext_">ViewModelBaseLogging&lt;FileNavigationViewModel&gt;.IsNavigationTarget(NavigationContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Common.ViewModels.ViewModelBaseLogging-1.html#Opus_Common_ViewModels_ViewModelBaseLogging_1_OnNavigatedFrom_Prism_Regions_NavigationContext_">ViewModelBaseLogging&lt;FileNavigationViewModel&gt;.OnNavigatedFrom(NavigationContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Common.ViewModels.ViewModelBaseLogging-1.html#Opus_Common_ViewModels_ViewModelBaseLogging_1_OnNavigatedTo_Prism_Regions_NavigationContext_">ViewModelBaseLogging&lt;FileNavigationViewModel&gt;.OnNavigatedTo(NavigationContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Common.Logging.LoggingCapable-1.html#Opus_Common_Logging_LoggingCapable_1_logbook">LoggingCapable&lt;FileNavigationViewModel&gt;.logbook</a>
+    </div>
+    <div>
+      <a class="xref" href="Opus.Common.Logging.LoggingCapable-1.html#Opus_Common_Logging_LoggingCapable_1_ChangeLogbook_ILogbook_">LoggingCapable&lt;FileNavigationViewModel&gt;.ChangeLogbook(ILogbook)</a>
     </div>
     <div>
       <span class="xref">Prism.Mvvm.BindableBase.SetProperty&lt;T&gt;(T, T, System.String)</span>
@@ -139,25 +156,25 @@
   <h6><strong>Assembly</strong>: Opus.Modules.File.dll</h6>
   <h5 id="Opus_Modules_File_ViewModels_FileNavigationViewModel_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FileNavigationViewModel : ViewModelBase, INotifyPropertyChanged, INavigationAware</code></pre>
+    <pre><code class="lang-csharp hljs">public class FileNavigationViewModel : FileViewModelBase&lt;FileNavigationViewModel&gt;, INotifyPropertyChanged, INavigationAware</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_File_ViewModels_FileNavigationViewModel__ctor_Prism_Events_IEventAggregator_Opus_Common_Services_Input_IPathSelection_.md&amp;value=---%0Auid%3A%20Opus.Modules.File.ViewModels.FileNavigationViewModel.%23ctor(Prism.Events.IEventAggregator%2COpus.Common.Services.Input.IPathSelection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_File_ViewModels_FileNavigationViewModel__ctor_Opus_Common_Services_Input_IPathSelection_Prism_Events_IEventAggregator_ILogbook_.md&amp;value=---%0Auid%3A%20Opus.Modules.File.ViewModels.FileNavigationViewModel.%23ctor(Opus.Common.Services.Input.IPathSelection%2CPrism.Events.IEventAggregator%2CILogbook)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.File/ViewModels/FileNavigationViewModel.cs/#L39">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.File/ViewModels/FileNavigationViewModel.cs/#L34">View Source</a>
   </span>
   <a id="Opus_Modules_File_ViewModels_FileNavigationViewModel__ctor_" data-uid="Opus.Modules.File.ViewModels.FileNavigationViewModel.#ctor*"></a>
-  <h4 id="Opus_Modules_File_ViewModels_FileNavigationViewModel__ctor_Prism_Events_IEventAggregator_Opus_Common_Services_Input_IPathSelection_" data-uid="Opus.Modules.File.ViewModels.FileNavigationViewModel.#ctor(Prism.Events.IEventAggregator,Opus.Common.Services.Input.IPathSelection)">FileNavigationViewModel(IEventAggregator, IPathSelection)</h4>
-  <div class="markdown level1 summary"><p>Create a new viewmodel for selecting a single file.</p>
+  <h4 id="Opus_Modules_File_ViewModels_FileNavigationViewModel__ctor_Opus_Common_Services_Input_IPathSelection_Prism_Events_IEventAggregator_ILogbook_" data-uid="Opus.Modules.File.ViewModels.FileNavigationViewModel.#ctor(Opus.Common.Services.Input.IPathSelection,Prism.Events.IEventAggregator,ILogbook)">FileNavigationViewModel(IPathSelection, IEventAggregator, ILogbook)</h4>
+  <div class="markdown level1 summary"><p>Create a new viewmodel for single file selection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FileNavigationViewModel(IEventAggregator eventAggregator, IPathSelection input)</code></pre>
+    <pre><code class="lang-csharp hljs">public FileNavigationViewModel(IPathSelection pathSelection, IEventAggregator eventAggregator, ILogbook logbook)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -170,15 +187,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Prism.Events.IEventAggregator</span></td>
-        <td><span class="parametername">eventAggregator</span></td>
-        <td><p>Service for publishing and subscribing to events between viewModels.</p>
+        <td><a class="xref" href="Opus.Common.Services.Input.IPathSelection.html">IPathSelection</a></td>
+        <td><span class="parametername">pathSelection</span></td>
+        <td><p>Path selection service.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Opus.Common.Services.Input.IPathSelection.html">IPathSelection</a></td>
-        <td><span class="parametername">input</span></td>
-        <td><p>Service for user selection of an input path.</p>
+        <td><span class="xref">Prism.Events.IEventAggregator</span></td>
+        <td><span class="parametername">eventAggregator</span></td>
+        <td><p>Event handling service.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ILogbook</span></td>
+        <td><span class="parametername">logbook</span></td>
+        <td><p>Logging service.</p>
 </td>
       </tr>
     </tbody>
@@ -190,7 +213,7 @@
     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_File_ViewModels_FileNavigationViewModel_FileName.md&amp;value=---%0Auid%3A%20Opus.Modules.File.ViewModels.FileNavigationViewModel.FileName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.File/ViewModels/FileNavigationViewModel.cs/#L26">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.File/ViewModels/FileNavigationViewModel.cs/#L22">View Source</a>
   </span>
   <a id="Opus_Modules_File_ViewModels_FileNavigationViewModel_FileName_" data-uid="Opus.Modules.File.ViewModels.FileNavigationViewModel.FileName*"></a>
   <h4 id="Opus_Modules_File_ViewModels_FileNavigationViewModel_FileName" data-uid="Opus.Modules.File.ViewModels.FileNavigationViewModel.FileName">FileName</h4>
@@ -216,55 +239,26 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_File_ViewModels_FileNavigationViewModel_OpenFileCommand.md&amp;value=---%0Auid%3A%20Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFileCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.File/ViewModels/FileNavigationViewModel.cs/#L53">View Source</a>
-  </span>
-  <a id="Opus_Modules_File_ViewModels_FileNavigationViewModel_OpenFileCommand_" data-uid="Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFileCommand*"></a>
-  <h4 id="Opus_Modules_File_ViewModels_FileNavigationViewModel_OpenFileCommand" data-uid="Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenFileCommand">OpenFileCommand</h4>
-  <div class="markdown level1 summary"><p>Command for opening a file path.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DelegateCommand OpenFileCommand { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Prism.Commands.DelegateCommand</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_File_ViewModels_FileNavigationViewModel_ExecuteOpenFile.md&amp;value=---%0Auid%3A%20Opus.Modules.File.ViewModels.FileNavigationViewModel.ExecuteOpenFile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_File_ViewModels_FileNavigationViewModel_OpenExecute.md&amp;value=---%0Auid%3A%20Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenExecute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.File/ViewModels/FileNavigationViewModel.cs/#L59">View Source</a>
+    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.File/ViewModels/FileNavigationViewModel.cs/#L45">View Source</a>
   </span>
-  <a id="Opus_Modules_File_ViewModels_FileNavigationViewModel_ExecuteOpenFile_" data-uid="Opus.Modules.File.ViewModels.FileNavigationViewModel.ExecuteOpenFile*"></a>
-  <h4 id="Opus_Modules_File_ViewModels_FileNavigationViewModel_ExecuteOpenFile" data-uid="Opus.Modules.File.ViewModels.FileNavigationViewModel.ExecuteOpenFile">ExecuteOpenFile()</h4>
-  <div class="markdown level1 summary"><p>Execution method for open file command, see <a class="xref" href="Opus.Modules.File.ViewModels.FileNavigationViewModel.html#Opus_Modules_File_ViewModels_FileNavigationViewModel_OpenFileCommand">OpenFileCommand</a>.</p>
+  <a id="Opus_Modules_File_ViewModels_FileNavigationViewModel_OpenExecute_" data-uid="Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenExecute*"></a>
+  <h4 id="Opus_Modules_File_ViewModels_FileNavigationViewModel_OpenExecute" data-uid="Opus.Modules.File.ViewModels.FileNavigationViewModel.OpenExecute">OpenExecute()</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void ExecuteOpenFile()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void OpenExecute()</code></pre>
   </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Opus.Modules.File.Base.FileViewModelBase&lt;Opus.Modules.File.ViewModels.FileNavigationViewModel&gt;.OpenExecute()</span></div>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
@@ -290,7 +284,7 @@
                     <a href="https://github.com/Willowfang/Opus/new/master/apiSpec/new?filename=Opus_Modules_File_ViewModels_FileNavigationViewModel.md&amp;value=---%0Auid%3A%20Opus.Modules.File.ViewModels.FileNavigationViewModel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Parannusehdotus</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.File/ViewModels/FileNavigationViewModel.cs/#L13" class="contribution-link">Näytä lähdekoodi</a>
+                    <a href="https://github.com/Willowfang/Opus/blob/master/Opus.Modules.File/ViewModels/FileNavigationViewModel.cs/#L15" class="contribution-link">Näytä lähdekoodi</a>
                   </li>
                 </ul>
               </div>

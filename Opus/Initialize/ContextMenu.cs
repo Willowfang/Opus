@@ -99,8 +99,6 @@ namespace Opus.Initialize
             if (arguments.Length < 2 || arguments.Length > 3)
                 return;
 
-            // Ask the user for the destination directory path.
-
             string filePath = arguments[1];
 
             if (File.Exists(filePath) == false)
@@ -117,13 +115,32 @@ namespace Opus.Initialize
 
             IList<ILeveledBookmark> ranges = await ExtractFileGetBookmarks(filePath, arguments);
 
+            if (ranges == null || ranges.Count < 1)
+            {
+                await ShowBookmarksNotFoundMessage(arguments);
+                return;
+            }
+
             ExtractFileAddWrappers(ranges, filePath, extractionProperties);
 
             logbook.Write($"Starting bookmark extraction.", LogLevel.Information);
 
-            await extractionMethods.ExecuteSaveFile();
+            await extractionMethods.ExecuteSaveSeparate();
 
             logbook.Write($"Bookmark extraction finished.", LogLevel.Information);
+        }
+
+        private async Task ShowBookmarksNotFoundMessage(string[] arguments)
+        {
+            string message = arguments.Length == 2
+                ? Resources.Messages.Extraction.NoBookmarksFound
+                : Resources.Messages.Extraction.NoBookmarksWithPrefixFound;
+
+            MessageDialog dialog = new MessageDialog(
+                Resources.Labels.General.Notification,
+                message);
+
+            await dialogAssist.Show(dialog);
         }
 
         private async Task<IList<ILeveledBookmark>> ExtractFileGetBookmarks(string filePath, string[] arguments)
@@ -157,10 +174,10 @@ namespace Opus.Initialize
             string filePath,
             IExtractionSupportProperties properties)
         {
-            foreach (ILeveledBookmark range in ranges)
+            for (int i = 0; i < ranges.Count; i++)
             {
                 properties.Bookmarks.Add(
-                    new FileAndBookmarkWrapper(range, filePath) { IsSelected = true }
+                    new FileAndBookmarkWrapper(ranges[i], filePath, i + 1) { IsSelected = true }
                 );
             }
         }

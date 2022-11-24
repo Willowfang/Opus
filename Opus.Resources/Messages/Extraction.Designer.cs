@@ -61,6 +61,24 @@ namespace Opus.Resources.Messages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kirjanmerkkejä ei löytynyt..
+        /// </summary>
+        public static string NoBookmarksFound {
+            get {
+                return ResourceManager.GetString("NoBookmarksFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Annetuilla kriteereillä ei löytynyt kirjanmerkkejä..
+        /// </summary>
+        public static string NoBookmarksWithPrefixFound {
+            get {
+                return ResourceManager.GetString("NoBookmarksWithPrefixFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tiedostoja ei voitu muuttaa pdf/a -muotoon.
         /// </summary>
         public static string PdfAConversionError {

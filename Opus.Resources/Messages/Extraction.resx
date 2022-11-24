@@ -117,6 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="NoBookmarksFound" xml:space="preserve">
+    <value>Kirjanmerkkejä ei löytynyt.</value>
+    <comment>Ilmoitus siitä, että kirjanmerkkejä ei löytynyt lainkaan.</comment>
+  </data>
+  <data name="NoBookmarksWithPrefixFound" xml:space="preserve">
+    <value>Annetuilla kriteereillä ei löytynyt kirjanmerkkejä.</value>
+  </data>
   <data name="PdfAConversionError" xml:space="preserve">
     <value>Tiedostoja ei voitu muuttaa pdf/a -muotoon</value>
     <comment>Virheilmoitus siitä, että lopputuotteiden muuntaminen pdf/a-muotoon ei onnistunut.</comment>

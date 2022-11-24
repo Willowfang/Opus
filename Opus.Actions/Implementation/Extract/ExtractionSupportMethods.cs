@@ -715,7 +715,7 @@ namespace Opus.Actions.Implementation.Extract
         /// <summary>
         /// <inheritdoc/>
         /// </summary>
-        public async Task ExecuteSaveFile()
+        public async Task ExecuteSaveFile() 
         {
             logbook.Write($"Extracting to one file.", LogLevel.Information);
 
@@ -795,45 +795,6 @@ namespace Opus.Actions.Implementation.Extract
         #endregion
 
         #region Common private
-        private void OpenPathForViewing(FileSystemInfo extractionDestination)
-        {
-            logbook.Write($"Opening file or folder for viewing.", LogLevel.Debug);
-
-            FileSystemInfo destination = extractionDestination;
-
-            if (configuration.ExtractionCreateZip
-                && destination is FileInfo destinationFile
-                && destinationFile.Directory != null)
-            {
-                destination = destinationFile.Directory;
-            }
-
-            if (destination is FileInfo file)
-            {
-                new System.Diagnostics.Process()
-                {
-                    StartInfo = new System.Diagnostics.ProcessStartInfo(
-                    file.FullName)
-                    {
-                        UseShellExecute = true
-                    }
-                }.Start();
-            }
-            else if (destination is DirectoryInfo directory)
-            {
-                new System.Diagnostics.Process()
-                {
-                    StartInfo = new System.Diagnostics.ProcessStartInfo(
-                    @directory.FullName)
-                    {
-                        UseShellExecute = true
-                    }
-                }.Start();
-            }
-
-            logbook.Write($"File or folder opened externally.", LogLevel.Debug);
-        }
-        
         private async Task<FileInfo?> GetSingularZipPath(
             DirectoryInfo tempDir,
             IExtractionSupportProperties properties)

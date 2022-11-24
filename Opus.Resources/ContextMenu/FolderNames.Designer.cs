@@ -61,7 +61,7 @@ namespace Opus.Resources.ContextMenu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Allekirjoittamattomat.
+        ///   Looks up a localized string similar to Työkappaleet.
         /// </summary>
         public static string WorkCopyMultipleFolder {
             get {

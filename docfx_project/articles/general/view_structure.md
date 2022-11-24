@@ -95,6 +95,10 @@ Kielivalikosta pääset vaihtamaan sovelluksen käyttöliittymän kieltä. Täll
 
 Kielivalinta astuu voimaan, kun sovellus käynnistetään uudelleen.
 
+**e. Lokitustaso**
+
+Tästä pääset valitsemaan sen tason, jolla ohjelmasta tallennetaan tietoa lokitiedostoon. Valintaa ei tarvitse muuttaa, ellei siihen erikseen kehoteta tuen toimesta.
+
 ## Tiedostonvalitsin
 
 <details>

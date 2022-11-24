@@ -2,7 +2,7 @@
 
 ---
 
-Näiltä sivuilta löydät Opuksen käyttöohjeet. Ohjeet on jaettu alaosioihin yleisten ominaisuuksien ja yksittäisten toimintojen mukaan. Käyttöohjeet sisältävät sanalliset kuvaukset toiminnoista sekä näitä tukevia kuvia ja gif-muotoisia havainnevideoita.
+Näiltä sivuilta löydät Opus Machinaen (Opus) käyttöohjeet. Ohjeet on jaettu alaosioihin yleisten ominaisuuksien ja yksittäisten toimintojen mukaan. Käyttöohjeet sisältävät sanalliset kuvaukset toiminnoista sekä näitä tukevia kuvia ja gif-muotoisia havainnevideoita.
 
 Alkuun pääset valitsemalla haluamasi osion tämän sivuston vasemmassa laidassa näkyvästä valikosta.
 

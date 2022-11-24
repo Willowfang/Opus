@@ -78,3 +78,10 @@
           href: compose/section_rearrange.md
     - name: Tallentaminen
       href: compose/saving.md
+- name: Resurssienhallinnan pikavalikko
+  href: context_menu/general.md
+  items:
+    - name: Kansiot
+      href: context_menu/folders.md
+    - name: Pdf-tiedostot
+      href: context_menu/files.md
