@@ -20,6 +20,11 @@ namespace Opus.Common.Wrappers
         public string FileName { get; }
 
         /// <summary>
+        /// This file as a bookmarkwrapper.
+        /// </summary>
+        public FileAndBookmarkWrapper? FileAsBookmark { get; set; }
+
+        /// <summary>
         /// Bookmarks in the file.
         /// </summary>
         public ObservableCollection<FileAndBookmarkWrapper> Bookmarks { get; set; }
@@ -32,6 +37,7 @@ namespace Opus.Common.Wrappers
         {
             FilePath = filePath;
             FileName = Path.GetFileNameWithoutExtension(filePath);
+
             Bookmarks = new ObservableCollection<FileAndBookmarkWrapper>();
         }
     }

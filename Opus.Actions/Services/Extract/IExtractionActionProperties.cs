@@ -20,6 +20,11 @@ namespace Opus.Actions.Services.Extract
         public ObservableCollection<FileAndBookmarksStorage> Files { get; }
 
         /// <summary>
+        /// Files that have been selected as whole documents.
+        /// </summary>
+        public List<FileAndBookmarksStorage> WholeFilesSelected { get; }
+
+        /// <summary>
         /// The file that is being currently worked on. Notify properties on change.
         /// </summary>
         public FileAndBookmarksStorage? SelectedFile { get; set; }

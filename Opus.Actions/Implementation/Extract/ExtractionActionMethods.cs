@@ -12,6 +12,7 @@ using Prism.Events;
 using System.Windows.Controls;
 using WF.PdfLib.Services.Data;
 using WF.PdfLib.Services;
+using Serilog.Core.Enrichers;
 
 namespace Opus.Actions.Implementation.Extract
 {
@@ -116,7 +117,7 @@ namespace Opus.Actions.Implementation.Extract
 
         private void DeselectBookmarksWithProperties(Guid id, IExtractionActionProperties properties)
         {
-            logbook.Write($"Delecting bookmarks.", LogLevel.Debug);
+            logbook.Write($"Deselecting bookmarks.", LogLevel.Debug);
 
             // Search for the correct bookmark in all files
 
@@ -133,11 +134,36 @@ namespace Opus.Actions.Implementation.Extract
                         DeSelectParent(bookmark, file.Bookmarks);
                         bookmark.IsSelected = false;
                         DeSelectChildrenRecursively(bookmark, file.Bookmarks);
+
+                        logbook.Write($"Bookmarks deselected.", LogLevel.Debug);
+
+                        return;
                     }
                 }
             }
 
-            logbook.Write($"Bookmarks deselected.", LogLevel.Debug);
+            foreach (FileAndBookmarksStorage file in properties.WholeFilesSelected)
+            {
+                if (file.FileAsBookmark == null) continue;
+
+                if (file.FileAsBookmark.Id == id)
+                {
+                    foreach (FileAndBookmarkWrapper wrapper in file.Bookmarks)
+                    {
+                        wrapper.IsSelected = false;
+                    }
+
+                    file.FileAsBookmark = null;
+
+                    properties.Files.Add(file);
+
+                    properties.WholeFilesSelected.Remove(file);
+
+                    logbook.Write($"Bookmarks deselected.", LogLevel.Debug);
+
+                    return;
+                }
+            }
         }
         #endregion
 
@@ -518,6 +544,51 @@ namespace Opus.Actions.Implementation.Extract
             {
                 properties.SelectedFile = null;
             }
+        }
+        #endregion
+
+        #region Execute select whole file
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        public void ExecuteSelectWholeFile()
+        {
+            if (properties.SelectedFile == null)
+                return;
+
+            ILeveledBookmark fileAsBookmark =
+                bookmarkService.DocumentAsBookmark(properties.SelectedFile.FilePath);
+
+            FileAndBookmarkWrapper fileAsBookmarkWrapper =
+                new FileAndBookmarkWrapper(fileAsBookmark, properties.SelectedFile.FilePath);
+
+            int selectedIndex = properties.Files.IndexOf(properties.SelectedFile);
+
+            properties.SelectedFile.FileAsBookmark = fileAsBookmarkWrapper;
+
+            properties.WholeFilesSelected.Add(properties.SelectedFile);
+
+            if (properties.Files.Count > 1)
+            {
+                if (selectedIndex == 0)
+                {
+                    properties.SelectedFile = properties.Files[1];
+                }
+                else
+                {
+                    properties.SelectedFile = properties.Files[selectedIndex - 1];
+                }
+            }
+            else
+            {
+                properties.SelectedFile = null;
+            }
+
+            properties.Files.RemoveAt(selectedIndex);
+
+            BookmarkInfo info = SelectCreateBookmarkInfo(fileAsBookmarkWrapper);
+
+            eventAggregator.GetEvent<BookmarkSelectedEvent>().Publish(info);
         }
         #endregion
     }

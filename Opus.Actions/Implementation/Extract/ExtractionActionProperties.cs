@@ -46,6 +46,11 @@ namespace Opus.Actions.Implementation.Extract
                     : null;
         }
 
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        public List<FileAndBookmarksStorage> WholeFilesSelected { get; }
+
         private FileAndBookmarkWrapper? selectedBookmark;
 
         /// <summary>
@@ -63,6 +68,7 @@ namespace Opus.Actions.Implementation.Extract
         public ExtractionActionProperties()
         {
             Files = new ObservableCollection<FileAndBookmarksStorage>();
+            WholeFilesSelected = new List<FileAndBookmarksStorage>();
         }
     }
 }
