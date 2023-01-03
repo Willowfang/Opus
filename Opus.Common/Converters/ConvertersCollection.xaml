@@ -20,5 +20,6 @@
     <c:UserNameToFontWeight x:Key="UserNameToFontWeight"/>
     <c:ZeroToOppositeVisibility x:Key="ZeroToOppositeVisibility"/>
     <c:LogLevelToBoolean x:Key="LogLevelToBoolean"/>
+    <c:NullToBoolInverse x:Key="NullToBoolInverse"/>
 
 </ResourceDictionary>

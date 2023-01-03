@@ -42,5 +42,10 @@ namespace Opus.Actions.Services.Extract
         /// Execution method for file deletion.
         /// </summary>
         public void ExecuteDeleteFile();
+
+        /// <summary>
+        /// Select the whole file as a bookmark
+        /// </summary>
+        public void ExecuteSelectWholeFile();
     }
 }

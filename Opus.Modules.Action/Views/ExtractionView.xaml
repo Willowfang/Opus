@@ -118,6 +118,11 @@
                     ToolTip="{x:Static resTooltips:Extraction.AddButton}">
                 <materialDesign:PackIcon Kind="PlusBold"/>
             </Button>
+            <Button Style="{StaticResource ToolButton}"
+                    IsEnabled="{Binding Properties.SelectedFile, Converter={StaticResource NullToBool}}"
+                    Command="{Binding Commands.SelectWholeFileCommand}">
+                <materialDesign:PackIcon Kind="ArrowRight"/>
+            </Button>
         </StackPanel>
     </Grid>
 </UserControl>

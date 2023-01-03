@@ -63,5 +63,13 @@ namespace Opus.Commands.Implementation
         public ICommand DeleteFileCommand =>
             deleteFileCommand
             ?? (deleteFileCommand = new DelegateCommand(methods.ExecuteDeleteFile));
+
+        private DelegateCommand? selectWholeFileCommand;
+
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        public ICommand SelectWholeFileCommand =>
+            selectWholeFileCommand ??= new DelegateCommand(methods.ExecuteSelectWholeFile);
     }
 }

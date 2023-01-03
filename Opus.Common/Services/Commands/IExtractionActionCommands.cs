@@ -27,5 +27,10 @@ namespace Opus.Common.Services.Commands
         /// Command from deleting the file from the list
         /// </summary>
         public ICommand DeleteFileCommand { get; }
+
+        /// <summary>
+        /// Select the whole file as a bookmark.
+        /// </summary>
+        public ICommand SelectWholeFileCommand { get; }
     }
 }
