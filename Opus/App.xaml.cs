@@ -12,7 +12,6 @@ using WF.LoggingLib;
 using Opus.Common.Logging;
 using Opus.Initialize;
 using Opus.Initialize.Registrations;
-using Opus.Actions.Services.Update;
 
 namespace Opus
 {
@@ -154,9 +153,6 @@ namespace Opus
             // in the container.
             UpdateProfiles();
 
-            // Register update checkin service for checking program updates.
-            RUpdate.Register(containerRegistry, logbook);
-
             // Register actions. This includes properties, methods and event handling.
 
             RExtractionActions.Register(containerRegistry, logbook);
@@ -226,8 +222,6 @@ namespace Opus
 
             logbook.Write("Checking for application updates.", LogLevel.Debug, callerName: "App");
 
-            updating = Container.Resolve<IUpdateMethods>().CheckForUpdates();
-
             logbook.Write("Application updates checked.", LogLevel.Debug, callerName: "App");
 
             logbook.Write("Creating shell.", LogLevel.Debug, callerName: "App");
@@ -250,11 +244,7 @@ namespace Opus
         {
             base.OnInitialized();
 
-            if (updating)
-            {
-                Update();
-            }
-            else if (MainWindow.DataContext is ContextMenuViewModel viewModel)
+            if (MainWindow.DataContext is ContextMenuViewModel viewModel)
             {
                 RunContext(viewModel);
             }
@@ -273,32 +263,6 @@ namespace Opus
 
             await viewModel.ContextMenu.Run(arguments);
             Current.Shutdown();
-        }
-
-        /// <summary>
-        /// Update the program and restart it.
-        /// </summary>
-        protected async void Update()
-        {
-            ILogbook logbook = Container.Resolve<ILogbook>();
-
-            logbook.Write("Update found. Starting update process.", LogLevel.Debug, callerName: "App");
-
-            bool initialized = await Container.Resolve<IUpdateMethods>().InitializeUpdate();
-
-            if (initialized)
-            {
-                logbook.Write($"Shutting down application for updates...", LogLevel.Debug, callerName: "App");
-
-                Current.Shutdown();
-            }
-            else
-            {
-                if (MainWindow.DataContext is ContextMenuViewModel viewModel)
-                {
-                    RunContext(viewModel);
-                }
-            }
         }
     }
 }

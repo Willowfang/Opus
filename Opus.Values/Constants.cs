@@ -35,25 +35,6 @@
             AppContext.BaseDirectory,
             "ProfileImport"
         );
-        /// <summary>
-        /// Path for storing an info file regarding updates.
-        /// </summary>
-        public static readonly string LOCALUPDATEINFOLOCATION = Path.Combine(
-            AppContext.BaseDirectory,
-            "UpdateInfo.json"
-        );
-        /// <summary>
-        /// Testlocation for updateinfo files.
-        /// </summary>
-        public static readonly string TEST_LOCALUPDATEINFOLOC = @"C:\Users\Public\UpdateInfo.json";
-        /// <summary>
-        /// Name of the setup file (with extension).
-        /// </summary>
-        public static readonly string SETUPFILENAME = "Opus.msi";
-        /// <summary>
-        /// Name of the update info file (with extension).
-        /// </summary>
-        public const string UPDATEINFONAME = "UpdateInfo.json";
     }
 
     /// <summary>
