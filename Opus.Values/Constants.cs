@@ -8,7 +8,7 @@
         /// <summary>
         /// Supported cultures as two-letter language codes.
         /// </summary>
-        public static readonly string[] CULTURES = { "fi", "sv", "en" };
+        public static readonly string[] CULTURES = { "fi", "en" };
     }
 
     /// <summary>

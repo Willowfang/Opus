@@ -12,7 +12,6 @@ using Prism.Events;
 using System.Windows.Controls;
 using WF.PdfLib.Services.Data;
 using WF.PdfLib.Services;
-using Serilog.Core.Enrichers;
 
 namespace Opus.Actions.Implementation.Extract
 {

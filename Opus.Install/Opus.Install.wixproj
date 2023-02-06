@@ -7,7 +7,7 @@
     <ProductVersion>3.10</ProductVersion>
     <ProjectGuid>fda3d605-fc20-4bff-8524-e1866cfd3d13</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
-    <OutputName>Opus Machinae</OutputName>
+    <OutputName>OpusMachinae.$(BuildVersion)</OutputName>
     <OutputType>Package</OutputType>
     <Name>Opus.Install</Name>
   </PropertyGroup>
