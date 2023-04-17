@@ -61,6 +61,15 @@ namespace Opus.Resources.Validation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kenttä ei voi olla tyhjä.
+        /// </summary>
+        public static string FieldEmpty {
+            get {
+                return ResourceManager.GetString("FieldEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nimi ei voi olla tyhjä.
         /// </summary>
         public static string NameEmpty {

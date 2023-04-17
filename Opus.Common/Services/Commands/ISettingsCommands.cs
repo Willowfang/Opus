@@ -32,4 +32,9 @@ namespace Opus.Common.Services.Commands
     /// Command for work copies.
     /// </summary>
     public interface IWorkCopySettingsCommands : ISettingsCommands { }
+
+    /// <summary>
+    /// Command for redaction.
+    /// </summary>
+    public interface IRedactSettingsCommands : ISettingsCommands { }
 }

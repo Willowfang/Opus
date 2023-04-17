@@ -16,6 +16,7 @@ namespace Opus.Initialize.Registrations
             registry.Register<IExtractSettingsCommands, ExtractSettingsCommands>();
             registry.Register<IMergeSettingsCommands, MergeSettingsCommands>();
             registry.Register<IWorkCopySettingsCommands, WorkCopySettingsCommands>();
+            registry.Register<IRedactSettingsCommands, RedactSettingsCommands>();
 
             registry.Register<IExtractionActionCommands, ExtractionActionCommands>();
             registry.Register<IExtractionSupportCommands, ExtractionSupportCommands>();
@@ -25,6 +26,8 @@ namespace Opus.Initialize.Registrations
             registry.Register<IWorkCopyCommands, WorkCopyCommands>();
 
             registry.Register<ICompositionCommands, CompositionCommands>();
+
+            registry.Register<IRedactCommands, RedactCommands>();
 
             logbook.Write($"Commands registered.", LogLevel.Debug, callerName: "App");
         }

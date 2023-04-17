@@ -102,7 +102,7 @@
                  is for). -->
             
             <materialDesign:Card Grid.Row="0" Padding="5, 5, 5, 5" Margin="0, 0, 0, 0" x:Name="TopBar"
-                                 materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                                 materialDesign:ElevationAssist.Elevation="Dp0"
                                  MouseLeftButtonDown="TopBar_MouseLeftButtonDown"
                                  Opacity="1">
                 <materialDesign:Card.Background>
@@ -155,7 +155,7 @@
                          This is the main menu on the left-hand-side of the user interface (with all the main
                          sections of the application as selectable items). -->
                     
-                    <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                    <materialDesign:Card materialDesign:ElevationAssist.Elevation="Dp0"
                                          HorizontalAlignment="Center" 
                                          Margin="0, 0, 0, 0"
                                          Opacity="1">
@@ -205,6 +205,12 @@
                                                          Height="30" 
                                                          Kind="Layers"/>
                             </RadioButton>
+                            <RadioButton Style="{DynamicResource MainMenuButton}"
+                                         CommandParameter="{x:Static const:SchemeNames.REDACT}">
+                                <materialDesign:PackIcon Width="30"
+                                                         Height="30"
+                                                         Kind="EyeRemove"/>
+                            </RadioButton>
                         </StackPanel>
                     </materialDesign:Card>
 
@@ -216,7 +222,7 @@
                                          Padding="30, 0, 30, 0" 
                                          DockPanel.Dock="Top" 
                                          Opacity="1"
-                                         materialDesign:ShadowAssist.ShadowDepth="Depth3"
+                                         materialDesign:ElevationAssist.Elevation="Dp3"
                                          Height="100">
                         <materialDesign:Card.Background>
                             <SolidColorBrush Color="{DynamicResource MaterialDesignShadow}" Opacity="0.9"/>

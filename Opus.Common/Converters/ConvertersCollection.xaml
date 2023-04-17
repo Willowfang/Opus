@@ -21,5 +21,8 @@
     <c:ZeroToOppositeVisibility x:Key="ZeroToOppositeVisibility"/>
     <c:LogLevelToBoolean x:Key="LogLevelToBoolean"/>
     <c:NullToBoolInverse x:Key="NullToBoolInverse"/>
+    <c:BooleanOneTrue x:Key="BooleanOneTrue"/>
+    <c:RedactExecuteButtonConverter x:Key="RedactExecuteButton"/>
+    <c:InverseVisibilityConverter x:Key="InverseVisibility"/>
 
 </ResourceDictionary>

@@ -123,4 +123,7 @@
   <data name="PageZero" xml:space="preserve">
     <value>Page number must be greater than zero</value>
   </data>
+  <data name="FieldEmpty" xml:space="preserve">
+    <value>Field can not be empty</value>
+  </data>
 </root>

@@ -121,5 +121,9 @@
         /// Compose scheme.
         /// </summary>
         public const string COMPOSE = "compose";
+        /// <summary>
+        /// Redaction scheme.
+        /// </summary>
+        public const string REDACT = "redact";
     }
 }

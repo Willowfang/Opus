@@ -6,6 +6,8 @@ using Opus.Common.Dialogs;
 using Opus.Common.Services.Dialogs;
 using System.Windows.Input;
 using WF.LoggingLib;
+using System.Windows.Media;
+using Opus.Common.Extensions;
 
 namespace Opus.Commands.Implementation
 {
@@ -235,6 +237,35 @@ namespace Opus.Commands.Implementation
         {
             configuration.UnsignedTitleTemplate = dialog.TitleTemplate;
             configuration.WorkCopyFlattenRedactions = dialog.FlattenRedactions;
+        }
+    }
+
+    public class RedactSettingsCommands :
+        SettingsCommandsBase<RedactSettingsDialog, RedactSettingsCommands>,
+        IRedactSettingsCommands
+    {
+        public RedactSettingsCommands(
+            IDialogAssist dialogAssist,
+            ILogbook logbook,
+            IConfiguration configuration) : base(dialogAssist, logbook, configuration) { }
+
+        protected override RedactSettingsDialog CreateDialog()
+        {
+            RedactSettingsDialog dialog = new RedactSettingsDialog(
+                Resources.Labels.General.Settings,
+                configuration.Colors);
+            dialog.SelectOutline(configuration.RedactOutline);
+            dialog.SelectFill(configuration.RedactFill);
+            dialog.Suffix = configuration.RedactFileSuffix ?? Resources.DefaultValues.DefaultValues.RedactSuffix;
+            return dialog;
+        }
+
+        protected override void SaveSettings(RedactSettingsDialog dialog)
+        {
+            configuration.RedactOutline = dialog.SelectedOutline.BrushToHtmlHex();
+            configuration.RedactFill = dialog.SelectedFill.BrushToHtmlHex();
+            if (dialog.Suffix != Resources.DefaultValues.DefaultValues.RedactSuffix)
+                configuration.RedactFileSuffix = dialog.Suffix;
         }
     }
 }

@@ -163,6 +163,8 @@ namespace Opus
 
             RCompositionActions.Register(containerRegistry, logbook);
 
+            RRedactActions.Register(containerRegistry, logbook);
+
             // Register commands.
 
             RCommands.Register(containerRegistry, logbook);

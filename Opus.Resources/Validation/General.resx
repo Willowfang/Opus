@@ -123,4 +123,7 @@
   <data name="PageZero" xml:space="preserve">
     <value>Sivunumeron on oltavat suurempi kuin nolla</value>
   </data>
+  <data name="FieldEmpty" xml:space="preserve">
+    <value>Kenttä ei voi olla tyhjä</value>
+  </data>
 </root>

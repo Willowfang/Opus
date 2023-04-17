@@ -88,6 +88,15 @@ namespace Opus.Resources.Labels.MainWindow {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hävitä sisältöä.
+        /// </summary>
+        public static string Redact {
+            get {
+                return ResourceManager.GetString("Redact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Luo työkappaleita.
         /// </summary>
         public static string Workcopy {

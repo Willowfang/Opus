@@ -199,6 +199,114 @@ namespace Opus.Common.Implementation.Configuration
             set => SetProperty(ref loggingLevel, value, SaveConfiguration);
         }
 
+        private string? redactOutline;
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        public string RedactOutline
+        {
+            get => redactOutline ?? "#FF0000";
+            set => SetProperty(ref redactOutline, value, SaveConfiguration);
+        }
+
+        private string? redactFill;
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        public string RedactFill
+        {
+            get => redactFill ?? "#000000";
+            set => SetProperty(ref redactFill, value, SaveConfiguration);
+        }
+
+        private string? redactStart;
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        public string? RedactStart
+        {
+            get => redactStart; 
+            set => SetProperty(ref redactStart, value, SaveConfiguration);
+        }
+
+        private string? redactEnd;
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        public string? RedactEnd
+        {
+            get => redactEnd;
+            set => SetProperty(ref redactEnd, value, SaveConfiguration);
+        }
+
+        private string[]? colors;
+        /// <summary>
+        /// Colors used in modifications (HTML hex)
+        /// </summary>
+        public string[] Colors
+        {
+            get
+            {
+                if (colors == null)
+                {
+                    colors = CreateColors();
+                    SaveConfiguration();
+                }
+                return colors;
+            }
+            set => SetProperty(ref colors, value, SaveConfiguration);
+        }
+
+        private string? redactFileSuffix;
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        public string? RedactFileSuffix
+        {
+            get => redactFileSuffix;
+            set => SetProperty(ref redactFileSuffix, value, SaveConfiguration);
+        }
+
+        private bool redactExecuteApply;
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        public bool RedactExecuteApply
+        {
+            get => redactExecuteApply;
+            set => SetProperty(ref redactExecuteApply, value, SaveConfiguration);
+        }
+
+        private bool redactApplyOnly;
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        public bool RedactApplyOnly
+        {
+            get => redactApplyOnly;
+            set => SetProperty(ref redactApplyOnly, value, SaveConfiguration);
+        }
+
+        private bool redactRange;
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        public bool RedactRange
+        {
+            get => redactRange;
+            set => SetProperty(ref redactRange, value, SaveConfiguration);
+        }
+
+        private bool redactWords;
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        public bool RedactWords
+        {
+            get => redactWords;
+            set => SetProperty(ref redactWords, value, SaveConfiguration);
+        }
+
         /// <summary>
         /// Create new configuration instance.
         /// </summary>
@@ -282,6 +390,29 @@ namespace Opus.Common.Implementation.Configuration
             }
 
             return configuration;
+        }
+
+        private string[] CreateColors()
+        {
+            return new string[]
+            {
+                "#FF0000", // Red
+                "#000000", // Black
+                "#800000", // Maroon
+                "#FFFF00", // Yellow
+                "#808000", // Olive
+                "#00FF00", // Lime
+                "#008000", // Green
+                "#00FFFF", // Cyan
+                "#008080", // Teal
+                "#0000FF", // Blue
+                "#000080", // Navy
+                "#FF00FF", // Magenta
+                "#800080", // Purple
+                "#808080", // Gray
+                "#C0C0C0", // Silver
+                "#FFFFFF" // White
+            };
         }
 
         /// <summary>

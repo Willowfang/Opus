@@ -29,6 +29,7 @@ namespace Opus.Modules.File
                 RegionNames.MAINSECTION_FOUR_FILE,
                 SchemeNames.COMPOSE
             );
+            navigator.Add<FileMultipleView>(RegionNames.MAINSECTION_FOUR_FILE, SchemeNames.REDACT);
         }
 
         /// <summary>

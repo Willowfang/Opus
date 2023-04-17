@@ -35,6 +35,10 @@ namespace Opus.Modules.Options
                 RegionNames.MAINSECTION_FOUR_OPTIONS,
                 SchemeNames.COMPOSE
             );
+            navigation.Add<RedactOptionsView>(
+                RegionNames.MAINSECTION_FOUR_OPTIONS,
+                SchemeNames.REDACT
+            );
         }
 
         /// <summary>

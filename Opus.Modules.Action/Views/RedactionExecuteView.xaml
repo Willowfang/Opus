@@ -1,0 +1,264 @@
+﻿<UserControl x:Class="Opus.Modules.Action.Views.RedactionExecuteView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:resRedact="clr-namespace:Opus.Resources.Labels.Redaction;assembly=Opus.Resources"
+             xmlns:resHelpers="clr-namespace:Opus.Resources.HelperTexts;assembly=Opus.Resources"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:v="clr-namespace:Opus.Common.Validation;assembly=Opus.Common"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <UserControl.Resources>
+        <Style x:Key="DisableTextBlock"
+               TargetType="{x:Type TextBlock}"
+               BasedOn="{StaticResource MaterialDesignCaptionTextBlock}">
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Opacity" Value="0.5"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+
+        <StackPanel VerticalAlignment="Center" 
+                    HorizontalAlignment="Center"
+                    x:Name="DescriptionText"
+                    Visibility="{Binding Properties.Files.Count, 
+                    Converter={StaticResource ZeroToOppositeVisibility}}">
+            <TextBlock Text="{x:Static resHelpers:Redaction.SelectFilesTitle}" 
+                       Style="{DynamicResource MaterialDesignHeadline6TextBlock}" 
+                       Grid.Row="1"
+                       TextAlignment="Center" 
+                       Foreground="{DynamicResource PrimaryHueLightBrush}"/>
+            <TextBlock Text="{x:Static resHelpers:Redaction.FileActionDescription}" 
+                       Style="{DynamicResource MaterialDesignBody1TextBlock}"
+                       TextAlignment="Center"/>
+        </StackPanel>
+
+        <Grid Visibility="{Binding ElementName=DescriptionText, Path=Visibility,
+              Converter={StaticResource InverseVisibility}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                <RadioButton Style="{DynamicResource MaterialDesignChoiceChipPrimaryOutlineRadioButton}"
+                             Content="{x:Static resRedact:Redaction.ExecuteButton}"
+                             IsChecked="{Binding Configuration.RedactApplyOnly, 
+                             Converter={StaticResource InvertBooleanConverter}, Mode=TwoWay}"/>
+                <RadioButton Style="{DynamicResource MaterialDesignChoiceChipPrimaryOutlineRadioButton}"
+                             Content="{x:Static resRedact:Redaction.ApplyButton}"
+                             IsChecked="{Binding Configuration.RedactApplyOnly}"/>
+            </StackPanel>
+
+            <Rectangle Height="2" 
+                       Fill="LightGray" 
+                       Opacity="0.5" 
+                       Margin="10, 20, 10, 30" 
+                       RadiusX="2" 
+                       RadiusY="2"
+                       Grid.Row="1"/>
+
+            <Grid Grid.Row="2" 
+                  Margin="20, 0, 20, 0"
+                  Visibility="{Binding Configuration.RedactApplyOnly, 
+                  Converter={StaticResource BooleanToOppositeVisibility}}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <ToggleButton Style="{DynamicResource MaterialDesignSwitchLightToggleButton}"
+                              IsChecked="{Binding Configuration.RedactRange}"
+                              Margin="0, 0, 20, 0"
+                              Grid.Row="0"
+                              Grid.Column="0"
+                              Cursor="Hand">
+                    <md:ToggleButtonAssist.SwitchTrackOffBackground>
+                        <SolidColorBrush Color="White"/>
+                    </md:ToggleButtonAssist.SwitchTrackOffBackground>
+                </ToggleButton>
+                <TextBlock Style="{DynamicResource MaterialDesignButtonTextBlock}"
+                           Text="{x:Static resRedact:Redaction.RedactionRange}"
+                           FontSize="20"
+                           Grid.Row="0"
+                           Grid.Column="1"/>
+
+                <Grid Grid.Row="1"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="2"
+                      Margin="20, 0, 20, 20"
+                      IsEnabled="{Binding Configuration.RedactRange}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="{x:Static resRedact:Redaction.RedactionStart}"
+                               Style="{StaticResource DisableTextBlock}"
+                               Grid.Row="0"
+                               Grid.Column="0"
+                               VerticalAlignment="Center"
+                               Margin="0, 20, 20, 0"/>
+                    <TextBox Style="{DynamicResource HintedValidationTextBox}"
+                             x:Name="RedactStartTextBox"
+                             Margin="0, 0, 0, 0"
+                             FontSize="16"
+                             VerticalAlignment="Center"
+                             md:TextFieldAssist.HasClearButton="False"
+                             md:HintAssist.HelperText="{Binding RelativeSource={RelativeSource Self}, 
+                             Path=(Validation.Errors)/ErrorContent}"
+                             Grid.Row="0"
+                             Grid.Column="1">
+                        <TextBox.Text>
+                            <Binding Path="Configuration.RedactStart"
+                                     UpdateSourceTrigger="PropertyChanged"
+                                     Mode="TwoWay">
+                                <Binding.ValidationRules>
+                                    <v:EmptyFieldRule/>
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+                    <TextBlock Style="{StaticResource DisableTextBlock}"
+                               Text="{x:Static resRedact:Redaction.RedactionEnd}"
+                               Grid.Row="1"
+                               Grid.Column="0"
+                               VerticalAlignment="Center"
+                               Margin="0, 20, 20, 0"/>
+                    <TextBox Style="{DynamicResource HintedValidationTextBox}"
+                             x:Name="RedactEndTextBox"
+                             FontSize="16"
+                             Margin="0, 0, 0, 0"
+                             VerticalAlignment="Center"
+                             md:TextFieldAssist.HasClearButton="False"
+                             md:HintAssist.HelperText="{Binding RelativeSource={RelativeSource Self}, 
+                             Path=(Validation.Errors)/ErrorContent}"
+                             Grid.Row="1"
+                             Grid.Column="1">
+                        <TextBox.Text>
+                            <Binding Path="Configuration.RedactEnd"
+                                     UpdateSourceTrigger="PropertyChanged"
+                                     Mode="TwoWay">
+                                <Binding.ValidationRules>
+                                    <v:EmptyFieldRule/>
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+                </Grid>
+
+                <ToggleButton Style="{DynamicResource MaterialDesignSwitchLightToggleButton}"
+                              IsChecked="{Binding Configuration.RedactWords}"
+                              Margin="0, 0, 20, 0"
+                              Grid.Row="3"
+                              Grid.Column="0"
+                              Cursor="Hand">
+                    <md:ToggleButtonAssist.SwitchTrackOffBackground>
+                        <SolidColorBrush Color="White"/>
+                    </md:ToggleButtonAssist.SwitchTrackOffBackground>
+                </ToggleButton>
+                <TextBlock Style="{DynamicResource MaterialDesignButtonTextBlock}"
+                           Text="{x:Static resRedact:Redaction.RedactionWords}"
+                           FontSize="20"
+                           Grid.Row="3"
+                           Grid.Column="1"/>
+
+                <Grid Grid.Row="4"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="2"
+                      Margin="20, 0, 20, 0"
+                      IsEnabled="{Binding Configuration.RedactWords}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBox Style="{DynamicResource HintedValidationTextBox}"
+                             x:Name="RedactWordsTextBox"
+                             TextWrapping="Wrap"
+                             FontSize="16"
+                             Margin="0, 0, 0, 0"
+                             VerticalAlignment="Center"
+                             md:ValidationAssist.UsePopup="True"
+                             md:HintAssist.HelperText="{x:Static resRedact:Redaction.WordsHint}"
+                             Grid.Row="1">
+                        <TextBox.Text>
+                            <Binding Path="Properties.WordsToRedact"
+                                     UpdateSourceTrigger="PropertyChanged"
+                                     Mode="TwoWay">
+                                <Binding.ValidationRules>
+                                    <v:EmptyFieldRule ValidatesOnTargetUpdated="True"/>
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+                </Grid>
+
+                <CheckBox Style="{DynamicResource MaterialDesignCheckBox}"
+                          Grid.Row="6"
+                          FontSize="14"
+                          HorizontalAlignment="Left"
+                          Margin="20, 50, 0, 0"
+                          Grid.Column="0"
+                          Grid.ColumnSpan="2"
+                          Content="{x:Static resRedact:Redaction.ExecuteApplyLabel}"
+                          IsChecked="{Binding Configuration.RedactExecuteApply}"/>
+
+            </Grid>
+
+            <Button Style="{DynamicResource MaterialDesignOutlinedButton}"
+                    Margin="20, 0, 20, 20"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    VerticalAlignment="Bottom"
+                    Content="{x:Static resRedact:Redaction.ExecuteCommandButton}"
+                    Visibility="{Binding Configuration.RedactApplyOnly, 
+                    Converter={StaticResource BooleanToOppositeVisibility}}"
+                    Command="{Binding Commands.ExecuteRedactionsCommand}">
+                <Button.IsEnabled>
+                    <MultiBinding Converter="{StaticResource RedactExecuteButton}">
+                        <Binding Path="Configuration.RedactRange"/>
+                        <Binding Path="Configuration.RedactWords"/>
+                        <Binding ElementName="RedactStartTextBox" Path="(Validation.HasError)"/>
+                        <Binding ElementName="RedactEndTextBox" Path="(Validation.HasError)"/>
+                        <Binding ElementName="RedactWordsTextBox" Path="(Validation.HasError)"/>
+                        <Binding Path="Properties.Files.Count"/>
+                    </MultiBinding>
+                </Button.IsEnabled>
+            </Button>
+
+            <Button Style="{DynamicResource MaterialDesignOutlinedButton}"
+                    Margin="20, 0, 20, 20"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Content="{x:Static resRedact:Redaction.ExecuteCommandButton}"
+                    Visibility="{Binding Configuration.RedactApplyOnly,
+                    Converter={StaticResource BooleanToVisibilityConverter}}"
+                    Command="{Binding Commands.ApplyRedactionsCommand}"
+                    IsEnabled="{Binding Properties.Files.Count,
+                    Converter={StaticResource EmptyToBool}}"/>
+
+        </Grid>
+
+    </Grid>
+</UserControl>

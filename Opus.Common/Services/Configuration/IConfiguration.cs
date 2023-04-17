@@ -89,5 +89,56 @@ namespace Opus.Common.Services.Configuration
         /// Logging level for the logger.
         /// </summary>
         public int LoggingLevel { get; set; }
+
+        /// <summary>
+        /// Outline color for redactions in HTML hex.
+        /// </summary>
+        public string RedactOutline { get; set; }
+
+        /// <summary>
+        /// Fill color for redactions in HTML hex.
+        /// </summary>
+        public string RedactFill { get; set; }
+        
+        /// <summary>
+        /// Search string for redaction beginnings.
+        /// </summary>
+        public string? RedactStart { get; set; }
+
+        /// <summary>
+        /// Search string for redaction endings.
+        /// </summary>
+        public string? RedactEnd { get; set; }
+
+        /// <summary>
+        /// Colors used in modifications in HTML hex -format.
+        /// </summary>
+        public string[] Colors { get; set; }
+
+        /// <summary>
+        /// Suffix appended to filenames when redacting.
+        /// </summary>
+        public string? RedactFileSuffix { get; set; }
+
+        /// <summary>
+        /// If true, apply redactions when redacting.
+        /// </summary>
+        public bool RedactExecuteApply { get; set; }
+
+        /// <summary>
+        /// If true, do not search for redactable text but only apply
+        /// the redactions already in the document.
+        /// </summary>
+        public bool RedactApplyOnly { get; set; }
+
+        /// <summary>
+        /// If true, will attempt to redact specified ranges.
+        /// </summary>
+        public bool RedactRange { get; set; }
+
+        /// <summary>
+        /// If true, will attempt to redact specified words.
+        /// </summary>
+        public bool RedactWords { get; set; }
     }
 }

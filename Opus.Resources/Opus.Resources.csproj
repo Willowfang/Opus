@@ -52,6 +52,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Extraction.resx</DependentUpon>
     </Compile>
+    <Compile Update="HelperTexts\Redaction.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Redaction.resx</DependentUpon>
+    </Compile>
     <Compile Update="Hyperlinks\Hyperlinks.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -137,6 +142,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>MergeOptions.resx</DependentUpon>
     </Compile>
+    <Compile Update="Labels\Dialogs\RedactOptions.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RedactOptions.resx</DependentUpon>
+    </Compile>
     <Compile Update="Labels\Dialogs\WorkCopyOptions.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -167,6 +177,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Titles.resx</DependentUpon>
     </Compile>
+    <Compile Update="Labels\Redaction\Redaction.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Redaction.resx</DependentUpon>
+    </Compile>
     <Compile Update="Messages\Composition.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -196,6 +211,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Merging.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Messages\Redaction.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Redaction.resx</DependentUpon>
     </Compile>
     <Compile Update="Messages\Signature.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -311,6 +331,10 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Extraction.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="HelperTexts\Redaction.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Redaction.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Hyperlinks\Hyperlinks.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Hyperlinks.Designer.cs</LastGenOutput>
@@ -379,6 +403,10 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MergeOptions.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Labels\Dialogs\RedactOptions.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>RedactOptions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Labels\Dialogs\WorkCopyOptions.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>WorkCopyOptions.Designer.cs</LastGenOutput>
@@ -403,6 +431,10 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Titles.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Labels\Redaction\Redaction.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Redaction.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Messages\Composition.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Composition.Designer.cs</LastGenOutput>
@@ -426,6 +458,10 @@
     <EmbeddedResource Update="Messages\Merging.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Merging.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Messages\Redaction.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Redaction.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Messages\Signature.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

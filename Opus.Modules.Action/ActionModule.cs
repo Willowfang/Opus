@@ -35,6 +35,14 @@ namespace Opus.Modules.Action
                 SchemeNames.COMPOSE
             );
 
+            navigator.Add<RedactionFileView>(
+                RegionNames.MAINSECTION_FOUR_ACTION,
+                SchemeNames.REDACT);
+
+            navigator.Add<RedactionExecuteView>(
+                RegionNames.MAINSECTION_FOUR_SUPPORT,
+                SchemeNames.REDACT);
+
             navigator.Add<InstructionsView>(RegionNames.MAINSECTION_FOUR_SUPPORT,
                 SchemeNames.WORKCOPY,
                 SchemeNames.MERGE,

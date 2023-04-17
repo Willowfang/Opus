@@ -123,4 +123,7 @@
   <data name="UnsignedTemplate" xml:space="preserve">
     <value>[file]_workcopy</value>
   </data>
+  <data name="RedactSuffix" xml:space="preserve">
+    <value>_public</value>
+  </data>
 </root>

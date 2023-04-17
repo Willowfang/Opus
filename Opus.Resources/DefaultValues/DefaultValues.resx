@@ -125,4 +125,7 @@
     <value>[tiedosto]_muokattava</value>
     <comment>Työkappaleen nimen oletusmalli 2.</comment>
   </data>
+  <data name="RedactSuffix" xml:space="preserve">
+    <value>_julkinen</value>
+  </data>
 </root>

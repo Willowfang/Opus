@@ -129,4 +129,7 @@
   <data name="Workcopy" xml:space="preserve">
     <value>Create work copies</value>
   </data>
+  <data name="Redact" xml:space="preserve">
+    <value>Redact content</value>
+  </data>
 </root>

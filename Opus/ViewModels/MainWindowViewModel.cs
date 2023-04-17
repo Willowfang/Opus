@@ -111,6 +111,8 @@ namespace Opus.ViewModels
                 Title = Resources.Labels.MainWindow.Titles.Merge.ToUpper();
             if (name == SchemeNames.COMPOSE)
                 Title = Resources.Labels.MainWindow.Titles.Compose.ToUpper();
+            if (name == SchemeNames.REDACT)
+                Title = Resources.Labels.MainWindow.Titles.Redact.ToUpper();
         }
     }
 }
