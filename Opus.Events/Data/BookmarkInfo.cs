@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using WF.PdfLib.Services.Data;
 
 namespace Opus.Events.Data
 {
@@ -32,6 +35,8 @@ namespace Opus.Events.Data
         /// </summary>
         public Guid Id { get; }
 
+        public IList<ILeveledBookmark> Children { get; } 
+
         /// <summary>
         /// Create a new bookmark info payload.
         /// </summary>
@@ -45,6 +50,7 @@ namespace Opus.Events.Data
             int endPage,
             string title,
             string filePath,
+            IList<ILeveledBookmark> children,
             Guid id = default
         )
         {
@@ -53,6 +59,7 @@ namespace Opus.Events.Data
             Title = title;
             FilePath = filePath;
             Id = id;
+            Children = children ?? new List<ILeveledBookmark>();
         }
     }
 }

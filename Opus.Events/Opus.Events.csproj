@@ -11,4 +11,10 @@
     <PackageReference Include="Prism.Core" Version="8.1.97" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="WF-PdfLib">
+      <HintPath>..\..\..\..\..\..\..\OneDrive - O365 Turun yliopisto\Koodaus\CodeX\Libraries\PdfLib\bin\Debug\net6.0\WF-PdfLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

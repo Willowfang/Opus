@@ -94,7 +94,7 @@ namespace Opus.Common.Helpers
                     continue;
 
                 string title = titleTemplate;
-
+                    
                 title = title
                     .ReplacePlaceholder(Placeholders.Bookmark, bookmark.Bookmark.Title)
                     .ReplacePlaceholder(
@@ -112,7 +112,8 @@ namespace Opus.Common.Helpers
                 ILeveledBookmark renamed = new LeveledBookmark(
                     bookmark.Level,
                     title,
-                    bookmark.Bookmark.Pages
+                    bookmark.Bookmark.Pages,
+                    bookmark.Bookmark.Children
                 );
                 added.Add(
                     new FileAndBookmarkWrapper(

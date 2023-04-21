@@ -12,6 +12,7 @@ using Prism.Events;
 using System.Windows.Controls;
 using WF.PdfLib.Services.Data;
 using WF.PdfLib.Services;
+using System.Windows;
 
 namespace Opus.Actions.Implementation.Extract
 {
@@ -243,7 +244,8 @@ namespace Opus.Actions.Implementation.Extract
                 LeveledBookmark internalChildMark = new LeveledBookmark(
                     child.Bookmark.Level + 1,
                     child.Bookmark.Title,
-                    child.Bookmark.Pages);
+                    child.Bookmark.Pages,
+                    child.Bookmark.Children);
 
                 FileAndBookmarkWrapper childWrapper = new FileAndBookmarkWrapper(
                     internalChildMark,
@@ -421,7 +423,8 @@ namespace Opus.Actions.Implementation.Extract
                 dialog.StartPage,
                 dialog.EndPage,
                 dialog.Title,
-                filePath
+                filePath,
+                null
             );
         }
         #endregion
@@ -460,6 +463,7 @@ namespace Opus.Actions.Implementation.Extract
                 wrapper.Bookmark.EndPage,
                 wrapper.Bookmark.Title,
                 wrapper.FilePath,
+                wrapper.Bookmark.Children,
                 wrapper.Id);
         }
         #endregion

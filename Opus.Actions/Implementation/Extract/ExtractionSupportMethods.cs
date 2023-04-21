@@ -17,6 +17,7 @@ using WF.ZipLib;
 using WF.PdfLib.Services.Data;
 using Opus.Common.Progress;
 using System.Security.Cryptography.Pkcs;
+using System.Windows;
 
 namespace Opus.Actions.Implementation.Extract
 {
@@ -656,7 +657,8 @@ namespace Opus.Actions.Implementation.Extract
                 properties.Bookmarks.SelectedItem.Bookmark.Level,
                 dialog.Title,
                 dialog.StartPage,
-                dialog.EndPage - dialog.StartPage + 1);
+                dialog.EndPage - dialog.StartPage + 1,
+                properties.Bookmarks.SelectedItem.Bookmark.Children);
 
             FileAndBookmarkWrapper updated = new FileAndBookmarkWrapper(
                 innerMark,

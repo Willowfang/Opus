@@ -8,6 +8,7 @@ using Opus.Common.Collections;
 using Prism.Events;
 using WF.LoggingLib;
 using WF.PdfLib.Common;
+using WF.PdfLib.Services.Data;
 
 namespace Opus.Actions.Implementation.Extract
 {
@@ -156,7 +157,7 @@ namespace Opus.Actions.Implementation.Extract
         {
             // Create inner bookmark
             LeveledBookmark innerMark = new LeveledBookmark(
-                1, info.Title, info.StartPage, info.EndPage - info.StartPage + 1);
+                1, info.Title, info.StartPage, info.EndPage - info.StartPage + 1, info.Children);
 
             // Create the wrapper.
             return new FileAndBookmarkWrapper(innerMark, info.FilePath, 0, info.Id);
